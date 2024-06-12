@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Danfo:ELSH@23.7&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+
+
+.services:hover ul {
+    display: flex;
+}
+
+
+
+.bgImage {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1117%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c186 C 57.6%2c164.8 172.8%2c87.6 288%2c80 C 403.2%2c72.4 460.8%2c139 576%2c148 C 691.2%2c157 748.8%2c106.6 864%2c125 C 979.2%2c143.4 1036.8%2c247.2 1152%2c240 C 1267.2%2c232.8 1382.4%2c119.2 1440%2c89L1440 560L0 560z' fill='rgba(243%2c 167%2c 15%2c 0.20)'%3e%3c/path%3e%3cpath d='M 0%2c384 C 72%2c406.6 216%2c508.6 360%2c497 C 504%2c485.4 576%2c320.4 720%2c326 C 864%2c331.6 936%2c532.4 1080%2c525 C 1224%2c517.6 1368%2c336.2 1440%2c289L1440 560L0 560z' fill='rgba(255%2c 135%2c 38%2c 0.57)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1117'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+
+
+    
+}
+
+@media screen and (max-width: 880px) {
+    
+    .bgImage {
+        background-image: none	;
+        background-color: #f7efea;
+    }
+  }
+
+
+
+
+
+
+
+  .bgImage2 {
+    background-image: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="utf-8"%3F%3E%3Csvg viewBox="-1.9152 84.1667 986.9861 296.2056" xmlns="http://www.w3.org/2000/svg"%3E%3Cg xmlns="http://www.w3.org/2000/svg" transform="matrix(-0.6854069828987122, 0, 0, -0.6163210272789001, 985.0708618164062, 429.3064270019531)" style=""%3E%3Cg mask="&quot;%23SvgjsMask1117&quot;)" fill="none"%3E%3Cpath d="M 0,186 C 57.6,164.8 172.8,87.6 288,80 C 403.2,72.4 460.8,139 576,148 C 691.2,157 748.8,106.6 864,125 C 979.2,143.4 1036.8,247.2 1152,240 C 1267.2,232.8 1382.4,119.2 1440,89L1440 560L0 560z" style="fill: rgb(253, 237, 207);"/%3E%3Cpath d="M 0,384 C 72,406.6 216,508.6 360,497 C 504,485.4 576,320.4 720,326 C 864,331.6 936,532.4 1080,525 C 1224,517.6 1368,336.2 1440,289L1440 560L0 560z" style="fill: rgb(253, 237, 207);"/%3E%3C/g%3E%3Cdefs/%3E%3C/g%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+    
+
+
+    
+}
+
+@media screen and (max-width: 880px) {
+    
+    .bgImage2 {
+        background-image: none	;
+        background-color: #f7efea;
+    }
+  }
+
+
+
+
+  /* .bgImage2 {
+    background-image: url('data:image/svg+xml,%3Csvg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3ClinearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"%3E%3Cstop stop-color="rgba(243, 106, 62, 0.25)" offset="0%25"%3E%3C/stop%3E%3Cstop stop-color="rgba(255, 179, 11, 0.22)" offset="100%25"%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath style="transform:translate(0, 0px); opacity:1" fill="url(%23sw-gradient-0)" d="M0,294L26.7,302.2C53.3,310,107,327,160,334.8C213.3,343,267,343,320,310.3C373.3,278,427,212,480,163.3C533.3,114,587,82,640,81.7C693.3,82,747,114,800,155.2C853.3,196,907,245,960,245C1013.3,245,1067,196,1120,155.2C1173.3,114,1227,82,1280,122.5C1333.3,163,1387,278,1440,343C1493.3,408,1547,425,1600,432.8C1653.3,441,1707,441,1760,408.3C1813.3,376,1867,310,1920,245C1973.3,180,2027,114,2080,114.3C2133.3,114,2187,180,2240,204.2C2293.3,229,2347,212,2400,187.8C2453.3,163,2507,131,2560,122.5C2613.3,114,2667,131,2720,163.3C2773.3,196,2827,245,2880,253.2C2933.3,261,2987,229,3040,228.7C3093.3,229,3147,261,3200,285.8C3253.3,310,3307,327,3360,343C3413.3,359,3467,376,3520,351.2C3573.3,327,3627,261,3680,236.8C3733.3,212,3787,229,3813,236.8L3840,245L3840,490L3813.3,490C3786.7,490,3733,490,3680,490C3626.7,490,3573,490,3520,490C3466.7,490,3413,490,3360,490C3306.7,490,3253,490,3200,490C3146.7,490,3093,490,3040,490C2986.7,490,2933,490,2880,490C2826.7,490,2773,490,2720,490C2666.7,490,2613,490,2560,490C2506.7,490,2453,490,2400,490C2346.7,490,2293,490,2240,490C2186.7,490,2133,490,2080,490C2026.7,490,1973,490,1920,490C1866.7,490,1813,490,1760,490C1706.7,490,1653,490,1600,490C1546.7,490,1493,490,1440,490C1386.7,490,1333,490,1280,490C1226.7,490,1173,490,1120,490C1066.7,490,1013,490,960,490C906.7,490,853,490,800,490C746.7,490,693,490,640,490C586.7,490,533,490,480,490C426.7,490,373,490,320,490C266.7,490,213,490,160,490C106.7,490,53,490,27,490L0,490Z"%3E%3C/path%3E%3C/svg%3E');
+     background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    
+
+
+    
+}
+
+
+
+.bgImage3 {
+    background-image: url('data:image/svg+xml,%3Csvg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"%3E%3Cdefs%3E%3ClinearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"%3E%3Cstop stop-color="rgba(255, 127, 69, 0.79)" offset="0%25"%3E%3C/stop%3E%3Cstop stop-color="rgba(255, 127, 69, 0.43)" offset="100%25"%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath style="transform:translate(0, 0px); opacity:1" fill="url(%23sw-gradient-0)" d="M0,294L48,302.2C96,310,192,327,288,334.8C384,343,480,343,576,310.3C672,278,768,212,864,163.3C960,114,1056,82,1152,81.7C1248,82,1344,114,1440,155.2C1536,196,1632,245,1728,245C1824,245,1920,196,2016,155.2C2112,114,2208,82,2304,122.5C2400,163,2496,278,2592,343C2688,408,2784,425,2880,432.8C2976,441,3072,441,3168,408.3C3264,376,3360,310,3456,245C3552,180,3648,114,3744,114.3C3840,114,3936,180,4032,204.2C4128,229,4224,212,4320,187.8C4416,163,4512,131,4608,122.5C4704,114,4800,131,4896,163.3C4992,196,5088,245,5184,253.2C5280,261,5376,229,5472,228.7C5568,229,5664,261,5760,285.8C5856,310,5952,327,6048,343C6144,359,6240,376,6336,351.2C6432,327,6528,261,6624,236.8C6720,212,6816,229,6864,236.8L6912,245L6912,490L6864,490C6816,490,6720,490,6624,490C6528,490,6432,490,6336,490C6240,490,6144,490,6048,490C5952,490,5856,490,5760,490C5664,490,5568,490,5472,490C5376,490,5280,490,5184,490C5088,490,4992,490,4896,490C4800,490,4704,490,4608,490C4512,490,4416,490,4320,490C4224,490,4128,490,4032,490C3936,490,3840,490,3744,490C3648,490,3552,490,3456,490C3360,490,3264,490,3168,490C3072,490,2976,490,2880,490C2784,490,2688,490,2592,490C2496,490,2400,490,2304,490C2208,490,2112,490,2016,490C1920,490,1824,490,1728,490C1632,490,1536,490,1440,490C1344,490,1248,490,1152,490C1056,490,960,490,864,490C768,490,672,490,576,490C480,490,384,490,288,490C192,490,96,490,48,490L0,490Z"%3E%3C/path%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+
+
+    
+}
+
+
+
+
+
+
+.bgImage4 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1117%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c186 C 57.6%2c164.8 172.8%2c87.6 288%2c80 C 403.2%2c72.4 460.8%2c139 576%2c148 C 691.2%2c157 748.8%2c106.6 864%2c125 C 979.2%2c143.4 1036.8%2c247.2 1152%2c240 C 1267.2%2c232.8 1382.4%2c119.2 1440%2c89L1440 560L0 560z' fill='rgba(243%2c 167%2c 15%2c 0.20)'%3e%3c/path%3e%3cpath d='M 0%2c384 C 72%2c406.6 216%2c508.6 360%2c497 C 504%2c485.4 576%2c320.4 720%2c326 C 864%2c331.6 936%2c532.4 1080%2c525 C 1224%2c517.6 1368%2c336.2 1440%2c289L1440 560L0 560z' fill='rgba(255%2c 135%2c 38%2c 0.57)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1117'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    
+
+
+    
+} */
+
+
+
+  
