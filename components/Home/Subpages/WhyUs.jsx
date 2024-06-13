@@ -34,7 +34,7 @@ export default function WhyUs() {
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg> */}
                     {/* <img src={Tax.src} alt="tax"/> */}
-                    <Image src={Tax}  cover  />
+                    <Image src={Tax}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -61,7 +61,7 @@ export default function WhyUs() {
                         <circle cx={6} cy={18} r={3} />
                         <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
                     </svg> */}
-                    <Image src={Award}  cover  />
+                    <Image src={Award}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -87,7 +87,7 @@ export default function WhyUs() {
                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                         <circle cx={12} cy={7} r={4} />
                     </svg> */}
-                    <Image src={Deadline}  cover  />
+                    <Image src={Deadline}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -114,7 +114,7 @@ export default function WhyUs() {
                     >
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg> */}
-                    <Image src={Experience}  cover  />
+                    <Image src={Experience}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -141,7 +141,7 @@ export default function WhyUs() {
                         <circle cx={6} cy={18} r={3} />
                         <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
                     </svg> */}
-                    <Image src={Fully} cover />
+                    <Image src={Fully} cover="true" />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -169,7 +169,7 @@ export default function WhyUs() {
                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                         <circle cx={12} cy={7} r={4} />
                     </svg> */}
-                    <Image src={Support}  cover  />
+                    <Image src={Support}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">

@@ -11,7 +11,7 @@ const PriceBox = ({priceTitle, priceContent, price, packageIncludes}) => {
             <h4 className='font-semibold text-md '>Package includes:</h4>
 
                 {
-                    packageIncludes.map((el) => <li className='ml-4'> {el} </li>)
+                    packageIncludes.map((el) => <li key={Math.random() * 100} className='ml-4'> {el} </li>)
                 }
 
 

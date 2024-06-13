@@ -6,7 +6,7 @@ const PriceBoxes = ({prices}) => {
     <section className='w-full px-60 max-2xl:px-40 max-xl:px-10 max-lg:p-0 '>
         <div className='mx-auto container flex flex-col max-lg:items-center  '>
             {
-                prices.map((el) => <PriceBox {...el}/>)
+                prices.map((el) => <PriceBox key={Math.random() * 1000} {...el}/>)
             }
         </div>
     </section>
