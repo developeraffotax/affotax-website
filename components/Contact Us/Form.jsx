@@ -19,9 +19,6 @@ const Form = () => {
         const [successMessage, setSuccessMessages] = useState('')
         const [isLoading, setIsLoading] = useState(false);
 
-        //const [formState, formAction] = useFormState(sendMessage, {})
-
-
 
         const inputChangeHandler = (e) => {
             switch(e.target.name) {

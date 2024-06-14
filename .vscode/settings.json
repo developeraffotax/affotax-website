@@ -1,3 +1,10 @@
 {
-    "editor.maxTokenizationLineLength": 2000000
+    "editor.maxTokenizationLineLength": 2000000,
+    "prettier.useEditorConfig": false,
+    "prettier.bracketSameLine": false,
+    "prettier.singleAttributePerLine": false,
+    "prettier.tabWidth": 4,
+    "editor.tabSize": 4,
+    "terminal.integrated.tabStopWidth": 8,
+    "prettier.useTabs": true
 }
