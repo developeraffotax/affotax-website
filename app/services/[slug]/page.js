@@ -1,6 +1,6 @@
 import Service from "@/components/Services/Service/Service"
 import { dataArr } from "@/data/serviceData"
-import Head from "next/head";
+
 
 
 
@@ -19,7 +19,9 @@ export async function generateMetadata({ params}) {
  
 
   let serviceData = dataArr.filter((el) => el.link === params.slug);
-
+  if (serviceData.length === 0) {
+    return false;
+  }
 
 
   return {

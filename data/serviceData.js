@@ -1951,6 +1951,8 @@ Submitting the changes to HMRC.
 	],
 };
 
+
+
 const REGISTER_FOR_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE = {
 	link: "register-for-self-assessment",
 	title: "Register for Self Assessment Tax Return Online",
@@ -2099,7 +2101,166 @@ Upon completing the registration for self assessment, you will be issued a Uniqu
 // COMPANY SECRETERIAL
 
 
+const REGISTERED_OFFICE_ADDRESS_UK_PAGE = {
+	link: "registered-office-address-uk",
+	title: "Registered Office Address UK",
+	content: `A UK limited company or LLP must have a registered office address UK, as it is a necessary address at the time of incorporation. More than just a formality, it serves as the main point of contact for important government communications, tax notices, and regulatory correspondences in the UK. Notably, this location is publicly available, enabling transparency and verification.
 
+With Affotax, you can elevate your corporate profile while protecting your residence from public view on the Companies House register. This strategic action improves your professional image and presents a secure and established appearance for your company, going beyond simple compliance. Check out the packages below and Get a quote now!
+`,
+
+	prices: [
+		{
+			priceTitle: "Basic",
+			priceContent:
+				"It offers the essential service within the UK for your company's official communications.",
+			price: "£39",
+			packageIncludes: [
+				"Using a London address as your official registered address UK.",
+				"All official government mail scanned and emailed to you; free of charge.",
+			],
+		},
+
+		{
+			priceTitle: "Premium",
+			priceContent:
+				"It offers everything in the basic package + director address within the UK for your company's official communications.",
+			price: "£49",
+			packageIncludes: [
+				"Using a London address as your official registered address UK.",
+				"Using a London address as your official director address UK.",
+				"All official government mail scanned and emailed to you; free of charge."
+			],
+		},
+	],
+
+
+
+
+	benefitsTitle: `Benefits of our registered office address UK services:`,
+	benefits: [
+		{
+			heading: "🏢 Establish a professional image",
+			paragraph:
+				" Establish a professional image for your company in the UK. It can help you win over potential partners and customers.",
+		},
+		{
+			heading: "🔒 Ensure data security",
+			paragraph:
+				"Our service ensure that your company's information is handled securely and kept confidential. Put your trust in Affotax!.",
+		},
+		{
+			heading: "📋 Stay legally compliant",
+			paragraph:
+				"Our team of experts can assist you with managing the requirements, ensuring that you follow all legal requirements and stay clear of any fines.",
+		},
+		{
+			heading: "🗣️ Get personalised support",
+			paragraph:
+				"Our expert team is always ready to provide dedicated assistance and guidance; ensuring you have the support you need to grow.",
+		},
+		{
+			heading: "⏱️ Save time and resources",
+			paragraph:
+				"By entrusting Afffotax, you can free up time and resources that can be better spent on growing your company or business.",
+		},
+		{
+			heading: "🌍 Expand your reach",
+			paragraph:
+				"With us by your side, you can expand your business's reach and enter a new world of markets, both domestically and internationally. ",
+		},
+
+		{
+			heading: "📈 Boost your credibility",
+			paragraph:
+				"We can help boost your business's credibility and reputation, which can be a key for attracting new clients and partners.  ",
+		},
+	],
+
+
+
+// to edit
+	faqs: [
+		{
+			question: "  What is registering for self assessment online? ",
+			answer: `It is the formal method of notifying HM Revenue and Customs (HMRC) about your intention to file a personal tax return. It's mandatory for self-employed individuals, landlords, and those with income not covered by Pay As You Earn (PAYE).
+
+
+      `,
+		},
+
+		{
+			question: "Who needs to complete it? ",
+			answer: `Individuals earning income not subject to PAYE, such as self-employed individuals, sole traders, landlords, and those with additional income.
+
+
+
+
+
+`,
+		},
+		{
+			question: " How to register for self assessment? ",
+			answer: `The approach involves gathering necessary information, completing required forms, and formally notifying HMRC of your intention to file a personal tax return.
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " What are the benefits of using your package? ",
+			answer: `Our package offers step-by-step guidance, preparation of necessary documentation, submission to HMRC, and ongoing support. It ensures a smooth and accurate progression.
+
+
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " When should I complete it?",
+			answer: `You should register as soon as possible if you're self-employed or have additional income. It's essential to meet the deadline to avoid penalties.
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"Can I use your package if I'm not sure if I need to register?  ",
+			answer: `Absolutely. Our package is designed to guide you through the journey and clarify your obligations.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  Is it a one-time process? ",
+			answer: `You generally need to register only once, but keeping HMRC updated is essential if your circumstances change.
+
+
+
+
+
+`,
+		},
+	],
+};
 
 
 
@@ -2125,6 +2286,6 @@ export const dataArr = [
 	REGISTER_FOR_CORPORATIOPN_TAX_PAGE,
 	SELF_ASSESSMENT_CHANGE_OF_ADDRESS_PAGE,
 	SUBMIT_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE,
-  REGISTER_FOR_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE,
+  	REGISTER_FOR_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE,
 
 ];
