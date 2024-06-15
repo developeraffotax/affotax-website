@@ -4,13 +4,13 @@ import Top from "./Top";
 import EmailPhone from "../Home/Subpages/EmailPhone";
 
 const Services = () => {
-  return (
-    <div>
-      <Top />
-      <Menu />
-      <EmailPhone />
-    </div>
-  );
+	return (
+		<div>
+			<Top  className=''/>
+			<Menu />
+			<EmailPhone />
+		</div>
+	);
 };
 
 export default Services;
