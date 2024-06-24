@@ -2284,6 +2284,309 @@ Legal notices
 
 
 
+const DIRECTORS_SERVICE_ADDRESS_UK = {
+	link: "directors-service-address-uk",
+	title: "Directors Service Address UK",
+	content: `Directors service address is a crucial aspect of running a business in the UK. It is an authorised contact point for directors to receive lawful communications. By providing a separate space for official correspondence, you can protect your residence from being listed on the Companies House public register. This not only ensures privacy but also enhances the corporate image of the business.
+
+In addition to secrecy, having a private space ensures that directors meet their legal responsibilities while safeguarding their information. It is a legal requirement for all UK companies, along with having a registered office address to provide an additional layer of protection. Check out our packages, and get a quote today!`,
+
+	prices: [
+		{
+			priceTitle: "Prime Package",
+			priceContent:
+				"Our prime package offers a separate space in the UK for receiving legal and official communications while safeguarding your personal details.",
+			price: "£19",
+			packageIncludes: [
+				"Use of our directors service address for official needs.",
+				"Use of our directors service address for official needs.",
+			],
+		},
+	],
+
+
+
+
+	benefitsTitle: `Benefits of choosing us for a director service address:`,
+	benefits: [
+		{
+			heading: "🏢 Greater privacy",
+			paragraph:
+				" You can safeguard your personal privacy and keep your residential address confidential.",
+		},
+		{
+			heading: "🔒 Data security",
+			paragraph:
+				"With our expert handling of your personal information, you can be assured that your data is protected.",
+		},
+		{
+			heading: "📋 Legal compliance",
+			paragraph:
+				"To make sure you adhere to all legal regulations, we can handle your requirements with expertise.",
+		},
+		{
+			heading: "🗣️ Personalised support",
+			paragraph:
+				"As our client, you'll have access to our expert team for dedicated guidance throughout the process.",
+		},
+		{
+			heading: "📩 Email reminders",
+			paragraph:
+				"Our service includes email reminders, so you never miss out on important correspondence.",
+		},
+		{
+			heading: "⏱️ Resource efficiency",
+			paragraph:
+				"You can concentrate on your directorial duties by freeing up important time and resources.",
+		},
+
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: "  What is a directors service address UK?  ",
+			answer: `It is a designated contact point for directors to receive official communications separately from their residential address, ensuring data protection and compliance.
+
+
+
+      `,
+		},
+
+		{
+			question: "Why do I need it?",
+			answer: `It protects your personal information by keeping it off public records, while fulfilling the legal requirement for you to have a legitimate address for receiving communications.
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can I change it later?",
+			answer: `Yes, you can change it later, but specific procedures need to be followed. Our team can guide you through the process.
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "   Can I use it for other purposes? ",
+			answer: `The primary purpose is legitimate communications, so using it for unrelated business ventures or personal deliveries is not ideal. However, the package may offer additional services for enhancing your directorship.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " What does the prime package include?",
+			answer: `We provide autonomy in receiving official correspondence, along with forwarding of government mail and regulatory notices in this package.
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				" Will my information be kept private?",
+			answer: `Using a designated service like ours helps protect your privacy,  also keeping your personal data off public records and ensuring compliance.
+
+
+
+
+
+
+
+`,
+		},
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const PSC_REGISTER = {
+	link: "psc-register",
+	title: "PSC Register",
+	content: `Person with Significant Control, or PSCs, is a valuable tool businesses use to monitor those who have a significant amount of ownership or influence over the company. The register helps the business identify and document the person with significant control in a corporation to its operations. To avoid fines and other unfavourable outcomes, a firm must keep correct records for the PSC register.
+
+Individuals who fulfil certain criteria, such as owning over 25% of the company's shares, above 25 percent of the venture's voting rights, exercising substantial control over the administration, or having the capacity to impact important decisions, are listed on the PSC register. This way, companies can ensure they comply with the law and uphold transparency with shareholders and other stakeholders. For most UK businesses, PSC registration is necessary; noncompliance can result in fines and penalties. Get a quote now!`,
+
+	prices: [
+		{
+			priceTitle: "Pro Package",
+			priceContent:
+				"Our package provides the essentials for accurate maintenance and complying with legal obligations.",
+			price: "£29",
+			packageIncludes: [
+				"Identifying and recording 'Person with Significant Control (PSCs)'.",
+				"Preparation and maintenance.",
+				"Updates and amendments as required.",
+			],
+		},
+	],
+
+
+
+
+	benefitsTitle: `Reasons to choose our PSC register service:✨🔍`,
+	benefits: [
+		{
+			heading: "📊 Effortless compliance",
+			paragraph:
+				" We can expertly manage your PSC registration by ensuring your records are accurate and up-to-date. ",
+		},
+		{
+			heading: "🔒 Data security",
+			paragraph:
+				"We handle your firm's sensitive information securely and confidentially. Put your trust in Affotax!",
+		},
+		{
+			heading: "🗣️ Personalised support",
+			paragraph:
+				"We can help you deal with the complexities and make sure you do everything correctly.",
+		},
+		{
+			heading: "⏱️ Resource optimisation",
+			paragraph:
+				"By trusting our service, you can save valuable time and resources to focus on what is most vital for your corporation.",
+		},
+		{
+			heading: "✔ Regular reviews",
+			paragraph:
+				"To ensure your information is up-to-date, we evaluate it regularly. This helps prevent errors and maintain compliance.",
+		},
+		{
+			heading: "✨ Online access",
+			paragraph:
+				"Our management system is available online, making it easier to access your records from anywhere, at any time.",
+		},
+
+		{
+			heading: "🎗 Regular reminders",
+			paragraph:
+				"We send regular notifications about key deadlines and keep you informed of any changes made.",
+		},
+
+		{
+			heading: "🎁  Customised solutions",
+			paragraph:
+				"We understand that businesses are unique. That's why we offer customised solutions that meet your specific needs.",
+		},
+
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: "  What is a PSC register? ",
+			answer: `It is a record of 'Person with Significant Control' within a company, documenting individuals who hold substantial influence or ownership. It is a legal requirement that all companies must disclose, including any changes to Companies House. It's designed to promote transparency and compliance.
+
+
+
+      `,
+		},
+
+		{
+			question: "Why is the maintenance important?",
+			answer: `Maintaining accurate information is a legal requirement that enhances transparency, prevents financial crime, and ensures proper corporate governance. 
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "What does the pro package include?",
+			answer: `We provide the essentials for accurate preparations and maintenance, updates and amendments, while complying with legal obligations.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  Is my information kept private? ",
+			answer: `While it is a publicly accessible record, maintaining accurate and up-to-date information is crucial for transparency and compliance.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can I update it if changes occur? ",
+			answer: `Absolutely! Our service includes regular updates and amendments to ensure accurate and compliant maintenance.
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				" How do I start with your service? ",
+			answer: `Choose our pro package, follow the instructions to purchase, and we will come back at you immediately to be your PSC guide.
+
+
+
+
+
+
+`,
+		},
+		
+	],
+};
+
+
+
+
+
 
 
 
@@ -2351,6 +2654,8 @@ export const dataArr = [
 	SUBMIT_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE,
   	REGISTER_FOR_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE,
 
-	  REGISTERED_OFFICE_ADDRESS_UK_PAGE
+	  REGISTERED_OFFICE_ADDRESS_UK_PAGE,
+	  DIRECTORS_SERVICE_ADDRESS_UK,
+	  PSC_REGISTER
 
 ];
