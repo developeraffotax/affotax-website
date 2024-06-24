@@ -2179,29 +2179,22 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 
 
 
-// to edit
+
 	faqs: [
 		{
-			question: "  What is registering for self assessment online? ",
-			answer: `It is the formal method of notifying HM Revenue and Customs (HMRC) about your intention to file a personal tax return. It's mandatory for self-employed individuals, landlords, and those with income not covered by Pay As You Earn (PAYE).
+			question: "  What is a registered office address UK?  ",
+			answer: `It is the legal address of a company or business entity in the UK, used as the designated location for receiving:
 
+Authorised communications 
+Government mail
+Legal notices
 
       `,
 		},
 
 		{
-			question: "Who needs to complete it? ",
-			answer: `Individuals earning income not subject to PAYE, such as self-employed individuals, sole traders, landlords, and those with additional income.
-
-
-
-
-
-`,
-		},
-		{
-			question: " How to register for self assessment? ",
-			answer: `The approach involves gathering necessary information, completing required forms, and formally notifying HMRC of your intention to file a personal tax return.
+			question: "Why is it necessary?",
+			answer: `Every UK limited company must have it as per the law; ensuring the company has a formal point of contact for government agencies, regulatory bodies, and the public.
 
 
 
@@ -2211,9 +2204,19 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 `,
 		},
 		{
-			question: " What are the benefits of using your package? ",
-			answer: `Our package offers step-by-step guidance, preparation of necessary documentation, submission to HMRC, and ongoing support. It ensures a smooth and accurate progression.
+			question: " What does the basic package include? ",
+			answer: `Our basic package includes cheap registered office address for limited company. It entails forwarding lawful correspondence and notices of regulations.
 
+
+
+
+
+
+`,
+		},
+		{
+			question: " How does the premium package differ? ",
+			answer: `A premium company registered address, mail scanning with digital forwarding, and unique access to online business assistance resources are all included in the premium package.
 
 
 
@@ -2226,9 +2229,8 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 `,
 		},
 		{
-			question: " When should I complete it?",
-			answer: `You should register as soon as possible if you're self-employed or have additional income. It's essential to meet the deadline to avoid penalties.
-
+			question: "Can I use it for other purposes?",
+			answer: `Legal communication should primarily be sent here. Nevertheless, a few packages could include extra services to improve your company's visibility.
 
 
 
@@ -2237,8 +2239,8 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 		},
 		{
 			question:
-				"Can I use your package if I'm not sure if I need to register?  ",
-			answer: `Absolutely. Our package is designed to guide you through the journey and clarify your obligations.
+				"Is my information private?",
+			answer: `Using a service like ours can assist in safeguarding your privacy by keeping your residence off public records, even when it is publicly available for verification.
 
 
 
@@ -2250,8 +2252,18 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 `,
 		},
 		{
-			question: "  Is it a one-time process? ",
-			answer: `You generally need to register only once, but keeping HMRC updated is essential if your circumstances change.
+			question: "  Can I change it later? ",
+			answer: `It is possible to modify it later, but there are particular steps you must follow. Get advice from us on how to make adjustments.
+
+
+
+
+`,
+		},
+
+		{
+			question: "  How do I get started with your services? ",
+			answer: `After you select the package that best meets your needs and complete the buying procedures, our staff will assist you immediately.
 
 
 
@@ -2261,6 +2273,57 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 		},
 	],
 };
+
+
+
+
+// COMPANY SECRETERIAL 2 PAGEs ADDED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2287,5 +2350,7 @@ export const dataArr = [
 	SELF_ASSESSMENT_CHANGE_OF_ADDRESS_PAGE,
 	SUBMIT_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE,
   	REGISTER_FOR_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE,
+
+	  REGISTERED_OFFICE_ADDRESS_UK_PAGE
 
 ];
