@@ -158,14 +158,21 @@ const menu = [
 
 const Menu = () => {
 
-    const [active, setActive] = useState(() => {
-        
-        const value = sessionStorage.getItem('active');
+    const [active, setActive] = useState('');
 
-        return value ? value : 'Accounts';
 
-    
-    });
+    useEffect(() => {
+        const activeTab = sessionStorage.getItem('active');
+
+
+        if (activeTab) {
+            setActive(activeTab);
+
+        } else {
+            setActive('Accounts')
+        }
+
+    }, [])
 
 
 
