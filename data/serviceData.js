@@ -2603,6 +2603,82 @@ Individuals who fulfil certain criteria, such as owning over 25% of the company'
 
 
 
+const CHANGE_COMPANY_NAME= {
+	link: "change-company-name",
+	title: "Change Company Name",
+	content: `Change company name in the UK to significantly impact your company's identity, brand, and adherence to laws, regulations, and standards. The procedure entails adding updated data to several official and legal documents to validate accuracy and remove unclear information. When changing a company's name, it's vital to consider its impact on existing contracts, branding, and marketing materials. Additionally, you'll need to inform your customers, vendors, and suppliers about the change to avoid disruptions to operations.
+
+Companies House name checker availability is mandatory before changing company name. This is to see if the proposed name is available and meets the guidelines. Companies House stipulates what name can be used, and it can't be similar to an existing venture's name. Your business will promptly receive official notification from the government or other legal entities. To change company name, it requires careful planning and coordination, as it can affect various aspects of your business. Get a quote – let us take the burden off your shoulders.`,
+
+	prices: [
+		{
+			priceTitle: "Optimum Package",
+			priceContent:
+				"It covers the essentials for a smooth change of your company's name ensuring accurate updates and compliance with legal obligations.",
+			price: "£49",
+			packageIncludes: [
+				"Assistance with official paperwork and forms.",
+				"Submission of updated name (changes made).",
+			],
+		},
+	],
+
+
+
+
+	benefitsTitle: `Benefits of choosing our 'Change Company Name' service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless transition",
+			paragraph:
+				" To change limited company name is difficult, but we makes it easy with an effortless transition. ",
+		},
+		{
+			heading: "🔒 Data security",
+			paragraph:
+				"We handle your firm's information confidentially and carefully. So, put your trust in Affotax!",
+		},
+		{
+			heading: "🗣️ Personalised support",
+			paragraph:
+				"We provide personalised support to guide you through the entire process.",
+		},
+		{
+			heading: "⏱️ Resource optimisation",
+			paragraph:
+				"Our service saves time and resources, so you can focus on other important tasks.",
+		},
+		{
+			heading: "Documentation",
+			paragraph:
+				"Our documentation provides a thorough record of all changes made to your corporate information.",
+		},
+		{
+			heading: " Fast turnaround",
+			paragraph:
+				"Our service is designed to provide a fast turnaround time, ensuring efficiency and accuracy.",
+		},
+
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " Why would a company change its name? ",
+			answer: `There are a number of reasons why a firm may change its name, such as rebranding, mergers, or legal considerations. 
+
+
+
+      `,
+		},
+
+		{
+			question: "Is it legal? ",
+			answer: `Yes! In fact, if your venture undergoes changes, updating official records is essential for legal compliance and accurate representation, so it is a legal requirement by the UK government.
 
 
 
@@ -2610,6 +2686,604 @@ Individuals who fulfil certain criteria, such as owning over 25% of the company'
 
 
 
+`,
+		},
+		{
+			question: "What does the optimum package include?  ",
+			answer: `It covers the essentials, like assistance with official paperwork or any forms, along with the submission of the changes made.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How long does the process take?   ",
+			answer: `The duration varies based on several factors. Our optimum package ensures a streamlined process and minimises disruption.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can I choose the name freely?   ",
+			answer: `There are legal considerations and specific naming conventions. Our experts guide you through the naming process.
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				" Can I update it myself?   ",
+			answer: `While it's possible, our expert assistance can ensure accurate updates and compliance with legal requirements.
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				" How do I start with your services?   ",
+			answer: `Follow the instructions to purchase the optimum solution, and our team will guide you through the process.
+
+
+
+
+
+
+
+`,
+		},
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const COMPANIES_HOUSE_CHANGE_OF_ADDRESS = {
+	link: "companies-house-change-of-address",
+	title: "Change Company Name",
+	content: `Filing changes at Companies House involves submitting official updates about change of address, other details, structure, or operations. These alterations can include directors, shareholders, registered offices, share capital, or other vital information. In this way, the public register is kept up-to-date with the correct information. You must reflect on any modifications impacting your company's status or operation.
+
+A change in these regulations can adversely affect a company's status or operations. If you are unclear about any requirements, a legal professional or a reliable accountant can help. Let Affotax assist you. Get a quote now!`,
+
+	prices: [
+		{
+			priceTitle: "Basic Package",
+			priceContent:
+				"Our basic package covers essential filing services for submitting changes accurately and efficiently.",
+			price: "£49",
+			packageIncludes: [
+				"Changes in registered office address in the UK.",
+				"Changes in the director details.",
+				"Preparation and revision of necessary documents.",
+				"Submission of changes to Companies House.",
+			],
+		},
+
+		{
+			priceTitle: "Premium Package",
+			priceContent:
+				"Our express package covers essential filing services for submitting changes just within a day.",
+			price: "£49",
+			packageIncludes: [
+				"Changes in registered office address in the UK.",
+				"Changes in the director details.",
+				"Preparation and revision of necessary documents.",
+				"Submission of changes to Companies House",
+				"All within 24 hours.",
+			],
+		},
+	],
+
+
+
+
+	benefitsTitle: `Benefits of choosing our 'Companies House Change of Address' service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless updates",
+			paragraph:
+				" We make it easy to update your company's details, structure, operations, etc. through our online services. ",
+		},
+		{
+			heading: "Secure platform",
+			paragraph:
+				"We use industry-standard encryption technologies to ensure the confidentiality and security of your information.",
+		},
+		{
+			heading: "🗣️ Expert handling",
+			paragraph:
+				"Our team of experts have years of experience managing filings. Put your trust in Affotax!",
+		},
+		{
+			heading: "Personalised support",
+			paragraph:
+				"We offer personalised support and guidance throughout the process. Our expert team is available for assistance.",
+		},
+		{
+			heading: "Resource optimization",
+			paragraph:
+				"By availing of our service, you can focus on other business priorities and handle your filings more efficiently.",
+		},
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: "  What types of changes require filing?",
+			answer: `These modifications can include directors, shareholders, registered office, share capital, company name, and more.
+
+
+
+      `,
+		},
+
+		{
+			question: "Why is Companies House change of address significant?  ",
+			answer: `It ensures that accurate and up-to-date information about your business is reflected in the public registry, promoting transparency and legal compliance.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " What does the basic package include?   ",
+			answer: `It provides guidance, preparation, and submission of required adjustment.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  Can these packages be used for various changes?     ",
+			answer: `Yes, both packages are adaptable to different types of alterations required; let us know what changes you would like to make.
+
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Is filing changes time-sensitive?    ",
+			answer: `Yes, it's critical to file promptly to ensure accurate and timely public registry updates.
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				" Can I file changes directly by myself?     ",
+			answer: `While you can, our packages provide expert assistance to ensure accurate submissions and compliance.
+
+
+
+
+
+
+
+`,
+		},
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+const SELLING_SHARES = {
+	link: "selling-shares",
+	title: "Selling Shares",
+	content: `To raise capital and generate revenue, many companies opt for selling shares. In a share transfer, ownership is transferred from one shareholder to the next investor. There are multiple reasons of selling shares, including liquidating assets or exiting a company or an investment. Share transfer requires completing a specific form, sometimes known as the 'stock transfer form' or 'share transfer form'. This form outlines the details of the transaction and ownership transfer.
+
+On the other hand, share issuance is also a way for companies to raise capital, but it involves creating and distributing capital equity. Current shareholders' ownership structure and voting rights may be affected by this process. Issuing shares is a common strategy for expanding a business or attracting new investors. This could affect the organisation's general direction and decision-making. Get a quote or talk to our experts today!`,
+
+	prices: [
+		{
+			priceTitle: "The Ultimate Package",
+			priceContent:
+				"It covers the essentials for smooth processes, ensuring accurate updates and compliance.",
+			price: "£49",
+			packageIncludes: [
+				"Guidance on share issuance/transfer requirements.",
+				"Preparation of necessary documents.",
+				"Submission to relevant authorities.",
+			],
+		},
+
+	
+	],
+
+
+
+
+	benefitsTitle: `Benefits of choosing our selling shares service: ✨`,
+	benefits: [
+		{
+			heading: " Efficient equity management",
+			paragraph:
+				" Get share issuance and transfer processes handled accurately and effectively.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"Affotax ensures the security and confidentiality of all your stock and distribution data. Put your trust in Affotax!",
+		},
+		{
+			heading: "Legal compliance",
+			paragraph:
+				"Affotax's experienced team can handle all of your company's legal compliance needs.",
+		},
+		{
+			heading: "Personalised support",
+			paragraph:
+				"We will guide you through the entire process with personalised support and guidance.",
+		},
+		{
+			heading: "Resource optimization",
+			paragraph:
+				" Let Affotax handle your tasks so you can focus on key business decisions.",
+		},
+
+		{
+			heading: "Documentation",
+			paragraph:
+				"Affotax takes great care to document equity management activities and transactions appropriately.",
+		},
+
+		{
+			heading: "Competitive pricing",
+			paragraph:
+				"Affotax's high-quality services are available at competitive prices to meet your business needs.",
+		},
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: "  What is issuance of shares?",
+			answer: `It involves creating and distributing new ownership units within a company to raise capital or bring in new shareholders.
+
+
+
+
+      `,
+		},
+
+		{
+			question: "What is shares transfer?  ",
+			answer: `It refers to the movement of existing equity from one shareholder to another, often for reasons like selling shares or transferring ownership.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How to sell shares in the UK? ",
+			answer: `If investors want to sell shares in the UK, they should contact their stockbroker or investment platform. Alternatively, they may provide instructions for selling using online brokerage platforms. Also, ownership interest can be traded at non listed markets
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  Can I sell my shares through my bank in the UK?     ",
+			answer: `Indeed, in the UK, you can sell your shares through your bank although first check with your broker or bank to ascertain they can permit you to sell that equity, and you should consider any applicable costs also.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "How to transfer shares after the death of a shareholder in the UK?   ",
+			answer: `After the death of a shareholder, the stock are either transferred to a beneficiary or any other person that the deceased wished. or their estate could inherit them. As per the will specifications they would be shared in case the deceased chose to direct his/her property into his/her own estate but without making a specific will concerning it at all. In the absence of one’s testament, any holdings shall be assigned following laws governing that particular state’s jurisdiction.
+
+
+
+`,
+		},
+		{
+			question:
+				" Why would a company issue new shares or transfer existing ones?  ",
+			answer: `When shares are issued, capital is raised, while when they are transferred, ownership can change or new investors can be attracted.
+
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				" What does the ultimate package include?   ",
+			answer: `It provides guidance, preparation, and submission of the necessary documents smoothly and in compliance.
+
+
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				" Can I do it without professional assistance?     ",
+			answer: `While possible, our service offers expert guidance to ensure accurate and compliant processes.sss
+
+
+
+
+
+`,
+		},
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const DIRECTOR_APPOINTMENT_RESIGNATION = {
+	link: "director-appointment-resignation",
+	title: "Director Appointment & Resignation",
+	content: `An appointment of directors is the process by which a company adds a new director to its board. They take prominent decisions on the board, so a company's decision to pick one is important. This addition will improve the performance and expansion of the company while also offering knowledge and insights.
+
+On the other hand, a director may also willingly leave their position on the board of a firm through resignation. This is called 'resignation of a director'. As such, it is imperative that they are formally acknowledged for their decision to transfer their responsibilities to the next member. Let us help you appoint or resign with elegance – get a quote today!`,
+
+	prices: [
+		{
+			priceTitle: "Director Appointment",
+			priceContent:
+				"Our package covers the essentials for a smooth director appointment process, ensuring compliance and accurate updates.",
+			price: "£29",
+			packageIncludes: [
+				"Guidance on legal requirements and documentation.",
+				"Preparation of necessary documents.",
+				"Submission to relevant authorities.",
+			],
+		},
+
+
+		{
+			priceTitle: "Director Resignation",
+			priceContent:
+				"Our package covers the essentials for a smooth director appointment process, ensuring compliance and accurate updates.",
+			price: "£29",
+			packageIncludes: [
+				"Guidance on share issuance/transfer requirements.",
+				"Preparation of necessary documents.",
+				"Submission to relevant authorities.",
+			],
+		},
+	
+	],
+
+
+
+
+	benefitsTitle: `Benefits of choosing our director appointment and resignation service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless governance changes",
+			paragraph:
+				" Choose our services for effortless governance changes with peace of mind.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"Affotax ensures the security and confidentiality of all your stock and distribution data. Put your trust in Affotax!",
+		},
+		{
+			heading: "Legal compliance",
+			paragraph:
+				"Affotax's experienced team can handle all of your company's legal compliance needs.",
+		},
+		{
+			heading: "Personalised support",
+			paragraph:
+				"We will guide you through the entire process with personalised support and guidance.",
+		},
+		{
+			heading: "Resource optimization",
+			paragraph:
+				" Let Affotax handle your tasks so you can focus on key business decisions.",
+		},
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is director appointment?",
+			answer: `The process of adding another member to a company's board of directors; now holding decision-making and accountability authority within the company.
+
+
+
+
+      `,
+		},
+
+		{
+			question: " What is director resignation?  ",
+			answer: `In simple words, it is when a director is giving up their seat on the board; by relinquishing their duties, and ceasing decision-making authority over the organisation. 
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "How is the newly appointed member selected?  ",
+			answer: `They must be chosen based on their viewpoints, abilities, and experience. This contributes to the board's increased effectiveness in leading and governing the business.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  How to resign as a director of a limited company?     ",
+			answer: `When you want to resign from your role, you must send a letter of resignation to the chairman. In your letter of resignation, you should clearly state your reasons for leaving as well as the date of your leave. The other members should then be informed of the resignation by the chairman.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Why would a director resign?   ",
+			answer: `There are many reasons why directors may resign; which can be personal, professional, or strategic.
+
+
+
+`,
+		},
+		{
+			question:
+				" Can I appoint or resign without professional assistance?    ",
+			answer: `Yes, they can be appointed without outside help, but it is not recommended to do this, as it is important to make sure the person is an expert in the industry. In addition, it's imperative to ensure all relevant laws and regulations are followed when choosing or removing a director.
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				" How do I start with your services?   ",
+			answer: `By selecting the package that perfectly meets your needs and following the purchasing instructions, you may simplify the appointment or resignation process. Affotax's professionals will guide you through every stage.
+
+
+
+
+
+
+
+
+
+`,
+		},
+
+
+		
+	],
+};
 
 
 
@@ -2656,6 +3330,12 @@ export const dataArr = [
 
 	  REGISTERED_OFFICE_ADDRESS_UK_PAGE,
 	  DIRECTORS_SERVICE_ADDRESS_UK,
-	  PSC_REGISTER
+	  PSC_REGISTER,
+	  CHANGE_COMPANY_NAME,
+	  COMPANIES_HOUSE_CHANGE_OF_ADDRESS,
+	  SELLING_SHARES,
+	  DIRECTOR_APPOINTMENT_RESIGNATION
+
+
 
 ];

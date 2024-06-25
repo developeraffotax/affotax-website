@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaAngleDoubleRight } from "react-icons/fa";
 import { v4 as uuid } from 'uuid';
 
@@ -158,7 +158,13 @@ const menu = [
 
 const Menu = () => {
 
-    const [active, setActive] = useState('Accounts');
+    const [active, setActive] = useState(() => {
+        const value = localStorage.getItem('active');
+
+        return value ? value : 'Accounts';
+
+    
+    });
 
 
 
@@ -170,7 +176,10 @@ const Menu = () => {
                         menu.map((el, index) => {
                             return (
                                 <li key={uuid()} className={` py-2 max-lg:border-b-[1px]  ${index === (menu.length - 1) ? 'border-none' : 'border-black/20'}`}>
-                                    <h3 className={`max-xl:text-sm   text-lg rounded-lg  text-nowrap py-2 px-4 font-semibold  hover:cursor-pointer  ${active === el.name ? 'text-secondary  bg-primary' : 'text-tertiary hover:text-primary'}`} onClick={() => setActive(el.name)}>{el.name}</h3>
+                                    <h3 className={`max-xl:text-sm   text-lg rounded-lg  text-nowrap py-2 px-4 font-semibold  hover:cursor-pointer  ${active === el.name ? 'text-secondary  bg-primary' : 'text-tertiary hover:text-primary'}`} onClick={() => {
+                                        setActive(el.name);
+                                        localStorage.setItem('active', el.name);
+                                    }}>{el.name}</h3>
                                 </li>
                             )
                         })
