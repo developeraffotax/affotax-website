@@ -159,7 +159,8 @@ const menu = [
 const Menu = () => {
 
     const [active, setActive] = useState(() => {
-        const value = localStorage.getItem('active');
+        
+        const value = sessionStorage.getItem('active');
 
         return value ? value : 'Accounts';
 
@@ -178,7 +179,7 @@ const Menu = () => {
                                 <li key={uuid()} className={` py-2 max-lg:border-b-[1px]  ${index === (menu.length - 1) ? 'border-none' : 'border-black/20'}`}>
                                     <h3 className={`max-xl:text-sm   text-lg rounded-lg  text-nowrap py-2 px-4 font-semibold  hover:cursor-pointer  ${active === el.name ? 'text-secondary  bg-primary' : 'text-tertiary hover:text-primary'}`} onClick={() => {
                                         setActive(el.name);
-                                        localStorage.setItem('active', el.name);
+                                        sessionStorage.setItem('active', el.name);
                                     }}>{el.name}</h3>
                                 </li>
                             )

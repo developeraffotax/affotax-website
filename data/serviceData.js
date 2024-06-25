@@ -3299,6 +3299,2650 @@ On the other hand, a director may also willingly leave their position on the boa
 
 
 
+// ---------------------------------------------------------------- PAYROLL --------------------------------------------------------
+
+
+
+
+
+
+
+const DIRECTORS_PAYROLL = {
+	link: "directors-payroll",
+	title: "Directors Payroll",
+	content: `Managing directors payroll is an essential part of running a company successfully. The director payroll process ensures you receive accurate compensation while complying with tax regulations. You can choose to receive payments monthly or annually, and submissions made to HMRC need to reflect this. At Affotax, we understand the importance of timely and accurate payroll management, which is why we offer our services to businesses of all sizes. 
+
+At times, directors might wonder if they need to register for PAYE. PAYE registration is required if you make a salary or receive other income as a director of a limited company, because you yourself are an employee of it. Get a quote now!`,
+
+	prices: [
+		{
+			priceTitle: "Director Pro (Monthly)",
+			priceContent:
+				"This package covers the essentials for smooth processing, ensuring accurate calculations and compliance. ",
+			price: "£15",
+			packageIncludes: [
+				"Calculation of director's salary, benefits, and allowances.",
+				"Tax and National Insurance deduction calculations.",
+				"Preparation and issuance of annual pay slips.",
+				"RTI/FPS monthly submission to HMRC.",
+			],
+		},
+
+
+		{
+			priceTitle: "Director Pro+ (Annual)",
+			priceContent:
+				"This package covers the essentials for smooth yearly processing, ensuring accurate calculations and compliance.",
+			price: "£150",
+			packageIncludes: [
+				"Calculation of director's salary, benefits, and allowances.",
+				"Tax and National Insurance deduction calculations.",
+				"Preparation and issuance of annual pay slips.",
+				"RTI/FPS monthly submission to HMRC.",
+			],
+		},
+	
+	],
+
+
+
+
+	benefitsTitle: `Benefits of our Directors Payroll service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless management",
+			paragraph:
+				" You can manage everything easily, ensuring accurate and compliant compensation.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"Your information is handled securely and remains confidential, so trust Affotax!",
+		},
+		{
+			heading: "Legal compliance",
+			paragraph:
+				"Expertly manage your requirements, ensuring adherence to tax and legal obligations.",
+		},
+		{
+			heading: " Amount confirmation",
+			paragraph:
+				"Receive confirmation of the amount to be paid to HMRC each month, and a reminder of the due date.",
+		},
+		{
+			heading: " Electronic payslip",
+			paragraph:
+				" You can choose to receive your payslips in an electronic format, making the process easier for you.",
+		},
+
+		{
+			heading: " P60 processings",
+			paragraph:
+				" The year-end process, including P60, will also be emailed to you, making sure you have everything you need.",
+		},
+
+		{
+			heading: " Processing P45",
+			paragraph:
+				"  Your year-end tax returns are handled by Affotax with HMRC, and the P45 will be emailed to you directly.",
+		},
+
+		{
+			heading: " Personalised support",
+			paragraph:
+				"You get one hour of phone or admin support during each financial year, so you can get help any time.",
+		},
+
+		
+		{
+			heading: " Resource optimisation",
+			paragraph:
+				" You can focus your time and resources on strategic decisions by entrusting Affotax.",
+		},
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is a directors payroll?  ",
+			answer: `It is the process of calculating and managing annual salary payments, tax deductions, and National Insurance contributions. This is for their employment with the company.
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: " Why is it important?  ",
+			answer: `To ensure that you receive accurate compensation and comply with tax regulations, it promotes financial transparency and legal compliance on the part of directors.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How does it work?   ",
+			answer: `Usually, directors' compensation is determined either monthly or annually as a percentage of the firm's profits. They receive this sum in addition to their regular income and perks when it is added to the payroll. There are also bonuses and other rewards that can be earned by you.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " Do I need to register for PAYE as a director?      ",
+			answer: `If you receive salaries, bonuses, etc. then you are required to do so. During Paye registration, you must also provide HMRC with information about any benefits you may be eligible for.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can a director be on the payroll?   ",
+			answer: `Yes, they can be paid and get the same benefits as regular employees. However, they are not required to perform the same duties as regular employees. They have to be paid through the company's PAYE scheme, and they should also be compensated differently from ordinary employees.
+
+
+
+
+`,
+		},
+		{
+			question:
+				"  Are directors employees if not on payroll?    ",
+			answer: `It is also possible to be employed by the company through a contract or by holding shares in the venture. The payments can also be made through a bank account for the corporation, or through another method not covered by PAYE.
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				" Is the process time-sensitive?   ",
+			answer: `Yes, directors' compensation must be paid on time and accurately, to comply with the law.
+
+
+`,
+		},
+
+
+		{
+			question:
+				" Can I handle it on my own?     ",
+			answer: `It is possible, but it is not recommended to do so. Our packages offer expert assistance to ensure that accurate calculations, deductions, and compliance are met during the process.
+`,
+		},
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+const PAYE_EMPLOYEE = {
+	link: "paye-employee",
+	title: "PAYE Employee",
+	content: `Pay As You Earn (PAYE), is a way for employees to deduct their taxes. Paye for employees is a system that ensures that both employers and employees pay their taxes correctly. This system involves the employer deducting income tax and other required deductions directly from employees' salaries before paying them. These deductions are then remitted to tax authorities on behalf of employees.
+
+Note: Paye for employees must be paid immediately and punctually to HM Revenue and Customs (HMRC). If you want to pay monthly, your payment will be due on the 22nd of the following tax month. For quarterly payments, it is due on the 22nd after the end of the quarter. For example, if the quarter ends on July 5th, then the payment is expected on July 22nd. Furthermore, if you want to pay by cheque through the mail, it is necessary that it reaches HMRC by the 19th of the month. Paying your paye bills on time can save you from penalties and interest charges. Let Affotax help you – get a quote now!`,
+
+	prices: [
+		{
+			priceTitle: "Elite Employee Payroll Package",
+			priceContent:
+				"It covers the essentials for smooth employee payroll processing, ensuring accurate calculations and compliance. this service cost £15 per employee per month. ",
+			price: "£15",
+			packageIncludes: [
+				"Calculation of director's salary, benefits, and allowances.",
+				"Tax and National Insurance deduction calculations.",
+				"Preparation and issuance of annual pay slips.",
+				"RTI/FPS monthly submission to HMRC.",
+			],
+		},
+
+
+
+	
+	],
+
+
+
+
+	benefitsTitle: `Benefits of our Directors Payroll service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless management",
+			paragraph:
+				" Affotax offers paye employee services that ensure proper remuneration and compliance.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"With our private handling and data protection procedures, you can guarantee data security.",
+		},
+		{
+			heading: "Legal compliance",
+			paragraph:
+				" Our expert team will offer you professional guidance to ensure that you meet all payroll guidelines.",
+		},
+		{
+			heading: " Amount confirmation",
+			paragraph:
+				"You get to confirm the amount to be paid to HMRC each month and never miss a due date.",
+		},
+		{
+			heading: " Electronic payslip",
+			paragraph:
+				" With our service, you will get electronic payslips to make the process easier for you and your employees.",
+		},
+
+		{
+			heading: "Personalised support",
+			paragraph:
+				" You will get the personalised support you need from our expert team throughout the process.",
+		},
+
+		{
+			heading: " Resource optimisation",
+			paragraph:
+				"  Free up valuable time and resources by availing of our service, to better focus on core business activities.",
+		},
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is paye employee?    ",
+			answer: `PAYE is an acronym for Pay As You Earn, which is a method by which employers are required to deduct income tax and National Insurance contributions from the wages of their employees. It is their responsibility to pay them to the tax authorities. 
+
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: " Why is the proper management important for employers and employees?   ",
+			answer: `The proper management ensures that employees pay the right amount of tax and NI contributions and receive transparent pay statements as well as comply with the law. Employers benefit from easy payroll management, avoiding penalties for non-compliance and non-payment of taxes. 
+
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  What is included in the elite package?   ",
+			answer: `It includes the calculations of the director's salary, benefits, allowances, taxes and NI deductions. It also contains the preparation and issuance of annual pay slips, along with the monthly submission of RTI/FPS to HMRC.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " Is the payroll number the same as the employee number?      ",
+			answer: `Yes, the payroll number is the same as the employee number. Which is used to identify the employee and submit the RTI/FPS submission to HMRC. 
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Do I need a payroll company for one employee?   ",
+			answer: `No, a payroll company is not required for one employee. You are responsible for payroll submissions. If you are unclear about the proper procedures, contact us!
+
+
+
+
+`,
+		},
+		{
+			question:
+				" Do employees have paye references?    ",
+			answer: `Yes, employees have paye references. This reference helps in identifying an employee and calculating the right amount of tax to be deducted from their salary. Paye reference also helps in identifying the employee's National Insurance contributions.
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"  Can I customise your package further?  ",
+			answer: `Yes, we collaborate with you to design a solution that precisely meets your needs as part of our package. You can always customise our payroll services based on your needs.
+
+
+`,
+		},
+
+
+		{
+			question:
+				"Why is timely and accurate employee payroll management important?      ",
+			answer: `Payroll processing must be done accurately and on time to ensure correct taxation, compliance, and avoid penalties.
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"How do I get started with your services?    ",
+			answer: `It is very easy to get started with our paye management service. Follow the instructions to purchase after choosing our elite package, and our team will guide you through the whole process. 
+
+
+`,
+		},
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const AUTO_ENROLLMENT_PENSION = {
+	link: "auto-enrollment-pension",
+	title: "Auto Enrollment Pension",
+	content: `As a UK worker, you have the opportunity to secure your financial future with auto enrolment pension. This mandatory workplace initiative requires your employer to automatically enrol you into a pension scheme if you're aged between 22 and State Pension age, earn at least £10,000 per year, and usually work in the UK. 
+
+Pension auto enrolment initiative is particularly beneficial for those who may not have considered retirement planning previously, as it guarantees that eligible employees are saving for their future. Enrol in a retirement income today – get a quote now!`,
+
+	prices: [
+		{
+			priceTitle: "Pension Setup",
+			priceContent:
+				"Our starter package covers the essentials for hassle-free procedure, ensuring your business meets legal requirements and supports employee retirement planning.",
+			price: "£49",
+			packageIncludes: [
+				"Assessment of eligible employees",
+				"Pension scheme selection and setup.",
+				"Employee communication materials.",
+				"Submission of pension contributionss",
+			],
+		},
+
+		{
+			priceTitle: "Pension Enrolment",
+			priceContent:
+				"This package is designed to do the processing through a provider such as Nest, etc.",
+			price: "£39",
+			packageIncludes: [],
+		},
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our Auto Enrolment Pension Service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless management",
+			paragraph:
+				" Our services make it easy for you to manage auto-enrolment in employee pensions.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"We take every possible measure to keep the employee information confidential and ensure data security.",
+		},
+		{
+			heading: "Legal adherence",
+			paragraph:
+				"  Our team of experts will help you navigate the complex regulations, guaranteeing legal compliance.",
+		},
+		{
+			heading: "Transparency",
+			paragraph:
+				" Our scheme is transparent, which is why we provide regular reports and updates.",
+		},
+		{
+			heading: " Personalised guidance",
+			paragraph:
+				" Our team is always ready to provide expert assistance throughout the process.",
+		},
+
+		{
+			heading: " Reduced penalty risk",
+			paragraph:
+				" With our services, you can avoid penalties for regulations.",
+		},
+
+		{
+			heading: " Flexibility",
+			paragraph:
+				" Whether you need support in setting up your pension scheme or managing it on an ongoing basis, Affotax is the best choice.",
+		},
+		{
+			heading: " Resource optimisation",
+			paragraph:
+				" By entrusting us, you can free up valuable time and resources to focus on your business's priorities.",
+		},
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is auto enrolment pension?    ",
+			answer: `It is when an employee meets certain requirements to automatically qualify for a pension plan or scheme. It is a requirement for a company or business to enrol their employees.
+
+
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "  Why is it important?    ",
+			answer: `It is important because it benefits both the employee and the employer. It is the best way to ensure financial security while following laws and regulations. 
+
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  How important is the timely implementation of it?   ",
+			answer: `To meet the legal requirements and ensure the retirement security of the employees, timely implementation is important.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " When did pension auto enrolment start?    ",
+			answer: `It started in 2012. In order to have their employees included in a retirement plan, all employers with 50 or more employees are required but may choose not to do so. It applies to all employers in the United Kingdom regardless of the size of the company they own.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "When does it start for new employees?   ",
+			answer: `It starts on day one of employment. The newly hired employees are automatically enrolled in their retirement savings plan. The contributions of the employer and employee are deducted from their salaries, adding to the defined contribution plan.
+
+
+
+
+`,
+		},
+		{
+			question:
+				"How much does the scheme pay?     ",
+			answer: `The schemes usually pay 8% of salary up to a specific annual limit. It is also possible that it increases through the contributions made by the employer and the employee.  
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"  Is it complex? ",
+			answer: `Yes, it can be complex, but by availing our services, you can avoid these complexities while promoting employee benefits and financial security.
+
+
+
+`,
+		},
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const ONLINE_P11D_FORM = {
+	link: "p11d-form",
+	title: "Online P11D Form",
+	content: `Are you an employer in the UK? If yes, then you will need to fill out P11D form to report benefits, expenses and certain company assets to HMRC. It provides a detailed summary of non-salary perks and allowances offered to employees during the filing period. The submission is important for accurate taxation, maintaining tax regulations, and transparent reporting of additional benefits beyond regular wages.
+
+Note: If you are behind schedule with submitting or have provided inaccurate information on your tax return, it can lead to penalties. In addition, you may pay less or claim too many reliefs. You can avoid these penalties by providing accurate information, submitting P11D online and on time. If you are unaware of any aspect of it, we can help – get a quote now!`,
+
+	prices: [
+		{
+			priceTitle: "Essential Package",
+			priceContent:
+				"It covers the essentials for accurate and hassle-free reporting, ensuring compliance with tax regulations and transparent employee benefit disclosure.",
+			price: "£49",
+			packageIncludes: [
+				"Assessment and compilation of employee benefit details",
+				"Preparation and submission to HMRC",
+				"Employee communication materials on benefit reporting",
+			],
+		},
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our P11D Form Service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless management",
+			paragraph:
+				" We keep our clients' information secure and confidential – put your trust in Affotax!",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"We keep our clients' information secure and confidential – put your trust in Affotax!",
+		},
+		{
+			heading: "Legal compliance",
+			paragraph:
+				"We can help you expertly manage your form P11D requirements and ensure compliance.",
+		},
+		{
+			heading: "Personalised support",
+			paragraph:
+				" As our client, you will get the personalised support and guidance you need to find expert solutions.",
+		},
+		{
+			heading: " Resource optimisation",
+			paragraph:
+				" When you avail our service, you will free up time and resources to focus on the benefits of your business.",
+		},
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is a P11D Form?   ",
+			answer: `In the UK, employers submit a declaration form to report the benefits, expenses, and assets of their employees. This is known as the form P11D.
+
+
+
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "  Why is accurate reporting important?   ",
+			answer: `Accurate reporting of is important because of complying with rules and regulations and to avoid penalties of inaccurate data submission.
+
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  Where do I get it?    ",
+			answer: `You can get it through HMRC's website or by contacting one of their payroll providers.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " Who pays the tax on it?   ",
+			answer: `It is paid by the employer but sometimes the employer will need to deduct from the employee's salary. To find out the amount of tax that has been deducted from your salary, you can find it on a P45 form which will be issued to you accordingly.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Does a P11D mean I owe money?   ",
+			answer: `No, it does not mean that you owe money. It simply means that you have to report the taxable benefits to HMRC.
+
+
+
+
+`,
+		},
+		{
+			question:
+				"Do I need to submit a P11D if it has no benefits?  ",
+			answer: `If you do not possess any benefits, it is not mandatory for you to submit. But remember to account for any benefits that you receive and pay the taxes. Also, notify your human resource department of any change in your benefits.
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"  Can I customise the solution further? ",
+			answer: `Yes, our package is designed to provide specific benefit reporting needs and can be customised according to your request.
+
+
+`,
+		},
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const P60_FORM = {
+	link: "p60-form",
+	title: "P45 and P60 Form",
+	content: `
+
+		P45 Form: Officially known as 'Details of Employee Leaving Work', the P45 form is an important document that is issued to you by your employer after you decide to leave your job. It is important because it shows HMRC how much tax and National Insurance Contributions (NIC) has been paid by you through your salary (PAYE) within the tax year up until your last day at work. Also, you may need your P45 form when you claim tax refunds and benefits.
+
+P60 Form: The P60 form or 'End of Year Certificate' is a detailed summary of your earnings and tax paid throughout the whole tax year from April 6th to April 5th of the following year. The form P60 includes your:
+
+Salary
+Bonuses
+Statutory pay
+The tax you paid via PAYE
+National Insurance Contributions (NIC)
+Student loan repayments.
+You may need to show your P60 when:
+
+Applying for a mortgage
+Applying for a bank loan
+Doing a self-assessment tax return
+Claiming overpaid taxes or benefits
+Check out our packages, and get a quote today!
+	
+	`,
+
+	prices: [
+		{
+			priceTitle: 'The "Form P60" Package',
+			priceContent:
+				"This package covers the essentials for accurate and hassle-free generation, providing employees with clear and organised documentation of their total income and tax contributions.",
+			price: "£49",
+			packageIncludes: [
+				"Compilation and calculation of compensation, tax deductions, and contributions",
+				"Preparation and issuance of form P60",
+				"Secure digital storage and access for both employers and employee",
+			],
+		},
+		{
+			priceTitle: 'The "Form P45" Package',
+			priceContent:
+				"This package covers the essentials for accurate and hassle-free generation, providing employees with clear and organised documentation of their total income and tax contributions.",
+			price: "£49",
+			packageIncludes: [
+				"Compilation and calculation of compensation, tax deductions, and contributions",
+				"Preparation and issuance of form P45",
+				"Secure digital storage and access for both employers and employee",
+			],
+		},
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our P45 and P60 Form Services: ✨`,
+	benefits: [
+		{
+			heading: " Efficient reporting",
+			paragraph:
+				" We simplify the completion and submission with efficient online reporting.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"We prioritise confidentiality which is why we provide data security of the sensitive employee information.",
+		},
+		{
+			heading: "Compliance expertise",
+			paragraph:
+				"We stay updated on rules and regulations, providing accurate and lawful completion. ",
+		},
+		{
+			heading: "Personalised assistance",
+			paragraph:
+				" We provide personalised guidance throughout the completion and submission.",
+		},
+		{
+			heading: " Resource optimisation",
+			paragraph:
+				" By availing our services, you can save time and resources to better focus on what matters for your business.",
+		},
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is a P60 form?    ",
+			answer: `It is an official document provided to employees annually by their employers in the UK, containing a summary of their earnings, deductions, and contributions for the filing period.
+
+
+
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "What is it used for?  ",
+			answer: `It is used for evaluating income, payments, contributions, and for other financial applications such as loans or mortgages.
+
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  What is a P45 form? ",
+			answer: `A P45 form is a document officially known as 'Details of Employee Leaving Work', provided to employees after they decide to leave their job.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How to get it?  ",
+			answer: `You can request it from your employer before leaving, as your employer must provide you with the document as per the law. 
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can I customise the packages further?  ",
+			answer: `Yes, we prioritise our clients and our goal is to satisfy your needs, so if your needs require customisation of our packages, it's possible.
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"How do I get started with your services?   ",
+			answer: `To get started, choose a package of your choice then follow the purchasing instructions; our  team will reach out to you immediately. 
+
+
+
+
+
+
+`,
+		},
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const PAYSLIP_GENERATOR = {
+	link: "payslip-generator",
+	title: "UK Payslip Generator",
+	content: `The manual process of generating payslips has become outdated in today's world. Now, with online payslip generator, you can create them easily and quickly with accurate information that outlines your employees' net income, compensations, and withholdings for a specific pay period. As an employer, you can now easily build trust between you and your employees with transparent salary calculations while also saving your valuable time. 
+
+Affotax offers an online service in the UK with many benefits. It enables you to easily calculate your earnings, pre-tax contributions, and net pay. We also provide customised design and branding, bringing your creativity and ideas into existence. By availing of our service, you will also benefit from your data being securely stored electronically, so you can access them from anywhere at any time. Let us help you – get a quote today!
+	
+	`,
+
+	prices: [
+		{
+			priceTitle: 'Basic Package',
+			priceContent:
+				"It covers the essentials for accurate and hassle-free payslip generation, ensuring transparent communication of employee earnings, within 3 working days.",
+			price: "£29",
+			packageIncludes: [
+				"Calculation of earnings, deductions, and net pay",
+				"Customized design and branding of payslips",
+				"Customized design and branding of payslips",
+			],
+		},
+		{
+			priceTitle: 'Express Package',
+			priceContent:
+				"It covers the essentials for accurate and hassle-free payslip generation, ensuring transparent communication of employee earnings within 24 Hours.",
+			price: "£39",
+			packageIncludes: [
+				"Calculation of earnings, deductions, and net pay",
+				"Customized design and branding of payslips",
+				"Customized design and branding of payslips",
+			],
+		},
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our Online Payslip Generator Services: ✨`,
+	benefits: [
+		{
+			heading: " Effortlessly generate pay slips",
+			paragraph:
+				" With our service, you can easily generate your salary slips, ensuring smooth operations.",
+		},
+		{
+			heading: "Legal compliance",
+			paragraph:
+				"Our expert team manages the whole process carefully to ensure adherence to legal requirements.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"Put your trust in Affotax as we provide the best data security, keeping your employee payroll information secure.",
+		},
+		{
+			heading: "Customisable",
+			paragraph:
+				"You can customise our service; choose from multiple templates of payslips for banks, etc. ",
+		},
+		{
+			heading: "Personalised support",
+			paragraph:
+				" With our service, you get access to our expert team for personalised support throughout the process.",
+		},
+		{
+			heading: "Resource optimisations",
+			paragraph:
+				" Choosing us means you get to free up valuable time and resources to focus better on your business's growth. ",
+		},
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is payslip generator?     ",
+			answer: `It is when we create an official document that outlines the total income, deductions, etc of an employee for a specific wage period. 
+
+
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "How to generate payslip?   ",
+			answer: `They are generated automatically through professional payroll software as per UK standards by entering accurate data. We can help you efficiently and with accuracy while also giving you the ability to customise your payslips for banks or mortgages. 
+
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How to generate a payslip online?  ",
+			answer: `We provide all services online in the United Kingdom. You can create them online with us quickly and accurately. 
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " Can I create it on my own?   ",
+			answer: `Yes, you can! All you need is your employee information and the latest pay cycle. We will do the rest for you, so you can print or send it electronically.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "How does the 2nd package differ?   ",
+			answer: `It is for those clients that want the work done as soon as possible.
+
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"Can I customise the package further?   ",
+			answer: `Yes, it is designed to meet your specific needs, including the design, content and formatting. You can customise it today, just contacting us.
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"How do I get started with your service?   ",
+			answer: `To get started, choose the bundle of your choice and then follow the instructions to purchase it. Our team members will contact you within 24 hours to process your order. 
+
+
+
+
+
+
+`,
+		},
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------------------------------------------------  VAT  ---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+const QUARTERLY_RETURN = {
+	link: "quarterly-vat-return",
+	title: "Quarterly VAT Return",
+	content: `As a registered business in the UK, you must understand how important it is to submit your VAT return to HMRC every three months. It is called the 'Accounting Period' between your submissions. You are required to make advance payments, either monthly or quarterly, towards your bill during your accounting period and the final price upon submitting your VAT return. HMRC mandates this as of April 2022 for VAT-registered businesses to use software compatible with Making Tax Digital for their quarterly VAT return. Your existing online account is no longer suitable to submit, and failing to file using MTD-compatible software may lead to penalties from HMRC.
+
+The expert team at Affotax has mastered the what and how of MTD VAT submission in the UK and is ready to take the burden off your shoulders. Our MTD-compatible software allows you to have the best experience in your digital submission. We promise accurate and timely submissions – get a quote today!
+
+
+	`,
+
+	prices: [
+		{
+			priceTitle: 'Basic Package',
+			priceContent:
+				"It covers the essentials, ensuring accurate and hassle-free compliance with HMRC's digital tax initiative. Ideal for businesses with quarterly turnover < £5K.",
+			price: "£99",
+			packageIncludes: [
+				"Quarterly MTD VAT return preparation",
+				"Review of bookkeeping record. VAT transactions",
+				"Submission to HMRC",
+			],
+		},
+		{
+			priceTitle: 'Premium Package',
+			priceContent:
+				"It covers everything in the above package + consultation. This package is ideal for businesses with quarterly turnover > £5K.",
+			price: "£149",
+			packageIncludes: [
+				"Quarterly MTD VAT return preparation",
+				"Review of bookkeeping record. VAT transactions",
+				"Submission to HMRC",
+				'VAT consultation'
+			],
+		},
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our ‘Quarterly VAT Return’ Service:  ✨`,
+	benefits: [
+		{
+			heading: "Effortless VAT reporting",
+			paragraph:
+				" By availing of our service, you ensure compliance with regulations and an accurate submission. ",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"Put your trust in Affotax as we handle your information with the utmost data security during your submission.",
+		},
+		{
+			heading: "MTD expertise",
+			paragraph:
+				" Our team at Affotax has the expertise you need to expertly manage your submissions correctly, avoiding penalties. ",
+		},
+		{
+			heading: "Personalised support",
+			paragraph:
+				"By availing of our service, you access dedicated support from our expert team throughout the procedure. ",
+		},
+		{
+			heading: " Resource optimisation",
+			paragraph:
+				"While we take responsibility for your filing, you can focus on other important business activities.",
+		},
+		{
+			heading: "Streamline compliances",
+			paragraph:
+				" We make sure you are compliant with all digital tax requirements, allowing you to concentrate on growing your business.",
+		},
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: "What is the quarterly VAT return submission?    ",
+			answer: `It involves electronically reporting your business's VAT information to HMRC on a quarterly basis as part of the Making Tax Digital initiative.
+
+
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: " Why is accurate filing important?   ",
+			answer: `Accuracy is important for compliance with HMRC's digital tax requirements and it also helps in providing visibility into your liabilities.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "How to change from quarterly to monthly vat returns?",
+			answer: `If you need to switch from quarterly to monthly VAT returns, get in touch with HMRC. They will help you understand how you can do that together with the documents or forms you need. The change-over period for the monthly VAT return will also be communicated to you.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " Are there penalties for late delivery? ",
+			answer: `Yes, late delivery may lead to penalties. Affotax can help you file accurately and on time, so get a quote today. 
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can I switch between packages as my business needs change?  ",
+			answer: `Yes, you can upgrade or downgrade your package based on your reporting requirements because our packages are flexible to suit our clients' needs. 
+
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"How often should I review my transactions for accuracy?  ",
+			answer: `You should review your transactions regularly; ideally monthly reviews are perfect. It reduces the risk of errors and fines. 
+
+
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"What if I have specific questions or need personalised advice? ",
+			answer: `If you have further inquiries about our services, or need personalised advice, our team at Affotax will be more than happy to assist or answer your questions.
+
+
+
+
+
+
+`,
+		},
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const EORI_NUMBER = {
+	link: "eori-number",
+	title: "EORI Number",
+	content: `EORI is an abbreviation for Economic Operators Registration and Identification. It is very significant for the identification of an individual or economic operator who must clear customs in the European Union. This number is unique and assigned only once to a person or economic operator. It is important to get EORI number and share it with the customs authorities in the member states for customs operations. It is essential for all types of customs operations such as import, export, and transit. It is your standard identification number across the EU, benefiting both the economic operators and customs authorities in customs clearance, statistical and security purposes. 
+
+Are you planning to import or export goods in the UK? If yes, then you will need it, and you've come to the right place. Check out our packages below and let us help you get it easily – get a quote now!
+	`,
+
+	prices: [
+		{
+			priceTitle: 'Basic Package',
+			priceContent:
+				"Streamline your international trade operations and compliance with ease. We handle the paperwork while you focus on growing your business.",
+			price: "£49",
+			packageIncludes: [
+				"Managing application",
+				"Documentation and submissions",
+				"Expert support for inquiries",
+			],
+		},
+		{
+			priceTitle: 'Express Package',
+			priceContent:
+				"With this package, you can get it in just 3 days.",
+			price: "£69",
+			packageIncludes: [
+				"Managing application",
+				"Documentation and submissions",
+				"Get it in only 3 days",
+				"Consultation",
+			],
+		},
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our ‘EORI Number’ Service:  ✨`,
+	benefits: [
+		{
+			heading: " Effortless trade identification",
+			paragraph:
+				" Avoid the burden of long paperwork; apply and obtain effortlessly.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				"Put your trust in Affotax as we handle your data with the utmost data security during your application process.",
+		},
+		{
+			heading: " Expert handling",
+			paragraph:
+				"We are a team of experts with years of experience, so let us expertly manage your application.",
+		},
+		{
+			heading: "Application form",
+			paragraph:
+				"We will expertly fill out your application form and manage your documentation and submission to HMRC.",
+		},
+		{
+			heading: "Personalised assistance",
+			paragraph:
+				" You can get personalised assistance or guidance with your application by using our service. ",
+		},
+		{
+			heading: "Resource optimisation",
+			paragraph:
+				" When you choose our services, you save valuable time and resources to concentrate on the growth of your business.",
+		},
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is EORI number?      ",
+			answer: `It is short for Economic Operator Registration and Identification number, which is a unique number used for customer interactions while trading with countries outside the European Union. 
+
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "Why do businesses need it?   ",
+			answer: `It is important for businesses because it is crucial for customs declarations and international trade import and export processes. 
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How to apply for EORI number? ",
+			answer: `You can apply online through our service. We take the burden off your shoulders by filling out the application while managing your documentation and submission to HMRC.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How can I check it? ",
+			answer: `If you want to check it for validity, etc., visit the official government website and check using the EORI number checker tool. Insert it in the given place, and the tool will automatically check its authenticity and validity.
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can a business have multiple of them?   ",
+			answer: `No, it is only possible for a business to have multiple, if the business operates in multiple countries. In this case, the business must apply for it in every country it trades. 
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"How long is it valid?  ",
+			answer: `It is valid until the business continues to engage in international trade. However, it is important to keep it up-to-date, including its associated information. 
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				" What documents are required for the application process in the UK?  ",
+			answer: `The specific types of documents needed for the application include: 
+
+Proof of identity (e.g., passport or ID card).
+Proof of address (e.g., utility bill or bank statement).
+Proof of registration (if applicable).
+Proof of Economic Operator Identification (EORI) number (if applicable)
+Application form completed and signed.
+
+
+
+`,
+		},
+
+		{
+			question:
+				" Do private individuals need it?   ",
+			answer: `Private individuals and businesses must obtain it to engage in custom activities/trading. The difference is that private individuals need it only when they are importing or exporting goods on their own behalf, while businesses need it for everyday customs operations regardless of the size of the shipment.
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"  Is it the same as my VAT number?     ",
+			answer: `No, they are two different things: It is used for tracking or tracing goods as they move between EU countries. On the other hand, the VAT number is for businesses to identify them for VAT purposes.
+
+
+
+
+
+`,
+		},
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------------- Bookkeeping -----------------------------------------------------------
+
+
+
+const XERO_BOOKKEEPING = {
+	link: "xero-bookkeeping",
+	title: "Xero Bookkeeping (Monthly)",
+	content: `Xero bookkeeping is the use of accounting software (Xero) to record and organise financial transactions. It has replaced physical books, making it easier to maintain correct financial records. However, it is important to understand why you need a Xero bookkeeper. They can help you record and reconcile every transaction while also fulfilling other duties such as accounts payable and accounts receivable, payroll, helping with your accounting reports and measuring your business performance.
+
+Affotax provides you with experts who can manage your records every month, so you can run a successful business. Our Xero certified bookkeeper can help you check whether you are making more money than spending while also avoiding a cash crisis. Check out the benefits of our services below and get a quote today!
+	`,
+
+	prices: [
+		{
+			priceTitle: 'Basic Package',
+			priceContent:
+				"This package covers the essentials for accuracy; ideal for transactions <500 per month using Xero.",
+			price: "£69",
+			packageIncludes: [
+				"Monthly recording on Xero",
+				"Bank and credit card reconciliation",
+				"Financial statement preparation and reporting",
+			],
+		},
+		{
+			priceTitle: 'Express Package',
+			priceContent:
+				"This package covers the essentials for accuracy; and is ideal for transactions <1000 per month using Xero.",
+			price: "£99",
+			packageIncludes: [
+				"Monthly recording on Xero",
+				"Bank and credit card reconciliation",
+				"Financial statement preparation and reporting",
+			],
+		},
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our ‘Xero Bookkeeping’ Services: ✨`,
+	benefits: [
+		{
+			heading: " Effortless financial management",
+			paragraph:
+				"  Let us help you avoid falling behind by managing your records effortlessly.",
+		},
+		{
+			heading: " Data security",
+			paragraph:
+				"We manage your data with the utmost security and confidentiality, so put your trust in Affotax. ",
+		},
+		{
+			heading: " Xero expertise",
+			paragraph:
+				"Our experts have years of experience and expertise in providing professional services.",
+		},
+		{
+			heading: " Manage crisis",
+			paragraph:
+				"We will identify and address recurring problems for you, such as low cash flow or growing debt, etc.",
+		},
+		{
+			heading: "Personalised support",
+			paragraph:
+				" Our expert team is always ready to assist you and offer support throughout the process. ",
+		},
+		{
+			heading: " Drive performance",
+			paragraph:
+				"  We will identify and address what drives performance in your business and set up ways to measure and monitor it.",
+		},
+		{
+			heading: " Resource optimisation ",
+			paragraph:
+				" Our services can save you valuable time and help you understand your business finances.  ",
+		},
+
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is Xero bookkeeping?     ",
+			answer: `It is when you systematically record, categorise and organise your transactions and other information using an accounting software called Xero. It makes it much easier to record correct financial data and gives real-time insights.
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "Why is it important for businesses?   ",
+			answer: `It is important for businesses because it ensures real-time insights, easy reconciliation and helps in decision-making. We make sure your finances are in order and you are stress-free to focus on the growth of your business.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "  How long does Xero keep bookkeeping records?   ",
+			answer: `It keeps your records for up to 7 years after your accounts are finalised, so you can easily access historical financial information for taxation, reference, or for future audits.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "What is the difference between this and accounting in Xero?  ",
+			answer: `The difference is that bookkeeping in Xero helps record and maintain correct information like invoices, receipts, and payments. While accounting helps analyse, interpret, and report the information to provide insights for the financial betterment of a business.
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Can I customise your packages further?  ",
+			answer: `Yes, we prioritise our clients and their needs, therefore, if our client wants customisation in our service, they can fulfil their needs and find a solution. 
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				" Why do accountants use Xero?   ",
+			answer: `It is an online accounting software that is preferred by most accountants and it provides ease in managing financial data, collaborating with clients and providing timely and correct insights. It also provides other advanced features that help in multiple accounting complexities.
+
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				" What is the average cost per month?  ",
+			answer: `The average cost per month varies depending upon the industry or business type. Some bookkeepers charge up to $100, while others would charge $400 or more. Businesses with higher revenue and higher transaction volumes have higher average cost because of the need for more comprehensiveness and vice versa. 
+
+
+
+
+`,
+		},
+
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const QUICKBOOKS_BOOKKEEPING = {
+	link: "quickbooks-bookkeeping",
+	title: "QuickBooks Bookkeeping (Monthly)",
+	content: `QuickBooks bookkeeping is one of the most important software for businesses' financial management. With QuickBooks Online (QBO), you can effortlessly manage your finances like record-keeping, easy reconciliation and also get in-depth insights. It is helpful for businesses and bookkeepers both as it helps record and categorise transactions with ease while also allowing business owners to focus on the growth of their business. 
+
+Our expert team uses the advanced features of QBO to make sure that you track your finances and make an informed decision accordingly. Check out our packages and their benefits and get a quote today!
+
+
+`,
+
+	prices: [
+		{
+			priceTitle: 'Basic Package',
+			priceContent:
+				"This package covers the essentials, and is ideal for transactions <500 per month using QBO.",
+			price: "£69",
+			packageIncludes: [
+				"Monthly recording of transactions on QBO",
+				"Bank and credit card reconciliation",
+				"Financial statement preparation and reporting",
+			],
+		},
+		{
+			priceTitle: 'Premium Package',
+			priceContent:
+				"This package covers the essentials, and is ideal for transactions <1000 per month using QBO.",
+			price: "£99",
+			packageIncludes: [
+				"Monthly recording of transactions on QBO",
+				"Bank and credit card reconciliation",
+				"Financial statement preparation and reporting",
+			],
+		},
+
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our QuickBooks Bookkeeping Services: ✨`,
+	benefits: [
+		{
+			heading: " Stress-free management",
+			paragraph:
+				" With our services, you can correctly maintain financial records without stressing over the complexities. ",
+		},
+		{
+			heading: " Data security",
+			paragraph:
+				"Your data is managed with care and security as it remains confidential, so put your trust in Affotax.   ",
+		},
+		{
+			heading: " QBO expertise",
+			paragraph:
+				"Our quickbooks bookkeepers have years of experience in providing services accurately and timel",
+		},
+		{
+			heading: "  Personalised support",
+			paragraph:
+				"You will get personalised support and guidance throughout the monthly process.",
+		},
+		{
+			heading: " Manage crisis",
+			paragraph:
+				" With our QBO bookkeeping services, you can manage financial crises like low cash flow or mounting debt, etc.",
+		},
+		{
+			heading: "Drive performance",
+			paragraph:
+				" Your business will be measured and monitored by identifying and addressing what drives performance.",
+		},
+		{
+			heading: "Resource optimisation",
+			paragraph:
+				" Let us help you understand your business’s finances while saving your valuable time and resources. ",
+		},
+		
+
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is QuickBooks Bookkeeping?  ",
+			answer: `It is when one records and manages their transactions using a software called QuickBooks Online (QBO). It helps bookkeepers in correctly providing real-time insights, simplified reconciliation and helps in informed decision-making for the growth of a business. 
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "Do I need a bookkeeper if I have quickbooks?   ",
+			answer: `Yes, you still need a bookkeeper. While it can automate and streamline certain processes, it still requires knowledge and expertise to manage your finances accurately and ensure compliance with tax regulations. A bookkeeper can provide additional oversight, reconcile accounts, and provide valuable insights for decision-making.
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How to add a bookkeeper to Quickbooks Online?  ",
+			answer: `Here is how you can do it:
+
+Open the ‘User’ bar in the software.
+Click on the "Add a user" option/button.
+Choose the ‘Bookkeeper’ role as the user type.
+Fill out the personal information of the user and create a password.
+Give permission and access to the bookkeeper.
+Send the login credentials to the bookkeeper via email.
+Monitor and control the bookkeeper's activities through user permissions.
+
+
+
+
+`,
+		},
+		{
+			question: "Where is bookkeeping in quickbooks?   ",
+			answer: `To find it, first open the ‘Lists’ bar. Select ‘Charts of Accounts’ and here you can find and manage your financial accounts. You can also create and manage accounts and view running balances and transaction history. 
+
+
+
+
+
+`,
+		},
+		{
+			question: " Can I customise the packages further to meet my specific needs?  ",
+			answer: `Yes, if the current one does not seem to satisfy or meet your specific needs, you can modify them accordingly.
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"  How can I get started? ",
+			answer: `Choose a solution that you think is best for your needs or contact us to customise the offer. If it fulfils your requirements, then click on the ‘Buy Now’ option under the price. Follow the instructions to buy it and one of our expert team members will reach out to you ASAP.
+
+
+
+
+`,
+		},
+
+
+
+
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const EXCEL_BOOKKEEPING = {
+	link: "excel-bookkeeping",
+	title: "Excel Bookkeeping (Monthly)",
+	content: `As you may have guessed from the name, Excel bookkeeping is the systematic way of managing your businesses’ finances like transactions, expenses and income using the software program ‘Microsoft Excel’. Although many don’t consider it as an accounting software, if you have a small business that requires basic financial records to be managed monthly, then bookkeeping on Excel is the best option for you.
+
+Although it can help in basic bookkeeping, it can be time-consuming and mind-boggling. Here is where Affotax comes in to help you utilise Excel for bookkeeping to accurately and efficiently record and manage your business’s finances. Check out our packages and the benefits of our service below. Get a quote today!`,
+
+	prices: [
+		{
+			priceTitle: 'Basic Package',
+			priceContent:
+				"It covers the essentials; ideal for transactions <500 per month using excel template, ensuring organised records and real-time financial insights.",
+			price: "£69",
+			packageIncludes: [
+				"Monthly recording of transactions",
+				"Bank and credit card reconciliation",
+				"Financial statement preparation and reporting",
+			],
+		},
+		{
+			priceTitle: 'Express Package',
+			priceContent:
+				"It covers the essentials; ideal for transactions <1000 per month using excel template, ensuring organised records and real-time financial insights.",
+			price: "£49",
+			packageIncludes: [
+				"Monthly recording of transactions",
+				"Bank and credit card reconciliation",
+				"Financial statement preparation and reporting",
+			],
+		},
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our Excel Bookkeeping Services: ✨`,
+	benefits: [
+		{
+			heading: " Effortless financial tracking",
+			paragraph:
+				" By using our service, you can keep track of your company’s finances easily.",
+		},
+		{
+			heading: " Data security",
+			paragraph:
+				" Put your trust in Affotax as we manage your financial data securely and with confidentiality.",
+		},
+		{
+			heading: " Excel expertise",
+			paragraph:
+				"Our expert team of Affotax has years of experience in and will professionally manage your finances. ",
+		},
+		{
+			heading: "  Personalised support",
+			paragraph:
+				"We offer personalised support and guidance to our clients throughout the procedure. ",
+		},
+		{
+			heading: "Time-saving",
+			paragraph:
+				" We save you time and resources so you don't have to fret about the complexities. ",
+		},
+
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: "  What is Excel bookkeeping?    ",
+			answer: `It refers to the recording and organising of your financial transactions, expenses and income of your business. It is a simple and cost-effective way of managing your small business' finances easily.
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: "Can you do bookkeeping on Excel?   ",
+			answer: `Although it is possible, it could be time-consuming and hectic – Affotax happily takes the burden off your shoulders. 
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "What are the benefits of it?   ",
+			answer: `It is not considered accounting software, but it can be helpful for those who want to manage small businesses' finances. You can easily record transactions with its multiple valuable features. Moreover, charts and other graphical presentations can be created with it and you can track invoices with it too. 
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Does it have a bookkeeping template?  ",
+			answer: `No, it does not have a built-in template but you can either download one or create one for yourself for accuracy.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " How to set up an Excel spreadsheet for bookkeeping?    ",
+			answer: `To do it, first you have to create a separate sheet for each category or account you want to record, like the sales, expenses and assets. Do not forget to create headers for each column and then input all the relevant financial data, like the date, description and amount. Finally, it is time to use formulas or simply copy and paste to aggregate the information and generate financial reports or statements. 
+
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"Which is better Excel or QuickBooks? ",
+			answer: `To evaluate whether it is better or QuickBooks, we have to look at what our specific needs are. The bookkeepers consider factors like the complexities of the accounting needs, the size of the company or business, the cost and availability of software, and which of the following is not hectic. They also see about the specific features offered by the platforms which could be beneficial to the business like the inventory management, invoicing, and financial reporting, etc, only then it is decided which software or platform is better.
+
+
+
+
+`,
+		},
+
+		{
+			question:
+				"  Can I customise the services to meet my specific business needs? ",
+			answer: `Yes, you can customise them according to your specific needs because we prioritise our clients’ satisfaction.  
+
+
+
+
+`,
+		},
+
+		
+		{
+			question:
+				" How do I get started?  ",
+			answer: `Choose the best package that you think offers solutions to your businesses’ requirements or if it does not, simply contact us to customise it according to your needs. Follow the instructions to buy and Affotax’s expert team members will join you shortly
+
+
+
+
+`,
+		},
+
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -------------------------------------------------------- Company Formation -----------------------------------------------------
+
+
+
+
+
+const UK_LIMITED_COMPANY_FOR_NON_RESIDENTS = {
+	link: "uk-limited-company-for-non-residents",
+	title: "UK Limited Company for Non-Residents",
+	content: `If you are a non-UK resident who wants to set up a UK limited company, you have come to the right place. But wait a minute! Is there anything you have to do differently than a UK resident to form a company in the UK? Well, absolutely not! All you need is to appoint a director and a shareholder (Fun fact: You can be both). You do not even have to live in the UK to register a company in the UK or become a director, shareholder, or secretary. 
+
+However, just like a UK resident, you also need to register with Companies House (an agency based in the UK that incorporates and dissolves limited companies, registering information and making it public). You also need an official address for your UK-based company (We can provide that). Corporations must be registered in one of the UK jurisdictions, but they can have their headquarters anywhere in the world and trade in the UK or abroad – get a quote now!
+`,
+
+	prices: [
+		{
+			priceTitle: 'For Non-UK Residents',
+			priceContent:
+				"We handle the paperwork so you can focus on what you do best – running your business",
+			price: "£59",
+			packageIncludes: [
+				"UK limited company formation",
+				"Registered office address",
+				"Directors Address, London EC1",
+				"HMRC UTR number",
+				"VAT registration",
+				"Incorporation filing fee",
+				"Digital Incorporation Certificate",
+				"Digital Articles of Association",
+				"Free accounting consultation",
+			],
+		},
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of our UK limited company for non residents service: ✨`,
+	benefits: [
+		{
+			heading: " Effortless company formation",
+			paragraph:
+				"  We will help you in your company formation as a non-UK resident, effortlessly making your dream come true. ",
+		},
+		{
+			heading: " Registered office address",
+			paragraph:
+				" For non-UK residents, we include an address that can be used as registered office address  ",
+		},
+		{
+			heading: " Directors address",
+			paragraph:
+				"We ensure privacy by offering a directors address in the EC1 area, London.",
+		},
+		{
+			heading: "  HMRC UTR number",
+			paragraph:
+				"As part of our package, you will obtain a Unique Taxpayer Reference (UTR).",
+		},
+		{
+			heading: "  Data security",
+			paragraph:
+				" Put your trust in Affotax as we keep your information private and confidential.",
+		},
+		{
+			heading: "Support",
+			paragraph:
+				"  We will provide you with personalised support and guidance throughout the procedure.",
+		},
+		{
+			heading: " Other benefits Include",
+			paragraph:
+				"VAT registration, incorporation filing fee, digital incorporation certificate, digital articles of association and accounting consultation. ",
+		},
+		
+
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " Can a non resident open a company in UK?   ",
+			answer: `Yes, it is possible for a non-residents in the UK. If you are planning to set up, you are in the right place, check out our package and let us help you.
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: " Can I have a limited company in the UK and live abroad?    ",
+			answer: `Yes, however, some legal requirements must be met:
+
+It must be registered and incorporated in the UK.
+UK accounting and reporting standards must be followed.
+It must have a registered office address in the UK
+Directors must still file annual returns and maintain legal records.
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " Do non-UK residents need a UK bank account?  ",
+			answer: `Although it is not a requirement for you to have a UK bank account, it can be helpful to process your transactions easily without any additional fees. To open a bank account in the UK requires residency rights and a home address in the UK, separate from your registered UK office address. 
+
+
+
+
+
+`,
+		},
+		{
+			question: " How much does it cost?   ",
+			answer: `The UK incorporation filing fee is £12, which is included in our package.
+
+
+
+
+
+`,
+		},
+		{
+			question: " Who can open it?  ",
+			answer: `Anyone from anywhere can open it. However, there are certain guidelines and legal requirements that should be fulfilled – Affotax takes care of everything virtually. Contact us to know how!
+
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				" Are limited companies automatically registered for VAT?   ",
+			answer: `No, they are not automatically registered for VAT, in fact, you must do it independently on your own. But don't worry! Our package includes VAT registration along with all the necessary benefits that you are seeking.
+
+
+
+
+`,
+		},
+
+
+				{
+			question:
+				" How long will it take?   ",
+			answer: `With our fast-paced service, you will be able to start trading in 3-6 hours, as we will have registered your firm after you buy our service.
+
+
+
+
+`,
+		},
+
+
+
+
+
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const LLP_COMPANY_FORMATION_IN_UK = {
+	link: "llp-company-formation",
+	title: "LLP Company Formation in the UK",
+	content: `LLP company formation refers to the process of setting up a Limited Liability Partnership, one of the most popular options in today’s world for businesses to get the benefits of a partnership. When you register, you and your partners protect your private assets; in case your business falls, you will only lose your money invested in the business and not your personal or assets as they stay secure. In an unregistered partnership, each partner may be responsible for others' debts if something turns out wrong. That is why LLP formation offers more security to its partners.
+
+Affotax is the best and most affordable choice available. We understand the complexities of forming an LLP and the importance of the other responsibilities it brings with it. That is why we offer customised LLP formation plans, crafted specifically for you to reach your business goals. We also offer many other benefits – check them out and get a quote today!`,
+
+	prices: [
+		{
+			priceTitle: 'UK LLP Formation',
+			priceContent:
+				"Start your UK business journey with our UK LLP formation package. We take care of the details, making it easy for you to establish a UK limited liability partnership, and get to business.",
+			price: "£69",
+			packageIncludes: [
+				"UK LLP members address",
+				"HMRC UTR number",
+				"Incorporation filing fee",
+				"Digital Incorporation Certificate",
+				"Customized LLP formation plan",
+				"Dedicated LLP specialist",
+				"Free accounting consultation",
+			],
+		},
+
+
+
+
+
+	
+	],
+
+
+
+	benefitsTitle: `Benefits of Our ‘LLP Company Formation’ Service: ✨`,
+	benefits: [
+		{
+			heading: " Easy procedure",
+			paragraph:
+				" We make the process easy, our plan combines liability protection with the flexibility of a partnership.",
+		},
+		{
+			heading: " Dedicated LLP specialist",
+			paragraph:
+				" You will get a dedicated specialist who will guide you through the entire process.",
+		},
+		{
+			heading: " Customised plan",
+			paragraph:
+				"Every business and its owner are unique, so we offer a customised plan for your business to succeed.",
+		},
+		{
+			heading: "Data security",
+			paragraph:
+				" Put your trust in Affotax because we take data security seriously, making sure your business data is safe. ",
+		},
+		{
+			heading: "Legal expertise",
+			paragraph:
+				" Our expert team has years of experience, ensuring correct documentation and legal compliance. ",
+		},
+
+		{
+			heading: " Resource optimisation",
+			paragraph:
+				" While we handle everything, you will have valuable time and resources to be spent accordingly. ",
+		},
+
+
+
+
+	
+		
+	
+		
+	],
+
+
+
+
+	faqs: [
+		{
+			question: " What is a Limited Liability Partnership (LLP)?  ",
+			answer: `It is a legal business structure combining features of partnerships and corporations; it also offers partners limited liability protection.
+
+
+
+
+
+      `,
+		},
+
+		{
+			question: " Why choose it for my business?   ",
+			answer: `The reason why you should choose it is because it provides personal asset protection for partners while offering flexibility in management and operational structure.
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "Does it need to be registered?  ",
+			answer: `Yes, it must be registered with the HMRC or the UK jurisdiction.
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: "How to register it?   ",
+			answer: `To register, contact us and our expert team will get in touch with you shortly. We will inform you about all the necessary documents like proof of identity and address, etc. along with other requirements. 
+
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question: " Can I backdate the formation?    ",
+			answer: `No, it is not possible. The date must be the date on which all the partners have agreed upon, and it also must be stated in the documents of the incorporation. 
+
+
+
+
+
+
+
+`,
+		},
+		{
+			question:
+				"Can I customise your package further for my specific needs? ",
+			answer: `Our package includes all the necessary features or benefits required. However, if you need customisation if the current package does not meet your needs, you can do so.
+
+
+
+
+`,
+		},
+
+
+
+
+
+		
+	],
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3334,7 +5978,30 @@ export const dataArr = [
 	  CHANGE_COMPANY_NAME,
 	  COMPANIES_HOUSE_CHANGE_OF_ADDRESS,
 	  SELLING_SHARES,
-	  DIRECTOR_APPOINTMENT_RESIGNATION
+	  DIRECTOR_APPOINTMENT_RESIGNATION,
+
+	  DIRECTORS_PAYROLL,
+	  PAYE_EMPLOYEE,
+	  AUTO_ENROLLMENT_PENSION,
+	  ONLINE_P11D_FORM,
+	  P60_FORM,
+	  PAYSLIP_GENERATOR,
+
+	  QUARTERLY_RETURN,
+	  EORI_NUMBER,
+
+	  XERO_BOOKKEEPING,
+	  QUICKBOOKS_BOOKKEEPING,
+	  EXCEL_BOOKKEEPING,
+
+	  UK_LIMITED_COMPANY_FOR_NON_RESIDENTS,
+	  LLP_COMPANY_FORMATION_IN_UK
+
+
+
+
+	  
+
 
 
 
