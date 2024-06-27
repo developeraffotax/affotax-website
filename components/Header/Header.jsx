@@ -58,7 +58,7 @@ export default function Header() {
                 </ul>
               </div>
 
-              <Link href={"/blogs"} className="mr-5 hover:text-primary hover:cursor-pointer"> Blogs </Link>
+              {/* <Link href={"/blogs"} className="mr-5 hover:text-primary hover:cursor-pointer"> Blogs </Link> */}
               <Link href={"/about-us"} className="mr-5 hover:text-primary hover:cursor-pointer"> About Us </Link>
               <Link href={"/contact-us"} className="mr-5 hover:text-primary hover:cursor-pointer"> Contact Us </Link>
             </nav>
@@ -117,7 +117,7 @@ export default function Header() {
                 ) : null}
               </div>
 
-              <Link onClick={() => setIsMobileNav(false)} href={"/blogs"} className=" hover:text-primary hover:cursor-pointer"> Blogs </Link>
+              {/* <Link onClick={() => setIsMobileNav(false)} href={"/blogs"} className=" hover:text-primary hover:cursor-pointer"> Blogs </Link> */}
               <Link onClick={() => setIsMobileNav(false)} href={"/about-us"} className=" hover:text-primary hover:cursor-pointer"> About Us </Link>
               <Link onClick={() => setIsMobileNav(false)} href={"/contact-us"} className=" hover:text-primary hover:cursor-pointer"> Contact Us </Link>
             </nav>
