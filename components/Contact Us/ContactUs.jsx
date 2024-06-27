@@ -3,7 +3,7 @@ import Form from './Form'
 
 const ContactUs = () => {
   return (
-    <section className='w-full px-60 max-2xl:px-40 max-xl:px-10  bg-primary/10 py-12 shadow-md drop-shadow-md shadow-black/10 max-lg:p-8'>
+    <section className='w-full px-80 max-2xl:px-40 max-xl:px-10  bg-primary/10 py-12 shadow-md drop-shadow-md shadow-black/10 max-lg:p-8 max-lg:pt-10'>
         <div className='container mx-auto flex flex-col justify-center items-start gap-8'>
             <div className=''>
                 <h2 className='text-3xl font-semibold '>Looking for help? Look no further! Our team of experts is always ready to answer any questions you may have.</h2>
