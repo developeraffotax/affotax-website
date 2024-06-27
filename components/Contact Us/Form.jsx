@@ -81,7 +81,7 @@ const Form = () => {
                 <input className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10  outline-none focus:border-primary focus:shadow-primary/30' type='text' name='name' placeholder='Name' />
                 <input className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10 outline-none focus:border-primary focus:shadow-primary/30' type='email' name='email' placeholder='Email'/>
                 <select className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10  outline-none focus:border-primary focus:shadow-primary/30' name="service" > 
-                    <option value="" disabled selected>Select Service</option>
+                    <option value="No Service Selected" >Select Service</option>
                     <option value="Accounts" >Accounts</option>
                     <option value="Corporation Tax">Corporation Tax</option>
                     <option value="Self Assessment">Self Assessment</option>
