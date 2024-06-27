@@ -2,7 +2,7 @@
 
 const Top = () => {
   return (
-    <section className='w-full mt-4 px-80 max-2xl:px-40 max-xl:px-10'>
+    <section className='w-full mt-8 max-lg:mt-16 px-80 max-2xl:px-40 max-xl:px-10'>
         <div className='flex flex-col justify-center items-center max-lg:items-start  gap-2 container mx-auto  '>
         <h2 className='font-bold text-4xl '>
         Our Services

@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="text-gray-600 body-font w-full flex flex-col items-center px-80 max-2xl:px-40 max-xl:px-10 bgImage2">
-    <div className="container text-center px-5 py-20 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col justify-center items-center">
+    <div className="container text-center px-5 py-20 max-lg:py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col justify-center items-center">
       <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left items-center justify-center max-lg:flex max-lg:flex-col">
       <Link href="/">
             <svg width="150" viewBox="0 0 280.00000000000006 72.06504786422265" className="css-1j8o68f">

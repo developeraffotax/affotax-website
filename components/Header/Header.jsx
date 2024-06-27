@@ -122,7 +122,7 @@ export default function Header() {
               <Link onClick={() => setIsMobileNav(false)} href={"/contact-us"} className=" hover:text-primary hover:cursor-pointer"> Contact Us </Link>
             </nav>
 
-            <button className=" text-center  items-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-2 py-2 w-[50%]">
+            <button onClick={() => {router.push('/contact-us'); setIsMobileNav(false);}} className=" text-center  items-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-2 py-2 w-[50%]">
               Get a Quote
             </button>
             <div className="flex flex-col mt-2 ">

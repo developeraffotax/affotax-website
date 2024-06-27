@@ -4,7 +4,7 @@ import { v4 as uuid } from "uuid";
 
 const Faqs = ({ faqs }) => {
 	return (
-		<section className="w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-0 bg-gray-100 py-8  ">
+		<section className="w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8 bg-gray-100 py-8  ">
 			<div className="container mx-auto">
 				<h2 className="text-3xl font-semibold mb-2">FAQS:</h2>
 				<ul>
