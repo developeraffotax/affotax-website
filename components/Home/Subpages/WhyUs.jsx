@@ -6,10 +6,11 @@ import Award from '@/public/award.png'
 import Fully from '@/public/fully.png'
 import Support from '@/public/support.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function WhyUs() {
   return (
-    <section className="text-gray-600 body-font px-60 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
+    <section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
         <div className="container px-5 py-12 mx-auto">
             <div className="text-center mb-16">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
@@ -190,7 +191,7 @@ export default function WhyUs() {
             <p className='mt-4 text-md '>
                 Send us a message today, or get a quote; our expert chartered accountants in the UK are ready to manage your accounting and tax filings with expertise.
             </p>
-            <button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button>
+            <Link href={'/contact-us'}><button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
                         
         </div>
 

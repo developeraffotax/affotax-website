@@ -177,7 +177,7 @@ const Menu = () => {
 
 
     return (                                                                                                    
-        <section className='w-full my-6 px-60 max-2xl:px-40 max-xl:px-10  '>
+        <section className='w-full my-6 px-80 max-2xl:px-40 max-xl:px-10  '>
             <div className='container mx-auto flex flex-col max-lg:flex-row justify-center max-lg:items-start max-lg:justify-start max-lg:h-[500px] items-center rounded-xl drop-shadow-md   bg-slate-50'>
                 <ul className='flex flex-row py-2 border-b-2 max-lg:border-none px-4 max-lg:flex-col max-lg:bg-slate-100 rounded-lg h-full '>
                     {

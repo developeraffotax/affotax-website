@@ -16,27 +16,13 @@ import FormBtn from './FormBtn';
 
 const Form = () => {
 
-        const [name, setName] = useState('');
-        const [email, setEmail] = useState('');
-        const [service, setService] = useState('');
-        const [message, setMessage] = useState('');
+
         const [error, setError] = useState('');
 
-        const [successMessage, setSuccessMessage] = useState('');
-        const [errorMessage, setErrorMessage] = useState('');
 
         
         const [state, formAction] = useFormState(sendMessage, {success:false, message: ''});
         const formRef = useRef()
-
-        // const inputChangeHandler = (e) => {
-        //     switch(e.target.name) {
-        //         case 'service': return setService(e.target.value);
-        //         case 'name' : return setName(e.target.value);
-        //         case 'email' : return setEmail(e.target.value);
-        //         case 'message' : return setMessage(e.target.value);
-        //     }
-        // }
 
 
 
@@ -44,13 +30,11 @@ const Form = () => {
 
 
 
-            //setError('');
-                
+        
 
             const name = formData.get('name')
             const email = formData.get('email')
             const message = formData.get('message')
-           // const name = formData.get('name')
 
 
 
@@ -58,36 +42,16 @@ const Form = () => {
 
             if(name.length === 0 || email.length === 0 || message.length === 0) {
                 setError('All the fields are required.');
-            } else {
-                setError('')
+            } else{
+                
                 await formAction(formData);
-
+                formRef.current.reset();
+                
             }
+            
             return;
 
         }
-
-
-
-
-
-        // const searchParams = useSearchParams()
- 
-
-
-        // useEffect(() => {
-        //     if (searchParams.get('success')) {
-        //         console.log('in useefffec')
-        //         formRef.current.reset();
-        //         setSuccessMessage('FORM SUBMITT')
-        //     } 
-
-        //     if (!searchParams.get('success')) {
-        //         console.log(searchParams.get('success'))
-        //         setErrorMessage('error occured')
-        //     }
-
-        // })
 
 
 
@@ -128,11 +92,9 @@ const Form = () => {
                  </select>
                 <textarea className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10 outline-none focus:border-primary focus:shadow-primary/30'  name="message" placeholder='Write your message'></textarea>
                 {state.message && <p className={`${state.success ? 'text-green-600' : 'text-red-600'} text-sm`}>{state.message}</p>}
-{/*                 
-                {errorMessage && <p className='text-red-600 text-sm'>{errorMessage}</p>}
-                {successMessage && <p className='text-green-600 text-sm'>{successMessage}</p>} */}
-                {error && <p className='text-red-600 text-sm '>{error}</p>}
-                <FormBtn />
+
+                {error && <p className='text-red-600 text-sm animate-bounce'>{error}</p>}
+                <FormBtn onClick={() => setError('')}/>
             </form>
         </div>
     </div>

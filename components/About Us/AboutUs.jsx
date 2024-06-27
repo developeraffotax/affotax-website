@@ -4,7 +4,7 @@ import AboutUsImage from '@/public/about.png'
 
 const AboutUs = () => {
   return (
-    <section className='w-full px-60 max-2xl:px-40 max-xl:px-10 max-lg:p-0 py-8 bg-primary/10   shadow-md drop-shadow-2xl shadow-gray-300 '>
+    <section className='w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-0 py-8 bg-primary/10   shadow-md drop-shadow-2xl shadow-gray-300 '>
         <div className='container mx-auto flex flex-col items-center gap-4 max-md:px-8'>
         <h2 className='text-primary text-6xl font-semibold '>About Us</h2>
         <div className='flex flex-col items-start'>

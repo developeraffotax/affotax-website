@@ -12,7 +12,7 @@ const contactArr = [{name: 'Phone', icon: <LuPhoneCall className='scale-125 mr-3
 
 const EmailPhone = () => {
     return (
-        <section className=' w-full bg-gray-50 px-60 max-2xl:px-40 max-xl:px-10'>
+        <section className=' w-full bg-gray-50 px-80 max-2xl:px-40 max-xl:px-10'>
             <div className=' w-full '>
             <div className='flex flex-col justify-center items-center   '>
             <div className=' container mx-auto  flex justify-around items-center py-10 w-full border-b-2     max-lg:flex-col max-lg:gap-2  bg '>

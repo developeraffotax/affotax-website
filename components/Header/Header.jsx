@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <>
       {/* DESKTOP NAVIGATION */}
-      <header className=" body-font w-full bg-tertiary font-semibold text-secondary h-auto  px-60 max-2xl:px-40 max-xl:px-10 max-lg:p-0 fixed top-0 left-0 z-50 shadow-md shadow-black/20 ">
+      <header className=" body-font w-full bg-tertiary font-semibold text-secondary h-auto  px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-0 fixed top-0 left-0 z-50 shadow-md shadow-black/20 ">
         <div className="    mx-auto container  max-lg:hidden">
           <div className="flex flex-row items-center justify-between ">
             <div className="  py-5 z-50">
@@ -102,24 +102,24 @@ export default function Header() {
           <div className={`z-50 absolute translate-y-16 flex-col gap-3 py-8 transition-all bg-tertiary w-full items-center justify-center ${ isMobileNav ? "flex" : "hidden" }`}>
             <nav
               className={`flex items-center justify-center text-center text-base  flex-col gap-2 transition-all pt-5 }`}>
-              <Link href={"/"} className=" hover:text-primary hover:cursor-pointer"> Home </Link>
-              <Link href={"/pricing"} className=" hover:text-primary "> Pricing </Link>
+              <Link onClick={() => setIsMobileNav(false)} href={"/"} className=" hover:text-primary hover:cursor-pointer"> Home </Link>
+              <Link onClick={() => setIsMobileNav(false)} href={"/pricing"} className=" hover:text-primary "> Pricing </Link>
               <div className=" relative hover:cursor-pointer">
                 <a className=" hover:text-primary text-secondary" onClick={() => setShowSubMenu((prev) => !prev)}> Services <IoIosArrowDown className={` inline-block ml-1 transition-all  ${ !showSubMenu ? "rotate-0" : "rotate-180" }`} /> </a>
                 {showSubMenu ? (
                   <ul className="py-2 bg-secondary absolute flex flex-col translate-y-2 rounded-lg ">
-                    {subMenu.map((el, index) => {
+                    { [...subMenu,   { name: "View All", link: "/services" }].map((el, index) => {
                       return (
-                        <SubMenu name={el.name} link={el.link} key={uuid()} index={index} length={subMenu.length} onClick={() => { setIsMobileNav(false); setShowSubMenu(false); }} />
+                        <SubMenu name={el.name} link={el.link} key={uuid()} index={index} length={subMenu.length + 1} onClick={() => { setIsMobileNav(false); setShowSubMenu(false); }} />
                       );
                     })}
                   </ul>
                 ) : null}
               </div>
 
-              <Link href={"/blogs"} className=" hover:text-primary hover:cursor-pointer"> Blogs </Link>
-              <Link href={"/about-us"} className=" hover:text-primary hover:cursor-pointer"> About Us </Link>
-              <Link href={"/contact-us"} className=" hover:text-primary hover:cursor-pointer"> Contact Us </Link>
+              <Link onClick={() => setIsMobileNav(false)} href={"/blogs"} className=" hover:text-primary hover:cursor-pointer"> Blogs </Link>
+              <Link onClick={() => setIsMobileNav(false)} href={"/about-us"} className=" hover:text-primary hover:cursor-pointer"> About Us </Link>
+              <Link onClick={() => setIsMobileNav(false)} href={"/contact-us"} className=" hover:text-primary hover:cursor-pointer"> Contact Us </Link>
             </nav>
 
             <button className=" text-center  items-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-2 py-2 w-[50%]">
