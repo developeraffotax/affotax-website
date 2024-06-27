@@ -6,6 +6,7 @@ import Backdrop from "../Backdrop/Backdrop";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
+import { useRouter } from 'next/navigation'
 
 const subMenu = [
   { name: "Annual Accounts", link: "/annual-accounts" },
@@ -24,6 +25,7 @@ export default function Header() {
   const [isMobileNav, setIsMobileNav] = useState(false);
 
   const [showSubMenu, setShowSubMenu] = useState(false);
+  const router = useRouter()
 
   const handleNav = () => {
     setIsMobileNav((prev) => !prev);
@@ -32,7 +34,7 @@ export default function Header() {
   return (
     <>
       {/* DESKTOP NAVIGATION */}
-      <header className=" body-font w-full bg-tertiary font-semibold text-secondary h-auto  px-60 max-2xl:px-40 max-xl:px-10 max-lg:p-0 ">
+      <header className=" body-font w-full bg-tertiary font-semibold text-secondary h-auto  px-60 max-2xl:px-40 max-xl:px-10 max-lg:p-0 fixed top-0 left-0 z-50 shadow-md shadow-black/20 ">
         <div className="    mx-auto container  max-lg:hidden">
           <div className="flex flex-row items-center justify-between ">
             <div className="  py-5 z-50">
@@ -62,9 +64,10 @@ export default function Header() {
             </nav>
 
             <div className={`flex gap-6  transition-all ${ isMobileNav ? "max-md:-translate-x-0" : "max-md:-translate-x-[-1000px]" }`}>
-              <button className=" text-center  items-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-4 md:mt-0 max-lg:py-2 max-md:w-[50%] z-50">
-                Get a Quote
+                <button onClick={() => router.push('/contact-us')} className="  items-center text-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-4 md:mt-0 max-lg:py-2 max-md:w-[50%] z-50">
+              Get a Quote
               </button>
+              
 
               <div className="flex flex-col">
                 <div className="flex items-center .svgDiv">

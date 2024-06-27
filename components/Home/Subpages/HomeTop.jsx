@@ -1,8 +1,11 @@
 import React from 'react';
 import HeroImg from '@/public/hero.png'
 import HeroImg2 from '@/public/hero2.png'
+import Link from 'next/link';
 
 export default function HomeTop() {
+   
+
     return (
         <section className=' text-gray-600 w-full bg-slate-50 pt-8 px-60 max-2xl:px-40 max-xl:px-10  max-lg:px-8 bgImage'>
             <div className='container mx-auto '>
@@ -12,7 +15,7 @@ export default function HomeTop() {
                     <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] '> Welcome to the homepage of an affordable accounting firm in the UK made for small and micro-businesses. We are the esteemed ACCA-licensed, reliable accountants and HMRC-authorised agents dedicated to offering steadfast expertise. <br /> <br /> Find the comfort of having reliable accountants dedicated to your financial prosperity greetings from the UK for a new era of trustworthy and affordable accountancy services. </p>
                     <div className='flex justify-center text-nowrap '>
                         <button className='inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Services </button>
-                        <button className='ml-4 inline-flex text-primary bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold'> Get a Quote </button>
+                        <Link href={'/contact-us'}><button className='ml-4 inline-flex text-primary bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold'> Get a Quote </button></Link>
                     </div>
                 </div>
 

@@ -9,6 +9,8 @@ import LinkedIn from '@/public/li.png';
 import Whatsapp from '@/public/wa.png';
 import Image from 'next/image';
 import {  useFormState } from "react-dom";
+import { useSearchParams } from 'next/navigation'
+
 import FormBtn from './FormBtn';
 
 
@@ -19,28 +21,46 @@ const Form = () => {
         const [service, setService] = useState('');
         const [message, setMessage] = useState('');
         const [error, setError] = useState('');
+
+        const [successMessage, setSuccessMessage] = useState('');
+        const [errorMessage, setErrorMessage] = useState('');
+
         
         const [state, formAction] = useFormState(sendMessage, {success:false, message: ''});
         const formRef = useRef()
 
-        const inputChangeHandler = (e) => {
-            switch(e.target.name) {
-                case 'service': return setService(e.target.value);
-                case 'name' : return setName(e.target.value);
-                case 'email' : return setEmail(e.target.value);
-                case 'message' : return setMessage(e.target.value);
-            }
-        }
+        // const inputChangeHandler = (e) => {
+        //     switch(e.target.name) {
+        //         case 'service': return setService(e.target.value);
+        //         case 'name' : return setName(e.target.value);
+        //         case 'email' : return setEmail(e.target.value);
+        //         case 'message' : return setMessage(e.target.value);
+        //     }
+        // }
 
 
 
-        const formActionHandler = async (event) => {
+        const formActionHandler = async (formData) => {
+
+
+
+            //setError('');
+                
+
+            const name = formData.get('name')
+            const email = formData.get('email')
+            const message = formData.get('message')
+           // const name = formData.get('name')
+
+
+
+
 
             if(name.length === 0 || email.length === 0 || message.length === 0) {
                 setError('All the fields are required.');
             } else {
-                setError('');
-                await formAction(event);
+                setError('')
+                await formAction(formData);
 
             }
             return;
@@ -48,15 +68,26 @@ const Form = () => {
         }
 
 
-        useEffect(() => {
-            if (state.success) {
-                setName('');
-                setEmail('');
-                setService('');
-                setMessage('');
-            }
 
-        })
+
+
+        // const searchParams = useSearchParams()
+ 
+
+
+        // useEffect(() => {
+        //     if (searchParams.get('success')) {
+        //         console.log('in useefffec')
+        //         formRef.current.reset();
+        //         setSuccessMessage('FORM SUBMITT')
+        //     } 
+
+        //     if (!searchParams.get('success')) {
+        //         console.log(searchParams.get('success'))
+        //         setErrorMessage('error occured')
+        //     }
+
+        // })
 
 
 
@@ -83,9 +114,9 @@ const Form = () => {
         </div>
         <div className=' bg-white w-[60%] max-lg:w-full px-10 py-10 drop-shadow-xl rounded-2xl '>
             <form ref={formRef} action={formActionHandler}  className='flex flex-col  items-start gap-4'>
-                <input className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10  outline-none focus:border-primary focus:shadow-primary/30' type='text' name='name' placeholder='Name' value={name} onChange={inputChangeHandler}/>
-                <input className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10 outline-none focus:border-primary focus:shadow-primary/30' type='email' name='email' placeholder='Email' value={email} onChange={inputChangeHandler}/>
-                <select className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10  outline-none focus:border-primary focus:shadow-primary/30' name="service" value={service} onChange={inputChangeHandler}> 
+                <input className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10  outline-none focus:border-primary focus:shadow-primary/30' type='text' name='name' placeholder='Name' />
+                <input className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10 outline-none focus:border-primary focus:shadow-primary/30' type='email' name='email' placeholder='Email'/>
+                <select className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10  outline-none focus:border-primary focus:shadow-primary/30' name="service" > 
                     <option value="" disabled selected>Select Service</option>
                     <option value="Accounts" >Accounts</option>
                     <option value="Corporation Tax">Corporation Tax</option>
@@ -95,8 +126,11 @@ const Form = () => {
                     <option value="Company Formation">Company Formation</option>
                     <option value="Others">Others</option>
                  </select>
-                <textarea className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10 outline-none focus:border-primary focus:shadow-primary/30'  name="message" placeholder='Write your message' value={message} onChange={inputChangeHandler}></textarea>
+                <textarea className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10 outline-none focus:border-primary focus:shadow-primary/30'  name="message" placeholder='Write your message'></textarea>
                 {state.message && <p className={`${state.success ? 'text-green-600' : 'text-red-600'} text-sm`}>{state.message}</p>}
+{/*                 
+                {errorMessage && <p className='text-red-600 text-sm'>{errorMessage}</p>}
+                {successMessage && <p className='text-green-600 text-sm'>{successMessage}</p>} */}
                 {error && <p className='text-red-600 text-sm '>{error}</p>}
                 <FormBtn />
             </form>

@@ -13,7 +13,9 @@ export default function RootLayout({ children }) {
         
         <body>
         <Header />
+        <div className="  w-full p-0 mt-20 ">
         {children}
+        </div>
         <Footer />
         </body>
         
