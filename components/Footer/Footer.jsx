@@ -52,25 +52,25 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Services</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/services/company-accounts'} className="text-gray-600 hover:text-primary text-xs font-semibold">Company Accounts</Link>
+              <Link href={'/services/annual-accounts'} className="text-gray-600 hover:text-primary text-xs font-semibold">Company Accounts</Link>
             </li>
             <li>
-              <Link href={'/services/corporation-tax'} className="text-gray-600 hover:text-primary text-xs font-semibold">Corporation Tax</Link>
+              <Link href={'/services/corporation-tax-ct600'} className="text-gray-600 hover:text-primary text-xs font-semibold">Corporation Tax</Link>
             </li>
             <li>
-              <Link href={'/services/confirmation-statement'} className="text-gray-600 hover:text-primary text-xs font-semibold">Confirmation Statement</Link>
+              <Link href={'/services/annual-confirmation-statement'} className="text-gray-600 hover:text-primary text-xs font-semibold">Confirmation Statement</Link>
             </li>
             <li>
-              <Link href={'/services/self-Assessment'} className="text-gray-600 hover:text-primary text-xs font-semibold">Self Assessment</Link>
+              <Link href={'/services/register-for-self-assessment'} className="text-gray-600 hover:text-primary text-xs font-semibold">Self Assessment</Link>
             </li>
             <li>
-              <Link href={'/services/vat-return'} className="text-gray-600 hover:text-primary text-xs font-semibold">VAT Return</Link>
+              <Link href={'/services/quarterly-vat-return'} className="text-gray-600 hover:text-primary text-xs font-semibold">VAT Return</Link>
             </li>
             <li>
-              <Link href={'/services/payroll-services'} className="text-gray-600 hover:text-primary text-xs font-semibold">Payroll Services</Link>
+              <Link href={'/services/paye-employee'} className="text-gray-600 hover:text-primary text-xs font-semibold">Payroll Services</Link>
             </li>
             <li>
-              <Link href={'/services/bookkeeping'} className="text-gray-600 hover:text-primary text-xs font-semibold">Bookkeeping</Link>
+              <Link href={'/services/bookkeeping-for-12-month'} className="text-gray-600 hover:text-primary text-xs font-semibold">Bookkeeping</Link>
             </li>
           </nav>
         </div>
@@ -82,7 +82,7 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href={'/our-pricing'} className="text-gray-600 hover:text-primary text-xs font-semibold">Our Pricing</Link>
+              <Link href={'/pricing'} className="text-gray-600 hover:text-primary text-xs font-semibold">Our Pricing</Link>
             </li>
 
             <li>
