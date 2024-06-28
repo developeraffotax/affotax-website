@@ -25,26 +25,26 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Who We Help</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/sole-traders'} className="text-gray-600 hover:text-primary text-xs font-semibold">Sole Traders</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Sole Traders</Link>
             </li>
             <li>
-              <Link href={'/limited-companies'} className="text-gray-600 hover:text-primary text-xs font-semibold">Limited Companies</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Limited Companies</Link>
             </li>
             <li>
-              <Link href={'/partnerships'} className="text-gray-600 hover:text-primary text-xs font-semibold">Partnerships</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Partnerships</Link>
             </li>
             <li>
-              <Link href={'/limited-liablity-partnership'} className="text-gray-600 hover:text-primary text-xs font-semibold">Limited Liablity Partnership</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Limited Liablity Partnership</Link>
             </li>
             <li>
-              <Link href={'/contractor-accountants'} className="text-gray-600 hover:text-primary text-xs font-semibold">Contractor Accountants</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Contractor Accountants</Link>
             </li>
             <li>
-              <Link href={'/small-business-accountants'} className="text-gray-600 hover:text-primary text-xs font-semibold">Small Business Accountants</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Small Business Accountants</Link>
             </li>
 
             <li>
-              <Link href={'/xero-accountants'} className="text-gray-600 hover:text-primary text-xs font-semibold">Xero Accountants</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Xero Accountants</Link>
             </li>
           </nav>
         </div>
@@ -86,15 +86,15 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href={'/refer-a-friend'} className="text-gray-600 hover:text-primary text-xs font-semibold">Refer a Friend</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Refer a Friend</Link>
             </li>
 
             <li>
-              <Link href={'/filing-deadlines'} className="text-gray-600 hover:text-primary text-xs font-semibold">Filing Deadlines</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Filing Deadlines</Link>
             </li>
 
             <li>
-              <Link href={'/news-and-articles'} className="text-gray-600 hover:text-primary text-xs font-semibold">News & Articles</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">News & Articles</Link>
             </li>
 
             <li>
@@ -102,7 +102,7 @@ export default function Footer() {
             </li>
 
             <li>
-              <Link href={'/privacy-policy'} className="text-gray-600 hover:text-primary text-xs font-semibold">Privacy Policy</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Privacy Policy</Link>
             </li>
            
            
@@ -112,25 +112,25 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Locations</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/locations/wales'} className="text-gray-600 hover:text-primary text-xs font-semibold">Wales</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Wales</Link>
             </li>
             <li>
-              <Link href={'/locations/london'} className="text-gray-600 hover:text-primary text-xs font-semibold">London</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">London</Link>
             </li>
             <li>
-              <Link href={'/locations/england'} className="text-gray-600 hover:text-primary text-xs font-semibold">England</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">England</Link>
             </li>
             <li>
-              <Link href={'/locations/scotland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Scotland</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Scotland</Link>
             </li>
             <li>
-              <Link href={'/locations/birmingham'} className="text-gray-600 hover:text-primary text-xs font-semibold">Birmingham</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Birmingham</Link>
             </li>
             <li>
-              <Link href={'/locations/manchester'} className="text-gray-600 hover:text-primary text-xs font-semibold">Manchester</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Manchester</Link>
             </li>
             <li>
-              <Link href={'/locations/northern-ireland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Northern Ireland</Link>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Northern Ireland</Link>
             </li>
             
           </nav>
