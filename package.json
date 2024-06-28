@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tawk.to/tawk-messenger-react": "^2.0.2",
     "next": "14.2.3",
     "nodemailer": "^6.9.13",
     "nodemailer-sendgrid-transport": "^0.2.0",
