@@ -78,31 +78,31 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">About</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/about/about-us'} className="text-gray-600 hover:text-primary text-xs font-semibold">About Us</Link>
+              <Link href={'/about-us'} className="text-gray-600 hover:text-primary text-xs font-semibold">About Us</Link>
             </li>
 
             <li>
-              <Link href={'/about/our-pricing'} className="text-gray-600 hover:text-primary text-xs font-semibold">Our Pricing</Link>
+              <Link href={'/our-pricing'} className="text-gray-600 hover:text-primary text-xs font-semibold">Our Pricing</Link>
             </li>
 
             <li>
-              <Link href={'/about/refer-a-friend'} className="text-gray-600 hover:text-primary text-xs font-semibold">Refer a Friend</Link>
+              <Link href={'/refer-a-friend'} className="text-gray-600 hover:text-primary text-xs font-semibold">Refer a Friend</Link>
             </li>
 
             <li>
-              <Link href={'/about/filing-deadlines'} className="text-gray-600 hover:text-primary text-xs font-semibold">Filing Deadlines</Link>
+              <Link href={'/filing-deadlines'} className="text-gray-600 hover:text-primary text-xs font-semibold">Filing Deadlines</Link>
             </li>
 
             <li>
-              <Link href={'/about/news-and-articles'} className="text-gray-600 hover:text-primary text-xs font-semibold">News & Articles</Link>
+              <Link href={'/news-and-articles'} className="text-gray-600 hover:text-primary text-xs font-semibold">News & Articles</Link>
             </li>
 
             <li>
-              <Link href={'/about/contact-us'} className="text-gray-600 hover:text-primary text-xs font-semibold">Contact Us</Link>
+              <Link href={'/contact-us'} className="text-gray-600 hover:text-primary text-xs font-semibold">Contact Us</Link>
             </li>
 
             <li>
-              <Link href={'/about/privacy-policy'} className="text-gray-600 hover:text-primary text-xs font-semibold">Privacy Policy</Link>
+              <Link href={'/privacy-policy'} className="text-gray-600 hover:text-primary text-xs font-semibold">Privacy Policy</Link>
             </li>
            
            
