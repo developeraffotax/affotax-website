@@ -210,7 +210,7 @@ export default function ChoosePackage() {
                     </svg>
                     </button></Link>
                     <p className="text-xs text-gray-500 mt-3">
-                    Literally you probably haven't heard of them jean shorts.
+                    Making tax filing affordable with 100% satisfaction and 30-day guarantee.
                     </p>
                 </div>
                 </div>
@@ -224,7 +224,7 @@ export default function ChoosePackage() {
                     £149
                     <span className="text-gray-600 text-base ml-1">+ VAT</span>
                     </h2>
-                    <span className="text-sm text-gray-600">{'Turnover < 100K'}</span>
+                    <span className="text-sm text-gray-600">{'Turnover < 50K'}</span>
                 </div>
                 {/* <p className="bg-gray-100 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center border-t border-gray-300">
                     Schlitz single-origin
@@ -336,7 +336,7 @@ export default function ChoosePackage() {
                     </svg>
                     </button></Link>
                     <p className="text-xs text-gray-500 mt-3">
-                    Literally you probably haven't heard of them jean shorts.
+                    Making tax filing affordable with 100% satisfaction and 30-day guarantee.
                     </p>
                 </div>
                 </div>
@@ -348,7 +348,7 @@ export default function ChoosePackage() {
 
                     <span className="text-gray-600 text-base ml-1">+ VAT</span>
                     </h2>
-                    <span className="text-sm text-gray-600">{'Turnover < 500K'}</span>
+                    <span className="text-sm text-gray-600">{'Turnover < 100K'}</span>
                 </div>
                 {/* <p className="bg-gray-100 text-gray-600 h-12 text-center px-2 flex items-center -mt-px justify-center border-t border-gray-300">
                     Schlitz single-origin
@@ -465,7 +465,7 @@ export default function ChoosePackage() {
                     </button>
                     </Link>
                     <p className="text-xs text-gray-500 mt-3">
-                    Literally you probably haven't heard of them jean shorts.
+                    Making tax filing affordable with 100% satisfaction and 30-day guarantee.
                     </p>
                 </div>
                 </div>
