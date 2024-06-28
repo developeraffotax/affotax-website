@@ -717,7 +717,8 @@ export default function ChoosePackage() {
            </svg>
            </button></Link>
            <p className="text-xs text-gray-500 mt-3">
-           Making tax filing affordable with 100% satisfaction and 30-day guarantee.
+           Making tax filing affordable with 100% satisfaction and 30-day Money-Back guarantee.
+
            </p>
        </div>
        </div>
@@ -849,7 +850,8 @@ export default function ChoosePackage() {
            </svg>
            </button></Link>
            <p className="text-xs text-gray-500 mt-3">
-           Making tax filing affordable with 100% satisfaction and 30-day guarantee.
+           Making tax filing affordable with 100% satisfaction and 30-day Money-Back guarantee.
+
            </p>
        </div>
        </div>
@@ -984,7 +986,8 @@ export default function ChoosePackage() {
            </button>
            </Link>
            <p className="text-xs text-gray-500 mt-3">
-           Making tax filing affordable with 100% satisfaction and 30-day guarantee.
+           Making tax filing affordable with 100% satisfaction and 30-day Money-Back guarantee.
+
            </p>
        </div>
        </div>
