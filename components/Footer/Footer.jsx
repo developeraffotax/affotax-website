@@ -18,7 +18,7 @@ export default function Footer() {
             </g>
             </svg>
             </Link>
-        <p className="mt-2 text-sm text-gray-500">Affotax Ltd is a reliable UK-based accountancy firm that specialises in providing affordable accounting and tax filing services for clients within the UK.</p>
+        <p className="mt-2 text-sm text-gray-500">Affotax is a reliable accountancy firm that specialises in providing affordable accounting and tax filing services to UK businesses.</p>
       </div>
       <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div className="lg:w-1/3 md:w-1/2 w-full px-4">
@@ -52,25 +52,25 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Services</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/services/annual-accounts'} className="text-gray-600 hover:text-primary text-xs font-semibold">Company Accounts</Link>
+              <Link href={'/annual-accounts'} className="text-gray-600 hover:text-primary text-xs font-semibold">Company Accounts</Link>
             </li>
             <li>
-              <Link href={'/services/corporation-tax-ct600'} className="text-gray-600 hover:text-primary text-xs font-semibold">Corporation Tax</Link>
+              <Link href={'/corporation-tax-ct600'} className="text-gray-600 hover:text-primary text-xs font-semibold">Corporation Tax</Link>
             </li>
             <li>
-              <Link href={'/services/annual-confirmation-statement'} className="text-gray-600 hover:text-primary text-xs font-semibold">Confirmation Statement</Link>
+              <Link href={'/annual-confirmation-statement'} className="text-gray-600 hover:text-primary text-xs font-semibold">Confirmation Statement</Link>
             </li>
             <li>
-              <Link href={'/services/register-for-self-assessment'} className="text-gray-600 hover:text-primary text-xs font-semibold">Self Assessment</Link>
+              <Link href={'/register-for-self-assessment'} className="text-gray-600 hover:text-primary text-xs font-semibold">Self Assessment</Link>
             </li>
             <li>
-              <Link href={'/services/quarterly-vat-return'} className="text-gray-600 hover:text-primary text-xs font-semibold">VAT Return</Link>
+              <Link href={'/quarterly-vat-return'} className="text-gray-600 hover:text-primary text-xs font-semibold">VAT Return</Link>
             </li>
             <li>
-              <Link href={'/services/paye-employee'} className="text-gray-600 hover:text-primary text-xs font-semibold">Payroll Services</Link>
+              <Link href={'/paye-employee'} className="text-gray-600 hover:text-primary text-xs font-semibold">Payroll Services</Link>
             </li>
             <li>
-              <Link href={'/services/bookkeeping-for-12-month'} className="text-gray-600 hover:text-primary text-xs font-semibold">Bookkeeping</Link>
+              <Link href={'/bookkeeping-for-12-month'} className="text-gray-600 hover:text-primary text-xs font-semibold">Bookkeeping</Link>
             </li>
           </nav>
         </div>

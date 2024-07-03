@@ -35,7 +35,7 @@ export default function ChoosePackage() {
 
                 </p>
                 <p className="bg-gray-100 text-gray-900 h-12 text-center px-4 flex items-center justify-start">
-                Tax consultation (Save £1869)
+                Tax consultation 
 
                 </p>
                 <p className="text-gray-900 h-12 text-center px-4 flex items-center justify-start">
@@ -534,7 +534,7 @@ export default function ChoosePackage() {
 
        </p>
        <p className="bg-gray-100 text-gray-900 h-12 text-center px-4 flex items-center justify-start">
-       Tax consultation (Save £1869)
+       Tax consultation
 
        </p>
        <p className="text-gray-900 h-12 text-center px-4 flex items-center justify-start">
@@ -634,7 +634,7 @@ export default function ChoosePackage() {
            </span>
        </p>
        <p className="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-between px-4">
-       Tax consultation (Save £1869)
+       Tax consultation 
            <svg
            fill="none"
            stroke="currentColor"
@@ -802,7 +802,7 @@ export default function ChoosePackage() {
            </span>
        </p>
        <p className="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-between px-4">
-       Tax consultation (Save £1869)
+       Tax consultation
            <span className="w-5 h-5 inline-flex items-center justify-center bg-green-500 text-white rounded-full flex-shrink-0">
            <svg
                fill="none"
@@ -819,7 +819,7 @@ export default function ChoosePackage() {
        </p>
        
        <p className="text-gray-600 text-center h-12 flex items-center  justify-between px-4">
-       Tax consultation (Save £1869)
+       Director Payroll
            <svg
            fill="none"
            stroke="currentColor"
@@ -936,7 +936,7 @@ export default function ChoosePackage() {
            </span>
        </p>
        <p className="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-between px-4">
-       Tax consultation (Save £1869)
+       Tax consultation 
            <span className="w-5 h-5 inline-flex items-center justify-center bg-green-500 text-white rounded-full flex-shrink-0">
            <svg
                fill="none"
