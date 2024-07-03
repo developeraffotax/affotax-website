@@ -87,6 +87,7 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                 Reliable chartered accountants 
 
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
                 Your finances are in safe hands; our chartered accountants in Birmingham hold the highest qualifications and ensure compliance with the UK government. We understand the complex world of HMRC and Companies House, so we make sure you comply with the UK laws.
@@ -118,7 +119,8 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Reliable chartered accountants 
+                Customised solutions
+
 
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
@@ -151,7 +153,7 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Reliable chartered accountants 
+                No more paperwork
 
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
@@ -180,7 +182,7 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Reliable chartered accountants 
+                Affordable prices
 
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
