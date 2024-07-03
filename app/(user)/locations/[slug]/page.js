@@ -10,7 +10,7 @@ import Wales from "@/components/Locations/Wales"
 
 
 export const metadata = {
-	title: "working",
+	title: "Affotax Accountants",
 	description: ".",
 
 };

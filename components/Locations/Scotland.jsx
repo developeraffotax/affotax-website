@@ -204,7 +204,7 @@ We are chartered accountants providing accounts and tax filing services in Scotl
             <ul>
                 {
                     ['Limited Companies', 'Micro-entities', 'LLPs', 'Partnerships', 'Freelancers', 'Self-employed professionals', 'Contractors, etc.'].map((el) => {
-                        return <li className="font-semibold list-disc"> {el} </li>
+                        return <li key={el} className="font-semibold list-disc"> {el} </li>
                     })
                 }
             </ul>
