@@ -25,7 +25,7 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Who We Help</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/sole-traders'} className="text-gray-600 hover:text-primary text-xs font-semibold">Sole Traders</Link>
+              <Link href={'/sole-traders'}  className="text-gray-600 hover:text-primary text-xs font-semibold">Sole Traders</Link>
             </li>
             <li>
               <Link href={'/limited-companies'} className="text-gray-600 hover:text-primary text-xs font-semibold">Limited Companies</Link>
@@ -52,7 +52,7 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Services</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/annual-accounts'} className="text-gray-600 hover:text-primary text-xs font-semibold">Company Accounts</Link>
+              <Link href={'/annual-accounts'} scroll={true} className="text-gray-600 hover:text-primary text-xs font-semibold">Company Accounts</Link>
             </li>
             <li>
               <Link href={'/corporation-tax-ct600'} className="text-gray-600 hover:text-primary text-xs font-semibold">Corporation Tax</Link>

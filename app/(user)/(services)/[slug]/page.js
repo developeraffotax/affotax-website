@@ -67,14 +67,22 @@ const ServicesPage = ({params}) => {
         case 'contractor-accountants': return render = <ContractorAccountants />
         case 'small-business-accountants': return render = <SmallBusinessAccountants />
         case 'xero-accountants': return render = <XeroAccountants />
-        default:
-          let serviceData = dataArr.filter((el) => el.link === params.slug);
-          if (serviceData.length === 0) {
-            return <h3>THIS PAGE DOES NOT EXIST | WE'RE WORKING ON IT | THANK YOU FOR YOUR COOPERATION</h3>
-          }
-           render = <Service data={serviceData[0]}/>
+       
+          
 
     }
+
+      // SERVICES PAGES
+    if (!render) {
+      let serviceData = dataArr.filter((el) => el.link === params.slug);
+      if (serviceData.length === 0) {
+        return <h3>THIS PAGE DOES NOT EXIST | WE'RE WORKING ON IT | THANK YOU FOR YOUR COOPERATION</h3>
+      }
+       render = <Service data={serviceData[0]}/>
+    }
+
+
+
 
     return <> {render} </>
 
