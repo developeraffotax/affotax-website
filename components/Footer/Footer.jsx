@@ -112,25 +112,25 @@ export default function Footer() {
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Locations</h2>
           <nav className="list-none mb-10">
             <li>
-              <Link href={'/locations/wales'} className="text-gray-600 hover:text-primary text-xs font-semibold">Wales</Link>
+              <Link href={'/location/wales'} className="text-gray-600 hover:text-primary text-xs font-semibold">Wales</Link>
             </li>
             <li>
-              <Link href={'/locations/london'} className="text-gray-600 hover:text-primary text-xs font-semibold">London</Link>
+              <Link href={'/location/london'} className="text-gray-600 hover:text-primary text-xs font-semibold">London</Link>
             </li>
             <li>
-              <Link href={'/locations/england'} className="text-gray-600 hover:text-primary text-xs font-semibold">England</Link>
+              <Link href={'/location/england'} className="text-gray-600 hover:text-primary text-xs font-semibold">England</Link>
             </li>
             <li>
-              <Link href={'/locations/scotland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Scotland</Link>
+              <Link href={'/location/scotland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Scotland</Link>
             </li>
             <li>
-              <Link href={'/locations/birmingham'} className="text-gray-600 hover:text-primary text-xs font-semibold">Birmingham</Link>
+              <Link href={'/location/birmingham'} className="text-gray-600 hover:text-primary text-xs font-semibold">Birmingham</Link>
             </li>
             <li>
-              <Link href={'/locations/manchester'} className="text-gray-600 hover:text-primary text-xs font-semibold">Manchester</Link>
+              <Link href={'/location/manchester'} className="text-gray-600 hover:text-primary text-xs font-semibold">Manchester</Link>
             </li>
             <li>
-              <Link href={'/locations/northern_ireland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Northern Ireland</Link>
+              <Link href={'/location/northern_ireland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Northern Ireland</Link>
             </li>
             
           </nav>
