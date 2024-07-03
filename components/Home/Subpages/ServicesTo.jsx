@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function ServicesTo() {
@@ -17,6 +18,7 @@ export default function ServicesTo() {
 
                 <ul className="mx-auto items-center text-center">
 
+                    <Link href={'/limited-companies'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -32,8 +34,9 @@ export default function ServicesTo() {
                             </svg>
                             <span className="title-font font-medium">Limited Companies</span>
                         </div>
-                    </li>
+                    </li></Link>
 
+                    <Link href={'/partnerships'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -49,8 +52,9 @@ export default function ServicesTo() {
                             </svg>
                             <span className="title-font font-medium">Partnerships</span>
                         </div>
-                    </li>
+                    </li></Link>
 
+                    <Link href={'/contractor-accountants'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -66,8 +70,9 @@ export default function ServicesTo() {
                             </svg>
                             <span className="title-font font-medium">Contractor Accountants</span>
                         </div>
-                    </li>
+                    </li></Link>
 
+                    <Link href={'/small-business-accountants'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -83,8 +88,9 @@ export default function ServicesTo() {
                             </svg>
                             <span className="title-font font-medium">Small Business Accountants</span>
                         </div>
-                    </li>
+                    </li></Link>
 
+                    <Link href={'/xero-accountants'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -100,8 +106,9 @@ export default function ServicesTo() {
                             </svg>
                             <span className="title-font font-medium">Xero Accountants</span>
                         </div>
-                    </li>
+                    </li></Link>
 
+                    <Link href={'/sole-traders'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -117,8 +124,9 @@ export default function ServicesTo() {
                             </svg>
                             <span className="title-font font-medium">Sole Traders</span>
                         </div>
-                    </li>
+                    </li></Link>
 
+                    <Link href={'/limited-liability-partnerships'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -134,7 +142,7 @@ export default function ServicesTo() {
                             </svg>
                             <span className="title-font font-medium">Limited Liability Partnerships (LLPs)</span>
                         </div>
-                    </li>
+                    </li></Link>
                     
                 </ul>
 

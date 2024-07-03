@@ -2,7 +2,8 @@ import Link from "next/link";
 import React from "react";
 
 const SubMenu = ({ name, link, index, length, onClick }) => {
-	let href = link !== "/services" ? `/services/${link}` : "/services";
+	//let href = link !== "/services" ? `/services/${link}` : "/services";
+	let href =`${link}`
 
 	return (
 		<Link href={href} onClick={onClick}>
