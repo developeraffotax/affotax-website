@@ -18,11 +18,14 @@ export default function Scotland() {
             <div className='container mx-auto '>
             <div className=' flex pb-24  flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between  '>
                 <div className='items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 '>
-                    <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Services | Accountants in Scotland
-                    </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Are you looking for a Welsh accountant who can manage your accounts and tax filings accurately? You are in the right place. Although Affotax is based in London, we provide our services all over the UK, helping businesses of all sizes solve the complex financial nitty-gritty. 
+                    <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online  <br /> Chartered Accountants in Scotland
 
-Whether you are an experienced business owner in Cardiff or a budding start-up in Snowdonia, our accountants in Wales are ready to serve you with our expertise in managing your accounts, ensuring tax compliance, and taking that weight off your mind so you can sharpen your business acumen. 
+                    </h1>
+                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Chartered Accountants in Scotland
+We are chartered accountants providing accounts and tax filing services in Scotland and all over the UK. Our office is based in London, but the expert accountants at Affotax know the whole caboodle of the business world in Scotland. 
+
+ To be frank, not opting for our service is like living in Scotland and not visiting the mediaeval castles. Get in touch, and our chartered accountants in Scotland will serve you proper by managing your accounting and tax filing needs.
+
  </p>
                     <div className='flex justify-center text-nowrap '>
                         <Link href={'/services'}><button className='inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Services </button></Link>
@@ -52,7 +55,8 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         <div className="mx-auto max-w-7xl px-4  max-lg:px-4">
             <div className="text-center mb-12">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                Why should you choose our Wales Accountants?
+                Why choose our accountants in Scotland?
+
                 </h1>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -83,10 +87,11 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Your financial information sharing
+                Experienced accountants
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Your financial information is to be processed online in compliance with the GDPR/EU rules. You can email your bank statements to your accountant with ease: Live the future of secure online financial management.
+                Our team of Scotland accountants have 6+ years of experience in providing tax filing and accounting services all over the UK. They have the required knowledge of local tax regulations and financial best practices, ensuring satisfaction. Our accountants in Scotland have helped many businesses and individuals find their way through the complications of Scottish finance, now ready to serve you.
                 </h4>
                 </div>
             </li>
@@ -114,10 +119,11 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Company accounts & tax return preparations
+                Affordable prices
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                With our innovative tools, experience financial reporting with unmatched precision. Our iXBRL accounts and tax filings are carefully produced by following Companies House and HMRC's rigorous guidelines.
+                Our prices are the most affordable. We understand and also recommend to pay less for accounting and tax filing services and save more. That's why we offer a whole smorgasbord of affordably priced accounting services, so you can choose what would best suit your requirements. Let’s find the perfect accounting solution for you and let us help you stay financially healthy without hurting your sporran!
                 </h4>
                 </div>
             </li>
@@ -145,40 +151,15 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Review & approval of drafts
+                Improved financial decisions
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                At Affotax, we believe in transparency and your complete satisfaction. At every step, you have the right to review and validate. We hold off on submitting your accounts until we have your explicit approval.
+                With our accountants in Scotland by your side, you will make informed financial decisions as your business growth is our success story. We provide clear financial data and expert advice to help you and your business grow. Our accountants in Scotland provide multiple services including tax planning and preparation, bookkeeping, Payroll, and company formation, etc.
                 </h4>
                 </div>
             </li>
-            <li className="flex-start group relative flex lg:flex-col">
-                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
-                {/* <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-gray-600 group-hover:text-white"
-                >
-                    <path
-                    d="M5.50049 10.5L2.00049 7.9999L3.07849 6.92193C3.964 6.03644 4.40676 5.5937 4.9307 5.31387C5.39454 5.06614 5.90267 4.91229 6.42603 4.86114C7.01719 4.80336 7.63117 4.92617 8.85913 5.17177L10.5 5.49997M18.4999 13.5L18.8284 15.1408C19.0742 16.3689 19.1971 16.983 19.1394 17.5743C19.0883 18.0977 18.9344 18.6059 18.6867 19.0699C18.4068 19.5939 17.964 20.0367 17.0783 20.9224L16.0007 22L13.5007 18.5M7 16.9998L8.99985 15M17.0024 8.99951C17.0024 10.1041 16.107 10.9995 15.0024 10.9995C13.8979 10.9995 13.0024 10.1041 13.0024 8.99951C13.0024 7.89494 13.8979 6.99951 15.0024 6.99951C16.107 6.99951 17.0024 7.89494 17.0024 8.99951ZM17.1991 2H16.6503C15.6718 2 15.1826 2 14.7223 2.11053C14.3141 2.20853 13.9239 2.37016 13.566 2.5895C13.1623 2.83689 12.8164 3.18282 12.1246 3.87469L6.99969 9C5.90927 10.0905 5.36406 10.6358 5.07261 11.2239C4.5181 12.343 4.51812 13.6569 5.07268 14.776C5.36415 15.3642 5.90938 15.9094 6.99984 16.9998V16.9998C8.09038 18.0904 8.63565 18.6357 9.22386 18.9271C10.343 19.4817 11.6569 19.4817 12.7761 18.9271C13.3643 18.6356 13.9095 18.0903 15 16.9997L20.1248 11.8745C20.8165 11.1827 21.1624 10.8368 21.4098 10.4331C21.6291 10.0753 21.7907 9.6851 21.8886 9.27697C21.9991 8.81664 21.9991 8.32749 21.9991 7.34918V6.8C21.9991 5.11984 21.9991 4.27976 21.6722 3.63803C21.3845 3.07354 20.9256 2.6146 20.3611 2.32698C19.7194 2 18.8793 2 17.1991 2Z"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    />
-                </svg> */}
-                <FcCurrencyExchange className='scale-150'/>
-                </div>
-                <div className="ml-6 lg:ml-0 lg:mt-10">
-                <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Submission to HMRC & Companies Houses
-                </h3>
-                <h4 className="mt-2 text-base text-gray-700">
-                Rest assured that our expert team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you for your peace of mind.
-                </h4>
-                </div>
-            </li>
+            
             </ul>
         </div>
     </section>
@@ -191,189 +172,43 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         {/* WHY CHOOSE US */}
 
         <section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
-        <div className="container px-5 py-12 mx-auto">
-            <div className="text-center mb-16">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                    Why Choose Us?
-                </h1>
-                <div className="flex mt-6 justify-center">
-                    <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
-                </div>
-            </div>
-            <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                    </svg> */}
-                    {/* <img src={Tax.src} alt="tax"/> */}
-                    <Image src={Tax}  cover="true"  />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Tax Saving
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    Our team of UK tax experts will collaborate with you to minimise your corporation and personal tax liability while adhering to the UK tax legislation. We will make sure to identify all allowances and expenses you're eligible for to reduce your tax burden.
-                    </p>
-                    
-                    </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <circle cx={6} cy={6} r={3} />
-                        <circle cx={6} cy={18} r={3} />
-                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-                    </svg> */}
-                    <Image src={Award}  cover="true"  />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Award Winning
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    We're proud of being a leading UK accounting firm. Our various awards and top 100 accounting firm ranking are proof of our exceptional UK accounts and tax preparation services. We're committed to excellence and strive to maintain our reputation every day.
-                    </p>
-                    
-                    </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                        <circle cx={12} cy={7} r={4} />
-                    </svg> */}
-                    <Image src={Deadline}  cover="true"  />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Deadline reminders
+        <div className="container px-5 py-12 mx-auto ">
+            
+          <h2 className="text-3xl font-bold ">
+          Get digital
+
+          </h2>
+
+          <p className="mt-4">
+          In this digital world, it’s more important to turn your accounting and tax filing needs digital, as cloud-based accounting services offer many benefits, including:
+
+          </p>
+
+          <ul className="list-disc font-semibold mt-4">
+            <li> Real-time access to financial data </li>
+            <li> Improved collaboration amongst teams
+            </li>
+            <li> Automated tasks that free up valuable time
+            </li>
+            <li> Managing accounts and tax filing from wherever you want
+            </li>
+            <li> No more paperwork burden and many more benefits. </li>
+          </ul>
 
 
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    Our email reminders ensure you never miss a deadline for your limited company accounts and company tax returns to be submitted to HMRC and Companies House. Stay informed and avoid late filing penalties, while focusing on running your business.
-                    </p>
-                    
-                    </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                    </svg> */}
-                    <Image src={Experience}  cover="true"  />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Experience
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    We're the UK's most reliable accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
-                    </p>
-                    
-                    </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <circle cx={6} cy={6} r={3} />
-                        <circle cx={6} cy={18} r={3} />
-                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-                    </svg> */}
-                    <Image src={Fully} cover="true" />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Fully accredited
+            
+            <h2  className="text-3xl font-bold mt-8">
+            Our Scotland accountants provide their services to:
 
+            </h2>
+            <ul>
+                {
+                    ['Limited Companies', 'Micro-entities', 'LLPs', 'Partnerships', 'Freelancers', 'Self-employed professionals', 'Contractors, etc.'].map((el) => {
+                        return <li className="font-semibold list-disc"> {el} </li>
+                    })
+                }
+            </ul>
 
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    As authorised accountants and registered agents with HMRC and Companies House, we offer reliable and customised accounting services. Our commitment to excellence remains steadfast, and we strive to deliver top-notch service and support to all our clients.
-                    </p>
-                    
-                    </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                        <circle cx={12} cy={7} r={4} />
-                    </svg> */}
-                    <Image src={Support}  cover="true"  />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Support
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    Our expert accountants offer free live chat and email support to guide you every step of the way. Whether you're facing HMRC notices or need help with compliance, we'll take care of the declaration process for you in full compliance with UK regulations.
-                    </p>
-                    
-                    </div>
-                </div>
-            </div>
-
-        <div className=' mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
-            <h1 className=' title-font text-3xl font-semibold '>
-                Ready to chat with the UK's top chartered accountants?
-            </h1>
-            <p className='mt-4 text-md '>
-                Send us a message today, or get a quote; our expert chartered accountants in the UK are ready to manage your accounting and tax filings with expertise.
-            </p>
-            <Link href={'/contact-us'}><button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
-                        
-        </div>
 
         </div>
 

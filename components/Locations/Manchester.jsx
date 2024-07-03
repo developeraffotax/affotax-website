@@ -18,11 +18,14 @@ export default function Manchester() {
             <div className='container mx-auto '>
             <div className=' flex pb-24  flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between  '>
                 <div className='items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 '>
-                    <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Services | Accountants in Manchester
-                    </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Are you looking for a Welsh accountant who can manage your accounts and tax filings accurately? You are in the right place. Although Affotax is based in London, we provide our services all over the UK, helping businesses of all sizes solve the complex financial nitty-gritty. 
+                    <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'>  Online Chartered Accountants in Manchester
 
-Whether you are an experienced business owner in Cardiff or a budding start-up in Snowdonia, our accountants in Wales are ready to serve you with our expertise in managing your accounts, ensuring tax compliance, and taking that weight off your mind so you can sharpen your business acumen. 
+                    </h1>
+                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> At Affotax, an expert accountancy company, we are a team of qualified chartered accountants providing services in the North West – Manchester. We understand what it's like to run a business in the UK; chasing dreams and seizing opportunities cannot be harder. However, having us by your side, you can focus on your businesses’ growth while we handle the nitty-gritty.<br /> 
+
+
+Manage your accounts from anywhere in the world; our accountants in Manchester are dedicated to your financial prosperity. Put your trust in Affotax; let us handle your accounts and tax filing, and we will help you score a goal.
+
  </p>
                     <div className='flex justify-center text-nowrap '>
                         <Link href={'/services'}><button className='inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Services </button></Link>
@@ -52,7 +55,8 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         <div className="mx-auto max-w-7xl px-4  max-lg:px-4">
             <div className="text-center mb-12">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                Why should you choose our Wales Accountants?
+                Why choose our accountants in Manchester?
+
                 </h1>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -83,10 +87,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Your financial information sharing
+                Customised solution
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Your financial information is to be processed online in compliance with the GDPR/EU rules. You can email your bank statements to your accountant with ease: Live the future of secure online financial management.
+                At Affotax, we believe one size does not fit all. Our priority is understanding what your business requires and crafting customised solutions that align with your business requirements. Whether you are a start-up or an established company, our chartered accountants in Manchester have got the expertise to provide a customised solution for your unique business needs.
+
                 </h4>
                 </div>
             </li>
@@ -114,10 +120,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Company accounts & tax return preparations
+                Transparency & integrity
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                With our innovative tools, experience financial reporting with unmatched precision. Our iXBRL accounts and tax filings are carefully produced by following Companies House and HMRC's rigorous guidelines.
+                Transparency and integrity are at the core of everything we do; put your trust in Affotax. We are delighted to provide honest advice and transparent communication throughout the process. Our Manchester accountants always provide you with insights on where you stand, providing peace of mind and confidence in your financial decisions. 
+
                 </h4>
                 </div>
             </li>
@@ -145,10 +153,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Review & approval of drafts
+                Responsive support
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                At Affotax, we believe in transparency and your complete satisfaction. At every step, you have the right to review and validate. We hold off on submitting your accounts until we have your explicit approval.
+                We understand how important time is to you as a business owner. That is why we are proud of ourselves for being responsive and accessible whenever you want. Whether you need an answer to a question, or have an urgent issue or concern, our dedicated chartered accountants in Manchester are just a click away to provide expertise solutions.
+
                 </h4>
                 </div>
             </li>
@@ -172,10 +182,11 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Submission to HMRC & Companies Houses
+                Value for money
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Rest assured that our expert team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you for your peace of mind.
+                We at Affotax understand how businesses can be expensive, that is why we provide exceptional value to your money. Our prices are affordable while our services are outstanding, ensuring you get the best possible return on your investment. With our online chartered accountants in Manchester, you get more bang for the buck, so why wait? Get a quote now!
                 </h4>
                 </div>
             </li>
@@ -194,7 +205,8 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         <div className="container px-5 py-12 mx-auto">
             <div className="text-center mb-16">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                    Why Choose Us?
+                What can our Manchester accountants do for you?
+
                 </h1>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -219,10 +231,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Tax Saving
+                    Tax Advisory and Planning
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our team of UK tax experts will collaborate with you to minimise your corporation and personal tax liability while adhering to the UK tax legislation. We will make sure to identify all allowances and expenses you're eligible for to reduce your tax burden.
+                    Our tax advisors in Manchester specialize in strategic tax planning to minimize your liabilities and maximize your savings. We stay updated with the latest tax laws to provide you with accurate advice and efficient tax solutions.
+
                     </p>
                     
                     </div>
@@ -246,10 +260,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Award Winning
+                    Bookkeeping and VAT Returns
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    We're proud of being a leading UK accounting firm. Our various awards and top 100 accounting firm ranking are proof of our exceptional UK accounts and tax preparation services. We're committed to excellence and strive to maintain our reputation every day.
+                    Our Manchester accountants ensure that your bookkeeping is precise and up-to-date, allowing you to focus on your core business activities. We also handle VAT returns meticulously, ensuring timely submissions and compliance with HMRC regulations.
+
                     </p>
                     
                     </div>
@@ -272,12 +288,14 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Deadline reminders
+                    Financial Reporting and Analysis
+
 
 
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our email reminders ensure you never miss a deadline for your limited company accounts and company tax returns to be submitted to HMRC and Companies House. Stay informed and avoid late filing penalties, while focusing on running your business.
+                    We offer detailed financial reporting and analysis to give you a clear picture of your company's financial status. Our chartered accountants in Manchester convert complex data into actionable insights that drive informed decision-making.
+
                     </p>
                     
                     </div>
@@ -299,10 +317,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Experience
+                    Business Planning and Cash Flow Management
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    We're the UK's most reliable accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
+                    Effective business planning and cash flow management are critical for sustaining growth. Our Manchester accountants work with you to create robust business plans and manage your cash flow efficiently, helping you navigate through financial challenges.
+
                     </p>
                     
                     </div>
@@ -326,12 +346,14 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Fully accredited
+                    Payroll Services
+
 
 
                     </h2>
                     <p className="leading-relaxed text-base">
-                    As authorised accountants and registered agents with HMRC and Companies House, we offer reliable and customised accounting services. Our commitment to excellence remains steadfast, and we strive to deliver top-notch service and support to all our clients.
+                    Managing payroll can be a complex and time-consuming task. Our accounting firms in Manchester provide comprehensive payroll services, ensuring your employees are paid accurately and on time while complying with all statutory requirements.
+
                     </p>
                     
                     </div>
@@ -354,10 +376,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Support
+                    Audit and Assurance
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our expert accountants offer free live chat and email support to guide you every step of the way. Whether you're facing HMRC notices or need help with compliance, we'll take care of the declaration process for you in full compliance with UK regulations.
+                    Our chartered accountants in Manchester offer audit and assurance services to give you confidence in your financial statements. We provide an objective assessment of your financial records, enhancing credibility with stakeholders.
+
                     </p>
                     
                     </div>
@@ -366,10 +390,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
 
         <div className=' mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
             <h1 className=' title-font text-3xl font-semibold '>
-                Ready to chat with the UK's top chartered accountants?
+            Contact with expert Accountants in Manchester
+
             </h1>
             <p className='mt-4 text-md '>
-                Send us a message today, or get a quote; our expert chartered accountants in the UK are ready to manage your accounting and tax filings with expertise.
+            For further assistance or to schedule a consultation, reach out to our team of Manchester accountants. We look forward to partnering with you to achieve your financial goals.
+
             </p>
             <Link href={'/contact-us'}><button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
                         

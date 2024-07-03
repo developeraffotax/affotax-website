@@ -8,6 +8,19 @@ import Wales from "@/components/Locations/Wales"
 
 
 
+
+export const metadata = {
+	title: "working",
+	description: ".",
+
+};
+
+
+
+
+
+
+
 export default function LocationPage({params}) {
     console.log(params)
     let render;

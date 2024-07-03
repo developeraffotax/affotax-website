@@ -20,9 +20,10 @@ export default function Birmingham() {
                 <div className='items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 '>
                     <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Services | Accountants in Birmingham
                     </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Are you looking for a Welsh accountant who can manage your accounts and tax filings accurately? You are in the right place. Although Affotax is based in London, we provide our services all over the UK, helping businesses of all sizes solve the complex financial nitty-gritty. 
+                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Are you looking for online accountants in Birmingham? We are an online accountancy firm, providing our services in Birmingham and all over the UK. Although we are based in London, we ensure our presence all over the UK. Affotax’s expert accountants know the ins and outs of the Birmingham business hub. 
 
-Whether you are an experienced business owner in Cardiff or a budding start-up in Snowdonia, our accountants in Wales are ready to serve you with our expertise in managing your accounts, ensuring tax compliance, and taking that weight off your mind so you can sharpen your business acumen. 
+That being said, who’s got time (or frankly, the patience) to manage accounts and tax forms while keeping pace with the Birmingham business hub? Well, our Birmingham accountants provide online accountancy and tax filing services that are as sweet as the chocolates at Cadbury World.
+
  </p>
                     <div className='flex justify-center text-nowrap '>
                         <Link href={'/services'}><button className='inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Services </button></Link>
@@ -52,7 +53,8 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         <div className="mx-auto max-w-7xl px-4  max-lg:px-4">
             <div className="text-center mb-12">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                Why should you choose our Wales Accountants?
+                Why choose our accountants in Birmingham?
+
                 </h1>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -83,10 +85,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Your financial information sharing
+                Reliable chartered accountants 
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Your financial information is to be processed online in compliance with the GDPR/EU rules. You can email your bank statements to your accountant with ease: Live the future of secure online financial management.
+                Your finances are in safe hands; our chartered accountants in Birmingham hold the highest qualifications and ensure compliance with the UK government. We understand the complex world of HMRC and Companies House, so we make sure you comply with the UK laws.
+
                 </h4>
                 </div>
             </li>
@@ -114,10 +118,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Company accounts & tax return preparations
+                Reliable chartered accountants 
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                With our innovative tools, experience financial reporting with unmatched precision. Our iXBRL accounts and tax filings are carefully produced by following Companies House and HMRC's rigorous guidelines.
+                As our customer, you are our first priority and that’s why we offer customised solutions made specifically for your business to grow. We first try to understand your needs and come up with a solution that would make you and your business shine bright like a diamond. 
+
                 </h4>
                 </div>
             </li>
@@ -145,10 +151,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Review & approval of drafts
+                Reliable chartered accountants 
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                At Affotax, we believe in transparency and your complete satisfaction. At every step, you have the right to review and validate. We hold off on submitting your accounts until we have your explicit approval.
+                In this digital world, managing the paperwork can feel like screaming out loud in the library of Birmingham. Inappropriate, right? We embrace the digital world so you can manage your accounts and tax affairs from the comfort of your desk (or even your favourite canal-side cafe!). 
+
                 </h4>
                 </div>
             </li>
@@ -172,10 +180,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Submission to HMRC & Companies Houses
+                Reliable chartered accountants 
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Rest assured that our expert team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you for your peace of mind.
+                Our Birmingham accountants provide their service at a transparent and affordable price. With you in our mind, we understand your specific requirements and provide you with a reasonable price, because we want you to spend less on accounting services and more on your business.
+
                 </h4>
                 </div>
             </li>
@@ -194,7 +204,8 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         <div className="container px-5 py-12 mx-auto">
             <div className="text-center mb-16">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                    Why Choose Us?
+                Our Birmingham accountants can provide you:
+
                 </h1>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -219,10 +230,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Tax Saving
+                    Birmingham expertise
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our team of UK tax experts will collaborate with you to minimise your corporation and personal tax liability while adhering to the UK tax legislation. We will make sure to identify all allowances and expenses you're eligible for to reduce your tax burden.
+                    Our accountants in Birmingham understand the local business market and can provide you with customised services that can fulfil your business requirements. Talk to us today!
+
                     </p>
                     
                     </div>
@@ -246,10 +259,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Award Winning
+                    Clear communication
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    We're proud of being a leading UK accounting firm. Our various awards and top 100 accounting firm ranking are proof of our exceptional UK accounts and tax preparation services. We're committed to excellence and strive to maintain our reputation every day.
+                    Our Birmingham accountants speak in plain English, not accounting jargon. We are always keeping you informed and helping you understand what's happening with your finances.
+
                     </p>
                     
                     </div>
@@ -272,12 +287,14 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Deadline reminders
+                    Focus on growth
+
 
 
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our email reminders ensure you never miss a deadline for your limited company accounts and company tax returns to be submitted to HMRC and Companies House. Stay informed and avoid late filing penalties, while focusing on running your business.
+                    We don't just file taxes; we help you strategise for maximum tax efficiency and long-term financial success, because your growth as our client is our first priority.
+
                     </p>
                     
                     </div>
@@ -299,77 +316,29 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Experience
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    We're the UK's most reliable accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
-                    </p>
-                    
-                    </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <circle cx={6} cy={6} r={3} />
-                        <circle cx={6} cy={18} r={3} />
-                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-                    </svg> */}
-                    <Image src={Fully} cover="true" />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Fully accredited
-
+                    Technology advantage
 
                     </h2>
                     <p className="leading-relaxed text-base">
-                    As authorised accountants and registered agents with HMRC and Companies House, we offer reliable and customised accounting services. Our commitment to excellence remains steadfast, and we strive to deliver top-notch service and support to all our clients.
+                    We use modern tools to make the process simpler and ensure accuracy while saving time. Some of the tools include Quickbooks, Xero, Capium, KAP accounting, and Waveup, etc.
+
+
                     </p>
                     
                     </div>
                 </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                        <circle cx={12} cy={7} r={4} />
-                    </svg> */}
-                    <Image src={Support}  cover="true"  />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Support
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    Our expert accountants offer free live chat and email support to guide you every step of the way. Whether you're facing HMRC notices or need help with compliance, we'll take care of the declaration process for you in full compliance with UK regulations.
-                    </p>
-                    
-                    </div>
-                </div>
+                
+                
             </div>
 
         <div className=' mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
             <h1 className=' title-font text-3xl font-semibold '>
-                Ready to chat with the UK's top chartered accountants?
+            Ready to chat and ditch the tax-time scramble?
+
             </h1>
             <p className='mt-4 text-md '>
-                Send us a message today, or get a quote; our expert chartered accountants in the UK are ready to manage your accounting and tax filings with expertise.
+            Talk to one of our expert Birmingham accountants, as we offer a free consultation to discuss your business requirements and how we can help you. Don't settle for just any accountant in Birmingham, choose a partner who can take you to new heights.
+
             </p>
             <Link href={'/contact-us'}><button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
                         

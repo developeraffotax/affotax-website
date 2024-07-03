@@ -10,6 +10,11 @@ import { FcBullish, FcCurrencyExchange, FcDataSheet, FcOk } from "react-icons/fc
 import Image from "next/image";
 
 
+
+
+
+
+
 export default function NorthernIreland() {
   return (
     <main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
@@ -18,11 +23,12 @@ export default function NorthernIreland() {
             <div className='container mx-auto '>
             <div className=' flex pb-24  flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between  '>
                 <div className='items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 '>
-                    <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Services | Accountants in NorthernIreland
-                    </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Are you looking for a Welsh accountant who can manage your accounts and tax filings accurately? You are in the right place. Although Affotax is based in London, we provide our services all over the UK, helping businesses of all sizes solve the complex financial nitty-gritty. 
+                    <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Accountants in Northern Ireland
 
-Whether you are an experienced business owner in Cardiff or a budding start-up in Snowdonia, our accountants in Wales are ready to serve you with our expertise in managing your accounts, ensuring tax compliance, and taking that weight off your mind so you can sharpen your business acumen. 
+                    </h1>
+                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Finding reliable accountants is key in the Northern Ireland business market. Our Northern Ireland accountants are the experts you are looking for, offering a range of expertise from accounting and tax specialists to business advisors.
+Get in touch with our accountants in Northern Ireland today. You can relax while we handle all the nitty gritty of your accounts and tax filing within the UK.
+
  </p>
                     <div className='flex justify-center text-nowrap '>
                         <Link href={'/services'}><button className='inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Services </button></Link>
@@ -52,7 +58,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         <div className="mx-auto max-w-7xl px-4  max-lg:px-4">
             <div className="text-center mb-12">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                Why should you choose our Wales Accountants?
+                Why choose our accountants in Northern Ireland or Belfast?
                 </h1>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -83,10 +89,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Your financial information sharing
+                Accountants in Belfast
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Your financial information is to be processed online in compliance with the GDPR/EU rules. You can email your bank statements to your accountant with ease: Live the future of secure online financial management.
+                Are you looking for accountants in Belfast? We provide our services all over the UK, including Belfast. We understand the Belfast accounting landscape and are ready to help you with tax planning, bookkeeping, or business advisory. Why choose our Belfast accountants? Keep reading.
+
                 </h4>
                 </div>
             </li>
@@ -114,10 +122,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Company accounts & tax return preparations
+                Local knowledge
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                With our innovative tools, experience financial reporting with unmatched precision. Our iXBRL accounts and tax filings are carefully produced by following Companies House and HMRC's rigorous guidelines.
+                We at Affotax understand the UK tax regulations and the economic landscape of Belfast or anywhere in Northern Ireland. We love to help companies navigate the tax world while utilizing the best resources. Get a quote, and our accountant in Belfast will reply instantly to help you.
+
                 </h4>
                 </div>
             </li>
@@ -145,10 +155,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Review & approval of drafts
+                Customised solutions
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                At Affotax, we believe in transparency and your complete satisfaction. At every step, you have the right to review and validate. We hold off on submitting your accounts until we have your explicit approval.
+                Whether you're a sole trader or a large corporation, Affotax has multiple customised solutions to fit your needs. Here is how we do it: We understand your needs and develop a plan accordingly, then offer you an affordable service package to help solve your problem. Let's connect today!
+
                 </h4>
                 </div>
             </li>
@@ -172,10 +184,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Submission to HMRC & Companies Houses
+                Personal touch
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Rest assured that our expert team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you for your peace of mind.
+                At Affotax, we prioritise personal touch as it helps us build relationships with our clients. We often go above and beyond in providing customised phone calls and personalised services, which can lead to better customer satisfaction. Through personal touch, we understand each of our customers' tastes and help accordingly.
+
                 </h4>
                 </div>
             </li>
@@ -194,7 +208,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
         <div className="container px-5 py-12 mx-auto">
             <div className="text-center mb-16">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                    Why Choose Us?
+                Where do our accountants in North Ireland serve?
                 </h1>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -219,10 +233,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Tax Saving
+                    Accountants in Derry
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our team of UK tax experts will collaborate with you to minimise your corporation and personal tax liability while adhering to the UK tax legislation. We will make sure to identify all allowances and expenses you're eligible for to reduce your tax burden.
+                    Getting a reliable accountant in Derry is crucial for the well-being of your business or personal finances. Our Derry's accountants, who have years of experience in the field, can manage it all, from tax prep and bookkeeping to financial advisory and business consulting services. Get a quote today, and we will connect you with a qualified chartered accountant in Derry to assist you with your specific needs.
+
                     </p>
                     
                     </div>
@@ -246,10 +262,12 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Award Winning
+                    Accountants in Armagh
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    We're proud of being a leading UK accounting firm. Our various awards and top 100 accounting firm ranking are proof of our exceptional UK accounts and tax preparation services. We're committed to excellence and strive to maintain our reputation every day.
+                    Are you looking for accountants in Armagh? Our team of experienced accountants in Armagh is ready to help you with all your accounting and tax filing needs. We are experts in taxation, bookkeeping, and financial reporting. Our services also include business advisory and financial planning. So why wait? Contact our Armagh accountants today; we will help you reach new heights.
+
                     </p>
                     
                     </div>
@@ -272,12 +290,14 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Deadline reminders
+                    Accountants in Banbridge
+
 
 
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our email reminders ensure you never miss a deadline for your limited company accounts and company tax returns to be submitted to HMRC and Companies House. Stay informed and avoid late filing penalties, while focusing on running your business.
+                    Finding accountants in Banbridge is not a difficult task. Our expert Banbridge accountants are ready to help you with tax filing and accounting in the UK. We provide professional and reliable services at competitive prices. We analyse your specific needs and offer you an affordable service accordingly. Our experienced team is ready to answer any questions you may have. Contact us today to get started.
+
                     </p>
                     
                     </div>
@@ -299,77 +319,27 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Experience
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    We're the UK's most reliable accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
-                    </p>
-                    
-                    </div>
-                </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <circle cx={6} cy={6} r={3} />
-                        <circle cx={6} cy={18} r={3} />
-                        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
-                    </svg> */}
-                    <Image src={Fully} cover="true" />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Fully accredited
-
+                    Accountants in Craigavon
 
                     </h2>
                     <p className="leading-relaxed text-base">
-                    As authorised accountants and registered agents with HMRC and Companies House, we offer reliable and customised accounting services. Our commitment to excellence remains steadfast, and we strive to deliver top-notch service and support to all our clients.
+                    Looking for reliable accountants in Craigavon to keep your finances in check? Our experienced professionals are ready to serve you. We are dedicated to helping your small business or assisting with your taxes, whatever your requirements. Our attention to detail and personalised touch has earned us a special place in our clients' hearts. Contact us to schedule a consultation and grow your business. 
+
                     </p>
                     
                     </div>
                 </div>
-                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                        <circle cx={12} cy={7} r={4} />
-                    </svg> */}
-                    <Image src={Support}  cover="true"  />
-                    </div>
-                    <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Support
-                    </h2>
-                    <p className="leading-relaxed text-base">
-                    Our expert accountants offer free live chat and email support to guide you every step of the way. Whether you're facing HMRC notices or need help with compliance, we'll take care of the declaration process for you in full compliance with UK regulations.
-                    </p>
-                    
-                    </div>
-                </div>
+                
+                
             </div>
 
         <div className=' mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
             <h1 className=' title-font text-3xl font-semibold '>
-                Ready to chat with the UK's top chartered accountants?
+            Ready to chat?
             </h1>
             <p className='mt-4 text-md '>
-                Send us a message today, or get a quote; our expert chartered accountants in the UK are ready to manage your accounting and tax filings with expertise.
+            Get a quote or leave a message, and one of our expert Northern Ireland accountants will contact you.
+
             </p>
             <Link href={'/contact-us'}><button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
                         
