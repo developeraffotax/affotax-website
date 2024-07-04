@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HeroImg from '@/public/hero.png'
 import Tax from '@/public/tax.png'
 import Experience from '@/public/experience.png'
 import Deadline from '@/public/deadline.png'
@@ -7,7 +6,10 @@ import Award from '@/public/award.png'
 import Fully from '@/public/fully.png'
 import Support from '@/public/support.png'
 import { FcBullish, FcCurrencyExchange, FcDataSheet, FcOk } from "react-icons/fc";
+import HeroImg from '@/assets/wales/top image.png'
 import Image from "next/image";
+import icon1 from '@/assets/wales/Local knowledge with national reach.png'
+import icon2 from '@/assets/wales/Honest guidance & real growth.png'
 
 
 export default function Wales() {
@@ -31,10 +33,10 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
 
                 <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4 scale-125'>
-                    <img
+                    <Image
                         className='object-cover object-center rounded  drop-shadow-xl '
                         alt='hero'
-                        src={HeroImg.src}
+                        src={HeroImg}
                     />
                 </div>
             </div>
@@ -79,7 +81,8 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     strokeLinejoin="round"
                     />
                 </svg> */}
-                <FcDataSheet className='scale-150'/>
+                <Image  className="p-2" src={icon1} alt="icon for wale page"/>
+                
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
@@ -111,7 +114,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     strokeLinejoin="round"
                     />
                 </svg> */}
-                <FcBullish className='scale-150'/>
+                <Image  className="p-2" src={icon2} alt="icon for wale page"/>
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
