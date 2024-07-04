@@ -93,7 +93,7 @@ const menu = [
                 link: '/directors-payroll',
             },
             { name: 'PAYE Employee', link: '/paye-employee' },
-            { name: 'Auto Enrollment Pension', link: '/auto-enrollment-pension' },
+            { name: 'Auto Enrollment Pension', link: '/auto-enrolment-pension' },
             { name: 'Online P11D Form', link: '/p11d-form' },
             {
                 name: 'P45 and P60 Form',
@@ -140,7 +140,7 @@ const menu = [
         submenu: [
             {
                 name: 'UK Company Registration (UK Resident)',
-                link: '/uk-company-registration-uk-resident',
+                link: '/uk-company-registration-(uk-resident)',
             },
             {
                 name: 'UK Limited Company for Non-Residents',

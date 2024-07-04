@@ -1,4 +1,8 @@
 const serviceData = {
+	metaTitle: 'Annual Accounts Service - Accounting Reports | Affotax',
+	metaDescription: `Explore financial success in annual accounts—balance sheets, profit/loss, cash flow. Vital for tax returns, revealing yearly organisation performance.
+`,	
+	keywords: ['annual accounts '],
 	link: "annual-accounts",
 	title: "Annual Accounts",
 	content: `Every company in the UK is expected to file an annual statement,${"\n"} \n also called statutory accounts every year. A UK limited company must submit annual accounts within 9 months after the end of a financial year to avoid late filing penalties. Company accounts are documents prepared at the end of a financial year which shows the company's income and expenses over the accounting period. 
@@ -117,6 +121,11 @@ const serviceData = {
 };
 
 export const serviceData2 = {
+	metaTitle: 'Corporation Tax - UK Corporation Tax Calculation 2023/24',
+	metaDescription: `Corporate tax UK is a crucial source of government revenue as it taxes the profits earned by corporations as per corporation tax rates 2023.
+
+`,
+keywords: ['corporation tax'],
 	link: "corporation-tax-ct600",
 	title: "Corporation Tax",
 	content: `This is a key tax return for UK limited companies, outlining financial details such as P&L and Balance sheet. It calculates corporation tax owed to HMRC which is currently 25% (previously 19%) of the net profit, Ensuring compliance and the timely and accurate submission to HMRC is essential to meet law standards and avoid fines.
@@ -231,6 +240,14 @@ export const serviceData2 = {
 };
 
 const serviceData3 = {
+	metaTitle: 'UK Self Assessment Tax Return Online submission at Affotax',
+	metaDescription: `A self-assessment tax return is required annually for those who owe taxes on their income. Affotax offers an online service for submitting your UK tax return.
+
+
+
+
+`,
+	keywords: ['self assessment tax return '],
 	link: "self-assessment-tax-return-sa100",
 	title: "Self Assessment Tax Return (SA100)",
 	content: `The power of digital technology has made it easier to submit your self assessment tax return to HMRC. No more tiresome calculations or never-ending paperwork. With Affotax, you can quickly and easily report your earnings, outlays, and deductions, guaranteeing that your calculation is precise and complies with the most recent laws. 
@@ -341,6 +358,11 @@ const serviceData3 = {
 };
 
 const serviceData4 = {
+	metaTitle: 'Register for PAYE Online | Employer PAYE Registration',
+	metaDescription: `Register for PAYE online as an employer and manage your payroll obligations. PAYE registration is essential for tax compliance & avoiding fines in the UK.
+
+`,
+	keywords: ['register for paye'],
 	link: "register-for-paye",
 	title: "Register for PAYE",
 	content: `Do you plan on hiring employees for your UK company or business? To begin, you must first register for PAYE (Pay As You Earn). The company's director must also register as an employer before he/she can become the company's director. In this way, income taxes are deducted from employees' salaries before they are paid. 
@@ -437,6 +459,10 @@ const serviceData4 = {
 };
 
 const serviceData5 = {
+	metaTitle: 'UK VAT Registration | Register for VAT Online',
+	metaDescription: `Value Added Tax or VAT registration: A process for businesses to follow the standards of tax regulations. Learn with Affotax how to register for vat online
+`,
+	keywords: ['VAT registration'],
 	link: "vat-registration",
 	title: "UK VAT Registration Online",
 	content: `Value Added Tax is a mandatory process for businesses to follow the standards of tax regulations. When you register for VAT, your business will be officially registered with the UK government for the collection and remittance on its taxable sales. You can get a refund for your spendings on your business expenses once you properly register. Even though you might have to pay the whole amount at first, you can still get this money back by submitting your return to HMRC. 
@@ -540,6 +566,11 @@ Understanding it, along with its £85,000 threshold, Making Tax Digital (MTD) ru
 };
 
 const serviceData6 = {
+	metaTitle: 'Annual Confirmation Statement Online Filing Service at Affotax',
+	metaDescription: `The annual confirmation statement, previously known as "annual return" is confirmation of information of a company registered in the UK to Companies House.
+
+`,
+	keywords: ['Annual Confirmation Statement'],
 	link: "annual-confirmation-statement",
 	title: "Annual Confirmation Statement",
 	content: `A limited company or limited liability partnership (LLP) registered in the UK is required to file confirmation statement online, formerly known as an "annual return" to Companies House, at least once a year, even in the case that the business is dormant. Let Affotax be of your assistance, if you are unsure of where to begin or to avoid the burden of filing. Get a quote!
@@ -648,6 +679,11 @@ The annual confirmation statement helps you update information like directors an
 };
 
 const serviceData7 = {
+	metaTitle: 'Bookkeeping for 12 months | Annual Bookkeeping Services',
+	metaDescription: ` Are you looking for reliable bookkeeping services in the UK? The expert bookkeepers at Affotax are providing accurate bookkeeping for 12 months – Visit us!
+
+`,
+	keywords: ['Bookkeeping'],
 	link: "bookkeeping-for-12-month",
 	title: "Bookkeeping For 12 Months",
 	content: `Bookkeeping for 12 months is helpful in maintaining a well-organised financial record for your business. It is a systematic process in which transactions, expenses, and income are recorded and categorised throughout the year. It is a continuous process and diligently maintaining these records will lead to more accurate information; encouraging improved decision-making and simplifying reporting.
@@ -762,7 +798,13 @@ Has your company not actively managed its bookkeeping throughout the year? If ye
 };
 
 const serviceData8 = {
-	link: "uk-company-registration-uk-resident",
+	metaTitle: 'UK Company Registration | Register a Company in the UK',
+	metaDescription: ` Are you looking for UK Company Registration? Find out how to register a company in the UK & avail the benefits of setting up a limited company in the UK.
+
+
+`,
+	keywords: ['uk company registration'],
+	link: "uk-company-registration-(uk-resident)",
 	title: "UK Company Registration (UK Resident)",
 	content: `Are you looking for UK company registration? If you are a UK resident, it is worthwhile to choose a legal structure for your upcoming enterprise. According to the UK government, for a business to follow a legal structure in the UK, a limited company is the most preferred option. It is a separate entity, implying that the finances of the owner are separate from their company's finances. Which means, if the enterprise falls into debt, the shareholders would have limited liability. You would also get tax benefits because limited companies pay corporation tax instead of income tax on their profits. Not to mention, limited liability can increase your credibility with customers, suppliers and investors. This helps you get a professional image and reputation. 
 
@@ -880,6 +922,10 @@ Let Affotax take the burden off your shoulders - get a quote now!`,
 };
 
 const DORMANT_ACCOUNTS_PAGE = {
+	metaTitle: 'Dormant Accounts – File Your Dormant Company Accounts',
+	metaDescription: `An account becomes dormant when no activity or no transactions occur for the whole financial tax year. Learn how to file dormant company accounts online.
+`,
+	keywords: ['dormant accounts'],
 	link: "dormant-accounts",
 	title: "Dormant Accounts",
 	content: `File your Dormant Company Accounts (DCA) hassle-free – designed for audit-exempt companies. Each UK limited company must annually submit accounts. Struck-off companies, those not engaged in trading, are exempt from filing full accounts, but the filing of dormant accounts is mandatory to prevent penalties from companies house.
@@ -1041,6 +1087,11 @@ Affotax provides dormant accounts filing service for UK limited companies, regar
 };
 
 const LLP_ACCOUNTS_PAGE = {
+	metaTitle: 'UK LLP Accounts Filing | Limited Liability Partnership Services',
+	metaDescription: `The best UK LLP accounts services and seamless online filing with companies house. Explore the advantages of a Limited Liability Partnership (LLP).
+
+`,
+	keywords: ['LLP Accounts'],
 	link: "llp-accounts",
 	title: "LLP Accounts",
 	content: `LLP accounts provide a thorough insight into a Limited Liability Partnership's business operations and function as comprehensive financial statements. Important financial components including income, expenses, assets, liabilities, and partners' capital are included in these reports. They are a requirement for regulatory compliance; annually filed to Companies House by a UK-registered tax agent like Affotax.
@@ -1210,6 +1261,12 @@ Simplify your financial operations with Affotax and cut costs associated with le
 };
 
 const COMPANY_DISSOLUTION_SERVICE_PAGE = {
+	metaTitle: 'Company Dissolution Service | Online DS01 Form at Affotax',
+	metaDescription: `Our Company Dissolution Service helps close a company online from the register of companies through Companies House. Get the DS01 form at Affotax.
+
+
+`,
+	keywords: ['company dissolution'],
 	link: "company-dissolution-service",
 	title: "Company Dissolution Service",
 	content: `If a limited company is no longer needed,  the directors have the option to request its removal from the Companies House register. This process is called "Voluntary Company Dissolution". It involves your consent to close a company online, settling its affairs and assets, thus ending its existence. 
@@ -1346,6 +1403,13 @@ Here at Affotax, we are chartered accountants ready to help you wind up your bus
 };
 
 const FILE_CORPORATION_TAX_RETURN_ONLINE_PAGE = {
+	metaTitle: 'File Corporation Tax Return | Online Corporation Tax Filing',
+	metaDescription: `File corporation tax return online with HMRC! Keep good records with Companies House with cheap corporation tax filing service, and avoid late filing fee.
+
+
+
+`,
+	keywords: ['file corporation tax'],
 	link: "file-corporation-tax",
 	title: "File Corporation Tax Return Online",
 	content: `Do you find it too much trouble to file corporation tax return on paper? No need to search any further! We provide electronic filing via the safe third-party commercial software from HMRC. If you lack the login credentials for the HMRC gateway, our service is beneficial. 
@@ -1506,6 +1570,13 @@ We will help you file corporation tax using our agent login. This modern solutio
 };
 
 const REGISTER_FOR_CORPORATIOPN_TAX_PAGE = {
+	metaTitle: 'Register for Corporation Tax | Corporation Tax Registration',
+	metaDescription: `Corporation tax registration through HMRC – Register for corporation tax online within 3 months of starting business activities. Stay tax-smart with us!
+
+
+
+`,
+	keywords: ['register for corporation tax '],
 	link: "register-for-corporation-tax",
 	title: "Register for Corporation Tax",
 	content: `Corporation tax registration is the enrolment of a UK firm with HM Revenue and Customs. Usually, this process is completed following the creation of the corporation. Then comes the registration; after that, the business is given a unique taxpayer reference (UTR) and has to comply with HMRC's tax requirements by filing proper returns and making payments. It is simpler for businesses to handle their tax issues thanks to the portal, which thoroughly summarises all taxes owed and paid.`,
@@ -1652,6 +1723,13 @@ const REGISTER_FOR_CORPORATIOPN_TAX_PAGE = {
 // SELF ASSESSMENT
 
 const SUBMIT_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE = {
+	metaTitle: 'Submit Self Assessment Tax Return Online with Affotax',
+	metaDescription: `Affotax helps you submit self assessment tax return online. Avoid penalties for filing late & let us assist you in online submission of self assessment tax.
+
+
+
+`,
+	keywords: ['submit self assessment tax return'],
 	link: "submit-self-assessment-tax-return",
 	title: "Submit Self Assessment Tax Return Online",
 	content: `It can be challenging to manoeuvre the complexities of tax laws and ensure compliance, but submitting self assessment tax return can be much easier. Affotax is here to simplify the tax filing process since we know its importance. Our speciality is assisting UK residents online, providing them with speedy and straightforward guidance throughout the procedure.
@@ -1815,7 +1893,16 @@ You may comfortably go through the various sections of your tax return with our 
 	],
 };
 
+
 const SELF_ASSESSMENT_CHANGE_OF_ADDRESS_PAGE = {
+	metaTitle: 'Self Assessment Change of Address | Online Service at Affotax',
+	metaDescription: `Optimise tax accuracy by self assessment change of address, updating personal and financial info with HMRC. Let us easily change your self assessment address.
+
+
+
+
+`,
+	keywords: ['self assessment change of address'],
 	link: "self-assessment-change-of-address",
 	title: "Self Assessment Change of Address",
 	content: `Self assessment change of address is one way to ensure your UK tax assessments are error-free and timely, which is an important part of financial responsibility. This requires you to update your financial and personal data with HMRC, enabling you to change a range of components, including income, expenses, deductions, and most importantly, address. Edit self assessments, especially changes to addresses, are significant because they affect the accuracy of tax reporting and compliance. 
@@ -1954,6 +2041,12 @@ Submitting the changes to HMRC.
 
 
 const REGISTER_FOR_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE = {
+	metaTitle: 'RRegister for Self Assessment Online | Filling Form SA100',
+	metaDescription: `Let Affotax guide you on how to Register for Self Assessment Online. For any purpose other than self-employment, register for self assessment using form SA100.
+
+
+`,
+	keywords: ['register for self assessment'],
 	link: "register-for-self-assessment",
 	title: "Register for Self Assessment Tax Return Online",
 	content: `Are you prepared to manage your tax obligations? The first and most important step in guaranteeing a smooth and manageable filing for your taxes is to register for self assessment. Whether you are self-employed, a landlord, or receive non-PAYE income, you must notify HMRC of your intention to file. This procedure complies with your obligation to pay taxes and promotes transparency in income reporting. You can handle your financial affairs more carefully and make filing easier by starting the self assessment registration. Get a quote from Affotax.
@@ -2102,6 +2195,11 @@ Upon completing the registration for self assessment, you will be issued a Uniqu
 
 
 const REGISTERED_OFFICE_ADDRESS_UK_PAGE = {
+	metaTitle: 'Registered Office Address For Limited Companies in UK',
+	metaDescription: `Elevate your corporate profile; protecting residential address from public view on the Companies House register. Let's Improve your professional image.
+
+`,
+	keywords: ['registered office address'],
 	link: "registered-office-address-uk",
 	title: "Registered Office Address UK",
 	content: `A UK limited company or LLP must have a registered office address UK, as it is a necessary address at the time of incorporation. More than just a formality, it serves as the main point of contact for important government communications, tax notices, and regulatory correspondences in the UK. Notably, this location is publicly available, enabling transparency and verification.
@@ -2285,6 +2383,13 @@ Legal notices
 
 
 const DIRECTORS_SERVICE_ADDRESS_UK = {
+	metaTitle: 'Get a Cheap Directors Service Address UK for Office',
+	metaDescription: `With our directors service address UK, protect residential address; meet regulatory requirements and legal communications, elevating your corporate image.
+
+
+
+`,
+	keywords: ['directors service address'],
 	link: "directors-service-address-uk",
 	title: "Directors Service Address UK",
 	content: `Directors service address is a crucial aspect of running a business in the UK. It is an authorised contact point for directors to receive lawful communications. By providing a separate space for official correspondence, you can protect your residence from being listed on the Companies House public register. This not only ensures privacy but also enhances the corporate image of the business.
@@ -2436,6 +2541,12 @@ In addition to secrecy, having a private space ensures that directors meet their
 
 
 const PSC_REGISTER = {
+	metaTitle: 'Person With Significant Control | PSC Register | PSC01',
+	metaDescription: `If you're a company director, you must register your PSCs on the PSC Register. Learn with Affotax about Person With Significant Control & PSC Registration.
+
+
+`,
+	keywords: ['psc register'],
 	link: "psc-register",
 	title: "PSC Register",
 	content: `Person with Significant Control, or PSCs, is a valuable tool businesses use to monitor those who have a significant amount of ownership or influence over the company. The register helps the business identify and document the person with significant control in a corporation to its operations. To avoid fines and other unfavourable outcomes, a firm must keep correct records for the PSC register.
@@ -2604,6 +2715,13 @@ Individuals who fulfil certain criteria, such as owning over 25% of the company'
 
 
 const CHANGE_COMPANY_NAME= {
+	metaTitle: 'Annual Confirmation Statement Online Filing Service at Affotax',
+	metaDescription: `Wondering how to change company name with Companies House? Let us help you in changing company name with expertise and in accordance with Companies House.
+
+
+
+`,
+	keywords: ['change company name'],
 	link: "change-company-name",
 	title: "Change Company Name",
 	content: `Change company name in the UK to significantly impact your company's identity, brand, and adherence to laws, regulations, and standards. The procedure entails adding updated data to several official and legal documents to validate accuracy and remove unclear information. When changing a company's name, it's vital to consider its impact on existing contracts, branding, and marketing materials. Additionally, you'll need to inform your customers, vendors, and suppliers about the change to avoid disruptions to operations.
@@ -2768,6 +2886,11 @@ Companies House name checker availability is mandatory before changing company n
 
 
 const COMPANIES_HOUSE_CHANGE_OF_ADDRESS = {
+	metaTitle: 'Companies House Change of Address | Affordable Service',
+	metaDescription: `Changing your company's registered office address requires updating official records. Change your registered office address on Companies House with us.
+
+`,
+	keywords: ['change address on companies house'],
 	link: "companies-house-change-of-address",
 	title: "Change Company Name",
 	content: `Filing changes at Companies House involves submitting official updates about change of address, other details, structure, or operations. These alterations can include directors, shareholders, registered offices, share capital, or other vital information. In this way, the public register is kept up-to-date with the correct information. You must reflect on any modifications impacting your company's status or operation.
@@ -2930,6 +3053,11 @@ A change in these regulations can adversely affect a company's status or operati
 
 
 const SELLING_SHARES = {
+	metaTitle: 'Selling Shares – Share Issuance & Transfer in the UK',
+	metaDescription: `Wondering how to sell shares? Our expertise in selling shares – share issuance & share transfer form with Companies House exceed 10+ years. Contact us now!
+
+`,
+	keywords: ['selling shares'],
 	link: "selling-shares",
 	title: "Selling Shares",
 	content: `To raise capital and generate revenue, many companies opt for selling shares. In a share transfer, ownership is transferred from one shareholder to the next investor. There are multiple reasons of selling shares, including liquidating assets or exiting a company or an investment. Share transfer requires completing a specific form, sometimes known as the 'stock transfer form' or 'share transfer form'. This form outlines the details of the transaction and ownership transfer.
@@ -3120,6 +3248,10 @@ On the other hand, share issuance is also a way for companies to raise capital, 
 
 
 const DIRECTOR_APPOINTMENT_RESIGNATION = {
+	metaTitle: 'Appointment of Directors & Resignation – Online TM01 Form',
+	metaDescription: `The appointment of directors is an important process for a company's success. Learn about the director appointment and resignation using TM01 Form – Contact us now!
+`,
+	keywords: ['appointment of directors'],
 	link: "director-appointment-resignation",
 	title: "Director Appointment & Resignation",
 	content: `An appointment of directors is the process by which a company adds a new director to its board. They take prominent decisions on the board, so a company's decision to pick one is important. This addition will improve the performance and expansion of the company while also offering knowledge and insights.
@@ -3308,6 +3440,11 @@ On the other hand, a director may also willingly leave their position on the boa
 
 
 const DIRECTORS_PAYROLL = {
+	metaTitle: 'Directors Payroll – Register Paye for Directors Online',
+	metaDescription: `Get accurate directors payroll online. Whether you need monthly or annual director Paye, we can help efficiently. Contact us for timely director payroll!
+
+`,
+	keywords: ['directors payroll'],
 	link: "directors-payroll",
 	title: "Directors Payroll",
 	content: `Managing directors payroll is an essential part of running a company successfully. The director payroll process ensures you receive accurate compensation while complying with tax regulations. You can choose to receive payments monthly or annually, and submissions made to HMRC need to reflect this. At Affotax, we understand the importance of timely and accurate payroll management, which is why we offer our services to businesses of all sizes. 
@@ -3510,6 +3647,11 @@ At times, directors might wonder if they need to register for PAYE. PAYE registr
 
 
 const PAYE_EMPLOYEE = {
+	metaTitle: 'PAYE Employee Service | Top Employee Payroll Management',
+	metaDescription: `We offer affordable paye employee service to help you manage employee payroll efficiently. Remember: paye for employees must be paid punctually to HMRC.
+
+`,
+	keywords: ['paye employee'],
 	link: "paye-employee",
 	title: "PAYE Employee",
 	content: `Pay As You Earn (PAYE), is a way for employees to deduct their taxes. Paye for employees is a system that ensures that both employers and employees pay their taxes correctly. This system involves the employer deducting income tax and other required deductions directly from employees' salaries before paying them. These deductions are then remitted to tax authorities on behalf of employees.
@@ -3721,7 +3863,13 @@ Note: Paye for employees must be paid immediately and punctually to HM Revenue a
 
 
 const AUTO_ENROLLMENT_PENSION = {
-	link: "auto-enrollment-pension",
+	metaTitle: 'Auto Enrolment Pension | Automatic Enrolment in the UK',
+	metaDescription: `Are you eligible for auto enrolment pension scheme? Secure your financial future with online pension auto enrolment UK; an affordable service by experts.
+
+
+`,
+	keywords: ['auto enrolment pension'],
+	link: "auto-enrolment-pension",
 	title: "Auto Enrollment Pension",
 	content: `As a UK worker, you have the opportunity to secure your financial future with auto enrolment pension. This mandatory workplace initiative requires your employer to automatically enrol you into a pension scheme if you're aged between 22 and State Pension age, earn at least £10,000 per year, and usually work in the UK. 
 
@@ -3926,6 +4074,11 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 
 
 const ONLINE_P11D_FORM = {
+	metaTitle: 'Submit P11D Online | P11D Form for Employees',
+	metaDescription: `As an employer in the UK, it is mandatory to file P11D form. Submitting P11D online can save your time. So, let us help you fill out Form P11D accurately!
+
+`,
+	keywords: ['p11d form'],
 	link: "p11d-form",
 	title: "Online P11D Form",
 	content: `Are you an employer in the UK? If yes, then you will need to fill out P11D form to report benefits, expenses and certain company assets to HMRC. It provides a detailed summary of non-salary perks and allowances offered to employees during the filing period. The submission is important for accurate taxation, maintaining tax regulations, and transparent reporting of additional benefits beyond regular wages.
@@ -4113,6 +4266,11 @@ Note: If you are behind schedule with submitting or have provided inaccurate inf
 
 
 const P60_FORM = {
+	metaTitle: 'P45 and P60 Form UK | Online P60 and P45 form HMRC',
+	metaDescription: `Learn about P45 and P60 form with Affotax. We help you complete and submit P60 & P45 form online to HMRC in the UK. Let us help you – get a quote today!
+
+`,
+	keywords: ['p60 form'],
 	link: "p60-form",
 	title: "P45 and P60 Form",
 	content: `
@@ -4312,6 +4470,11 @@ Check out our packages, and get a quote today!
 
 
 const PAYSLIP_GENERATOR = {
+	metaTitle: 'Online Payslip Generator | Generate Payslip in the UK',
+	metaDescription: `Generate payslip with our professional payslip generator UK service. Try our online payslip generator today & streamline your payroll process – contact us!
+
+`,
+	keywords: ['payslip generator'],
 	link: "payslip-generator",
 	title: "UK Payslip Generator",
 	content: `The manual process of generating payslips has become outdated in today's world. Now, with online payslip generator, you can create them easily and quickly with accurate information that outlines your employees' net income, compensations, and withholdings for a specific pay period. As an employer, you can now easily build trust between you and your employees with transparent salary calculations while also saving your valuable time. 
@@ -4521,7 +4684,11 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 
 
 
-const QUARTERLY_RETURN = {
+const QUARTERLY_RETURN = {	
+	metaTitle: 'Quarterly VAT Return | Managing VAT Quarters at Affotax',
+	metaDescription: `Do you have a registered business in the UK? Stay on top of your VAT quarters with ease by filing your quarterly VAT return to HMRC on time – let us help!
+`,
+	keywords: ['Quarterly VAT Return'],
 	link: "quarterly-vat-return",
 	title: "Quarterly VAT Return",
 	content: `As a registered business in the UK, you must understand how important it is to submit your VAT return to HMRC every three months. It is called the 'Accounting Period' between your submissions. You are required to make advance payments, either monthly or quarterly, towards your bill during your accounting period and the final price upon submitting your VAT return. HMRC mandates this as of April 2022 for VAT-registered businesses to use software compatible with Making Tax Digital for their quarterly VAT return. Your existing online account is no longer suitable to submit, and failing to file using MTD-compatible software may lead to penalties from HMRC.
@@ -4723,6 +4890,11 @@ The expert team at Affotax has mastered the what and how of MTD VAT submission i
 
 
 const EORI_NUMBER = {
+	metaTitle: 'Apply for EORI Number UK | Get EORI Number Online',
+	metaDescription: ` What is an EORI number? Find out what it is & learn how to apply for EORI number UK with Affotax; the most affordable & expert solutions online in the UK.
+
+`,
+	keywords: ['EORI Number'],
 	link: "eori-number",
 	title: "EORI Number",
 	content: `EORI is an abbreviation for Economic Operators Registration and Identification. It is very significant for the identification of an individual or economic operator who must clear customs in the European Union. This number is unique and assigned only once to a person or economic operator. It is important to get EORI number and share it with the customs authorities in the member states for customs operations. It is essential for all types of customs operations such as import, export, and transit. It is your standard identification number across the EU, benefiting both the economic operators and customs authorities in customs clearance, statistical and security purposes. 
@@ -4953,6 +5125,12 @@ Application form completed and signed.
 
 
 const XERO_BOOKKEEPING = {
+	metaTitle: 'Xero Bookkeeping Services | Xero Bookkeeper Online',
+	metaDescription: ` Check out our Xero Bookkeeping services – Expert Xero certified bookkeepers await to streamline your financial processes & manage your accounts with ease.
+
+
+`,
+	keywords: ['Xero bookkeeping'],
 	link: "xero-bookkeeping",
 	title: "Xero Bookkeeping (Monthly)",
 	content: `Xero bookkeeping is the use of accounting software (Xero) to record and organise financial transactions. It has replaced physical books, making it easier to maintain correct financial records. However, it is important to understand why you need a Xero bookkeeper. They can help you record and reconcile every transaction while also fulfilling other duties such as accounts payable and accounts receivable, payroll, helping with your accounting reports and measuring your business performance.
@@ -5158,6 +5336,12 @@ Affotax provides you with experts who can manage your records every month, so yo
 
 
 const QUICKBOOKS_BOOKKEEPING = {
+	metaTitle: 'QuickBooks Bookkeeping Services | QuickBooks Bookkeeper',
+	metaDescription: ` Manage businesses' finances with expert QuickBooks Bookkeeping services. Our skilled QuickBooks bookkeepers are up for accurate QBO bookkeeping – Visit us!
+
+
+`,
+	keywords: ['QuickBooks Bookkeeping'],
 	link: "quickbooks-bookkeeping",
 	title: "QuickBooks Bookkeeping (Monthly)",
 	content: `QuickBooks bookkeeping is one of the most important software for businesses' financial management. With QuickBooks Online (QBO), you can effortlessly manage your finances like record-keeping, easy reconciliation and also get in-depth insights. It is helpful for businesses and bookkeepers both as it helps record and categorise transactions with ease while also allowing business owners to focus on the growth of their business. 
@@ -5360,6 +5544,11 @@ Monitor and control the bookkeeper's activities through user permissions.
 
 
 const EXCEL_BOOKKEEPING = {
+	metaTitle: 'Excel Bookkeeping Services | Excel for Bookkeeping',
+	metaDescription: `Can you do bookkeeping on Excel? Yes, of course! Our Excel bookkeeping services are the answer. Start optimising your finances with Excel for bookkeeping.
+
+`,
+	keywords: ['Excel bookkeeping'],
 	link: "excel-bookkeeping",
 	title: "Excel Bookkeeping (Monthly)",
 	content: `As you may have guessed from the name, Excel bookkeeping is the systematic way of managing your businesses’ finances like transactions, expenses and income using the software program ‘Microsoft Excel’. Although many don’t consider it as an accounting software, if you have a small business that requires basic financial records to be managed monthly, then bookkeeping on Excel is the best option for you.
@@ -5563,6 +5752,12 @@ Although it can help in basic bookkeeping, it can be time-consuming and mind-bog
 
 
 const UK_LIMITED_COMPANY_FOR_NON_RESIDENTS = {
+	metaTitle: 'UK Limited Company For Non Residents at Affotax',
+	metaDescription: ` Register your UK limited company as a non-resident with a registered office address. Let us help you form a UK limited company for non-residents with ease.
+
+
+`,
+	keywords: ['Uk Limited Company For Non Residents'],
 	link: "uk-limited-company-for-non-residents",
 	title: "UK Limited Company for Non-Residents",
 	content: `If you are a non-UK resident who wants to set up a UK limited company, you have come to the right place. But wait a minute! Is there anything you have to do differently than a UK resident to form a company in the UK? Well, absolutely not! All you need is to appoint a director and a shareholder (Fun fact: You can be both). You do not even have to live in the UK to register a company in the UK or become a director, shareholder, or secretary. 
@@ -5768,6 +5963,13 @@ Directors must still file annual returns and maintain legal records.
 
 
 const LLP_COMPANY_FORMATION_IN_UK = {
+	metaTitle: 'LLP Company Formation Services | Create LLP at Affotax',
+	metaDescription: ` Looking to create an LLP company in the UK? We can help you with your LLP company formation & LLP membership registration. Contact us to register your LLP!
+
+
+
+`,
+	keywords: ['llp company formation'],
 	link: "llp-company-formation",
 	title: "LLP Company Formation in the UK",
 	content: `LLP company formation refers to the process of setting up a Limited Liability Partnership, one of the most popular options in today’s world for businesses to get the benefits of a partnership. When you register, you and your partners protect your private assets; in case your business falls, you will only lose your money invested in the business and not your personal or assets as they stay secure. In an unregistered partnership, each partner may be responsible for others' debts if something turns out wrong. That is why LLP formation offers more security to its partners.
@@ -5963,6 +6165,7 @@ export const dataArr = [
 	serviceData6,
 	serviceData7,
 	serviceData8,
+	
 	DORMANT_ACCOUNTS_PAGE,
 	LLP_ACCOUNTS_PAGE,
 	COMPANY_DISSOLUTION_SERVICE_PAGE,

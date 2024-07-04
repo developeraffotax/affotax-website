@@ -32,9 +32,9 @@ export async function generateMetadata({ params}) {
 
 
   return {
-    title: serviceData[0].title,
-    description: serviceData[0].title,
-    keywords: ['Next.js', 'React', 'JavaScript'],
+    title: serviceData[0].metaTitle,
+    description: serviceData[0].metaDescription,
+    keywords: serviceData[0].keywords ,
     authors: [{ name: 'Affotax', url: 'https://affotax.com' }],
     creator: 'Ihtisham Ul Haq -- +92-301-6667656',
   
