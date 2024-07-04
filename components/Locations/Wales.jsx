@@ -6,10 +6,9 @@ import Award from '@/public/award.png'
 import Fully from '@/public/fully.png'
 import Support from '@/public/support.png'
 import { FcBullish, FcCurrencyExchange, FcDataSheet, FcOk } from "react-icons/fc";
-import HeroImg from '@/assets/wales/top image.png'
+
 import Image from "next/image";
-import icon1 from '@/assets/wales/Local knowledge with national reach.png'
-import icon2 from '@/assets/wales/Honest guidance & real growth.png'
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7 } from "@/assets/wales";
 
 
 export default function Wales() {
@@ -36,7 +35,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     <Image
                         className='object-cover object-center rounded  drop-shadow-xl '
                         alt='hero'
-                        src={HeroImg}
+                        src={hero}
                     />
                 </div>
             </div>
@@ -66,7 +65,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
                 aria-hidden="true"
                 />
-                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-200 group-hover:bg-gray-200">
                 {/* <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -99,7 +98,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
                 aria-hidden="true"
                 />
-                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-200 group-hover:bg-gray-200">
                 {/* <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -130,7 +129,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 className="absolute left-[18px] top-14 h-[calc(100%_-_32px)] w-px bg-gray-300 lg:right-0 lg:left-auto lg:top-[18px] lg:h-px lg:w-[calc(100%_-_72px)]"
                 aria-hidden="true"
                 />
-                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-200 group-hover:bg-gray-200">
                 {/* <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -145,7 +144,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     strokeLinejoin="round"
                     />
                 </svg> */}
-                <FcOk className='scale-150'/>
+                <Image  className="p-2" src={icon3} alt="icon for wale page"/>
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
@@ -159,7 +158,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                 </div>
             </li>
             <li className="flex-start group relative flex lg:flex-col">
-                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-900 group-hover:bg-gray-900">
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-gray-300 bg-gray-50 transition-all duration-200 group-hover:border-gray-200 group-hover:bg-gray-200">
                 {/* <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -174,7 +173,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                     strokeLinejoin="round"
                     />
                 </svg> */}
-                <FcCurrencyExchange className='scale-150'/>
+                <Image  className="p-2" src={icon4} alt="icon for wale page"/>
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
@@ -224,7 +223,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg> */}
                     {/* <img src={Tax.src} alt="tax"/> */}
-                    <Image src={Tax}  cover="true"  />
+                    <Image src={icon5}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -253,7 +252,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                         <circle cx={6} cy={18} r={3} />
                         <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
                     </svg> */}
-                    <Image src={Award}  cover="true"  />
+                    <Image src={icon6}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -280,7 +279,7 @@ Whether you are an experienced business owner in Cardiff or a budding start-up i
                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                         <circle cx={12} cy={7} r={4} />
                     </svg> */}
-                    <Image src={Deadline}  cover="true"  />
+                    <Image src={icon7}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
