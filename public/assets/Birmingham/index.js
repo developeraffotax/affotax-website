@@ -1,30 +1,13 @@
-import hero from "@/public/assets/Birmingham/top image.png"
+import hero from "@/public/assets/Birmingham/top image.png";
 
-import icon1 from "@/public/assets/Birmingham/Reliable chartered accountants.png"
-import icon2 from "@/public/assets/Birmingham/Customised solutions.png"
-import icon3 from "@/public/assets/Birmingham/No more paperwork.png"
-import icon4 from "@/public/assets/Birmingham/Affordable prices.png"
+import icon1 from "@/public/assets/Birmingham/Reliable chartered accountants.png";
+import icon2 from "@/public/assets/Birmingham/Customised solutions.png";
+import icon3 from "@/public/assets/Birmingham/No more paperwork.png";
+import icon4 from "@/public/assets/Birmingham/Affordable prices.png";
 
-// import icon5 from "@/assets/England/Accountants in St Asaph.png"
-// import icon6 from "@/assets/England/Put your trust in Affotax.png"
-// import icon7 from "@/assets/England/Stop dragging your feet through tax season.png"
-// import icon8 from "@/assets/England/Accountants in St Asaph.png"
-// import icon9 from "@/assets/England/Put your trust in Affotax.png"
-// import icon10 from "@/assets/England/Stop dragging your feet through tax season.png"
+import icon5 from "@/public/assets/Birmingham/icon5.png";
+import icon6 from "@/public/assets/Birmingham/icon6.png";
+import icon7 from "@/public/assets/Birmingham/icon7.png";
+import icon8 from "@/public/assets/Birmingham/icon8.png";
 
-
-export {
-    hero,
-    icon1,
-    icon2,
-    icon3,
-    icon4
-    // icon4,
-    // icon5,
-    // icon6,
-    // icon7,
-    // icon8,
-    // icon9,
-    // icon10,
-
-}
+export { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8 };

@@ -8,7 +8,7 @@ import Fully from '@/public/fully.png'
 import Support from '@/public/support.png'
 import { FcBullish, FcCurrencyExchange, FcDataSheet, FcOk } from "react-icons/fc";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/Birmingham";
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8 } from "@/public/assets/Birmingham";
 
 
 export default function Birmingham() {
@@ -229,7 +229,7 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg> */}
                     {/* <img src={Tax.src} alt="tax"/> */}
-                    <Image src={Tax}  cover="true"  />
+                    <Image src={icon5}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -258,7 +258,7 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                         <circle cx={6} cy={18} r={3} />
                         <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
                     </svg> */}
-                    <Image src={Award}  cover="true"  />
+                    <Image src={icon6}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -286,7 +286,7 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                         <circle cx={12} cy={7} r={4} />
                     </svg> */}
-                    <Image src={Deadline}  cover="true"  />
+                    <Image src={icon7}  cover="true" />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -315,7 +315,7 @@ That being said, who’s got time (or frankly, the patience) to manage accounts 
                     >
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg> */}
-                    <Image src={Experience}  cover="true"  />
+                    <Image src={icon8}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
