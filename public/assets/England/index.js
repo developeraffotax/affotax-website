@@ -1,9 +1,9 @@
-import hero from "@/assets/Manchester/top image.png"
+import hero from "@/public/assets/England/top image.png"
 
-import icon1 from "@/assets/Manchester/Customised solution.png"
-import icon2 from "@/assets/Manchester/Transparency & integrity.png"
-import icon3 from "@/assets/Manchester/Responsive support.png"
-import icon4 from "@/assets/Manchester/value for money.png"
+import icon1 from "@/public/assets/England/Tax filings.png"
+import icon2 from "@/public/assets/England/bookkeeping.png"
+import icon3 from "@/public/assets/England/Accounting Software.png"
+import icon4 from "@/public/assets/England/Smooth Online Service.png"
 
 // import icon5 from "@/assets/England/Accountants in St Asaph.png"
 // import icon6 from "@/assets/England/Put your trust in Affotax.png"
@@ -18,8 +18,7 @@ export {
     icon1,
     icon2,
     icon3,
-    icon4
-    // icon4,
+    icon4,
     // icon5,
     // icon6,
     // icon7,

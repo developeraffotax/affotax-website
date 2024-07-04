@@ -8,7 +8,7 @@ import Fully from '@/public/fully.png'
 import Support from '@/public/support.png'
 import { FcBullish, FcCurrencyExchange, FcDataSheet, FcOk } from "react-icons/fc";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3} from "@/assets/Scotland";
+import { hero, icon1, icon2, icon3} from "@/public/assets/Scotland";
 
 
 export default function Scotland() {

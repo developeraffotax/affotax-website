@@ -1,9 +1,9 @@
-import hero from "@/assets/England/top image.png"
+import hero from "@/public/assets/Birmingham/top image.png"
 
-import icon1 from "@/assets/England/Tax filings.png"
-import icon2 from "@/assets/England/bookkeeping.png"
-import icon3 from "@/assets/England/Accounting Software.png"
-import icon4 from "@/assets/England/Smooth Online Service.png"
+import icon1 from "@/public/assets/Birmingham/Reliable chartered accountants.png"
+import icon2 from "@/public/assets/Birmingham/Customised solutions.png"
+import icon3 from "@/public/assets/Birmingham/No more paperwork.png"
+import icon4 from "@/public/assets/Birmingham/Affordable prices.png"
 
 // import icon5 from "@/assets/England/Accountants in St Asaph.png"
 // import icon6 from "@/assets/England/Put your trust in Affotax.png"
@@ -18,7 +18,8 @@ export {
     icon1,
     icon2,
     icon3,
-    icon4,
+    icon4
+    // icon4,
     // icon5,
     // icon6,
     // icon7,

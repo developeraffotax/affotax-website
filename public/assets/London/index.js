@@ -1,9 +1,9 @@
-import hero from "@/assets/London/top image.png"
+import hero from "@/public/assets/London/top image.png"
 
-import icon1 from "@/assets/London/Taxation tamed.png"
-import icon2 from "@/assets/London/London-focused expertise.png"
-import icon3 from "@/assets/London/Expert financial guidance.png"
-import icon4 from "@/assets/London/Online accounting.png"
+import icon1 from "@/public/assets/London/Taxation tamed.png"
+import icon2 from "@/public/assets/London/London-focused expertise.png"
+import icon3 from "@/public/assets/London/Expert financial guidance.png"
+import icon4 from "@/public/assets/London/Online accounting.png"
 
 // import icon5 from "@/assets/London/Accountants in St Asaph.png"
 // import icon6 from "@/assets/London/Put your trust in Affotax.png"
