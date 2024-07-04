@@ -18,31 +18,31 @@ export default function sitemap() {
   const  sitemapArr = [
     {
       url: 'https://affotax.com',
-      lastModified: new Date(),
+      lastModified: '2024-06-04T11:28:15.949Z',
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
       url: 'https://affotax.com/pricing',
-      lastModified: new Date(),
+      lastModified: '2024-07-04T11:28:15.949Z',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://affotax.com/services',
-      lastModified: new Date(),
+      lastModified: '2024-07-04T11:28:15.949Z',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://affotax.com/about-us',
-      lastModified: new Date(),
+      lastModified: '2024-07-04T11:28:15.949Z',
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: 'https://affotax.com/contact-us',
-      lastModified: new Date(),
+      lastModified: '2024-07-04T11:28:15.949Z',
       changeFrequency: 'monthly',
       priority: 0.8,
     },

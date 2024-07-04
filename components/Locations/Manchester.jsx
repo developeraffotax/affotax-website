@@ -35,7 +35,7 @@ Manage your accounts from anywhere in the world; our accountants in Manchester a
                     </div>
                 </div>
 
-                <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4 scale-125'>
+                <div className=' w-[40%]  max-lg:w-full  max-lg:mb-4 scale-125 '>
                     <Image
                         className='object-cover object-center rounded  drop-shadow-xl '
                         alt='hero'
