@@ -33,7 +33,9 @@ export default function LocationPage({params}) {
         case 'scotland': return render = <Scotland />
         case 'birmingham': return render = <Birmingham />
         case 'manchester': return render = <Manchester />
-        case 'northern_ireland': return render = <NorthernIreland />
+        case 'northern-ireland': return render = <NorthernIreland />
+
+        
 
     }
 

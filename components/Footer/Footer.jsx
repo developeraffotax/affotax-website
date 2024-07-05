@@ -130,7 +130,7 @@ export default function Footer() {
               <Link href={'/location/manchester'} className="text-gray-600 hover:text-primary text-xs font-semibold">Manchester</Link>
             </li>
             <li>
-              <Link href={'/location/northern_ireland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Northern Ireland</Link>
+              <Link href={'/location/northern-ireland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Northern Ireland</Link>
             </li>
             
           </nav>
