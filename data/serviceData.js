@@ -49,32 +49,32 @@ const serviceData = {
 	benefitsTitle: "Why Choose Our Annual Accounts Services?",
 	benefits: [
 		{
-			heading: "Simplified compliance",
+			heading: "📄Simplified compliance",
 			paragraph:
 				"Wave goodbye to the hurdles of filing your UK company accounts. Our annual accounting scheme ensures a smooth operation with accounting and reporting standards.",
 		},
 		{
-			heading: "Enhanced data securitye",
+			heading: "🔏Enhanced data security",
 			paragraph:
 				"You can rest now as the financial data of your dormant business is in safe hands. We prioritise secure handling, assuring the privacy of your sensitive information.",
 		},
 		{
-			heading: " Pro-level expertise",
+			heading: "🥇Pro-level expertise",
 			paragraph:
 				"Leave the heavy lifting to the professionals. Our professionals are committed to accurately drafting and submitting the inactive company accounts accordingly.",
 		},
 		{
-			heading: "Tailored support",
+			heading: "✅Tailored support",
 			paragraph:
 				"Move confidently through the dormant account filing process. You're never alone in the process because of the individualised direction provided by our experienced team.",
 		},
 		{
-			heading: "Effciency boost",
+			heading: "🎉Effciency boost",
 			paragraph:
 				"Wave goodbye to the hurdles of filing your UK company accounts. Our annual accounting scheme ensures a smooth operation with accounting and reporting standards.",
 		},
 		{
-			heading: "Maximise savings",
+			heading: "💯Maximise savings",
 			paragraph: `Opt for our budget-friendly Annual Accounts Package and unlock substantial savings on your accountancy fees. Join the ranks of over 10,000 satisfied clients who have revolutionised their tax filing for UK limited companies with our services.
 
         Ready to experience a hassle-free journey through your annual accounts? Embrace simplicity, security, and savings with our unparalleled services.`,
@@ -310,7 +310,7 @@ const serviceData3 = {
 				"Put your trust on us, we can help you free up valuable time and resources, so you can focus on your priorities while we handle the details.",
 		},
 		{
-			heading: " Choose confidence",
+			heading: " ✅Choose confidence",
 			paragraph: `Start your journey with ease and assurance. Be confident while opting for our service because we won't disappoint you.`,
 		},
 	],
@@ -395,32 +395,32 @@ const serviceData4 = {
 	benefitsTitle: "Benefits of our PAYE registration service:",
 	benefits: [
 		{
-			heading: " Effortless payroll setup",
+			heading: "🎗 Effortless payroll setup",
 			paragraph:
 				"We assist you with expertise, ensuring that your payroll is processed correctly and in compliance with the law.",
 		},
 		{
-			heading: " Data security",
+			heading: " 🔒Data security",
 			paragraph:
 				"We know the importance of keeping your data secure when it comes to the processing of payrolls, so put your trust in Affotax!",
 		},
 		{
-			heading: " Legal compliance",
+			heading: "✔ Legal compliance",
 			paragraph:
 				" Affotax ensures your requirements are satisfied, and all tax and legal obligations are adhered to, because it matters.",
 		},
 		{
-			heading: " Register for PAYE online",
+			heading: " ✅Register for PAYE online",
 			paragraph:
 				"We offer expert assistance, making the process more convenient for employers; register at home or at work.",
 		},
 		{
-			heading: " Personalised support",
+			heading: " 🗣️Personalised support",
 			paragraph:
 				"As each of our clients is unique, we provide customised support throughout the process.",
 		},
 		{
-			heading: " Resource optimisation",
+			heading: " ⏱️Resource optimisation",
 			paragraph: `We handle everything, so you don't have to worry about payroll processing technicalities, saving you time and resources.`,
 		},
 	],
@@ -498,27 +498,27 @@ Understanding it, along with its £85,000 threshold, Making Tax Digital (MTD) ru
 	benefitsTitle: "Benefits of Our UK VAT Registration Online Service: ",
 	benefits: [
 		{
-			heading: "Effortless enrolment",
+			heading: "✨Effortless enrolment",
 			paragraph:
 				"With our service, you can easily register for VAT as Affotax acts as your agent in the United Kingdom.",
 		},
 		{
-			heading: " Data security",
+			heading: " 🔒Data security",
 			paragraph:
 				"Put your trust in Affotax because we make sure to keep your business information safe and confidential.",
 		},
 		{
-			heading: " Expert handling",
+			heading: "✔ Expert handling",
 			paragraph:
 				"Save yourself from the frustration as we take this responsibility from you, giving you peace of mind.",
 		},
 		{
-			heading: "  Personalised support",
+			heading: "  🗣️Personalised support",
 			paragraph:
 				"The experts here will not leave you in the dark - you will get personalised support during the process.",
 		},
 		{
-			heading: " Resource optimisation",
+			heading: " ⏱️Resource optimisation",
 			paragraph:
 				"Free up your valuable time while also taking the load off your shoulders - we have got your back.",
 		},
@@ -606,32 +606,32 @@ The annual confirmation statement helps you update information like directors an
 	benefitsTitle: 'Benefits of Our "Annual Confirmation Statement" Services',
 	benefits: [
 		{
-			heading: "Easy compliance",
+			heading: "📊Easy compliance",
 			paragraph:
 				"With us, you can ease the procedure, getting timely and accurate submission.",
 		},
 		{
-			heading: " Data security",
+			heading: "🔒 Data security",
 			paragraph:
 				"We keep the sensitive information of your company safe and secure with utmost confidentiality. ",
 		},
 		{
-			heading: " Affordable pricing",
+			heading: "✅ Affordable pricing",
 			paragraph:
 				" At Affotax, we are committed to affordable pricing in our services.",
 		},
 		{
-			heading: " Personalised guidance",
+			heading: " 🤝Personalised guidance",
 			paragraph:
 				" You will get access to our expert team for personalised guidance and dedicated support.",
 		},
 		{
-			heading: "Expert handling",
+			heading: "🗣️Expert handling",
 			paragraph:
 				"Our expert team will expertly lead you through the complicated mechanism with ease.",
 		},
 		{
-			heading: "Resource optimisation",
+			heading: "📋Resource optimisation",
 			paragraph:
 				"Delegate your company annual return to us, freeing up crucial time and resources for your core business functions.",
 		},
@@ -717,36 +717,36 @@ Has your company not actively managed its bookkeeping throughout the year? If ye
 	benefitsTitle: 'Benefits of Our "Bookkeeping for 12 Months" Services:',
 	benefits: [
 		{
-			heading: " Effortless financial tracking",
+			heading: " ✨Effortless financial tracking",
 			paragraph: `You will effortlessly manage your company's records with our accurate service.`,
 		},
 		{
-			heading: " Data security",
+			heading: " 🔒Data security",
 			paragraph:
 				"Put your trust in Affotax as your information is managed securely throughout the process.",
 		},
 		{
-			heading: " Expert handling",
+			heading: " ✔Expert handling",
 			paragraph:
 				"We have years of experience in providing these services, helping you form a solid foundation for stability. ",
 		},
 		{
-			heading: "Tax-ready records",
+			heading: "📋Tax-ready records",
 			paragraph:
 				"Our service prepares you for annual tax filing easily, making sure your company meets its obligations.",
 		},
 		{
-			heading: " Adaptable technology",
+			heading: " 🎗Adaptable technology",
 			paragraph:
 				"With our service, maintain accurate and accessible records with advanced platforms like QBO or Xero.",
 		},
 		{
-			heading: "Personalised support",
+			heading: "🗣️Personalised support",
 			paragraph:
 				"As your bookkeeper, we give you access to our expert team for personalised support throughout the procedure.",
 		},
 		{
-			heading: "Resource optimisation",
+			heading: "⏱️Resource optimisation",
 			paragraph:
 				"It is a time consuming process and can give you a hard time. This is where we come in, helping you save time and resources so you can concentrate on the growth of your business.  ",
 		},
@@ -829,32 +829,32 @@ At Affotax, we offer the most affordable services, which not only includes compa
 	benefitsTitle: `Benefits of Our "UK Company Registration" Service`,
 	benefits: [
 		{
-			heading: " Effortless business structure",
+			heading: " ✨Effortless business structure",
 			paragraph:
 				"We simplify company formation, offering a legal structure for your corporation.",
 		},
 		{
-			heading: " Data security",
+			heading: " 🔒Data security",
 			paragraph:
 				"With our strong data protection system, your information is completely safe and confidential.",
 		},
 		{
-			heading: " Digital certificate",
+			heading: " ✔Digital certificate",
 			paragraph:
 				"  You will get a digital incorporation certificate and digital articles of association for your legal and professional presence.",
 		},
 		{
-			heading: "  Accounting consultation",
+			heading: " 🎗 Accounting consultation",
 			paragraph:
 				" As part of our package, we provide accounting consultation to help you reach your goals. ",
 		},
 		{
-			heading: " Expert handling",
+			heading: "🤝 Expert handling",
 			paragraph:
 				"Our expert team has years of experience in providing affordable services, and is ready to help you grow.",
 		},
 		{
-			heading: " Personalised support",
+			heading: "🗣️ Personalised support",
 			paragraph:
 				"We offer personalised support and guidance throughout the process - contact us today!",
 		},
@@ -1459,13 +1459,13 @@ We will help you file corporation tax using our agent login. This modern solutio
 		},
 
 		{
-			heading: " Customised solutions for your business ",
+			heading: " ✅Customised solutions for your business ",
 			paragraph:
 				"We are aware that each company is different. Our service is customised to meet your unique requirements, guaranteeing a quick and easy filing process.",
 		},
 
 		{
-			heading: " Real-time updates",
+			heading: " 🎉Real-time updates",
 			paragraph:
 				"Stay informed with real-time updates on the status of your submission. We provide transparency and peace of mind, keeping you in the loop throughout the process.",
 		},
@@ -1774,12 +1774,12 @@ You may comfortably go through the various sections of your tax return with our 
 				"Take advantage of filing anytime, day or night, or no matter where you are. You can accomplish deadlines on your own time using our online platform.",
 		},
 		{
-			heading: " Error checking",
+			heading: " ✔️Error checking",
 			paragraph:
 				"Use our best error-checking tools, which identify problems immediately and let you fix mistakes to submit with accurate confidence.",
 		},
 		{
-			heading: " Automated reminders",
+			heading: " 🔊Automated reminders",
 			paragraph:
 				"With our automated reminder system, you can easily remember critical deadlines. Get timely alerts regarding deadlines and avoid any type of penalties.  ",
 		},
@@ -1942,12 +1942,12 @@ Our user-centric approach simplifies updating address information and other impo
 				"Trust our expert team of 10+ years experience, and we'll ensure correct and timely changes to your data.",
 		},
 		{
-			heading: "⏱️ Personalised support",
+			heading: " ✅Personalised support",
 			paragraph:
 				" Get in touch with our expert staff for committed support and direction that offers a customised touch during editing.",
 		},
 		{
-			heading: " Time and resource efficiency",
+			heading: " ⏱️Time and resource efficiency",
 			paragraph:
 				"By using our service, you may free up important time and resources so you can concentrate on your top priorities.",
 		},
@@ -2097,7 +2097,7 @@ Upon completing the registration for self assessment, you will be issued a Uniqu
 				"We allows you to save valuable time and resources. Let us handle everything while helping you concentrate on what matters most.",
 		},
 		{
-			heading: " Start with confidence",
+			heading: " ✅Start with confidence",
 			paragraph:
 				"When you choose our service, we provide the confidence you need to start your adventure.  ",
 		},
@@ -2747,7 +2747,7 @@ Companies House name checker availability is mandatory before changing company n
 	benefitsTitle: `Benefits of choosing our 'Change Company Name' service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless transition",
+			heading: " 🎗Effortless transition",
 			paragraph:
 				" To change limited company name is difficult, but we makes it easy with an effortless transition. ",
 		},
@@ -2767,12 +2767,12 @@ Companies House name checker availability is mandatory before changing company n
 				"Our service saves time and resources, so you can focus on other important tasks.",
 		},
 		{
-			heading: "Documentation",
+			heading: "📋Documentation",
 			paragraph:
 				"Our documentation provides a thorough record of all changes made to your corporate information.",
 		},
 		{
-			heading: " Fast turnaround",
+			heading: " ✨Fast turnaround",
 			paragraph:
 				"Our service is designed to provide a fast turnaround time, ensuring efficiency and accuracy.",
 		},
@@ -2932,12 +2932,12 @@ A change in these regulations can adversely affect a company's status or operati
 	benefitsTitle: `Benefits of choosing our 'Companies House Change of Address' service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless updates",
+			heading: " 🎗Effortless updates",
 			paragraph:
 				" We make it easy to update your company's details, structure, operations, etc. through our online services. ",
 		},
 		{
-			heading: "Secure platform",
+			heading: "🔒Secure platform",
 			paragraph:
 				"We use industry-standard encryption technologies to ensure the confidentiality and security of your information.",
 		},
@@ -2947,12 +2947,12 @@ A change in these regulations can adversely affect a company's status or operati
 				"Our team of experts have years of experience managing filings. Put your trust in Affotax!",
 		},
 		{
-			heading: "Personalised support",
+			heading: "✔Personalised support",
 			paragraph:
 				"We offer personalised support and guidance throughout the process. Our expert team is available for assistance.",
 		},
 		{
-			heading: "Resource optimization",
+			heading: "🗣️Resource optimization",
 			paragraph:
 				"By availing of our service, you can focus on other business priorities and handle your filings more efficiently.",
 		},
@@ -3086,39 +3086,39 @@ On the other hand, share issuance is also a way for companies to raise capital, 
 	benefitsTitle: `Benefits of choosing our selling shares service: ✨`,
 	benefits: [
 		{
-			heading: " Efficient equity management",
+			heading: " 📊Efficient equity management",
 			paragraph:
 				" Get share issuance and transfer processes handled accurately and effectively.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"Affotax ensures the security and confidentiality of all your stock and distribution data. Put your trust in Affotax!",
 		},
 		{
-			heading: "Legal compliance",
+			heading: "✔Legal compliance",
 			paragraph:
 				"Affotax's experienced team can handle all of your company's legal compliance needs.",
 		},
 		{
-			heading: "Personalised support",
+			heading: "🗣️Personalised support",
 			paragraph:
 				"We will guide you through the entire process with personalised support and guidance.",
 		},
 		{
-			heading: "Resource optimization",
+			heading: "⏱️Resource optimization",
 			paragraph:
 				" Let Affotax handle your tasks so you can focus on key business decisions.",
 		},
 
 		{
-			heading: "Documentation",
+			heading: "📋Documentation",
 			paragraph:
 				"Affotax takes great care to document equity management activities and transactions appropriately.",
 		},
 
 		{
-			heading: "Competitive pricing",
+			heading: "✨Competitive pricing",
 			paragraph:
 				"Affotax's high-quality services are available at competitive prices to meet your business needs.",
 		},
@@ -3292,27 +3292,27 @@ On the other hand, a director may also willingly leave their position on the boa
 	benefitsTitle: `Benefits of choosing our director appointment and resignation service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless governance changes",
+			heading: " ✨Effortless governance changes",
 			paragraph:
 				" Choose our services for effortless governance changes with peace of mind.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"Affotax ensures the security and confidentiality of all your stock and distribution data. Put your trust in Affotax!",
 		},
 		{
-			heading: "Legal compliance",
+			heading: "✔Legal compliance",
 			paragraph:
 				"Affotax's experienced team can handle all of your company's legal compliance needs.",
 		},
 		{
-			heading: "Personalised support",
+			heading: "🗣️Personalised support",
 			paragraph:
 				"We will guide you through the entire process with personalised support and guidance.",
 		},
 		{
-			heading: "Resource optimization",
+			heading: "⏱️Resource optimization",
 			paragraph:
 				" Let Affotax handle your tasks so you can focus on key business decisions.",
 		},
@@ -3487,52 +3487,52 @@ At times, directors might wonder if they need to register for PAYE. PAYE registr
 	benefitsTitle: `Benefits of our Directors Payroll service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless management",
+			heading: " ✨Effortless management",
 			paragraph:
 				" You can manage everything easily, ensuring accurate and compliant compensation.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"Your information is handled securely and remains confidential, so trust Affotax!",
 		},
 		{
-			heading: "Legal compliance",
+			heading: "✔Legal compliance",
 			paragraph:
 				"Expertly manage your requirements, ensuring adherence to tax and legal obligations.",
 		},
 		{
-			heading: " Amount confirmation",
+			heading: "🎗 Amount confirmation",
 			paragraph:
 				"Receive confirmation of the amount to be paid to HMRC each month, and a reminder of the due date.",
 		},
 		{
-			heading: " Electronic payslip",
+			heading: "🏢 Electronic payslip",
 			paragraph:
 				" You can choose to receive your payslips in an electronic format, making the process easier for you.",
 		},
 
 		{
-			heading: " P60 processings",
+			heading: " 🤝P60 processings",
 			paragraph:
 				" The year-end process, including P60, will also be emailed to you, making sure you have everything you need.",
 		},
 
 		{
-			heading: " Processing P45",
+			heading: " 🤝Processing P45",
 			paragraph:
 				"  Your year-end tax returns are handled by Affotax with HMRC, and the P45 will be emailed to you directly.",
 		},
 
 		{
-			heading: " Personalised support",
+			heading: " 🗣️Personalised support",
 			paragraph:
 				"You get one hour of phone or admin support during each financial year, so you can get help any time.",
 		},
 
 		
 		{
-			heading: " Resource optimisation",
+			heading: " ⏱️Resource optimisation",
 			paragraph:
 				" You can focus your time and resources on strategic decisions by entrusting Affotax.",
 		},
@@ -3683,39 +3683,39 @@ Note: Paye for employees must be paid immediately and punctually to HM Revenue a
 	benefitsTitle: `Benefits of our Directors Payroll service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless management",
+			heading: " ✨Effortless management",
 			paragraph:
 				" Affotax offers paye employee services that ensure proper remuneration and compliance.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"With our private handling and data protection procedures, you can guarantee data security.",
 		},
 		{
-			heading: "Legal compliance",
+			heading: "✅Legal compliance",
 			paragraph:
 				" Our expert team will offer you professional guidance to ensure that you meet all payroll guidelines.",
 		},
 		{
-			heading: " Amount confirmation",
+			heading: " ✔Amount confirmation",
 			paragraph:
 				"You get to confirm the amount to be paid to HMRC each month and never miss a due date.",
 		},
 		{
-			heading: " Electronic payslip",
+			heading: " 🏢Electronic payslip",
 			paragraph:
 				" With our service, you will get electronic payslips to make the process easier for you and your employees.",
 		},
 
 		{
-			heading: "Personalised support",
+			heading: "🗣️Personalised support",
 			paragraph:
 				" You will get the personalised support you need from our expert team throughout the process.",
 		},
 
 		{
-			heading: " Resource optimisation",
+			heading: " ⏱️Resource optimisation",
 			paragraph:
 				"  Free up valuable time and resources by availing of our service, to better focus on core business activities.",
 		},
@@ -3907,44 +3907,44 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 	benefitsTitle: `Benefits of Our Auto Enrolment Pension Service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless management",
+			heading: "✨ Effortless management",
 			paragraph:
 				" Our services make it easy for you to manage auto-enrolment in employee pensions.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"We take every possible measure to keep the employee information confidential and ensure data security.",
 		},
 		{
-			heading: "Legal adherence",
+			heading: "✔Legal adherence",
 			paragraph:
 				"  Our team of experts will help you navigate the complex regulations, guaranteeing legal compliance.",
 		},
 		{
-			heading: "Transparency",
+			heading: "🤝Transparency",
 			paragraph:
 				" Our scheme is transparent, which is why we provide regular reports and updates.",
 		},
 		{
-			heading: " Personalised guidance",
+			heading: " 🗣️Personalised guidance",
 			paragraph:
 				" Our team is always ready to provide expert assistance throughout the process.",
 		},
 
 		{
-			heading: " Reduced penalty risk",
+			heading: " 🎗Reduced penalty risk",
 			paragraph:
 				" With our services, you can avoid penalties for regulations.",
 		},
 
 		{
-			heading: " Flexibility",
+			heading: " ✅Flexibility",
 			paragraph:
 				" Whether you need support in setting up your pension scheme or managing it on an ongoing basis, Affotax is the best choice.",
 		},
 		{
-			heading: " Resource optimisation",
+			heading: " ⏱️Resource optimisation",
 			paragraph:
 				" By entrusting us, you can free up valuable time and resources to focus on your business's priorities.",
 		},
@@ -4109,27 +4109,27 @@ Note: If you are behind schedule with submitting or have provided inaccurate inf
 	benefitsTitle: `Benefits of Our P11D Form Service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless management",
+			heading: " ✨Effortless management",
 			paragraph:
 				" We keep our clients' information secure and confidential – put your trust in Affotax!",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"We keep our clients' information secure and confidential – put your trust in Affotax!",
 		},
 		{
-			heading: "Legal compliance",
+			heading: "✔Legal compliance",
 			paragraph:
 				"We can help you expertly manage your form P11D requirements and ensure compliance.",
 		},
 		{
-			heading: "Personalised support",
+			heading: "🗣️Personalised support",
 			paragraph:
 				" As our client, you will get the personalised support and guidance you need to find expert solutions.",
 		},
 		{
-			heading: " Resource optimisation",
+			heading: "⏱️ Resource optimisation",
 			paragraph:
 				" When you avail our service, you will free up time and resources to focus on the benefits of your business.",
 		},
@@ -4330,27 +4330,27 @@ Check out our packages, and get a quote today!
 	benefitsTitle: `Benefits of Our P45 and P60 Form Services: ✨`,
 	benefits: [
 		{
-			heading: " Efficient reporting",
+			heading: " ✨Efficient reporting",
 			paragraph:
 				" We simplify the completion and submission with efficient online reporting.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"We prioritise confidentiality which is why we provide data security of the sensitive employee information.",
 		},
 		{
-			heading: "Compliance expertise",
+			heading: "✔Compliance expertise",
 			paragraph:
 				"We stay updated on rules and regulations, providing accurate and lawful completion. ",
 		},
 		{
-			heading: "Personalised assistance",
+			heading: "🎗Personalised assistance",
 			paragraph:
 				" We provide personalised guidance throughout the completion and submission.",
 		},
 		{
-			heading: " Resource optimisation",
+			heading: "⏱️ Resource optimisation",
 			paragraph:
 				" By availing our services, you can save time and resources to better focus on what matters for your business.",
 		},
@@ -4518,32 +4518,32 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 	benefitsTitle: `Benefits of Our Online Payslip Generator Services: ✨`,
 	benefits: [
 		{
-			heading: " Effortlessly generate pay slips",
+			heading: " ✨Effortlessly generate pay slips",
 			paragraph:
 				" With our service, you can easily generate your salary slips, ensuring smooth operations.",
 		},
 		{
-			heading: "Legal compliance",
+			heading: "📋Legal compliance",
 			paragraph:
 				"Our expert team manages the whole process carefully to ensure adherence to legal requirements.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"Put your trust in Affotax as we provide the best data security, keeping your employee payroll information secure.",
 		},
 		{
-			heading: "Customisable",
+			heading: "✔Customisable",
 			paragraph:
 				"You can customise our service; choose from multiple templates of payslips for banks, etc. ",
 		},
 		{
-			heading: "Personalised support",
+			heading: "🗣️Personalised support",
 			paragraph:
 				" With our service, you get access to our expert team for personalised support throughout the process.",
 		},
 		{
-			heading: "Resource optimisations",
+			heading: "⏱️Resource optimisations",
 			paragraph:
 				" Choosing us means you get to free up valuable time and resources to focus better on your business's growth. ",
 		},
@@ -4734,32 +4734,32 @@ The expert team at Affotax has mastered the what and how of MTD VAT submission i
 	benefitsTitle: `Benefits of Our ‘Quarterly VAT Return’ Service:  ✨`,
 	benefits: [
 		{
-			heading: "Effortless VAT reporting",
+			heading: "✨Effortless VAT reporting",
 			paragraph:
 				" By availing of our service, you ensure compliance with regulations and an accurate submission. ",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"Put your trust in Affotax as we handle your information with the utmost data security during your submission.",
 		},
 		{
-			heading: "MTD expertise",
+			heading: "✔MTD expertise",
 			paragraph:
 				" Our team at Affotax has the expertise you need to expertly manage your submissions correctly, avoiding penalties. ",
 		},
 		{
-			heading: "Personalised support",
+			heading: "🤝Personalised support",
 			paragraph:
 				"By availing of our service, you access dedicated support from our expert team throughout the procedure. ",
 		},
 		{
-			heading: " Resource optimisation",
+			heading: " ⏱️Resource optimisation",
 			paragraph:
 				"While we take responsibility for your filing, you can focus on other important business activities.",
 		},
 		{
-			heading: "Streamline compliances",
+			heading: "🎗Streamline compliances",
 			paragraph:
 				" We make sure you are compliant with all digital tax requirements, allowing you to concentrate on growing your business.",
 		},
@@ -4938,32 +4938,32 @@ Are you planning to import or export goods in the UK? If yes, then you will need
 	benefitsTitle: `Benefits of Our ‘EORI Number’ Service:  ✨`,
 	benefits: [
 		{
-			heading: " Effortless trade identification",
+			heading: " ✨Effortless trade identification",
 			paragraph:
 				" Avoid the burden of long paperwork; apply and obtain effortlessly.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				"Put your trust in Affotax as we handle your data with the utmost data security during your application process.",
 		},
 		{
-			heading: " Expert handling",
+			heading: "✔ Expert handling",
 			paragraph:
 				"We are a team of experts with years of experience, so let us expertly manage your application.",
 		},
 		{
-			heading: "Application form",
+			heading: "📋Application form",
 			paragraph:
 				"We will expertly fill out your application form and manage your documentation and submission to HMRC.",
 		},
 		{
-			heading: "Personalised assistance",
+			heading: "🤝Personalised assistance",
 			paragraph:
 				" You can get personalised assistance or guidance with your application by using our service. ",
 		},
 		{
-			heading: "Resource optimisation",
+			heading: "⏱️Resource optimisation",
 			paragraph:
 				" When you choose our services, you save valuable time and resources to concentrate on the growth of your business.",
 		},
@@ -5173,37 +5173,37 @@ Affotax provides you with experts who can manage your records every month, so yo
 	benefitsTitle: `Benefits of Our ‘Xero Bookkeeping’ Services: ✨`,
 	benefits: [
 		{
-			heading: " Effortless financial management",
+			heading: " ✨Effortless financial management",
 			paragraph:
 				"  Let us help you avoid falling behind by managing your records effortlessly.",
 		},
 		{
-			heading: " Data security",
+			heading: " 🔒Data security",
 			paragraph:
 				"We manage your data with the utmost security and confidentiality, so put your trust in Affotax. ",
 		},
 		{
-			heading: " Xero expertise",
+			heading: " ✔Xero expertise",
 			paragraph:
 				"Our experts have years of experience and expertise in providing professional services.",
 		},
 		{
-			heading: " Manage crisis",
+			heading: " 🎗Manage crisis",
 			paragraph:
 				"We will identify and address recurring problems for you, such as low cash flow or growing debt, etc.",
 		},
 		{
-			heading: "Personalised support",
+			heading: "🗣️Personalised support",
 			paragraph:
 				" Our expert team is always ready to assist you and offer support throughout the process. ",
 		},
 		{
-			heading: " Drive performance",
+			heading: " 📈Drive performance",
 			paragraph:
 				"  We will identify and address what drives performance in your business and set up ways to measure and monitor it.",
 		},
 		{
-			heading: " Resource optimisation ",
+			heading: " ⏱️Resource optimisation ",
 			paragraph:
 				" Our services can save you valuable time and help you understand your business finances.  ",
 		},
@@ -5387,37 +5387,37 @@ Our expert team uses the advanced features of QBO to make sure that you track yo
 	benefitsTitle: `Benefits of Our QuickBooks Bookkeeping Services: ✨`,
 	benefits: [
 		{
-			heading: " Stress-free management",
+			heading: " ✨Stress-free management",
 			paragraph:
 				" With our services, you can correctly maintain financial records without stressing over the complexities. ",
 		},
 		{
-			heading: " Data security",
+			heading: "🔒 Data security",
 			paragraph:
 				"Your data is managed with care and security as it remains confidential, so put your trust in Affotax.   ",
 		},
 		{
-			heading: " QBO expertise",
+			heading: " ✔QBO expertise",
 			paragraph:
 				"Our quickbooks bookkeepers have years of experience in providing services accurately and timel",
 		},
 		{
-			heading: "  Personalised support",
+			heading: "  ✔Personalised support",
 			paragraph:
 				"You will get personalised support and guidance throughout the monthly process.",
 		},
 		{
-			heading: " Manage crisis",
+			heading: " 🎗Manage crisis",
 			paragraph:
 				" With our QBO bookkeeping services, you can manage financial crises like low cash flow or mounting debt, etc.",
 		},
 		{
-			heading: "Drive performance",
+			heading: "📈Drive performance",
 			paragraph:
 				" Your business will be measured and monitored by identifying and addressing what drives performance.",
 		},
 		{
-			heading: "Resource optimisation",
+			heading: "⏱️Resource optimisation",
 			paragraph:
 				" Let us help you understand your business’s finances while saving your valuable time and resources. ",
 		},
@@ -5590,27 +5590,27 @@ Although it can help in basic bookkeeping, it can be time-consuming and mind-bog
 	benefitsTitle: `Benefits of Our Excel Bookkeeping Services: ✨`,
 	benefits: [
 		{
-			heading: " Effortless financial tracking",
+			heading: " ✨Effortless financial tracking",
 			paragraph:
 				" By using our service, you can keep track of your company’s finances easily.",
 		},
 		{
-			heading: " Data security",
+			heading: "🔒 Data security",
 			paragraph:
 				" Put your trust in Affotax as we manage your financial data securely and with confidentiality.",
 		},
 		{
-			heading: " Excel expertise",
+			heading: " ✔Excel expertise",
 			paragraph:
 				"Our expert team of Affotax has years of experience in and will professionally manage your finances. ",
 		},
 		{
-			heading: "  Personalised support",
+			heading: "  🗣️Personalised support",
 			paragraph:
 				"We offer personalised support and guidance to our clients throughout the procedure. ",
 		},
 		{
-			heading: "Time-saving",
+			heading: "⏱️Time-saving",
 			paragraph:
 				" We save you time and resources so you don't have to fret about the complexities. ",
 		},
@@ -5794,37 +5794,37 @@ However, just like a UK resident, you also need to register with Companies House
 	benefitsTitle: `Benefits of our UK limited company for non residents service: ✨`,
 	benefits: [
 		{
-			heading: " Effortless company formation",
+			heading: " ✨Effortless company formation",
 			paragraph:
 				"  We will help you in your company formation as a non-UK resident, effortlessly making your dream come true. ",
 		},
 		{
-			heading: " Registered office address",
+			heading: " 🌍Registered office address",
 			paragraph:
 				" For non-UK residents, we include an address that can be used as registered office address  ",
 		},
 		{
-			heading: " Directors address",
+			heading: " ✔Directors address",
 			paragraph:
 				"We ensure privacy by offering a directors address in the EC1 area, London.",
 		},
 		{
-			heading: "  HMRC UTR number",
+			heading: "  ✔HMRC UTR number",
 			paragraph:
 				"As part of our package, you will obtain a Unique Taxpayer Reference (UTR).",
 		},
 		{
-			heading: "  Data security",
+			heading: "  🔒Data security",
 			paragraph:
 				" Put your trust in Affotax as we keep your information private and confidential.",
 		},
 		{
-			heading: "Support",
+			heading: "🤝Support",
 			paragraph:
 				"  We will provide you with personalised support and guidance throughout the procedure.",
 		},
 		{
-			heading: " Other benefits Include",
+			heading: " ✅Other benefits Include",
 			paragraph:
 				"VAT registration, incorporation filing fee, digital incorporation certificate, digital articles of association and accounting consultation. ",
 		},
@@ -6005,33 +6005,33 @@ Affotax is the best and most affordable choice available. We understand the comp
 	benefitsTitle: `Benefits of Our ‘LLP Company Formation’ Service: ✨`,
 	benefits: [
 		{
-			heading: " Easy procedure",
+			heading: " ✨Easy procedure",
 			paragraph:
 				" We make the process easy, our plan combines liability protection with the flexibility of a partnership.",
 		},
 		{
-			heading: " Dedicated LLP specialist",
+			heading: " 🎗Dedicated LLP specialist",
 			paragraph:
 				" You will get a dedicated specialist who will guide you through the entire process.",
 		},
 		{
-			heading: " Customised plan",
+			heading: "✔ Customised plan",
 			paragraph:
 				"Every business and its owner are unique, so we offer a customised plan for your business to succeed.",
 		},
 		{
-			heading: "Data security",
+			heading: "🔒Data security",
 			paragraph:
 				" Put your trust in Affotax because we take data security seriously, making sure your business data is safe. ",
 		},
 		{
-			heading: "Legal expertise",
+			heading: "🤝Legal expertise",
 			paragraph:
 				" Our expert team has years of experience, ensuring correct documentation and legal compliance. ",
 		},
 
 		{
-			heading: " Resource optimisation",
+			heading: " ⏱️Resource optimisation",
 			paragraph:
 				" While we handle everything, you will have valuable time and resources to be spent accordingly. ",
 		},
