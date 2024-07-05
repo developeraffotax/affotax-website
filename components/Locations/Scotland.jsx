@@ -22,8 +22,8 @@ export default function Scotland() {
                     <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online  <br /> Chartered Accountants in Scotland
 
                     </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Chartered Accountants in Scotland
-We are chartered accountants providing accounts and tax filing services in Scotland and all over the UK. Our office is based in London, but the expert accountants at Affotax know the whole caboodle of the business world in Scotland. 
+                    <p className='mb-8  text-tertiary/[70] text-xl max-lg:text-lg'> Chartered Accountants in Scotland
+We are chartered accountants providing accounts and tax filing services in Scotland and all over the UK. Our office is based in London, but the expert accountants at Affotax know the whole caboodle of the business world in Scotland. <br/> <br/>
 
  To be frank, not opting for our service is like living in Scotland and not visiting the mediaeval castles. Get in touch, and our chartered accountants in Scotland will serve you proper by managing your accounting and tax filing needs.
 

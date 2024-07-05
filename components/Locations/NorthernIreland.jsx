@@ -8,7 +8,7 @@ import Fully from '@/public/fully.png'
 import Support from '@/public/support.png'
 import { FcBullish, FcCurrencyExchange, FcDataSheet, FcOk } from "react-icons/fc";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4} from "@/public/assets/Northern Ireland";
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10} from "@/public/assets/Northern Ireland";
 
 
 
@@ -27,8 +27,8 @@ export default function NorthernIreland() {
                     <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Accountants in Northern Ireland
 
                     </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Finding reliable accountants is key in the Northern Ireland business market. Our Northern Ireland accountants are the experts you are looking for, offering a range of expertise from accounting and tax specialists to business advisors.
-Get in touch with our accountants in Northern Ireland today. You can relax while we handle all the nitty gritty of your accounts and tax filing within the UK.
+                    <p className='mb-8  text-tertiary/[70] text-xl max-lg:text-lg'> Finding reliable accountants is key in the Northern Ireland business market. Our Northern Ireland accountants are the experts you are looking for, offering a range of expertise from accounting and tax specialists to business advisors.
+<br /> <br /> Get in touch with our accountants in Northern Ireland today. You can relax while we handle all the nitty gritty of your accounts and tax filing within the UK.
 
  </p>
                     <div className='flex justify-center text-nowrap '>
@@ -230,7 +230,7 @@ Get in touch with our accountants in Northern Ireland today. You can relax while
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg> */}
                     {/* <img src={Tax.src} alt="tax"/> */}
-                    <Image src={Tax}  cover="true"  />
+                    <Image src={icon5}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -259,7 +259,7 @@ Get in touch with our accountants in Northern Ireland today. You can relax while
                         <circle cx={6} cy={18} r={3} />
                         <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12" />
                     </svg> */}
-                    <Image src={Award}  cover="true"  />
+                    <Image src={icon6}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -287,7 +287,7 @@ Get in touch with our accountants in Northern Ireland today. You can relax while
                         <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
                         <circle cx={12} cy={7} r={4} />
                     </svg> */}
-                    <Image src={Deadline}  cover="true"  />
+                    <Image src={icon7}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -316,7 +316,7 @@ Get in touch with our accountants in Northern Ireland today. You can relax while
                     >
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                     </svg> */}
-                    <Image src={Experience}  cover="true"  />
+                    <Image src={icon8}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -325,6 +325,70 @@ Get in touch with our accountants in Northern Ireland today. You can relax while
                     </h2>
                     <p className="leading-relaxed text-base">
                     Looking for reliable accountants in Craigavon to keep your finances in check? Our experienced professionals are ready to serve you. We are dedicated to helping your small business or assisting with your taxes, whatever your requirements. Our attention to detail and personalised touch has earned us a special place in our clients' hearts. Contact us to schedule a consultation and grow your business. 
+
+                    </p>
+                    
+                    </div>
+                </div>
+
+
+
+
+                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
+                    {/* <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        className="w-10 h-10"
+                        viewBox="0 0 24 24"
+                    >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg> */}
+                    <Image src={icon9}  cover="true"  />
+                    </div>
+                    <div className="flex-grow">
+                    <h2 className="text-primary text-lg title-font font-medium mb-3">
+                    Accountants in Newry
+
+                    </h2>
+                    <p className="leading-relaxed text-base">
+                    Are you looking for accountants in Newry? Our team of skilled accountants in Newry is available to manage your finances with expertise and precision. We specialize in tax compliance, bookkeeping, and strategic financial planning. Our services are designed to optimize your financial management and help you achieve your financial goals. Don’t hesitate—reach out to our Newry accountants today and take the first step towards a more secure financial future.
+
+
+                    </p>
+                    
+                    </div>
+                </div>
+
+
+
+                <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
+                    <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
+                    {/* <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        className="w-10 h-10"
+                        viewBox="0 0 24 24"
+                    >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                    </svg> */}
+                    <Image src={icon10}  cover="true"  />
+                    </div>
+                    <div className="flex-grow">
+                    <h2 className="text-primary text-lg title-font font-medium mb-3">
+                    Accountants in Lisburn
+
+
+                    </h2>
+                    <p className="leading-relaxed text-base">
+                    Searching for accountants in Lisburn? Our dedicated Lisburn accountants are here to provide you with top-notch accounting and financial services. Whether you need help with tax preparation, bookkeeping, financial planning, or business advisory, our team is equipped to handle all your financial needs. We offer tailored solutions to help you achieve your financial goals. Contact our Lisburn accountants today to discover how we can support your business or personal finances.
+
 
                     </p>
                     

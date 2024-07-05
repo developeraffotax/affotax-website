@@ -23,7 +23,7 @@ export default function Manchester() {
                     <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'>  Online Chartered Accountants in Manchester
 
                     </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> At Affotax, an expert accountancy company, we are a team of qualified chartered accountants providing services in the North West – Manchester. We understand what it's like to run a business in the UK; chasing dreams and seizing opportunities cannot be harder. However, having us by your side, you can focus on your businesses’ growth while we handle the nitty-gritty.<br /> 
+                    <p className='mb-8  text-tertiary/[70] text-xl max-lg:text-lg'> At Affotax, an expert accountancy company, we are a team of qualified chartered accountants providing services in the North West – Manchester. We understand what it's like to run a business in the UK; chasing dreams and seizing opportunities cannot be harder. However, having us by your side, you can focus on your businesses’ growth while we handle the nitty-gritty.<br /> <br /> 
 
 
 Manage your accounts from anywhere in the world; our accountants in Manchester are dedicated to your financial prosperity. Put your trust in Affotax; let us handle your accounts and tax filing, and we will help you score a goal.

@@ -21,9 +21,9 @@ export default function Birmingham() {
                 <div className='items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 '>
                     <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Services | Accountants in Birmingham
                     </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'> Are you looking for online accountants in Birmingham? We are an online accountancy firm, providing our services in Birmingham and all over the UK. Although we are based in London, we ensure our presence all over the UK. Affotax’s expert accountants know the ins and outs of the Birmingham business hub. 
+                    <p className='mb-8  text-tertiary/[70] text-xl max-lg:text-lg'> Are you looking for online accountants in Birmingham? We are an online accountancy firm, providing our services in Birmingham and all over the UK. Although we are based in London, we ensure our presence all over the UK. Affotax’s expert accountants know the ins and outs of the Birmingham business hub. 
 
-That being said, who’s got time (or frankly, the patience) to manage accounts and tax forms while keeping pace with the Birmingham business hub? Well, our Birmingham accountants provide online accountancy and tax filing services that are as sweet as the chocolates at Cadbury World.
+<br/> <br/>That being said, who’s got time (or frankly, the patience) to manage accounts and tax forms while keeping pace with the Birmingham business hub? Well, our Birmingham accountants provide online accountancy and tax filing services that are as sweet as the chocolates at Cadbury World.
 
  </p>
                     <div className='flex justify-center text-nowrap '>

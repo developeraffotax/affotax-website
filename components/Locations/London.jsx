@@ -21,7 +21,7 @@ export default function London() {
                 <div className='items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 '>
                     <h1 className=' text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left'> Online Accountant <br /> Services | Accountants in London
                     </h1>
-                    <p className='mb-8 leading-relaxed font-semibold text-tertiary/[70] text-xl max-lg:text-lg'>Are you a business owner in London, UK? We understand that running a business in London can be staggering. Between muddling through the bustling Oxford Street and managing everyday challenges, keeping your finances in tip-top shape can feel like an extra climb up Big Ben. This is where we come in; our expert accountants in London are here to help you by providing the cheapest tax filing and accounting services in the UK. 
+                    <p className='mb-8  text-tertiary/[70] text-xl max-lg:text-lg'>Are you a business owner in London, UK? We understand that running a business in London can be staggering. Between muddling through the bustling Oxford Street and managing everyday challenges, keeping your finances in tip-top shape can feel like an extra climb up Big Ben. This is where we come in; our expert accountants in London are here to help you by providing the cheapest tax filing and accounting services in the UK.<br/> <br/>
 
 Forget the dusty stereotype of accountants buried in spreadsheets. We're expert accountants in London, dedicated to handling your Companies House and HM Revenue & Customs (HMRC) filings. Whether planning to start a new venture or own an established company in the UK, our London accountants offer expert guidance and online services to keep your finances running like a well-oiled machine.
 
@@ -180,9 +180,9 @@ Forget the dusty stereotype of accountants buried in spreadsheets. We're expert 
                 </div>
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                Competitive rates and transparent pricing
+                Competitive Rates
                 </h3>
-                <h4 className="mt-2 text-base text-gray-700">
+                <h4 className="mt-2 text-base text-gray-700 ">
                 No hidden fees, just clear, upfront pricing that fits your budget.
 
 Stop juggling spreadsheets and stressing over tax deadlines. Let our London accountants take the reins and help you discover the full potential of your business.
@@ -208,8 +208,11 @@ Stop juggling spreadsheets and stressing over tax deadlines. Let our London acco
         <div className="container px-5 py-12 mx-auto">
             <div className="text-center mb-16">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                Best & Affordable Accountants in London | United Kingdom
+                Our Services at a Glance
                 </h1>
+                <p>
+                When it comes to comprehensive and reliable accounting services, our accountants in London stand out among the rest. Here are some of the additional services we offer:
+                </p>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
                 </div>
@@ -217,26 +220,16 @@ Stop juggling spreadsheets and stressing over tax deadlines. Let our London acco
             <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
                 <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
                     <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-5 flex-shrink-0">
-                    {/* <svg
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        className="w-10 h-10"
-                        viewBox="0 0 24 24"
-                    >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                    </svg> */}
-                    {/* <img src={Tax.src} alt="tax"/> */}
+                    
                     <Image src={Tax}  cover="true"  />
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                    Our Services at a Glance
+                    Start-Up Services
                     </h2>
                     <p className="leading-relaxed text-base">
-                    When it comes to comprehensive and reliable accounting services, our accountants in London stand out among the rest. Here are some of the additional services we offer:
+                    Starting a new business in London? Our accountants in London offer comprehensive start-up services including business plan development, financial projections, and funding advice. We are here to support you from the ground up.
+
 
                     </p>
                     
