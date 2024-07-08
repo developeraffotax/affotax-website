@@ -4,7 +4,7 @@ import Experience from "@/public/experience.png";
 import Deadline from "@/public/deadline.png";
 import Award from "@/public/award.png";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/London";
+import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
 
 
 

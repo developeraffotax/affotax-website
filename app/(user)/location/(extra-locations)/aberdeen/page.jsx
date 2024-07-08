@@ -5,15 +5,21 @@ import Deadline from "@/public/deadline.png";
 import Award from "@/public/award.png";
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
+import {
+	hero,
+	icon1,
+	icon2,
+	icon3,
+	icon4,
+} from "@/public/assets/extra-locations";
 
 export const metadata = {
-	title: "Bristol Accountancy | Chartered Accountants Bristol",
+	title: "Aberdeen Accountants; Chartered Accountants in Aberdeen",
 	description:
-		"Looking for reliable accountants in Bristol? We are expert accountants Bristol, ready to help your business grow. Contact our Bristol accountants today!",
+		"We are reliable & affordable accountants in Aberdeen ready to handle your accounting & tax filing needs. Contact our chartered Aberdeen accountants today!",
 };
 
-export default function Bristol() {
+export default function Aberdeen() {
 	return (
 		<main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
 			{/* HOME TOP */}
@@ -22,20 +28,24 @@ export default function Bristol() {
 					<div className=" flex pb-24  flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between  ">
 						<div className="items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 ">
 							<h1 className=" text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left">
-								Chartered Accountants Bristol
+								Chartered Accountants in Aberdeen
 							</h1>
 							<p className="mb-8  text-tertiary/[70] text-xl max-lg:text-lg">
-								It's an exciting experience to do business in
-								Bristol. With its lively ambiance and numerous
-								chances for expansion, the city is a good place
-								for businesses. However, Keeping track of money
-								may be tiresome and make you forget essential
-								business matters. This is where our accountants
-								Bristol comes in!
-								<br /> <br /> Our Bristol accountants are here
-								to offer you quick answers to all matters
-								regarding accounting and tax returns - send us a
-								message or get a quote now!
+								Are you looking for expert and affordable
+								accountants in Aberdeen? Well, we are here! We
+								believe running a business in Aberdeen requires
+								dedication and your sheer focus. What can be
+								problematic is managing your accounting and tax
+								filing needs at the same time, which ends up in
+								making you stressed.
+								<br /> <br />
+								Here at Affotax, our Aberdeen accountants are
+								dedicated to take the stress out of your
+								financial reporting and tax planning expertly.
+								We like to empower business owners, freelancers,
+								contractors or sole traders, etc to take the
+								next big plunge towards success. So why wait?
+								Get a quote right away!
 							</p>
 							<div className="flex justify-center text-nowrap ">
 								<Link href={"/services"}>
@@ -69,7 +79,7 @@ export default function Bristol() {
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
 						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-							Why choose our accountants Bristol?
+							Why choose our accountants in Aberdeen?
 						</h1>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -90,16 +100,14 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Expertise
+									Cloud accounting
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Years of experience dealing with the
-									intricacies of UK tax regulations underpin
-									establishing our highly skilled and
-									certified accountants' team with us. This
-									implies that we know the most recent changes
-									so that your firm stays compliant and takes
-									advantage of allowable deductions.
+									In the digital realm, it is clever to use
+									the power of online accounting software. It
+									offers us and our clients a secure and
+									user-friendly platform to access financial
+									data anytime and anywhere.
 								</h4>
 							</div>
 						</li>
@@ -117,16 +125,14 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Cloud accounting
+									Financial guidance
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									WGet rid of those mountains of paperwork you
-									had burdened yourself with earlier! We use
-									advanced online accounting software, where
-									your financial data can be accessed securely
-									at any time from any place. This allows for
-									easier collaboration and offers immediate
-									insights.
+									Our team of chartered Aberdeen accountants
+									have 10+ years of experience, providing
+									customised advice to steer through complex
+									financial situations. Send us a message
+									today!
 								</h4>
 							</div>
 						</li>
@@ -144,16 +150,14 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Customised solutions
+									Simple tax filing
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Every business is unique, so we never assume
-									that one size can fit all. We go out of our
-									way to acquire your exact needs and
-									problems. If you are new in business or an
-									up-and-running company, we can create a
-									unique approach to accounting and tax filing
-									that best suits your financial objectives.
+									We simplify tax filing for you, because we
+									believe that tax season should not be
+									hectic. We handle everything for you, from
+									self-assessment to corporation tax, ensuring
+									accuracy and efficiency.
 								</h4>
 							</div>
 						</li>
@@ -167,16 +171,14 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Peace of mind
+									Affordable
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700 ">
-									We'll help you offload the accounting and
-									tax preparation tasks. We'll deliver prompt
-									reports that are easy to understand and
-									always be there when you need help moving
-									forward so that you can take advantage of
-									any growth chances. With us by your side,
-									you can have peace of mind.
+									We believe in transparent pricing, that is
+									why our packages are affordable and
+									flexible, designed to suit the needs of your
+									business. You get the expertise you deserve
+									without breaking the bank
 								</h4>
 							</div>
 						</li>
@@ -190,9 +192,12 @@ export default function Bristol() {
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
 						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-							What do our Bristol accountants offer?
+							What do our accountants in Aberdeen offer?
 						</h1>
-
+						<p className="text-sm">
+							Here are just a few things our expert Aberdeen
+							accountants offer through our cheap services:
+						</p>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -204,14 +209,12 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Effortless tax filing
+									Accessibility & flexibility
 								</h2>
 								<p className="leading-relaxed text-base">
-									Our skilled accountants carefully prepare
-									and submit your tax returns to guarantee the
-									precision and maximisation of returns.
-									Therefore, as the process continues, you can
-									inquire about it when needed.
+									You can manage your finances at your
+									convenience, 24/7, no matter where you are
+									located and any time you want.
 								</p>
 							</div>
 						</div>
@@ -221,14 +224,12 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Easy bookkeeping
+									Real-time collaboration
 								</h2>
 								<p className="leading-relaxed text-base">
-									Assign the laborious work of bookkeeping to
-									our professionals. We will manage your
-									everyday operations, identify expenses, and
-									store precise information, offering a true
-									perspective on your financial state.
+									Enable the proactive management of finances
+									by your Aberdeen accountants, seamlessly
+									sharing financial data.
 								</p>
 							</div>
 						</div>
@@ -238,14 +239,12 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Financial guidance
+									Enhanced security
 								</h2>
 								<p className="leading-relaxed text-base">
-									We don't just do numbers; we give you the
-									necessary insights for growth. Obtain
-									helpful financial advice for informed
-									investment choices, budgeting, and future
-									growth strategies.
+									Your financial data is safeguarded with us
+									by cloud-based accounting platforms, as they
+									have very strong security systems.
 								</p>
 							</div>
 						</div>
@@ -255,14 +254,12 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Proactive support
+									Scalability
 								</h2>
 								<p className="leading-relaxed text-base">
-									Navigating tax changes, optimising cash
-									flow, or financial planning options – we are
-									here for you. Let us be your reliable
-									Bristol accountancy firm throughout the
-									business journey.
+									Our online services get better with time; as
+									your venture grows, we grow with you, thus
+									offering appropriate assistance always.
 								</p>
 							</div>
 						</div>
@@ -270,14 +267,14 @@ export default function Bristol() {
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
 						<h1 className=" title-font text-3xl font-semibold ">
-							Talk to reliable accountants Bristol!
+							Run a thriving business in Aberdeen
 						</h1>
 						<p className="mt-4 text-md ">
-							We are one of the most affordable accountancy firms
-							Bristol. By partnering with our Bristol accountants,
-							you gain a dedicated team that is passionate about
-							your success. Contact us today to discuss how we can
-							simplify your finances.
+							By choosing Affotax, you get a dedicated and
+							reliable partner; Contact us today for a free
+							consultation and discover how our online accountancy
+							services can empower your Aberdeen business to
+							thrive.
 						</p>
 						<Link href={"/contact-us"}>
 							<button className="drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">

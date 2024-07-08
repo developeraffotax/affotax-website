@@ -5,15 +5,21 @@ import Deadline from "@/public/deadline.png";
 import Award from "@/public/award.png";
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
+import {
+	hero,
+	icon1,
+	icon2,
+	icon3,
+	icon4,
+} from "@/public/assets/extra-locations";
 
 export const metadata = {
-	title: "Bristol Accountancy | Chartered Accountants Bristol",
+	title: "Online Chartered Accountants Inverness, Scotland",
 	description:
-		"Looking for reliable accountants in Bristol? We are expert accountants Bristol, ready to help your business grow. Contact our Bristol accountants today!",
+		"Looking for Inverness accountants? Manage your accounting & tax filing with expert accountants in Inverness. Contact our accountants Inverness right away!",
 };
 
-export default function Bristol() {
+export default function Aberdeen() {
 	return (
 		<main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
 			{/* HOME TOP */}
@@ -22,20 +28,23 @@ export default function Bristol() {
 					<div className=" flex pb-24  flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between  ">
 						<div className="items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 ">
 							<h1 className=" text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left">
-								Chartered Accountants Bristol
+								Chartered Accountants Inverness
 							</h1>
 							<p className="mb-8  text-tertiary/[70] text-xl max-lg:text-lg">
-								It's an exciting experience to do business in
-								Bristol. With its lively ambiance and numerous
-								chances for expansion, the city is a good place
-								for businesses. However, Keeping track of money
-								may be tiresome and make you forget essential
-								business matters. This is where our accountants
-								Bristol comes in!
-								<br /> <br /> Our Bristol accountants are here
-								to offer you quick answers to all matters
-								regarding accounting and tax returns - send us a
-								message or get a quote now!
+								Inverness is a pretty busy city to run a
+								business in, and our accountants in Inverness
+								understand how it must require all of your
+								attention. What can often eat into that precious
+								time of yours is the management of finances and
+								taxes. To manage all that along with focusing on
+								the growth of your business can feel like a sack
+								of stones.
+								<br /> <br />
+								Here is the good news, our Inverness accountants
+								are here to lift that heft by providing
+								comprehensive accountancy and tax filing
+								services online – get a quote or send us a
+								message right away!
 							</p>
 							<div className="flex justify-center text-nowrap ">
 								<Link href={"/services"}>
@@ -69,7 +78,7 @@ export default function Bristol() {
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
 						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-							Why choose our accountants Bristol?
+							What to expect from our accountants Inverness?
 						</h1>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -90,16 +99,13 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Expertise
+									Accuracy
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Years of experience dealing with the
-									intricacies of UK tax regulations underpin
-									establishing our highly skilled and
-									certified accountants' team with us. This
-									implies that we know the most recent changes
-									so that your firm stays compliant and takes
-									advantage of allowable deductions.
+									We will review your tax filing to remove
+									mistakes or errors that may lead you to be
+									penalised because to be efficient and
+									careful in our work is the goal.
 								</h4>
 							</div>
 						</li>
@@ -117,16 +123,13 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Cloud accounting
+									Tax savings
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									WGet rid of those mountains of paperwork you
-									had burdened yourself with earlier! We use
-									advanced online accounting software, where
-									your financial data can be accessed securely
-									at any time from any place. This allows for
-									easier collaboration and offers immediate
-									insights.
+									Having knowledge about the UK tax laws
+									enables us to perceive possible deductions
+									and credits, thus reducing your tax
+									liability, so let us help you.
 								</h4>
 							</div>
 						</li>
@@ -144,16 +147,13 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Customised solutions
+									E-filing
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Every business is unique, so we never assume
-									that one size can fit all. We go out of our
-									way to acquire your exact needs and
-									problems. If you are new in business or an
-									up-and-running company, we can create a
-									unique approach to accounting and tax filing
-									that best suits your financial objectives.
+									Make certain to save time and get rid of
+									paperwork problems. We will ensure that all
+									your tax returns are filed electronically,
+									so you can have peace of mind.
 								</h4>
 							</div>
 						</li>
@@ -167,16 +167,13 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Peace of mind
+									Tax support
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700 ">
-									We'll help you offload the accounting and
-									tax preparation tasks. We'll deliver prompt
-									reports that are easy to understand and
-									always be there when you need help moving
-									forward so that you can take advantage of
-									any growth chances. With us by your side,
-									you can have peace of mind.
+									We go beyond tax seasons and provide
+									on-going support. We are always available to
+									help you practically in matters concerning
+									taxes. Get a quote today!
 								</h4>
 							</div>
 						</li>
@@ -190,9 +187,14 @@ export default function Bristol() {
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
 						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-							What do our Bristol accountants offer?
+							Why choose our accountants Inverness?
 						</h1>
-
+						<p className="text-sm">
+							Our accountants Inverness understand UK tax laws
+							very well and are committed to ensuring that all
+							your tax returns are correct, as well as submitted
+							electronically when due. Here is more:
+						</p>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -204,14 +206,14 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Effortless tax filing
+									Customised solutions
 								</h2>
 								<p className="leading-relaxed text-base">
-									Our skilled accountants carefully prepare
-									and submit your tax returns to guarantee the
-									precision and maximisation of returns.
-									Therefore, as the process continues, you can
-									inquire about it when needed.
+									We understand that each firm has its own
+									unique attributes. Our trained team members
+									will establish close cooperation with you to
+									comprehend your requirements and come up
+									with the customised solution.
 								</p>
 							</div>
 						</div>
@@ -221,14 +223,14 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Easy bookkeeping
+									Cloud-based accounting
 								</h2>
 								<p className="leading-relaxed text-base">
-									Assign the laborious work of bookkeeping to
-									our professionals. We will manage your
-									everyday operations, identify expenses, and
-									store precise information, offering a true
-									perspective on your financial state.
+									You get to enjoy the convenience of
+									controlling your finances from a distance.
+									Our safe online platform enables you to get
+									financial statements, invoices, as well as
+									tax updates no matter where you are.
 								</p>
 							</div>
 						</div>
@@ -238,14 +240,14 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Financial guidance
+									Tax planning
 								</h2>
 								<p className="leading-relaxed text-base">
-									We don't just do numbers; we give you the
-									necessary insights for growth. Obtain
-									helpful financial advice for informed
-									investment choices, budgeting, and future
-									growth strategies.
+									Reduce your tax burden to increase your
+									profits. Our accountants in Inverness will
+									keep themselves informed about the most
+									recent tax laws, and help you devise the
+									best tax arrangements.
 								</p>
 							</div>
 						</div>
@@ -255,14 +257,15 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Proactive support
+									Seamless communication
 								</h2>
 								<p className="leading-relaxed text-base">
-									Navigating tax changes, optimising cash
-									flow, or financial planning options – we are
-									here for you. Let us be your reliable
-									Bristol accountancy firm throughout the
-									business journey.
+									Transparency and clear communication is
+									something that we highly believe in. For you
+									to ask questions or any form of
+									clarification, you will be assigned a
+									reliable expert to talk to at our firm.
+									Contact us today!
 								</p>
 							</div>
 						</div>
@@ -270,14 +273,13 @@ export default function Bristol() {
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
 						<h1 className=" title-font text-3xl font-semibold ">
-							Talk to reliable accountants Bristol!
+							Chat with your own financial advisor Inverness!
 						</h1>
 						<p className="mt-4 text-md ">
-							We are one of the most affordable accountancy firms
-							Bristol. By partnering with our Bristol accountants,
-							you gain a dedicated team that is passionate about
-							your success. Contact us today to discuss how we can
-							simplify your finances.
+							Get in touch with us today and talk to one of our
+							expert inverness accountants. We are one of the UK’s
+							most Affordable accountancy firms Inverness – let’s
+							connect!
 						</p>
 						<Link href={"/contact-us"}>
 							<button className="drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">

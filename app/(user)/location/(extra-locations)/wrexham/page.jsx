@@ -5,15 +5,15 @@ import Deadline from "@/public/deadline.png";
 import Award from "@/public/award.png";
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
+import { hero, icon1, icon2, icon3, icon4, } from "@/public/assets/extra-locations";
 
 export const metadata = {
-	title: "Bristol Accountancy | Chartered Accountants Bristol",
+	title: "Chartered Accountants Wrexham | Top Wrexham Accountants",
 	description:
-		"Looking for reliable accountants in Bristol? We are expert accountants Bristol, ready to help your business grow. Contact our Bristol accountants today!",
+		"Looking for chartered accountants Wrexham? Our Wrexham accountants help businesses thrive. Manage accounts & tax filing with expert accountants in Wrexham.",
 };
 
-export default function Bristol() {
+export default function Wrexham() {
 	return (
 		<main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
 			{/* HOME TOP */}
@@ -22,20 +22,21 @@ export default function Bristol() {
 					<div className=" flex pb-24  flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between  ">
 						<div className="items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 ">
 							<h1 className=" text-5xl  max-lg:text-4xl mb-4 font-bold  text-tertiary max-lg:text-left">
-								Chartered Accountants Bristol
+								Chartered Accountants Wrexham
 							</h1>
 							<p className="mb-8  text-tertiary/[70] text-xl max-lg:text-lg">
-								It's an exciting experience to do business in
-								Bristol. With its lively ambiance and numerous
-								chances for expansion, the city is a good place
-								for businesses. However, Keeping track of money
-								may be tiresome and make you forget essential
-								business matters. This is where our accountants
-								Bristol comes in!
-								<br /> <br /> Our Bristol accountants are here
-								to offer you quick answers to all matters
-								regarding accounting and tax returns - send us a
-								message or get a quote now!
+								We understand how freelancers, small businesses,
+								startups, and other enterprises in the UK face
+								financial challenges. Our dedicated accountants
+								in Wrexham promise to deliver the best
+								bookkeeping and tax filing services and much
+								more, customised to your precise requirements.
+								<br /> <br />
+								Thanks to years of experience in the industry,
+								our team is well-versed in all aspects of
+								accounting, taxation, and financial planning. We
+								always strive to keep track of any new HMRC tax
+								laws and regulations. Get a quote today!
 							</p>
 							<div className="flex justify-center text-nowrap ">
 								<Link href={"/services"}>
@@ -69,7 +70,7 @@ export default function Bristol() {
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
 						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-							Why choose our accountants Bristol?
+							Why choose our Accountants Wrexham?
 						</h1>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -90,16 +91,16 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Expertise
+									Affordability
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Years of experience dealing with the
-									intricacies of UK tax regulations underpin
-									establishing our highly skilled and
-									certified accountants' team with us. This
-									implies that we know the most recent changes
-									so that your firm stays compliant and takes
-									advantage of allowable deductions.
+									We believe in high-quality accounting
+									services that customers can afford. Our
+									prices are structured to be fair, so you get
+									value for your money, regardless of whether
+									you are a sole trader or a limited company.
+									We can manage your finances without putting
+									pressure on them.
 								</h4>
 							</div>
 						</li>
@@ -117,16 +118,18 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Cloud accounting
+									Online efficiency
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									WGet rid of those mountains of paperwork you
-									had burdened yourself with earlier! We use
-									advanced online accounting software, where
-									your financial data can be accessed securely
-									at any time from any place. This allows for
-									easier collaboration and offers immediate
-									insights.
+									Convenience is important in today's
+									fast-paced world, and hence, accounting and
+									tax filing issues can be sorted via our
+									online platform either at home or at work.
+									This eliminates the need to go physically to
+									the tax office at Wrexham, which is usually
+									time-consuming. We have user-friendly
+									digital tools that enable our customers to
+									have smooth interactions.
 								</h4>
 							</div>
 						</li>
@@ -144,16 +147,16 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Customised solutions
+									Experienced accountants
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Every business is unique, so we never assume
-									that one size can fit all. We go out of our
-									way to acquire your exact needs and
-									problems. If you are new in business or an
-									up-and-running company, we can create a
-									unique approach to accounting and tax filing
-									that best suits your financial objectives.
+									We have comprehensive knowledge of the most
+									recent accounting traditions and tax
+									legislation. For accurate and timely advice,
+									we always keep track of the latest
+									developments in our profession. By selecting
+									us, you become a part of a successful
+									financial partnership with experts.
 								</h4>
 							</div>
 						</li>
@@ -167,16 +170,15 @@ export default function Bristol() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Peace of mind
+									Accuracy & punctuality
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700 ">
-									We'll help you offload the accounting and
-									tax preparation tasks. We'll deliver prompt
-									reports that are easy to understand and
-									always be there when you need help moving
-									forward so that you can take advantage of
-									any growth chances. With us by your side,
-									you can have peace of mind.
+									We focus on paying close attention to all
+									the details needed and delivering timely
+									services. Our systems aim to ensure that all
+									your account details are correct and that
+									you always submit your taxes on time. You
+									can trust us to handle your money prudently.
 								</h4>
 							</div>
 						</li>
@@ -190,9 +192,12 @@ export default function Bristol() {
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
 						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-							What do our Bristol accountants offer?
+							What our accountants Wrexham offer
 						</h1>
-
+						<p className="text-sm">
+							Here are a few reasons why our Wrexham accountants
+							could be the game changer for you:
+						</p>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -204,14 +209,15 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Effortless tax filing
+									Company accounts
 								</h2>
 								<p className="leading-relaxed text-base">
-									Our skilled accountants carefully prepare
-									and submit your tax returns to guarantee the
-									precision and maximisation of returns.
-									Therefore, as the process continues, you can
-									inquire about it when needed.
+									We look after all aspects of a business's
+									accounts, from preparation to submission.
+									Our competence ensures that the financial
+									statements are accurate and meet the
+									compliance standards set by authorities,
+									hence giving you peace of mind.
 								</p>
 							</div>
 						</div>
@@ -221,14 +227,16 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Easy bookkeeping
+									Corporation tax
 								</h2>
 								<p className="leading-relaxed text-base">
-									Assign the laborious work of bookkeeping to
-									our professionals. We will manage your
-									everyday operations, identify expenses, and
-									store precise information, offering a true
-									perspective on your financial state.
+									Although the process of guiding corporation
+									tax can be intricate, our experienced team
+									is responsible for making it simpler for
+									you. By ensuring that your tax is prepared
+									and submitted accurately, we assist you in
+									limiting liabilities and capitalising on
+									existing reliefs.
 								</p>
 							</div>
 						</div>
@@ -238,14 +246,14 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Financial guidance
+									Confirmation statement
 								</h2>
 								<p className="leading-relaxed text-base">
-									We don't just do numbers; we give you the
-									necessary insights for growth. Obtain
-									helpful financial advice for informed
-									investment choices, budgeting, and future
-									growth strategies.
+									Any company needs to maintain compliance. We
+									take care of your confirmation statements
+									and file them correctly and on time so that
+									you remain in the good books of the
+									regulatory bodies.
 								</p>
 							</div>
 						</div>
@@ -255,14 +263,15 @@ export default function Bristol() {
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
-									Proactive support
+									Self-assessment
 								</h2>
 								<p className="leading-relaxed text-base">
-									Navigating tax changes, optimising cash
-									flow, or financial planning options – we are
-									here for you. Let us be your reliable
-									Bristol accountancy firm throughout the
-									business journey.
+									Self-assessment may engender fearful
+									experiences among independent workers and
+									self-proprietors. Our specialists walk you
+									through the procedure and ensure that you
+									file your tax returns accurately and timely,
+									thereby keeping you safe from fines.
 								</p>
 							</div>
 						</div>
@@ -270,14 +279,12 @@ export default function Bristol() {
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
 						<h1 className=" title-font text-3xl font-semibold ">
-							Talk to reliable accountants Bristol!
+							Chat with expert accountants Wrexham!
 						</h1>
 						<p className="mt-4 text-md ">
-							We are one of the most affordable accountancy firms
-							Bristol. By partnering with our Bristol accountants,
-							you gain a dedicated team that is passionate about
-							your success. Contact us today to discuss how we can
-							simplify your finances.
+							Do not hesitate to contact our professional team of
+							accountants in Wrexham. We are happy to help you out
+							because we succeed when you succeed.
 						</p>
 						<Link href={"/contact-us"}>
 							<button className="drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">
@@ -286,6 +293,30 @@ export default function Bristol() {
 							</button>
 						</Link>
 					</div>
+				</div>
+
+				<div>
+					<p className="hidden">
+						VAT return We specialise in VAT services, particularly
+						reducing VAT compliance burdens. We handle your VAT
+						returns to ensure timing and accuracy so that you can
+						concentrate on expanding your business. Payroll services
+						Managing payroll can indeed be time-consuming and
+						complex. Our payroll services ensure two things: that
+						employees are paid accurately and on time and that they
+						comply with all relevant regulations. Bookkeeping Good
+						financial management requires accurate financial
+						records. Our bookkeeping service allows for accurate
+						record maintenance and always keeps them updated,
+						enhancing your business performance. Company formation
+						When starting a business, one must be aware of and deal
+						with many legal and regulatory problems. Our company's
+						services are meant to make things easier for you. We
+						help you in all stages involved in starting your
+						company, from selecting the most suitable type of
+						business organisation to filing appropriate papers at
+						either the state or federal levels.
+					</p>
 				</div>
 			</section>
 		</main>

@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, } from "@/public/assets/Birmingham";
+import Tax from "@/public/tax.png";
+import Experience from "@/public/experience.png";
+import Deadline from "@/public/deadline.png";
+import Award from "@/public/award.png";
+import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
 
 export const metadata = {
 	title: "Accountants Coventry UK | Expert Accountants in Coventry",
@@ -181,10 +185,10 @@ export default function Coventry() {
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
 					</div>
-					<div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+					<div className="flex max-md:flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-5 flex-shrink-0">
-								<Image src={icon5} cover="true" />
+								<Image src={Tax} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -201,7 +205,7 @@ export default function Coventry() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={icon6} cover="true" />
+								<Image src={Award} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -217,7 +221,7 @@ export default function Coventry() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={icon7} cover="true" />
+								<Image src={Deadline} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -234,7 +238,7 @@ export default function Coventry() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={icon8} cover="true" />
+								<Image src={Experience} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">

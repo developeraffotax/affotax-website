@@ -5,7 +5,7 @@ import Deadline from "@/public/deadline.png";
 import Award from "@/public/award.png";
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/London";
+import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
 
 export const metadata = {
 	title: "Chartered Accountants in Greenwich London - Affotax",

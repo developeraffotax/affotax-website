@@ -7,7 +7,7 @@ import Fully from "@/public/fully.png";
 import Support from "@/public/support.png";
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/London";
+import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
 
 export const metadata = {
 	title: "Reliable and Online Accountants in East London",
