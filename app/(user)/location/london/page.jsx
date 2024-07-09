@@ -1,16 +1,12 @@
 import Link from "next/link";
-import Tax from "@/public/tax.png";
-import Experience from "@/public/experience.png";
-import Deadline from "@/public/deadline.png";
-import Award from "@/public/award.png";
-import Fully from "@/public/fully.png";
-import Support from "@/public/support.png";
+
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10 } from "@/public/assets/London";
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, } from "@/public/assets/London";
 
 export const metadata = {
 	title: "Online Accountants in London for Small Businesses",
-	description: "Grow your small business with expert online accountants in London. Free consultation & customised packages by the best London accountants. Contact us today!",
+	description:
+		"Grow your small business with expert online accountants in London. Free consultation & customised packages by the best London accountants. Contact us today!",
 };
 
 export default function London() {
@@ -104,9 +100,11 @@ export default function London() {
 									Taxation tamed
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									From Corporation Tax to VAT, our tax
-									specialists will ensure you're compliant and
-									maximise your deductions.
+									Our London accountants ensure compliance and
+									maximize deductions for Corporation Tax,
+									VAT, and more, providing expert guidance and
+									support for all your tax needs efficiently
+									and effectively.
 								</h4>
 							</div>
 						</li>
@@ -151,9 +149,12 @@ export default function London() {
 									Expert financial guidance
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Get personalised advice from our chartered
-									accountants in London who understand the UK
-									business sector.
+									Get expert advice from London-based
+									chartered accountants. Specializing in the
+									UK business sector, we offer personalized
+									solutions to help your business thrive.
+									Contact us today for professional guidance
+									and support
 								</h4>
 							</div>
 						</li>

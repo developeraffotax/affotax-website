@@ -1,16 +1,12 @@
 import Link from "next/link";
-import Tax from "@/public/tax.png";
-import Experience from "@/public/experience.png";
-import Deadline from "@/public/deadline.png";
-import Award from "@/public/award.png";
-import Fully from "@/public/fully.png";
-import Support from "@/public/support.png";
+
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/England";
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, } from "@/public/assets/England";
 
 export const metadata = {
 	title: "Get in Touch with Expert Accountants in England Today!",
-	description: "Looking for reliable England-based accountants? We are a team of expert online accountants in England providing tax filing & accounting services in the UK.",
+	description:
+		"Looking for reliable England-based accountants? We are a team of expert online accountants in England providing tax filing & accounting services in the UK.",
 };
 
 export default function England() {
@@ -94,9 +90,10 @@ export default function England() {
 									Tax filings
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-									Self-assessment, corporate tax, VAT - we'll
-									handle everything, making sure you are HMRC
-									happy.
+									Self-assessment, corporate tax, VAT - we
+									handle everything efficiently to ensure your
+									compliance and satisfaction with HMRC,
+									leaving you worry-free and confident.
 								</h4>
 							</div>
 						</li>
@@ -188,21 +185,25 @@ export default function England() {
 					<div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-5 flex-shrink-0">
-								<Image src={Tax} cover="true" />
+								<Image src={icon5} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
 									Competitive Pricing
 								</h2>
 								<p className="leading-relaxed text-base">
-									No deposit, just transparent pricing that's
-									kind to your wallet.
+									Experience competitive pricing with no
+									deposit required, offering transparent rates
+									that are kind to your wallet. Our commitment
+									to affordability ensures you get the best
+									value without any hidden fees or upfront
+									costs.
 								</p>
 							</div>
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Award} cover="true" />
+								<Image src={icon6} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -210,28 +211,35 @@ export default function England() {
 								</h2>
 								<p className="leading-relaxed text-base">
 									Our friendly team is just a phone call or
-									email away, whenever you need us.
+									email away. Need assistance? Reach out
+									anytime, and we’ll be there to help. Your
+									satisfaction is our priority, and we're
+									dedicated to providing prompt, reliable
+									support whenever you need it
 								</p>
 							</div>
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Deadline} cover="true" />
+								<Image src={icon7} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
 									Peace of mind
 								</h2>
 								<p className="leading-relaxed text-base">
-									We take the burden off your shoulders, so
-									you can sleep soundly knowing your finances
-									are in safe hands.
+									Experience peace of mind as we take the
+									burden off your shoulders, ensuring you can
+									sleep soundly knowing your finances are in
+									safe hands. Trust us to manage your finances
+									securely and efficiently, giving you the
+									freedom to focus on what truly matters
 								</p>
 							</div>
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Experience} cover="true" />
+								<Image src={icon8} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -240,13 +248,17 @@ export default function England() {
 								<p className="leading-relaxed text-base">
 									Our England accountants have years of
 									experience in providing accounting and tax
-									filing services in the UK.
+									filing services in the UK, ensuring
+									compliance with UK regulations, maximizing
+									tax efficiency, and offering personalized
+									financial advice to meet your specific needs
+									and goals.
 								</p>
 							</div>
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Fully} cover="true" />
+								<Image src={icon9} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -265,7 +277,7 @@ export default function England() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Support} cover="true" />
+								<Image src={icon10} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">

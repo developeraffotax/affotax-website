@@ -90,7 +90,7 @@ export default function Wales() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Local knowledge with national reach
+									Local knowledge
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
 									At our Welsh business services office, we

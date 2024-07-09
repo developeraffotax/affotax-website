@@ -5,12 +5,12 @@ import icon2 from "@/public/assets/England/bookkeeping.png"
 import icon3 from "@/public/assets/England/Accounting Software.png"
 import icon4 from "@/public/assets/England/Smooth Online Service.png"
 
-// import icon5 from "@/assets/England/Accountants in St Asaph.png"
-// import icon6 from "@/assets/England/Put your trust in Affotax.png"
-// import icon7 from "@/assets/England/Stop dragging your feet through tax season.png"
-// import icon8 from "@/assets/England/Accountants in St Asaph.png"
-// import icon9 from "@/assets/England/Put your trust in Affotax.png"
-// import icon10 from "@/assets/England/Stop dragging your feet through tax season.png"
+import icon5 from "@/public/assets/England/Price.png"
+import icon6 from "@/public/assets/England/Always contactable.png"
+import icon7 from "@/public/assets/England/Peace of mind.png"
+import icon8 from "@/public/assets/England/Experience.png"
+import icon9 from "@/public/assets/England/Fully accredited.png"
+import icon10 from "@/public/assets/England/Support.png"
 
 
 export {
@@ -19,11 +19,11 @@ export {
     icon2,
     icon3,
     icon4,
-    // icon5,
-    // icon6,
-    // icon7,
-    // icon8,
-    // icon9,
-    // icon10,
+    icon5,
+    icon6,
+    icon7,
+    icon8,
+    icon9,
+    icon10,
 
 }
