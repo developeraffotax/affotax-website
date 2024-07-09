@@ -90,7 +90,7 @@ export default function Birmingham() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-									Reliable chartered accountants
+									Reliable accountants
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
 									Your finances are in safe hands; our
@@ -195,7 +195,7 @@ export default function Birmingham() {
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
 					</div>
-					<div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+					<div className="flex max-md:flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-5 flex-shrink-0">
 								<Image src={icon5} cover="true" />

@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <>
       {/* DESKTOP NAVIGATION */}
-      <header className=" body-font w-full bg-tertiary font-semibold text-secondary h-auto  px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-0 max-lg:w-full fixed top-0 left-0 z-50 shadow-md shadow-black/20 ">
+      <header className=" body-font w-full bg-[#23314e] font-semibold text-secondary h-auto  px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-0 max-lg:w-full fixed top-0 left-0 z-50 shadow-md shadow-black/20 ">
         <div className="    mx-auto container  max-lg:hidden">
           <div className="flex flex-row items-center justify-between ">
             <div className="  py-5 z-50">

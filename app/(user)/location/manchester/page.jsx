@@ -1,13 +1,8 @@
 import Link from "next/link";
-import Tax from "@/public/tax.png";
-import Experience from "@/public/experience.png";
-import Deadline from "@/public/deadline.png";
-import Award from "@/public/award.png";
-import Fully from "@/public/fully.png";
-import Support from "@/public/support.png";
+
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/Manchester";
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10 } from "@/public/assets/Manchester";
 
 export const metadata = {
 	title: "Talk to Our Online Chartered Accountants in Manchester",
@@ -30,15 +25,15 @@ export default function Manchester() {
 								{" "}
 								At Affotax, an expert accountancy company, we
 								are a team of qualified chartered accountants
-								providing services in the North West –
+								providing services in the North West -
 								Manchester. We understand what it's like to run
 								a business in the UK; chasing dreams and seizing
 								opportunities cannot be harder. However, having
 								us by your side, you can focus on your
-								businesses’ growth while we handle the
+								businesses' growth while we handle the
 								nitty-gritty.
 								<br /> <br />
-								Manage your accounts from anywhere in the world;
+								Manage your accounts from anywhere in the world,
 								our accountants in Manchester are dedicated to
 								your financial prosperity. Put your trust in
 								Affotax; let us handle your accounts and tax
@@ -212,7 +207,7 @@ export default function Manchester() {
 					<div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-5 flex-shrink-0">
-								<Image src={Tax} cover="true" />
+								<Image src={icon5} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -230,7 +225,7 @@ export default function Manchester() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Award} cover="true" />
+								<Image src={icon6} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -248,7 +243,7 @@ export default function Manchester() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Deadline} cover="true" />
+								<Image src={icon7} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -266,7 +261,7 @@ export default function Manchester() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Experience} cover="true" />
+								<Image src={icon8} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -284,7 +279,7 @@ export default function Manchester() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Fully} cover="true" />
+								<Image src={icon9} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
@@ -302,7 +297,7 @@ export default function Manchester() {
 						</div>
 						<div className="p-4 md:w-1/3 flex flex-col text-center items-center">
 							<div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-primary mb-5 flex-shrink-0">
-								<Image src={Support} cover="true" />
+								<Image src={icon10} cover="true" />
 							</div>
 							<div className="flex-grow">
 								<h2 className="text-primary text-lg title-font font-medium mb-3">
