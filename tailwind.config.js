@@ -17,6 +17,10 @@ module.exports = {
         primary : '#ff7f45',
         secondary : '#FFFFFF',
         tertiary : '#000000'
+      },
+
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       }
     },
   },

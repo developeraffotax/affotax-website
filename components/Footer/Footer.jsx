@@ -140,7 +140,7 @@ export default function Footer() {
       
     </div>
     <div>
-        <p className='text-sm font-mono max-md:text-xs mb-2'>© Copyright 2023 Affotax - All Rights Reserved</p>
+        <p className='text-sm font-poppins  max-md:text-xs mb-2'>© Copyright 2023 Affotax - All Rights Reserved</p>
     </div>
     
   </footer>

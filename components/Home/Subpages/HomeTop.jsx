@@ -1,6 +1,8 @@
 import React from 'react';
 import HeroImg from '@/public/hero.png'
 import HeroImg2 from '@/public/hero2.png'
+import HeroImg3 from '@/public/hero3.png'
+import HeroImg4 from '@/public/hero4.png'
 import Link from 'next/link';
 
 export default function HomeTop() {
@@ -19,11 +21,11 @@ export default function HomeTop() {
                     </div>
                 </div>
 
-                <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4 scale-125'>
+                <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4 '>
                     <img
                         className='object-cover object-center rounded  drop-shadow-xl '
                         alt='hero'
-                        src={HeroImg.src}
+                        src={HeroImg4.src}
                     />
                 </div>
             </div>

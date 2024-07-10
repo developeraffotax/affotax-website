@@ -804,7 +804,7 @@ const serviceData8 = {
 
 `,
 	keywords: ['uk company registration'],
-	link: "uk-company-registration-(uk-resident)",
+	link: "uk-company-registration-uk-resident",
 	title: "UK Company Registration (UK Resident)",
 	content: `Are you looking for UK company registration? If you are a UK resident, it is worthwhile to choose a legal structure for your upcoming enterprise. According to the UK government, for a business to follow a legal structure in the UK, a limited company is the most preferred option. It is a separate entity, implying that the finances of the owner are separate from their company's finances. Which means, if the enterprise falls into debt, the shareholders would have limited liability. You would also get tax benefits because limited companies pay corporation tax instead of income tax on their profits. Not to mention, limited liability can increase your credibility with customers, suppliers and investors. This helps you get a professional image and reputation. 
 
@@ -2404,7 +2404,7 @@ In addition to secrecy, having a private space ensures that directors meet their
 			price: "£19",
 			packageIncludes: [
 				"Use of our directors service address for official needs.",
-				"Use of our directors service address for official needs.",
+				
 			],
 		},
 	],
