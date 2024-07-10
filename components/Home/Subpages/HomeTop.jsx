@@ -18,7 +18,7 @@ export default function HomeTop() {
                     </div>
                 </div>
 
-                <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4 '>
+                <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4  '>
                     <img
                         className='object-cover object-center rounded  drop-shadow-xl '
                         alt='hero'
