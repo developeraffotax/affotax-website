@@ -2,7 +2,7 @@ import Link from "next/link";
 
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10 } from "@/public/assets/Manchester";
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10 } from "@/public/assets/manchester";
 
 export const metadata = {
 	title: "Talk to Our Online Chartered Accountants in Manchester",

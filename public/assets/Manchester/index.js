@@ -1,16 +1,16 @@
-import hero from "@/public/assets/Manchester/top image.png";
+import hero from "@/public/assets/manchester/top-image.png";
 
-import icon1 from "@/public/assets/Manchester/Customised solution.png";
-import icon2 from "@/public/assets/Manchester/Transparency & integrity.png";
-import icon3 from "@/public/assets/Manchester/Responsive support.png";
-import icon4 from "@/public/assets/Manchester/value for money.png";
+import icon1 from "@/public/assets/manchester/icon1.png";
+import icon2 from "@/public/assets/manchester/icon2.png";
+import icon3 from "@/public/assets/manchester/icon3.png";
+import icon4 from "@/public/assets/manchester/icon4.png";
 
-import icon5 from "@/public/assets/Manchester/Tax Advisory and Planning.png";
-import icon6 from "@/public/assets/Manchester/Bookkeeping and VAT Returns.png";
-import icon7 from "@/public/assets/Manchester/Financial Reporting and Analysis.png";
-import icon8 from "@/public/assets/Manchester/Business Planning and Cash Flow Management.png";
-import icon9 from "@/public/assets/Manchester/Payroll Services.png";
-import icon10 from "@/public/assets/Manchester/Audit and Assurance.png";
+import icon5 from "@/public/assets/manchester/icon5.png";
+import icon6 from "@/public/assets/manchester/icon6.png";
+import icon7 from "@/public/assets/manchester/icon7.png";
+import icon8 from "@/public/assets/manchester/icon8.png";
+import icon9 from "@/public/assets/manchester/icon9.png";
+import icon10 from "@/public/assets/manchester/icon10.png";
 
 export {
 	hero,

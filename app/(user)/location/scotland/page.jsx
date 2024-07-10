@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/Scotland";
+import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/scotland";
 
 export const metadata = {
 	title: "Online Chartered Accountants in Scotland Ready to Service",
@@ -44,7 +44,7 @@ export default function Scotland() {
 							</div>
 						</div>
 
-						<div className=" w-[50%]  max-lg:w-full  max-lg:mb-4 scale-125">
+						<div className=" w-[50%]  max-lg:w-full  max-lg:mb-4 scale- ">
 							<Image
 								className="object-cover object-center rounded  drop-shadow-xl "
 								alt="hero"

@@ -1,9 +1,9 @@
-import hero from "@/public/assets/Scotland/top image.png"
+import hero from "@/public/assets/scotland/top-image.png"
 
-import icon1 from "@/public/assets/Scotland/Experienced accountants.png"
-import icon2 from "@/public/assets/Scotland/Affordable Prices.png"
-import icon3 from "@/public/assets/Scotland/Improved financial decisions.png"
-import icon4 from "@/public/assets/Scotland/Personalized Financial Advice.png"
+import icon1 from "@/public/assets/scotland/icon1.png"
+import icon2 from "@/public/assets/scotland/icon2.png"
+import icon3 from "@/public/assets/scotland/icon3.png"
+import icon4 from "@/public/assets/scotland/icon4.png"
 
 
 export {

@@ -1,16 +1,16 @@
-import hero from "@/public/assets/England/top image.png";
+import hero from "@/public/assets/england/top-image.png";
 
-import icon1 from "@/public/assets/England/Tax filings.png";
-import icon2 from "@/public/assets/England/bookkeeping.png";
-import icon3 from "@/public/assets/England/Accounting Software.png";
-import icon4 from "@/public/assets/England/Smooth Online Service.png";
+import icon1 from "@/public/assets/england/icon1.png";
+import icon2 from "@/public/assets/england/icon2.png";
+import icon3 from "@/public/assets/england/icon3.png";
+import icon4 from "@/public/assets/england/icon4.png";
 
-import icon5 from "@/public/assets/England/Price.png";
-import icon6 from "@/public/assets/England/Always contactable.png";
-import icon7 from "@/public/assets/England/Peace of mind.png";
-import icon8 from "@/public/assets/England/Experience.png";
-import icon9 from "@/public/assets/England/Fully accredited.png";
-import icon10 from "@/public/assets/England/Support.png";
+import icon5 from "@/public/assets/england/icon5.png";
+import icon6 from "@/public/assets/england/icon6.png";
+import icon7 from "@/public/assets/england/icon7.png";
+import icon8 from "@/public/assets/england/icon8.png";
+import icon9 from "@/public/assets/england/icon9.png";
+import icon10 from "@/public/assets/england/icon10.png";
 
 export {
 	hero,

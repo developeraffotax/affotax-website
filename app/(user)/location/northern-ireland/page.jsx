@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, } from "@/public/assets/Northern Ireland";
+import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, } from "@/public/assets/northern-ireland";
 
 export const metadata = {
 	title: "Online Accountants in Northern Ireland | Belfast | Derry",
@@ -49,7 +49,7 @@ export default function NorthernIreland() {
 							</div>
 						</div>
 
-						<div className=" w-[50%]  max-lg:w-full  max-lg:mb-4 scale-125">
+						<div className=" w-[50%]  max-lg:w-full  max-lg:mb-4 scale-125 max-lg:mr-8 lg:pt-12">
 							<Image
 								className="object-cover object-center rounded  drop-shadow-xl "
 								alt="hero"
