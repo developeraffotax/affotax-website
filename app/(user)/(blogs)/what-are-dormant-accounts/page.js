@@ -67,7 +67,7 @@ export default function BlogPage() {
 								alt="second blog"
 								className="w-full rounded-xl"
 							/>
-							<figcaption>Digital art by Anonymous</figcaption>
+							{/* <figcaption>Digital art by Anonymous</figcaption> */}
 						</figure>
 						<h2>What are dormant accounts?</h2>
 						<p>

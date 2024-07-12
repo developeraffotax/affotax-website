@@ -63,7 +63,7 @@ export default function BlogPage() {
 								alt="third blog"
 								className="w-full rounded-xl"
 							/>
-							<figcaption>Digital art by Anonymous</figcaption>
+							{/* <figcaption>Digital art by Anonymous</figcaption> */}
 						</figure>
 
 						<h3>Who needs to register for corporation tax?</h3>

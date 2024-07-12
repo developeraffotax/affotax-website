@@ -64,7 +64,7 @@ export default function BlogPage() {
 								alt="third blog"
 								className="w-full rounded-xl"
 							/>
-							<figcaption>Digital art by Anonymous</figcaption>
+							{/* <figcaption>Digital art by Anonymous</figcaption> */}
 						</figure>
 						<h2>What is a company dissolution?
                         </h2>
