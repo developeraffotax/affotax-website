@@ -77,13 +77,31 @@ export default function Footer() {
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">About</h2>
           <nav className="list-none mb-10">
+
+          <li>
+              <Link href={'/blogs'} className="text-gray-600 hover:text-primary text-xs font-semibold">Blogs</Link>
+            </li>
+
             <li>
               <Link href={'/about-us'} className="text-gray-600 hover:text-primary text-xs font-semibold">About Us</Link>
+            </li>
+
+
+
+            <li>
+              <Link href={'/contact-us'} className="text-gray-600 hover:text-primary text-xs font-semibold">Contact Us</Link>
             </li>
 
             <li>
               <Link href={'/pricing'} className="text-gray-600 hover:text-primary text-xs font-semibold">Our Pricing</Link>
             </li>
+
+
+            <li>
+              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Privacy Policy</Link>
+            </li>
+
+
 
             <li>
               <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Refer a Friend</Link>
@@ -93,17 +111,11 @@ export default function Footer() {
               <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Filing Deadlines</Link>
             </li>
 
-            <li>
-              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">News & Articles</Link>
-            </li>
+            
 
-            <li>
-              <Link href={'/contact-us'} className="text-gray-600 hover:text-primary text-xs font-semibold">Contact Us</Link>
-            </li>
+           
 
-            <li>
-              <Link href={'/'} className="text-gray-600 hover:text-primary text-xs font-semibold">Privacy Policy</Link>
-            </li>
+            
            
            
           </nav>
