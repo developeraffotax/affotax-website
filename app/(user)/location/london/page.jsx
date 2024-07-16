@@ -1,7 +1,19 @@
 import Link from "next/link";
 
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10, } from "@/public/assets/london";
+import {
+	hero,
+	icon1,
+	icon2,
+	icon3,
+	icon4,
+	icon5,
+	icon6,
+	icon7,
+	icon8,
+	icon9,
+	icon10,
+} from "@/public/assets/london";
 
 export const metadata = {
 	title: "Online Accountants in London for Small Businesses",
@@ -331,6 +343,45 @@ export default function London() {
 						</Link>
 					</div>
 				</div>
+			</section>
+
+			<section className="hidden">
+				<p>
+					Our Services at a Glance When it comes to comprehensive and
+					reliable accounting services, our accountants in London
+					stand out among the rest. Here are some of the additional
+					services we offer: Management Accounting Our expert
+					accountants in London provide detailed management accounting
+					services to help you make strategic business decisions. This
+					includes budgeting, forecasting, and variance analysis to
+					keep your business on track. Financial Planning and Analysis
+					We offer bespoke financial planning and analysis services to
+					assist you in understanding your financial health and
+					planning for the future. Our accountants in London are adept
+					at creating tailored financial plans that align with your
+					business goals. Business Advisory Our business advisory
+					services are designed to provide you with the insights and
+					strategies needed to grow and expand your business. From
+					market analysis to strategic planning, our London
+					accountants have the expertise to guide you. Forensic
+					Accounting Our forensic accounting services are available to
+					assist with investigations into financial discrepancies and
+					fraud. Our accountants in London are skilled in uncovering
+					financial irregularities and providing clear, actionable
+					reports. Cloud Accounting Solutions Stay ahead of the curve
+					with our cloud accounting solutions. Our London accountants
+					offer services on popular platforms such as Xero and
+					QuickBooks, allowing you to access your financial data
+					anytime, anywhere. Start-Up Services Starting a new business
+					in London? Our accountants in London offer comprehensive
+					start-up services including business plan development,
+					financial projections, and funding advice. We are here to
+					support you from the ground up. International Taxation If
+					your business operates on a global scale, our international
+					taxation services can help you navigate the complexities of
+					cross-border tax laws. Our London accountants have extensive
+					experience in managing international tax issues.
+				</p>
 			</section>
 		</main>
 	);

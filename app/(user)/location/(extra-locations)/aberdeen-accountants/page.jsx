@@ -285,6 +285,26 @@ export default function Aberdeen() {
 					</div>
 				</div>
 			</section>
+
+			<section className="hidden">
+				<p>
+					Our Services Bookkeeping: Maintain accurate records of all
+					your financial transactions. Tax Returns: Ensure compliance
+					and accuracy in your tax filings. Payroll Management:
+					Streamline payroll processes for timely and accurate
+					employee payments. Financial Planning: Develop strategic
+					plans to achieve your financial goals. Business Advisory:
+					Get expert advice on business growth and sustainability. VAT
+					Services: Manage VAT registration, returns, and compliance
+					effortlessly. Auditing: Conduct thorough audits to ensure
+					financial accuracy and transparency. We pride ourselves on
+					being one of the top accounting firms in Aberdeen, dedicated
+					to delivering exceptional service and value to our clients.
+					Let Affotax be your trusted partner in financial success.
+					Contact us today to learn more about how we can support your
+					business needs.
+				</p>
+			</section>
 		</main>
 	);
 }

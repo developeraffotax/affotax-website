@@ -290,6 +290,24 @@ export default function Aberdeen() {
 					</div>
 				</div>
 			</section>
+
+			<section className="hidden">
+				<p>
+					Comprehensive Accountancy Services
+We offer a full range of accountancy services in Inverness, including:
+Bookkeeping: Keep your financial records organized and up-to-date with our meticulous bookkeeping services. Our accountants in Inverness will ensure your books are accurate and compliant with all relevant regulations.
+Payroll Management: Our payroll services in Inverness streamline the process of paying your employees, ensuring timely and accurate payments, and compliance with all payroll-related laws.
+Company Formation: Starting a new business in Inverness? We assist with company formation, helping you navigate the legal requirements and set up your business for success.
+VAT Returns: Let our accountants in Inverness handle your VAT returns, ensuring they are filed accurately and on time, so you can avoid penalties and focus on growing your business.
+Annual Accounts Preparation: We prepare your annual accounts, providing you with a clear picture of your financial performance and ensuring compliance with statutory requirements.
+Corporation Tax: Our corporation tax services in Inverness help you minimize your tax liabilities and ensure compliance with all corporate tax laws.
+Self-Assessment Tax Returns: We assist individuals and business owners with self-assessment tax returns, ensuring accuracy and maximizing potential tax savings.
+
+
+
+
+				</p>
+			</section>
 		</main>
 	);
 }

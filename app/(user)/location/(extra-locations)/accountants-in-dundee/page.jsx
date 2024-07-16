@@ -302,6 +302,34 @@ export default function Dundee() {
 					</div>
 				</div>
 			</section>
+
+			<section className="hidden">
+				<p>
+				Comprehensive Accountancy Services in Dundee
+Our accountants in Dundee offer a wide range of services designed to ensure your financial affairs are in perfect order. Here’s a closer look at what we provide:
+Corporation Tax
+Managing corporation tax can be challenging, but our accountants in Dundee are well-versed in the latest tax laws and regulations. We help you maximize your tax efficiency, ensuring you meet all HMRC requirements without any hassle.
+Annual Accounts
+Accurate annual accounts are essential for any business. Our Dundee accountants prepare comprehensive annual accounts, giving you a clear picture of your financial health and helping you make informed business decisions.
+Bookkeeping
+Efficient bookkeeping is the backbone of any successful business. Our bookkeeping services in Dundee ensure your financial records are always up-to-date and accurate, allowing you to focus on growing your business.
+Payroll Services
+Managing payroll can be time-consuming and complex. Our payroll services in Dundee ensure your employees are paid accurately and on time, and we handle all the necessary payroll compliance requirements.
+VAT Services
+VAT can be a complicated area for many businesses. Our accountants in Dundee provide expert VAT services, from registration and compliance to filing returns, helping you avoid costly mistakes.
+Self-Assessment
+Self-assessment tax returns can be daunting. Our Dundee accountants take the stress out of self-assessment by managing your returns accurately and timely, ensuring you claim all eligible deductions and reliefs.
+Company Formation
+Starting a new business? Our company formation services in Dundee help you set up your business correctly from the start. We guide you through the entire process, from choosing the right business structure to registering with Companies House.
+
+
+
+
+
+
+
+				</p>
+			</section>
 		</main>
 	);
 }

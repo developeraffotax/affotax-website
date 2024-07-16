@@ -326,6 +326,23 @@ export default function Newport() {
 					</div>
 				</div>
 			</section>
+
+			<section className="hidden">
+				<p>
+				Comprehensive Services:
+At Affotax, we offer a wide range of accounting services designed to meet the varied needs of our clients. Our services include:
+Accounts Preparation: We prepare detailed financial statements, giving you a clear and accurate picture of your company's financial health. This is essential for making informed business decisions and maintaining compliance with regulatory requirements.
+Corporation Tax: Our experts ensure that your corporation tax returns are accurately prepared and filed on time. We help you optimize your tax position, minimizing liabilities and maximizing savings.
+Self Assessment: Navigating self-assessment tax returns can be daunting. Our accountants in Newport simplify the process, ensuring that your returns are completed accurately and submitted promptly, avoiding any penalties.
+Company Secretarial: Managing company secretarial duties is crucial for maintaining legal compliance. We handle all aspects of company secretarial work, from maintaining statutory registers to filing annual returns and ensuring compliance with the Companies Act.
+Payroll Services: Efficient payroll management is vital for employee satisfaction and compliance. We provide comprehensive payroll services, handling everything from salary calculations to PAYE and National Insurance contributions.
+VAT Services: VAT compliance is complex and constantly changing. Our accountants in Newport offer expert advice and services, from VAT registration to preparing and submitting VAT returns, ensuring you stay compliant and avoid penalties.
+Bookkeeping: Keeping accurate records is the backbone of good financial management. Our bookkeeping services ensure that your financial records are meticulously maintained, providing a solid foundation for your business operations.
+Company Formation: Starting a new business? We assist with the entire company formation process, ensuring that all legal requirements are met and setting you up for success from day one.
+
+
+				</p>
+			</section>
 		</main>
 	);
 }

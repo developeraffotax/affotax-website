@@ -295,6 +295,20 @@ export default function Cardiff() {
 					</div>
 				</div>
 			</section>
+
+			<section className="hidden">
+				<p>
+				Our Range of Accountancy Services in Cardiff
+Accounts: Comprehensive accounting services to keep your financial records accurate and up-to-date.
+Corporation Tax: Expert assistance in managing your corporation tax obligations, ensuring compliance with HMRC Cardiff regulations.
+Self-Assessment: Personalized support for individuals to complete self-assessment tax returns accurately and on time.
+Company Secretarial: Professional company secretarial services to manage your statutory obligations seamlessly.
+Payroll: Efficient payroll services to ensure your employees are paid correctly and on time.
+VAT: Comprehensive VAT services, from registration to filing, ensuring compliance with VAT regulations.
+Bookkeeping: Accurate bookkeeping services to keep your financial records in order.
+Company Formation: Expert guidance on forming a new company, providing you with a strong foundation for success.
+				</p>
+			</section>
 		</main>
 	);
 }

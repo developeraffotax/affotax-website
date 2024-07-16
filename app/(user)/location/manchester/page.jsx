@@ -334,6 +334,14 @@ export default function Manchester() {
 					</div>
 				</div>
 			</section>
+
+
+			<section className="hidden">
+				<p>
+				
+
+				</p>
+			</section>
 		</main>
 	);
 }

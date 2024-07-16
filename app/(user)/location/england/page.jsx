@@ -314,6 +314,21 @@ export default function England() {
 					</div>
 				</div>
 			</section>
+
+
+
+			<section className="hidden">
+				<p>
+				Comprehensive Accounting Services
+Tax Services: Accounting firms in England excel in managing complex tax requirements, ensuring compliance with HMRC regulations. They offer services such as corporate tax planning, VAT returns, self-assessment tax filings, and more. These firms are adept at navigating the intricacies of the UK tax system, helping businesses minimize liabilities and maximize savings.
+Payroll Management: Managing payroll can be a time-consuming task. Accounting firms in England offer comprehensive payroll services, handling everything from salary calculations and tax deductions to pension contributions and employee benefits. This ensures employees are paid accurately and on time, and businesses remain compliant with employment laws.
+Financial Reporting: Regular financial reporting is essential for understanding a business's financial position. Accounting firms in England prepare detailed financial statements, including profit and loss accounts, balance sheets, and cash flow statements. These reports provide valuable insights, helping businesses make strategic decisions.
+Audit and Assurance: For businesses requiring audits, accounting firms in England provide thorough audit services to ensure compliance with statutory requirements. These audits also offer assurance to stakeholders that the financial statements are accurate and reliable.
+Advisory Services: Beyond routine accounting, many firms offer advisory services to help businesses grow. This includes strategic planning, business restructuring, and financial forecasting. Advisors work closely with clients to understand their goals and provide tailored solutions.
+
+
+				</p>
+			</section>
 		</main>
 	);
 }

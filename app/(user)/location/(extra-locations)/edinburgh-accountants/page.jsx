@@ -279,6 +279,16 @@ export default function Edinburgh() {
 					</div>
 				</div>
 			</section>
+
+			<section className="hidden">
+				<p>
+				Expert Accountants in Edinburgh, Scotland
+Affotax is not just another accounting firm. We are a team of passionate professionals committed to helping you achieve financial success. Our accountants in Edinburgh are well-versed in local regulations and industry best practices, ensuring that your business remains compliant and thrives in a competitive market.
+Whether you need assistance with day-to-day bookkeeping, detailed financial analysis, or strategic tax planning, Affotax is your trusted partner. Our comprehensive range of services covers all aspects of accounting, making us the go-to choice for businesses and individuals in Edinburgh, Scotland.
+
+
+				</p>
+			</section>
 		</main>
 	);
 }

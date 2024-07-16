@@ -306,6 +306,33 @@ export default function Swansea() {
 					</div>
 				</div>
 			</section>
+
+
+			<section className="hidden">
+				<p>
+				Comprehensive Accountancy Services in Swansea
+Our accountants in Swansea offer a wide range of services to meet all your financial needs. Whether you are a small business owner, a large corporation, or an individual seeking personal tax advice, our Swansea accountants have the expertise to assist you. Here are some of the key services we provide:
+Accounts
+Our accountants in Swansea ensure that your financial statements are prepared accurately and on time. We handle all aspects of financial accounting, including the preparation of balance sheets, profit and loss statements, and cash flow statements. Our meticulous approach helps you maintain a clear and precise financial overview of your business.
+Corporation Tax
+Navigating corporate tax laws can be complex. Our Swansea accountants specialize in corporation tax planning and compliance, ensuring your business meets all statutory requirements while optimizing your tax position. We prepare and file your corporation tax returns, helping you maximize deductions and credits.
+Self Assessment
+For individuals and sole traders, self-assessment can be a daunting task. Our expert accountants in Swansea take the stress out of self-assessment tax returns. We accurately prepare and file your tax returns, ensuring you meet HMRC deadlines and avoid penalties.
+Company Secretarial
+Maintaining statutory records and ensuring compliance with company law is essential for every business. Our Swansea accountants offer comprehensive company secretarial services, including the preparation of minutes, filing of annual returns, and maintaining company registers.
+Payroll
+Managing payroll can be time-consuming and complex. Our payroll services in Swansea ensure your employees are paid accurately and on time. We handle all aspects of payroll processing, including payslips, tax calculations, and submissions to HMRC.
+VAT
+Our accountants in Swansea provide expert advice on VAT registration, planning, and compliance. We assist with VAT return preparation and submission, ensuring you stay compliant with all VAT regulations and take advantage of any available reliefs.
+Bookkeeping
+Accurate bookkeeping is the foundation of any successful business. Our Swansea accountants offer reliable bookkeeping services, maintaining your financial records meticulously. We manage your day-to-day transactions, ensuring your books are always up to date.
+Company Formation
+Starting a new business in Swansea? Our accountants provide comprehensive company formation services, guiding you through the entire process. We help with business structure advice, registration with Companies House, and setting up all necessary accounts.
+
+
+
+				</p>
+			</section>
 		</main>
 	);
 }

@@ -283,7 +283,37 @@ export default function Birmingham() {
 							</button>
 						</Link>
 					</div>
+
 				</div>
+			</section>
+
+
+			<section className="hidden">
+				<p>
+				Comprehensive Accounting Services in Birmingham
+Our accountants in Birmingham UK provide a full spectrum of accounting services, including:
+Tax Planning and Preparation 
+Navigating the complexities of tax laws can be daunting. Our Birmingham accountants specialize in tax planning and preparation, helping you minimize your tax liability and ensure compliance with all regulations.
+Bookkeeping Services 
+Accurate bookkeeping is the foundation of sound financial management. Our accountants in Birmingham offer meticulous bookkeeping services, ensuring that your financial records are up-to-date and accurate.
+Payroll Services 
+Managing payroll can be time-consuming and complex. Our accounting firms in Birmingham provide comprehensive payroll services, ensuring that your employees are paid accurately and on time.
+Financial Consulting 
+Strategic financial planning is key to business growth. Our Birmingham accountants offer expert financial consulting services, helping you make informed decisions that drive success.
+Audit and Assurance Services 
+Our team of chartered accountants in Birmingham provides thorough audit and assurance services, helping you maintain financial integrity and transparency.
+Corporate Finance Services 
+From mergers and acquisitions to corporate restructuring, our accounting Birmingham experts offer a wide range of corporate finance services to support your business at every stage of its lifecycle.
+Business Advisory Services 
+Our Birmingham accountants provide strategic business advisory services, helping you identify opportunities for growth and implement effective strategies.
+
+Our Presence in Birmingham
+While we are based in London, our reach extends across the UK, including a strong presence in Birmingham. Our accountant Birmingham team understands the local market dynamics and offers services that are tailored to the needs of Birmingham businesses.
+Local Expertise, National Reach Our Birmingham accountants combine local expertise with a national perspective, providing you with insights that are both relevant and strategic. We understand the Birmingham business environment and offer services that help you navigate its unique challenges.
+Accessible and Approachable We pride ourselves on being accessible and approachable. Our accountants Birmingham team is always available to answer your questions and provide the support you need. We communicate in plain English, making complex financial matters easy to understand.
+
+
+				</p>
 			</section>
 		</main>
 	);

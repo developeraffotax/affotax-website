@@ -1,10 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, } from "@/public/assets/wales";
+import {
+	hero,
+	icon1,
+	icon2,
+	icon3,
+	icon4,
+	icon5,
+	icon6,
+	icon7,
+} from "@/public/assets/wales";
 
 export const metadata = {
 	title: "Online Chartered Accountants in Wales, United Kingdom",
-	description: "Looking for qualified and convenient accountants in Wales? Click here; you're in the right place - free quotes & expert financial advice for your business.",
+	description:
+		"Looking for qualified and convenient accountants in Wales? Click here; you're in the right place - free quotes & expert financial advice for your business.",
 };
 
 export default function Wales() {
@@ -256,6 +266,44 @@ export default function Wales() {
 						</Link>
 					</div>
 				</div>
+			</section>
+
+			<section className="hidden">
+				<p>
+					Comprehensive Accounting Services in Wales Our services are
+					designed to cater to the diverse needs of businesses across
+					Wales. Whether you are located in Cardiff, Swansea, Newport,
+					or any other part of the country, our team of dedicated
+					Wales accountants is ready to assist you. Here are some of
+					the key services we offer: Bookkeeping and Accounting:
+					Accurate and timely bookkeeping to ensure your financial
+					records are always up-to-date. Tax Preparation and Planning:
+					Expert tax advice and preparation services to help you stay
+					compliant and minimize your tax liabilities. Payroll
+					Services: Efficient payroll management to ensure your
+					employees are paid correctly and on time. Financial
+					Consulting: Strategic financial advice to help your business
+					grow and thrive in the competitive market. Audit and
+					Assurance: Thorough auditing services to provide you with
+					confidence in your financial statements. VAT Services:
+					Comprehensive VAT management and advice to ensure compliance
+					with regulations. South Wales Accountants In South Wales,
+					our accountants are well-versed in the local business
+					environment. From the vibrant city of Cardiff to the
+					industrial heart of Newport, our South Wales accountants
+					understand the unique challenges and opportunities
+					businesses face in this region. We offer tailored accounting
+					solutions that meet the specific needs of South Wales
+					businesses, ensuring your financial operations run smoothly
+					and efficiently. North Wales Accountants For businesses in
+					North Wales, including areas like St Asaph and Bangor, our
+					accountants provide a full range of services designed to
+					support your business growth. We know that the needs of
+					businesses in North Wales can differ significantly from
+					those in other regions, which is why we offer customized
+					accounting services that address the unique demands of this
+					area.
+				</p>
 			</section>
 		</main>
 	);

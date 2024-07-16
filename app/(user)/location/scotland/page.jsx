@@ -4,7 +4,8 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/scotland";
 
 export const metadata = {
 	title: "Online Chartered Accountants in Scotland Ready to Service",
-	description: "We are the most affordable chartered accountants in Scotland. Your financial matters are taken care of expertly by our Scotland accountants with precision.",
+	description:
+		"We are the most affordable chartered accountants in Scotland. Your financial matters are taken care of expertly by our Scotland accountants with precision.",
 };
 
 export default function Scotland() {
@@ -171,11 +172,19 @@ export default function Scotland() {
 							</div>
 							<div className="ml-6 lg:ml-0 lg:mt-10">
 								<h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-								Personalized Financial Advice
-
+									Personalized Financial Advice
 								</h3>
 								<h4 className="mt-2 text-base text-gray-700">
-								Our Scotland accountants provide personalized financial advice tailored to your specific needs and goals. Whether you're an individual or a business, our dedicated team helps you achieve financial success through strategic planning and expert guidance. We focus on understanding your unique financial situation and delivering customized solutions that drive growth and stability.
+									Our Scotland accountants provide
+									personalized financial advice tailored to
+									your specific needs and goals. Whether
+									you're an individual or a business, our
+									dedicated team helps you achieve financial
+									success through strategic planning and
+									expert guidance. We focus on understanding
+									your unique financial situation and
+									delivering customized solutions that drive
+									growth and stability.
 								</h4>
 							</div>
 						</li>
@@ -221,6 +230,50 @@ export default function Scotland() {
 						})}
 					</ul> */}
 				</div>
+			</section>
+
+			<section className="hidden">
+				<p>
+					Comprehensive Accountancy Services in Scotland Whether you
+					are a small business owner, a growing enterprise, or an
+					individual seeking expert financial advice, our accountants
+					in Scotland are here to support you. Our services include:
+					Tax Planning and Preparation Navigating the intricacies of
+					the Scottish tax system can be daunting. Our accountants in
+					Scotland specialize in tax planning and preparation,
+					ensuring that you comply with all regulations while
+					minimizing your tax liabilities. We offer strategic advice
+					to help you optimize your tax position and make informed
+					financial decisions. Bookkeeping Services Accurate and
+					up-to-date bookkeeping is essential for any business. Our
+					team provides meticulous bookkeeping services, ensuring that
+					your financial records are maintained accurately and
+					efficiently. This service includes tracking income and
+					expenses, managing invoices, and reconciling bank
+					statements. Payroll Management Managing payroll can be a
+					time-consuming and complex task. Our payroll management
+					services ensure that your employees are paid accurately and
+					on time, while also handling all necessary tax filings and
+					compliance requirements. This allows you to focus on running
+					your business without the administrative burden. Company
+					Formation Starting a new business in Scotland? Our experts
+					can assist with company formation, guiding you through the
+					legal and regulatory requirements to establish your
+					business. We provide comprehensive support, from registering
+					your company to setting up your accounting systems.
+					Accountant in Bankruptcy Scotland For individuals and
+					businesses facing financial difficulties, our accountants
+					provide expert advice and support in dealing with bankruptcy
+					proceedings. We help you understand your options and work
+					towards achieving the best possible outcome, ensuring that
+					your financial future is safeguarded. Personalized Financial
+					Advice Our chartered accountants in Scotland offer
+					personalized financial advice tailored to your specific
+					needs and goals. Whether you are planning for retirement,
+					seeking investment opportunities, or looking to grow your
+					business, our team provides strategic planning and expert
+					guidance to help you achieve financial success.
+				</p>
 			</section>
 		</main>
 	);

@@ -288,6 +288,25 @@ export default function Glasgow() {
 					</div>
 				</div>
 			</section>
+
+			<section className="hidden">
+				<p>
+				Comprehensive Accountancy Services in Glasgow
+1. Bookkeeping and Accounting
+Our accountants in Glasgow provide meticulous bookkeeping and accounting services, ensuring your financial records are accurate and up-to-date. We take the hassle out of data entry, allowing you to focus on growing your business.
+2. Tax Advisory and Filing
+Navigating the complexities of tax regulations can be challenging. Our tax advisors in Glasgow are well-versed in the latest tax laws and can help you minimize your tax liabilities while ensuring compliance. We handle all aspects of tax filing, making the process seamless and stress-free.
+3. Financial Planning and Analysis
+Strategic financial planning is crucial for business success. Our Glasgow accountants offer expert financial planning and analysis services, helping you make informed decisions to drive growth and profitability.
+4. Payroll Services
+Managing payroll can be time-consuming and complicated. Our team offers efficient payroll services, ensuring your employees are paid accurately and on time. We handle all payroll-related tasks, from processing payments to managing deductions and benefits.
+5. VAT Returns
+Our accountants in Glasgow are experienced in handling VAT returns, ensuring that your submissions are accurate and timely. We help you navigate the intricacies of VAT regulations, minimizing the risk of errors and penalties.
+
+
+
+				</p>
+			</section>
 		</main>
 	);
 }
