@@ -7,6 +7,7 @@ import SmallBusinessAccountants from "@/components/WhoWeHelp/SmallBusinessAccoun
 import SoleTraders from "@/components/WhoWeHelp/SoleTraders";
 import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants";
 import { dataArr } from "@/data/serviceData"
+import { metaDataObject } from "@/data/metadataWhowehelp";
 
 
 
@@ -27,7 +28,12 @@ export async function generateMetadata({ params}) {
 
   let serviceData = dataArr.filter((el) => el.link === params.slug);
   if (serviceData.length === 0) {
-    return false;
+    return {
+      title: metaDataObject[params.slug].title,
+      description: metaDataObject[params.slug].description,
+    
+      
+    }
   }
 
 

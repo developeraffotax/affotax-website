@@ -2,6 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import AboutUsImage from '@/public/about.png'
 
+
+
+
 const AboutUs = () => {
   return (
     <section className='w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-0 max-lg:pt-16 py-8 bg-primary/10   shadow-md drop-shadow-2xl shadow-gray-300 '>
