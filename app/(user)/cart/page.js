@@ -1,8 +1,10 @@
 import Cart from "@/components/Cart/Cart";
 
 export default function CartPage() {
+    
+    
     return (
-        // <Cart />
-        <p>coming soon...!!</p>
+        <Cart />
+        // <p>coming soon...!!</p>
     )
 }

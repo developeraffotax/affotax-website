@@ -8,9 +8,9 @@ export default function ServicesTo() {
             <div className="container px-5 py-12 mx-auto">
 
                 <div className="text-center mb-8">
-                    <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+                    <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
                         Our chartered accountants provide their services to:
-                    </h1>
+                    </h2>
                     <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
                 </div>

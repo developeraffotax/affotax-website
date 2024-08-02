@@ -20,9 +20,9 @@ export default function WhyUs() {
     <section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
         <div className="container px-5 py-12 mx-auto">
             <div className="text-center mb-16">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+                <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
                     Why Choose Us?
-                </h1>
+                </h2>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
                 </div>
@@ -195,9 +195,9 @@ export default function WhyUs() {
             </div>
 
         <div className=' mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
-            <h1 className=' title-font text-3xl font-semibold '>
+            <h2 className=' title-font text-3xl font-semibold '>
                 Ready to chat with the UK's top chartered accountants?
-            </h1>
+            </h2>
             <p className='mt-4 text-md '>
                 Send us a message today, or get a quote; our expert chartered accountants in the UK are ready to manage your accounting and tax filings with expertise.
             </p>

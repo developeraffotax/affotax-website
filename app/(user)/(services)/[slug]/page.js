@@ -29,8 +29,8 @@ export async function generateMetadata({ params}) {
   let serviceData = dataArr.filter((el) => el.link === params.slug);
   if (serviceData.length === 0) {
     return {
-      title: metaDataObject[params.slug].title,
-      description: metaDataObject[params.slug].description,
+      title: metaDataObject[params.slug]?.title,
+      description: metaDataObject[params.slug]?.description,
     
       
     }

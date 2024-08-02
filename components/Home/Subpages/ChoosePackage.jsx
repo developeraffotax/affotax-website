@@ -1,7 +1,62 @@
+'use client'
+
 import Link from 'next/link'
 import React from 'react'
 
 export default function ChoosePackage() {
+
+
+
+    const onClickLocalStorageHandler = (id) => {
+        if(localStorage.getItem('price_id')) {
+           
+            const old_ids = localStorage.getItem('price_id');
+            let ids_arr = old_ids.split(',');
+            
+            
+            if (!(ids_arr.find((el) => el === id))) {
+                ids_arr.push(id);
+            }
+
+            console.log(ids_arr)
+            localStorage.setItem('price_id', ids_arr)
+            
+        } else {
+            
+            localStorage.setItem('price_id', id)
+        }
+
+
+        // if (isCart) {
+        //     setCartItemsArr((prev) => {
+        //         return [...prev, 
+        //             {
+        //                 priceTitle,
+        //                 priceContent,
+        //                 price,
+        //                 packageIncludes,
+        //                 id,
+        //                 pageTitle
+        //             }
+        //         ].reverse()
+        //     })
+        // }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
     
     <>
@@ -196,7 +251,7 @@ export default function ChoosePackage() {
                     </svg>
                 </p> */}
                 <div className="border-t border-gray-300 p-6 text-center rounded-bl-lg">
-                    <Link href={'/contact-us'}>
+                    <Link href={'/cart'} onClick={onClickLocalStorageHandler.bind(null, 'pkg1')}>
                     <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded">
                     Buy Now
                     <svg
@@ -322,7 +377,7 @@ export default function ChoosePackage() {
                 </p>
                 
                 <div className="p-6 text-center border-t border-gray-300">
-                    <Link href={'/contact-us'}>
+                    <Link href={'/cart'} onClick={onClickLocalStorageHandler.bind(null, 'pkg2')}>
                     <button className="flex items-center justify-center mt-auto text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded">
                     Buy Now
                     <svg
@@ -450,7 +505,7 @@ export default function ChoosePackage() {
                 </p>
                 
                 <div className="p-6 text-center border-t border-gray-300">
-                    <Link href={'/contact-us'}>
+                    <Link href={'/cart'} onClick={onClickLocalStorageHandler.bind(null, 'pkg3')}>
                     <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded">
                     Buy Now
                     <svg
@@ -508,9 +563,9 @@ export default function ChoosePackage() {
 <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10 max-lg:block hidden">
 <div className="container  py-16 mx-auto">
    <div className="text-center mb-12">
-       <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900  mb-4">
+       <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900  mb-4">
            Choose Your Package!
-       </h1>
+       </h2>
        <div className="flex mt-6 justify-center">
            <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
        </div>
@@ -701,7 +756,7 @@ export default function ChoosePackage() {
            </svg>
        </p> */}
        <div className="border-t border-gray-300 p-6 text-center rounded-bl-lg">
-           <Link href={'/contact-us'}>
+           <Link href={'/cart'} onClick={onClickLocalStorageHandler.bind(null, 'pkg1')}>
            <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded">
            Buy Now
            <svg
@@ -834,7 +889,7 @@ export default function ChoosePackage() {
        </p>
        
        <div className="p-6 text-center border-t border-gray-300">
-           <Link href={'/contact-us'}>
+           <Link href={'/cart'} onClick={onClickLocalStorageHandler.bind(null, 'pkg2')}>
            <button className="flex items-center justify-center mt-auto text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded">
            Buy Now
            <svg
@@ -969,7 +1024,7 @@ export default function ChoosePackage() {
        </p>
        
        <div className="p-6 text-center border-t border-gray-300">
-           <Link href={'/contact-us'}>
+           <Link href={'/cart'} onClick={onClickLocalStorageHandler.bind(null, 'pkg3')}>
            <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded">
            Buy Now
            <svg

@@ -14,7 +14,7 @@ const Service = ({ data }) => {
     return (
         <div className="">
             <TopSection title={data.title} content={data.content} />
-            <PriceBoxes prices={data.prices} />
+            <PriceBoxes prices={data.prices} pageTitle={data.title}/>
             <Benefits
                 benefitsTitle={data.benefitsTitle}
                 benefits={data.benefits}

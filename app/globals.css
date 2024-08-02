@@ -26,10 +26,25 @@ body {
 
 
 
-.services:hover ul {
+.services:hover > ul {
     display: flex;
 }
 
+
+.innerMenu:hover ul {
+    display: flex;
+    /* opacity: 100;
+    transform: translateX(0); */
+}
+
+
+
+
+.innerMenuHidden ul {
+    display: none;
+    /* opacity: 100;
+    transform: translateX(0); */
+}
 
 
 .bgImage {

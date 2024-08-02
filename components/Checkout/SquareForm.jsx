@@ -1,0 +1,65 @@
+"use client";
+import { createOrder } from "@/actions/order";
+import { submitPayment } from "@/actions/payment";
+import { useState } from "react";
+import { CreditCard, PaymentForm } from "react-square-web-payments-sdk";
+
+export default function SquareForm({customerData, orderData}) {
+	const appId = "sandbox-sq0idb-gASJb-Nb95rkIZVJwrmdzQ";
+	const locationId = "L3BCKHG9DGWDX";
+
+	console.log(customerData, orderData)
+
+	const [isError, setIsError] = useState(false);
+
+
+
+
+	return (
+		<PaymentForm
+			
+			applicationId={appId}
+			locationId={locationId}
+			cardTokenizeResponseReceived={async (token) => {
+				// we’ll come back to this soon
+				try {
+					setIsError(false)
+				const result = await submitPayment(token.token, {buyer_email_address: customerData.email , amount:(orderData.totalPrice*100), billing_address:{address_line_1: customerData.address, first_name: customerData.name, postal_code: customerData.postCode, country: 'GB'}});
+				// our orders api will run here
+				
+				if (result.payment.status !== 'COMPLETED') {
+					setIsError(true)
+				} else {
+					
+
+					const res = await createOrder(customerData, orderData, result.payment.id);
+
+					localStorage.removeItem('price_id')
+
+					if (!res) {
+						setIsError(true);
+					}
+
+
+				}
+				} catch (error) {
+					
+					setIsError(true);
+
+				}
+
+
+
+
+			}}
+		>	
+
+		
+			
+			<CreditCard  />
+			<div>
+			{isError && <p className="text-red-500 text-sm text-center mt-4"> Error Occured while ordering | Please try agian later!</p>}
+			</div>
+		</PaymentForm>
+	);
+}

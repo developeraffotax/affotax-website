@@ -12,7 +12,8 @@ const serviceData = {
     Businesses are able to satisfy regulatory requirements and enhance the efficiency and cost-effectiveness of their financial processes by mastering the complexities of annual accounts and audit exemptions. By being educated and utilising the exemptions that are appropriate for your business's size and needs, you can make well-informed decisions that will benefit the financial health of your firm.`,
 
 	prices: [
-		{
+		{	
+			id: 'p1',
 			priceTitle: "Basic Yearly Reports",
 			priceContent:
 				"This package covers preparation and filing of your yearly report to Companies House for both limited by shares and limited by guarantee companies. ideal for companies having Turnover < £25K.",
@@ -22,7 +23,8 @@ const serviceData = {
 				"Filing with Companies House",
 			],
 		},
-		{
+		{	
+			id: 'p2',
 			priceTitle: "Standard Yearly Reports",
 			priceContent:
 				"This package covers preparation and filing of your company financials to Companies House for both limited by shares and limited by guarantee companies. ideal for companies having Turnover > £25K.",
@@ -33,6 +35,7 @@ const serviceData = {
 			],
 		},
 		{
+			id: 'p3',
 			priceTitle: "Premium Yearly Reports",
 			priceContent:
 				"This package covers the preparation and filing of annual accounts as well as the annual confirmation statement, including online submission with companies house.",
@@ -136,6 +139,7 @@ keywords: ['corporation tax'],
 
 	prices: [
 		{
+			id: 'p4',
 			priceTitle: "Basic",
 			priceContent:
 				"The basic package is designed to support UK businesses with company tax return preparation and online submission with HMRC. Ideal for companies having Turnover < £25K.",
@@ -147,6 +151,7 @@ keywords: ['corporation tax'],
 			],
 		},
 		{
+			id: 'p5',
 			priceTitle: "Standard",
 			priceContent:
 				"This is for companies having a Turnover > £25K. It includes everything from the basic.",
@@ -154,6 +159,7 @@ keywords: ['corporation tax'],
 			packageIncludes: [],
 		},
 		{
+			id: 'p6',
 			priceTitle: "Premium",
 			priceContent:
 				"This is Ideal for businesses seeking essential tax planning to reduce their corporation tax bill, and accurate filing with HMRC.",
@@ -257,7 +263,8 @@ const serviceData3 = {
     `,
 
 	prices: [
-		{
+		{	
+			id: 'p7',
 			priceTitle: "Starter Solution",
 			priceContent:
 				"Our starter package is designed for individuals with straightforward tax affairs and having yearly Income < £12,500.",
@@ -268,7 +275,8 @@ const serviceData3 = {
 				"Submission to HMRC.",
 			],
 		},
-		{
+		{	
+			id: 'p8',
 			priceTitle: "Prime Solution",
 			priceContent:
 				"Our premium package is designed for individuals with complex tax affairs and having yearly Income > £12,500.",
@@ -371,6 +379,7 @@ const serviceData4 = {
 
 	prices: [
 		{
+			id: 'p9',
 			priceTitle: "For UK Residents",
 			priceContent:
 				"It covers the essentials, ensuring you're ready to manage employee taxation accurately.",
@@ -381,6 +390,7 @@ const serviceData4 = {
 			],
 		},
 		{
+			id: 'p10',
 			priceTitle: "For Non-UK Residents",
 			priceContent:
 				"For Non-UK Residents, It covers the essentials for an impeccable process, ensuring you're set up to manage employee taxation accurately.",
@@ -471,6 +481,7 @@ Understanding it, along with its £85,000 threshold, Making Tax Digital (MTD) ru
 
 	prices: [
 		{
+			id: 'p11',
 			priceTitle: "Basic Package",
 			priceContent:
 				"It covers the essentials, guiding your business through the process to ensure you get the VAT number.",
@@ -482,6 +493,7 @@ Understanding it, along with its £85,000 threshold, Making Tax Digital (MTD) ru
 			],
 		},
 		{
+			id: 'p12',
 			priceTitle: "Premium Package",
 			priceContent:
 				"It covers everything in the basic package + we setup gateway login and activate the whole scheme for you.",
@@ -579,6 +591,7 @@ The annual confirmation statement helps you update information like directors an
 
 	prices: [
 		{
+			id: 'p13',
 			priceTitle: "Filing Starter",
 			priceContent:
 				"Our basic package covers the preparation and filing.",
@@ -590,6 +603,7 @@ The annual confirmation statement helps you update information like directors an
 			],
 		},
 		{
+			id: 'p14',
 			priceTitle: "Filing Express",
 			priceContent:
 				"Our express package covers the preparation and filing within 24 hours.",
@@ -691,7 +705,8 @@ const serviceData7 = {
 Has your company not actively managed its bookkeeping throughout the year? If yes, it has become essential for you, but don't panic! Affotax provides the services for UK-limited companies, which is significant for the annual tax filing process and allows you to focus on your financial details. So why wait? Get a quote today!`,
 
 	prices: [
-		{
+		{	
+			id: 'p15',
 			priceTitle: 'Basic "Annual Bookkeeping" Package',
 			priceContent:
 				"The basic package is ideal for businesses having an annual turnover  <  £25K.",
@@ -702,6 +717,7 @@ Has your company not actively managed its bookkeeping throughout the year? If ye
 			],
 		},
 		{
+			id: 'p16',
 			priceTitle: "Filing Express",
 			priceContent:
 				"This package is ideal for businesses having an annual turnover > £25K.",
@@ -804,14 +820,14 @@ const serviceData8 = {
 
 `,
 	keywords: ['uk company registration'],
-	link: "uk-company-registration-uk-resident",
+	link: "uk-company-registration-(uk-resident)",
 	title: "UK Company Registration (UK Resident)",
 	content: `Are you looking for UK company registration? If you are a UK resident, it is worthwhile to choose a legal structure for your upcoming enterprise. According to the UK government, for a business to follow a legal structure in the UK, a limited company is the most preferred option. It is a separate entity, implying that the finances of the owner are separate from their company's finances. Which means, if the enterprise falls into debt, the shareholders would have limited liability. You would also get tax benefits because limited companies pay corporation tax instead of income tax on their profits. Not to mention, limited liability can increase your credibility with customers, suppliers and investors. This helps you get a professional image and reputation. 
 
 At Affotax, we offer the most affordable services, which not only includes company formation but also UK tax filing because we make sure your business adheres to financial regulations. Check out our package and benefits below – get a quote today!`,
 
 	prices: [
-		{
+		{	id: 'p17',
 			priceTitle: "For UK Residents",
 			priceContent:
 				"We handle the paperwork so you can focus on what you do best – running your business.",
@@ -934,6 +950,7 @@ Affotax provides dormant accounts filing service for UK limited companies, regar
 
 	prices: [
 		{
+			id: 'p18',
 			priceTitle: "Standard escheatment",
 			priceContent:
 				"This exclusive package will help you prepare your data and files as UK limited companies, and submit them to Companies House within 3 working days.",
@@ -941,6 +958,7 @@ Affotax provides dormant accounts filing service for UK limited companies, regar
 			packageIncludes: [],
 		},
 		{
+			id: 'p19',
 			priceTitle: "Express escheatment",
 			priceContent:
 				"The Express delivery package helps you prepare and file as UK limited companies, and submitting them to Companies House within one working day.",
@@ -949,6 +967,7 @@ Affotax provides dormant accounts filing service for UK limited companies, regar
 		},
 
 		{
+			id: 'p20',
 			priceTitle: "Premium escheatment",
 			priceContent:
 				"The Premium delivery package helps you prepare and file as UK limited companies, and submitting them to Companies House within one working day.",
@@ -1100,6 +1119,7 @@ Simplify your financial operations with Affotax and cut costs associated with le
 
 	prices: [
 		{
+			id: 'p21',
 			priceTitle: "LLP Accounts (Basic Package)",
 			priceContent:
 				"Simplify your financial reporting with our basic package, designed for businesses seeking basic filing. This package is ideal for companies having a Turnover < £25K.",
@@ -1110,6 +1130,7 @@ Simplify your financial operations with Affotax and cut costs associated with le
 			],
 		},
 		{
+			id: 'p22',
 			priceTitle: "LLP Accounts (Standard Package)",
 			priceContent:
 				"This package is ideal for companies having a Turnover > £25K.",
@@ -1121,6 +1142,7 @@ Simplify your financial operations with Affotax and cut costs associated with le
 			],
 		},
 		{
+			id: 'p23',
 			priceTitle: "LLP Accounts (Premium Package)",
 			priceContent:
 				"The premium package is ideal for businesses requiring a comprehensive guide to preparing and filing accounts and the partnership tax return with HMRC.",
@@ -1275,6 +1297,7 @@ Here at Affotax, we are chartered accountants ready to help you wind up your bus
 
 	prices: [
 		{
+			id: 'p24',
 			priceTitle: "The Farewell Fanfare",
 			priceContent:
 				"In this package, we will complete all of the necessary documentation, including accurate filing & compliance with the UK government.",
@@ -1282,6 +1305,7 @@ Here at Affotax, we are chartered accountants ready to help you wind up your bus
 			packageIncludes: [],
 		},
 		{
+			id: 'p25',
 			priceTitle: "The Curtain Call",
 			priceContent:
 				"In this package, Affotax will complete all the necessary documentation and submit the final set of accounts before closing the LTD.",
@@ -1418,6 +1442,7 @@ We will help you file corporation tax using our agent login. This modern solutio
 
 	prices: [
 		{
+			id: 'p26',
 			priceTitle: "Submit CT600 (UK)",
 			priceContent:
 				"This package is ideal for businesses seeking essential online filing without having a gateway login.",
@@ -1583,6 +1608,7 @@ const REGISTER_FOR_CORPORATIOPN_TAX_PAGE = {
 
 	prices: [
 		{
+			id: 'p27',
 			priceTitle: "Basic",
 			priceContent:
 				"In our basic package, we handle the essentials to get your company registered for CT600 with HMRC within 7 working days.",
@@ -1594,6 +1620,7 @@ const REGISTER_FOR_CORPORATIOPN_TAX_PAGE = {
 			],
 		},
 		{
+			id: 'p28',
 			priceTitle: "Express",
 			priceContent:
 				"In the express package, we offer CT600 registration with HMRC within 1 working day.",
@@ -1740,6 +1767,7 @@ You may comfortably go through the various sections of your tax return with our 
 
 	prices: [
 		{
+			id: 'p29',
 			priceTitle: "File & Smile",
 			priceContent:
 				"In this package we ensure accurate and timely submission to HMRC's secure online 3rd party software.",
@@ -1911,7 +1939,7 @@ Our user-centric approach simplifies updating address information and other impo
 `,
 
 	prices: [
-		{
+		{	id: 'p30',
 			priceTitle: "The Phoenix Package",
 			priceContent:
 				"We assist you in making necessary changes and updates to your personal and financial information with HMRC for proper tax assessment.",
@@ -2055,7 +2083,8 @@ Upon completing the registration for self assessment, you will be issued a Uniqu
 `,
 
 	prices: [
-		{
+		{	
+			id: 'p31',
 			priceTitle: "Register & Relax",
 			priceContent:
 				"We guide you through the whole process of officially registering with HMRC to ensure accurate compliance with your tax obligations.",
@@ -2209,6 +2238,7 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 
 	prices: [
 		{
+			id: 'p32',
 			priceTitle: "Basic",
 			priceContent:
 				"It offers the essential service within the UK for your company's official communications.",
@@ -2220,6 +2250,7 @@ With Affotax, you can elevate your corporate profile while protecting your resid
 		},
 
 		{
+			id: 'p33',
 			priceTitle: "Premium",
 			priceContent:
 				"It offers everything in the basic package + director address within the UK for your company's official communications.",
@@ -2398,6 +2429,7 @@ In addition to secrecy, having a private space ensures that directors meet their
 
 	prices: [
 		{
+			id: 'p34',
 			priceTitle: "Prime Package",
 			priceContent:
 				"Our prime package offers a separate space in the UK for receiving legal and official communications while safeguarding your personal details.",
@@ -2555,6 +2587,7 @@ Individuals who fulfil certain criteria, such as owning over 25% of the company'
 
 	prices: [
 		{
+			id: 'p35',
 			priceTitle: "Pro Package",
 			priceContent:
 				"Our package provides the essentials for accurate maintenance and complying with legal obligations.",
@@ -2730,6 +2763,7 @@ Companies House name checker availability is mandatory before changing company n
 
 	prices: [
 		{
+			id: 'p36',
 			priceTitle: "Optimum Package",
 			priceContent:
 				"It covers the essentials for a smooth change of your company's name ensuring accurate updates and compliance with legal obligations.",
@@ -2899,6 +2933,7 @@ A change in these regulations can adversely affect a company's status or operati
 
 	prices: [
 		{
+			id: 'p37',
 			priceTitle: "Basic Package",
 			priceContent:
 				"Our basic package covers essential filing services for submitting changes accurately and efficiently.",
@@ -2912,10 +2947,11 @@ A change in these regulations can adversely affect a company's status or operati
 		},
 
 		{
+			id: 'p38',
 			priceTitle: "Premium Package",
 			priceContent:
 				"Our express package covers essential filing services for submitting changes just within a day.",
-			price: "£49",
+			price: "£69",
 			packageIncludes: [
 				"Changes in registered office address in the UK.",
 				"Changes in the director details.",
@@ -3066,6 +3102,7 @@ On the other hand, share issuance is also a way for companies to raise capital, 
 
 	prices: [
 		{
+			id: 'p39',
 			priceTitle: "The Ultimate Package",
 			priceContent:
 				"It covers the essentials for smooth processes, ensuring accurate updates and compliance.",
@@ -3260,6 +3297,7 @@ On the other hand, a director may also willingly leave their position on the boa
 
 	prices: [
 		{
+			id: 'p40',
 			priceTitle: "Director Appointment",
 			priceContent:
 				"Our package covers the essentials for a smooth director appointment process, ensuring compliance and accurate updates.",
@@ -3273,6 +3311,7 @@ On the other hand, a director may also willingly leave their position on the boa
 
 
 		{
+			id: 'p41',
 			priceTitle: "Director Resignation",
 			priceContent:
 				"Our package covers the essentials for a smooth director appointment process, ensuring compliance and accurate updates.",
@@ -3453,6 +3492,7 @@ At times, directors might wonder if they need to register for PAYE. PAYE registr
 
 	prices: [
 		{
+			id: 'p42',
 			priceTitle: "Director Pro (Monthly)",
 			priceContent:
 				"This package covers the essentials for smooth processing, ensuring accurate calculations and compliance. ",
@@ -3467,6 +3507,7 @@ At times, directors might wonder if they need to register for PAYE. PAYE registr
 
 
 		{
+			id: 'p43',
 			priceTitle: "Director Pro+ (Annual)",
 			priceContent:
 				"This package covers the essentials for smooth yearly processing, ensuring accurate calculations and compliance.",
@@ -3660,6 +3701,7 @@ Note: Paye for employees must be paid immediately and punctually to HM Revenue a
 
 	prices: [
 		{
+			id: 'p44',
 			priceTitle: "Elite Employee Payroll Package",
 			priceContent:
 				"It covers the essentials for smooth employee payroll processing, ensuring accurate calculations and compliance. this service cost £15 per employee per month. ",
@@ -3877,6 +3919,7 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 
 	prices: [
 		{
+			id: 'p45',
 			priceTitle: "Pension Setup",
 			priceContent:
 				"Our starter package covers the essentials for hassle-free procedure, ensuring your business meets legal requirements and supports employee retirement planning.",
@@ -3890,6 +3933,7 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 		},
 
 		{
+			id: 'p46',
 			priceTitle: "Pension Enrolment",
 			priceContent:
 				"This package is designed to do the processing through a provider such as Nest, etc.",
@@ -4087,6 +4131,7 @@ Note: If you are behind schedule with submitting or have provided inaccurate inf
 
 	prices: [
 		{
+			id: 'p47',
 			priceTitle: "Essential Package",
 			priceContent:
 				"It covers the essentials for accurate and hassle-free reporting, ensuring compliance with tax regulations and transparent employee benefit disclosure.",
@@ -4297,6 +4342,7 @@ Check out our packages, and get a quote today!
 
 	prices: [
 		{
+			id: 'p48',
 			priceTitle: 'The "Form P60" Package',
 			priceContent:
 				"This package covers the essentials for accurate and hassle-free generation, providing employees with clear and organised documentation of their total income and tax contributions.",
@@ -4308,6 +4354,7 @@ Check out our packages, and get a quote today!
 			],
 		},
 		{
+			id: 'p49',
 			priceTitle: 'The "Form P45" Package',
 			priceContent:
 				"This package covers the essentials for accurate and hassle-free generation, providing employees with clear and organised documentation of their total income and tax contributions.",
@@ -4485,6 +4532,7 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 
 	prices: [
 		{
+			id: 'p50',
 			priceTitle: 'Basic Package',
 			priceContent:
 				"It covers the essentials for accurate and hassle-free payslip generation, ensuring transparent communication of employee earnings, within 3 working days.",
@@ -4496,6 +4544,7 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 			],
 		},
 		{
+			id: 'p51',
 			priceTitle: 'Express Package',
 			priceContent:
 				"It covers the essentials for accurate and hassle-free payslip generation, ensuring transparent communication of employee earnings within 24 Hours.",
@@ -4700,6 +4749,7 @@ The expert team at Affotax has mastered the what and how of MTD VAT submission i
 
 	prices: [
 		{
+			id: 'p52',
 			priceTitle: 'Basic Package',
 			priceContent:
 				"It covers the essentials, ensuring accurate and hassle-free compliance with HMRC's digital tax initiative. Ideal for businesses with quarterly turnover < £5K.",
@@ -4711,6 +4761,7 @@ The expert team at Affotax has mastered the what and how of MTD VAT submission i
 			],
 		},
 		{
+			id: 'p53',
 			priceTitle: 'Premium Package',
 			priceContent:
 				"It covers everything in the above package + consultation. This package is ideal for businesses with quarterly turnover > £5K.",
@@ -4904,6 +4955,7 @@ Are you planning to import or export goods in the UK? If yes, then you will need
 
 	prices: [
 		{
+			id: 'p54',
 			priceTitle: 'Basic Package',
 			priceContent:
 				"Streamline your international trade operations and compliance with ease. We handle the paperwork while you focus on growing your business.",
@@ -4915,6 +4967,7 @@ Are you planning to import or export goods in the UK? If yes, then you will need
 			],
 		},
 		{
+			id: 'p55',
 			priceTitle: 'Express Package',
 			priceContent:
 				"With this package, you can get it in just 3 days.",
@@ -5140,6 +5193,7 @@ Affotax provides you with experts who can manage your records every month, so yo
 
 	prices: [
 		{
+			id: 'p56',
 			priceTitle: 'Basic Package',
 			priceContent:
 				"This package covers the essentials for accuracy; ideal for transactions <500 per month using Xero.",
@@ -5151,6 +5205,7 @@ Affotax provides you with experts who can manage your records every month, so yo
 			],
 		},
 		{
+			id: 'p57',
 			priceTitle: 'Express Package',
 			priceContent:
 				"This package covers the essentials for accuracy; and is ideal for transactions <1000 per month using Xero.",
@@ -5353,6 +5408,7 @@ Our expert team uses the advanced features of QBO to make sure that you track yo
 
 	prices: [
 		{
+			id: 'p58',
 			priceTitle: 'Basic Package',
 			priceContent:
 				"This package covers the essentials, and is ideal for transactions <500 per month using QBO.",
@@ -5364,6 +5420,7 @@ Our expert team uses the advanced features of QBO to make sure that you track yo
 			],
 		},
 		{
+			id: 'p59',
 			priceTitle: 'Premium Package',
 			priceContent:
 				"This package covers the essentials, and is ideal for transactions <1000 per month using QBO.",
@@ -5557,10 +5614,11 @@ Although it can help in basic bookkeeping, it can be time-consuming and mind-bog
 
 	prices: [
 		{
+			id: 'p60',
 			priceTitle: 'Basic Package',
 			priceContent:
 				"It covers the essentials; ideal for transactions <500 per month using excel template, ensuring organised records and real-time financial insights.",
-			price: "£69",
+			price: "£49",
 			packageIncludes: [
 				"Monthly recording of transactions",
 				"Bank and credit card reconciliation",
@@ -5568,10 +5626,11 @@ Although it can help in basic bookkeeping, it can be time-consuming and mind-bog
 			],
 		},
 		{
+			id: 'p61',
 			priceTitle: 'Express Package',
 			priceContent:
 				"It covers the essentials; ideal for transactions <1000 per month using excel template, ensuring organised records and real-time financial insights.",
-			price: "£49",
+			price: "£69",
 			packageIncludes: [
 				"Monthly recording of transactions",
 				"Bank and credit card reconciliation",
@@ -5767,6 +5826,7 @@ However, just like a UK resident, you also need to register with Companies House
 
 	prices: [
 		{
+			id: 'p62',
 			priceTitle: 'For Non-UK Residents',
 			priceContent:
 				"We handle the paperwork so you can focus on what you do best – running your business",
@@ -5978,6 +6038,7 @@ Affotax is the best and most affordable choice available. We understand the comp
 
 	prices: [
 		{
+			id: 'p63',
 			priceTitle: 'UK LLP Formation',
 			priceContent:
 				"Start your UK business journey with our UK LLP formation package. We take care of the details, making it easy for you to establish a UK limited liability partnership, and get to business.",
@@ -6134,6 +6195,75 @@ Affotax is the best and most affordable choice available. We understand the comp
 
 
 
+const packages = {
+	title: "Recommended Packages",
+	prices: [
+		{
+			id: "pkg1",
+			priceTitle: "Basic Package",
+			priceContent: "Turnover < 25K",
+			price: "£99",
+			packageIncludes: [
+				"Annual Accounts",
+				"Companies House Submission",
+				"Corporation Tax",
+				"CT600 Submission with HMRC",
+			],
+		},
+		{
+			id: "pkg2",
+			priceTitle: "Standard Package",
+			priceContent: "Turnover < 50K",
+			price: "£149",
+			packageIncludes: [
+				"Annual Accounts",
+				"Companies House Submission",
+				"Corporation Tax",
+				"CT600 Submission with HMRC",
+				"Tax consultation",
+			],
+		},
+
+		{
+			id: "pkg3",
+			priceTitle: "Premium Package",
+			priceContent: "Turnover < 100K",
+			price: "£249",
+			packageIncludes: [
+				"Annual Accounts",
+				"Companies House Submission",
+				"Corporation Tax",
+				"CT600 Submission with HMRC",
+				"Tax consultation",
+				"Director Payroll",
+			],
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6198,7 +6328,9 @@ export const dataArr = [
 	  EXCEL_BOOKKEEPING,
 
 	  UK_LIMITED_COMPANY_FOR_NON_RESIDENTS,
-	  LLP_COMPANY_FORMATION_IN_UK
+	  LLP_COMPANY_FORMATION_IN_UK,
+
+	  packages
 
 
 

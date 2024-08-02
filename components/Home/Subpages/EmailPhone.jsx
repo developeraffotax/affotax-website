@@ -17,7 +17,7 @@ const EmailPhone = () => {
     return (
         <section className=' w-full bg-[#2C3B58] px-80 max-2xl:px-40 max-xl:px-10'>
             <div className=' w-full '>
-            <div className='flex flex-col justify-center items-center   '>
+            <div className='flex flex-col justify-center items-center'>
             <div className=' container mx-auto  flex justify-around items-center py-10 w-full border-b-2     max-lg:flex-col max-lg:gap-2   '>
                 <div className='flex items-center justify-center  '>
                     <h3 className='text-3xl text-secondary font-semibold z-20 max-lg:text-2xl relative text-center'>

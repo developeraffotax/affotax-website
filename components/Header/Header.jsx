@@ -7,6 +7,12 @@ import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
 import { useRouter } from 'next/navigation'
+import { BsCartCheck } from "react-icons/bs";
+import CartIcon from "./CartIcon";
+
+
+
+
 
 const subMenu = [
   { name: "Annual Accounts", link: "/annual-accounts" },
@@ -16,7 +22,7 @@ const subMenu = [
   { name: "VAT", link: "/vat-registration" },
   { name: "Company Secretarial", link: "/annual-confirmation-statement" },
   { name: "Bookkeeping", link: "/bookkeeping-for-12-month" },
-  { name: "Company Formation", link: "/uk-company-registration-uk-resident" },
+  { name: "Company Formation", link: "/uk-company-registration-(uk-resident)" },
 ];
 
 export default function Header() {
@@ -49,7 +55,7 @@ export default function Header() {
               <div className="relative services ">
                 <Link href={"/services"} className="mr-5 hover:text-primary hover:cursor-pointer "> Services </Link>
                 <ul
-                  className={`bg-secondary py-2 absolute hidden flex-col rounded-md z-20 `}>
+                  className={`bg-secondary py-2 absolute hidden flex-col  z-20  `}>
                   {subMenu.map((el, index) => {
                     return (
                       <SubMenu name={el.name} link={el.link} key={uuid()} index={index} length={subMenu.length} />
@@ -81,6 +87,8 @@ export default function Header() {
                 </div>
               </div>
             </div>
+
+            <CartIcon  />
           </div>
         </div>
 
@@ -99,7 +107,7 @@ export default function Header() {
             <button className="bg-primary  rounded-md active:scale-90 w-[12%] flex justify-center items-center" onClick={handleNav}> {isMobileNav ? <RxCross2 /> : <RxHamburgerMenu />} </button>
           </div>
 
-          <div className={`z-50 absolute translate-y-16 flex-col gap-3 py-8 transition-all bg-tertiary w-full items-center justify-center ${ isMobileNav ? "flex" : "hidden" }`}>
+          <div className={`z-50 absolute translate-y-16 flex-col gap-3 py-8 mt-4 transition-all bg-[#23314e] w-full items-center justify-center ${ isMobileNav ? "flex" : "hidden" }`}>
             <nav
               className={`flex items-center justify-center text-center text-base  flex-col gap-2 transition-all pt-5 }`}>
               <Link onClick={() => setIsMobileNav(false)} href={"/"} className=" hover:text-primary hover:cursor-pointer"> Home </Link>

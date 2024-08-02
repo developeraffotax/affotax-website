@@ -16,8 +16,15 @@ module.exports = {
       colors : {
         primary : '#ff7f45',
         secondary : '#FFFFFF',
-        tertiary : '#000000'
+        tertiary : '#000000',
+        darkslategray: "#23314e",
+        
+        coral: "#ff7f45",
+        seashell: "#f7efea",
+        
       },
+      spacing: {},
+      
 
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

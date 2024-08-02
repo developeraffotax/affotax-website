@@ -9,7 +9,7 @@ const AboutUs = () => {
   return (
     <section className='w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-0 max-lg:pt-16 py-8 bg-primary/10   shadow-md drop-shadow-2xl shadow-gray-300 '>
         <div className='container mx-auto flex flex-col items-center gap-4 max-md:px-8'>
-        <h2 className='text-primary text-6xl font-semibold '>About Us</h2>
+        <h1 className='text-primary text-6xl font-semibold '>About Us</h1>
         <div className='flex flex-col items-start'>
             <h3 className='text-bold text-3xl '>Who are we?</h3>
             <p className='text-lg 2xl:text-xl'>We at Affotax Ltd are a reliable UK-based accountancy firm that specialises in providing affordable accounting and tax filing services online for clients within the UK. We have a team of highly qualified and experienced professionals who are determined to provide a personalised accounting service to the small and medium-sized businesses in the UK. 

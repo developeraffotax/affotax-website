@@ -4,6 +4,7 @@ import ChoosePackage from "./Subpages/ChoosePackage";
 import EmailPhone from "./Subpages/EmailPhone";
 import HomeTop from "./Subpages/HomeTop";
 import HowItWorks from "./Subpages/HowItWorks";
+import Reviews from "./Subpages/Reviews";
 import ServicesTo from "./Subpages/ServicesTo";
 import WhyUs from "./Subpages/WhyUs";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <HowItWorks />
         <WhyUs />
         <ServicesTo />
+        <Reviews />
         <EmailPhone />
     </main>
   );
