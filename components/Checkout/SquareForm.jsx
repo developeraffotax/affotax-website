@@ -22,7 +22,7 @@ export default function SquareForm({customerData, orderData}) {
 			applicationId={appId}
 			locationId={locationId}
 			cardTokenizeResponseReceived={async (token) => {
-				// we’ll come back to this soon
+				
 				try {
 					setIsError(false)
 				const result = await submitPayment(token.token, {buyer_email_address: customerData.email , amount:(Math.floor(orderData.totalPrice*100)),});

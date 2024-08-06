@@ -55,7 +55,7 @@ export default function Checkout() {
 										type="text"
 										id="name"
 										name="name"
-										placeholder="John Capler"
+										placeholder="Enter You Full Name"
 										className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-blue-500"
 									/>
 								</div>
@@ -78,7 +78,7 @@ export default function Checkout() {
 										type="text"
 										id="company"
 										name="company"
-										placeholder="Enter You Company Name"
+										placeholder="Enter Your Company Name"
 										className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-blue-500"
 									/>
 								</div>
@@ -101,7 +101,7 @@ export default function Checkout() {
 										type="email"
 										id="email"
 										name="email"
-										placeholder="john.capler@fang.com"
+										placeholder="Enter Your Email Address Here"
 										className="mt-1 block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-blue-500"
 									/>
 								</div>
@@ -124,7 +124,7 @@ export default function Checkout() {
 										type="text"
 										id="phone"
 										name="phone"
-										placeholder=" +44 20 7123 XXXX"
+										placeholder="Enter Your Phone Number"
 										className="block w-full rounded border-gray-300 bg-gray-50 py-3 px-4 pr-10 text-sm placeholder-gray-300 shadow-sm outline-none transition focus:ring-2 focus:ring-blue-500"
 									/>
 									<img
