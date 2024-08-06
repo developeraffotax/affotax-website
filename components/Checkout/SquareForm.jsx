@@ -5,7 +5,8 @@ import { useState } from "react";
 import { CreditCard, PaymentForm } from "react-square-web-payments-sdk";
 
 export default function SquareForm({customerData, orderData}) {
-	const appId = "sandbox-sq0idb-gASJb-Nb95rkIZVJwrmdzQ";
+	//const appId = "sandbox-sq0idb-gASJb-Nb95rkIZVJwrmdzQ";
+	const appId = "sq0idp-VbSgv5OeEK79loJCstt-_g";
 	const locationId = "L3BCKHG9DGWDX";
 
 	console.log(customerData, orderData)

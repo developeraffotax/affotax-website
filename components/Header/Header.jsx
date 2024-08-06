@@ -138,6 +138,7 @@ export default function Header() {
               {/* <Link onClick={() => setIsMobileNav(false)} href={"/blogs"} className=" hover:text-primary hover:cursor-pointer"> Blogs </Link> */}
               <Link onClick={() => setIsMobileNav(false)} href={"/about-us"} className=" hover:text-primary hover:cursor-pointer"> About Us </Link>
               <Link onClick={() => setIsMobileNav(false)} href={"/contact-us"} className=" hover:text-primary hover:cursor-pointer"> Contact Us </Link>
+              <Link onClick={() => setIsMobileNav(false)} href={"/cart"} className=" hover:text-primary hover:cursor-pointer"> Cart </Link>
             </nav>
 
             <button onClick={() => {router.push('/contact-us'); setIsMobileNav(false);}} className=" text-center  items-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-2 py-2 w-[50%]">
