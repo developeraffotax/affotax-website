@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartItem from "./CartItem";
 import { dataArr } from "@/data/serviceData";
 import TopChart from "./TopCart";
@@ -10,6 +10,7 @@ import CartItems from "./CartItems";
 import Checkout from "../Checkout/Checkout";
 import SquareForm from "../Checkout/SquareForm";
 import SuggestedPackages from "./SuggestedPackages";
+import { CartContext } from "@/app/(user)/layout";
 
 
 
@@ -19,6 +20,8 @@ export default function Cart() {
 
 	const [cartItemsArr, setCartItemsArr] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
+
+	const cartContext = useContext(CartContext)
 
 
 
@@ -45,7 +48,8 @@ export default function Cart() {
 
 
 useEffect(() => {
-	calculateTotalPrice()
+	calculateTotalPrice();
+	cartContext.setCartItems(cartItemsArr.length)
 })
 
 

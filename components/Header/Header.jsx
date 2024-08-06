@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { RxCross2, RxHamburgerMenu, } from "react-icons/rx";
 import SubMenu from "./SubMenu";
 import Backdrop from "../Backdrop/Backdrop";
@@ -9,6 +9,7 @@ import { v4 as uuid } from "uuid";
 import { useRouter } from 'next/navigation'
 import { BsCartCheck } from "react-icons/bs";
 import CartIcon from "./CartIcon";
+import { CartContext } from "@/app/(user)/layout";
 
 
 
@@ -25,13 +26,22 @@ const subMenu = [
   { name: "Company Formation", link: "/uk-company-registration-(uk-resident)" },
 ];
 
+
+
+
+
+
 export default function Header() {
   const pathRef = useRef();
 
   const [isMobileNav, setIsMobileNav] = useState(false);
 
   const [showSubMenu, setShowSubMenu] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
+
+  const cartContext = useContext(CartContext);
+
+  
 
   const handleNav = () => {
     setIsMobileNav((prev) => !prev);
@@ -88,7 +98,7 @@ export default function Header() {
               </div>
             </div>
 
-            <CartIcon  />
+            <CartIcon  cartContext={cartContext}/>
           </div>
         </div>
 

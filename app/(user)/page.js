@@ -6,6 +6,8 @@ export const metadata = {
 	keywords: ["online accountant"],
 };
 
+
+
 export default function HomePage() {
 	return (
 		<> <Home /> </>
