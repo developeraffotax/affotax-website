@@ -24,7 +24,7 @@ export default function SquareForm({customerData, orderData}) {
 				// we’ll come back to this soon
 				try {
 					setIsError(false)
-				const result = await submitPayment(token.token, {buyer_email_address: customerData.email , amount:(orderData.totalPrice*100), billing_address:{address_line_1: customerData.address, first_name: customerData.name, postal_code: customerData.postCode, country: 'GB'}});
+				const result = await submitPayment(token.token, {buyer_email_address: customerData.email , amount:(Math.floor(orderData.totalPrice*100)),});
 				// our orders api will run here
 				
 				if (result.payment.status !== 'COMPLETED') {
@@ -40,6 +40,7 @@ export default function SquareForm({customerData, orderData}) {
 						setIsError(true);
 					}
 
+					
 
 				}
 				} catch (error) {
@@ -56,7 +57,7 @@ export default function SquareForm({customerData, orderData}) {
 
 		
 			
-			<CreditCard  />
+			<CreditCard />
 			<div>
 			{isError && <p className="text-red-500 text-sm text-center mt-4"> Error Occured while ordering | Please try agian later!</p>}
 			</div>

@@ -7,6 +7,8 @@ import Order from "@/lib/Model/Order";
 import sendMail from "@/lib/sendMail";
 import { redirect } from "next/navigation";
 import mongoose from "mongoose";
+import sendPaymentMail from "@/lib/sendPaymentMail";
+import OrderNumber from "@/lib/Model/OrderNumber";
 
 //Create order--------------
 
@@ -31,12 +33,24 @@ export async function createOrder(customerData, orderData, paymentId) {
        console.log(customerDoc)
 
 
+       const oldOrderNumber = await OrderNumber.find().sort({_id: -1}).limit(1);
+       const newOrderNumber = oldOrderNumber[0].orderNumber + 1;
+        
+       console.log(newOrderNumber)
+       const newOrderNumberDoc = await OrderNumber.create({
+           orderNumber: newOrderNumber
+       });
+
+       console.log(newOrderNumberDoc)
+       
+
 
        let newOrderData = {
         items: orderData.items.map((el) => ({id: el.id, pageTitle: el.pageTitle})),
         totalPrice: orderData.totalPrice,
         payment_id: paymentId,
-        customer_id: customerDoc._id
+        customer_id: customerDoc._id,
+        orderNumber: 'AF#' + newOrderNumberDoc.orderNumber.toString()
 
        }
 
@@ -44,8 +58,14 @@ export async function createOrder(customerData, orderData, paymentId) {
          
         const orderDoc = await order.save();
 
-        console.log(orderDoc)
+        //console.log(orderDoc)
 
+        
+
+       const isEmailSent = await sendPaymentMail(customerData, orderData, orderDoc.orderNumber)
+
+
+       console.log(isEmailSent)
         
         
 

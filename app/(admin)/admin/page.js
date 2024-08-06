@@ -1,17 +1,17 @@
-import { redirect } from 'next/navigation'
+// import { redirect } from 'next/navigation'
 
 
 
 
 
-export default function AdminPage() {
+// export default function AdminPage() {
 
-    redirect('/admin/dashboard')
+//     redirect('/admin/dashboard')
 
 
-    return (
-        <h2>
-            Admin Page
-        </h2>
-    )
-}
+//     return (
+//         <h2>
+//             Admin Page
+//         </h2>
+//     )
+// }

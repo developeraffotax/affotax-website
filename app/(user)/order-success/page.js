@@ -18,7 +18,7 @@ export default function OrderSuccessPage() {
 						Order Confirmed! 
 					</h3>
 					<p class="text-gray-600 my-2">
-						Thank you for completing your secure online payment.
+						Thank you for completing your secure online payment. We'll reach out to you within 24 hours!
 					</p>
 					<p> Have a great day! </p>
 					<div class="py-10 text-center">

@@ -17,7 +17,7 @@ const { paymentsApi } = new Client({
 
 // CREATE PAYMENT
 
-export async function submitPayment(sourceId, {buyer_email_address, amount, billing_address}) {
+export async function submitPayment(sourceId, {buyer_email_address, amount }) {
     
   try {
     const { result } = await paymentsApi.createPayment({
@@ -28,7 +28,7 @@ export async function submitPayment(sourceId, {buyer_email_address, amount, bill
         currency: 'GBP'
       },
       buyer_email_address: buyer_email_address,
-      billing_address: billing_address
+      
 
     });
 
