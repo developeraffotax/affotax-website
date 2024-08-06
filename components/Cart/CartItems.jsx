@@ -1,4 +1,5 @@
 import CartItem from "./CartItem";
+import {v4 as uuidv4} from 'uuid'
 
 export default function CartItems({cartItemsArr, removeFromCartHandler, isDrawer}) {
 
@@ -26,7 +27,7 @@ export default function CartItems({cartItemsArr, removeFromCartHandler, isDrawer
                 <ul>
                 {
                     cartItemsArr.map((el) => {
-                        return <li><CartItem {...el} removeFromCartHandler={removeFromCartHandler} isDrawer={isDrawer}/></li>
+                        return <li key={uuidv4()}><CartItem {...el} removeFromCartHandler={removeFromCartHandler} isDrawer={isDrawer}/></li>
                     })
                 }
                 </ul>

@@ -322,7 +322,7 @@ const addStyle = (e) => {
 
                     {
                         reviewArr.map((el) => {
-                            return <SplideSlide className='py-8'><Review {...el} key={uuidv4()}/> </SplideSlide>
+                            return <SplideSlide key={uuidv4()} className='py-8'><Review {...el} key={uuidv4()}/> </SplideSlide>
                         })
                     }
 
