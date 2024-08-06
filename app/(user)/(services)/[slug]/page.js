@@ -8,6 +8,7 @@ import SoleTraders from "@/components/WhoWeHelp/SoleTraders";
 import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants";
 import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
+import { notFound, redirect } from "next/navigation";
 
 
 
@@ -82,6 +83,8 @@ const ServicesPage = ({params}) => {
     if (!render) {
       let serviceData = dataArr.filter((el) => el.link === params.slug);
       if (serviceData.length === 0) {
+       
+        notFound();
         return <h3>THIS PAGE DOES NOT EXIST | WE'RE WORKING ON IT | THANK YOU FOR YOUR COOPERATION</h3>
       }
        render = <Service data={serviceData[0]}/>

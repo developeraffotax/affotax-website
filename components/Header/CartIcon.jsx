@@ -15,7 +15,9 @@ export default function CartIcon({cartContext}) {
 
 
 
-
+	if (!cartContext) {
+		return <></>
+	}
 
 
 
