@@ -83,9 +83,9 @@ const ServicesPage = ({params}) => {
     if (!render) {
       let serviceData = dataArr.filter((el) => el.link === params.slug);
       if (serviceData.length === 0) {
-       
-        notFound();
-        return <h3>THIS PAGE DOES NOT EXIST | WE'RE WORKING ON IT | THANK YOU FOR YOUR COOPERATION</h3>
+        redirect('/')
+        // notFound();
+        // return <h3>THIS PAGE DOES NOT EXIST | WE'RE WORKING ON IT | THANK YOU FOR YOUR COOPERATION</h3>
       }
        render = <Service data={serviceData[0]}/>
     }
