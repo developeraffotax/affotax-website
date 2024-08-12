@@ -4,7 +4,7 @@ import LimitedCompanies from "@/components/WhoWeHelp/LimitedCompanies";
 import LimitedLiabilityPartnership from "@/components/WhoWeHelp/LimitedLiabilityPartnership";
 import Partnerships from "@/components/WhoWeHelp/Partnerships";
 import SmallBusinessAccountants from "@/components/WhoWeHelp/SmallBusinessAccountants";
-import SoleTraders from "@/components/WhoWeHelp/SoleTraders";
+import SoleTraders from "@/components/WhoWeHelp/SoleTraders/index";
 import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants";
 import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
