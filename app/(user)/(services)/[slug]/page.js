@@ -1,11 +1,11 @@
 import Service from "@/components/Services/Service/Service"
-import ContractorAccountants from "@/components/WhoWeHelp/ContractorAccountants";
-import LimitedCompanies from "@/components/WhoWeHelp/LimitedCompanies";
-import LimitedLiabilityPartnership from "@/components/WhoWeHelp/LimitedLiabilityPartnership";
-import Partnerships from "@/components/WhoWeHelp/Partnerships";
-import SmallBusinessAccountants from "@/components/WhoWeHelp/SmallBusinessAccountants";
+import ContractorAccountants from "@/components/WhoWeHelp/ContractorAccountants/index";
+import LimitedCompanies from "@/components/WhoWeHelp/LimitedCompanies/index";
+import LimitedLiabilityPartnership from "@/components/WhoWeHelp/LimitedLiabilityPartnership/index";
+import Partnerships from "@/components/WhoWeHelp/Partnerships/index";
+import SmallBusinessAccountants from "@/components/WhoWeHelp/SmallBusinessAccountants/index";
 import SoleTraders from "@/components/WhoWeHelp/SoleTraders/index";
-import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants";
+import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants/index";
 import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
 import { notFound, redirect } from "next/navigation";

@@ -8,7 +8,7 @@ import SubmitBtn from "./SubmitBtn";
 export default function InstantQuoteForm() {
 	return (
 		<>
-			<div className="flex flex-col items-center  py-12 px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-tr from-orange-300/5 to-orange-900/20">
+			<div className="flex flex-col items-center  py-12 px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-tr from-orange-300/5 to-orange-900/20 ">
 				<div>
 					<h2 className="font-poppins  text-transparent font-bold text-4xl leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text">
                     Instant Quote!
@@ -18,9 +18,9 @@ export default function InstantQuoteForm() {
 					</p>
 				</div>
 
-				<div className="flex w-full justify-center gap-10 ">
-					<div className="flex w-full justify-center py-10 items-center ">
-						<form className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40" action={sendInstantQuote}>
+				<div className="flex w-full justify-center gap-10">
+					<div className="flex w-full justify-center py-10 items-center  ">
+						<form className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base border-1  border-black/40 p-10 rounded-3xl shadow-md shadow-black/40" action={sendInstantQuote}>
 							<div className="">
 								<div className="  flex items-center justify-center mb-4 relative ">
 									<svg

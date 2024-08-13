@@ -18,29 +18,29 @@ import img6 from '@/public/6.PNG';
 
 const steps = [
     {
-        title: 'Simplified Accounting',
+        title: 'Accounts Management',
         img: img1,
-        content: 'We take the burden of accounting off your shoulders, managing your daily business transactions, including receipts and invoices, through user-friendly cloud-based applications.'
+        content: 'Keeping accurate accounts is fundamental for any business. Our team will ensure your accounts are meticulously maintained and updated regularly. This includes preparing your annual accounts, managing ledgers, and ensuring all financial records are accurate and compliant with UK standards.'
     },
     {
-        title: 'Tax-Related Expertise',
+        title: 'Corporation Tax',
         img: img2,
-        content: 'We ensure you receive all applicable deductions and allowances, reducing your tax burden. Stay updated with the latest tax laws affecting sole traders in the UK.'
+        content: 'Navigating the complexities of corporation tax can be daunting. We offer comprehensive corporation tax services, including tax planning, preparation, and filing. Our experts will work to minimize your tax liabilities while ensuring compliance with HMRC regulations.'
     },
     {
-        title: 'HMRC Compliance',
+        title: 'Self-Assessment',
         img: img3,
-        content: 'We handle all communication with HMRC, ensuring you never miss a deadline or incur penalties.'
+        content: 'Self-assessment can be time-consuming and complex. We simplify this process by managing your self-assessment tax returns, ensuring all income and expenditures are accurately reported. Our goal is to help you avoid any penalties and optimize your tax situation.'
     },
     {
-        title: 'Strategic Planning',
+        title: 'Bookkeeping',
         img: img4,
-        content: 'Receive valuable financial advice tailored to your business, helping you set realistic goals, make informed decisions, and plan for the future.'
+        content: 'Effective bookkeeping is the backbone of any successful business. Our small business bookkeeping services ensure that your financial records are kept up to date, accurate, and compliant. We manage your day-to-day financial transactions, maintain ledgers, and provide regular financial reports.'
     },
     {
-        title: 'Simple bookkeeping software',
+        title: 'Payroll Services',
         img: img6,
-        content: "Pandle was developed for our clients, and is now used by over 90,000 businesses around the world. Our bookkeeping team will regularly review your entries to ensure they're accurate."
+        content: "Managing payroll can be a complex and time-consuming task. Our payroll services ensure that your employees are paid accurately and on time, every time. We handle all aspects of payroll management, including PAYE, National Insurance, and statutory deductions, freeing you from the administrative burden."
     },
     {
         title: 'Unlimited Support',
@@ -63,10 +63,11 @@ export default function WhyChooseUs() {
 			<div className="flex w-full py-20 max-lg:py-8  flex-row gap-10 items-center justify-center px-80 max-2xl:px-40 max-xl:px-10     bg-gradient-to-tr from-orange-300/5 to-orange-900/20 ">
 				<div className="relative  flex  flex-1 flex-col items-center justify-center  ">
 					<h2 className=" max-w-sm leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
-                    Why Choose Us for Your Sole Trader Accounting Needs?
+                    Why choose our small business accounting services?
 					</h2>
 					<span className="mt-4 max-w-2xl text-center text-xl leading-relaxed text-gray-800">
-                    We have helped over 3,000+ businesses in the UK to thrive.
+                    Our small business accounting services are designed to handle all your financial management needs, allowing you to focus on what you do best – running your business. We provide a full suite of services to help you stay compliant, manage cash flow, and plan for future growth.
+
 					</span>
 
 

@@ -18,34 +18,34 @@ import img6 from '@/public/6.PNG';
 
 const steps = [
     {
-        title: 'Simplified Accounting',
+        title: 'Simplified bookkeeping & payroll',
         img: img1,
-        content: 'We take the burden of accounting off your shoulders, managing your daily business transactions, including receipts and invoices, through user-friendly cloud-based applications.'
+        content: 'We handle all your bookkeeping needs from recording transactions to reconciling accounts to managing payroll and auto-enrolment pensions, all using cloud accounting software for easy access and real-time financial insights.'
     },
     {
-        title: 'Tax-Related Expertise',
+        title: 'Dividend planning & tax advice',
         img: img2,
-        content: 'We ensure you receive all applicable deductions and allowances, reducing your tax burden. Stay updated with the latest tax laws affecting sole traders in the UK.'
+        content: 'At Affotax, we specialise in structuring businesses finances to maximise tax efficiency. We help you find your way around dividend payments efficiently to reduce overall tax liabilities.'
     },
     {
-        title: 'HMRC Compliance',
+        title: 'Annual accounts & corporation tax returns',
         img: img3,
-        content: 'We handle all communication with HMRC, ensuring you never miss a deadline or incur penalties.'
+        content: ' Our experienced accountants will ensure your annual accounts (including CT600 forms) comply with Companies House and HMRC regulations while also identifying all available tax deductions to reduce your corporation tax bill..'
     },
     {
-        title: 'Strategic Planning',
+        title: 'VAT returns',
         img: img4,
-        content: 'Receive valuable financial advice tailored to your business, helping you set realistic goals, make informed decisions, and plan for the future.'
+        content: "We take care in managing and filing for VAT calculations and submissions on time - whether standard-rated, flat rate or VAT registered overseas. We're here to guide you through complex VAT rules while helping to avoid penalties along the way."
     },
     {
-        title: 'Simple bookkeeping software',
+        title: 'Financial reporting & business insights',
         img: img6,
-        content: "Pandle was developed for our clients, and is now used by over 90,000 businesses around the world. Our bookkeeping team will regularly review your entries to ensure they're accurate."
+        content: "At Affotax, we go beyond simple bookkeeping by translating your financial data into clear, actionable insights so you can make informed business decisions and track growth effectively."
     },
     {
         title: 'Unlimited Support',
         img: img5,
-        content: 'Our friendly team is always available to answer queries and offer guidance on business decisions.'
+        content: 'Our friendly team is always available to answer queries and offer guidance on business decisions. Feel Free to contact us anytime.'
     },
 ]
 

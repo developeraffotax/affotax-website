@@ -18,29 +18,29 @@ import img6 from '@/public/6.PNG';
 
 const steps = [
     {
-        title: 'Simplified Accounting',
+        title: 'Your Personal Accountant, Not a Chatbot',
         img: img1,
-        content: 'We take the burden of accounting off your shoulders, managing your daily business transactions, including receipts and invoices, through user-friendly cloud-based applications.'
+        content: "You won't be dealing with robots here. You'll have a dedicated contractor accountant who understands the joys (and tribulations) of freelancing and can give you personalised advice customised specifically for your situation."
     },
     {
-        title: 'Tax-Related Expertise',
-        img: img2,
-        content: 'We ensure you receive all applicable deductions and allowances, reducing your tax burden. Stay updated with the latest tax laws affecting sole traders in the UK.'
-    },
-    {
-        title: 'HMRC Compliance',
+        title: 'Limited Company Champions',
         img: img3,
-        content: 'We handle all communication with HMRC, ensuring you never miss a deadline or incur penalties.'
+        content: "Setting up and running a limited company can be a right faff. But fear not! We'll help you navigate the process, ensuring proper bookkeeping and tax filing for maximum financial gain (because, let's be honest, that's why you went limited in the first place!"
     },
     {
-        title: 'Strategic Planning',
+        title: 'Tax Efficiency, Our Middle Name (Almost)',
+        img: img2,
+        content: "We don't just file your tax return – we're tax planning ninjas! We'll find every allowable deduction under the sun (well, not literally, but you get the idea) to keep your hard-earned cash where it belongs – in your pocket."
+    },
+    {
+        title: 'Free Up Your Time to Slay Dragons (or Clients)',
         img: img4,
-        content: 'Receive valuable financial advice tailored to your business, helping you set realistic goals, make informed decisions, and plan for the future.'
+        content: "Leave the number-crunching to us. We'll handle all your accounting and tax needs efficiently, freeing you up to focus on what you do best – rocking your freelance world."
     },
     {
-        title: 'Simple bookkeeping software',
+        title: 'Transparent Pricing, No Haggling',
         img: img6,
-        content: "Pandle was developed for our clients, and is now used by over 90,000 businesses around the world. Our bookkeeping team will regularly review your entries to ensure they're accurate."
+        content: "We offer competitive, fixed-fee packages that are clear as day. No hidden costs, just expert service at a fair and affordable price, because who doesn’t need that?"
     },
     {
         title: 'Unlimited Support',
@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
 			<div className="flex w-full py-20 max-lg:py-8  flex-row gap-10 items-center justify-center px-80 max-2xl:px-40 max-xl:px-10     bg-gradient-to-tr from-orange-300/5 to-orange-900/20 ">
 				<div className="relative  flex  flex-1 flex-col items-center justify-center  ">
 					<h2 className=" max-w-sm leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
-                    Why Choose Us for Your Sole Trader Accounting Needs?
+                    Top Reasons to Select Our Contractor Accountancy Service
 					</h2>
 					<span className="mt-4 max-w-2xl text-center text-xl leading-relaxed text-gray-800">
                     We have helped over 3,000+ businesses in the UK to thrive.
