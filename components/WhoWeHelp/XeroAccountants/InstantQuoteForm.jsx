@@ -1,44 +1,35 @@
-'use client'
+"use client";
 
-
-
-import { TbSend } from "react-icons/tb";
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams } from "next/navigation";
 import { FaPhoneAlt } from "react-icons/fa";
 import { sendInstantQuote } from "@/actions/contact";
 import SubmitBtn from "./SubmitBtn";
 import { useEffect, useRef } from "react";
 
-export default function InstantQuoteForm(props) {
-
+export default function InstantQuoteForm() {
 	const searchParams = useSearchParams();
 
-	const success = searchParams.get('success')
+	const success = searchParams.get("success");
 
-	const ref = useRef()
+	const ref = useRef();
 
 	useEffect(() => {
-
-		if(success) {
+		if (success) {
 			ref.current.scrollIntoView({
-				behavior : 'smooth'
-			})
+				behavior: "smooth",
+			});
 		}
-
-
-	}, [])
-	
-
-	console.log(searchParams)
-	console.log(props)
-
+	}, []);
 
 	return (
 		<>
-			<div className="flex flex-col items-center  py-12 px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-tr from-orange-300/5 to-orange-900/20" ref={ref}>
+			<div
+				className="flex flex-col items-center  py-12 px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-tr from-orange-300/5 to-orange-900/20"
+				ref={ref}
+			>
 				<div>
 					<h2 className="font-poppins  text-transparent font-bold text-4xl leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text">
-                    Instant Quote!
+						Instant Quote!
 					</h2>
 					<p className="text-sm font-normal text-center text-gray-600 ">
 						Get instant quotation from our experts!
@@ -47,7 +38,10 @@ export default function InstantQuoteForm(props) {
 
 				<div className="flex w-full justify-center gap-10 ">
 					<div className="flex w-full justify-center py-10 items-center ">
-						<form className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40" action={sendInstantQuote}>
+						<form
+							className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40"
+							action={sendInstantQuote}
+						>
 							<div className="">
 								<div className="  flex items-center justify-center mb-4 relative ">
 									<svg
@@ -69,7 +63,6 @@ export default function InstantQuoteForm(props) {
 										name="name"
 										id="name"
 										placeholder="Enter Your Full name"
-                                       
 									/>
 								</div>
 
@@ -98,10 +91,6 @@ export default function InstantQuoteForm(props) {
 									/>
 								</div>
 
-
-
-
-
 								<div className="group  flex items-center justify-center mb-4 relative ">
 									<FaPhoneAlt className="h-5 w-5 text-gray-400 absolute left-0 ml-4" />
 
@@ -114,15 +103,14 @@ export default function InstantQuoteForm(props) {
 									/>
 								</div>
 
-
-
 								<div className="flex items-center w-full ">
 									<select
 										name="businessType"
 										className="w-full bg-transparent py-2 px-3 pr-8 rounded-2xl border-2 overflow-hidden focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30"
-										
 									>
-										<option selected disabled>Select Business Type</option>
+										<option selected disabled>
+											Select Business Type
+										</option>
 										<option>Sole Trader</option>
 										<option>Limited Company</option>
 										<option>Partnership</option>
@@ -135,12 +123,12 @@ export default function InstantQuoteForm(props) {
 							<div>
 								<div className="flex items-center w-full  mb-4">
 									<select
-										
-                                        name="turnover"
+										name="turnover"
 										className="w-full bg-transparent py-2 px-3 pr-8 rounded-2xl border-2 overflow-hidden focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30 "
-										
 									>
-                                        <option selected disabled>Select Turnover</option>
+										<option selected disabled>
+											Select Turnover
+										</option>
 										<option>£0 to £20,000</option>
 										<option>£20,001 to £90,000</option>
 										<option>£90,001 to £200,000</option>
@@ -153,7 +141,6 @@ export default function InstantQuoteForm(props) {
 										<option>£800,001 to £900,000</option>
 										<option>£900,001 to £1,000,000</option>
 										<option>£1,000,000+</option>
-										
 									</select>
 								</div>
 
@@ -161,9 +148,10 @@ export default function InstantQuoteForm(props) {
 									<select
 										name="vatReturns"
 										className="w-full bg-transparent py-2 px-3 pr-8 rounded-2xl border-2  focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30"
-										
 									>
-										<option selected disabled>Need VAT Returns Completing?</option>
+										<option selected disabled>
+											Need VAT Returns Completing?
+										</option>
 										<option>Yes</option>
 										<option>No</option>
 									</select>
@@ -173,9 +161,10 @@ export default function InstantQuoteForm(props) {
 									<select
 										name="payrollManaging"
 										className="w-full bg-transparent py-2 px-3 pr-8 rounded-2xl border-2  focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30"
-										
 									>
-										<option selected disabled>Need Payroll Managing?</option>
+										<option selected disabled>
+											Need Payroll Managing?
+										</option>
 										<option>No</option>
 										<option>Weekly</option>
 										<option>Monthly</option>
@@ -186,9 +175,11 @@ export default function InstantQuoteForm(props) {
 									<select
 										name="bookkeeping"
 										className="w-full bg-transparent py-2 px-3 pr-8 rounded-2xl border-2  focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30"
-										
 									>
-										<option disabled selected >Need us to complete your Bookkeeping?</option>
+										<option disabled selected>
+											Need us to complete your
+											Bookkeeping?
+										</option>
 										<option>Yes</option>
 										<option>No</option>
 									</select>
@@ -197,13 +188,15 @@ export default function InstantQuoteForm(props) {
 
 							<SubmitBtn />
 						</form>
-
 					</div>
 				</div>
-						
-						{success && <p className="text-sm font-poppins text-emerald-500  ">Your query has been submitted | We'll get back to you soon</p>}
-				
-				
+
+				{success && (
+					<p className="text-sm font-poppins text-emerald-500  ">
+						Your query has been submitted | We'll get back to you
+						soon
+					</p>
+				)}
 			</div>
 		</>
 	);

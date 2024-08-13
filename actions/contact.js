@@ -80,5 +80,5 @@ export async function sendInstantQuote(formData) {
 
 	}
 	//redirect('/contact-us?success=true')
-	redirect(`${referer}/?success=true`);
+	redirect(`${referer}?success=true`);
 }

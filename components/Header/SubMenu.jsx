@@ -187,7 +187,7 @@ const SubMenu = ({ name, link, index, length, onClick }) => {
 
 	return (
 		
-			<li  onClick={liClickHandler} ref={liRef} 
+			<li   ref={liRef} 
 				className={`pl-8 pr-4 py-2  border-b-primary bg-secondary text-tertiary hover:text-primary hover:cursor-pointer relative innerMenu  ${
 					index !== length - 1 ? "border-b-2" : "border-b-0"
 				}`}
