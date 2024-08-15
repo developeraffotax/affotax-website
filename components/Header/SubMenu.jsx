@@ -171,10 +171,10 @@ const SubMenu = ({ name, link, index, length, onClick }) => {
 	const liClickHandler = (e) => {
 		if (onClick) {
 			onClick()
+			router.push(href)
 		}
 		
 		console.log(e)
-		router.push(href)
 		//router.refresh()
 		
 	}
@@ -187,7 +187,7 @@ const SubMenu = ({ name, link, index, length, onClick }) => {
 
 	return (
 		
-			<li   ref={liRef} 
+			<li  onClick={liClickHandler}  ref={liRef} 
 				className={`pl-8 pr-4 py-2  border-b-primary bg-secondary text-tertiary hover:text-primary hover:cursor-pointer relative innerMenu  ${
 					index !== length - 1 ? "border-b-2" : "border-b-0"
 				}`}

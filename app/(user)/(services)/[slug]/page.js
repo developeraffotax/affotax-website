@@ -6,6 +6,9 @@ import Partnerships from "@/components/WhoWeHelp/Partnerships/index";
 import SmallBusinessAccountants from "@/components/WhoWeHelp/SmallBusinessAccountants/index";
 import SoleTraders from "@/components/WhoWeHelp/SoleTraders/index";
 import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants/index";
+import EcommerceAccountants from "@/components/WhoWeHelp/EcommerceAccountants/index"
+import PropertyAccountants from "@/components/WhoWeHelp/PropertyAccountants/index"
+import FreelanceAccountants from "@/components/WhoWeHelp/FreelanceAccountants/index"
 import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
 import { notFound, redirect } from "next/navigation";
@@ -74,6 +77,9 @@ const ServicesPage = ({params}) => {
         case 'contractor-accountants': return render = <ContractorAccountants />
         case 'small-business-accountants': return render = <SmallBusinessAccountants />
         case 'xero-accountants': return render = <XeroAccountants />
+        case 'ecommerce-accountants': return render = <EcommerceAccountants />
+        case 'property-accountants': return render = <PropertyAccountants />
+        case 'freelance-accountants': return render = <FreelanceAccountants />
        
           
 

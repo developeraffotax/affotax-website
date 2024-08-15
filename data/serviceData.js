@@ -2069,7 +2069,7 @@ Submitting the changes to HMRC.
 
 
 const REGISTER_FOR_SELF_ASSESSMENT_TAX_RETURN_ONLINE_PAGE = {
-	metaTitle: 'RRegister for Self Assessment Online | Filling Form SA100',
+	metaTitle: 'Register for Self Assessment Online | Filling Form SA100',
 	metaDescription: `Let Affotax guide you on how to Register for Self Assessment Online. For any purpose other than self-employment, register for self assessment using form SA100.
 
 
