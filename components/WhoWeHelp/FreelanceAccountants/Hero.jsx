@@ -22,7 +22,7 @@ export default function Hero({scrollToForm}) {
 				<div className="w-full max-lg:flex-col items-start justify-center flex border-b border-gray-300 pb-10 ">
 				<div className="relative  flex  flex-1 flex-col items-start justify-center  ">
 					<h1 className="mt-8 max-lg:mt-0 leading-relaxed  text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  max-lg:text-5xl  font-bold text-transparent sm:max-w-3xl sm:text-6xl">
-					Expert Accountants for Freelancers | Your Financial Partner
+					Expert Accountants for Freelancers <br/> Your Financial Partner
 					</h1>
 					<span className="mt-8 max-w-2xl text-start text-xl leading-relaxed text-gray-800">
 					Welcome to our dedicated page for freelancers! As a freelancer, managing your finances can be overwhelming, but you don’t have to do it alone. Our team of expert accountants for freelancers is here to provide you with the support and guidance you need to keep your finances in order. With our affordable accountants, you can focus on what you do best while we handle the rest. 
@@ -51,7 +51,7 @@ export default function Hero({scrollToForm}) {
 <div
 							// href="/contact-us"
 							onClick={scrollToForm }
-							className="flex cursor-pointer flex-row items-center text-center justify-center gap-x-2 font-semibold rounded-lg text-white px-8 py-3 bg-orange-500 hover:bg-orange-600  transition-all "
+							className="flex cursor-pointer flex-row items-center text-center justify-center gap-x-2 font-semibold rounded-xl text-white px-8 py-3 bg-orange-500 hover:bg-orange-600  transition-all "
 						>
 							Get a Quote
 							<FaRegArrowAltCircleRight className="scale-110 " />

@@ -9,6 +9,8 @@ import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants/index";
 import EcommerceAccountants from "@/components/WhoWeHelp/EcommerceAccountants/index"
 import PropertyAccountants from "@/components/WhoWeHelp/PropertyAccountants/index"
 import FreelanceAccountants from "@/components/WhoWeHelp/FreelanceAccountants/index"
+import AccountantsNearMe from "@/components/WhoWeHelp/AccountantsNearMe/index"
+import CheapAccountants from "@/components/WhoWeHelp/CheapAccountants/index"
 import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
 import { notFound, redirect } from "next/navigation";
@@ -80,6 +82,8 @@ const ServicesPage = ({params}) => {
         case 'ecommerce-accountants': return render = <EcommerceAccountants />
         case 'property-accountants': return render = <PropertyAccountants />
         case 'freelance-accountants': return render = <FreelanceAccountants />
+        case 'accountants-near-me': return render = <AccountantsNearMe />
+        case 'cheap-accountants': return render = <CheapAccountants />
        
           
 
