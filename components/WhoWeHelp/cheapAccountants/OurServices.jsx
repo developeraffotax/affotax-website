@@ -91,7 +91,11 @@ export default function OurServices() {
 								arrows: true,
 								perPage: 3,
 								breakpoints: {
-									1000: {
+									1600: {
+										perPage: 2,
+										arrows: false,
+									},
+									1024: {
 										perPage: 1,
 										arrows: false,
 									},
@@ -103,7 +107,7 @@ export default function OurServices() {
 								return (
 									<SplideSlide
 										key={el.title}
-										className=" py-12 px-8 max-lg:px-0  "
+										className=" py-12 px-8 max-lg:px-0  w-full"
 									>
 										<Card {...el} />
 									</SplideSlide>

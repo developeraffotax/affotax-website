@@ -329,6 +329,128 @@ Advisory Services: Beyond routine accounting, many firms offer advisory services
 
 				</p>
 			</section>
+
+
+
+
+
+
+
+
+			
+			<section className=" bg-slate-50 text-gray-600 body-font w-full drop-shadow-md  py-8 ">
+            <div className="container px-5 py-12 mx-auto">
+
+                <div className="text-center mb-8">
+                    <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+					Our England Accountants Serve These Locations
+                    </h2>
+                    <div className="flex mt-6 justify-center">
+                    <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
+                </div>
+                </div>
+
+                <ul className="mx-auto items-center text-center">
+
+                    <Link href={'/location/accountants-in-leeds'}>
+                    <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
+                        <div className="flex items-center">
+                            <svg
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="3"
+                                className="text-primary w-6 h-6 mr-4"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span className="title-font font-medium"> Accountants in Leeds</span>
+                        </div>
+                    </li></Link>
+
+                    <Link href={'/location/accountants-in-sheffield'}>
+                    <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
+                        <div className="flex items-center">
+                            <svg
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="3"
+                                className="text-primary w-6 h-6 mr-4"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span className="title-font font-medium">Accountants in Sheffield</span>
+                        </div>
+                    </li></Link>
+
+                    <Link href={'/location/accountants-in-newcastle'}>
+                    <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
+                        <div className="flex items-center">
+                            <svg
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="3"
+                                className="text-primary w-6 h-6 mr-4"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span className="title-font font-medium">Accountants in Newcastle</span>
+                        </div>
+                    </li></Link>
+
+                    
+
+                    <Link href={'/location/accountants-in-leicester'}>
+                    <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
+                        <div className="flex items-center">
+                            <svg
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="3"
+                                className="text-primary w-6 h-6 mr-4"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span className="title-font font-medium">Accountants in Leicester</span>
+                        </div>
+                    </li></Link>
+
+                    
+
+                    <Link href={'/location/accountants-in-bristol'}>
+                    <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
+                        <div className="flex items-center">
+                            <svg
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="3"
+                                className="text-primary w-6 h-6 mr-4"
+                                viewBox="0 0 24 24"
+                            >
+                                <path d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span className="title-font font-medium">Accountants in Bristol</span>
+                        </div>
+                    </li></Link>
+                    
+                </ul>
+
+            </div>
+
+			</section>
 		</main>
 	);
 }

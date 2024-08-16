@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Card({ title, content, img, link }) {
 	return (
-		<div className="max-w-sm bg-white/50 border w-full border-gray-200 rounded-2xl shadow-md dark:bg-gray-800 dark:border-gray-700 h-[80vh]  p-2 ">
+		<div className="max-w-sm  bg-white/50 border w-full border-gray-200 rounded-2xl shadow-md dark:bg-gray-800 dark:border-gray-700 h-[80vh] max-lg:h-auto p-2 ">
 			<Link href={link}>
 				<Image className="rounded-t-lg scale-90  " cover src={img} alt={title} />
 			</Link>

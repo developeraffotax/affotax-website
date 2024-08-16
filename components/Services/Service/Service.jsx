@@ -5,8 +5,14 @@ import PriceBoxes from "./PriceBoxes/PriceBoxes";
 import Benefits from "./Benefits/Benefits";
 import Faqs from "./Faqs/Faqs";
 import { useEffect } from "react";
+import { v4 as uuid } from "uuid";
+
 
 const Service = ({ data }) => {
+
+    
+
+
     useEffect(() => {
         window.scrollTo({top:0})
         
@@ -19,7 +25,7 @@ const Service = ({ data }) => {
                 benefitsTitle={data.benefitsTitle}
                 benefits={data.benefits}
             />
-            <Faqs faqs={data.faqs} />
+            <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />
         </div>
     );
 };
