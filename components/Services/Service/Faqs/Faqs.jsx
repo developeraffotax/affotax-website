@@ -40,7 +40,16 @@ const Faqs = ({ faqs }) => {
                 </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel className="p-4 bg-slate-200 rounded-lg  ">
-              {item.answer}
+              {!item.answer.arr ? item.answer : 
+			  <ul>
+				{item.answer.head}
+				{item.answer.arr.map((el) => {
+					return <li key={item.answer.head} className="list-disc font-semibold ml-8 ">{el}</li>
+				})}
+				{item.answer.foot}
+
+
+				</ul>}
             </AccordionItemPanel>
         </AccordionItem>
     ))}
