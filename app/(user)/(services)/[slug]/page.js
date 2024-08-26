@@ -14,6 +14,7 @@ import CheapAccountants from "@/components/WhoWeHelp/CheapAccountants/index"
 import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
 import { notFound, redirect } from "next/navigation";
+import P45Form from "@/components/Services/Service/CustomServicePages/P45Form";
 
 
 
@@ -84,6 +85,11 @@ const ServicesPage = ({params}) => {
         case 'freelance-accountants': return render = <FreelanceAccountants />
         case 'accountants-near-me': return render = <AccountantsNearMe />
         case 'cheap-accountants': return render = <CheapAccountants />
+
+
+        case 'p60-form': return render = <P45Form />
+
+
        
           
 

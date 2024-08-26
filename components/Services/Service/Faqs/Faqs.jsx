@@ -1,3 +1,6 @@
+'use client'
+
+
 import React, { useState } from "react";
 import Faq from "./Faq";
 import { v4 as uuid } from "uuid";

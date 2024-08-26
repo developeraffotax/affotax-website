@@ -458,25 +458,22 @@ const serviceData4 = {
 			answer: "Absolutely, being paid with money that comes from the company requires every director to be registered with PAYE. It involves all kinds of payments like salaries, bonuses, among other things. So as to get an appropriate amount of money as tax from the director's pay, it is important for him/her to register.",
 		},
 		{
-			question: "Is it possible to backdate? ",
+			question: " Is register for paye possible to backdate? ",
 			answer: "Registering for PAYE in the year when the income is received is necessary. The registration may be penalised or fined if it is delayed. By completing it on time, you can avoid penalties.",
 		},
 		{
-			question: "How long does it take? ",
+			question: " How long does paye registration take?  ",
 			answer: "It typically takes just a few days and can be done online. Submitting all relevant information accurately and promptly to avoid delays is essential. It's also important to keep records of returns for at least six years. Let Affotax handle your payroll registration easily. ",
 		},
 		{
-			question: "How to cancel it? ",
+			question: "How to cancel registration for paye? ",
 			answer: "You must submit a formal request to the HMRC for cancellation. Your reference number and the cause for the cancellation must be disclosed. After that, the HMRC will handle your request and update the system as needed.",
 		},
 		{
-			question: "Is the process time-sensitive?",
+			question: " Is the PAYE process time-sensitive?",
 			answer: "The timely registration of taxes is one of the most important aspects of tax compliance. Taking advantage of our packages will expedite the process.",
 		},
-		{
-			question: "How do I start with your services?   ",
-			answer: "First, choose a package that you think could solve your registration issues. After that, follow the purchase instructions and our expert team will reach out to you for assistance with the process. ",
-		},
+		
 	],
 };
 
@@ -563,24 +560,28 @@ Understanding it, along with its £85,000 threshold, Making Tax Digital (MTD) ru
 			answer: "To get it, you will have to apply for it online. You must also submit your return on time and maintain correct financial records with HMRC.",
 		},
 		{
-			question: "How Why is it taking so long? ",
-			answer: `Here is why it may be taking too long:
-
-                😎HMRC might be verifying specific details before moving forward with your application.
-                   \b  •Your application is complex (e.g. it involves a company name change).
-                HMRC is still waiting for specific information from you.`,
+			question: "Why is the VAT registration number taking so long? ",
+			answer: {
+				head: 'Here is why it may be taking too long:',
+				arr :[
+					'HMRC might be verifying specific details before moving forward with your application.', 'Your application is complex (e.g. it involves a company name change).', 'Your application is complex (e.g. it involves a company name change).'
+				],
+				foot : ''
+			},
 		},
 		{
-			question: "How much does it cost?",
+			question: ". How much does a VAT registration number cost?",
 			answer: "Affotax helps you with everything, which is the most affordable choice for businesses or sole traders in the UK. Check out our packages above and get a quote today!",
 		},
 		{
-			question: "What are the benefits of it?",
-			answer: `Here are some of the benefits you can get from being VAT registered:
-
-                    You can charge it on your sales, helping you make more profit.
-                    You can also claim back on any goods and services you have purchased.
-                    It can help you improve the credibility of your business.`,
+			question: "What are the benefits of VAT registration numbers?",
+			answer: {
+				head: 'Here are some of the benefits you can get from being VAT registered:',
+				arr :[
+					'You can charge it on your sales, helping you make more profit.', 'You can also claim back on any goods and services you have purchased.', 'It can help you improve the credibility of your business.'
+				],
+				foot : ''
+			},
 		},
 		{
 			question: "Is registering for VAT the same as tax registration?",
@@ -3265,7 +3266,7 @@ A change in these regulations can adversely affect a company's status or operati
 `,
 		},
 		{
-			question: " What does the basic package include?   ",
+			question: "  What does the company house change of address basic package include?   ",
 			answer: `It provides guidance, preparation, and submission of required adjustment.
 
 
@@ -3291,7 +3292,7 @@ A change in these regulations can adversely affect a company's status or operati
 `,
 		},
 		{
-			question: "Is filing changes time-sensitive?    ",
+			question: "Is filing company house change of address time-sensitive?",
 			answer: `Yes, it's critical to file promptly to ensure accurate and timely public registry updates.
 
 
@@ -3304,14 +3305,19 @@ A change in these regulations can adversely affect a company's status or operati
 			question:
 				" Can I file changes directly by myself?     ",
 			answer: `While you can, our packages provide expert assistance to ensure accurate submissions and compliance.
-
-
-
-
-
-
-
 `,
+		},
+
+		{
+			question:
+				"  How to change correspondence address on companies house?    ",
+			answer: {
+				head: 'To change the correspondence address at Companies House:',
+				arr: [
+					'Log in to your Companies House account', 'Select the company', 'Click "Update company information"', 'Enter the new address', 'Confirm and submit',
+				],
+				foot: ''
+			},
 		},
 
 		
@@ -3496,12 +3502,16 @@ On the other hand, share issuance is also a way for companies to raise capital, 
 
 		{
 			question:
-				" Can I do it without professional assistance?     ",
-			answer: `While possible, our service offers expert guidance to ensure accurate and compliant processes.sss
+				"Can I do Share Issuance without professional assistance?  ",
+			answer: `While possible, our service offers expert guidance to ensure accurate and compliant processes.
+`,
+		},
 
 
-
-
+		{
+			question:
+				"Do you pay tax when you sell shares? ",
+			answer: `Selling shares may trigger Capital Gains Tax (CGT), requiring you to pay tax on the profit made. The amount of tax owed depends on your annual CGT allowance, and type of shares sold. It's essential to consult a tax advisor to understand your specific situation and minimise potential liabilities. They can guide you on exemptions, reliefs, and strategies to optimise your tax position. Proper planning ensures you meet tax obligations and maximise your returns from selling shares.
 
 `,
 		},
@@ -3619,7 +3629,7 @@ On the other hand, a director may also willingly leave their position on the boa
 		},
 
 		{
-			question: " What is director resignation?  ",
+			question: " What is director's resignation?  ",
 			answer: `In simple words, it is when a director is giving up their seat on the board; by relinquishing their duties, and ceasing decision-making authority over the organisation. 
 
 
@@ -3679,17 +3689,17 @@ On the other hand, a director may also willingly leave their position on the boa
 
 		{
 			question:
-				" How do I start with your services?   ",
-			answer: `By selecting the package that perfectly meets your needs and following the purchasing instructions, you may simplify the appointment or resignation process. Affotax's professionals will guide you through every stage.
+				" How are board of directors appointed?   ",
+			answer: `A Board of Directors is appointed through a formal process, typically involving shareholder election, board resolution, or as outlined in the Company Articles of Association. Shareholders vote on director appointments at the Annual General Meeting (AGM), ensuring representation of their interests. Additionally, the existing board can co-opt new members, subject to subsequent shareholder approval. To be eligible, directors must meet legal requirements, such as age and qualification criteria, and company-specific standards. This structured approach ensures a competent and accountable board, governing the company's strategic direction and decision-making processes.
+
+`,
+		},
 
 
-
-
-
-
-
-
-
+		{
+			question:
+				" Who appoints the first directors of a company? ",
+			answer: `The first directors of a company are typically appointed by the subscribers (initial shareholders) at the time of incorporation. These subscribers, often the founders or promoters, outline the initial director appointments in the Memorandum of Association (MOA) and Articles of Association (AOA). This ensures the company has a functional board from its inception. The appointed directors serve until the first Annual General Meeting (AGM), where shareholders may elect or reappoint directors, establishing the company's governance structure. This initial appointment process sets the foundation for the company's leadership and decision-making framework.
 `,
 		},
 
@@ -3841,7 +3851,7 @@ At times, directors might wonder if they need to register for PAYE. PAYE registr
 		},
 
 		{
-			question: " Why is it important?  ",
+			question: "Why is directors payroll important?",
 			answer: `To ensure that you receive accurate compensation and comply with tax regulations, it promotes financial transparency and legal compliance on the part of directors.
 
 
@@ -3854,7 +3864,7 @@ At times, directors might wonder if they need to register for PAYE. PAYE registr
 `,
 		},
 		{
-			question: " How does it work?   ",
+			question: " How does directors payroll work? ",
 			answer: `Usually, directors' compensation is determined either monthly or annually as a percentage of the firm's profits. They receive this sum in addition to their regular income and perks when it is added to the payroll. There are also bonuses and other rewards that can be earned by you.
 
 
@@ -3913,11 +3923,30 @@ At times, directors might wonder if they need to register for PAYE. PAYE registr
 
 		{
 			question:
-				" Can I handle it on my own?     ",
+				" Can I handle directors payroll on my own?  ",
 			answer: `It is possible, but it is not recommended to do so. Our packages offer expert assistance to ensure that accurate calculations, deductions, and compliance are met during the process.
 `,
 		},
 
+
+
+		{
+			question:
+				" Can a director be paid expenses outside payroll?  ",
+			answer: `Directors can be reimbursed for legitimate business expenses outside of payroll, including travel costs, professional fees, business entertainment, and other authorized expenditures. To ensure compliance, expenses must be reasonable, properly documented, and approved by the company. Additionally, certain expenses may require reporting on a P11D form. It's essential to maintain accurate records and consult a tax advisor to ensure adherence to HMRC regulations and avoid potential tax implications. This allows directors to reclaim necessary expenses without affecting their tax obligations or the company's financial records.
+
+`,
+		},
+
+
+
+		{
+			question:
+				"Do 2 directors on payroll have to have pension? ",
+			answer: `As per auto-enrolment legislation, directors who receive a salary or wages through the company's payroll are considered workers and must be enrolled in a pension scheme. This means that if there are two directors on the payroll, both are entitled to a workplace pension. The company must enroll them in a qualifying pension scheme, and make employer contributions, provided they meet the eligibility criteria. However, exemptions may apply in specific circumstances, such as if the directors have given a contractual opt-out or have reached state pension age. It is essential to consult with a pension specialist or accountant to ensure compliance with pension regulations.
+
+`,
+		},
 
 		
 	],
@@ -4041,7 +4070,7 @@ Note: Paye for employees must be paid immediately and punctually to HM Revenue a
 `,
 		},
 		{
-			question: "  What is included in the elite package?   ",
+			question: "  What is included in the PAYE employee elite package? ",
 			answer: `It includes the calculations of the director's salary, benefits, allowances, taxes and NI deductions. It also contains the preparation and issuance of annual pay slips, along with the monthly submission of RTI/FPS to HMRC.
 
 
@@ -4111,11 +4140,25 @@ Note: Paye for employees must be paid immediately and punctually to HM Revenue a
 
 		{
 			question:
-				"How do I get started with your services?    ",
-			answer: `It is very easy to get started with our paye management service. Follow the instructions to purchase after choosing our elite package, and our team will guide you through the whole process. 
+				"Do employees pay tax on expenses? ",
+			answer: `Employees are not required to pay tax on legitimate business expenses reimbursed by their employer, as these expenses are tax-free. To qualify for tax exemption, expenses must meet specific criteria: they must be wholly and exclusively incurred for business purposes, properly recorded and documented, and approved by the employer. This ensures that only genuine business expenses are reimbursed without incurring tax liabilities. Employers must adhere to HMRC guidelines to ensure compliance and prevent unnecessary tax implications. By following these rules, employees can claim reimbursement for work-related expenses without worrying about additional tax burdens.
 
 
 `,
+		},
+
+
+
+		{
+			question:
+				"How to pay less tax as an employee uk? ",
+			answer: {
+				head: 'To pay less tax as an employee in the UK:',
+				arr :[
+					'Utilize tax-free allowances (e.g., Personal Allowance, Mileage Allowance)', 'Claim work-related expenses (e.g., professional fees, travel costs)', 'Contribute to a pension scheme or ISA', 'Consider salary sacrifice schemes (e.g., childcare vouchers)', 'Ensure accurate tax coding'
+				],
+				foot: 'Consult a tax advisor for personalised guidance.'
+			},
 		},
 
 
@@ -4258,7 +4301,7 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 		},
 
 		{
-			question: "  Why is it important?    ",
+			question: "  Why is auto enrolment pension important? ",
 			answer: `It is important because it benefits both the employee and the employer. It is the best way to ensure financial security while following laws and regulations. 
 
 
@@ -4272,7 +4315,7 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 `,
 		},
 		{
-			question: "  How important is the timely implementation of it?   ",
+			question: "  How important is the timely implementation of auto enrolment pension? ",
 			answer: `To meet the legal requirements and ensure the retirement security of the employees, timely implementation is important.
 
 
@@ -4298,7 +4341,7 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 `,
 		},
 		{
-			question: "When does it start for new employees?   ",
+			question: " When does auto enrolment pension start for new employees?     ",
 			answer: `It starts on day one of employment. The newly hired employees are automatically enrolled in their retirement savings plan. The contributions of the employer and employee are deducted from their salaries, adding to the defined contribution plan.
 
 
@@ -4308,7 +4351,7 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 		},
 		{
 			question:
-				"How much does the scheme pay?     ",
+				" How much does the scheme pay for auto enrolment pension? ",
 			answer: `The schemes usually pay 8% of salary up to a specific annual limit. It is also possible that it increases through the contributions made by the employer and the employee.  
 
 
@@ -4321,7 +4364,7 @@ Pension auto enrolment initiative is particularly beneficial for those who may n
 
 		{
 			question:
-				"  Is it complex? ",
+				"  Is auto enrolment pension complex? ",
 			answer: `Yes, it can be complex, but by availing our services, you can avoid these complexities while promoting employee benefits and financial security.
 
 
@@ -4447,7 +4490,7 @@ Note: If you are behind schedule with submitting or have provided inaccurate inf
 		},
 
 		{
-			question: "  Why is accurate reporting important?   ",
+			question: "  . Why is accurate P11D form reporting important?  ",
 			answer: `Accurate reporting of is important because of complying with rules and regulations and to avoid penalties of inaccurate data submission.
 
 
@@ -4461,7 +4504,7 @@ Note: If you are behind schedule with submitting or have provided inaccurate inf
 `,
 		},
 		{
-			question: "  Where do I get it?    ",
+			question: "  Where do I get my P11D Form? ",
 			answer: `You can get it through HMRC's website or by contacting one of their payroll providers.
 
 
@@ -4474,7 +4517,7 @@ Note: If you are behind schedule with submitting or have provided inaccurate inf
 `,
 		},
 		{
-			question: " Who pays the tax on it?   ",
+			question: " Who pays the tax on P11D Form?  ",
 			answer: `It is paid by the employer but sometimes the employer will need to deduct from the employee's salary. To find out the amount of tax that has been deducted from your salary, you can find it on a P45 form which will be issued to you accordingly.
 
 
@@ -4509,7 +4552,7 @@ Note: If you are behind schedule with submitting or have provided inaccurate inf
 
 		{
 			question:
-				"  Can I customise the solution further? ",
+				"  Can I customise the P11D solution further? ",
 			answer: `Yes, our package is designed to provide specific benefit reporting needs and can be customised according to your request.
 
 
@@ -4560,27 +4603,13 @@ const P60_FORM = {
 	keywords: ['p60 form'],
 	link: "p60-form",
 	title: "P45 and P60 Form",
-	content: `
+	content: {
+		html: `
+<p>Loading...</p>
 
-		P45 Form: Officially known as 'Details of Employee Leaving Work', the P45 form is an important document that is issued to you by your employer after you decide to leave your job. It is important because it shows HMRC how much tax and National Insurance Contributions (NIC) has been paid by you through your salary (PAYE) within the tax year up until your last day at work. Also, you may need your P45 form when you claim tax refunds and benefits.
 
-P60 Form: The P60 form or 'End of Year Certificate' is a detailed summary of your earnings and tax paid throughout the whole tax year from April 6th to April 5th of the following year. The form P60 includes your:
-
-Salary
-Bonuses
-Statutory pay
-The tax you paid via PAYE
-National Insurance Contributions (NIC)
-Student loan repayments.
-You may need to show your P60 when:
-
-Applying for a mortgage
-Applying for a bank loan
-Doing a self-assessment tax return
-Claiming overpaid taxes or benefits
-Check out our packages, and get a quote today!
-	
-	`,
+`
+	},
 
 	prices: [
 		{
@@ -4670,7 +4699,7 @@ Check out our packages, and get a quote today!
 		},
 
 		{
-			question: "What is it used for?  ",
+			question: "What is the P60 form used for?",
 			answer: `It is used for evaluating income, payments, contributions, and for other financial applications such as loans or mortgages.
 
 
@@ -4697,7 +4726,7 @@ Check out our packages, and get a quote today!
 `,
 		},
 		{
-			question: " How to get it?  ",
+			question: "  How to get P45 form? ",
 			answer: `You can request it from your employer before leaving, as your employer must provide you with the document as per the law. 
 
 
@@ -4709,27 +4738,53 @@ Check out our packages, and get a quote today!
 `,
 		},
 		{
-			question: "Can I customise the packages further?  ",
-			answer: `Yes, we prioritise our clients and our goal is to satisfy your needs, so if your needs require customisation of our packages, it's possible.
-
-
-
-
-
-`,
+			question: "How can i get a p60 form? ",
+			answer: {
+				head: 'To obtain a P60 form:',
+				arr : [
+					"Contact your employer's payroll department", " Request a duplicate copy if original is lost", " Download from your online payroll portal (if available)", "HMRC will not issue replacement P60s; only employers can provide them "
+				],
+				foot: 'Typically issued by employers by 31 May each year'
+			},
 		},
 		{
 			question:
-				"How do I get started with your services?   ",
-			answer: `To get started, choose a package of your choice then follow the purchasing instructions; our  team will reach out to you immediately. 
+				"How long should you keep p60 forms?",
+			answer: {
+				head: 'Retain P60 forms for at least 3 years from the end of the tax year. This allows:',
+				arr: [
+					'HMRC to review your tax records', 'You to claim refunds or resolve disputes', 'Proof of income for mortgage or loan applications'
+				],
+				foot: 'Consider storing them securely for 6 years or more.'
+			},
+		},
 
 
+		{
+			question:
+				"Who issues p45 form?",
+			answer: {
+				head: 'Your employer issues a P45 form when:',
+				arr: [
+					'You start a new job', 'You leave a job', 'Your tax code changes'
+				],
+				foot: `The P45 shows your tax details, including
+Tax code,
+PAYE reference,
+Gross pay,
+Tax deducted. So
+Employers must provide a P45 within a reasonable time frame.
+`
+			},
+		},
 
-
-
+		{
+			question: " Can a director of limited company get p45 form?",
+			answer: `As a director of a limited company, you are entitled to receive a P45 form under certain circumstances. This includes when you leave the company, have a change in your tax details, or terminate your employment contract. Although directors hold a leadership position, they are still considered employees for tax purposes. As a result, the company will issue a P45 form to the director, just as they would for any other employee, to document their tax details and employment status.
 
 `,
 		},
+
 
 
 
@@ -4892,7 +4947,7 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 `,
 		},
 		{
-			question: " Can I create it on my own?   ",
+			question: " Can I create payslip on my own?  ",
 			answer: `Yes, you can! All you need is your employee information and the latest pay cycle. We will do the rest for you, so you can print or send it electronically.
 
 
@@ -4904,7 +4959,7 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 `,
 		},
 		{
-			question: "How does the 2nd package differ?   ",
+			question: "How does the 2nd package differ from payslip generators?",
 			answer: `It is for those clients that want the work done as soon as possible.
 
 
@@ -4916,7 +4971,7 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 		},
 		{
 			question:
-				"Can I customise the package further?   ",
+				"Can I customise the payslip generated package further?  ",
 			answer: `Yes, it is designed to meet your specific needs, including the design, content and formatting. You can customise it today, just contacting us.
 
 
@@ -4929,12 +4984,8 @@ Affotax offers an online service in the UK with many benefits. It enables you to
 
 		{
 			question:
-				"How do I get started with your service?   ",
-			answer: `To get started, choose the bundle of your choice and then follow the instructions to purchase it. Our team members will contact you within 24 hours to process your order. 
-
-
-
-
+				"Are payslips generated at cut off point for the month? ",
+			answer: `Payslips are typically generated at the designated cut-off point for each pay period, ensuring timely payment processing. For monthly paid employees, this is usually around the 12th or 25th of the month. For fortnightly paid employees, payslips are generated on the 5th or 20th, while weekly paid employees receive theirs on the last working day of the week. This standardized approach enables employers to efficiently manage payroll processing and ensure accurate and prompt payment to their employees.
 
 
 `,
@@ -5083,7 +5134,7 @@ The expert team at Affotax has mastered the what and how of MTD VAT submission i
 		},
 
 		{
-			question: " Why is accurate filing important?   ",
+			question: "Why is quarterly VAT return accurate filing important? ",
 			answer: `Accuracy is important for compliance with HMRC's digital tax requirements and it also helps in providing visibility into your liabilities.
 
 
@@ -5109,7 +5160,7 @@ The expert team at Affotax has mastered the what and how of MTD VAT submission i
 `,
 		},
 		{
-			question: " Are there penalties for late delivery? ",
+			question: ". Are there penalties for late delivery of quarterly VAT return? ",
 			answer: `Yes, late delivery may lead to penalties. Affotax can help you file accurately and on time, so get a quote today. 
 
 

@@ -1,3 +1,5 @@
+'use client'
+
 
 import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 import Hero from "./Hero";
@@ -6,6 +8,7 @@ import OurServices from "./OurServices";
 import WhatIsSoleTrader from "./WhatIsSoleTrader";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
+import { useRef } from "react";
 
 export const metadata = {
 	title: "Xero Accountants UK - Tax Filing & Business Growth Experts",
@@ -14,16 +17,29 @@ export const metadata = {
 };
 
 export default function XeroAccountants() {
+
+	const formRef = useRef()
+
+	const getQuoteClickHandler = () => {
+		formRef.current.scrollIntoView({
+			behavior: "smooth",
+			block: 'center'
+		})
+	}
+
+
 	return (
 		<>
 			<div className="w-full ">
-                <Hero />
+                <Hero getQuoteClickHandler={getQuoteClickHandler}/>
 				<WhatIsSoleTrader />
 				<HowToGetStarted />
 				{/* <WhyChooseUs /> */}
 				<OurServices />
+				<div className="w-full" ref={formRef}>
 				<InstantQuoteForm />
-				<EmailPhone />
+				</div>
+				<EmailPhone  />
             </div>
 		</>
 	);
