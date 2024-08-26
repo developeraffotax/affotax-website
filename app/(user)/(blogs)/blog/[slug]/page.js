@@ -1,6 +1,7 @@
 import { connectDB } from "@/lib/connectDB";
 import Blog from "@/lib/Model/Blog";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
@@ -31,7 +32,18 @@ export default async function BlogPage({params}) {
 	const blog = await Blog.findOne({slug : slug });
 
 
-	console.log(blog)
+	if(!blog) {
+
+		return (
+			<>
+				<div className='w-full flex flex-col justify-center items-center py-40 gap-8  '>
+				<h3 className="text-4xl font-semibold  ">This blog does not exist!</h3>
+				<Link href='/'><button className="px-4 py-2 font-poppins font-semibold bg-orange-400 rounded-xl text-white ">Go to Homepage</button></Link>
+				 
+				</div>
+			</>
+		)
+	}
 
 
 

@@ -33,7 +33,7 @@ export async function createBlog(formData) {
 			metaTitle: metaTitle,
 			metaDescription: metaDescription,
 			title: title,
-			slug: title.toLocaleLowerCase().trim().replaceAll(" ", "-"),
+			slug: title.toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/\?$/, ''),
 			description: description,
 			imageUrl: imgUrl,
 			content: content,
