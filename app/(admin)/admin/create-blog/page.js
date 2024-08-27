@@ -44,9 +44,13 @@ export default function CreateBlog() {
 
   const [keywords, setKeywords] = useState([]);
 
-  const [url, setUrl] = useState(window.location.origin + '/blog/')
+  const [url, setUrl] = useState('')
 
 
+  useEffect(() => {
+    setUrl(window?.location?.origin + '/blog/')
+  }, [])
+  
   const props = {
     name: 'imgFile',
     customRequest: async (file) => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Alert, Button, Input, message, Select, Upload } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined  } from "@ant-design/icons";
@@ -31,7 +31,13 @@ export default function HeroSection() {
 	const [btnLink, setBtnLink] = useState("");
 	
 	const [slug, setSlug] = useState("");
-	const [url, setUrl] = useState(window.location.origin + '/');
+	const [url, setUrl] = useState('');
+	
+
+	useEffect(() => {
+		setUrl(window?.location?.origin + '/blog/')
+	  }, [])
+
 	
 
     //Image Upload Handling Props
