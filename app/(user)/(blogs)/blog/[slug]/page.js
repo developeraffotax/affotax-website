@@ -10,11 +10,11 @@ export async function generateMetadata({ params }) {
 	const db = await connectDB();
 	const blog = await Blog.findOne({ slug: slug });
 
-	console.log(blog);
+	
 
 	return {
-		title: blog.metaTitle,
-		description: blog.metaDescription,
+		title: blog?.metaTitle || '',
+		description: blog?.metaDescription | '',
 	};
 }
 

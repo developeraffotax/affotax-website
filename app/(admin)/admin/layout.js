@@ -5,7 +5,7 @@ import '../../globals.css';
 
 import React, { useState } from 'react';
 
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
+import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import Link from 'next/link';
 import { triggerFocus } from 'antd/es/input/Input';
@@ -74,6 +74,67 @@ export default function RootLayout({ children }) {
               label: 'View Blogs' ,
               onClick		: () => router.push('/admin/view-blogs')
             }]
+          },
+
+
+          {
+            key: `2`,
+            
+            icon: React.createElement(FormOutlined),
+            label: `Pages`,
+            children: [ 
+              {
+              key: 'sub3',
+              label: 'Create a new Page (Who We Help)' ,
+              children: [
+                {
+                  key: 'sec1',
+                  label: ' Hero Section',
+                  onClick		: () => router.push('/admin/create-page/hero-section')
+                },
+
+                {
+                  key: 'sec2',
+                  label: ' Second Section',
+                  onClick		: () => router.push('/admin/create-page/second-section')
+                },
+
+                {
+                  key: 'sec3',
+                  label: ' Third Section',
+                  onClick		: () => router.push('/admin/create-page/third-section')
+                },
+
+                {
+                  key: 'sec4',
+                  label: ' Fourth Section',
+                  onClick		: () => router.push('/admin/create-page/fourth-section')
+                },
+
+                {
+                  key: 'sec5',
+                  label: ' Fifth Section',
+                  onClick		: () => router.push('/admin/create-page/fifth-section')
+                }
+
+
+              ],
+
+
+              // onClick		: () => router.push('/admin/create-page')
+            },
+
+
+
+
+
+
+          
+            {
+              key: 'sub4',
+              label: 'View Pages (Who We Help)' ,
+              onClick		: () => router.push('/admin/view-pages')
+            }]
           }
     ]
 
@@ -110,6 +171,7 @@ export default function RootLayout({ children }) {
 	return (
 		
             <Layout className='w-[100vw] '>
+              
       <Header
         className=''
         style={{

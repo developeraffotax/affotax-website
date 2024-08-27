@@ -16,7 +16,7 @@ import 'react-quill/dist/quill.snow.css';
 
 
 
-export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMetaTitle, oldMetaDescription, oldValue, oldKeywords}) {
+export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMetaTitle, oldMetaDescription, oldValue, oldKeywords, slug}) {
 
 
   const [uploadSuccess, setUploadSuccess] = useState(false)
@@ -40,6 +40,8 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
 
   const [keywords, setKeywords] = useState(oldKeywords)
 
+
+  const [url, setUrl] = useState(window.location.origin + '/blog/' + slug)
 
   const props = {
     name: 'imgFile',
@@ -179,16 +181,35 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
 
     return (
         <>
-            <div className="w-full flex flex-col gap-4 justify-center items-center ">
+            <div className="w-full flex flex-col gap-4 justify-center items-center p-2 ">
 
 
-            <div className="w-full flex gap-8 justify-center items-start p-4">
+
+            <Input className="hover:cursor-pointer  hover:bg-black/70 hover:text-white   active:scale-[.99] transition-all " placeholder="The Url of the current Page"  readOnly variant="filled" value={url} onClick={(e) => {
+				e.target.select();
+
+				document?.execCommand('copy');
+        window?.getSelection().removeAllRanges();
+       				
+				message.success(`Url Copied!`);
+			}}/>
+
+
+
+            <div className="w-full flex gap-8 justify-center items-start ">
                 
 
 
                 <div className="w-full flex flex-col gap-2 ">
                 <label>Title</label>
-                <Input placeholder="Title of the Blog" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <Input placeholder="Title of the Blog" value={title} onChange={(e) => {
+                  setTitle(e.target.value);
+
+                  const slug = (e.target.value).toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
+                  
+                  const url = window.location.origin + '/blog/' + slug;
+                  setUrl(url);
+                }} />
 
                 <label>Description</label>
                 <TextArea rows={4} placeholder="Write a short description here!" maxLength={600} value={description} onChange={(e) => setDescription(e.target.value)}/>

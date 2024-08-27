@@ -2,11 +2,11 @@
 
 
 import { deleteBlog } from '@/lib/blogs';
-import { Space, Spin, Table, Tag } from 'antd';
+import { ConfigProvider, Space, Spin, Table, Tag } from 'antd';
 import axios from 'axios';
 import Link from 'next/link';
 import { MdDelete } from "react-icons/md";
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEdit } from "react-icons/bi";
 import { AiOutlineEye } from "react-icons/ai";
@@ -26,6 +26,8 @@ export default function ViewBlogs({blogsData, refresh}) {
     
         const [data, setData] = useState(blogsData)
 
+        const tableRef = useRef()
+
   
 
     useEffect(() => {
@@ -44,6 +46,8 @@ export default function ViewBlogs({blogsData, refresh}) {
       })
 
       setData(blogsDataMap)
+
+      console.log(tableRef)
 
       setIsLoading(false)
 
@@ -116,7 +120,14 @@ export default function ViewBlogs({blogsData, refresh}) {
 
     return (
         <>
-        <Table columns={columns} dataSource={data} size='large' showHeader bordered  />
+
+
+
+<Table columns={columns} dataSource={data} size='large' showHeader bordered  />
+
+
+ 
+        
     
         </>
     )
