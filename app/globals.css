@@ -22,6 +22,18 @@
   } */
 
 
+
+
+
+
+/* Quill editor text area min height */
+  .ql-editor{
+    min-height:200px;
+}
+
+
+
+
 select {
     margin: 0;      
     -webkit-box-sizing: border-box;

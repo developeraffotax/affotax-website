@@ -1,5 +1,3 @@
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
@@ -15,7 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body><AntdRegistry>{children}</AntdRegistry></body>
+			<body>
+				<AntdRegistry>{children}</AntdRegistry>
+				<NextTopLoader  color="#F27941" showSpinner={false} />
+			</body>
 		</html>
 	);
 }

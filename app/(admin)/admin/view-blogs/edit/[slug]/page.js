@@ -11,12 +11,24 @@ export default async function  EditBlogPage({params}) {
     
     const oldDoc = await Blog.findOne({_id : params.slug});
     
-    console.log(oldDoc)
+    
+    const plainOldDoc = {
+        _id: oldDoc._id,
+        title: oldDoc.title,
+        description: oldDoc.description,
+        imageUrl: oldDoc.imageUrl,
+        metaTitle: oldDoc.metaTitle,
+        metaDescription: oldDoc.metaDescription,
+        content: oldDoc.content,
+        keywords: oldDoc.keywords
+
+
+    }
               
 
     return (
         <>
-            <EditBlog id={oldDoc._id} oldTitle={oldDoc.title} oldDescription={oldDoc.description} oldImgUrl={oldDoc.imageUrl} oldMetaTitle={oldDoc.metaTitle} oldMetaDescription={oldDoc.metaDescription} oldValue={oldDoc.content}/>
+            <EditBlog id={plainOldDoc._id} oldTitle={plainOldDoc.title} oldDescription={plainOldDoc.description} oldImgUrl={plainOldDoc.imageUrl} oldMetaTitle={plainOldDoc.metaTitle} oldMetaDescription={plainOldDoc.metaDescription} oldValue={plainOldDoc.content} oldKeywords={plainOldDoc.keywords} />
         </>
     )
 }

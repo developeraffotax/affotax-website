@@ -1,10 +1,5 @@
 'use client'
 
-import Image from "next/image";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import HeroImg from "@/public/Accountant1.PNG";
-import Link from "next/link";
-import Stepper from 'react-stepper-horizontal';
 import { useScroll, animated, useInView } from '@react-spring/web'
 
 

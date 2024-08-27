@@ -1,7 +1,5 @@
 import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import HeroImg from "@/public/Accountant1.PNG";
-import HeroImg2 from "@/public/ecom1.PNG";
 import HeroImg3 from "@/public/ecom2.PNG";
 import Link from "next/link";
 

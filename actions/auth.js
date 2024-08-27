@@ -5,7 +5,6 @@ import { getFormData } from "@/lib/getFormData";
 import User from "@/lib/Model/User";
 import { SignJWT } from "jose";
 
-import jwt from "jsonwebtoken";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 

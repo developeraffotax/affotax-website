@@ -3,59 +3,44 @@ import Blog from "@/lib/Model/Blog";
 import Image from "next/image";
 import Link from "next/link";
 
+//Meta data
+export async function generateMetadata({ params }) {
+	const { slug } = params;
 
+	const db = await connectDB();
+	const blog = await Blog.findOne({ slug: slug });
 
+	console.log(blog);
 
-export const metadata = {
-	title: "A Guide on How to Pay Corporation Tax Online in the UK",
-	description:
-		"Wondering how to pay corporation tax online in UK? Read our guide to learn about paying corporate tax online, including the rate of corporation tax & more.",
-};
+	return {
+		title: blog.metaTitle,
+		description: blog.metaDescription,
+	};
+}
 
+//Blog Page
+export default async function BlogPage({ params }) {
+	const { slug } = params;
 
+	const db = await connectDB();
+	const blog = await Blog.findOne({ slug: slug });
 
-
-
-
-
-
-
-
-export default async function BlogPage({params}) {
-
-
-	
-	
-	const {slug} = params;
-	console.log(slug)
-	const db = await connectDB()
-	const blog = await Blog.findOne({slug : slug });
-
-
-	if(!blog) {
-
+	if (!blog) {
 		return (
 			<>
-				<div className='w-full flex flex-col justify-center items-center py-40 gap-8  '>
-				<h3 className="text-4xl font-semibold  ">This blog does not exist!</h3>
-				<Link href='/'><button className="px-4 py-2 font-poppins font-semibold bg-orange-400 rounded-xl text-white ">Go to Homepage</button></Link>
-				 
+				<div className="w-full flex flex-col justify-center items-center py-40 gap-8  ">
+					<h3 className="text-4xl font-semibold  ">
+						This blog does not exist!
+					</h3>
+					<Link href="/">
+						<button className="px-4 py-2 font-poppins font-semibold bg-orange-400 rounded-xl text-white ">
+							Go to Homepage
+						</button>
+					</Link>
 				</div>
 			</>
-		)
+		);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
 
 	return (
 		<div>
@@ -78,18 +63,9 @@ export default async function BlogPage({params}) {
 										>
 											By Dave Jangid
 										</a>
-										{/* <p className="text-base text-gray-500 dark:text-gray-400">
-											Graphic Designer, educator &amp; CEO
-											Flowbite
-										</p> */}
+
 										<p className="text-base text-gray-500 dark:text-gray-400">
-											<time
-												pubdate
-												// dateTime="2022-02-08"
-												// title="February 8th, 2022"
-											>
-												Feb. 8, 2024
-											</time>
+											<time pubdate>Feb. 8, 2024</time>
 										</p>
 									</div>
 								</div>
@@ -97,9 +73,7 @@ export default async function BlogPage({params}) {
 						</header>
 
 						<h2>{blog.title}</h2>
-						<p>
-							{blog.description}
-						</p>
+						<p>{blog.description}</p>
 
 						<figure>
 							<Image
@@ -109,25 +83,16 @@ export default async function BlogPage({params}) {
 								width={500}
 								height={500}
 							/>
-							{/* <figcaption>Digital art by Anonymous</figcaption> */}
 						</figure>
 
-						<h2>{blog.title}</h2>
+						{/* <h2>{blog.title}</h2> */}
 
-						<div dangerouslySetInnerHTML={{__html: blog.content}}>
-
-						</div>
-
-						
-
-						
-
-					
-						
+						<div
+							dangerouslySetInnerHTML={{ __html: blog.content }}
+						></div>
 					</article>
 				</div>
 			</main>
-
 		</div>
 	);
 }

@@ -2,34 +2,29 @@ import { connectDB } from "@/lib/connectDB";
 import Blog from "@/lib/Model/Blog";
 import { revalidatePath } from "next/cache";
 import { permanentRedirect, redirect } from "next/navigation";
-import { Button, Result } from 'antd';
+import { Button, Result } from "antd";
 import Link from "next/link";
-
-
-
-
+import { del } from "@vercel/blob";
 
 export default async function DeleteBlog({ params }) {
+	try {
 
-	const db = await connectDB();
-	const response = await Blog.deleteOne({ _id: params.slug });
+		const blogToDelete = await Blog.findOne({ _id: params.slug });
 
-	revalidatePath('/admin/view-blogs')
+		//Delete the blob file from vercel blob store
+		if (blogToDelete.imageUrl) {
+			await del(blogToDelete.imageUrl);
+		}
+
+		const db = await connectDB();
+		const response = await Blog.deleteOne({ _id: params.slug });
+
+	} catch (error) {
+		return (
+			<Result status="success" title="Failed to delete the blog! Try again later" subTitle={error?.message || "Unknown Error Occured"} extra={[ <Link href="/admin/view-blogs"> <Button type="primary">Go Back</Button> </Link>, ]} />
+		);
+	}
+
+	revalidatePath("/admin/view-blogs");
 	redirect("/admin/view-blogs?refresh=true");
-	
-
-
-	return (
-		<Result
-		status="success"
-		title="Blog has been deleted successfully!"
-		
-		extra={[
-		  
-			<Link href='/admin/view-blogs?refresh=true'><Button type="primary"  >Go Back</Button></Link>
-		  
-		  
-		]}
-	  />
-	)
 }

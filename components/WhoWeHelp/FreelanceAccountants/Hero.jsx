@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import HeroImg from "@/public/free1.PNG";
-import Link from "next/link";
 import { useSpring, animated } from '@react-spring/web'
 
 

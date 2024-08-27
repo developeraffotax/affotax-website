@@ -19,7 +19,7 @@ import { connectDB } from '@/lib/connectDB';
 export const metadata = {
 	title: "Blogs | Affotax",
 	description:
-		"",
+		`Discover a wealth of knowledge on our blogs page, featuring the latest updates, expert tips, and insightful articles on Accounting. Whether you're looking for in-depth guides or quick reads, we have content to keep you informed and inspired. `,
 };
 
 
@@ -36,7 +36,7 @@ export default async function BlogsPage() {
   const db = await connectDB()
   const blogs = await Blog.find({});
 
-  console.log(blogs)
+  
 
 
 
@@ -64,7 +64,7 @@ export default async function BlogsPage() {
 
         {
           blogs.map((el) => {
-              console.log(el)
+              
               return(
                 <article className="max-w-xs" key={el._id}>
                 <Link href={`/blog/${el.slug}`}>

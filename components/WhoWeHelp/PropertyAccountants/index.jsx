@@ -1,10 +1,9 @@
 
 import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 import Hero from "./Hero";
-import HowToGetStarted from "./HowToGetStarted";
 import OurServices from "./OurServices";
 import WhatIsSoleTrader from "./WhatIsSoleTrader";
-import WhyChooseUs from "./WhyChooseUs";
+
 import InstantQuoteForm from "./InstantQuoteForm";
 
 export const metadata = {

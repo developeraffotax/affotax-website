@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import HeroImg from "@/public/Accountant1.PNG";
-import Link from "next/link";
+
 
 //border-b border-gray-300
 export default function Hero({getQuoteClickHandler}) {

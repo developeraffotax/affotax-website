@@ -4,7 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { sendInstantQuote } from "@/actions/contact";
 import SubmitBtn from "./SubmitBtn";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Arrow from '@/public/Arrow1.svg'
 import Image from "next/image";
 import { forwardRef } from "react";
@@ -14,7 +14,7 @@ const InstantQuoteForm = forwardRef( function InstantQuoteForm(props, ref) {
 
 	const success = searchParams.get("success");
 
-	//const ref = useRef();
+	
 
 	
 

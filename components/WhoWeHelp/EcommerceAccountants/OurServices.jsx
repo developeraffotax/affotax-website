@@ -1,12 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import HeroImg from "@/public/Accountant1.PNG";
-import Link from "next/link";
-import Stepper from "react-stepper-horizontal";
-import { useScroll, animated, useInView } from "@react-spring/web";
-import { FaCheck } from "react-icons/fa6";
+
+import { useScroll, useInView } from "@react-spring/web";
 import { v4 as uuidv4 } from "uuid";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/react-splide/css';

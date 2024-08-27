@@ -1,12 +1,9 @@
 
 import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 import Hero from "./Hero";
-import HowToGetStarted from "./HowToGetStarted";
 import OurServices from "./OurServices";
-import WhatIsSoleTrader from "./WhatIsLimitedCompany";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
-import WhatIsLimitedCompany from "./WhatIsLimitedCompany";
 
 export const metadata = {
 	title: "Expert Accounting & Accountant for Limited Company",

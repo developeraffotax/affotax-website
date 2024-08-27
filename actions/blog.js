@@ -2,12 +2,7 @@
 
 import { connectDB } from "@/lib/connectDB";
 import { getFormData } from "@/lib/getFormData";
-import Customer from "@/lib/Model/Customer";
-import Order from "@/lib/Model/Order";
-import sendMail from "@/lib/sendMail";
 import { redirect } from "next/navigation";
-import mongoose from "mongoose";
-import sendPaymentMail from "@/lib/sendPaymentMail";
 import Blog from "@/lib/Model/Blog";
 import { put } from "@vercel/blob";
 
@@ -15,7 +10,7 @@ import { revalidatePath } from "next/cache";
 
 //CREATE OPERATION
 export async function createBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content } =
+	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords } =
 		getFormData(
 			formData,
 			"title",
@@ -23,9 +18,10 @@ export async function createBlog(formData) {
 			"metaTitle",
 			"metaDescription",
 			"imgUrl",
-			"content"
+			"content",
+			"keywords"
 		);
-
+console.log(keywords)
 	try {
 		const db = await connectDB();
 
@@ -33,10 +29,11 @@ export async function createBlog(formData) {
 			metaTitle: metaTitle,
 			metaDescription: metaDescription,
 			title: title,
-			slug: title.toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/\?$/, ''),
+			slug: title.toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, ''),
 			description: description,
 			imageUrl: imgUrl,
 			content: content,
+			keywords: keywords.split(",")
 		});
 
 		const blogDoc = await blog.save();
@@ -84,9 +81,21 @@ export async function UploadImage(formData) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 //Update OPERATION
 export async function updateBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, id } =
+	const { title, description, metaTitle, metaDescription, imgUrl, content, id, keywords } =
 		getFormData(
 			formData,
 			"title",
@@ -95,7 +104,8 @@ export async function updateBlog(formData) {
 			"metaDescription",
 			"imgUrl",
 			"content",
-			"id"
+			"id",
+			"keywords"
 		);
 
 	try {
@@ -107,10 +117,11 @@ export async function updateBlog(formData) {
 		oldDoc.metaTitle= metaTitle;
 		oldDoc.metaDescription= metaDescription;
 		oldDoc.title= title;
-		oldDoc.slug= title.toLocaleLowerCase().trim().replaceAll(" ", "-");
+		oldDoc.slug= title.toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
 		oldDoc.description= description;
 		oldDoc.imageUrl= imgUrl;
 		oldDoc.content= content;
+		oldDoc.keywords= keywords.split(",")
 		
 
 		const newDoc = await oldDoc.save();

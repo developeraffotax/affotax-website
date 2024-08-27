@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from "react";
-import { Alert, Button, Input, message, Upload } from 'antd';
+import { Alert, Button, Input, message, Select, Upload } from 'antd';
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from '@ant-design/icons';
 import { InboxOutlined } from '@ant-design/icons';
@@ -41,6 +41,8 @@ export default function CreateBlog() {
 
   
   const [value, setValue] = useState('');
+
+  const [keywords, setKeywords] = useState([])
 
 
   const props = {
@@ -99,6 +101,7 @@ export default function CreateBlog() {
       formData.append('metaDescription', metaDescription)
       formData.append('imgUrl', imgUrl)
       formData.append('content', value)
+      formData.append('keywords', keywords)
 
 
 
@@ -116,6 +119,7 @@ export default function CreateBlog() {
         setMetaTitle('')
         setMetaDescription()
         setValue('')
+        setKeywords([])
         } else {
           setIsError(true)
         }
@@ -125,11 +129,6 @@ export default function CreateBlog() {
 
 
     }
-
-
-
-
-
 
 
 
@@ -211,8 +210,11 @@ export default function CreateBlog() {
                 <TextArea rows={4} placeholder="Write a short meta description here!" maxLength={300} value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)}/>
 
 
-
-                
+                <label>Keywords</label>
+                <Select mode="tags" style={{ width: '100%', }} placeholder="Keywords" onChange={(value) => {
+                  console.log(value);
+                  setKeywords(value)
+                }} value={keywords} options={[]} />
 
                
 
@@ -224,13 +226,15 @@ export default function CreateBlog() {
             </div>
 
 
-            <div className="w-full h-40 flex flex-col  gap-2">
+            <div className="w-full flex flex-col  gap-2">
             <label>Content for the blog</label>
-            <ReactQuill className="w-full  h-full" theme="snow" value={value} onChange={setValue} modules={{toolbar: toolbarOptions,}}   />
+            <ReactQuill  className="w-full  "  theme="snow" value={value} onChange={setValue} modules={{toolbar: toolbarOptions,}}   />
+
+            <Button className="w-[10%] mt-4"  onClick={submitHandler} type="primary">Add Post</Button>
             </div>
 
             <div className="w-full flex justify-start mt-16"> 
-            <Button className="w-[15%]"  onClick={submitHandler} type="primary">Add Post</Button>
+           
             </div>
 
 
