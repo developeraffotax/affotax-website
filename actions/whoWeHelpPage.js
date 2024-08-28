@@ -11,6 +11,80 @@ import { revalidatePath } from "next/cache";
 import Page from "@/lib/Model/Page/Page";
 
 
+
+
+
+
+
+
+//Create a new Page
+export async function createNewPage(formData) {
+	const { title, metaTitle, metaDescription, keywords, slug } = getFormData( formData, "title", "metaTitle", "metaDescription", "keywords", "slug" );
+
+	console.log(title, slug, "THE SLUG VALUE IS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+
+
+	try {
+		const db = await connectDB();
+
+		const page = new Page({
+			title: title,
+            slug: slug,
+
+			metaTitle: metaTitle,
+			metaDescription: metaDescription,
+			keywords: keywords.split(","),
+
+            HeroSection: {
+                slug: slug
+            },
+
+			SecondSection: {
+				slug: slug
+			},
+
+			ThirdSection: {
+				slug: slug
+			},
+
+			FourthSection: {
+				slug: slug
+			},
+
+			FifthSection: {
+				slug: slug
+			}
+
+
+        })
+
+		const pageDoc = await page.save();
+		//revalidatePath('/admin/view-pages')
+		return {
+			success: true,
+		};
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Hero Section
 export async function createHeroSection(formData) {
 	const { heading, imageUrl, description1, description2, metaTitle, metaDescription, keywords, btnText, btnLink, slug } = getFormData( formData, "heading", "imageUrl", "description1", "description2", "metaTitle", "metaDescription", "keywords", "btnText", "btnLink", "slug" );
@@ -18,29 +92,30 @@ export async function createHeroSection(formData) {
 	try {
 		const db = await connectDB();
 
-		const page = new Page({
-            slug: slug,
-            HeroSection : {
-                heading,
-                slug,
-                imageUrl,
-                description1,
-                description2,
-                metaTitle,
-                metaDescription,
-                keywords: keywords.split(","),
-                btnText,
-                btnLink
+		const HeroSection = {
+			heading,
+			slug,
+			imageUrl,
+			description1,
+			description2,
+			btnText,
+			btnLink
 
-            }
-        })
+		}
 
-		const pageDoc = await page.save();
-		revalidatePath('/admin/view-pages')
+
+			// update here
+
+			const res = await Page.updateOne({slug: slug}, {$set: {
+				HeroSection : HeroSection
+			}})
+
+			
 		return {
 			success: true,
 		};
 	} catch (error) {
+		console.log(error)
 		return {
 			success: false,
 		};

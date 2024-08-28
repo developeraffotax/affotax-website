@@ -31,12 +31,15 @@ export default function RootLayout({ children }) {
   const [defaultSelectedKeys, setDefaultSelectedKeys] = useState([])
   const [defaultOpenKeys, setDefaultOpenKeys] = useState([])
 
-  console.log()
 
 
-  useEffect(() => {
 
-  }, [])
+  // useEffect(() => {
+  //   console.log(pathname)
+
+
+
+  // }, [])
     // const items1 = ['1', '2', '3'].map((key) => ({
     //     key,
     //     label: `nav ${key}`,
@@ -72,13 +75,25 @@ export default function RootLayout({ children }) {
               {
               key: 'blog1',
               label: 'Create a new Blog' ,
-              onClick		: () => router.push('/admin/create-blog')
+              onClick		: () => {
+
+                setDefaultSelectedKeys(['blog1'])
+                setDefaultOpenKeys(['blog'])
+                router.push('/admin/create-blog')
+              }
             },
           
             {
               key: 'blog2',
               label: 'View Blogs' ,
-              onClick		: () => router.push('/admin/view-blogs')
+              onClick		: () => {
+
+
+                setDefaultSelectedKeys(['blog2'])
+                setDefaultOpenKeys(['blog'])
+
+                router.push('/admin/view-blogs')
+              }
             }]
           },
 
@@ -93,34 +108,73 @@ export default function RootLayout({ children }) {
               key: 'section',
               label: 'Create a new Page (Who We Help)' ,
               children: [
+
+                {
+                  key: 'section0',
+                  label: ' Create Page',
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['section0'])
+                setDefaultOpenKeys(['page', 'section'])
+
+                    router.push('/admin/create-page/create')
+                  }
+                },
+
+
                 {
                   key: 'section1',
                   label: ' Hero Section',
-                  onClick		: () => router.push('/admin/create-page/hero-section')
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['section1'])
+                setDefaultOpenKeys(['page', 'section'])
+
+                    router.push('/admin/create-page/hero-section')
+                  }
                 },
 
                 {
                   key: 'section2',
                   label: ' Second Section',
-                  onClick		: () => router.push('/admin/create-page/second-section')
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['section2'])
+                setDefaultOpenKeys(['page', 'section'])
+
+                    router.push('/admin/create-page/second-section')
+                  }
                 },
 
                 {
                   key: 'section3',
                   label: ' Third Section',
-                  onClick		: () => router.push('/admin/create-page/third-section')
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['section3'])
+                setDefaultOpenKeys(['page', 'section'])
+
+                    router.push('/admin/create-page/third-section')
+                  }
                 },
 
                 {
                   key: 'section4',
                   label: ' Fourth Section',
-                  onClick		: () => router.push('/admin/create-page/fourth-section')
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['section4'])
+                    setDefaultOpenKeys(['page', 'section'])
+
+                    router.push('/admin/create-page/fourth-section')
+                  }
                 },
 
                 {
                   key: 'section5',
                   label: ' Fifth Section',
-                  onClick		: () => router.push('/admin/create-page/fifth-section')
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['section5'])
+                    setDefaultOpenKeys(['page', 'section'])
+
+
+                    router.push('/admin/create-page/fifth-section')
+                  }
                 }
 
 
@@ -176,9 +230,10 @@ export default function RootLayout({ children }) {
       
 	return (
 		
-            <Layout className='w-[100vw] h-[100vh]' >
+            <Layout className='w-[100vw] h-[100vh]'   >
               
       <Header
+        
         className=''
         style={{
           display: 'flex',
@@ -248,7 +303,7 @@ export default function RootLayout({ children }) {
 
           <Sider
             collapsed={!isSider}
-            theme='light'
+            
             className=''
             style={{
               background: colorBgContainer,
@@ -257,8 +312,10 @@ export default function RootLayout({ children }) {
           >
             <Menu
               mode="inline"
-               defaultSelectedKeys={['sec1']}
-               defaultOpenKeys={['2', 'sub3']}
+
+              theme='light'
+               defaultSelectedKeys={defaultSelectedKeys}
+               defaultOpenKeys={defaultOpenKeys}
 
               // selectedKeys={['sec1']}
               // openKeys={['2', 'sub3']}
@@ -266,7 +323,7 @@ export default function RootLayout({ children }) {
               style={{
                 height: '100%',
               }}
-              se
+              
               items={items2}
             />
           </Sider>
@@ -287,8 +344,8 @@ export default function RootLayout({ children }) {
           textAlign: 'center',
         }}
       >
-        {!isSider && <RiMenuUnfoldLine className='scale-125 text-black/75  hover:text-orange-400 hover:scale-150 transition-all cursor-pointer' onClick={() => setIsSider(true)}/>}
-        {isSider && <RiMenuUnfold2Line className='scale-125 text-black/75  hover:text-orange-400 hover:scale-150 transition-all cursor-pointer ' onClick={() => setIsSider(false)}/>}
+        {!isSider && <RiMenuUnfoldLine className='scale-125 text-black/75  hover:text-orange-400 hover:scale-150 transition-all cursor-pointer border  rounded-sm shadow-sm shadow-black/20' onClick={() => setIsSider(true)}/>}
+        {isSider && <RiMenuUnfold2Line className='scale-125 text-black/75  hover:text-orange-400 hover:scale-150 transition-all cursor-pointer border  rounded-sm shadow-sm shadow-black/20' onClick={() => setIsSider(false)}/>}
         
         Ant Design ©{new Date().getFullYear()} Created by Ant UED
       </Footer>

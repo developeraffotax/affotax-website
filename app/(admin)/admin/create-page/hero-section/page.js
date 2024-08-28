@@ -23,9 +23,6 @@ export default function HeroSection() {
 	const [description2, setDescription2] = useState("");
 
 	
-	const [metaTitle, setMetaTitle] = useState("");
-	const [metaDescription, setMetaDescription] = useState("");
-	const [keywords, setKeywords] = useState([]);
 	
 	const [btnText, setBtnText] = useState("");
 	const [btnLink, setBtnLink] = useState("");
@@ -34,9 +31,9 @@ export default function HeroSection() {
 	const [url, setUrl] = useState('');
 	
 
-	useEffect(() => {
-		setUrl(window?.location?.origin + '/blog/')
-	  }, [])
+	// useEffect(() => {
+	// 	setUrl(window?.location?.origin + '/')
+	//   }, [])
 
 	
 
@@ -78,14 +75,11 @@ export default function HeroSection() {
 		formData.append("description1", description1);
 		formData.append("description2", description2);
 
-		formData.append("metaTitle", metaTitle);
-		formData.append("metaDescription", metaDescription);
-		formData.append("keywords", keywords);
 
 		formData.append("btnText", btnText);
 		formData.append("btnLink", btnLink);
 
-		formData.append("slug", slug);
+		formData.append("slug", url.split('/')[3]);
 
 		const res = await createHeroSection(formData);
 
@@ -98,10 +92,6 @@ export default function HeroSection() {
 			setImageUrl("");
 			setDescription1("");
 			setDescription2("");
-
-			setMetaTitle("");
-			setMetaDescription();
-			setKeywords([]);
 
 			setBtnText("");
 			setBtnLink("");
@@ -118,30 +108,13 @@ export default function HeroSection() {
 			<div className="w-full flex flex-col gap-4 justify-center items-center p-2">
 
 
-			<Input className="hover:cursor-pointer " placeholder="The Url of the current Page"  readOnly variant="filled" value={url} onClick={(e) => {
-				const selection = e.target.select();
-
-				
-
-				document.execCommand('copy');
-
-				e.target.blur()
-				message.success(`Url Copied!`);
-			}}/>
+			<Input className=" " placeholder="The Url of the current Page"  variant="filled" value={url} onChange={ e => setUrl(e.target.value) }/>
 			
 
 				<div className="w-full flex gap-8 justify-center items-start ">
 					<div className="w-full flex flex-col gap-2 ">
 						<label>Heading</label>
-						<Input placeholder="Title of the Blog" value={heading} onChange={(e) => {
-							setHeading(e.target.value);
-
-							const slug = (e.target.value).toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
-							setSlug(slug)
-
-							const url = window.location.origin + '/' + slug;
-							setUrl(url);
-						}} />
+						<Input placeholder="Title of the Blog" value={heading} onChange={(e) => { setHeading(e.target.value); }} />
 
 						<label>Hero Image</label>
 						<Upload {...props}> {" "} <Button icon={<UploadOutlined />}> Click to Upload </Button>{" "} </Upload>
@@ -154,14 +127,7 @@ export default function HeroSection() {
 					</div>
 
 					<div className="w-full flex flex-col  gap-2">
-						<label>Meta Title</label>
-						<Input placeholder="Meta title for the blog" value={metaTitle} onChange={(e) => setMetaTitle(e.target.value)} />
-
-						<label>Meta Description</label>
-						<TextArea rows={4} placeholder="Write a short meta description here!" maxLength={300} value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} />
-
-						<label>Keywords</label>
-						<Select mode="tags" style={{ width: "100%" }} placeholder="Keywords" onChange={(value) => { console.log(value); setKeywords(value); }} value={keywords} />
+						
 
                         <label>Hero Button Text</label>
                         <Input placeholder="Hero Button Text" value={btnText} onChange={(e) => setBtnText(e.target.value)} />
