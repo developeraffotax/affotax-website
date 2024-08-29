@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
-import HeroImg from "@/public/propertyAcc2.PNG";
+import HeroImg from "@/public/propertyAcc2.png";
 import Link from "next/link";
 
 //border-b border-gray-300

@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import HeroImg from "@/public/propertyAcc.PNG";
-import SmallBiz from "@/public/smallbiz.PNG";
-import SmallBiz2 from "@/public/smallbiz2.PNG";
+import HeroImg from "@/public/propertyAcc.png";
+import SmallBiz from "@/public/smallbiz.png";
+import SmallBiz2 from "@/public/smallbiz2.png";
 
 
 export default function WhatIsSoleTrader() {

@@ -5,12 +5,12 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import "@splidejs/react-splide/css";
 import Card from "./Card";
-import img1 from "@/public/freelance1.PNG";
-import img2 from "@/public/freelance2.PNG";
-import img3 from "@/public/freelance3.PNG";
-import img4 from "@/public/freelance4.PNG";
-import img5 from "@/public/freelance5.PNG";
-import img6 from "@/public/freelance6.PNG";
+import img1 from "@/public/freelance1.png";
+import img2 from "@/public/freelance2.png";
+import img3 from "@/public/freelance3.png";
+import img4 from "@/public/freelance4.png";
+import img5 from "@/public/freelance5.png";
+import img6 from "@/public/freelance6.png";
 
 const steps = [
 	{

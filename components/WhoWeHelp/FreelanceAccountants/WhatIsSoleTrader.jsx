@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import HeroImg from "@/public/soleTraderman.PNG";
+import HeroImg from "@/public/soleTraderman.png";
 import { useScroll, } from '@react-spring/web'
 
 

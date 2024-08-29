@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 
-import CloudAcc from "@/public/location4.PNG";
+import CloudAcc from "@/public/location4.png";
 
 
 

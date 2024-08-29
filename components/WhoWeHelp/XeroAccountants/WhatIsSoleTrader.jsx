@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import HeroImg from "@/public/xero1.PNG";
-import SmallBiz from "@/public/smallbiz.PNG";
-import SmallBiz2 from "@/public/smallbiz2.PNG";
-import CloudAcc from "@/public/cloudacc.PNG";
+import HeroImg from "@/public/xero1.png";
+import SmallBiz from "@/public/smallbiz.png";
+import SmallBiz2 from "@/public/smallbiz2.png";
+import CloudAcc from "@/public/cloudacc.png";
 import { useScroll } from "@react-spring/web";
 
 
