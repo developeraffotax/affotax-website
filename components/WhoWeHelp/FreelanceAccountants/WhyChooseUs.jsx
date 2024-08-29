@@ -4,12 +4,12 @@ import Image from "next/image";
 
 import { useScroll } from '@react-spring/web';
 
-import img1 from '@/public/1.PNG';
-import img2 from '@/public/2.PNG';
-import img3 from '@/public/3.PNG';
-import img4 from '@/public/4.PNG';
-import img5 from '@/public/5.PNG';
-import img6 from '@/public/6.PNG';
+import img1 from '@/public/1.png';
+import img2 from '@/public/2.png';
+import img3 from '@/public/3.png';
+import img4 from '@/public/4.png';
+import img5 from '@/public/5.png';
+import img6 from '@/public/6.png';
 
 
 
