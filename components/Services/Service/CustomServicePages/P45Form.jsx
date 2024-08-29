@@ -5,10 +5,9 @@ import PriceBoxes from "../PriceBoxes/PriceBoxes";
 import Benefits from "../Benefits/Benefits";
 import Faqs from "../Faqs/Faqs";
 import { v4 as uuid } from "uuid";
-import { TbBulb } from "react-icons/tb";
 import Image from "next/image";
-import Form from '@/public/formp60.PNG'
-import Bulb from '@/public/bulbp60.PNG'
+import Form from '@/public/formp60.png'
+import Bulb from '@/public/bulbp60.png'
 
 export default function P45Form() {
 

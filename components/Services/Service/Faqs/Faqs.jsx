@@ -2,8 +2,6 @@
 
 
 import React, { useState } from "react";
-import Faq from "./Faq";
-import { v4 as uuid } from "uuid";
 import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
