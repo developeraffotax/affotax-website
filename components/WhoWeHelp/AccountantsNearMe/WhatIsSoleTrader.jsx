@@ -1,15 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import HeroImg from "@/public/taxlocal.PNG";
+import HeroImg from "@/public/taxlocal.png";
 
-import { useScroll} from "@react-spring/web";
 
 
 
 
 export default function WhatIsSoleTrader() {
-	const { scrollYProgress } = useScroll();
+	
 
 	return (
 		<>

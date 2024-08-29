@@ -100,17 +100,13 @@ export async function createHeroSection(formData) {
 			description2,
 			btnText,
 			btnLink
-
 		}
 
+		// update here
+		const res = await Page.updateOne({slug: slug}, {$set: {
+			HeroSection : HeroSection
+		}})
 
-			// update here
-
-			const res = await Page.updateOne({slug: slug}, {$set: {
-				HeroSection : HeroSection
-			}})
-
-			
 		return {
 			success: true,
 		};
