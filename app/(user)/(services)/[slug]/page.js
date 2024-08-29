@@ -1,21 +1,20 @@
 import Service from "@/components/Services/Service/Service"
-import ContractorAccountants from "@/components/WhoWeHelp/ContractorAccountants/index";
-import LimitedCompanies from "@/components/WhoWeHelp/LimitedCompanies/index";
-import LimitedLiabilityPartnership from "@/components/WhoWeHelp/LimitedLiabilityPartnership/index";
-import Partnerships from "@/components/WhoWeHelp/Partnerships/index";
-import SmallBusinessAccountants from "@/components/WhoWeHelp/SmallBusinessAccountants/index";
-import SoleTraders from "@/components/WhoWeHelp/SoleTraders/index";
-import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants/index";
-import EcommerceAccountants from "@/components/WhoWeHelp/EcommerceAccountants/index"
-import PropertyAccountants from "@/components/WhoWeHelp/PropertyAccountants/index"
-import FreelanceAccountants from "@/components/WhoWeHelp/FreelanceAccountants/index"
-import AccountantsNearMe from "@/components/WhoWeHelp/AccountantsNearMe/index"
-import CheapAccountants from "@/components/WhoWeHelp/CheapAccountants/index"
+import ContractorAccountants from "@/components/WhoWeHelp/ContractorAccountants/index.jsx";
+import LimitedCompanies from "@/components/WhoWeHelp/LimitedCompanies/index.jsx";
+import LimitedLiabilityPartnership from "@/components/WhoWeHelp/LimitedLiabilityPartnership/index.jsx";
+import Partnerships from "@/components/WhoWeHelp/Partnerships/index.jsx";
+import SmallBusinessAccountants from "@/components/WhoWeHelp/SmallBusinessAccountants/index.jsx";
+import SoleTraders from "@/components/WhoWeHelp/SoleTraders/index.jsx";
+import XeroAccountants from "@/components/WhoWeHelp/XeroAccountants/index.jsx";
+import EcommerceAccountants from "@/components/WhoWeHelp/EcommerceAccountants/index.jsx"
+import PropertyAccountants from "@/components/WhoWeHelp/PropertyAccountants/index.jsx"
+import FreelanceAccountants from "@/components/WhoWeHelp/FreelanceAccountants/index.jsx"
+import AccountantsNearMe from "@/components/WhoWeHelp/AccountantsNearMe/index.jsx"
+import CheapAccountants from "@/components/WhoWeHelp/CheapAccountants/index.jsx"
 import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
 import { notFound, redirect } from "next/navigation";
 import P45Form from "@/components/Services/Service/CustomServicePages/P45Form";
-
 
 
 
