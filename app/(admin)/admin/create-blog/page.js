@@ -1,17 +1,11 @@
 'use client'
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Alert, Button, Input, message, Select, Upload } from 'antd';
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from '@ant-design/icons';
-import { InboxOutlined } from '@ant-design/icons';
 
-import Dragger from "antd/es/upload/Dragger";
-
-import { upload } from '@vercel/blob/client';
 import { createBlog, UploadImage } from "@/actions/blog";
-import { useFormState } from "react-dom"; 
-import { useForm } from "antd/es/form/Form";
 import ReactQuill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
 
@@ -189,8 +183,8 @@ export default function CreateBlog() {
             <Input className="hover:cursor-pointer  hover:bg-black/70 hover:text-white   active:scale-[.99] transition-all " placeholder="The Url of the current Page"  readOnly variant="filled" value={url} onClick={(e) => {
 				e.target.select();
 
-				document.execCommand('copy');
-        window.getSelection().removeAllRanges();
+				document?.execCommand('copy');
+        window?.getSelection().removeAllRanges();
        				
 				message.success(`Url Copied!`);
 			}}/>

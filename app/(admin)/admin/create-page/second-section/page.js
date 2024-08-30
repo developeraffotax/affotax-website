@@ -127,7 +127,7 @@ export default function SecondSection() {
 				<div className="w-full flex gap-8 justify-center items-start ">
 					<div className="w-full flex flex-col gap-2 ">
 						<label>Heading</label>
-						<Input placeholder="Title of the Blog" value={heading} onChange={(e) => { setHeading(e.target.value); const slug = e.target.value .toLocaleLowerCase() .trim() .replaceAll(" ", "-") .replace(/[^\w\-]/g, ""); setSlug(slug); const url = window.location.origin + "/" + slug; setUrl(url); }} />
+						<Input placeholder="Title of the Blog" value={heading} onChange={(e) => { setHeading(e.target.value); const slug = e.target.value .toLocaleLowerCase() .trim() .replaceAll(" ", "-") .replace(/[^\w\-]/g, ""); setSlug(slug); const url = window?.location?.origin + "/" + slug; setUrl(url); }} />
 					</div>
 
 					<div className="w-full flex flex-col  gap-2">

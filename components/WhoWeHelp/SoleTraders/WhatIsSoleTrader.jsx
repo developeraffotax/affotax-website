@@ -3,7 +3,6 @@
 import Image from "next/image";
 import HeroImg from "@/public/soleTraderman.png";
 
-import { useScroll } from "@react-spring/web";
 
 export default function WhatIsSoleTrader() {
 	return (

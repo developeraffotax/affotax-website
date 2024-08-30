@@ -69,7 +69,7 @@ export default function CreatePage() {
 			<div className="w-full flex flex-col gap-4 justify-center items-center p-2">
 				<Input className="hover:cursor-pointer  active:scale-[.99]" placeholder="The Url of the current Page" readOnly variant="filled" value={url} onClick={(e) => { 
 						e.target.select();
-					 	document.execCommand("copy");
+					 	document?.execCommand("copy");
 						e.target.blur();
 						message.success(`Url Copied!`);
 						 }} />
