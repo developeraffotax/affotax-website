@@ -3,6 +3,8 @@
 import { LoginForm } from '@/actions/auth';
 import React, { useState } from 'react';
 import { useFormStatus } from "react-dom";
+import Logo from '@/public/logo.png'
+import Image from 'next/image';
 
 
 
@@ -68,9 +70,9 @@ export default function Login() {
        
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-gradient-to-r from-rose-100 to-teal-100 w-[30%] rounded-2xl mt-36 shadow-lg shadow-black/25 ">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
+            <Image
               alt="Your Company"
-              src="/logo.PNG"
+              src={Logo}
               className="mx-auto h-10 w-auto"
             />
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
