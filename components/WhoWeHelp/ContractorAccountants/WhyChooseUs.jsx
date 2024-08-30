@@ -11,36 +11,42 @@ import img5 from '@/public/5.png';
 import img6 from '@/public/6.png';
 
 
-
+import { v4 as uuidv4 } from 'uuid';
 
 const steps = [
     {
         title: 'Your Personal Accountant, Not a Chatbot',
+        key: uuidv4(),
         img: img1,
         content: "You won't be dealing with robots here. You'll have a dedicated contractor accountant who understands the joys (and tribulations) of freelancing and can give you personalised advice customised specifically for your situation."
     },
     {
         title: 'Limited Company Champions',
+        key: uuidv4(),
         img: img3,
         content: "Setting up and running a limited company can be a right faff. But fear not! We'll help you navigate the process, ensuring proper bookkeeping and tax filing for maximum financial gain (because, let's be honest, that's why you went limited in the first place!"
     },
     {
         title: 'Tax Efficiency, Our Middle Name (Almost)',
+        key: uuidv4(),
         img: img2,
         content: "We don't just file your tax return – we're tax planning ninjas! We'll find every allowable deduction under the sun (well, not literally, but you get the idea) to keep your hard-earned cash where it belongs – in your pocket."
     },
     {
         title: 'Free Up Your Time to Slay Dragons (or Clients)',
+        key: uuidv4(),
         img: img4,
         content: "Leave the number-crunching to us. We'll handle all your accounting and tax needs efficiently, freeing you up to focus on what you do best – rocking your freelance world."
     },
     {
         title: 'Transparent Pricing, No Haggling',
+        key: uuidv4(),
         img: img6,
         content: "We offer competitive, fixed-fee packages that are clear as day. No hidden costs, just expert service at a fair and affordable price, because who doesn’t need that?"
     },
     {
         title: 'Unlimited Support',
+        key: uuidv4(),
         img: img5,
         content: 'Our friendly team is always available to answer queries and offer guidance on business decisions.'
     },
@@ -88,7 +94,7 @@ export default function WhyChooseUs() {
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li className="flex flex-col justify-center items-center gap-4  ">
+                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4  ">
                                                 <div className="drop-shadow-md  flex justify-center items-center text-4xl font-oswald font-semibold  w-40">
 
                                                     <Image src={el.img} cover className="saturate-  "/>

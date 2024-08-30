@@ -4,35 +4,41 @@
 import { useScroll, animated, useInView } from '@react-spring/web'
 import { FaCheck } from "react-icons/fa6";
 
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 
 const steps = [
     {
         title: 'Accounts',
+        key: uuidv4(),
         content: 'Maintaining accurate financial records to meet regulatory requirements.'
     },
     {
         title: 'Corporation Tax',
+        key: uuidv4(),
         content: 'Guidance on corporation tax for potential future incorporation.'
     },
     {
         title: 'Booking & VAT',
+        key: uuidv4(),
         content: 'Efficient payroll management to ensure compliance'
     },
     {
         title: 'Payroll',
+        key: uuidv4(),
         content: 'Detailed bookkeeping services and VAT management'
     },
 
     {
         title: 'Self Assessment',
+        key: uuidv4(),
         content: 'Assistance in preparing and filing self-assessment tax returnss'
     },
 
     {
         title: 'Company Formation',
+        key: uuidv4(),
         content: 'Support in transitioning from a sole trader to a limited company.'
     },
 ]
@@ -79,13 +85,7 @@ export default function OurServices() {
                     <animated.div  ref={ref} style={springs} > {
                             
                             (<div className="mt-12 gap-8   flex justify-center items-center ">
-						{/* <Link
-							href="/contact-us"
-							className="flex flex-row items-center text-center justify-center gap-x-2 font-semibold rounded-lg text-white px-8 py-3 bg-orange-500 hover:bg-orange-600 animate-bounce transition-all "
-						>
-							Get a Quote
-							<FaRegArrowAltCircleRight className="scale-110 " />
-						</Link> */}
+						
 
 
 
@@ -93,7 +93,7 @@ export default function OurServices() {
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li className="flex flex-col justify-center items-center gap-4">
+                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4">
                                                 
                                                     <div className=" rounded-full bg-slate-200 relative drop-shadow-none bottom-3 right-3 z-10 w-24    aspect-square flex justify-center items-center text-4xl font-oswald font-semibold text-white">
                                                     <div className=" border-[0.25rem] bg-transparent  absolute border-orange-500 drop-shadow-md  w-full h-full  rounded-full  top-2 left-3 z-10 flex justify-center items-center">
@@ -120,9 +120,7 @@ export default function OurServices() {
                     </animated.div>
 				</div>
 
-				{/* <div className="flex-1 flex flex-row justify-start items-start -mt-10 ">
-					<Image src={HeroImg} cover className="scale-90" />
-				</div> */}
+				
 			</div>
 		</>
 	);

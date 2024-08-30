@@ -5,6 +5,7 @@ import { permanentRedirect, redirect } from "next/navigation";
 import { Button, Result } from "antd";
 import Link from "next/link";
 import { del } from "@vercel/blob";
+import { v4 as uuidv4 } from 'uuid';
 
 export default async function DeleteBlog({ params }) {
 	try {
@@ -21,7 +22,7 @@ export default async function DeleteBlog({ params }) {
 
 	} catch (error) {
 		return (
-			<Result status="success" title="Failed to delete the blog! Try again later" subTitle={error?.message || "Unknown Error Occured"} extra={[ <Link href="/admin/view-blogs"> <Button type="primary">Go Back</Button> </Link>, ]} />
+			<Result status="success" title="Failed to delete the blog! Try again later" subTitle={error?.message || "Unknown Error Occured"} extra={[ <Link key={uuidv4()} href="/admin/view-blogs"> <Button type="primary">Go Back</Button> </Link>, ]} />
 		);
 	}
 

@@ -3,50 +3,59 @@
 import { useScroll, animated, useInView } from '@react-spring/web'
 import { FaCheck } from "react-icons/fa6";
 
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 
 const steps = [
     {
         title: 'One-stop dashboard',
+        key: uuidv4(),
         content: 'View all your key financial information in one place.'
     },
     {
         title: 'Automatic bank feeds ',
+        key: uuidv4(),
         content: 'Streamline your bank reconciliation with daily automatic feeds.'
     },
     {
         title: 'Making Tax Digital Ready',
+        key: uuidv4(),
         content: ' Stay compliant with the latest tax regulations effortlessly.'
     },
     {
         title: 'Automatic, secure backups',
+        key: uuidv4(),
         content: 'Your data is always safe and recoverable.'
     },
 
     {
         title: 'Unlimited, free 24/7 support',
+        key: uuidv4(),
         content: 'Access expert help whenever you need it.'
     },
 
     {
         title: 'Integrate with 800+ apps',
+        key: uuidv4(),
         content: 'Enhance Xero’s functionality with a wide range of integrations.'
     },
 
     {
         title: 'Access for unlimited users',
+        key: uuidv4(),
         content: ' Collaborate easily with your team and advisors.'
     },
 
     {
         title: 'Unprecedented availability',
+        key: uuidv4(),
         content: ' Enjoy reliable access to your financial data.'
     },
 
     {
         title: 'Free customer-oriented updates',
+        key: uuidv4(),
         content: ' Benefit from continuous improvements and new features.'
     },
 ]
@@ -95,21 +104,14 @@ export default function OurServices() {
                     <animated.div  ref={ref} style={springs} > {
                             
                             (<div className="mt-12 gap-8   flex justify-center items-center ">
-						{/* <Link
-							href="/contact-us"
-							className="flex flex-row items-center text-center justify-center gap-x-2 font-semibold rounded-lg text-white px-8 py-3 bg-orange-500 hover:bg-orange-600 animate-bounce transition-all "
-						>
-							Get a Quote
-							<FaRegArrowAltCircleRight className="scale-110 " />
-						</Link> */}
-
+						
 
 
                             <ul className="  grid grid-cols-3  gap-20 text-center  max-lg:grid-cols-2">
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li className="flex flex-col justify-center items-center gap-4">
+                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4">
                                                 
                                                     <div className=" rounded-full bg-slate-200 relative drop-shadow-none bottom-3 right-3 z-10 w-24    aspect-square flex justify-center items-center text-4xl font-oswald font-semibold text-white">
                                                     <div className=" border-[0.25rem] bg-transparent  absolute border-orange-500 drop-shadow-md  w-full h-full  rounded-full  top-2 left-3 z-10 flex justify-center items-center">
@@ -136,9 +138,7 @@ export default function OurServices() {
                     </animated.div>
 				</div>
 
-				{/* <div className="flex-1 flex flex-row justify-start items-start -mt-10 ">
-					<Image src={HeroImg} cover className="scale-90" />
-				</div> */}
+				
 			</div>
 		</>
 	);

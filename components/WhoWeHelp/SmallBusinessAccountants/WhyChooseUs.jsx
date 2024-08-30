@@ -10,37 +10,43 @@ import img4 from '@/public/4.png';
 import img5 from '@/public/5.png';
 import img6 from '@/public/6.png';
 
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 const steps = [
     {
         title: 'Accounts Management',
+        key: uuidv4(),
         img: img1,
         content: 'Keeping accurate accounts is fundamental for any business. Our team will ensure your accounts are meticulously maintained and updated regularly. This includes preparing your annual accounts, managing ledgers, and ensuring all financial records are accurate and compliant with UK standards.'
     },
     {
         title: 'Corporation Tax',
+        key: uuidv4(),
         img: img2,
         content: 'Navigating the complexities of corporation tax can be daunting. We offer comprehensive corporation tax services, including tax planning, preparation, and filing. Our experts will work to minimize your tax liabilities while ensuring compliance with HMRC regulations.'
     },
     {
         title: 'Self-Assessment',
+        key: uuidv4(),
         img: img3,
         content: 'Self-assessment can be time-consuming and complex. We simplify this process by managing your self-assessment tax returns, ensuring all income and expenditures are accurately reported. Our goal is to help you avoid any penalties and optimize your tax situation.'
     },
     {
         title: 'Bookkeeping',
+        key: uuidv4(),
         img: img4,
         content: 'Effective bookkeeping is the backbone of any successful business. Our small business bookkeeping services ensure that your financial records are kept up to date, accurate, and compliant. We manage your day-to-day financial transactions, maintain ledgers, and provide regular financial reports.'
     },
     {
         title: 'Payroll Services',
+        key: uuidv4(),
         img: img6,
         content: "Managing payroll can be a complex and time-consuming task. Our payroll services ensure that your employees are paid accurately and on time, every time. We handle all aspects of payroll management, including PAYE, National Insurance, and statutory deductions, freeing you from the administrative burden."
     },
     {
         title: 'Unlimited Support',
+        key: uuidv4(),
         img: img5,
         content: 'Our friendly team is always available to answer queries and offer guidance on business decisions.'
     },

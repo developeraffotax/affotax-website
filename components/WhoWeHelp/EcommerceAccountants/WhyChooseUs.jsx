@@ -11,41 +11,47 @@ import img4 from '@/public/transparentPricing.png';
 import img5 from '@/public/5.png';
 import img6 from '@/public/6.png';
 
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 const steps = [
     {
         title: 'Expertise and Experience',
+        key: uuidv4(),
         img: img1,
         content: `Our accountants have extensive experience working with ecommerce businesses of all sizes. We understand the complexities of online sales platforms like Amazon and Shopify, enabling us to provide tailored advice and solutions.
 `
     },
     {
         title: 'Proactive Tax Planning',
+        key: uuidv4(),
         img: img2,
         content: `We help you navigate complex tax landscapes, ensuring you comply with regulations while minimizing tax liabilities. Our proactive tax planning strategies are designed to optimize your ecommerce business's financial efficiency.
 `
     },
     {
         title: 'Personalized Service',
+        key: uuidv4(),
         img: img3,
         content: `We believe in building long-term relationships with our clients. Our accountants offer personalized service, taking the time to understand your business goals and challenges. We're committed to helping you achieve success in your ecommerce ventures.
 `
     },
     {
         title: 'Transparent Pricing',
+        key: uuidv4(),
         img: img4,
         content: `We offer transparent pricing with no hidden fees. Our accountancy services for ecommerce businesses are designed to provide excellent value for money, ensuring you receive the highest quality service at competitive rates.
 s`
     },
     {
         title: 'Technology-Driven Solutions',
+        key: uuidv4(),
         img: img6,
         content: `We leverage cutting-edge accounting software and technology to streamline processes and provide real-time financial insights. Our Amazon accounting and Shopify accountant services use automation to enhance accuracy and efficiency.`
     },
     {
         title: 'Unlimited Support',
+        key: uuidv4(),
         img: img5,
         content: `Our friendly team is always available to answer queries and offer guidance on business decisions.`
     },

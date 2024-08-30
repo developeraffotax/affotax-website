@@ -13,7 +13,7 @@ const { Header, Content, Footer, Sider } = Layout;
 import { useRouter, usePathname } from 'next/navigation';
 import { LogoutForm } from '@/actions/auth';
 import { RiMenuUnfold2Line, RiMenuUnfoldLine } from "react-icons/ri";
-
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -282,7 +282,7 @@ export default function RootLayout({ children }) {
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           {
             pathname.split('/').slice(1).map((el, index) => {
-              return <Breadcrumb.Item>{el.charAt(0).toUpperCase() + el.slice(1)}</Breadcrumb.Item>
+              return <Breadcrumb.Item key={uuidv4()}>{el.charAt(0).toUpperCase() + el.slice(1)}</Breadcrumb.Item>
             })
           }
             

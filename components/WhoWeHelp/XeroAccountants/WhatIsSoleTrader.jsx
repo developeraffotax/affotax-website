@@ -8,27 +8,10 @@ import CloudAcc from "@/public/cloudacc.png";
 import { useScroll } from "@react-spring/web";
 
 
-const steps = [
-	{
-		title: "Registration",
-		content: "Register as a sole trader with HMRC",
-	},
-	{
-		title: "Bank Account",
-		content: "Open a separate bank account for business transactions",
-	},
-	{
-		title: "Insurance",
-		content: "Obtain necessary insurance coverage",
-	},
-	{
-		title: "Record Keeping",
-		content: "Set up a system for accurate financial records",
-	},
-];
+
 
 export default function WhatIsSoleTrader() {
-	const { scrollYProgress } = useScroll();
+	
 
 	return (
 		<>

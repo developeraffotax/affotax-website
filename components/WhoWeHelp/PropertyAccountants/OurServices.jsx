@@ -7,48 +7,57 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { v4 as uuidv4 } from "uuid";
 import "@splidejs/react-splide/css";
 
+
 const steps = [
 	{
 		title: "Accounts",
+		key: uuidv4(),
 		content:
 			"Our property accountants ensure your financial statements are prepared in compliance with UK accounting standards, providing you with a clear and accurate picture of your financial position.",
 	},
 	{
 		title: "Corporation Tax",
+		key: uuidv4(),
 		content:
 			"Our experts provide comprehensive corporation tax services, ensuring you meet all tax obligations while maximizing tax efficiency.",
 	},
 	{
 		title: " VAT",
+		key: uuidv4(),
 		content: `Our property accountants provide expert advice on VAT registration, compliance, and planning, helping you manage your VAT obligations effectively.
 `,
 	},
 	{
 		title: "Payroll",
+		key: uuidv4(),
 		content: `We offer a full range of payroll solutions, including processing payroll, managing PAYE and NICs, and ensuring compliance with auto-enrolment pensions.
 `,
 	},
 
 	{
 		title: "Self Assessment",
+		key: uuidv4(),
 		content: `We handle everything from tax return preparation to filing, ensuring your tax returns are accurate and submitted on time.
 `,
 	},
 
 	{
 		title: "Company Formation",
+		key: uuidv4(),
 		content: `Our property accountants provide expert guidance on company formation, ensuring your new company is structured in the most tax-efficient way.
 `,
 	},
 
 	{
 		title: "Company Secretarial ",
+		key: uuidv4(),
 		content: `Our company secretarial services ensure all statutory obligations are met, including company formation, maintaining statutory registers, and filing annual returns.
 `,
 	},
 
 	{
 		title: "Bookkeeping",
+		key: uuidv4(),
 		content: `Our bookkeeping services ensure your financial records are maintained accurately and up-to-date, using the latest accounting software.
 `,
 	},
@@ -89,7 +98,7 @@ export default function OurServices() {
                                 }}} className="w-full p-12  " >
 									{steps.map((el) => {
 										return (
-											<SplideSlide key={el.title} className=" py-8" >
+											<SplideSlide key={el.key} className=" py-8" >
 												<SingleSplide title={el.title} content={el.content} key={uuidv4()} />{" "}
 											</SplideSlide>
 										);

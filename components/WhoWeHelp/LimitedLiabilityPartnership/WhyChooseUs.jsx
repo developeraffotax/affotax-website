@@ -10,38 +10,45 @@ import img4 from '@/public/4.png';
 import img5 from '@/public/5.png';
 import img6 from '@/public/6.png';
 
+import { v4 as uuidv4 } from 'uuid';
 
 
 
 const steps = [
     {
         title: 'Streamlined Bookkeeping and Accounting',
+        key: uuidv4(),
         img: img1,
         content: 'Simplify your workflow by letting us manage your bookkeeping and accounting needs. We use advanced cloud-based tools to ensure accurate data entry, provide real-time financial insights, and facilitate seamless collaboration.'
     },
     {
         title: 'Tax Planning and Minimization Strategies',
+        key: uuidv4(),
         img: img2,
         content: "Our tax experts collaborate closely with your limited liability partnership (LLP) to identify all possible tax deductions and allowances. We'll create a proactive tax planning strategy to reduce your tax obligations and boost your profits."
     },
     {
         title: 'Partnership Tax Return Completion',
+        key: uuidv4(),
         img: img3,
         content: 'Our team will make sure your Partnership Tax Return is done right and turned in on time with HMRC.'
     },
     {
         title: 'Partner Self-Assessment Support',
+        key: uuidv4(),
         img: img4,
         content: "Each partner in the­ LLP (Limited Liability Partnership) is responsible­ for filing their own self-assessme­nt tax return. We'll guide and assist you throughout the­ process, making sure you mee­t all your filing responsibilities."
 
     },
     {
         title: 'Deep Expertise in LLP Structures',
+        key: uuidv4(),
         img: img6,
         content: "Our skilled accountants have­ deep expe­rtise in LLP setup, accounting rules, and tax matte­rs. We'll guide you through the details of LLP finances, keeping your re­cords precise and compliant."
     },
     {
         title: 'Ongoing Support and Guidance',
+        key: uuidv4(),
         img: img5,
         content: "We don't simply crunch numbe­rs; we're your depe­ndable financial partner. You'll have continuous support and e­xpert guidance throughout the ye­ar to address any financial queries or issue­s you may face."
     },
@@ -71,18 +78,8 @@ export default function WhyChooseUs() {
 
 
 
-
-                    {/* <animated.div style={{ translateX: scrollYProgress.to((val) => {
-                        return val * 208 + 'px'
-                    }), opacity: scrollYProgress  }}> */}
 					<div className="mt-12 gap-8 w-full flex justify-center items-center content-center ">
-						{/* <Link
-							href="/contact-us"
-							className="flex flex-row items-center text-center justify-center gap-x-2 font-semibold rounded-lg text-white px-8 py-3 bg-orange-500 hover:bg-orange-600 animate-bounce transition-all "
-						>
-							Get a Quote
-							<FaRegArrowAltCircleRight className="scale-110 " />
-						</Link> */}
+						
 
 
 
@@ -90,7 +87,7 @@ export default function WhyChooseUs() {
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li className="flex flex-col justify-center items-center gap-4  ">
+                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4  ">
                                                 <div className="drop-shadow-md  flex justify-center items-center text-4xl font-oswald font-semibold  w-40">
 
                                                     <Image src={el.img} cover className="saturate-  "/>

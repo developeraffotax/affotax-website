@@ -12,9 +12,12 @@ import img4 from "@/public/freelance4.png";
 import img5 from "@/public/freelance5.png";
 import img6 from "@/public/freelance6.png";
 
+import { v4 as uuidv4 } from 'uuid';
+
 const steps = [
 	{
 		title: "Accounts",
+		key: uuidv4(),
 		img: img1,
 		link: `/annual-accounts`,
 		content: `Managing your accounts effectively is crucial for the success of your business. Our cheap accountants specialize in delivering comprehensive account management services that ensure your financial records are accurate, up-to-date, and compliant with all statutory requirements. We prepare annual accounts and financial statements, offering you clear insights into your business’s financial health. With our affordable accountants, you can rest assured that your accounts are in capable hands, allowing you to focus on what matters most – growing your business.
@@ -22,6 +25,7 @@ const steps = [
 	},
 	{
 		title: "Corporation Tax",
+		key: uuidv4(),
 		img: img2,
 		link: `/corporation-tax-ct600`,
 		content: `Corporation tax can be a complex and daunting aspect of running a business. Our cheap accountants are well-versed in all aspects of corporation tax, ensuring that your business remains compliant while optimizing your tax position. We provide detailed tax planning and advisory services, helping you navigate the intricacies of tax regulations and take advantage of available tax reliefs. With our affordable accountants handling your corporation tax, you can minimize your tax liabilities and maximize your profitability.
@@ -29,6 +33,7 @@ const steps = [
 	},
 	{
 		title: "Booking & VAT",
+		key: uuidv4(),
 		img: img3,
 		link: `/vat-registration`,
 		content: `Accurate bookkeeping and VAT compliance are essential for any business. Our cheap accountants provide reliable bookkeeping services, maintaining your financial records with precision and attention to detail. We manage your VAT returns, ensuring that you meet all deadlines and comply with regulations. Our affordable accountants use the latest software and technology to streamline your bookkeeping processes, providing you with real-time financial information and insights that help you make informed business decisions.
@@ -37,6 +42,7 @@ const steps = [
 	},
 	{
 		title: "Payroll",
+		key: uuidv4(),
 		img: img4,
 		link: `/register-for-paye`,
 		content: `Managing payroll can be a challenging and error-prone task. Our cheap accountants offer comprehensive payroll services tailored to your business needs. We handle everything from payslip generation to tax calculations, ensuring compliance with all relevant regulations. Our affordable accountants take care of auto-enrolment, statutory payments, and year-end reporting, giving you peace of mind and freeing up your time to focus on running your business. Trust our experts to manage your payroll efficiently and accurately.
@@ -46,6 +52,7 @@ const steps = [
 
 	{
 		title: "Self Assessment",
+		key: uuidv4(),
 		img: img5,
 		link: `/self-assessment-tax-return-sa100`,
 		content: `Corporation tax can be a complex and daunting aspect of running a business. Our cheap accountants are well-versed in all aspects of corporation tax, ensuring that your business remains compliant while optimizing your tax position. We provide detailed tax planning and advisory services, helping you navigate the intricacies of tax regulations and take advantage of available tax reliefs. With our affordable accountants handling your corporation tax, you can minimize your tax liabilities and maximize your profitability.
@@ -54,6 +61,7 @@ const steps = [
 
 	{
 		title: "Company Formation",
+		key: uuidv4(),
 		img: img6,
 		link: `/uk-company-registration-(uk-resident)`,
 		content: `Starting a new business can be an overwhelming process, but our cheap accountants are here to make it easy for you. We offer complete company formation services, from registering your company to setting up your financial systems. Our affordable accountants provide expert advice on the best structure for your business and ensure you meet all legal requirements. Let us help you lay a solid foundation for your new venture and set you on the path to success.

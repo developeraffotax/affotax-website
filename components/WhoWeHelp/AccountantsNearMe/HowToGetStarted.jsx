@@ -1,7 +1,8 @@
 'use client'
 
 
-import { useScroll, animated, useInView } from '@react-spring/web'
+import { useScroll, animated, useInView } from '@react-spring/web';
+import { v4 as uuidv4 } from 'uuid';
 
 
 
@@ -9,19 +10,23 @@ import { useScroll, animated, useInView } from '@react-spring/web'
 const steps = [
     {
         title: 'Registration',
-        content: 'Register as a sole trader with HMRC'
+        content: 'Register as a sole trader with HMRC',
+        key: uuidv4()
     },
     {
         title: 'Bank Account',
-        content: 'Open a separate bank account for business transactions'
+        content: 'Open a separate bank account for business transactions',
+        key: uuidv4()
     },
     {
         title: 'Insurance',
-        content: 'Obtain necessary insurance coverage'
+        content: 'Obtain necessary insurance coverage',
+        key: uuidv4()
     },
     {
         title: 'Record Keeping',
-        content: 'Set up a system for accurate financial records'
+        content: 'Set up a system for accurate financial records',
+        key: uuidv4()
     },
 ]
 
@@ -81,7 +86,7 @@ export default function HowToGetStarted() {
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li className="flex flex-col justify-center items-center gap-4">
+                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4">
                                                 <div className="bg-[#23314E] drop-shadow-md  rounded-full aspect-square flex justify-center items-center text-4xl font-oswald font-semibold text-white w-24 ">{index+1}</div>
                                                 <h3 className="font-semibold text-xl font-poppins ">{el.title}</h3>
                                                 <p className="text-sm max-w-52">{el.content}</p>

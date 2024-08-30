@@ -50,7 +50,7 @@ export default function P45Form() {
                         </p>
                         <ul className="flex flex-col justify-center items-start ">
 
-                            {data1.map((el) => <li className="flex justify-center items-center gap-2 "><BsCheck2Circle className="text-orange-500 scale-110"/> {el} </li>)}
+                            {data1.map((el) => <li key={el} className="flex justify-center items-center gap-2 "><BsCheck2Circle className="text-orange-500 scale-110"/> {el} </li>)}
                             
                            
 
@@ -66,7 +66,7 @@ export default function P45Form() {
                         </p>
                         <ul className="flex flex-col justify-center items-start ">
 
-                            {data2.map((el) => <li className="flex justify-center items-center gap-2 "><BsCheck2Circle className="text-orange-500 scale-110"/> {el} </li>)}
+                            {data2.map((el) => <li key={el} className="flex justify-center items-center gap-2 "><BsCheck2Circle className="text-orange-500 scale-110"/> {el} </li>)}
                             
                            
 

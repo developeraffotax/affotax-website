@@ -10,12 +10,14 @@ import img4 from '@/public/4.png';
 import img5 from '@/public/5.png';
 import img6 from '@/public/6.png';
 
+import { v4 as uuidv4 } from 'uuid';
 
 
 
 const steps = [
     {
         title: 'Personalised accounting solutions',
+        key: uuidv4(),
         img: img1,
         content: `We offer personalised accounting solutions that align precisely with your requirements. We'll collaborate with you to design a tailored system that includes: 
 A well-defined profit-sharing structure
@@ -25,26 +27,31 @@ Streamlined record-keeping practices to enhance operations
     },
     {
         title: 'Tax planning and compliance',
+        key: uuidv4(),
         img: img2,
         content: "Navigating UK tax rules can be tricky and time-wasting. Our team of experts will make sure your partnership meets all tax obligations, such as Self Assessment and Corporation Tax. We'll also work hard to reduce your tax bill and find ways to save you money."
     },
     {
         title: 'Profit and loss management',
+        key: uuidv4(),
         img: img3,
 content: "Get a clear picture of how your partnership is doing financially with our timely and accurate Profit and Loss statements. We'll help you analyse your income, expenses, and partner distributions so you can make smart decisions about your finances and boost performance."
     },
     {
         title: 'Succession planning',
+        key: uuidv4(),
         img: img4,
         content: "Prepare for the future by having a succession plan in place. We can assist in developing strategies to minimise disruption and protect your business in case a partner leaves or retires. This plan ensures a smooth transition and protects your business's long-term success."
     },
     {
         title: 'Business partnership agreements',
+        key: uuidv4(),
         img: img6,
         content: " Protect your business with a comprehensive partnership agreement. Our team can help create or review existing agreements, clarifying roles, duties, profit distribution, and conflict resolution processes. This ensures everyone knows their place and how disputes will be handled."
     },
     {
         title: 'Unlimited Support',
+        key: uuidv4(),
         img: img5,
         content: 'Our friendly team is always available to answer queries and offer guidance on business decisions. Feel Free to contact us anytime.'
     },
@@ -74,17 +81,8 @@ export default function WhyChooseUs() {
 
 
 
-                    {/* <animated.div style={{ translateX: scrollYProgress.to((val) => {
-                        return val * 208 + 'px'
-                    }), opacity: scrollYProgress  }}> */}
 					<div className="mt-12 gap-8 w-full flex justify-center items-center content-center ">
-						{/* <Link
-							href="/contact-us"
-							className="flex flex-row items-center text-center justify-center gap-x-2 font-semibold rounded-lg text-white px-8 py-3 bg-orange-500 hover:bg-orange-600 animate-bounce transition-all "
-						>
-							Get a Quote
-							<FaRegArrowAltCircleRight className="scale-110 " />
-						</Link> */}
+						
 
 
 
@@ -92,7 +90,7 @@ export default function WhyChooseUs() {
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li className="flex flex-col justify-center items-center gap-4  ">
+                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4  ">
                                                 <div className="drop-shadow-md  flex justify-center items-center text-4xl font-oswald font-semibold  w-40">
 
                                                     <Image src={el.img} cover className="saturate-  "/>
