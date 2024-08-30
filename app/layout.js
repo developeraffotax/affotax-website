@@ -5,6 +5,8 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 export const metadata = {
 	title: "The Affotax Accountants",
 	description: "The Affotax Accountants | Making Tax Affordable",
+	creator: 'Ihtisham Ul Haq',
+	authors: [ { name: 'Ihtisham Ul Haq', url: 'http://iqwebdev.netlify.app/' }],
 	verification: {
 		google: "google998d27ca179e5db7.html",
 	},
