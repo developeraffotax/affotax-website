@@ -188,7 +188,7 @@ export default function CreateBlog() {
         <>
             <div className="w-full flex flex-col gap-4 justify-center items-center p-2">
 
-            <Input className="hover:cursor-pointer  hover:bg-black/70 hover:text-white   active:scale-[.99] transition-all " placeholder="The Url of the current Page"  readOnly variant="filled" value={url} onClick={(e) => {
+            <Input className="hover:cursor-pointer    active:scale-[.99] transition-all " placeholder="The Url of the current Page"  readOnly variant="filled" value={url} onClick={(e) => {
 				e.target.select();
 
 				document?.execCommand('copy');
