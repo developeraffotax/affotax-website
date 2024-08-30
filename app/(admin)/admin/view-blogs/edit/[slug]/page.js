@@ -1,6 +1,11 @@
-import EditBlog from "@/components/Admin/Blogs/EditBlog";
+// import EditBlog from "@/components/Admin/Blogs/EditBlog";
 import { connectDB } from "@/lib/connectDB"
 import Blog from "@/lib/Model/Blog"
+
+const EditBlog = dynamic(() => import("@/components/Admin/Blogs/EditBlog"), {
+    ssr: false
+ })
+
 
 
 export default async function  EditBlogPage({params}) {

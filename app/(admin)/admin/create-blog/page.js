@@ -21,7 +21,11 @@ export default function CreateBlog() {
   const [isError, setIsError ] = useState(false)
 
   
-  
+  const [isClient, setIsClient] = useState(false);
+
+  // useEffect(() => {
+    
+  // }, [])
   
   
   
@@ -42,6 +46,8 @@ export default function CreateBlog() {
 
 
   useEffect(() => {
+    setIsClient(true)
+
     setUrl(window?.location?.origin + '/blog/')
   }, [])
   
@@ -171,7 +177,9 @@ export default function CreateBlog() {
     ]
 
 
-
+    if (!isClient) {
+      return null;
+    }
 
 
 
@@ -200,7 +208,7 @@ export default function CreateBlog() {
 
                   const slug = (e.target.value).toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
                   
-                  const url = window.location.origin + '/blog/' + slug;
+                  const url = window?.location.origin + '/blog/' + slug;
                   setUrl(url);
                 }} />
 
