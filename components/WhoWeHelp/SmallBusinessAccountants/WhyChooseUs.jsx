@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li className="flex flex-col justify-center items-center gap-4  ">
+                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4  ">
                                                 <div className="drop-shadow-md  flex justify-center items-center text-4xl font-oswald font-semibold  w-40">
 
                                                     <Image src={el.img} cover className="saturate-  "/>
