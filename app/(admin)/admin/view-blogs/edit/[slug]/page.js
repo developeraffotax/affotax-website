@@ -1,11 +1,17 @@
-// import EditBlog from "@/components/Admin/Blogs/EditBlog";
+//import EditBlog from "@/components/Admin/Blogs/EditBlog";
 import { connectDB } from "@/lib/connectDB"
 import Blog from "@/lib/Model/Blog"
 import dynamic from "next/dynamic";
 
-const EditBlog = dynamic(() => import("@/components/Admin/Blogs/EditBlog"), {
-    ssr: false
- })
+
+
+
+const EditBlog = dynamic(
+    () => {
+      return import("@/components/Admin/Blogs/EditBlog");
+    },
+    { ssr: false }
+  );
 
 
 

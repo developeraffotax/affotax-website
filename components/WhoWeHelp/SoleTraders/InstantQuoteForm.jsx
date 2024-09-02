@@ -22,7 +22,7 @@ export default function InstantQuoteForm() {
 	}, []);
 	return (
 		<>
-			<div className="flex flex-col items-center  py-12 px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-tr from-orange-300/5 to-orange-900/20" ref={ref}>
+			<div className="flex flex-col items-center  py-12 px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-br from-orange-300/5 to-orange-900/20" ref={ref}>
 				<div>
 					<h2 className="font-poppins  text-transparent font-bold text-4xl leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text">
                     Instant Quote!

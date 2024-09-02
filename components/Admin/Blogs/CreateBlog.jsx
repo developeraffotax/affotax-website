@@ -156,10 +156,10 @@ export default function CreateBlog() {
 					onClick={(e) => {
 						e.target.select();
 
-						// document?.execCommand("copy");
-						// window?.getSelection().removeAllRanges();
+						document?.execCommand("copy");
+						window?.getSelection().removeAllRanges();
 
-						// message.success(`Url Copied!`);
+						message.success(`Url Copied!`);
 					}}
 				/>
 

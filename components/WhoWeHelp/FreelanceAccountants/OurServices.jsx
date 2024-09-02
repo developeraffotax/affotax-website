@@ -73,11 +73,10 @@ export default function OurServices() {
 			<div className="flex w-full     flex-row gap-10 items-center justify-center px-80 max-2xl:px-40 max-xl:px-10     bg-gradient-to-br from-orange-300/5 to-orange-900/20 ">
 				<div className=" w-full  py-16  border-b border-gray-300  flex  flex-1 flex-col items-center justify-center  ">
 					<h2 className=" max-w-sm leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  font-bold text-transparent sm:max-w-2xl text-4xl">
-						Our Services for Sole Traders
+					Explore our comprehensive range of services 
 					</h2>
 					<span className="mt-4 max-w-2xl   text-center text-lg leading-relaxed text-gray-800">
-						We provide comprehensive online accountancy services for
-						sole traders
+					Designed specifically for freelancers, including accounts, corporation tax, self-assessment, payroll, bookkeeping & VAT, and company formation.
 					</span>
 
 					<div className="mt-12 gap-8  w-full flex justify-center items-center p-8 ">

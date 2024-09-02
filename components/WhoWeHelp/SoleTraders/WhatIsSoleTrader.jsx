@@ -4,6 +4,13 @@ import Image from "next/image";
 import HeroImg from "@/public/soleTraderman.png";
 
 
+
+
+import SmallBiz from "@/public/smallbiz.png";
+import SmallBiz2 from "@/public/smallbiz2.png";
+import CloudAcc from "@/public/cloudacc.png";
+
+
 export default function WhatIsSoleTrader() {
 	return (
 		<>
@@ -23,8 +30,114 @@ export default function WhatIsSoleTrader() {
 						decision-making and management but also means personal
 						responsibility for all business debts and liabilities.
 					</span>
+
+					<h2 className="mt-4  max-w-sm leading-relaxed font-semibold text-lg  ">
+					Tax Payments and Key Dates for Sole Traders
+					</h2>
+					<ul>
+						{
+							[
+								{
+									heading: '31st January',
+									content: 'Deadline for filing self-assessment tax returns and paying any due tax for the previous tax year.'
+								},
+
+								{
+									heading: '31st July',
+									content: 'Second payment on account due.'
+								},
+
+								{
+									heading: '5th October',
+									content: 'Deadline for registering as a sole trader with HMRC.'
+								}
+							].map((el, index) =>{
+								return <li key={index} >
+									<h3 className="inline font-semibold">{el.heading}:</h3>
+									<p className="inline ml-2">{el.content}</p>
+
+								</li>
+							})
+						}
+					</ul>
 				</div>
 			</div>
+
+
+
+
+
+				
+
+
+
+
+
+
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
 		</>
 	);
 }

@@ -1,7 +1,7 @@
 import { connectDB } from "@/lib/connectDB";
 import Blog from "@/lib/Model/Blog";
 import { revalidatePath } from "next/cache";
-import { permanentRedirect, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import { Button, Result } from "antd";
 import Link from "next/link";
 import { del } from "@vercel/blob";

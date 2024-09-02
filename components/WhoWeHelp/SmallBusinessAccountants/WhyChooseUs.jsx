@@ -7,7 +7,7 @@ import img1 from '@/public/1.png';
 import img2 from '@/public/2.png';
 import img3 from '@/public/3.png';
 import img4 from '@/public/4.png';
-import img5 from '@/public/5.png';
+import img5 from '@/public/vat2.png';
 import img6 from '@/public/6.png';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -45,10 +45,10 @@ const steps = [
         content: "Managing payroll can be a complex and time-consuming task. Our payroll services ensure that your employees are paid accurately and on time, every time. We handle all aspects of payroll management, including PAYE, National Insurance, and statutory deductions, freeing you from the administrative burden."
     },
     {
-        title: 'Unlimited Support',
+        title: 'VAT Services',
         key: uuidv4(),
         img: img5,
-        content: 'Our friendly team is always available to answer queries and offer guidance on business decisions.'
+        content: 'VAT can be one of the most complex areas of tax compliance. Our VAT services cover everything from registration, preparation, and submission of VAT returns to dealing with HMRC on your behalf. We ensure that your VAT obligations are met accurately and on time.'
     },
 ]
 

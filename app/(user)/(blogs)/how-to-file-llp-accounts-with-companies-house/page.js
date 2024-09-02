@@ -98,7 +98,7 @@ export default function BlogPage() {
                         </h2>
 						
 						<p>
-                        According to <a href="https://www.gov.uk/government/organisations/companies-houses"> Companies House</a>, there are specific deadlines and requirements for filing LLP accounts in the UK, and as mentioned above, failing to be compliant can result in penalties. Thus, for successful LLP accounting, compliance is the cornerstone for it. As LLPs who want to stay compliant, you must adhere to the following key points:
+                        According to <a href="https://www.gov.uk/government/organisations/companies-house"> Companies House</a>, there are specific deadlines and requirements for filing LLP accounts in the UK, and as mentioned above, failing to be compliant can result in penalties. Thus, for successful LLP accounting, compliance is the cornerstone for it. As LLPs who want to stay compliant, you must adhere to the following key points:
 
                         </p>
 

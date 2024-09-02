@@ -24,17 +24,11 @@ export default function Hero({scrollToForm}) {
 					Expert Accountants for Freelancers <br/> Your Financial Partner
 					</h1>
 					<span className="mt-8 max-w-2xl text-start text-xl leading-relaxed text-gray-800">
-					Welcome to our dedicated page for freelancers! As a freelancer, managing your finances can be overwhelming, but you don’t have to do it alone. Our team of expert accountants for freelancers is here to provide you with the support and guidance you need to keep your finances in order. With our affordable accountants, you can focus on what you do best while we handle the rest. 
-					. <br/> <br/>
+					Welcome to our dedicated page for freelancers! As a freelancer, managing your finances can be overwhelming, but you don’t have to do it alone.  Our team of expert accountants for freelancers is here to provide you with the support and guidance you need to keep your finances in order.<br/> <br/> With our affordable accountants, you can focus on what you do best while we handle the rest. 
+					.
 
 
-						Are you a sole trader navigating the excitement of
-						owning your own business and the challenge of managing
-						paperwork? At Affotax, we understand your unique needs
-						and are here to simplify your accounting and tax filing
-						processes. Get a quote today and let us help you focus
-						on growing your business. 
-
+						
 
 					</span>
 

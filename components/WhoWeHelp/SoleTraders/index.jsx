@@ -6,6 +6,7 @@ import OurServices from "./OurServices";
 import WhatIsSoleTrader from "./WhatIsSoleTrader";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
+import Pros from "./Pros";
 
 export const metadata = {
 	title: "UK Sole Traders Services for Accounting & Tax Filing",
@@ -22,6 +23,7 @@ export default function SoleTraders() {
 				<HowToGetStarted />
 				<WhyChooseUs />
 				<OurServices />
+				<Pros />
 				<InstantQuoteForm />
 				<EmailPhone />
             </div>

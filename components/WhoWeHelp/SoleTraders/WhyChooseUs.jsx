@@ -49,7 +49,7 @@ const steps = [
         title: 'Unlimited Support',
         key: uuidv4(),
         img: img5,
-        content: 'Our friendly team is always available to answer queries and offer guidance on business decisions.'
+        content: `At Affotax, we understand that your financial journey doesn't stop after our initial consultation. That's why we offer unlimited support to our clients, ensuring you have peace of mind knowing that expert guidance is always just a phone call or email away.`
     },
 ]
 

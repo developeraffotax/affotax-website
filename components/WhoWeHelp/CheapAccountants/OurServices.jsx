@@ -82,7 +82,7 @@ export default function OurServices() {
 					</h2>
 					<span className="mt-4 max-w-2xl   text-center text-lg leading-relaxed text-gray-800">
 						We provide comprehensive online accountancy services for
-						sole traders
+						UK Businesses
 					</span>
 
 					<div className="mt-12 gap-8  w-full flex justify-center items-center p-8 ">

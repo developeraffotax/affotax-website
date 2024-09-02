@@ -11,23 +11,18 @@ export default function Hero() {
 				<div className="w-full max-lg:flex-col items-start justify-center flex border-b border-gray-300 pb-10 ">
 				<div className="relative  flex  flex-1 flex-col items-start justify-center  ">
 					<h1 className="mt-8 max-lg:mt-0 leading-relaxed  text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  max-lg:text-5xl  font-bold text-transparent sm:max-w-3xl sm:text-6xl">
-						UK Sole Traders Services
+					UK Sole Traders Services for Accounting & Tax Filing
 					</h1>
 					<span className="mt-8 max-w-2xl text-start text-xl leading-relaxed text-gray-800">
 						Are you a sole trader navigating the excitement of
 						owning your own business and the challenge of managing
-						paperwork? At Affotax, we understand your unique needs
+						paperwork? <strong>At Affotax,</strong> we understand your unique needs
 						and are here to simplify your accounting and tax filing
 						processes. Get a quote today and let us help you focus
 						on growing your business. <br/> <br/>
 
+						Register as soon as you start trading or receiving income to comply with HMRC regulations and avoid penalties.
 
-						Are you a sole trader navigating the excitement of
-						owning your own business and the challenge of managing
-						paperwork? At Affotax, we understand your unique needs
-						and are here to simplify your accounting and tax filing
-						processes. Get a quote today and let us help you focus
-						on growing your business. 
 
 
 					</span>

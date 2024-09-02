@@ -5,6 +5,7 @@ import HowToGetStarted from "./HowToGetStarted";
 import OurServices from "./OurServices";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
+import WhatIsSoleTrader from "./WhatIsSoleTrader";
 
 export const metadata = {
 	title: "Accountants for Small Business & Tax Filing Services",
@@ -17,10 +18,10 @@ export default function SmallBusinessAccountants() {
 		<>
 			<div className="w-full ">
                 <Hero />
-				{/* <WhatIsSoleTrader /> */}
+				<WhatIsSoleTrader />
 				<HowToGetStarted />
 				<WhyChooseUs />
-				<OurServices />
+				{/* <OurServices /> */}
 				<InstantQuoteForm />
 				<EmailPhone />
             </div>

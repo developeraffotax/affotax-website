@@ -57,7 +57,7 @@ export default function OurServices() {
 						Our Services for Ecommerce Businesses
 					</h2>
 					<span className="mt-4 max-w-2xl text-center text-lg leading-relaxed text-gray-800">
-						Explore our comprehensive suite of services
+					Explore our comprehensive suite of services
 					</span>
 
 					<Splide
