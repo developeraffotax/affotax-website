@@ -1,7 +1,18 @@
 
-import ViewBlogs from "@/components/Admin/Blogs/ViewBlogs";
+
 import { connectDB } from "@/lib/connectDB";
 import Blog from "@/lib/Model/Blog";
+
+
+
+
+const ViewBlogs = dynamic(
+    () => {
+      return import("@/components/Admin/Blogs/ViewBlogs");
+    },
+    { ssr: false }
+  );
+
 
 
 
