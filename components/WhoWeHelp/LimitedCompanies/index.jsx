@@ -16,7 +16,7 @@ export const metadata = {
 export default function LimitedCompanies() {
 	return (
 		<>
-			<div className="w-full ">
+			<div className="w-full font-poppins   ">
                 <Hero />
 				<WhatIsLimitedCompany />
 				<HowToGetStarted />

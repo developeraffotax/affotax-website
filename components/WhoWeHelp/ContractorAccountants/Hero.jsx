@@ -11,7 +11,7 @@ export default function Hero() {
 				<div className="w-full max-lg:flex-col items-start justify-center flex border-b border-gray-300 pb-10 ">
 				<div className="relative  flex  flex-1 flex-col items-start justify-center  ">
 					<h1 className="mt-8 max-lg:mt-0 leading-relaxed  text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  max-lg:text-5xl  font-bold text-transparent sm:max-w-4xl sm:text-6xl">
-						Online Accounting & Tax Filing Services for Contractors
+					Contractors Accounting & Tax Filing Services
 					</h1>
 					<span className="mt-8 max-w-2xl text-start text-xl leading-relaxed text-gray-800">
 					Alright, fellow contractor! Fancy a cuppa while we chat finances? We understand that you're a whizz at what you do – smashing deadlines, building empires (well, one happy client at a time), and revelling in the freedom of being your own boss, but when it comes to the murky world of tax and accounting, things can get rough, mate.<br/> <br/>

@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import OurServices from "./OurServices";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
+import WhatIsSoleTrader from "./WhatIsSoleTrader";
 
 export const metadata = {
 	title: "Accounting & Tax Services for LLPs in the UK - Affotax",
@@ -19,6 +20,7 @@ export default function LimitedLiabilityPartnership() {
 				
 				{/* <HowToGetStarted /> */}
 				<WhyChooseUs />
+				<WhatIsSoleTrader />
 				<OurServices />
 				<InstantQuoteForm />
 				<EmailPhone />

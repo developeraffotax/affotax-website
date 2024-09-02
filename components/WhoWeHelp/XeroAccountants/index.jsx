@@ -8,6 +8,7 @@ import OurServices from "./OurServices";
 import WhatIsSoleTrader from "./WhatIsSoleTrader";
 import InstantQuoteForm from "./InstantQuoteForm";
 import { useRef } from "react";
+import UseXero from "./UseXero";
 
 export const metadata = {
 	title: "Xero Accountants UK - Tax Filing & Business Growth Experts",
@@ -29,12 +30,13 @@ export default function XeroAccountants() {
 
 	return (
 		<>
-			<div className="w-full ">
+			<div className="w-full font-poppins ">
                 <Hero getQuoteClickHandler={getQuoteClickHandler}/>
 				<WhatIsSoleTrader />
 				<HowToGetStarted />
 				{/* <WhyChooseUs /> */}
 				<OurServices />
+				<UseXero />
 				<div className="w-full" ref={formRef}>
 				<InstantQuoteForm />
 				</div>

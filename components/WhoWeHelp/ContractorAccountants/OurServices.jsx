@@ -84,14 +84,7 @@ export default function OurServices() {
                     <animated.div  ref={ref} style={springs} > {
                             
                             (<div className="mt-12 gap-8   flex justify-center items-center ">
-						{/* <Link
-							href="/contact-us"
-							className="flex flex-row items-center text-center justify-center gap-x-2 font-semibold rounded-lg text-white px-8 py-3 bg-orange-500 hover:bg-orange-600 animate-bounce transition-all "
-						>
-							Get a Quote
-							<FaRegArrowAltCircleRight className="scale-110 " />
-						</Link> */}
-
+						
 
 
                             <ul className="  grid grid-cols-3  gap-20 text-center  max-lg:grid-cols-2">
@@ -123,12 +116,18 @@ export default function OurServices() {
                         }
 					
                     </animated.div>
+                    <p className='text-sm  mt-16 w-[50%] text-center font-semibold '>
+
+We at Affotax understand, you are busy constructing your freelance empire. Don't get bogged down inside the economic facet of things. Let our group of contractor accountant superheroes take care of it all. We'll be your monetary wingman, ensuring you navigate the complexities of self-employment with confidence and hold more of your tough-earned cash.
+
+</p>
 				</div>
 
-				{/* <div className="flex-1 flex flex-row justify-start items-start -mt-10 ">
-					<Image src={HeroImg} cover className="scale-90" />
-				</div> */}
+               
+
 			</div>
+
+           
 		</>
 	);
 }

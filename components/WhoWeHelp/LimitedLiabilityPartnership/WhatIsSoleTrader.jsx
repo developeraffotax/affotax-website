@@ -1,28 +1,61 @@
 "use client";
 
 import Image from "next/image";
-import HeroImg from "@/public/soleTraderman.png";
-import { useScroll } from "@react-spring/web";
+import SmallBiz2 from "@/public/smallbiz2.png";
+
 
 export default function WhatIsSoleTrader() {
 	return (
 		<>
-			<div className="flex w-full max-lg:flex-col  flex-row gap-10 py-16  items-center justify-center px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-tr from-orange-300/5 to-orange-900/20 ">
-				<div className="   flex flex-row justify-start text-start items-start  blob overflow-hidden   bg-gradient-to-br from-orange-900 via-orange-500 via-50% to-orange-800  ">
-					<Image src={HeroImg} cover className="scale-110    " />
-				</div>
+			<div className="flex w-full   flex-col gap-20 pt-16  items-center justify-center px-80 max-2xl:px-40 max-xl:px-10    bg-gradient-to-br from-orange-300/5 to-orange-900/20 ">
+				<div className="flex flex-row gap-8 max-lg:flex-col-reverse  max-lg:items-center    w-full justify-center items-center   bg-slate-200/30 rounded-2xl shadow-lg p-12 ">
+					<div className="  w-[50%] max-w-2xl max-lg:w-full ">
+						<h2 className="  leading-relaxed py-4 text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
+							Benefits of Partnering with Affotax
+						</h2>
+						<ul className="list-disc ">
+							<li>
+								<strong>Peace of Mind:</strong> Focus on running
+								your business with the confidence of knowing
+								your finances are in expert hands.
+							</li>
+							<li>
+								<strong>Increased Profitability:</strong> Our
+								tax planning strategies and financial insights
+								will help optimise your finances and maximise
+								profits.{" "}
+							</li>
+							<li>
+								<strong>Improved Efficiency:</strong> Be
+								efficient by saving time and resources with the
+								help of our cloud-based solutions.
+							</li>
+							<li>
+								<strong>Reduced Risk of Errors:</strong> We
+								ensure your financial records are accurate and
+								compliant with regulations.
+							</li>
+							<li>
+								<strong>Strategic Financial Guidance:</strong>{" "}
+								We provide valuable insights and recommendations
+								to help you make informed business decisions.
+							</li>
+						</ul>
 
-				<div className="relative   flex   flex-col items-start justify-center  ">
-					<h2 className="  max-w-sm leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
-						What is a Sole Trader?
-					</h2>
-					<span className="mt-4 max-w-2xl text-start text-xl leading-relaxed text-gray-800">
-						A sole trader is the simplest form of business structure
-						in the UK, where a single individual owns and operates
-						the business. This structure offers full control over
-						decision-making and management but also means personal
-						responsibility for all business debts and liabilities.
-					</span>
+						<h3 className="font-semibold font-poppins text-xl mt-4 ">
+							Ready to Streamline Your LLP's Finances?
+						</h3>
+						<p>
+							Contact Affotax today for a free consultation. We'll
+							discuss your specific needs and tailor a service
+							package that empowers your LLP for long-term
+							success.
+						</p>
+					</div>
+
+					<div className="    w-[40%] max-lg:w-[70%] ">
+						<Image src={SmallBiz2} cover className=" " />
+					</div>
 				</div>
 			</div>
 		</>

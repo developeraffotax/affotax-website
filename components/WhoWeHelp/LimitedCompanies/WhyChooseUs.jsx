@@ -52,7 +52,7 @@ const steps = [
 		key: uuidv4(),
 		img: img5,
 		content:
-			"Our friendly team is always available to answer queries and offer guidance on business decisions. Feel Free to contact us anytime.",
+			"At Affotax, we understand that your financial journey doesn't stop after our initial consultation. That's why we offer unlimited support to our clients, ensuring you have peace of mind knowing that expert guidance is always just a phone call or email away.",
 	},
 ];
 
@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
 					</span>
 
 					<div className="mt-12 gap-8 w-full flex justify-center items-center content-center ">
-						<ul className=" grid grid-cols-3 w-full	  gap-8 text-center max-lg:grid-cols-2  ">
+						<ul className=" grid grid-cols-3 w-full	items-start   gap-8 text-center max-lg:grid-cols-2  ">
 							{steps.map((el, index) => {
 								return (
 									<li

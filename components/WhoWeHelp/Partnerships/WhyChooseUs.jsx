@@ -7,7 +7,7 @@ import img1 from '@/public/1.png';
 import img2 from '@/public/2.png';
 import img3 from '@/public/3.png';
 import img4 from '@/public/4.png';
-import img5 from '@/public/5.png';
+import img5 from '@/public/pay.png';
 import img6 from '@/public/6.png';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -19,11 +19,11 @@ const steps = [
         title: 'Personalised accounting solutions',
         key: uuidv4(),
         img: img1,
-        content: `We offer personalised accounting solutions that align precisely with your requirements. We'll collaborate with you to design a tailored system that includes: 
-A well-defined profit-sharing structure
-Efficient management of partner contributions and distributions
-Streamlined record-keeping practices to enhance operations
-`
+        content: {
+            head: `We offer personalised accounting solutions that align precisely with your requirements. We'll collaborate with you to design a tailored system that includes: `,
+            ul: ['A well-defined profit-sharing structure', 'Efficient management of partner contributions and distributions', 'Streamlined record-keeping practices to enhance operations']
+        }
+
     },
     {
         title: 'Tax planning and compliance',
@@ -50,10 +50,10 @@ content: "Get a clear picture of how your partnership is doing financially with 
         content: " Protect your business with a comprehensive partnership agreement. Our team can help create or review existing agreements, clarifying roles, duties, profit distribution, and conflict resolution processes. This ensures everyone knows their place and how disputes will be handled."
     },
     {
-        title: 'Unlimited Support',
+        title: 'Cash flow management',
         key: uuidv4(),
         img: img5,
-        content: 'Our friendly team is always available to answer queries and offer guidance on business decisions. Feel Free to contact us anytime.'
+        content: "Our experts will help you keep your cash flow healthy. We'll develop strategies to improve your cash flow forecasts and help you control your expenses."
     },
 ]
 
@@ -62,7 +62,7 @@ content: "Get a clear picture of how your partnership is doing financially with 
 export default function WhyChooseUs() {
 
 
-    const { scrollYProgress } = useScroll();
+   
  
 
 
@@ -90,13 +90,21 @@ export default function WhyChooseUs() {
                                 {
                                     steps.map((el, index) => {
                                         return (
-                                            <li key={el.key} className="flex flex-col justify-center items-center gap-4  ">
+                                            <li key={el.key} className="flex flex-col justify-start  items-center gap-4  ">
                                                 <div className="drop-shadow-md  flex justify-center items-center text-4xl font-oswald font-semibold  w-40">
 
                                                     <Image src={el.img} cover className="saturate-  "/>
                                                 </div>
                                                 <h3 className="font-semibold text-xl font-poppins max-w-72">{el.title}</h3>
-                                                <p className="text-sm max-w-72">{el.content}</p>
+                                                <p className="text-sm max-w-72">{!el.content.head ? el.content : null}</p>
+
+                                                {el.content.head && <h3 className="">{el.content.head}</h3>}
+                                                {el.content.ul && <ul className="list-disc ml-8">
+                                                    {
+                                                        el.content.ul.map((el, index) => {
+                                                            return <li className="text-start text-sm font-poppins  ">{el}</li>
+                                                        })
+                                                    }</ul>}
                                             </li>
                                         )
                                     })

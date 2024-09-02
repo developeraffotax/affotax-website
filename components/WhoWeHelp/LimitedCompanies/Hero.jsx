@@ -14,7 +14,7 @@ export default function Hero() {
 					Expert Accounting & Accountant for Limited Company
 					</h1>
 					<span className="mt-8 max-w-2xl text-start text-xl leading-relaxed text-gray-800">
-					Operating a Limited Company in the UK brings with it exciting opportunities, yet also complicated financial responsibilities. Staying abreast of bookkeeping deadlines and regulations can become overwhelming, taking your valuable time and keeping you away from expanding your business.
+					Operating a Limited Company in the UK brings with it exciting opportunities, yet also complicated financial responsibilities. Staying abreast of bookkeeping deadlines and regulations can become overwhelming, taking your valuable time and keeping you away from <b>expanding your business.</b>
 					<br/> <br/>
 
 

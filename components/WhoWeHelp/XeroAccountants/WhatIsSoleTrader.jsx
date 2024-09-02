@@ -20,7 +20,7 @@ export default function WhatIsSoleTrader() {
 					
 
 					<div className="mt-4 max-w-2xl  flex   flex-col items-start justify-start  w-[70%] max-lg:w-full  ">
-						<h2 className="   leading-relaxed text-center max-lg:text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
+						<h2 className="   leading-relaxed text-start max-lg:text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
 							Are You Looking for Xero Accountants?
 						</h2>
 						<span className="mt-4  text-start text-xl leading-relaxed text-gray-800">
@@ -44,7 +44,7 @@ export default function WhatIsSoleTrader() {
 
 
 
-				<div className="flex flex-row max-lg:flex-col max-lg:items-center gap-10 w-full p-12  justify-center items-center max-lg:h-auto h-[40vh] bg-slate-200/30 rounded-2xl shadow-lg">
+				<div className="flex flex-row max-lg:flex-col max-lg:items-center gap-10 w-full p-12  justify-center items-center max-lg:h-auto  bg-slate-200/30 rounded-2xl shadow-lg">
 
 				<div className="   flex flex-row  justify-start text-start items-start  rounded-2xl w-[30%]  max-lg:w-[70%] overflow-hidden     ">
 						<Image src={SmallBiz} cover className="scale-110    " />
@@ -82,11 +82,11 @@ export default function WhatIsSoleTrader() {
 
 
 
-				<div className="flex flex-row gap-8 max-lg:flex-col-reverse  max-lg:items-center    w-full justify-center items-center  max-lg:h-auto h-[40vh] bg-slate-200/30 rounded-2xl shadow-lg p-12 ">
+				<div className="flex flex-row gap-8 max-lg:flex-col-reverse  max-lg:items-center    w-full justify-center items-center  bg-slate-200/30 rounded-2xl shadow-lg p-12 ">
 					
 
 					<div className="  w-[70%] max-w-2xl max-lg:w-full ">
-						<h2 className="  leading-relaxed text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
+						<h2 className="  leading-relaxed text-start pb-2 bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
 							Why Choose Us for Xero Online Accounting Services?
 						</h2>
 						<span className="mt-4  text-start text-xl leading-relaxed text-gray-800">

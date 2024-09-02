@@ -7,7 +7,7 @@ import img1 from '@/public/1.png';
 import img2 from '@/public/2.png';
 import img3 from '@/public/3.png';
 import img4 from '@/public/4.png';
-import img5 from '@/public/5.png';
+import img5 from '@/public/pay.png';
 import img6 from '@/public/6.png';
 
 
@@ -45,10 +45,10 @@ const steps = [
         content: "We offer competitive, fixed-fee packages that are clear as day. No hidden costs, just expert service at a fair and affordable price, because who doesn’t need that?"
     },
     {
-        title: 'Unlimited Support',
+        title: 'IR35? More like IRI-Relax!',
         key: uuidv4(),
         img: img5,
-        content: 'Our friendly team is always available to answer queries and offer guidance on business decisions.'
+        content: "We'll assess your status and guide you through the off-payroll working rules, making sure you're squeaky clean with HMRC. No nasty surprises here."
     },
 ]
 
