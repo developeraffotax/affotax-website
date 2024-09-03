@@ -9,6 +9,6 @@ const ContentWithImageSection = dynamic(
 	{ ssr: false }
 );
 
-export default function HeroSectionPage() {
+export default function ContentWithImageSectionPage() {
 	return <ContentWithImageSection />;
 }
