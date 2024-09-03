@@ -2,7 +2,9 @@ import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import Head from "next/head";
-import { schemaLD } from "./schemaLD";
+import { schemaLD } from "@/data/schemaLD";
+
+
 
 export const metadata = {
 	title: "The Affotax Accountants",
@@ -17,6 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	const schema = JSON.stringify(schemaLD);
+	console.log(schema)
 
 	return (
 		<html lang="en">
