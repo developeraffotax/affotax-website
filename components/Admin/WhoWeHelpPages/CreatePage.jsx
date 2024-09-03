@@ -40,7 +40,7 @@ export default function CreatePage() {
 		formData.append("slug", slug);
 
 		const res = await createNewPage(formData);
-
+		localStorage?.setItem('page-url', url)
 		console.log(res);
 
 		if (res.success) {

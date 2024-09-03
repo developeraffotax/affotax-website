@@ -1,8 +1,4 @@
 
-
-
-
-
 import dynamic from "next/dynamic";
 
 const CreatePage = dynamic(

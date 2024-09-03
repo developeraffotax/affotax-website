@@ -39,21 +39,19 @@ export async function createNewPage(formData) {
                 slug: slug
             },
 
-			SecondSection: {
+			ContentWithImageSection: [{
+				slug: slug
+			}],
+
+			OurServicesSection: {
 				slug: slug
 			},
 
-			ThirdSection: {
+			WhyChooseUsSection: {
 				slug: slug
 			},
 
-			FourthSection: {
-				slug: slug
-			},
-
-			FifthSection: {
-				slug: slug
-			}
+			
 
 
         })
@@ -101,11 +99,18 @@ export async function createHeroSection(formData) {
 			btnText,
 			btnLink
 		}
-
+		console.log(slug)
 		// update here
 		const res = await Page.updateOne({slug: slug}, {$set: {
 			HeroSection : HeroSection
 		}})
+
+
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
 
 		return {
 			success: true,
@@ -144,6 +149,12 @@ export async function createContentWithImageSection(formData) {
 		const res = await Page.updateOne({slug: slug}, {$set: {
 			ContentWithImageSection : [Section]
 		}})
+
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
 
 		return {
 			success: true,
@@ -192,7 +203,11 @@ export async function createOurServicesSection(formData) {
 			OurServicesSection : OurServicesSection
 		}})
 
-		console.log(res)
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
 
 		return {
 			success: true,
@@ -238,7 +253,11 @@ export async function createWhyChooseUsSection(formData) {
 			WhyChooseUsSection : WhyChooseUsSection
 		}})
 
-		console.log(res)
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
 
 		return {
 			success: true,

@@ -1,6 +1,6 @@
 "use client";
 
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import { Alert, Button, Input, List } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import "react-quill/dist/quill.snow.css";
@@ -22,6 +22,20 @@ export default function OurServicesSection() {
 	const [arr, setArr] = useState([]);
 
 	const [url, setUrl] = useState("");
+
+
+	//Setting the page url on the first mounting
+	useEffect(() => {
+		const pageUrl = localStorage?.getItem('page-url');
+
+		if(!pageUrl) {
+			return;
+		} else {
+			setUrl(pageUrl)
+		}
+
+
+	}, [])
 
 
 

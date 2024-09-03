@@ -4,7 +4,7 @@ import { jwtVerify } from "jose";
 
 export async function middleware(request) {
 
-    console.log(request.cookies, 'IN THE COOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOKIESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS')
+  
 
 	const token = request.cookies.get("token");
 	if (!token) {

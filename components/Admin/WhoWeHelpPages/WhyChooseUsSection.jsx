@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Alert, Button, Input, List, message, Upload } from "antd";
 
 import TextArea from "antd/es/input/TextArea";
@@ -24,6 +24,20 @@ export default function WhyChooseUsSection() {
 	const [arr, setArr] = useState([]);
 
 	const [url, setUrl] = useState("");
+
+	//Setting the page url on the first mounting
+	useEffect(() => {
+		const pageUrl = localStorage?.getItem('page-url');
+
+		if(!pageUrl) {
+			return;
+		} else {
+			setUrl(pageUrl)
+		}
+
+
+	}, [])
+
 
 	//Form Submit Handler
 	const submitHandler = async () => {

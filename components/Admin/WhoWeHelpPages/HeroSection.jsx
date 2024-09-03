@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Alert, Button, Input, message, Select, Upload } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined  } from "@ant-design/icons";
@@ -28,6 +28,19 @@ export default function HeroSection() {
 	const [url, setUrl] = useState('');
 	
 
+
+	//Setting the page url on the first mounting
+	useEffect(() => {
+		const pageUrl = localStorage?.getItem('page-url');
+
+		if(!pageUrl) {
+			return;
+		} else {
+			setUrl(pageUrl)
+		}
+
+
+	}, [])
 
 
     //Image Upload Handling Props
