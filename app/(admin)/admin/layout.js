@@ -134,48 +134,48 @@ export default function RootLayout({ children }) {
 
                 {
                   key: 'section2',
-                  label: ' Second Section',
+                  label: ' Content With Image Section',
                   onClick		: () => {
                     setDefaultSelectedKeys(['section2'])
                 setDefaultOpenKeys(['page', 'section'])
 
-                    router.push('/admin/create-page/second-section')
+                    router.push('/admin/create-page/content-with-image-section')
                   }
                 },
 
                 {
                   key: 'section3',
-                  label: ' Third Section',
+                  label: ' Our Services Section',
                   onClick		: () => {
                     setDefaultSelectedKeys(['section3'])
                 setDefaultOpenKeys(['page', 'section'])
 
-                    router.push('/admin/create-page/third-section')
+                    router.push('/admin/create-page/our-services-section')
                   }
                 },
 
                 {
                   key: 'section4',
-                  label: ' Fourth Section',
+                  label: ' Why Us Section',
                   onClick		: () => {
                     setDefaultSelectedKeys(['section4'])
                     setDefaultOpenKeys(['page', 'section'])
 
-                    router.push('/admin/create-page/fourth-section')
+                    router.push('/admin/create-page/why-choose-us-section')
                   }
                 },
 
-                {
-                  key: 'section5',
-                  label: ' Fifth Section',
-                  onClick		: () => {
-                    setDefaultSelectedKeys(['section5'])
-                    setDefaultOpenKeys(['page', 'section'])
+                // {
+                //   key: 'section5',
+                //   label: ' Fifth Section',
+                //   onClick		: () => {
+                //     setDefaultSelectedKeys(['section5'])
+                //     setDefaultOpenKeys(['page', 'section'])
 
 
-                    router.push('/admin/create-page/fifth-section')
-                  }
-                }
+                //     router.push('/admin/create-page/fifth-section')
+                //   }
+                // }
 
 
               ],

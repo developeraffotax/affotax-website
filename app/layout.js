@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	const schema = JSON.stringify(schemaLD);
-	console.log(schema)
+	//console.log(schema)
 
 	return (
 		<html lang="en">

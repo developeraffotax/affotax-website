@@ -87,7 +87,7 @@ export async function createNewPage(formData) {
 
 //Hero Section
 export async function createHeroSection(formData) {
-	const { heading, imageUrl, description1, description2, metaTitle, metaDescription, keywords, btnText, btnLink, slug } = getFormData( formData, "heading", "imageUrl", "description1", "description2", "metaTitle", "metaDescription", "keywords", "btnText", "btnLink", "slug" );
+	const { heading, imageUrl, description1, description2, btnText, btnLink, slug } = getFormData( formData, "heading", "imageUrl", "description1", "description2", "metaTitle", "metaDescription", "keywords", "btnText", "btnLink", "slug" );
 
 	try {
 		const db = await connectDB();
@@ -125,35 +125,31 @@ export async function createHeroSection(formData) {
 
 
 //Second Section
-export async function createSecondSection(formData) {
-	const { heading, imageUrl, description1, description2, metaTitle, metaDescription, keywords, btnText, btnLink, slug } = getFormData( formData, "heading", "imageUrl", "description1", "description2", "metaTitle", "metaDescription", "keywords", "btnText", "btnLink", "slug" );
+export async function createContentWithImageSection(formData) {
+	const { heading, html, imageUrl, imagePosition, slug } = getFormData( formData, "heading", "html", "imageUrl", "imagePosition", "slug" );
 
 	try {
 		const db = await connectDB();
 
-		const page = new Page({
-            slug: slug,
-            HeroSection : {
-                heading,
-                slug,
-                imageUrl,
-                description1,
-                description2,
-                metaTitle,
-                metaDescription,
-                keywords: keywords.split(","),
-                btnText,
-                btnLink
+		const Section = {
+			heading,
+			slug,
+			imageUrl,
+			html,
+			imagePosition,
+			
+		}
 
-            }
-        })
+		// update here
+		const res = await Page.updateOne({slug: slug}, {$set: {
+			ContentWithImageSection : [Section]
+		}})
 
-		const pageDoc = await page.save();
-		//revalidatePath('/admin/view-blogs')
 		return {
 			success: true,
 		};
 	} catch (error) {
+		console.log(error)
 		return {
 			success: false,
 		};
@@ -162,6 +158,54 @@ export async function createSecondSection(formData) {
 	
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Third Section
+export async function createOurServicesSection(formData) {
+	const { heading, shortDescription, arr,  slug } = getFormData( formData, "heading", "shortDescription", "arr", "slug" );
+
+	try {
+		const db = await connectDB();
+
+		const OurServicesSection = {
+			heading,
+			shortDescription,
+			arr: JSON.parse(arr),
+			slug,
+			
+			
+		}
+
+		// update here
+		const res = await Page.updateOne({slug: slug}, {$set: {
+			OurServicesSection : OurServicesSection
+		}})
+
+		console.log(res)
+
+		return {
+			success: true,
+		};
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
 
 
 
