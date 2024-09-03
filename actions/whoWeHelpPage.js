@@ -217,6 +217,47 @@ export async function createOurServicesSection(formData) {
 
 
 
+//Fourth Section
+export async function createWhyChooseUsSection(formData) {
+	const { heading, shortDescription, arr,  slug } = getFormData( formData, "heading", "shortDescription", "arr", "slug" );
+
+	try {
+		const db = await connectDB();
+
+		const WhyChooseUsSection = {
+			heading,
+			shortDescription,
+			arr: JSON.parse(arr),
+			slug,
+			
+			
+		}
+
+		// update here
+		const res = await Page.updateOne({slug: slug}, {$set: {
+			WhyChooseUsSection : WhyChooseUsSection
+		}})
+
+		console.log(res)
+
+		return {
+			success: true,
+		};
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
+
+
+
+
+
+
 
 
 

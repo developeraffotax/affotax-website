@@ -7,6 +7,6 @@ const WhyChooseUsSection = dynamic(
 	{ ssr: false }
 );
 
-export default function CreateBlogPage() {
+export default function WhyChooseUsSectionPage() {
 	return <WhyChooseUsSection />;
 }
