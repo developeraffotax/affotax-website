@@ -4,11 +4,16 @@ import { useEffect, useState } from "react";
 import { Alert, Button, Input, message, Select} from "antd";
 import TextArea from "antd/es/input/TextArea";
 
-import { createNewPage, } from "@/actions/whoWeHelpPage";
+import { createNewPage, deleteNewPage, } from "@/actions/whoWeHelpPage";
+import axios from "axios";
 
 
 
 export default function CreatePage() {
+
+	const [isEditMode, setIsEditMode] = useState(false);
+
+
 	const [uploadSuccess, setUploadSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
 
@@ -46,13 +51,14 @@ export default function CreatePage() {
 		if (res.success) {
 			setUploadSuccess(res.success);
 
-			setTitle("");
-			
-			setMetaTitle("");
-			setMetaDescription();
-			setKeywords([]);
+			if(!isEditMode) {
+				setTitle("");
+				setMetaTitle("");
+				setMetaDescription();
+				setKeywords([]);
+			}
 
-			
+			message.success(`${isEditMode ? 'Page Updated' : 'New Page Added Successfully'}`);
 
 	
 		} else {
@@ -60,15 +66,112 @@ export default function CreatePage() {
 		}
 	};
 
+
+
+
+
+	const getPageData = async () => {
+        
+
+
+        try {
+            const res = await axios.get(`/api/pages/${ url.split('/')[3]}`);
+			
+
+			
+            if(res.status === 200) {
+                setIsEditMode(true);
+        		const page = res.data;
+
+
+				setTitle(page.title);
+				setMetaTitle(page.metaTitle);
+				setMetaDescription(page.metaDescription);
+				setKeywords(page.keywords);
+
+			
+            }
+        } catch(error) {
+            message.error(`Failed to fetch this page! Kindly paste the valid link😠`);
+        }
+        
+
+
+    }
+
+
+
+
+
+	const dltPageBtnHandler = async () => {
+		setIsError(false);
+
+         const formData = new FormData();
+		 formData.append("slug",  url.split('/')[3]);
+		
+        try {
+            
+	         const res = await deleteNewPage(formData);
+
+
+            if (res.success === true) {
+				message.success(`Page deleted successfully`);
+				setIsEditMode(false);
+			} else if (res.success === false) {
+				message.error(`Failed to delete the page`);
+			}
+            
+
+
+        } catch (error) {
+			message.error(`Failed to delete the page`);
+            console.log(error);
+        }
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+	
+	const disableEditMode = () => {
+		setIsEditMode(false);
+
+		setTitle('');
+		setMetaTitle('');
+		setMetaDescription('');
+		setKeywords('');
+			
+	}
+
+	// onClick={(e) => { 
+	// 	e.target.select();
+	// 	 document?.execCommand("copy");
+	// 	e.target.blur();
+	// 	message.success(`Url Copied!`);
+	// 	 }}
+
+
 	return (
 		<>
 			<div className="w-full flex flex-col gap-4 justify-center items-center p-2">
-				<Input className="hover:cursor-pointer  active:scale-[.99]" placeholder="The Url of the current Page" variant="filled" value={url} onClick={(e) => { 
-						e.target.select();
-					 	document?.execCommand("copy");
-						e.target.blur();
-						message.success(`Url Copied!`);
-						 }} />
+
+			{isEditMode && <Button type="link" onClick={disableEditMode }>I want to add a new Page😛</Button>}
+
+			<div className="w-full flex items-center justify-between gap-8">
+
+			<Input className="" placeholder="The Url of the current Page" variant="filled" value={url}  onChange={(e) => setUrl(e.target.value)} />
+
+				<Button type="primary" onClick={getPageData}>Load Data</Button>		 
+			</div>
+				
 
 				<div className="w-full flex gap-8 justify-center items-start ">
 					<div className="w-full flex flex-col gap-2 ">
@@ -88,14 +191,15 @@ export default function CreatePage() {
 					</div>
 				</div>
 
-				<div className="w-full flex flex-col  gap-2">
-					<Button className="w-[10%] min-w-44 mt-4" onClick={submitHandler} type="primary" > {" "} Add New Page{" "} </Button>
+				<div className="w-full flex flex-row items-center justify-between  ">
+					<Button className="w-[10%] min-w-44 mt-4" onClick={submitHandler} type="primary" >{isEditMode ? 'Update Page' : 'Add New Page'} </Button>
+					{isEditMode && <Button className="w-[10%] min-w-44 mt-4" onClick={dltPageBtnHandler} type="primary" danger> {" "} Delete this Page{" "} </Button>}
 				</div>
 
 				<div className="w-full flex justify-start mt-16"></div>
 
-				{uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )}
-				{isError && ( <Alert message="Failed to add Hero Section!" type="error" showIcon closable /> )}
+				{/* {uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )} */}
+				{isError && ( <Alert message="Failed to add New Page!" type="error" showIcon closable /> )}
 			</div>
 		</>
 	);

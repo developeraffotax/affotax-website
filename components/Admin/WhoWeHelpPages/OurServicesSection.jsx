@@ -1,15 +1,18 @@
 "use client";
 
 import {  useEffect, useState } from "react";
-import { Alert, Button, Input, List } from "antd";
+import { Alert, Button, Input, List, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import "react-quill/dist/quill.snow.css";
 import { FcOk } from "react-icons/fc";
 
 import { createOurServicesSection } from "@/actions/whoWeHelpPage";
 import { FaPlus } from "react-icons/fa";
+import axios from "axios";
 
 export default function OurServicesSection() {
+
+	const [isEditMode, setIsEditMode] = useState(false);
 
 	const [uploadSuccess, setUploadSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -90,10 +93,105 @@ export default function OurServicesSection() {
 		setContent("");
 	};
 
+
+
+
+
+
+
+	
+	const getPageData = async () => {
+        
+
+
+        try {
+            const res = await axios.get(`/api/pages/${ url.split('/')[3]}`);
+			
+
+			
+            if(res.status === 200) {
+                setIsEditMode(true);
+        		const section = res.data.OurServicesSection;
+
+				
+				 setHeading(section.heading);
+				 setShortDesciption(section.shortDescription);
+				 setArr(section.arr);
+
+
+				
+
+			
+            }
+        } catch(error) {
+            message.error(`Failed to fetch this page! Kindly paste the valid link😠`);
+        }
+        
+
+
+    }
+
+
+	const dltBtnHandler = async () => {
+		// setIsError(false);
+
+        //  const formData = new FormData();
+		//  formData.append("slug",  url.split('/')[3]);
+		
+        // try {
+            
+	    //      const res = await deleteNewPage(formData);
+
+
+        //     if (res.success === true) {
+		// 		message.success(`Page deleted successfully`);
+		// 		setIsEditMode(false);
+		// 	} else if (res.success === false) {
+		// 		message.error(`Failed to delete the page`);
+		// 	}
+            
+
+
+        // } catch (error) {
+		// 	message.error(`Failed to delete the page`);
+        //     console.log(error);
+        // }
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+		
+	const disableEditMode = () => {
+		setIsEditMode(false);
+
+		// setTitle('');
+		// setMetaTitle('');
+		// setMetaDescription('');
+		// setKeywords('');
+			
+	}
+
+
 	return (
 		<>
 			<div className="w-full flex flex-col gap-4 justify-center items-center p-2">
-				<Input className="hover:cursor-pointer " placeholder="The Url of the current Page" variant="filled" value={url} onClick={(e) => setUrl(e.target.value)} />
+
+			{isEditMode && <Button type="link" onClick={disableEditMode }>I want to add a new Our-Services-Section😛</Button>}
+
+			<div className="w-full flex items-center justify-between gap-8">
+				<Input className=" " placeholder="The Url of the current Page" variant="filled" value={url} onChange={(e) => setUrl(e.target.value)} />
+				<Button type="primary" onClick={getPageData}>Load Data</Button>		 
+				</div>
+
 				<div className="w-full flex gap-8 justify-center items-start ">
 					<div className="w-[50%] flex flex-col gap-2 ">
 						<label>Heading</label>
@@ -146,8 +244,9 @@ export default function OurServicesSection() {
 					</div>
 				</div>
 
-				<div className="w-full flex flex-col  gap-2">
-					<Button className="w-[16%] min-w-56 mt-4" onClick={submitHandler} type="primary" disabled={arr.length > 0 ? false : true} > {" "} Add Our Services Section{" "} </Button>
+				<div className="w-full flex flex-row items-center justify-between ">
+					<Button className="w-[16%] min-w-56 mt-4" onClick={submitHandler} type="primary" disabled={arr.length > 0 ? false : true} > {isEditMode ? 'Update Our-Services-Section' : 'Add Our-Services-Section'} </Button>
+					{isEditMode && <Button className="w-[10%] min-w-44 mt-4" onClick={dltBtnHandler} type="primary" danger> {" "} Delete this Page{" "} </Button>}
 				</div>
 
 				{uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )}

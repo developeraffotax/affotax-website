@@ -74,6 +74,48 @@ export async function createNewPage(formData) {
 
 
 
+//Delete a Page
+export async function deleteNewPage(formData) {
+	const { slug } = getFormData( formData,  "slug" );
+
+	
+
+
+	try {
+		const db = await connectDB();
+
+		const {acknowledged} = await Page.deleteOne({slug: slug});
+		
+		if(acknowledged) {
+			return {
+				success: true,
+			};
+		} else {
+			return {
+				success: false,
+			};
+		}
+		
+		
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -124,6 +166,45 @@ export async function createHeroSection(formData) {
 
 	
 }
+
+
+
+
+//deleteHeroSection-------------DELETE OPERATION
+export async function deleteHeroSection(formData) {
+	const { slug } = getFormData( formData, "slug" );
+
+	try {
+		const db = await connectDB();
+
+		
+		// delete here
+		const res = await Page.updateOne({slug: slug}, {$set: {
+			HeroSection : null
+		}})
+
+
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
+
+		return {
+			success: true,
+		};
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
+
+
+
 
 
 
