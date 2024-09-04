@@ -39,9 +39,9 @@ export async function createNewPage(formData) {
                 slug: slug
             },
 
-			ContentWithImageSection: [{
-				slug: slug
-			}],
+			// ContentWithImageSection: [{
+			// 	slug: slug
+			// }],
 
 			OurServicesSection: {
 				slug: slug
@@ -129,7 +129,7 @@ export async function createHeroSection(formData) {
 
 
 
-//Second Section
+//createContentWithImageSection----------------CREATE OPERATION
 export async function createContentWithImageSection(formData) {
 	const { heading, html, imageUrl, imagePosition, slug } = getFormData( formData, "heading", "html", "imageUrl", "imagePosition", "slug" );
 
@@ -146,8 +146,89 @@ export async function createContentWithImageSection(formData) {
 		}
 
 		// update here
-		const res = await Page.updateOne({slug: slug}, {$set: {
-			ContentWithImageSection : [Section]
+		const res = await Page.updateOne({slug: slug}, {$push: {
+			ContentWithImageSection : Section
+		}})
+
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
+
+		return {
+			success: true,
+		};
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
+
+
+
+
+
+
+
+//updateContentWithImageSection----------------UPDATE OPERATION
+export async function 	updateContentWithImageSection(formData) {
+	const { _id, heading, html, imageUrl, imagePosition, slug } = getFormData( formData, "_id", "heading", "html", "imageUrl", "imagePosition", "slug" );
+
+	try {
+		const db = await connectDB();
+
+		const Section = {
+			
+			heading,
+			slug,
+			imageUrl,
+			html,
+			imagePosition,
+			
+		}
+
+		// update here
+		const res = await Page.updateOne({slug: slug, 'ContentWithImageSection._id': _id}, {$set: {
+			'ContentWithImageSection.$' : Section
+		}})
+
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
+
+		return {
+			success: true,
+		};
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
+
+
+
+//deleteContentWithImageSection----------------DELETE OPERATION
+export async function 	deleteContentWithImageSection(formData) {
+	const { _id, slug } = getFormData( formData, "_id", "slug" );
+
+	try {
+		const db = await connectDB();
+
+		
+		// delete here
+		const res = await Page.updateOne({slug: slug }, {$pull: {
+			'ContentWithImageSection' : {'_id': _id}
 		}})
 
 		if (res.modifiedCount === 0) {

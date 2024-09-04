@@ -16,6 +16,7 @@
     "@tawk.to/tawk-messenger-react": "^2.0.2",
     "@vercel/blob": "^0.23.4",
     "antd": "^5.20.2",
+    "axios": "^1.7.7",
     "ejs": "^3.1.10",
     "jose": "^5.7.0",
     "mongoose": "^8.5.1",

@@ -6,19 +6,21 @@ import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from "@ant-design/icons";
 import "react-quill/dist/quill.snow.css";
 
-import { createContentWithImageSection, UploadImage, } from "@/actions/whoWeHelpPage";
+import { createContentWithImageSection, deleteContentWithImageSection, updateContentWithImageSection, UploadImage, } from "@/actions/whoWeHelpPage";
  import ReactQuill from "react-quill";
 
-export default function ContentWithImageSection({ url}) {
+export default function UpdateContentWithImageSection({slug: fSlug, heading: fHeading, html: fHtml, imageUrl: fImageUrl, imagePosition: fImagePosition, _id, url}) {
 	
 
 	const [uploadSuccess, setUploadSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
 
-	const [heading, setHeading] = useState("");
-	const [html, setHtml] = useState("");
-	const [imageUrl, setImageUrl] = useState("");
-	const [isImageRight, setIsImageRight] = useState(true);
+	const [heading, setHeading] = useState(fHeading);
+	const [html, setHtml] = useState(fHtml);
+	const [imageUrl, setImageUrl] = useState(fImageUrl);
+	const [isImageRight, setIsImageRight] = useState(() => {
+		return fImagePosition === 'Left' ? false : true
+	});
 
 
 
@@ -63,6 +65,8 @@ export default function ContentWithImageSection({ url}) {
 
 		const formData = new FormData();
 
+
+		formData.append("_id", _id);
 		formData.append("heading", heading);
 		formData.append("html", html);
 		formData.append("imageUrl", imageUrl);
@@ -70,9 +74,9 @@ export default function ContentWithImageSection({ url}) {
 
 		formData.append("slug", url.split('/')[3]);
 
-		const res = await createContentWithImageSection(formData);
+		const res = await updateContentWithImageSection(formData);
 
-		console.log(url.split('/')[3])
+        console.log(_id, res)
 
 		if (res.success) {
 			setUploadSuccess(res.success);
@@ -86,6 +90,59 @@ export default function ContentWithImageSection({ url}) {
 			setIsError(true);
 		}
 	};
+
+
+
+
+
+
+
+
+
+    const dltSectionBtnHandler = async () => {
+		setIsError(false);
+
+
+        const formData = new FormData();
+
+
+		formData.append("_id", _id);
+		formData.append("slug", fSlug);
+		
+
+
+        try {
+
+            
+            
+            const res = await deleteContentWithImageSection(formData);
+
+
+            if (res.success === true) {
+				message.success(`Section deleted successfully`);
+			} else if (res.success === false) {
+				message.error(`Failed to delete the section`);
+			}
+            
+
+
+
+
+
+        } catch (error) {
+            console.log(error);
+        }
+
+		
+	};
+
+
+
+
+
+
+
+
 
 
 
@@ -143,7 +200,10 @@ export default function ContentWithImageSection({ url}) {
 					<label>Content for the Section 2</label>
 					<ReactQuill className="w-full  " theme="snow" value={html} onChange={setHtml} modules={{ toolbar: toolbarOptions }} />
 
-					<Button className="w-[10%] min-w-44 mt-4" onClick={submitHandler} type="primary" > {" "} Add Second Section{" "} </Button>
+					<div className="w-full flex justify-between items-center">
+                    <Button className="w-[10%] min-w-44 mt-4" onClick={submitHandler} type="primary" > {" "} Update Section{" "} </Button>
+					<Button className="w-[10%] min-w-44 mt-4" onClick={dltSectionBtnHandler} type="primary" danger> {" "} Delete Section{" "} </Button>
+                    </div>
 				</div>
 
 				{uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )}

@@ -133,7 +133,7 @@ export default function OurServicesSection() {
 								<List.Item className=" ">
 									<List.Item.Meta
 										avatar={
-											<p className="w-6 h-6 rounded-full bg-orange-400 text-white font-semibold ">
+											<p className="w-6 h-6 rounded-full text-center bg-orange-400 text-white font-semibold ">
 												{index + 1}
 											</p>
 										}
