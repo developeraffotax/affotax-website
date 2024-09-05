@@ -2,7 +2,8 @@ import React from 'react'
 import Tax from '@/public/tax.png'
 import Experience from '@/public/experience.png'
 import Deadline from '@/public/deadline.png'
-import Award from '@/public/award.png'
+// import Award from '@/public/award.png'
+import Award from '@/public/consulting.png'
 import Fully from '@/public/fully.png'
 import Support from '@/public/support.png'
 import Image from 'next/image'
@@ -21,7 +22,8 @@ export default function WhyUs() {
         <div className="container px-5 py-12 mx-auto">
             <div className="text-center mb-16">
                 <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                    Why Choose Us?
+                Why Choose Affotax as Your Online Accountant?
+
                 </h2>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -47,10 +49,12 @@ export default function WhyUs() {
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Tax Saving
+                    Tax saving
+
                     </h2>
                     <p className="leading-relaxed text-base">
                     Our team of UK tax experts will collaborate with you to minimise your corporation and personal tax liability while adhering to the UK tax legislation. We will make sure to identify all allowances and expenses you're eligible for to reduce your tax burden.
+
                     </p>
                     
                     </div>
@@ -74,10 +78,12 @@ export default function WhyUs() {
                     </div>
                     <div className="flex-grow">
                     <h2 className="text-primary text-lg title-font font-medium mb-3">
-                        Award Winning
+                    Free consultation
+
                     </h2>
                     <p className="leading-relaxed text-base">
-                    We're proud of being a leading UK accounting firm. Our various awards and top 100 accounting firm ranking are proof of our exceptional UK accounts and tax preparation services. We're committed to excellence and strive to maintain our reputation every day.
+                    Keep your financial data safe and compliant with GDPR. Send your bank statements directly to your online accountant, and manage your finances with confidence. Let's talk about your business needs and find the best solutions together.
+
                     </p>
                     
                     </div>
@@ -104,9 +110,11 @@ export default function WhyUs() {
                     Deadline reminders
 
 
+
                     </h2>
                     <p className="leading-relaxed text-base">
                     Our email reminders ensure you never miss a deadline for your limited company accounts and company tax returns to be submitted to HMRC and Companies House. Stay informed and avoid late filing penalties, while focusing on running your business.
+
                     </p>
                     
                     </div>
@@ -131,7 +139,8 @@ export default function WhyUs() {
                     Experience
                     </h2>
                     <p className="leading-relaxed text-base">
-                    We're the UK's most reliable accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
+                    We're the UK's most reliable online accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
+
                     </p>
                     
                     </div>
@@ -158,9 +167,11 @@ export default function WhyUs() {
                     Fully accredited
 
 
+
                     </h2>
                     <p className="leading-relaxed text-base">
                     As authorised accountants and registered agents with HMRC and Companies House, we offer reliable and customised accounting services. Our commitment to excellence remains steadfast, and we strive to deliver top-notch service and support to all our clients.
+
                     </p>
                     
                     </div>
@@ -187,19 +198,22 @@ export default function WhyUs() {
                     Support
                     </h2>
                     <p className="leading-relaxed text-base">
-                    Our expert accountants offer free live chat and email support to guide you every step of the way. Whether you're facing HMRC notices or need help with compliance, we'll take care of the declaration process for you in full compliance with UK regulations.
+                    Our expert UK accountants offer free live chat and email support to guide you every step of the way. Whether you're facing HMRC notices or need help with compliance, we'll take care of the declaration process for you in full compliance with UK regulations.
+
                     </p>
                     
                     </div>
                 </div>
             </div>
 
-        <div className=' mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
+        <div className=' mt-20  text-center  flex-col flex items-center justify-center bg-slate-50 w-full  rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
             <h2 className=' title-font text-3xl font-semibold '>
-                Ready to chat with the UK's top chartered accountants?
+            Ready to chat with the UK's online accountants?
+
             </h2>
-            <p className='mt-4 text-md '>
-                Send us a message today, or get a quote; our expert chartered accountants in the UK are ready to manage your accounting and tax filings with expertise.
+            <p className='mt-4 text-md  max-w-[600px] '>
+            Send us a message today, or get a quote, our expert online accountants in the UK are ready to manage your accounting and tax filings with expertise.
+
             </p>
             <Link href={'/contact-us'}><button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
                         

@@ -12,7 +12,7 @@ export default function HowItWorks() {
         <div className="mx-auto max-w-7xl px-4  max-lg:px-4">
             <div className="text-center mb-12">
                 <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
-                    How It Works
+                    How Our Online Accountants Work
                 </h2>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -44,9 +44,11 @@ export default function HowItWorks() {
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                 Your financial information sharing
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Your financial information is to be processed online in compliance with the GDPR/EU rules. You can email your bank statements to your accountant with ease: Live the future of secure online financial management.
+                Your financial information is to be processed online in compliance with the GDPR/EU rules. You can email your bank statements to your accountant and experience the future of secure online financial management.
+
                 </h4>
                 </div>
             </li>
@@ -75,9 +77,10 @@ export default function HowItWorks() {
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                 Company accounts & tax return preparations
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                With our innovative tools, experience financial reporting with unmatched precision. Our iXBRL accounts and tax filings are carefully produced by following Companies House and HMRC's rigorous guidelines.
+                With our innovative tools, experience financial reporting with unmatched precision. Our iXBRL accounts and tax filings are carefully produced by following Companies House and HMRC's rigorous guidelines
                 </h4>
                 </div>
             </li>
@@ -106,6 +109,7 @@ export default function HowItWorks() {
                 <div className="ml-6 lg:ml-0 lg:mt-10">
                 <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
                 Review & approval of drafts
+
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
                 At Affotax, we believe in transparency and your complete satisfaction. At every step, you have the right to review and validate. We hold off on submitting your accounts until we have your explicit approval.
@@ -135,7 +139,7 @@ export default function HowItWorks() {
                 Submission to HMRC & Companies Houses
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Rest assured that our expert team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you for your peace of mind.
+                Rest assured that our online accountants team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you.
                 </h4>
                 </div>
             </li>
