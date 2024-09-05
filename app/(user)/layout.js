@@ -19,9 +19,6 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 
 
-
-
-
 export const TawkContext = createContext();
 
 export const CartContext = createContext();
