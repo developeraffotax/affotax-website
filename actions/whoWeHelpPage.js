@@ -394,7 +394,7 @@ export async function createOurServicesSection(formData) {
 
 
 
-//Fourth Section
+//CREATE OPERATION / UPDATE OPERATION--------------------------------------------------createWhyChooseUsSection
 export async function createWhyChooseUsSection(formData) {
 	const { heading, shortDescription, arr,  slug } = getFormData( formData, "heading", "shortDescription", "arr", "slug" );
 
@@ -437,6 +437,41 @@ export async function createWhyChooseUsSection(formData) {
 
 
 
+
+
+
+
+
+
+//DELETE OPERATION--------------------------------------------------createWhyChooseUsSection
+export async function deleteWhyChooseUsSection(formData) {
+	const { slug } = getFormData( formData,"slug" );
+
+	try {
+		const db = await connectDB();
+
+		// delete here
+		const res = await Page.deleteOne({slug: slug});
+
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
+
+		return {
+			success: true,
+		};
+
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
 
 
 

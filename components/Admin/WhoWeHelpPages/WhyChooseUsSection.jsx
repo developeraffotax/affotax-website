@@ -8,10 +8,15 @@ import { UploadOutlined } from "@ant-design/icons";
 import "react-quill/dist/quill.snow.css";
 import { FcOk } from "react-icons/fc";
 
-import { createOurServicesSection, createWhyChooseUsSection, UploadImage } from "@/actions/whoWeHelpPage";
+import { createOurServicesSection, createWhyChooseUsSection, deleteWhyChooseUsSection, UploadImage } from "@/actions/whoWeHelpPage";
 import { FaPlus } from "react-icons/fa";
+import axios from "axios";
 
 export default function WhyChooseUsSection() {
+
+	const [isEditMode, setIsEditMode] = useState(false);
+
+
 	const [uploadSuccess, setUploadSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
 
@@ -111,10 +116,115 @@ export default function WhyChooseUsSection() {
 		},
 	};
 
+
+
+
+
+		
+    const getPageData = async () => {
+        
+
+		
+
+        try {
+            const page = await axios.get(`/api/pages/${ url.split('/')[3]}`);
+			
+
+			console.log(page)
+
+            if(page.status === 200) {
+                setIsEditMode(true);
+        		const section = page.data.WhyChooseUsSection;
+
+
+				setHeading(section.heading);
+				setShortDesciption(section.shortDescription);
+				setArr(section.arr);
+
+
+
+			
+            }
+        } catch(error) {
+            message.error(`Failed to fetch this page! Kindly paste the valid link😠`);
+        }
+        
+
+
+    }
+
+
+
+
+
+
+	
+	
+	const disableEditMode = () => {
+		setIsEditMode(false);
+
+		setHeading('');
+		setShortDesciption('');
+		setArr([]);
+			
+	}
+
+
+	
+
+
+
+	
+	
+    const dltSectionBtnHandler = async () => {
+		setIsError(false);
+
+		const formData = new FormData();
+		formData.append("slug",  url.split('/')[3]);
+	   
+	   try {
+		   
+			const res = await deleteWhyChooseUsSection(formData);
+
+		   if (res.success === true) {
+			   message.success(`Section deleted successfully`);
+			   disableEditMode()
+		   } else if (res.success === false) {
+			   message.error(`Failed to delete the section`);
+		   }
+		   
+
+
+	   } catch (error) {
+		   console.log(error);
+	   }
+
+	   
+   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	return (
 		<>
 			<div className="w-full flex flex-col gap-4 justify-center items-center p-2">
+
+			{isEditMode && <Button type="link" onClick={disableEditMode }>I want to add a new Why-Choose-Us Section😛</Button>}
+			<div className="w-full flex items-center justify-between gap-8">
 				<Input className=" " placeholder="The Url of the current Page"  variant="filled" value={url} onChange={(e) => setUrl(e.target.value)} />
+				<Button type="primary" onClick={getPageData}>Load Data</Button>
+
+			</div>
 
 				<div className="w-full flex gap-8 justify-center items-start ">
 					<div className="w-[50%] flex flex-col gap-2 ">
@@ -176,8 +286,9 @@ export default function WhyChooseUsSection() {
 					</div>
 				</div>
 
-				<div className="w-full flex flex-col  gap-2">
-					<Button className="w-[16%] min-w-56 mt-4" onClick={submitHandler} type="primary" disabled={arr.length > 0 ? false : true} > {" "} Add Why-Choose-Us Section{" "} </Button>
+				<div className="w-full flex flex-row items-center justify-between ">
+					<Button className="w-[16%] min-w-56 mt-4" onClick={submitHandler} type="primary" disabled={arr.length > 0 ? false : true} >  {isEditMode ? 'Update Why-Choose-Us Section' : 'Add Why-Choose-Us Section'} </Button>
+					{isEditMode && <Button className="w-[10%] min-w-44 mt-4" onClick={dltSectionBtnHandler} type="primary" danger> {" "} Delete this Section{" "} </Button>}
 				</div>
 
 				{uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )}
