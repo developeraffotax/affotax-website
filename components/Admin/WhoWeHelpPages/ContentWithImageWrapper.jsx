@@ -20,6 +20,7 @@ export default function ContentWithImageWrapper() {
 
 
 
+    const [isArrEmpty, setIsArrEmpty] = useState(false);
     const [url, setUrl] = useState("");
 
     const [isEditMode, setIsEditMode] = useState(false)
@@ -36,7 +37,7 @@ export default function ContentWithImageWrapper() {
 
     const getPageData = async () => {
         
-
+        
 
 
         try {
@@ -44,15 +45,23 @@ export default function ContentWithImageWrapper() {
             
             if(page.status === 200) {
                 setIsEditMode(true);
-        const tempArr = page.data.ContentWithImageSection;
+                const tempArr = page.data.ContentWithImageSection;
 
-        const mappedArr = tempArr.map((el, index) => {
-    
-            return {
-                key: el._id || null,
-                label: `Section No. ${index + 1}`,
-                children: <UpdateContentWithImageSection  {...el} url={url} />,
-            }
+                
+
+                if(tempArr.length === 0) {
+                    setIsArrEmpty(true)
+                } else {
+                    setIsArrEmpty(false)
+                }
+
+
+                const mappedArr = tempArr.map((el, index) => {
+                    return {
+                        key: el._id || null,
+                        label: `Section No. ${index + 1}`,
+                        children: <UpdateContentWithImageSection  {...el} url={url} />,
+                    }
 
         })
 
@@ -139,7 +148,7 @@ export default function ContentWithImageWrapper() {
 
             <Tabs defaultActiveKey="1" className="w-full" items={items} onChange={onChangeHandler} />
 
-            
+            {isArrEmpty && isEditMode && <Alert message="There is no Content-With-Image Section" type="warning" action={ <Button type="link" onClick={() => disableEditMode()}>I want to add a new Section😛</Button> } />}
 
             
             

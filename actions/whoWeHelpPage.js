@@ -344,7 +344,7 @@ export async function 	deleteContentWithImageSection(formData) {
 
 
 
-//Third Section
+//CREATE / UPDATE OPERATION---------------------------------------------createOurServicesSection
 export async function createOurServicesSection(formData) {
 	const { heading, shortDescription, arr,  slug } = getFormData( formData, "heading", "shortDescription", "arr", "slug" );
 
@@ -383,6 +383,44 @@ export async function createOurServicesSection(formData) {
 
 	
 }
+
+
+
+//DELETE OPERATION---------------------------------------------deleteOurServicesSection
+export async function deleteOurServicesSection(formData) {
+	const {  slug } = getFormData( formData, "slug" );
+
+	try {
+		const db = await connectDB();
+
+		
+
+		// delete section here
+		const res = await Page.updateOne({slug: slug}, {$set: {
+			OurServicesSection : null
+		}})
+
+		if (res.modifiedCount === 0) {
+			return {
+				success: false,
+			};
+		}
+
+		return {
+			success: true,
+		};
+	} catch (error) {
+		console.log(error)
+		return {
+			success: false,
+		};
+	}
+
+	
+}
+
+
+
 
 
 
@@ -451,7 +489,9 @@ export async function deleteWhyChooseUsSection(formData) {
 		const db = await connectDB();
 
 		// delete here
-		const res = await Page.deleteOne({slug: slug});
+		const res = await Page.updateOne({slug: slug}, {$set: {
+			WhyChooseUsSection : null
+		}})
 
 		if (res.modifiedCount === 0) {
 			return {

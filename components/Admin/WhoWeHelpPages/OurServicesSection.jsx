@@ -6,7 +6,7 @@ import TextArea from "antd/es/input/TextArea";
 import "react-quill/dist/quill.snow.css";
 import { FcOk } from "react-icons/fc";
 
-import { createOurServicesSection } from "@/actions/whoWeHelpPage";
+import { createOurServicesSection, deleteOurServicesSection } from "@/actions/whoWeHelpPage";
 import { FaPlus } from "react-icons/fa";
 import axios from "axios";
 
@@ -58,12 +58,17 @@ export default function OurServicesSection() {
 		const res = await createOurServicesSection(formData);
 
 		if (res.success) {
-			setUploadSuccess(res.success);
 
-			setHeading("");
-			setShortDesciption("");
+			if(isEditMode) {
+				message.success('Section Updated Successfully! 😍')
+			} else {
+				setUploadSuccess(res.success);
+				setHeading("");
+				setShortDesciption("");
+				setArr([]);
+			}
 
-			setArr([]);
+			
 		} else {
 			setIsError(true);
 		}
@@ -118,9 +123,6 @@ export default function OurServicesSection() {
 				 setShortDesciption(section.shortDescription);
 				 setArr(section.arr);
 
-
-				
-
 			
             }
         } catch(error) {
@@ -132,35 +134,34 @@ export default function OurServicesSection() {
     }
 
 
+
+
 	const dltBtnHandler = async () => {
-		// setIsError(false);
+		setIsError(false);
 
-        //  const formData = new FormData();
-		//  formData.append("slug",  url.split('/')[3]);
+         const formData = new FormData();
+		 formData.append("slug",  url.split('/')[3]);
 		
-        // try {
+        try {
             
-	    //      const res = await deleteNewPage(formData);
+	         const res = await deleteOurServicesSection(formData);
 
 
-        //     if (res.success === true) {
-		// 		message.success(`Page deleted successfully`);
-		// 		setIsEditMode(false);
-		// 	} else if (res.success === false) {
-		// 		message.error(`Failed to delete the page`);
-		// 	}
+            if (res.success === true) {
+				message.success(`Section deleted successfully`);
+				disableEditMode();
+			} else if (res.success === false) {
+				message.error(`Failed to delete the Section`);
+			}
             
 
 
-        // } catch (error) {
-		// 	message.error(`Failed to delete the page`);
-        //     console.log(error);
-        // }
+        } catch (error) {
+			message.error(`Failed to delete the Section`);
+            console.log(error);
+        }
 
 	}
-
-
-
 
 
 
@@ -173,10 +174,10 @@ export default function OurServicesSection() {
 	const disableEditMode = () => {
 		setIsEditMode(false);
 
-		// setTitle('');
-		// setMetaTitle('');
-		// setMetaDescription('');
-		// setKeywords('');
+		setHeading("");
+		setShortDesciption("");
+
+		setArr([]);
 			
 	}
 
@@ -249,8 +250,8 @@ export default function OurServicesSection() {
 					{isEditMode && <Button className="w-[10%] min-w-44 mt-4" onClick={dltBtnHandler} type="primary" danger> {" "} Delete this Page{" "} </Button>}
 				</div>
 
-				{uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )}
-				{isError && ( <Alert message="Failed to add Hero Section!" type="error" showIcon closable /> )}
+				{uploadSuccess && ( <Alert message="New Section added successfully!" type="success" showIcon closable /> )}
+				{isError && ( <Alert message="Failed to add New Section!" type="error" showIcon closable /> )}
 			</div>
 		</>
 	);

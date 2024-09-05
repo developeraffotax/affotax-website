@@ -206,8 +206,8 @@ export default function UpdateContentWithImageSection({slug: fSlug, heading: fHe
                     </div>
 				</div>
 
-				{uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )}
-				{isError && ( <Alert message="Failed to add Hero Section!" type="error" showIcon closable /> )}
+				{uploadSuccess && ( <Alert message="Section updated successfully!🥰" type="success" showIcon closable /> )}
+				{isError && ( <Alert message="Failed to update this Section!😥" type="error" showIcon closable /> )}
 			</div>
 		</>
 	);
