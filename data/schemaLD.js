@@ -25,7 +25,7 @@ export const schemaLD = {
 		streetAddress: "240 Plashet Grove",
 		addressLocality: "London",
 		postalCode: "E6 1DQ",
-		addressCountry: "United Kingdom",
+		addressCountry: "GB",
 	},
 	description:
 		"Affotax provides affordable and reliable online accounting services to small businesses and individual taxpayers across the UK.",

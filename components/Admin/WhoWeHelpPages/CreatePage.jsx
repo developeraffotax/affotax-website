@@ -42,7 +42,7 @@ export default function CreatePage() {
 		formData.append("metaDescription", metaDescription);
 		formData.append("keywords", keywords);
 
-		formData.append("slug", slug);
+		formData.append("slug", url.split('/')[3]);
 
 		const res = await createNewPage(formData);
 		localStorage?.setItem('page-url', url)
