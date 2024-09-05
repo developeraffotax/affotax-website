@@ -127,7 +127,7 @@ export async function deleteNewPage(formData) {
 
 //Hero Section
 export async function createHeroSection(formData) {
-	const { heading, imageUrl, description1, description2, btnText, btnLink, slug } = getFormData( formData, "heading", "imageUrl", "description1", "description2", "metaTitle", "metaDescription", "keywords", "btnText", "btnLink", "slug" );
+	const { heading, imageUrl, html, btnText, btnLink, slug } = getFormData( formData, "heading", "imageUrl", "html", "metaTitle", "metaDescription", "keywords", "btnText", "btnLink", "slug" );
 
 	try {
 		const db = await connectDB();
@@ -136,8 +136,7 @@ export async function createHeroSection(formData) {
 			heading,
 			slug,
 			imageUrl,
-			description1,
-			description2,
+			html,
 			btnText,
 			btnLink
 		}

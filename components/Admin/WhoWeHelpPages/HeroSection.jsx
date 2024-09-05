@@ -6,6 +6,8 @@ import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined  } from "@ant-design/icons";
 import { createHeroSection, deleteHeroSection, UploadImage } from "@/actions/whoWeHelpPage";
 import axios from "axios";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 
 
@@ -18,8 +20,9 @@ export default function HeroSection() {
 
 	const [heading, setHeading] = useState("");
     const [imageUrl, setImageUrl] = useState("");
-	const [description1, setDescription1] = useState("");
-	const [description2, setDescription2] = useState("");
+
+	const [html, setHtml] = useState("");
+
 
 	
 	
@@ -82,8 +85,7 @@ export default function HeroSection() {
 
 		formData.append("heading", heading);
 		formData.append("imageUrl", imageUrl);
-		formData.append("description1", description1);
-		formData.append("description2", description2);
+		formData.append("html", html);
 
 
 		formData.append("btnText", btnText);
@@ -96,15 +98,18 @@ export default function HeroSection() {
 		
 
 		if (res.success) {
-			setUploadSuccess(res.success);
+			if(isEditMode) {
+				message.success('Hero Section updated Successfully! Yayyy🎉')
+			} else {
+				setUploadSuccess(res.success);
 
-			setHeading("");
-			setImageUrl("");
-			setDescription1("");
-			setDescription2("");
+				setHeading("");
+				setImageUrl("");
+				setHtml()
 
-			setBtnText("");
-			setBtnLink("");
+				setBtnText("");
+				setBtnLink("");
+			}
 		} else {
 			setIsError(true);
 		}
@@ -133,8 +138,7 @@ export default function HeroSection() {
 
 				setHeading(HeroSection.heading);
 				setImageUrl(HeroSection.imageUrl);
-				setDescription1(HeroSection.description1);
-				setDescription2(HeroSection.description2);
+				setHtml(HeroSection.html);
 
 				setBtnText(HeroSection.btnText);
 				setBtnLink(HeroSection.btnLink);
@@ -171,10 +175,10 @@ export default function HeroSection() {
 
 
             if (res.success === true) {
-				message.success(`Section deleted successfully`);
-				setIsEditMode(false);
+				message.success(`Hero Section deleted successfully`);
+				disableEditMode()
 			} else if (res.success === false) {
-				message.error(`Failed to delete the section`);
+				message.error(`Failed to delete the Hero section`);
 			}
             
 
@@ -194,8 +198,7 @@ export default function HeroSection() {
 
 			setHeading("");
 			setImageUrl("");
-			setDescription1("");
-			setDescription2("");
+			setHtml("")
 
 			setBtnText("");
 			setBtnLink(""); 
@@ -204,6 +207,30 @@ export default function HeroSection() {
 
 
 
+
+
+
+	const toolbarOptions = [
+		["bold", "italic", "underline", "strike"], // toggled buttons
+		["blockquote", "code-block"],
+		["link", "image", "video", "formula"],
+
+		[{ header: 1 }, { header: 2 }], // custom button values
+		[{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
+		[{ script: "sub" }, { script: "super" }], // superscript/subscript
+		[{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+		[{ direction: "rtl" }], // text direction
+
+		// custom dropdown
+		[{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+		[{ color: [] }, { background: [] }], // dropdown with defaults from theme
+		[{ font: [] }],
+		[{ align: [] }],
+
+		["clean"],
+		// remove formatting button
+	];
 
 
     
@@ -229,11 +256,10 @@ export default function HeroSection() {
 						<label>Hero Image</label>
 						<Upload {...props}> {" "} <Button icon={<UploadOutlined />}> Click to Upload </Button>{" "} </Upload>
 
-						<label>Description 1</label>
-						<TextArea rows={4} placeholder="Write a short description here!" maxLength={800} value={description1} onChange={(e) => setDescription1(e.target.value)} />
+						<label>Description</label>
+						<ReactQuill className="w-full  " theme="snow" value={html} onChange={setHtml} modules={{ toolbar: toolbarOptions }} />
 
-						<label>Description 2</label>
-						<TextArea rows={4} placeholder="Write another short description here!" maxLength={800} value={description2} onChange={(e) => setDescription2(e.target.value)} />
+						
 					</div>
 
 					<div className="w-full flex flex-col  gap-2">

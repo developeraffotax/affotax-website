@@ -89,12 +89,12 @@ export default function ContentWithImageWrapper() {
             {
                 key: '1',
                 label: 'New Section',
-                children: <ContentWithImageSection  url={localStorage?.getItem('page-url')} />,
+                children: <ContentWithImageSection  url={ url} />,
               },
              
         ])
     }
-
+//localStorage?.getItem('page-url') ||
 	
     useEffect(() => {
         disableEditMode()
@@ -123,7 +123,7 @@ export default function ContentWithImageWrapper() {
 		}
 
 
-	}, [])
+	}, [isEditMode])
 
 
 

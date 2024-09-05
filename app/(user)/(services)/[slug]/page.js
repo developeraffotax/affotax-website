@@ -15,6 +15,10 @@ import { dataArr } from "@/data/serviceData"
 import { metaDataObject } from "@/data/metadataWhowehelp";
 import { notFound, redirect } from "next/navigation";
 import P45Form from "@/components/Services/Service/CustomServicePages/P45Form";
+import { getPageData } from "@/lib/getPage";
+import Template from "@/components/WhoWeHelp/Template";
+import Page from "@/lib/Model/Page/Page";
+import { connectDB } from "@/lib/connectDB";
 
 
 
@@ -64,7 +68,7 @@ export async function generateMetadata({ params}) {
 
 
 
-const ServicesPage = ({params}) => {
+export default async function ServicesPage({params}) {
     console.log( 'the result is',params.slug)
 
 
@@ -85,24 +89,49 @@ const ServicesPage = ({params}) => {
         case 'accountants-near-me': return render = <AccountantsNearMe />
         case 'cheap-accountants': return render = <CheapAccountants />
 
-
         case 'p60-form': return render = <P45Form />
 
 
-       
-          
-
     }
+
+
+
+    
+
+
+
 
       // SERVICES PAGES
     if (!render) {
       let serviceData = dataArr.filter((el) => el.link === params.slug);
+      console.log(serviceData)
+
       if (serviceData.length === 0) {
-        redirect('/')
+
+
+
+
+        const db = await connectDB()
+        const page = await Page.findOne({slug: params.slug});
+
+        if (!page) {
+          redirect('/')
+        }
+
+        
+
+        const jsonPage = JSON.stringify(page)
+
+        render = <Template jsonPage={jsonPage}/>
+
+       
         // notFound();
         // return <h3>THIS PAGE DOES NOT EXIST | WE'RE WORKING ON IT | THANK YOU FOR YOUR COOPERATION</h3>
+      } else {
+
+        render = <Service data={serviceData[0]}/>
       }
-       render = <Service data={serviceData[0]}/>
+       
     }
 
 
@@ -136,4 +165,3 @@ const ServicesPage = ({params}) => {
     
 }
 
-export default ServicesPage

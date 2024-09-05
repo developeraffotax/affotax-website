@@ -146,8 +146,8 @@ export default function ContentWithImageSection({ url}) {
 					<Button className="w-[10%] min-w-44 mt-4" onClick={submitHandler} type="primary" > {" "} Add Second Section{" "} </Button>
 				</div>
 
-				{uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )}
-				{isError && ( <Alert message="Failed to add Hero Section!" type="error" showIcon closable /> )}
+				{uploadSuccess && ( <Alert message="New Section is added successfully!" type="success" showIcon closable /> )}
+				{isError && ( <Alert message="Failed to add New Section!" type="error" showIcon closable /> )}
 			</div>
 		</>
 	);
