@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Alert, Button, Input, message, Select, Upload } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from "@ant-design/icons";
@@ -8,12 +8,16 @@ import { UploadOutlined } from "@ant-design/icons";
 import { createBlog, UploadImage } from "@/actions/blog";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
+import { MdOutlineContentCopy } from "react-icons/md";
 
+import { LuCopyCheck } from "react-icons/lu";
 
 
 export default function CreateBlog() {
 
 	
+
+	const [isUrlReadOnly, setIsUrlReadOnly] = useState(false);
 
 	const [uploadSuccess, setUploadSuccess] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -32,6 +36,10 @@ export default function CreateBlog() {
 
 	const [url, setUrl] = useState("");
 
+
+
+
+	const urlInpuRef = useRef();
 
 
 
@@ -137,31 +145,63 @@ export default function CreateBlog() {
 
 
 
+	const urlInputHandler = (e) => {
+		setUrl(e.target.value)
+	}
 
 	
 
+	const copyIntoClipboard = () => {
 
+		console.log(urlInpuRef.current)
+		urlInpuRef.current.select();
+
+		document?.execCommand("copy");
+		window?.getSelection().removeAllRanges();
+
+		message.success(`Url Copied!`);
+	}
 
 
 
 	return (
 		<>
 			<div className="w-full flex flex-col gap-4 justify-center items-center p-2">
+				<div className="w-full flex justify-between items-center gap-12">
+
+				<div className="flex gap-2 w-[70%] ">
 				<Input
-					className="hover:cursor-pointer    active:scale-[.99] transition-all "
+					ref={urlInpuRef}
+					className=" "
 					placeholder="The Url of the current Page"
-					readOnly
 					variant="filled"
 					value={url}
-					onClick={(e) => {
-						e.target.select();
+					readOnly={isUrlReadOnly}
+					onChange={urlInputHandler}
+					// onClick={(e) => {
+					// 	e.target.select();
 
-						document?.execCommand("copy");
-						window?.getSelection().removeAllRanges();
+					// 	document?.execCommand("copy");
+					// 	window?.getSelection().removeAllRanges();
 
-						message.success(`Url Copied!`);
-					}}
+					// 	message.success(`Url Copied!`);
+					// }}
 				/>
+
+				<button className="   p-3 flex justify-center items-center   rounded-full bg-gray-200 text-black active:scale-90 hover:scale-110 hover:bg-[#50C878] hover:text-white transition-all " onClick={copyIntoClipboard}  > <MdOutlineContentCopy className="text-lg"/> </button>
+				</div>
+
+	
+
+
+				<div className=" flex gap-2 w-[30%] justify-start ">
+				<Button style={{ backgroundColor: `${!isUrlReadOnly ? '#50C878' : '#E5E4E2'}`  }}  onClick={() => setIsUrlReadOnly(false)} type="primary"  > Custom </Button>
+				<Button style={{ backgroundColor: `${isUrlReadOnly ? '#50C878' : '#E5E4E2'}`  }}  onClick={() => setIsUrlReadOnly(true)} type="primary" > Automatic </Button>
+				</div>
+
+
+				</div>
+
 
 				<div className="w-full flex gap-8 justify-center items-start ">
 					<div className="w-full flex flex-col gap-2 ">
@@ -172,7 +212,8 @@ export default function CreateBlog() {
 							onChange={(e) => {
 								setTitle(e.target.value);
 
-								const slug = e.target.value
+								if(isUrlReadOnly) {
+									const slug = e.target.value
 									.toLocaleLowerCase()
 									.trim()
 									.replaceAll(" ", "-")
@@ -181,6 +222,7 @@ export default function CreateBlog() {
 								const url =
 									window?.location?.origin + "/blog/" + slug;
 								setUrl(url);
+								}
 							}}
 						/>
 
