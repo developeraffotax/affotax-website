@@ -1,6 +1,15 @@
 
-export default function page() {
+
+
+import ViewPages from "@/components/Admin/WhoWeHelpPages/ViewPages";
+
+
+
+
+
+
+export default function ViewPagesPage() {
     return (
-        <h2>heheheh</h2>
+        <ViewPages />
     )
 }

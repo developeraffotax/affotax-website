@@ -8,6 +8,9 @@ const CreatePage = dynamic(
 	{ ssr: false }
 );
 
-export default function HeroSectionPage() {
-	return <CreatePage />;
+export default function Create({searchParams }) {
+
+	console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>' + searchParams.page )
+
+	return <CreatePage pageSlug={searchParams.page || null} />;
 }

@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 
-export default function CreatePage() {
+export default function CreatePage({pageSlug}) {
 
 	const [isEditMode, setIsEditMode] = useState(false);
 
@@ -24,11 +24,28 @@ export default function CreatePage() {
 	const [keywords, setKeywords] = useState([]);
 
 	const [slug, setSlug] = useState("");
-	const [url, setUrl] = useState("");
+	const [url, setUrl] = useState(() => {
+		if(!pageSlug) {
+			return "";
+		}
+		return window?.location?.origin + "/" + pageSlug;
+	});
 
 	useEffect(() => {
-		setUrl(window?.location?.origin + "/");
+		if (pageSlug) {
+			
+			getPageData();
+			localStorage?.setItem('page-url', url)
+			console.log(url)
+
+		} else {
+			setUrl(window?.location?.origin + "/");
+		}
 	}, []);
+
+	// useEffect(() => {
+	// 	
+	// }, [url])
 
 	//Form Submit Handler
 	const submitHandler = async () => {
@@ -75,9 +92,17 @@ export default function CreatePage() {
 
 
         try {
-            const res = await axios.get(`/api/pages/${ url.split('/')[3]}`);
-			
 
+			// let res;
+
+			// if (pageSlug) {
+			// 	 res = await axios.get(`/api/pages/${pageSlug}`);
+			// 	 setUrl(window?.location?.origin + "/" + pageSlug);
+			// } else {
+				
+			// }
+			
+			let res = await axios.get(`/api/pages/${ url.split('/')[3]}`);
 			
             if(res.status === 200) {
                 setIsEditMode(true);
