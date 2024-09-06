@@ -24,7 +24,7 @@ export async function submitPayment(sourceId, {buyer_email_address, amount }) {
       idempotencyKey: randomUUID(),
       sourceId,
       amountMoney: {
-        amount: 300,
+        amount: amount,
         currency: 'GBP'
       },
       buyer_email_address: buyer_email_address,
