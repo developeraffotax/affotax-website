@@ -1,6 +1,6 @@
 'use client'
 
-import { Space, Spin, Table } from "antd";
+import { message, Modal, Space, Spin, Table } from "antd";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -8,7 +8,8 @@ import { AiOutlineEye } from "react-icons/ai";
 import { BiEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { LoadingOutlined } from '@ant-design/icons';
-
+import { deleteNewPage } from "@/actions/whoWeHelpPage";
+import { CgDanger } from "react-icons/cg";
 
 
 
@@ -16,6 +17,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 
 export default function ViewPages() {
 
+    const [open, setOpen] = useState(false);
 
     const [isLoading, setIsLoading] = useState(false);
     const [data, setData] = useState([]);
@@ -58,25 +60,79 @@ export default function ViewPages() {
 
 
 
-    const columns = [
-        // {
-        //     title: 'Sr.',
-        //     dataIndex: 'key',
-        //     key: 'key',
-        //     // render: (text) => <strong>{text}</strong>,
+
+    const deletePage = async (slug) => {
+
+        setOpen(false);
+
+        const formData = new FormData();
+        formData.append('slug', slug);
+
+        try {
             
-        //   },
+            setIsLoading(true)
+            const isDeleted = await deleteNewPage(formData);
+
+            if (!isDeleted) {
+                message.error('Error occured while deleting data!')
+            }
+
+            setData((prev) => {
+                return prev.filter(el => el.slug !== slug) 
+            })
+
+            message.success('The Page has been deleted successfully!')
+            
+        } catch (error) {
+            message.error('Error occured while deleting data!')
+        } finally {
+            setIsLoading(false);
+            
+        }
+        
+    }   
+
+
+
+    const getRowClassName = (record, index) => {
+        return index % 2 === 0 ? 'row-even' : 'row-odd';
+      };
+
+
+
+    
+    const showModal = () => {
+        setOpen(true);
+      };
+
+
+      const handleCancel = () => {
+        setOpen(false);
+      };
+
+
+
+    const columns = [
+        {
+            title: 'Sr.',
+            width: '6%',
+            key: 'serial-number',
+            render: (text, record, index) => <strong className="flex font-poppins items-center justify-center h-full w-full bg-orange-100 text-orange-800 font-semibold  rounded-xl p-2" >{index + 1}</strong>,
+            
+          },
         {
           title: 'Page Title',
           dataIndex: 'title',
           key: 'title',
-          render: (text) => <a>{text}</a>,
+          render: (text) => <p className="font-poppins   ">{text}</p>,
           
         },
         {
           title: 'Slug',
           dataIndex: 'slug',
           key: 'slug',
+          
+          render: (text) => <p className="font-poppins  bg-orange-100 text-orange-800 px-2 py-1 rounded-md  ">/{text}</p>,
           
         },
         
@@ -85,8 +141,20 @@ export default function ViewPages() {
           title: 'Action',
           key: 'action',
           render: (_, record) => {
-                console.log(record)
-            return <Space size="middle"> <Link href={`/${record.slug}`} target='_blank' ><AiOutlineEye className='text-sky-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></Link> <Link href={`/admin/create-page/create?page=${record.slug}`}><BiEdit className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all'/></Link> <Link href={`/admin/view-blogs/delete/${record._id}`}><RiDeleteBin6Line className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></Link> </Space>
+                console.log(_)
+            return <Space size="middle"> <Link href={`/${record.slug}`} target='_blank' ><AiOutlineEye className='text-sky-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></Link> <Link href={`/admin/create-page/create?page=${record.slug}`}><BiEdit className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all'/></Link> <button onClick={showModal}><RiDeleteBin6Line className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></button> <Modal
+            open={open}
+            title="Are you sure?"
+            onOk={() => deletePage(record.slug)}
+            okType='danger'
+            okText='Delete'
+            onCancel={handleCancel}
+
+          >
+            <p className="text-md ">Are you sure you want to delete this page? <br />     <span className="text-red-500 text-sm  flex justify-start items-center gap-1 ">
+            <CgDanger className="scale-125" /> Caution! This action is not reversible!</span></p>
+            
+          </Modal> </Space>
           },
         },
       ];
@@ -94,7 +162,9 @@ export default function ViewPages() {
 
 
     return (
-        <Table columns={columns} dataSource={data} size='large' showHeader loading={isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" />}  />
+       <>
+        <Table columns={columns}   dataSource={data} size='large' showHeader loading={isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" />}  />
+        </>
     )
 } 
 

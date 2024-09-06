@@ -1,10 +1,17 @@
+import dynamic from "next/dynamic";
 
 
 
-import ViewPages from "@/components/Admin/WhoWeHelpPages/ViewPages";
 
 
 
+
+const ViewPages = dynamic(
+    () => {
+      return import("@/components/Admin/WhoWeHelpPages/ViewPages");
+    },
+    { ssr: false }
+  );
 
 
 
