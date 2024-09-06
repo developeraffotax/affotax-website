@@ -11,7 +11,7 @@ BigInt.prototype.toJSON = function () {
 
 const { paymentsApi } = new Client({
   accessToken: process.env.SQUARE_ACCESS_TOKEN,
-  environment: "sandbox",
+  environment: "production",
 });
 
 
@@ -24,7 +24,7 @@ export async function submitPayment(sourceId, {buyer_email_address, amount }) {
       idempotencyKey: randomUUID(),
       sourceId,
       amountMoney: {
-        amount: amount,
+        amount: 300,
         currency: 'GBP'
       },
       buyer_email_address: buyer_email_address,
