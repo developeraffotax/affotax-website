@@ -195,6 +195,65 @@ export default function RootLayout({ children }) {
               label: 'View Pages (Who We Help)' ,
               onClick		: () => router.push('/admin/view-pages')
             }]
+          },
+
+
+
+
+
+
+
+
+
+          {
+            key: `service-page`,
+            
+            icon: React.createElement(FormOutlined),
+            label: `Service Page`,
+            children: [ 
+              {
+              key: 'service-section-create',
+              label: 'Create' ,
+              onClick		: () => {
+                setDefaultSelectedKeys(['service-section-create'])
+            setDefaultOpenKeys(['service-page'])
+
+                router.push('/admin/service-page/create')
+              }
+
+
+              
+            },
+
+
+
+            {
+              key: 'service-section-view',
+              label: 'View' ,
+              onClick		: () => {
+                setDefaultSelectedKeys(['service-section-view'])
+            setDefaultOpenKeys(['service-page'])
+
+                router.push('/admin/service-page/view')
+              }
+
+
+              
+            },
+
+
+
+
+
+
+          
+            // {
+            //   key: 'sub4',
+            //   label: 'View Pages (Who We Help)' ,
+            //   onClick		: () => router.push('/admin/view-pages')
+            // }
+          
+          ]
           }
     ]
 
@@ -233,7 +292,7 @@ export default function RootLayout({ children }) {
             <Layout className='w-[100vw]   '   >
               
       <Header
-        
+
         className=''
         style={{
           display: 'flex',
@@ -269,6 +328,7 @@ export default function RootLayout({ children }) {
 
       </Header>
       <Content
+      
         className=' '
         style={{
           padding: '0 48px',
