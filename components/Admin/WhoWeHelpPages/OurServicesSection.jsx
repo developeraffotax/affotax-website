@@ -9,8 +9,12 @@ import { FcOk } from "react-icons/fc";
 import { createOurServicesSection, deleteOurServicesSection } from "@/actions/whoWeHelpPage";
 import { FaPlus } from "react-icons/fa";
 import axios from "axios";
+import { BiEdit } from "react-icons/bi";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 export default function OurServicesSection() {
+
+	const [listEditIndex, setListEditIndex] = useState('')
 
 	const [isEditMode, setIsEditMode] = useState(false);
 
@@ -84,15 +88,39 @@ export default function OurServicesSection() {
 			return;
 		}
 
-		setArr((prev) => {
-			return [
-				...prev,
-				{
-					title,
-					content,
-				},
-			];
-		});
+		if (listEditIndex) {
+
+			const index = +listEditIndex;
+
+			
+
+			setArr((prev) => {
+				const newEditedArr = [...prev];
+
+				newEditedArr[index].title = title;
+				newEditedArr[index].content = content;
+
+				return newEditedArr;
+			})
+
+
+			setListEditIndex('')
+
+
+
+		} else {
+			setArr((prev) => {
+				return [
+					...prev,
+					{
+						title,
+						content,
+					},
+				];
+			});
+		}
+
+		
 
 		setTitle("");
 		setContent("");
@@ -179,6 +207,42 @@ export default function OurServicesSection() {
 
 		setArr([]);
 			
+		
+	}
+
+
+
+
+
+
+
+
+
+
+	const listEditHandler = (editIndex) => {
+
+		console.log(editIndex)
+
+		setListEditIndex(editIndex.toString())
+
+		setTitle(arr[editIndex]?.title);
+		setContent(arr[editIndex]?.content);
+
+	}
+
+
+	const listDltHandler = (dltIndex) => {
+
+		
+
+		setArr((prev) => {
+			return prev.filter((el, index) => {
+				return index !== dltIndex;
+			})
+
+			
+		})
+
 	}
 
 
@@ -229,16 +293,20 @@ export default function OurServicesSection() {
 						<label className="text-center w-full font-semibold text-lg font-poppins mb-4 bg-gray-50 rounded-md shadow-sm shadow-black/10 py-2 flex justify-center items-center gap-1 "> {" "} Services List <FcOk />{" "} </label>
 						<List className="w-full justify-center items-center" grid={{ gutter: 16, column: 2, }} pagination={{ pageSize: 6, }} itemLayout="horizontal" dataSource={arr}
 							renderItem={(item, index) => (
-								<List.Item className=" ">
+								<List.Item >
+									<div className="flex justify-center items-center gap-2 ">
 									<List.Item.Meta
 										avatar={
 											<p className="w-6 h-6 rounded-full text-center bg-orange-400 text-white font-semibold ">
 												{index + 1}
 											</p>
 										}
-										title={item.title}
+										title={<p className="flex w-full justify-between gap-2">{item.title} <span className="mt-2 w-[30%] flex items-center justify-start gap-2"> <BiEdit onClick={() => listEditHandler(index)} className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer ' /> <RiDeleteBin6Line onClick={() => listDltHandler(index)} className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer' /> </span></p>}
 										description={item.content}
 									/>
+									
+									
+									</div>
 								</List.Item>
 							)}
 						/>
@@ -246,7 +314,7 @@ export default function OurServicesSection() {
 				</div>
 
 				<div className="w-full flex flex-row items-center justify-between ">
-					<Button className="w-[16%] min-w-56 mt-4" onClick={submitHandler} type="primary" disabled={arr.length > 0 ? false : true} > {isEditMode ? 'Update Our-Services-Section' : 'Add Our-Services-Section'} </Button>
+					<Button className="w-[16%] min-w-56 mt-4" onClick={submitHandler} type="primary" disabled={arr?.length > 0 ? false : true} > {isEditMode ? 'Update Our-Services-Section' : 'Add Our-Services-Section'} </Button>
 					{isEditMode && <Button className="w-[10%] min-w-44 mt-4" onClick={dltBtnHandler} type="primary" danger> {" "} Delete this Page{" "} </Button>}
 				</div>
 
