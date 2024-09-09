@@ -76,8 +76,9 @@ export default function ViewBlogs({blogsData, refresh}) {
         {
             title: 'Sr.',
             dataIndex: 'key',
+            width: '6%',
             key: 'key',
-            // render: (text) => <strong>{text}</strong>,
+            render: (text, record, index) => <strong className="flex font-poppins items-center justify-center h-full w-full bg-orange-100 text-orange-800 font-semibold  rounded-xl p-2" >{text}</strong>,
             
           },
         {

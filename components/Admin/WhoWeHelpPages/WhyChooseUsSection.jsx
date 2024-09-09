@@ -11,8 +11,13 @@ import { FcOk } from "react-icons/fc";
 import { createOurServicesSection, createWhyChooseUsSection, deleteWhyChooseUsSection, UploadImage } from "@/actions/whoWeHelpPage";
 import { FaPlus } from "react-icons/fa";
 import axios from "axios";
+import { BiEdit } from "react-icons/bi";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 export default function WhyChooseUsSection() {
+
+
+	const [listEditIndex, setListEditIndex] = useState('')
 
 	const [isEditMode, setIsEditMode] = useState(false);
 
@@ -75,17 +80,56 @@ export default function WhyChooseUsSection() {
 		if (!title || !content) {
 			return;
 		}
-		console.log(imageUrl);
-		setArr((prev) => {
-			return [
-				...prev,
-				{
-					title,
-					content,
-					imageUrl,
-				},
-			];
-		});
+
+
+
+
+		if (listEditIndex) {
+			const index = +listEditIndex;
+
+			
+
+			setArr((prev) => {
+				const newEditedArr = [...prev];
+
+				newEditedArr[index].title = title;
+				newEditedArr[index].content = content;
+				newEditedArr[index].imageUrl = imageUrl;
+
+				return newEditedArr;
+			})
+
+
+			setListEditIndex('');
+
+
+		} else {
+
+
+			setArr((prev) => {
+				return [
+					...prev,
+					{
+						title,
+						content,
+						imageUrl,
+					},
+				];
+			});
+
+
+		}
+
+
+
+
+		
+
+
+
+
+		
+		
 
 		setTitle("");
 		setContent("");
@@ -208,6 +252,37 @@ export default function WhyChooseUsSection() {
 
 
 
+   const listEditHandler = (editIndex) => {
+
+	console.log(arr[editIndex])
+
+	setListEditIndex(editIndex.toString())
+
+	setTitle(arr[editIndex]?.title);
+	setContent(arr[editIndex]?.content);
+	setImageUrl(arr[editIndex]?.imageUrl);
+
+}
+
+
+const listDltHandler = (dltIndex) => {
+
+	
+
+	setArr((prev) => {
+		return prev.filter((el, index) => {
+			return index !== dltIndex;
+		})
+
+		
+	})
+
+}
+
+
+
+
+
 
 
 
@@ -279,6 +354,7 @@ export default function WhyChooseUsSection() {
 										<p className="text-sm max-w-52">
 											{item.content}
 										</p>
+										<span className="mt-2 w-[30%] flex items-center justify-start gap-2"> <BiEdit onClick={() => listEditHandler(index)} className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer ' /> <RiDeleteBin6Line onClick={() => listDltHandler(index)} className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer' /> </span>
 									</li>
 								</List.Item>
 							)}
