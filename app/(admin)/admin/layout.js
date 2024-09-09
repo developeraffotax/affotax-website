@@ -230,7 +230,7 @@ export default function RootLayout({ children }) {
       
 	return (
 		
-            <Layout className='w-[100vw] h-[100vh]'   >
+            <Layout className='w-[100vw]   '   >
               
       <Header
         
@@ -269,7 +269,7 @@ export default function RootLayout({ children }) {
 
       </Header>
       <Content
-        className='h-full '
+        className=' '
         style={{
           padding: '0 48px',
         }}
@@ -328,7 +328,7 @@ export default function RootLayout({ children }) {
             />
           </Sider>
           <Content
-          className='h-full'
+          className=''
             style={{
               padding: '0 24px',
               minHeight: 280,
@@ -337,18 +337,39 @@ export default function RootLayout({ children }) {
            {children}
           </Content>
         </Layout>
+
+        
+
+
       </Content>
+      
+
       <Footer
         style={{
           zIndex: 999,
           textAlign: 'center',
+          width: '100%',
+          // position: 'fixed',
+          // bottom: 0,
+          // left: 0,
+          // height: '10vh'
+         
+          
         }}
       >
+        <section className='flex justify-between items-center px-2 font-poppins '>
+        <div>
         {!isSider && <RiMenuUnfoldLine className='scale-125 text-black/75  hover:text-orange-400 hover:scale-150 transition-all cursor-pointer border  rounded-sm shadow-sm shadow-black/20' onClick={() => setIsSider(true)}/>}
         {isSider && <RiMenuUnfold2Line className='scale-125 text-black/75  hover:text-orange-400 hover:scale-150 transition-all cursor-pointer border  rounded-sm shadow-sm shadow-black/20' onClick={() => setIsSider(false)}/>}
+        </div>
         
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
+        <Link href={'https://affotax.com'} target='_blank'  className='text-black hover:text-orange-400 ml-56'><span className='font-semibold '>Affotax ©{new Date().getFullYear()} </span></Link>
+
+        {/* <Link  href={'https://iqwebdev.netlify.app'} target='_blank' className='text-black hover:text-orange-400'><span>Made with 🧡 by <b>Ihtisham Ul Haq</b></span></Link> */}
+        </section>
       </Footer>
+
+
     </Layout>
 			
 	);
