@@ -27,7 +27,7 @@ export async function createBlog(formData) {
 		});
 
 		const blogDoc = await blog.save();
-		revalidatePath('/')
+		revalidatePath('/blogs');
 		
 		return {
 			success: true,
@@ -127,6 +127,6 @@ export async function updateBlog(formData) {
 	}
 
 
-	revalidatePath('/')
+	revalidatePath('/blogs')
 	redirect('/admin/view-blogs')
 }

@@ -5,17 +5,17 @@ import { Alert, Avatar, Button, Divider, Input, List, message, Select, } from "a
 import TextArea from "antd/es/input/TextArea";
 
 import axios from "axios";
-import ReactQuill, { Quill } from "react-quill";
+import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEdit } from "react-icons/bi";
+import { MdDownloadDone } from "react-icons/md";
 
 
-import QuillResizeImage from 'quill-resize-image';
-
-Quill.register("modules/resize", QuillResizeImage);
 
 export default function CreatePage({ pageSlug }) {
+
+
 	// Pricing Section State
 	const [priceTitle, setPriceTitle] = useState("");
 	const [priceContent, setPriceContent] = useState("");
@@ -23,10 +23,13 @@ export default function CreatePage({ pageSlug }) {
 
 
 
+	const [editingValue, setEditingValue] = useState("");
 	const [pkgEditIndex, setPkgEditIndex] = useState("");
+
 	const [packageIncludes, setPackageIncludes] = useState("");
 	const [packageIncludesArr, setPackageIncludesArr] = useState([]);
 
+	const [pricingEditIndex, setPricingEditIndex] = useState('');
 	const [pricesArr, setPricesArr] = useState([]);
 
 
@@ -244,16 +247,45 @@ export default function CreatePage({ pageSlug }) {
 			return;
 		}
 
-		const newPricing = {
-			priceTitle: priceTitle,
-			priceContent: priceContent,
-			price: price,
-			packageIncludesArr: packageIncludesArr,
-		};
 
-		const newPricesArr = [...pricesArr, newPricing];
+		if (pricingEditIndex) {
+			
+			const index = parseInt(pricingEditIndex)
 
-		setPricesArr(newPricesArr);
+			setPricesArr((prev) => {
+				const newArr = [...prev];
+
+				newArr[index].priceTitle = priceTitle;
+				newArr[index].priceContent = priceContent;
+				newArr[index].price = price;
+				newArr[index].packageIncludesArr = packageIncludesArr;
+
+				return newArr;
+			})
+
+			setPricingEditIndex('');
+
+
+
+
+		} else {
+
+
+			const newPricing = {
+				priceTitle: priceTitle,
+				priceContent: priceContent,
+				price: price,
+				packageIncludesArr: packageIncludesArr,
+			};
+	
+			const newPricesArr = [...pricesArr, newPricing];
+	
+			setPricesArr(newPricesArr);
+
+			
+		}
+
+		
 
 		setPriceTitle("");
 		setPriceContent("");
@@ -282,10 +314,34 @@ export default function CreatePage({ pageSlug }) {
 		}
 	
 	
-		const packageIncludesEditHandler = (item, index) => {
+		const packageIncludesEditHandler = (el, index) => {
+			
+			setEditingValue(el)
+
+
+			setPkgEditIndex(index.toString());
+
+
+		}
+
+
+
+		const packageIncludesSubmitHandler = () => {
+
 			
 
-			setPkgEditIndex
+			const newArr = [...packageIncludesArr]
+
+			newArr[parseInt(pkgEditIndex)] = editingValue
+
+
+			setPackageIncludesArr(newArr)
+
+			setPkgEditIndex('');
+
+			//setPkgEditIndex(index.toString());
+
+
 		}
 	
 
@@ -312,7 +368,19 @@ export default function CreatePage({ pageSlug }) {
 	}
 
 
-	const pricingSectionEditHandler = () => {
+	const pricingSectionEditHandler = (item, index) => {
+
+		setPricingEditIndex(index.toString());
+
+		const {priceTitle, priceContent, price, packageIncludesArr} = item;
+
+		setPriceTitle(priceTitle)
+		setPriceContent(priceContent)
+		setPrice(price)
+		setPackageIncludesArr(packageIncludesArr)
+
+
+		
 
 	}
 
@@ -429,11 +497,7 @@ export default function CreatePage({ pageSlug }) {
 						<Input className=" " placeholder="Title of the Page" value={title} onChange={(e) => { setTitle(e.target.value); }} />
 
 						<label>Top Content</label>
-						<ReactQuill className="  " theme="snow" value={html} onChange={setHtml}  modules={{ toolbar: toolbarOptions, resize: {
-							locale: {
-								center: "center",
-							  },
-						} }} />
+						<ReactQuill className="  " theme="snow" value={html} onChange={setHtml}  modules={{ toolbar: toolbarOptions}} />
 					</div>
 
 					<div className="w-[30%] flex flex-col  gap-2">
@@ -472,10 +536,12 @@ export default function CreatePage({ pageSlug }) {
 							{packageIncludesArr.map((el, index) => {
 								return (
 									<li key={index + "package-inc-arr"} className="">
-										{el}  
+										{/* {el} */}
+
+										{parseInt(pkgEditIndex) === index ? <Input value={editingValue} onChange={(e) => setEditingValue(e.target.value)} /> : <p>{el}</p> }  
 
 										<div className="flex justify-center items-center gap-2">
-											<BiEdit onClick={() => packageIncludesEditHandler(item, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />
+											{parseInt(pkgEditIndex) === index ? <MdDownloadDone  onClick={() => packageIncludesSubmitHandler() } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " /> : <BiEdit onClick={() => packageIncludesEditHandler(el, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />}
 											<RiDeleteBin6Line onClick={() => packageIncludesDltHandler(index) } className="text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer" />
 										</div>
 									</li>

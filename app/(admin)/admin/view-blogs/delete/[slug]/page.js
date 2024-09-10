@@ -31,6 +31,6 @@ export default async function DeleteBlog({ params }) {
 		);
 	}
 
-	revalidatePath('/')
+	revalidatePath('/blogs')
 	redirect("/admin/view-blogs?refresh=true");
 }
