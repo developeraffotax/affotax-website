@@ -23,12 +23,14 @@ export default async function DeleteBlog({ params }) {
 		const db = await connectDB();
 		const response = await Blog.deleteOne({ _id: params.slug });
 
+		
+
 	} catch (error) {
 		return (
 			<Result status="success" title="Failed to delete the blog! Try again later" subTitle={error?.message || "Unknown Error Occured"} extra={[ <Link key={uuidv4()} href="/admin/view-blogs"> <Button type="primary">Go Back</Button> </Link>, ]} />
 		);
 	}
 
-	revalidatePath("/admin/view-blogs");
+	revalidatePath('/')
 	redirect("/admin/view-blogs?refresh=true");
 }

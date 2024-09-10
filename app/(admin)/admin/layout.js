@@ -205,56 +205,51 @@ export default function RootLayout({ children }) {
 
 
 
-          {
-            key: `service-page`,
+          // {
+          //   key: `service-page`,
             
-            icon: React.createElement(FormOutlined),
-            label: `Service Page`,
-            children: [ 
-              {
-              key: 'service-section-create',
-              label: 'Create' ,
-              onClick		: () => {
-                setDefaultSelectedKeys(['service-section-create'])
-            setDefaultOpenKeys(['service-page'])
+          //   icon: React.createElement(FormOutlined),
+          //   label: `Service Page`,
+          //   children: [ 
+          //     {
+          //     key: 'service-section-create',
+          //     label: 'Create' ,
+          //     onClick		: () => {
+          //       setDefaultSelectedKeys(['service-section-create'])
+          //   setDefaultOpenKeys(['service-page'])
 
-                router.push('/admin/service-page/create')
-              }
-
-
-              
-            },
-
-
-
-            {
-              key: 'service-section-view',
-              label: 'View' ,
-              onClick		: () => {
-                setDefaultSelectedKeys(['service-section-view'])
-            setDefaultOpenKeys(['service-page'])
-
-                router.push('/admin/service-page/view')
-              }
+          //       router.push('/admin/service-page/create')
+          //     }
 
 
               
-            },
+          //   },
 
 
 
+          //   {
+          //     key: 'service-section-view',
+          //     label: 'View' ,
+          //     onClick		: () => {
+          //       setDefaultSelectedKeys(['service-section-view'])
+          //   setDefaultOpenKeys(['service-page'])
+
+          //       router.push('/admin/service-page/view')
+          //     }
 
 
+              
+          //   },
 
           
-            // {
-            //   key: 'sub4',
-            //   label: 'View Pages (Who We Help)' ,
-            //   onClick		: () => router.push('/admin/view-pages')
-            // }
-          
-          ]
-          }
+          // ]
+          // }
+
+
+
+
+
+
     ]
 
 

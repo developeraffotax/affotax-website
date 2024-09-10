@@ -1,16 +1,20 @@
 "use client";
 
+
+
 import { useState, useEffect, useRef } from "react";
 import { Alert, Button, Input, message, Select, Upload } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from "@ant-design/icons";
 
 import { createBlog, UploadImage } from "@/actions/blog";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import { MdOutlineContentCopy } from "react-icons/md";
 
-import { LuCopyCheck } from "react-icons/lu";
+import { MdOutlineContentCopy } from "react-icons/md";
+import { CustomEditor } from "@/lib/Editor";
+
+
+
+
 
 
 export default function CreateBlog() {
@@ -40,9 +44,12 @@ export default function CreateBlog() {
 
 
 	const urlInpuRef = useRef();
+	const quillRef = useRef();
+	const joditRef = useRef();
 
 
-
+ 
+		
 
 
 	useEffect(() => {
@@ -119,27 +126,8 @@ export default function CreateBlog() {
 
 
 
-	const toolbarOptions = [
-		["bold", "italic", "underline", "strike"], // toggled buttons
-		["blockquote", "code-block"],
-		["link", "image", "video", "formula"],
 
-		[{ header: 1 }, { header: 2 }], // custom button values
-		[{ list: "ordered" }, { list: "bullet" }, { list: "check" }],
-		[{ script: "sub" }, { script: "super" }], // superscript/subscript
-		[{ indent: "-1" }, { indent: "+1" }], // outdent/indent
-		[{ direction: "rtl" }], // text direction
-
-		// custom dropdown
-		[{ header: [1, 2, 3, 4, 5, 6, false] }],
-
-		[{ color: [] }, { background: [] }], // dropdown with defaults from theme
-		[{ font: [] }],
-		[{ align: [] }],
-
-		["clean"],
-		// remove formatting button
-	];
+	 
 
 
 
@@ -161,6 +149,11 @@ export default function CreateBlog() {
 
 		message.success(`Url Copied!`);
 	}
+
+
+
+
+
 
 
 
@@ -247,7 +240,11 @@ export default function CreateBlog() {
 
 				<div className="w-full flex flex-col  gap-2">
 					<label>Content for the blog</label>
-					<ReactQuill className="w-full  " theme="snow" value={value} onChange={setValue} modules={{ toolbar: toolbarOptions }} />
+					
+					<CustomEditor value={value} setValue={setValue} />
+					
+
+
 					<Button className="w-[10%] mt-4" onClick={submitHandler} type="primary" > Add Post </Button>
 				</div>
 

@@ -23,6 +23,7 @@
     "next": "14.2.3",
     "nextjs-toploader": "^1.6.12",
     "nodemailer": "^6.9.13",
+    "quill-resize-image": "^1.0.5",
     "react": "^18",
     "react-accessible-accordion": "^5.0.0",
     "react-dom": "^18",

@@ -10,18 +10,8 @@ import { revalidatePath } from "next/cache";
 
 //CREATE OPERATION
 export async function createBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords } =
-		getFormData(
-			formData,
-			"title",
-			"description",
-			"metaTitle",
-			"metaDescription",
-			"imgUrl",
-			"content",
-			"keywords"
-		);
-console.log(keywords)
+	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "keywords" );
+
 	try {
 		const db = await connectDB();
 
@@ -37,7 +27,8 @@ console.log(keywords)
 		});
 
 		const blogDoc = await blog.save();
-		revalidatePath('/admin/view-blogs')
+		revalidatePath('/')
+		
 		return {
 			success: true,
 		};
@@ -136,6 +127,6 @@ export async function updateBlog(formData) {
 	}
 
 
-	revalidatePath('/admin/view-blogs');
+	revalidatePath('/')
 	redirect('/admin/view-blogs')
 }

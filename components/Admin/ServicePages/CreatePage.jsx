@@ -5,11 +5,15 @@ import { Alert, Avatar, Button, Divider, Input, List, message, Select, } from "a
 import TextArea from "antd/es/input/TextArea";
 
 import axios from "axios";
-import ReactQuill from "react-quill";
-import { createNewServicePage } from "@/actions/servicePage";
+import ReactQuill, { Quill } from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEdit } from "react-icons/bi";
+
+
+import QuillResizeImage from 'quill-resize-image';
+
+Quill.register("modules/resize", QuillResizeImage);
 
 export default function CreatePage({ pageSlug }) {
 	// Pricing Section State
@@ -17,6 +21,9 @@ export default function CreatePage({ pageSlug }) {
 	const [priceContent, setPriceContent] = useState("");
 	const [price, setPrice] = useState("");
 
+
+
+	const [pkgEditIndex, setPkgEditIndex] = useState("");
 	const [packageIncludes, setPackageIncludes] = useState("");
 	const [packageIncludesArr, setPackageIncludesArr] = useState([]);
 
@@ -49,7 +56,7 @@ export default function CreatePage({ pageSlug }) {
 	// Page State
 	const [isEditMode, setIsEditMode] = useState(false);
 
-	const [isError, setIsError] = useState(false);
+	const [errorMsg, setErrorMsg] = useState('');
 
 	const [title, setTitle] = useState("");
 	const [html, setHtml] = useState("");
@@ -87,43 +94,61 @@ export default function CreatePage({ pageSlug }) {
 
 
 	const submitHandler = async () => {
-		setIsError(false);
-
-		const formData = new FormData();
-
-		formData.append("metaTitle", metaTitle);
-		formData.append("metaDescription", metaDescription);
-		formData.append("keywords", keywords);
-
-		formData.append("link", url.split("/")[3]);
-		formData.append("title", title);
-		formData.append("content", html);
-
-		formData.append("pricingSection", pricesArr);
-		formData.append("whyChooseSection", {
-            heading: heading2,
-            html: html2
-        });
-		formData.append("faqSection", faqArr);
+		
 
 
 
-		const res = await createNewServicePage(formData);
+
+
+		const servicePage = {
+			metaTitle: metaTitle,
+			metaDescription: metaDescription,
+			keywords: keywords,
+
+			link: url.split("/")[3],
+			title: title,
+			content: html,
+
+			pricingSection: pricesArr,
+			whyChooseSection: { heading: heading2, html: html2 },
+			faqSection: faqArr
+
+		}
+
+
+
+		const res = await axios.post('/api/service-page/post-page', servicePage);
+
+		console.log(res)
+
+
+
+
+		
 		//localStorage?.setItem('service-page-url', url)
 
+		
 
+		if (res.status === 201) {
 
-		if (res.success) {
 			if (!isEditMode) {
-				setTitle("");
-				setMetaTitle("");
-				setMetaDescription();
+				setMetaTitle('');
+				setMetaDescription('');
 				setKeywords([]);
+
+				setTitle('');
+				setHtml('');
+
+				setPricesArr([]);
+				setHeading2('');
+				setHtml2('');
+				setFaqArr([])
+
 			}
 
 			message.success( `${isEditMode ? "Page Updated" : "New Page Added Successfully"}` );
 		} else {
-			setIsError(true);
+			message.error(`${isEditMode ? "Failed to update page!" : "Failed to add new page!"}`);
 		}
 	};
 
@@ -204,6 +229,8 @@ export default function CreatePage({ pageSlug }) {
 		setPackageIncludesArr((prev) => {
 			return [...prev, packageIncludes];
 		});
+
+		setPackageIncludes('');
 	};
 
 
@@ -234,6 +261,72 @@ export default function CreatePage({ pageSlug }) {
 		setPackageIncludes("");
 		setPackageIncludesArr([]);
 	};
+
+
+
+
+
+
+
+	    // PACKAGE INCLUDE EDIT HANDLERS
+
+
+
+		const packageIncludesDltHandler = (index) => {
+
+			setPackageIncludesArr((prev) => {
+				return prev.filter((el, i) => i !== index)
+			})
+	
+	
+		}
+	
+	
+		const packageIncludesEditHandler = (item, index) => {
+			
+
+			setPkgEditIndex
+		}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+    // PRICING SECTION EDIT HANDLERS
+
+	const pricingSectionDltHandler = (index) => {
+
+		setPricesArr((prev) => {
+			return prev.filter((el, i) => i !== index)
+		})
+
+
+	}
+
+
+	const pricingSectionEditHandler = () => {
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -336,7 +429,11 @@ export default function CreatePage({ pageSlug }) {
 						<Input className=" " placeholder="Title of the Page" value={title} onChange={(e) => { setTitle(e.target.value); }} />
 
 						<label>Top Content</label>
-						<ReactQuill className="  " theme="snow" value={html} onChange={setHtml} modules={{ toolbar: toolbarOptions }} />
+						<ReactQuill className="  " theme="snow" value={html} onChange={setHtml}  modules={{ toolbar: toolbarOptions, resize: {
+							locale: {
+								center: "center",
+							  },
+						} }} />
 					</div>
 
 					<div className="w-[30%] flex flex-col  gap-2">
@@ -374,8 +471,13 @@ export default function CreatePage({ pageSlug }) {
 							{" "}
 							{packageIncludesArr.map((el, index) => {
 								return (
-									<li key={index + "package-inc-arr"}>
-										{el}
+									<li key={index + "package-inc-arr"} className="">
+										{el}  
+
+										<div className="flex justify-center items-center gap-2">
+											<BiEdit onClick={() => packageIncludesEditHandler(item, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />
+											<RiDeleteBin6Line onClick={() => packageIncludesDltHandler(index) } className="text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer" />
+										</div>
 									</li>
 								);
 							})}{" "}
@@ -405,6 +507,11 @@ export default function CreatePage({ pageSlug }) {
 												}
 											)}
 										</ul>
+
+										<div className="flex justify-center items-center gap-2">
+											<BiEdit onClick={() => pricingSectionEditHandler(item, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />
+											<RiDeleteBin6Line onClick={() => pricingSectionDltHandler(index) } className="text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer" />
+										</div>
 									</div>
 								</List.Item>
 							)}
@@ -479,7 +586,7 @@ export default function CreatePage({ pageSlug }) {
 				<div className="w-full flex justify-start mt-16"></div>
 
 				{/* {uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )} */}
-				{isError && ( <Alert message="Failed to add New Page!" type="error" showIcon closable /> )}
+				{/* {isError && ( <Alert message="Failed to add New Page!" type="error" showIcon closable /> )} */}
 			</div>
 		</>
 	);
