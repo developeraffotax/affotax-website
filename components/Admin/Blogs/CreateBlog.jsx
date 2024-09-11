@@ -54,7 +54,6 @@ export default function CreateBlog() {
 
 	useEffect(() => {
 		
-
 		setUrl(window?.location?.origin + "/blog/");
 	}, []);
 
@@ -96,6 +95,22 @@ export default function CreateBlog() {
 		setUploadSuccess(false);
 		setIsError(false);
 
+
+		const slug = url.split('blog/')[1].trim().toLowerCase().replaceAll(" ", "-").replace(/[^\w\-]/g, '')
+
+		console.log(slug)
+
+		const pattern = /^[a-z0-9-]+$/;
+
+		const result = pattern.test(slug);
+
+
+		console.log(result)
+
+		if (!slug || !result) {
+			return message.error('Kindly Add a proper url | It can only contain a-z 0-9 and -')
+		}
+
 		const formData = new FormData();
 
 		formData.append("title", title);
@@ -105,10 +120,18 @@ export default function CreateBlog() {
 		formData.append("imgUrl", imgUrl);
 		formData.append("content", value);
 		formData.append("keywords", keywords);
+		formData.append("slug", slug);
+
+		
 
 		const res = await createBlog(formData);
 
+		console.log(res)
+
 		if (res.success) {
+
+			message.success('Blog Added Successfully!')
+
 			setUploadSuccess(res.success);
 
 			setTitle("");
@@ -118,7 +141,9 @@ export default function CreateBlog() {
 			setMetaDescription();
 			setValue("");
 			setKeywords([]);
+			
 		} else {
+			message.error(res.message)
 			setIsError(true);
 		}
 	};
@@ -134,6 +159,8 @@ export default function CreateBlog() {
 
 
 	const urlInputHandler = (e) => {
+
+
 		setUrl(e.target.value)
 	}
 

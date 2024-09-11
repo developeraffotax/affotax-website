@@ -644,7 +644,16 @@ export default function CreatePage({ pageSlug }) {
 
 
 
+const handleKeyDown = (e) => {
+	
+	if(e.key === 'Enter') {
+		packageIncludesSubmitHandler()
+	} else {
+		return;
+	}
 
+
+}
 
 
 
@@ -735,16 +744,21 @@ export default function CreatePage({ pageSlug }) {
 
 							<button onClick={handlePackageIncludes} type="button" className="w-11 h-11  bg-orange-50 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-500  hover:bg-orange-100" > <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M1.22229 5.00013H8.77785M5.00007 8.77791V1.22235" stroke="#e07000" stroke-width="1.6" strokeLinecap="round" strokeLinejoin="round" ></path> </svg> </button>
 						</div>
-						<ul className="list-disc">
+						<ul className="list-disc text-wrap rounded-xl bg-orange-50 text-orange-800 font-semibold mt-4 shadow-sm shadow-black/30">
 							{" "}
 							{packageIncludesArr?.map((el, index) => {
 								return (
-									<li key={index + "package-inc-arr"} className="">
+									<li key={index + "package-inc-arr"} className={`flex justify-between items-center  p-2  ${(index + 1) === packageIncludesArr.length ? '' : 'border-b'}`}>
 										{/* {el} */}
+										<div className="flex items-start justify-start gap-1 w-full">
 
-										{parseInt(pkgEditIndex) === index ? <Input value={editingValue} onChange={(e) => setEditingValue(e.target.value)} /> : <p>{el}</p> }  
+										<span className=" font-semibold">{index + 1}. </span> 
+										{parseInt(pkgEditIndex) === index ? <div className="w-[50%]"><Input error className="" onKeyDown={handleKeyDown} value={editingValue} onChange={(e) => setEditingValue(e.target.value)} /></div> : <p>{el}</p> }  
 
-										<div className="flex justify-center items-center gap-2">
+
+
+										</div>
+										<div className="flex justify-center items-center gap-4">
 											{parseInt(pkgEditIndex) === index ? <MdDownloadDone  onClick={() => packageIncludesSubmitHandler() } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " /> : <BiEdit onClick={() => packageIncludesEditHandler(el, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />}
 											<RiDeleteBin6Line onClick={() => packageIncludesDltHandler(index) } className="text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer" />
 										</div>

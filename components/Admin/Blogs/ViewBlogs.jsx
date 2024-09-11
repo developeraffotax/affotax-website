@@ -94,6 +94,15 @@ export default function ViewBlogs({blogsData, refresh}) {
           key: 'description',
           
         },
+
+        {
+          title: 'Slug',
+          dataIndex: 'slug',
+          key: 'slug',
+          
+          render: (text) => <p className="font-poppins  bg-orange-100 text-orange-800 px-2 py-1 rounded-md  ">/{text}</p>,
+          
+        },
         
         
         {

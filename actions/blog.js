@@ -8,18 +8,36 @@ import { put } from "@vercel/blob";
 
 import { revalidatePath } from "next/cache";
 
+
+// slug: title.toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, ''),
+
+
 //CREATE OPERATION
 export async function createBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "keywords" );
+	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords, slug } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "keywords", "slug" );
 
 	try {
 		const db = await connectDB();
+
+		
+
+		const existingBlog = await Blog.findOne({slug: slug})
+
+
+		
+		if (existingBlog) {
+			return {
+				success: false,
+				message:  'Blog with this Url already exist'
+			};
+		}
+
 
 		const blog = new Blog({
 			metaTitle: metaTitle,
 			metaDescription: metaDescription,
 			title: title,
-			slug: title.toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, ''),
+			slug: slug,
 			description: description,
 			imageUrl: imgUrl,
 			content: content,
@@ -27,7 +45,7 @@ export async function createBlog(formData) {
 		});
 
 		const blogDoc = await blog.save();
-		revalidatePath('/blogs');
+		 revalidatePath('/blogs');
 		
 		return {
 			success: true,
@@ -35,6 +53,7 @@ export async function createBlog(formData) {
 	} catch (error) {
 		return {
 			success: false,
+			message: error?.message || 'Some server side error occured!'
 		};
 	}
 
@@ -86,7 +105,7 @@ export async function UploadImage(formData) {
 
 //Update OPERATION
 export async function updateBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, id, keywords } =
+	const { title, description, metaTitle, metaDescription, imgUrl, content, id, keywords, slug } =
 		getFormData(
 			formData,
 			"title",
@@ -96,7 +115,8 @@ export async function updateBlog(formData) {
 			"imgUrl",
 			"content",
 			"id",
-			"keywords"
+			"keywords",
+			"slug"
 		);
 
 	try {
@@ -108,7 +128,7 @@ export async function updateBlog(formData) {
 		oldDoc.metaTitle= metaTitle;
 		oldDoc.metaDescription= metaDescription;
 		oldDoc.title= title;
-		oldDoc.slug= title.toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
+		oldDoc.slug= slug;
 		oldDoc.description= description;
 		oldDoc.imageUrl= imgUrl;
 		oldDoc.content= content;

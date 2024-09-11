@@ -101,6 +101,7 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
       formData.append('content', value)
       formData.append('id', id)
       formData.append('keywords', keywords)
+      formData.append('slug', slug)
 
 
 
@@ -205,10 +206,10 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
                 <Input placeholder="Title of the Blog" value={title} onChange={(e) => {
                   setTitle(e.target.value);
 
-                  const slug = (e.target.value).toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
+                  // const slug = (e.target.value).toLocaleLowerCase().trim().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
                   
-                  const url = window.location.origin + '/blog/' + slug;
-                  setUrl(url);
+                  // const url = window.location.origin + '/blog/' + slug;
+                  // setUrl(url);
                 }} />
 
                 <label>Description</label>
