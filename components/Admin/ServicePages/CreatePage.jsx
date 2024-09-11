@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Alert, Avatar, Button, Divider, Input, List, message, Select, } from "antd";
+import { Alert, Avatar, Button, Divider, Input, List, message, Select, Spin, } from "antd";
 import TextArea from "antd/es/input/TextArea";
 
 import axios from "axios";
@@ -10,6 +10,8 @@ import "react-quill/dist/quill.snow.css";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEdit } from "react-icons/bi";
 import { MdDownloadDone } from "react-icons/md";
+import { LoadingOutlined } from '@ant-design/icons';
+
 
 
 
@@ -35,8 +37,16 @@ export default function CreatePage({ pageSlug }) {
 
 
 	// Why Choose  Section State
-	const [heading2, setHeading2] = useState("");
-	const [html2, setHtml2] = useState("");
+	const [benefitsTitle, setBenefitsTitle] = useState("");
+
+	const [benefit, setBenefit] = useState({
+		heading: "",
+		paragraph: ""
+	});
+
+	
+	const [benefitsEditIndex, setBenefitsEditIndex] = useState('');
+	const [benefitsArr, setBenefitsArr] = useState([]);
 
 
 
@@ -58,6 +68,7 @@ export default function CreatePage({ pageSlug }) {
 
 	// Page State
 	const [isEditMode, setIsEditMode] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 
 	const [errorMsg, setErrorMsg] = useState('');
 
@@ -80,27 +91,25 @@ export default function CreatePage({ pageSlug }) {
 
 
 
-	// useEffect(() => {
-	// 	if (pageSlug) {
+	useEffect(() => {
+		if (pageSlug) {
 
-	// 		getPageData();
-	// 		localStorage?.setItem('page-url', url)
-	// 		console.log(url)
+			getPageData();
+			localStorage?.setItem('service-page-url', url)
+			console.log(url)
 
-	// 	} else {
-	// 		setUrl(window?.location?.origin + "/");
-	// 	}
-	// }, []);
-
-
+		} else {
+			setUrl(window?.location?.origin + "/");
+		}
+	}, []);
 
 
 
+
+	// UPDATE / CREATE HANDLER
 	const submitHandler = async () => {
 		
-
-
-
+		setIsLoading(true)
 
 
 		const servicePage = {
@@ -112,25 +121,33 @@ export default function CreatePage({ pageSlug }) {
 			title: title,
 			content: html,
 
-			pricingSection: pricesArr,
-			whyChooseSection: { heading: heading2, html: html2 },
-			faqSection: faqArr
+			prices: pricesArr,
+			benefitsTitle: benefitsTitle,
+			benefits: benefitsArr,
+			faqs: faqArr
 
 		}
 
 
 
-		const res = await axios.post('/api/service-page/post-page', servicePage);
+
+		let apiUrl;
+
+		if (isEditMode) {
+			apiUrl = `/api/service-page/post-page/${pageSlug}`;
+		} else {
+			apiUrl = '/api/service-page/post-page';
+		}
+
+
+		
+
+		try {
+			const res = await axios.post(apiUrl, servicePage);
 
 		console.log(res)
 
-
-
-
-		
-		//localStorage?.setItem('service-page-url', url)
-
-		
+		localStorage?.setItem('service-page-url', url)
 
 		if (res.status === 201) {
 
@@ -143,52 +160,146 @@ export default function CreatePage({ pageSlug }) {
 				setHtml('');
 
 				setPricesArr([]);
-				setHeading2('');
-				setHtml2('');
-				setFaqArr([])
+				setBenefitsTitle('');
+				setBenefit({heading: '', paragraph: ''})
+				setBenefitsArr([]);
+				setFaqArr([]);
 
 			}
 
 			message.success( `${isEditMode ? "Page Updated" : "New Page Added Successfully"}` );
 		} else {
+			console.log(res)
 			message.error(`${isEditMode ? "Failed to update page!" : "Failed to add new page!"}`);
 		}
+
+
+
+
+		} catch (error) {
+			console.log(error)
+			message.error(`${isEditMode ? "Failed to update page!" : error?.response?.data?.message || "Failed to add new page!"}`);
+		} finally {
+			setIsLoading(false)
+		}
+		
 	};
 
 
 
 
+		// // DELETE PAGE HANDLER
 
-	// const getPageData = async () => {
+		// const deletePageHandler = () => {
 
-	//     try {
+		// 	setIsLoading(true);
 
-	// 		// let res;
 
-	// 		// if (pageSlug) {
-	// 		// 	 res = await axios.get(`/api/pages/${pageSlug}`);
-	// 		// 	 setUrl(window?.location?.origin + "/" + pageSlug);
-	// 		// } else {
+		// 	try {
 
-	// 		// }
+		// 		const res = axios.delete(`/api/service-page/post-page/${pageSlug}`)
 
-	// 		let res = await axios.get(`/api/pages/${ url.split('/')[3]}`);
+		// 		if (res.status === 201) {
 
-	//         if(res.status === 200) {
-	//             setIsEditMode(true);
-	//     		const page = res.data;
+		// 		}
 
-	// 			setTitle(page.title);
-	// 			setMetaTitle(page.metaTitle);
-	// 			setMetaDescription(page.metaDescription);
-	// 			setKeywords(page.keywords);
 
-	//         }
-	//     } catch(error) {
-	//         message.error(`Failed to fetch this page! Kindly paste the valid link😠`);
-	//     }
 
-	// }
+
+
+
+
+
+
+
+		// 	} catch (error) {
+				
+		// 	}
+
+
+
+
+
+
+		// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	const getPageData = async () => {
+		setIsLoading(true)
+	    try {
+
+			// let res;
+
+			// if (pageSlug) {
+			// 	 res = await axios.get(`/api/pages/${pageSlug}`);
+			// 	 setUrl(window?.location?.origin + "/" + pageSlug);
+			// } else {
+
+			// }
+
+			//let res = await axios.get(`/api/service-page/get-one/${ url.split('/')[3]}`);
+
+			
+
+			let res = await axios.get(`/api/service-page/get-one/${pageSlug}`);
+
+			console.log(res)
+
+	        if(res.status === 200) {
+	            setIsEditMode(true);
+	    		const page = res.data;
+
+				setMetaTitle(page.metaTitle);
+				setMetaDescription(page.metaDescription);
+				setKeywords(page.keywords);
+
+				setTitle(page.title);
+				setHtml(page.content);
+
+				setPricesArr(page.prices);
+				setBenefitsTitle(page.benefitsTitle);
+				
+				setBenefitsArr(page.benefits);
+				setFaqArr(page.faqs);
+				
+
+	        }
+	    } catch(error) {
+	        message.error(`Failed to fetch this page! Kindly paste the valid link😠`);
+	    } finally {
+			setIsLoading(false)
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+
+
 
 	const dltPageBtnHandler = async () => {
 		// setIsError(false);
@@ -457,6 +568,94 @@ export default function CreatePage({ pageSlug }) {
 
 
 
+
+
+
+		const handleBenefitsArr = () => {
+
+
+			if (benefitsEditIndex) {
+
+				const index = parseInt(benefitsEditIndex);
+
+				setBenefitsArr((prev) => {
+
+					const newArr = [...prev];
+					newArr[index].heading = benefit.heading
+					newArr[index].paragraph = benefit.paragraph
+
+					return newArr;
+
+				})
+
+				setBenefitsEditIndex('')
+
+			} else {
+
+				setBenefitsArr((prev) => {
+					return [...prev, benefit]
+				})
+			}
+
+			
+
+
+			setBenefit({heading: '', paragraph: ''});
+
+
+		}
+
+
+
+
+
+		const benefitsArrDltHandler = (index) => {
+
+			setBenefitsArr(prev => prev.filter((el, i) => i !== index))
+
+		}
+
+
+
+
+		const benefitsArrEditHandler = (item, index) => {
+
+			setBenefitsEditIndex(index.toString())
+			setBenefit({heading: item.heading, paragraph: item.paragraph});
+
+
+
+
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	const toolbarOptions = [
 		["bold", "italic", "underline", "strike"], // toggled buttons
 		["blockquote", "code-block"],
@@ -480,8 +679,13 @@ export default function CreatePage({ pageSlug }) {
 	];
 
 	return (
-		<>
-			<div className="w-full flex flex-col gap-4 justify-center items-center p-2">
+		<>	
+
+			{isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" fullscreen />}
+
+
+			{
+				!isLoading && <div className="w-full flex flex-col gap-4 justify-center items-center p-2">
 				{/* {isEditMode && <Button type="link" onClick={disableEditMode }>I want to add a new Page😛</Button>} */}
 
 				<div className="w-full flex items-center justify-between gap-8">
@@ -533,7 +737,7 @@ export default function CreatePage({ pageSlug }) {
 						</div>
 						<ul className="list-disc">
 							{" "}
-							{packageIncludesArr.map((el, index) => {
+							{packageIncludesArr?.map((el, index) => {
 								return (
 									<li key={index + "package-inc-arr"} className="">
 										{/* {el} */}
@@ -588,11 +792,65 @@ export default function CreatePage({ pageSlug }) {
 				<Divider style={{ borderColor: "#eb8110" }}> {" "} Why-Choose-Our-Services Section{" "} </Divider>
 				<div className="w-full flex gap-8 justify-start items-start ">
 					<div className="w-[70%] flex flex-col gap-2 ">
-						<label>Heading</label>
-						<Input className=" " placeholder="Heading for section" value={heading2} onChange={(e) => { setHeading2(e.target.value); }} />
+						<label>Title of the Section</label>
+						<Input className=" " placeholder="Heading for section" value={benefitsTitle} onChange={(e) => { setBenefitsTitle(e.target.value); }} />
 
-						<label>Why Choose Our Service Content</label>
-						<ReactQuill className="  " theme="snow" value={html2} onChange={setHtml2} modules={{ toolbar: toolbarOptions }} />
+
+							<div className="flex w-full gap-2 mt-4 items-end">
+
+								
+						<div className="w-[30%]">
+						<label className="">Heading</label>
+						<Input className=" " placeholder="Heading" value={benefit.heading} onChange={(e) => { setBenefit(prev => ({...prev, heading: e.target.value})); }} />
+						</div>
+
+						<div className="w-[70%]">
+						<label>Paragraph</label>
+						<Input className=" " placeholder="Paragraph" value={benefit.paragraph} onChange={(e) => { setBenefit(prev => ({...prev, paragraph: e.target.value})); }} />
+
+						</div>
+
+						<button onClick={handleBenefitsArr} type="button" className="w-11 h-11  bg-orange-50 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-500  hover:bg-orange-100" > <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M1.22229 5.00013H8.77785M5.00007 8.77791V1.22235" stroke="#e07000" stroke-width="1.6" strokeLinecap="round" strokeLinejoin="round" ></path> </svg> </button>
+							</div>
+						
+					</div>
+
+					<div className="w-[30%] p-8 bg-zinc-50 rounded-lg shadow-sm">
+					<h2 className="font-poppins font-semibold text-2xl text-center mb-4">{benefitsTitle}</h2>
+						<List
+							dataSource={benefitsArr}
+							renderItem={(item, index) => (
+								<List.Item key={index + "benefits-arr-"}>
+									<div className="w-full ">
+
+										
+
+										<div className=" w-full  flex items-center justify-between gap-2 ">
+											<div  className=" w-full  flex items-center justify-start gap-2 ">
+												
+											<span className=" flex font-poppins items-center justify-center h-8 w-8 bg-orange-100 text-orange-800 font-semibold  rounded-md p-2">{index + 1}.</span>
+											<h3 className="text-xl font-semibold "> {item.heading} </h3>
+											</div>
+
+
+
+										<div className="flex justify-center items-center gap-2">
+											<BiEdit onClick={() => benefitsArrEditHandler(item, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />
+											<RiDeleteBin6Line onClick={() => benefitsArrDltHandler(index) } className="text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer" />
+										</div>
+
+
+
+										</div>
+										
+											<p> {item.paragraph}</p>
+
+										
+										
+									</div>
+								</List.Item>
+							)}
+						/>
 					</div>
 				</div>
 
@@ -646,7 +904,7 @@ export default function CreatePage({ pageSlug }) {
 
 					<button onClick={submitHandler} className="relative rounded-xl px-5 py-2.5 overflow-hidden group bg-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300" > <span className="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span> <span className="relative text-base font-semibold"> {isEditMode ? "Update Page" : "Add New Page"} </span> </button>
 
-					{isEditMode && ( <Button className="w-[10%] min-w-44 mt-4" onClick={dltPageBtnHandler} type="primary" danger > {" "} Delete this Page{" "} </Button> )}
+					{/* {isEditMode && ( <Button className="w-[10%] min-w-44 mt-4" onClick={dltPageBtnHandler} type="primary" danger > {" "} Delete this Page{" "} </Button> )} */}
 				</div>
 
 				<div className="w-full flex justify-start mt-16"></div>
@@ -654,6 +912,7 @@ export default function CreatePage({ pageSlug }) {
 				{/* {uploadSuccess && ( <Alert message="Hero Section is added successfully!" type="success" showIcon closable /> )} */}
 				{/* {isError && ( <Alert message="Failed to add New Page!" type="error" showIcon closable /> )} */}
 			</div>
+			}
 		</>
 	);
 }

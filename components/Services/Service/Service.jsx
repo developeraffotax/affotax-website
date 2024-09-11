@@ -10,8 +10,6 @@ import { v4 as uuid } from "uuid";
 
 const Service = ({ data }) => {
 
-    
-
 
     useEffect(() => {
         window.scrollTo({top:0})
