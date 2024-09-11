@@ -18,6 +18,7 @@ import { CgDanger } from "react-icons/cg";
 export default function ViewPages() {
 
     const [open, setOpen] = useState(false);
+    const [modalDltLink, setModalDltLink] = useState('')
 
     const [isLoading, setIsLoading] = useState(false);
     const [data, setData] = useState([]);
@@ -61,12 +62,12 @@ export default function ViewPages() {
 
 
 
-    const deletePage = async (slug) => {
+    const deletePage = async () => {
 
         setOpen(false);
 
         const formData = new FormData();
-        formData.append('slug', slug);
+        formData.append('slug', modalDltLink);
 
         try {
             
@@ -78,14 +79,16 @@ export default function ViewPages() {
             }
 
             setData((prev) => {
-                return prev.filter(el => el.slug !== slug) 
+                return prev.filter(el => el.slug !== modalDltLink) 
             })
 
-            message.success('The Page has been deleted successfully!')
+            message.success('The Page has been deleted successfully!');
+
             
         } catch (error) {
             message.error('Error occured while deleting data!')
         } finally {
+            setModalDltLink('')
             setIsLoading(false);
             
         }
@@ -101,13 +104,16 @@ export default function ViewPages() {
 
 
     
-    const showModal = () => {
+    const showModal = (slug) => {
+
         setOpen(true);
+        setModalDltLink(slug)
       };
 
 
       const handleCancel = () => {
         setOpen(false);
+        setModalDltLink('')
       };
 
 
@@ -142,10 +148,10 @@ export default function ViewPages() {
           key: 'action',
           render: (_, record) => {
                 console.log(_)
-            return <Space size="middle"> <Link href={`/${record.slug}`} target='_blank' ><AiOutlineEye className='text-sky-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></Link> <Link href={`/admin/create-page/create?page=${record.slug}`}><BiEdit className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all'/></Link> <button onClick={showModal}><RiDeleteBin6Line className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></button> <Modal
+            return <Space size="middle"> <Link href={`/${record.slug}`} target='_blank' ><AiOutlineEye className='text-sky-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></Link> <Link href={`/admin/create-page/create?page=${record.slug}`}><BiEdit className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all'/></Link> <button onClick={() => showModal(record.slug)}><RiDeleteBin6Line className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></button> <Modal
             open={open}
             title="Are you sure?"
-            onOk={() => deletePage(record.slug)}
+            onOk={() => deletePage()}
             okType='danger'
             okText='Delete'
             onCancel={handleCancel}
