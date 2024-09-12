@@ -155,7 +155,7 @@ export default function CreatePage({ pageSlug }) {
 		
 
 		try {
-			const res = await axios.post(apiUrl, servicePage);
+			const res = await axios.post(apiUrl, servicePage );
 
 		console.log(res)
 

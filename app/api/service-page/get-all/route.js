@@ -3,6 +3,7 @@ import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 
 
 
+export const revalidate = 0;
 
 
 export async function GET(request) {

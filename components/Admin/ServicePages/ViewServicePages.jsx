@@ -38,7 +38,15 @@ export default function ViewServicePages() {
 
             setIsLoading(false);
             if (res.status === 200) {
-                setData(res.data)
+
+                const mappedArr = res.data.map((el, index) => {
+                    return {
+                        ...el,
+                        sr: index + 1
+                    }
+                })
+
+                setData(mappedArr)
             } else {
                 setError({is: true, msg: 'Error occured while fetching data!'})
             }
@@ -121,7 +129,7 @@ export default function ViewServicePages() {
             title: 'Sr.',
             width: '6%',
             key: 'serial-number',
-            render: (text, record, index) => <strong className="flex font-poppins items-center justify-center h-full w-full bg-orange-100 text-orange-800 font-semibold  rounded-xl p-2" >{index + 1}</strong>,
+            render: (text, record, index) => <strong className="flex font-poppins items-center justify-center h-full w-full bg-orange-100 text-orange-800 font-semibold  rounded-xl p-2" >{record.sr}</strong>,
             
           },
         {
@@ -172,7 +180,7 @@ export default function ViewServicePages() {
 
     return (
        <>
-        <Table columns={columns}   dataSource={data} size='large' showHeader loading={isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" />}  />
+        <Table columns={columns}   dataSource={data} size='large' showHeader pa loading={isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" />}  />
         </>
     )
 } 

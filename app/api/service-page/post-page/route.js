@@ -14,6 +14,7 @@ export async function POST(request) {
 
 		const servicePage = await request.json();
 
+		const db = await connectDB();
 		const isPage = await ServicePage.findOne({link: servicePage.link});
 
 		if (isPage) {
@@ -23,7 +24,7 @@ export async function POST(request) {
 			});
 		}
 
-		const db = await connectDB();
+		
 		const page = new ServicePage(servicePage);
 		const doc = await page.save();
 
