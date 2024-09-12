@@ -213,7 +213,7 @@ export default function RootLayout({ children }) {
             children: [ 
               {
               key: 'service-section-create',
-              label: 'Create' ,
+              label: 'Create Page' ,
               onClick		: () => {
                 setDefaultSelectedKeys(['service-section-create'])
             setDefaultOpenKeys(['service-page'])
@@ -229,7 +229,7 @@ export default function RootLayout({ children }) {
 
             {
               key: 'service-section-view',
-              label: 'View' ,
+              label: 'View Pages' ,
               onClick		: () => {
                 setDefaultSelectedKeys(['service-section-view'])
             setDefaultOpenKeys(['service-page'])
