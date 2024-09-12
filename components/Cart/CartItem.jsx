@@ -2,7 +2,7 @@ import Link from "next/link";
 import { v4 as uuid } from "uuid";
 import { RxCross1 } from "react-icons/rx";
 
-const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle, id, removeFromCartHandler, isDrawer}) => {
+const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle, _id, removeFromCartHandler, isDrawer}) => {
 	return (
 		<>
 			<div className={`${isDrawer ? 'bg-white/20' : 'bg-gray-50'} shadow-sm rounded-lg  p-8 w-full mb-8 ]`}>
@@ -10,7 +10,7 @@ const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle,
 				<h3 className="text-xl font-semibold ">
 					{priceTitle} | {pageTitle}
 				</h3>
-				<button className="mt-2" onClick={() => removeFromCartHandler(id)}>
+				<button className="mt-2" onClick={() => removeFromCartHandler(_id)}>
 					{" "}
 					<RxCross1 />
 				</button>

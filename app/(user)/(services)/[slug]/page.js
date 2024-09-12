@@ -19,6 +19,7 @@ import { getPageData } from "@/lib/getPage";
 import Template from "@/components/WhoWeHelp/Template";
 import Page from "@/lib/Model/Page/Page";
 import { connectDB } from "@/lib/connectDB";
+import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 
 
 
@@ -36,26 +37,26 @@ export async function generateMetadata({ params}) {
   //const previousImages = (await parent).openGraph?.images || []
  
 
-  let serviceData = dataArr.filter((el) => el.link === params.slug);
-  if (serviceData.length === 0) {
-    return {
-      title: metaDataObject[params.slug]?.title,
-      description: metaDataObject[params.slug]?.description,
+  // let serviceData = dataArr.filter((el) => el.link === params.slug);
+  // if (serviceData.length === 0) {
+  //   return {
+  //     title: metaDataObject[params.slug]?.title,
+  //     description: metaDataObject[params.slug]?.description,
     
       
-    }
-  }
+  //   }
+  // }
 
 
-  return {
-    title: serviceData[0].metaTitle,
-    description: serviceData[0].metaDescription,
-    keywords: serviceData[0].keywords ,
-    authors: [{ name: 'Affotax', url: 'https://affotax.com' }],
-    creator: 'Ihtisham Ul Haq -- +92-301-6667656',
+  // return {
+  //   title: serviceData[0].metaTitle,
+  //   description: serviceData[0].metaDescription,
+  //   keywords: serviceData[0].keywords ,
+  //   authors: [{ name: 'Affotax', url: 'https://affotax.com' }],
+  //   creator: 'Ihtisham Ul Haq -- +92-301-6667656',
   
     
-  }
+  // }
 }
 
 
@@ -103,16 +104,26 @@ export default async function ServicesPage({params}) {
 
       // SERVICES PAGES
     if (!render) {
-      let serviceData = dataArr.filter((el) => el.link === params.slug);
-      console.log(serviceData)
-
-      if (serviceData.length === 0) {
-
+      // let serviceData = dataArr.filter((el) => el.link === params.slug);
+      // console.log(serviceData)
+      const db = await connectDB()
 
 
+      const serviceData = await ServicePage.findOne({link: params.slug});
 
-        const db = await connectDB()
+      
+      
+     
+
+      if (!serviceData) {
+
+
+
+
+        //const db = await connectDB()
         const page = await Page.findOne({slug: params.slug});
+
+        
 
         if (!page) {
           redirect('/')
@@ -129,7 +140,30 @@ export default async function ServicesPage({params}) {
         // return <h3>THIS PAGE DOES NOT EXIST | WE'RE WORKING ON IT | THANK YOU FOR YOUR COOPERATION</h3>
       } else {
 
-        render = <Service data={serviceData[0]}/>
+        
+
+      //   const mappedPrices = serviceData.prices.map((el) => {
+        
+      //     return {
+      //      ...el,
+      //      id: el._id.toString()
+      //     }
+  
+      //  })
+
+
+      //  serviceData.newFIeld = mappedPrices
+
+
+
+      console.log('ELSE BLOCK HIT >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+        
+      console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<', serviceData, )
+
+
+        
+
+        render = <Service jsonData={JSON.stringify(serviceData)}/>
       }
        
     }

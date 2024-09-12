@@ -2,7 +2,6 @@
 
 import { useContext, useEffect, useState } from "react";
 import CartItem from "./CartItem";
-import { dataArr } from "@/data/serviceData";
 import TopChart from "./TopCart";
 import TotalPrice from "./TotalPrice";
 import CheckoutBtn from "./CheckoutBtn";
@@ -11,6 +10,7 @@ import Checkout from "../Checkout/Checkout";
 import SquareForm from "../Checkout/SquareForm";
 import SuggestedPackages from "./SuggestedPackages";
 import { CartContext } from "@/app/(user)/layout";
+import axios from "axios";
 
 
 
@@ -26,23 +26,46 @@ export default function Cart() {
 
 
 	useEffect(() => {
-		const idsArr = localStorage.getItem("price_id")?.split(",") || [];
 
-		let tempArr = [];
-		dataArr.forEach((el) => {
-			el.prices.filter((element) => {
-				idsArr.forEach((id) => {
-					if (element.id === id) {
-						element.pageTitle = el.title;
-						tempArr.unshift(element);
-					}
+		const getAndSetData = async () => {
+
+			const res = await axios.get('/api/service-page/get-all');
+			
+			let dataArr = res.data;
+
+
+			const idsArr = localStorage.getItem("price_id")?.split(",") || [];
+
+
+			console.log(idsArr)
+
+
+			let tempArr = [];
+
+			dataArr.forEach((el) => {
+				el.prices.filter((element) => {
+					idsArr.forEach((_id) => {
+
+						console.log(_id, element._id)
+
+						if (element._id === _id) {
+							element.pageTitle = el.title;
+							tempArr.unshift(element);
+						}
+					});
 				});
 			});
-		});
+	
+			setCartItemsArr(tempArr);
+			//calculateTotalPrice()
+			console.log(tempArr)
 
-		setCartItemsArr(tempArr);
-        //calculateTotalPrice()
-		console.log(cartItemsArr)
+
+		}
+
+		
+		getAndSetData()
+
 	}, []);
 
 
@@ -54,11 +77,11 @@ useEffect(() => {
 
 
 
-	const removeFromCartHandler = (id) => {
+	const removeFromCartHandler = (_id) => {
 		const old_ids = localStorage.getItem("price_id");
 		let ids_arr = old_ids.split(",");
 
-		const resArr = ids_arr.filter((el) => el !== id);
+		const resArr = ids_arr.filter((el) => el !== _id);
 
 		localStorage.setItem("price_id", resArr);
 
@@ -70,7 +93,7 @@ useEffect(() => {
         console.log(arr)
 
         const res = arr.filter((el) => {
-            return el.id !== id;
+            return el._id !== _id;
         })
 
 
@@ -95,7 +118,7 @@ useEffect(() => {
     const calculateTotalPrice = () => {
         const tPrice = cartItemsArr.reduce((acc, cur) => {
             const price = +(cur.price?.replace('£', ''))
-            console.log(price)
+            //console.log(price)
             return acc + price;
         }, 0)
         console.log('calculate total price ran ' , tPrice)

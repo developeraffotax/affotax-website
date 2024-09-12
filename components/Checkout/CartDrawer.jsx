@@ -14,22 +14,39 @@ export default function CartDrawer({cartItemsArr, setCartItemsArr, totalPrice, s
     
 
 	useEffect(() => {
-		const idsArr = localStorage.getItem("price_id")?.split(",") || [];
 
-		let tempArr = [];
-		dataArr.forEach((el) => {
-			el.prices.filter((element) => {
-				idsArr.forEach((id) => {
-					if (element.id === id) {
-						element.pageTitle = el.title;
-						tempArr.unshift(element);
-					}
+
+		const getAndSetData = async () => {
+
+
+			const res = await axios.get('/api/service-page/get-all');
+			console.log(res)
+			let dataArr = res.data;
+
+			const idsArr = localStorage.getItem("price_id")?.split(",") || [];
+
+			let tempArr = [];
+			dataArr.forEach((el) => {
+				el.prices.filter((element) => {
+					idsArr.forEach((_id) => {
+						if (element._id === _id) {
+							element.pageTitle = el.title;
+							tempArr.unshift(element);
+						}
+					});
 				});
 			});
-		});
 
-		setCartItemsArr(tempArr);
-        //calculateTotalPrice()
+			setCartItemsArr(tempArr);
+			//calculateTotalPrice()
+
+
+		}
+
+
+		getAndSetData()
+
+
 	}, []);
 
 
@@ -40,11 +57,11 @@ useEffect(() => {
 
 
 
-	const removeFromCartHandler = (id) => {
+	const removeFromCartHandler = (_id) => {
 		const old_ids = localStorage.getItem("price_id");
 		let ids_arr = old_ids.split(",");
 
-		const resArr = ids_arr.filter((el) => el !== id);
+		const resArr = ids_arr.filter((el) => el !== _id);
 
 		localStorage.setItem("price_id", resArr);
 
@@ -56,7 +73,7 @@ useEffect(() => {
         console.log(arr)
 
         const res = arr.filter((el) => {
-            return el.id !== id;
+            return el._id !== _id;
         })
 
 

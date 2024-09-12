@@ -8,7 +8,10 @@ import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 
 
-const Service = ({ data }) => {
+const Service = ({ jsonData }) => {
+
+    const data = JSON.parse(jsonData);
+
 
 
     useEffect(() => {

@@ -1,23 +1,57 @@
+'use client'
+
+import { useEffect, useState } from "react";
 import PriceBoxes from "../Services/Service/PriceBoxes/PriceBoxes";
 import CartItems from "./CartItems";
 import { dataArr } from "@/data/serviceData";
+import axios from "axios";
 
 export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 
-	let arr = [];
+	const [arr, setArr] = useState([])
 
-	for(let i=0; i<3; i++) {
 
-		const randomIndex = Math.floor(Math.random() * dataArr.length);
-		const randomServiceData = dataArr[randomIndex]
+	useEffect(() => {
+		
+
+		const getAndSetData = async () => {
+
+			const res = await axios.get('/api/service-page/get-all');
+
+
+			const dataArr = res.data;
+
+			let tempArr = []
+			for(let i=0; i<3; i++) {
+
+				const randomIndex = Math.floor(Math.random() * dataArr.length);
+				const randomServiceData = dataArr[randomIndex]
+			
+				const randomPriceIndex = Math.floor(Math.random() * randomServiceData.prices.length);
+				const randomPriceData = randomServiceData.prices[randomPriceIndex];
+		
+				randomPriceData.pageTitle = randomServiceData.title;
+		
+				tempArr.push(randomPriceData)
+			}
+
+
+			setArr(tempArr);
+
+
+
+		}
+
+
+		getAndSetData()
+	}, [])
+
+
 	
-		const randomPriceIndex = Math.floor(Math.random() * randomServiceData.prices.length);
-		const randomPriceData = randomServiceData.prices[randomPriceIndex];
 
-		randomPriceData.pageTitle = randomServiceData.title;
+	console.log('IN THE SUGESTED PACKED>>>>>>>>>>><<><><><>><><><><><>><<><><><><><><><>')
 
-		arr.push(randomPriceData)
-	}
+	
 
 
 

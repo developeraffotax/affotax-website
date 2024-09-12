@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
 
-const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, id, pageTitle, isCart, isCheckout, setCartItemsArr}) => {
+const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageTitle, isCart, isCheckout, setCartItemsArr}) => {
 
 
     const onClickLocalStorageHandler = () => {
@@ -13,8 +13,8 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, id, pageTi
             let ids_arr = old_ids.split(',');
             
             
-            if (!(ids_arr.find((el) => el === id))) {
-                ids_arr.push(id);
+            if (!(ids_arr.find((el) => el === _id))) {
+                ids_arr.push(_id);
             }
 
             console.log(ids_arr)
@@ -22,7 +22,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, id, pageTi
             
         } else {
             
-            localStorage.setItem('price_id', id)
+            localStorage.setItem('price_id', _id)
         }
 
 
@@ -34,7 +34,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, id, pageTi
                         priceContent,
                         price,
                         packageIncludes,
-                        id,
+                        _id,
                         pageTitle
                     }
                 ].reverse()
