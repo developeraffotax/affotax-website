@@ -111,13 +111,25 @@ export default function CreatePage({ pageSlug }) {
 		
 		setIsLoading(true)
 
+		const link = url.split("/")[3].trim().toLowerCase().replaceAll(" ", "-").replace(/[^\w\-]/g, '');
+
+		const pattern = /^[a-z0-9-]+$/;
+
+		const result = pattern.test(link);
+
+
+		
+
+		if (!link || !result) {
+			return message.error('Kindly Add a proper url | It can only contain a-z 0-9 and -')
+		}
 
 		const servicePage = {
 			metaTitle: metaTitle,
 			metaDescription: metaDescription,
 			keywords: keywords,
 
-			link: url.split("/")[3],
+			link: link,
 			title: title,
 			content: html,
 

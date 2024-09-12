@@ -57,7 +57,7 @@ export async function createNewPage(formData) {
         })
 
 		const pageDoc = await page.save();
-		//revalidatePath('/admin/view-pages')
+		revalidatePath('/')
 		return {
 			success: true,
 		};
@@ -87,6 +87,7 @@ export async function deleteNewPage(formData) {
 		const {acknowledged} = await Page.deleteOne({slug: slug});
 		
 		if(acknowledged) {
+			revalidatePath('/')
 			return {
 				success: true,
 			};
