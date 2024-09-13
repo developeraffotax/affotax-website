@@ -170,17 +170,17 @@ const menu = [
 
 
 
-const SubMenu = ({ name, index, length, }) => {
+const SubMenuMobile = ({ name, link, index, length, onClick}) => {
 
 
-	const router = useRouter()
+	// const router = useRouter()
 
 
 	const liClickHandler = () => {
 		
 		
-		
-		router.refresh()
+		onClick()
+		//router.refresh()
 		
 		
 		
@@ -188,12 +188,12 @@ const SubMenu = ({ name, index, length, }) => {
 
 
 	return (
-		<li	onClick={liClickHandler}
+		<Link href={link} onClick={liClickHandler}
 			className={`pl-8 pr-4 py-2  border-b-primary bg-secondary text-tertiary hover:text-primary hover:cursor-pointer relative innerMenu  ${
 				index !== length - 1 ? "border-b-2" : "border-b-0"
 			}`}
 		>
-			{menu.map((ele) => {
+			{/* {menu.map((ele) => {
 				return (
 					<div key={ele.name}>
 						{ele.name === name ? (
@@ -214,15 +214,15 @@ const SubMenu = ({ name, index, length, }) => {
 						) : null}
 					</div>
 				);
-			})}
+			})} */}
 
 			<h3 className="text-nowrap flex w-full justify-between gap-5 items-center ">
 				{name} <MdOutlineKeyboardArrowRight />
 			</h3>
-		</li>
+		</Link>
 	);
 };
 
-export default SubMenu;
+export default SubMenuMobile;
 
 //

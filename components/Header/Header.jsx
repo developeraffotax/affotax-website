@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation'
 import { BsCartCheck } from "react-icons/bs";
 import CartIcon from "./CartIcon";
 import { CartContext } from "@/app/(user)/layout";
+import SubMenuMobile from "./SubMenuMobile";
 
 
 
@@ -128,7 +129,7 @@ export default function Header() {
                   <ul className="py-2 bg-secondary absolute flex flex-col translate-y-2 rounded-lg ">
                     { [...subMenu,   { name: "View All", link: "/services" }].map((el, index) => {
                       return (
-                        <SubMenu name={el.name} link={el.link} key={uuid()} index={index} length={subMenu.length + 1} onClick={() => { setIsMobileNav(false); setShowSubMenu(false); }} />
+                        <SubMenuMobile name={el.name} link={el.link} key={uuid()} index={index} length={subMenu.length + 1} onClick={() => { setIsMobileNav(false); setShowSubMenu(false); }} />
                       );
                     })}
                   </ul>
