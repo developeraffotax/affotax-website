@@ -61,7 +61,7 @@ export default async function sitemap() {
 	 const blogsSitemap = blogsData
 	 .filter((blog) => {
 		 if (blog.slug) {
-			 return page;
+			 return blog;
 		 }
 	 })
 	 .map((el) => {
