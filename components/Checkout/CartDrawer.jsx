@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { dataArr } from "@/data/serviceData";
+import { useEffect } from "react";
 import TopChart from "../Cart/TopCart";
 import TotalPrice from "../Cart/TotalPrice";
 import CartItems from "../Cart/CartItems";
+import axios from "axios";
 
 
 export default function CartDrawer({cartItemsArr, setCartItemsArr, totalPrice, setTotalPrice}) {
@@ -26,9 +26,23 @@ export default function CartDrawer({cartItemsArr, setCartItemsArr, totalPrice, s
 			const idsArr = localStorage.getItem("price_id")?.split(",") || [];
 
 			let tempArr = [];
-			dataArr.forEach((el) => {
-				el.prices.filter((element) => {
-					idsArr.forEach((_id) => {
+
+
+			// dataArr.forEach((el) => {															// OLD LOGIC TO SHOW ITEMS IN CART
+			// 	el.prices.filter((element) => {
+			// 		idsArr.forEach((_id) => {
+			// 			if (element._id === _id) {
+			// 				element.pageTitle = el.title;
+			// 				tempArr.unshift(element);
+			// 			}
+			// 		});
+			// 	});
+			// });
+
+
+			idsArr.forEach((_id) => {																		 // NEW LOGIC TO SHOW ITEMS IN CART
+				dataArr.forEach((el) => {
+					el.prices.forEach((element) => {
 						if (element._id === _id) {
 							element.pageTitle = el.title;
 							tempArr.unshift(element);
@@ -36,6 +50,8 @@ export default function CartDrawer({cartItemsArr, setCartItemsArr, totalPrice, s
 					});
 				});
 			});
+
+
 
 			setCartItemsArr(tempArr);
 			//calculateTotalPrice()

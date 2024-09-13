@@ -1,5 +1,5 @@
-import { dataArr } from "@/data/serviceData";
 import { connectDB } from "@/lib/connectDB";
+import Blog from "@/lib/Model/Blog";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 
 export default async function sitemap() {
@@ -43,6 +43,7 @@ export default async function sitemap() {
 		"https://affotax.com/location/wales",
 	];
 
+	// Sitemap of Location Pages
 	const mappedLocationUrls = locationUrls.map((el) => {
 		return {
 			url: el,
@@ -52,60 +53,52 @@ export default async function sitemap() {
 		};
 	});
 
-
-
-
-
-
-
+	// Connecting to db
 	const db = await connectDB();
 
-
-
-	const blogsData = await Blog.find({});
-
-	const blogsSitemap = blogsData.map((el) => {
-		if (el.slug) {
-			return {
-				url: `https://affotax.com/${el.slug}`,
-				lastModified: new Date(),
-				changeFrequency: "monthly",
-				priority: 0.7,
-			};
-		} else {
-			return
-		}
-
-	});
-
-
+	// Sitemap of Blogs Pages
+	 const blogsData = await Blog.find({});
+	 const blogsSitemap = blogsData
+	 .filter((blog) => {
+		 if (blog.slug) {
+			 return page;
+		 }
+	 })
+	 .map((el) => {
+		 return {
+			 url: `https://affotax.com/${el.slug}`,
+			 lastModified: new Date(),
+			 changeFrequency: "monthly",
+			 priority: 0.7,
+		 };
+	 });
 
 
 
 
 
-
-
-
-
-
-
-
+	
+	 // Sitemap of Service Pages
 	const servicesData = await ServicePage.find({});
-
-	const mappedArr = servicesData.map((el) => {
-		if (el.link) {
+	const mappedArr = servicesData
+		.filter((page) => {
+			if (page.link) {
+				return page;
+			}
+		})
+		.map((el) => {
 			return {
 				url: `https://affotax.com/${el.link}`,
 				lastModified: new Date(),
 				changeFrequency: "monthly",
 				priority: 0.7,
 			};
-		} else {
-			return
-		}
+		});
 
-	});
+
+
+
+	
 
 	const sitemapArr = [
 		{
@@ -139,8 +132,8 @@ export default async function sitemap() {
 			priority: 0.8,
 		},
 
-		...mappedArr,
 		...mappedLocationUrls,
+		...mappedArr,
 		...blogsSitemap
 	];
 
