@@ -1,8 +1,12 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function NotFoundPage() {
+
+	redirect('/')
+
 	return (
 		<>
 			<Header />
