@@ -12,42 +12,50 @@ import SuggestedPackages from "./SuggestedPackages";
 import { CartContext } from "@/app/(user)/layout";
 import axios from "axios";
 
-
-
 export default function Cart() {
 	// const {id, pageTitle, priceTitle, price, priceContent, packageIncludes} = productObject;
 	// let packageIncludesArr = packageIncludes.split(',');
 
 	const [cartItemsArr, setCartItemsArr] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
+	const [totalPrice, setTotalPrice] = useState(0);
 
-	const cartContext = useContext(CartContext)
+	const [isLoading, setIsLoading] = useState(false);
 
-
+	const cartContext = useContext(CartContext);
 
 	useEffect(() => {
-
 		const getAndSetData = async () => {
+			setIsLoading(true);
 
-			const res = await axios.get('/api/service-page/get-all');
-			
+			const res = await axios.get("/api/service-page/get-all");
+
+			setIsLoading(false);
+
 			let dataArr = res.data;
-
 
 			const idsArr = localStorage.getItem("price_id")?.split(",") || [];
 
-
-			console.log(idsArr)
-
+			
 
 			let tempArr = [];
+   
+			// dataArr.forEach((el) => {                                                                   // OLD LOGIC TO SHOW ITEMS IN CART
+			// 	el.prices.filter((element) => {
+			// 		idsArr.forEach((_id) => {
 
-			dataArr.forEach((el) => {
-				el.prices.filter((element) => {
-					idsArr.forEach((_id) => {
+			// 			if (element._id === _id) {
+			// 				element.pageTitle = el.title;
+			// 				tempArr.unshift(element);
+			// 			}
+			// 		});
+			// 	});
+			// });
 
-						console.log(_id, element._id)
-
+			
+			
+			idsArr.forEach((_id) => {																		 // NEW LOGIC TO SHOW ITEMS IN CART
+				dataArr.forEach((el) => {
+					el.prices.forEach((element) => {
 						if (element._id === _id) {
 							element.pageTitle = el.title;
 							tempArr.unshift(element);
@@ -55,25 +63,26 @@ export default function Cart() {
 					});
 				});
 			});
-	
+
+			
+
 			setCartItemsArr(tempArr);
 			//calculateTotalPrice()
-			console.log(tempArr)
+			console.log(tempArr);
+		};
 
-
-		}
-
-		
-		getAndSetData()
-
+		getAndSetData();
 	}, []);
 
 
 
-useEffect(() => {
-	calculateTotalPrice();
-	cartContext.setCartItems(cartItemsArr.length)
-})
+
+	useEffect(() => {
+		calculateTotalPrice();
+		cartContext.setCartItems(cartItemsArr.length);
+	});
+
+
 
 
 
@@ -85,75 +94,65 @@ useEffect(() => {
 
 		localStorage.setItem("price_id", resArr);
 
+		//need to edi here
+		let arr = [...cartItemsArr];
 
+		console.log(arr);
 
-        //need to edi here
-        let arr = [...cartItemsArr];
-
-        console.log(arr)
-
-        const res = arr.filter((el) => {
-            return el._id !== _id;
-        })
-
-
-
-
-
-
-
-
-
-
-
-
-
+		const res = arr.filter((el) => {
+			return el._id !== _id;
+		});
 
 		setCartItemsArr(res);
-        //calculateTotalPrice();
+		//calculateTotalPrice();
 	};
 
 
 
-    const calculateTotalPrice = () => {
-        const tPrice = cartItemsArr.reduce((acc, cur) => {
-            const price = +(cur.price?.replace('£', ''))
-            //console.log(price)
-            return acc + price;
-        }, 0)
-        console.log('calculate total price ran ' , tPrice)
-        setTotalPrice(tPrice)
-    }
+
+	const calculateTotalPrice = () => {
+		const tPrice = cartItemsArr.reduce((acc, cur) => {
+			const price = +cur.price?.replace("£", "");
+			//console.log(price)
+			return acc + price;
+		}, 0);
+		console.log("calculate total price ran ", tPrice);
+		setTotalPrice(tPrice);
+	};
 
 	return (
-		<section className="py-24 relative">
-			{cartItemsArr.length === 0 ? (
-				<div className="w-full  px-4 mx-auto text-center ">
-					<p>Your cart is empty!</p>
+		<>
+			{isLoading ? (
+				<div className="w-[100vw] h-[100vh] flex justify-center items-center">
+					<div className="w-12 h-12   rounded-full animate-spin border-2 border-solid border-orange-500 border-t-transparent"></div>
 				</div>
 			) : (
-				<div className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
-					<TopChart />
+				<section className="py-24 relative  ">
+					{cartItemsArr.length === 0 ? (
+						<div className="w-full  px-4 mx-auto text-center ">
+							<p>Your cart is empty!</p>
+						</div>
+					) : (
+						<div className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
+							<TopChart />
 
-					<CartItems
-						cartItemsArr={cartItemsArr}
-						removeFromCartHandler={removeFromCartHandler}
-					/>
+							<CartItems
+								cartItemsArr={cartItemsArr}
+								removeFromCartHandler={removeFromCartHandler}
+							/>
 
-					<TotalPrice totalPrice={totalPrice} />
-					<CheckoutBtn />
+							<TotalPrice totalPrice={totalPrice} />
+							<CheckoutBtn />
 
-
-					<SuggestedPackages setCartItemsArr={setCartItemsArr} cartItemsArr={cartItemsArr} removeFromCartHandler={removeFromCartHandler}/>
-
-
-
-
-				</div>
+							<SuggestedPackages
+								setCartItemsArr={setCartItemsArr}
+								cartItemsArr={cartItemsArr}
+								removeFromCartHandler={removeFromCartHandler}
+							/>
+						</div>
+					)}
+				</section>
 			)}
-
-
-			
-		</section>
+		</>
 	);
 }
