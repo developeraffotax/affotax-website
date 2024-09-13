@@ -1,6 +1,8 @@
 import { dataArr } from "@/data/serviceData";
+import { connectDB } from "@/lib/connectDB";
+import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 
-export default function sitemap() {
+export default async function sitemap() {
 	const locationUrls = [
 		"https://affotax.com/location/accountants-in-bradford",
 		"https://affotax.com/location/accountants-bridgend",
@@ -50,20 +52,66 @@ export default function sitemap() {
 		};
 	});
 
-	const mappedArr = dataArr.map((el) => {
-		return {
-			url: `https://affotax.com/${el.link}`,
-			lastModified: new Date(),
-			changeFrequency: "monthly",
-			priority: 0.7,
-		};
+
+
+
+
+
+
+	const db = await connectDB();
+
+
+
+	const blogsData = await Blog.find({});
+
+	const blogsSitemap = blogsData.map((el) => {
+		if (el.slug) {
+			return {
+				url: `https://affotax.com/${el.slug}`,
+				lastModified: new Date(),
+				changeFrequency: "monthly",
+				priority: 0.7,
+			};
+		} else {
+			return
+		}
+
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	const servicesData = await ServicePage.find({});
+
+	const mappedArr = servicesData.map((el) => {
+		if (el.link) {
+			return {
+				url: `https://affotax.com/${el.link}`,
+				lastModified: new Date(),
+				changeFrequency: "monthly",
+				priority: 0.7,
+			};
+		} else {
+			return
+		}
+
 	});
 
 	const sitemapArr = [
 		{
 			url: "https://affotax.com",
 			lastModified: "2024-06-04T11:28:15.949Z",
-			changeFrequency: "yearly",
+			changeFrequency: "monthly",
 			priority: 1,
 		},
 		{
@@ -93,6 +141,7 @@ export default function sitemap() {
 
 		...mappedArr,
 		...mappedLocationUrls,
+		...blogsSitemap
 	];
 
 	return sitemapArr;
