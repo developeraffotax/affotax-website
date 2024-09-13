@@ -247,7 +247,7 @@ export default function CreateBlog() {
 						/>
 
 						<label>Description</label>
-						<TextArea rows={4} placeholder="Write a short description here!" maxLength={300} value={description} onChange={(e) => setDescription(e.target.value)} />
+						<TextArea rows={4} placeholder="Write a short description here!" maxLength={1500} value={description} onChange={(e) => setDescription(e.target.value)} />
 
 						<label>Select Image</label>
 						<Upload {...props}> {" "} <Button icon={<UploadOutlined />}> Click to Upload </Button>{" "} </Upload>
@@ -258,7 +258,7 @@ export default function CreateBlog() {
 						<Input placeholder="Meta title for the blog" value={metaTitle} onChange={(e) => setMetaTitle(e.target.value)} />
 
 						<label>Meta Description</label>
-						<TextArea rows={4} placeholder="Write a short meta description here!" maxLength={300} value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} />
+						<TextArea rows={4} placeholder="Write a short meta description here!" maxLength={1500} value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} />
 
 						<label>Keywords</label>
 						<Select mode="tags" style={{ width: "100%" }} placeholder="Keywords" onChange={(value) => { console.log(value); setKeywords(value); }} value={keywords} options={[]} />
