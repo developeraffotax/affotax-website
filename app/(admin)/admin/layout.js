@@ -243,6 +243,49 @@ export default function RootLayout({ children }) {
 
           
           ]
+          },
+
+
+
+
+
+
+
+
+
+
+          {
+            key: `pricing-page-edit`,
+            
+            icon: React.createElement(FormOutlined),
+            label: `Pricing Page`,
+
+            onClick		: () => {
+              setDefaultSelectedKeys(['pricing-page-edit'])
+              setDefaultOpenKeys(['pricing-page-edit'])
+
+              router.push('/admin/pricing-page/edit')
+            },
+
+
+
+          //   children: [ 
+          //     {
+          //     key: 'service-section-create',
+          //     label: 'Create Page' ,
+          //     onClick		: () => {
+          //       setDefaultSelectedKeys(['service-section-create'])
+          //   setDefaultOpenKeys(['service-page'])
+
+          //       router.push('/admin/service-page/create')
+          //     }
+
+
+              
+          //   },
+          // ]
+
+
           }
 
 
