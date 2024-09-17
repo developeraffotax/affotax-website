@@ -1,13 +1,15 @@
 import Link from "next/link";
 import Tick from "./Tick";
 import Cross from "./Cross";
+import { BsCheckCircle } from "react-icons/bs";
+import { RxCrossCircled } from "react-icons/rx";
 
 
 
 
 
 
-export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, packageIncludes, footerText, finalArr, editingHandler, onChangeHandler, onEnterHandler}) {
+export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, packageIncludes, footerText, finalArr, editingHandler, onChangeHandler, onEnterHandler, arrHandler, isServiceEdit, serviceEditIndex}) {
 	return (
 		
 			<div className="lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none">
@@ -25,7 +27,27 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
                 {/* Here Comes the ticks and cross */}
 
 
+				{
+					finalArr?.map((el, index) => {
+						
+					})
+				}
+
+
+
+
+
+
                 {finalArr?.map((el, index) => {
+
+if (isServiceEdit && parseInt(serviceEditIndex) === index) {
+	return (
+		<div className="flex justify-center gap-2 items-center w-full p-2 border-b "> <BsCheckCircle onClick={arrHandler.add} className="text-xl hover:cursor-pointer"/> <RxCrossCircled onClick={arrHandler.remove}  className="text-xl hover:cursor-pointer"/> </div> 
+	)
+}
+						
+
+
 
                    if (packageIncludes.value?.includes(el)) {
 					return (

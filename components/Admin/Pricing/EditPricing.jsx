@@ -11,6 +11,7 @@ import { LoadingOutlined } from "@ant-design/icons";
 import { deleteNewPage } from "@/actions/whoWeHelpPage";
 import { CgDanger } from "react-icons/cg";
 import PricingTemplate from "./PricingTemplate";
+import { BsCheck2Square } from "react-icons/bs";
 
 export default function EditPricingComponent() {
 	// const [open, setOpen] = useState(false);
@@ -401,7 +402,7 @@ export default function EditPricingComponent() {
         setServiceEditIndex(index.toString());
 
 
-
+        setEditService(el)
 
 
 
@@ -412,8 +413,27 @@ export default function EditPricingComponent() {
 
     const submitServiceEditHandler = (el, index) => {
 
-       
         
+
+
+        setFinalArr((prev) => {
+
+            const newArr = [...prev];
+
+            newArr[index] = editService;
+
+            return newArr;
+
+
+
+        })
+
+        setIsServiceEdit(false);
+        setServiceEditIndex('');
+
+
+        setEditService('')
+
 
 
 
@@ -489,6 +509,174 @@ export default function EditPricingComponent() {
 
 
 
+
+
+
+
+    const firstArrHandler = {
+        add : () => {
+            setFirst((prev) => {
+
+                const newPackageIncludes = [...prev.packageIncludes.value];
+                newPackageIncludes[parseInt(serviceEditIndex)] = editService;
+    
+                return {
+                    ...prev,
+                    packageIncludes: {
+                        ...prev.packageIncludes,
+                        value: newPackageIncludes
+                    }
+                }
+            });
+
+            setIsServiceEdit(false);
+            setServiceEditIndex('');
+        },
+
+        remove: () => {
+            setFirst((prev) => {
+
+                const newPackageIncludes = [...prev.packageIncludes.value]
+                newPackageIncludes[parseInt(serviceEditIndex)] = '';
+    
+    
+                return {
+                    ...prev,
+                    packageIncludes: {
+                        ...prev.packageIncludes,
+                        value: newPackageIncludes
+                    }
+                }
+            });
+
+            setIsServiceEdit(false);
+            setServiceEditIndex('');
+        }
+    }
+
+
+
+
+
+
+
+
+    
+    const secondArrHandler = {
+        add : () => {
+            setSecond((prev) => {
+
+                const newPackageIncludes = [...prev.packageIncludes.value];
+                newPackageIncludes[parseInt(serviceEditIndex)] = editService;
+    
+                return {
+                    ...prev,
+                    packageIncludes: {
+                        ...prev.packageIncludes,
+                        value: newPackageIncludes
+                    }
+                }
+            });
+
+            setIsServiceEdit(false);
+            setServiceEditIndex('');
+        },
+
+        remove: () => {
+            setSecond((prev) => {
+
+                const newPackageIncludes = [...prev.packageIncludes.value]
+                newPackageIncludes[parseInt(serviceEditIndex)] = '';
+    
+    
+                return {
+                    ...prev,
+                    packageIncludes: {
+                        ...prev.packageIncludes,
+                        value: newPackageIncludes
+                    }
+                }
+            });
+
+            setIsServiceEdit(false);
+            setServiceEditIndex('');
+        }
+    }
+
+
+
+
+
+
+    
+    const thirdArrHandler = {
+        add : () => {
+            setThird((prev) => {
+
+                const newPackageIncludes = [...prev.packageIncludes.value];
+                newPackageIncludes[parseInt(serviceEditIndex)] = editService;
+    
+                return {
+                    ...prev,
+                    packageIncludes: {
+                        ...prev.packageIncludes,
+                        value: newPackageIncludes
+                    }
+                }
+            });
+
+            setIsServiceEdit(false);
+            setServiceEditIndex('');
+        },
+
+        remove: () => {
+            setThird((prev) => {
+
+                const newPackageIncludes = [...prev.packageIncludes.value]
+                newPackageIncludes[parseInt(serviceEditIndex)] = '';
+    
+    
+                return {
+                    ...prev,
+                    packageIncludes: {
+                        ...prev.packageIncludes,
+                        value: newPackageIncludes
+                    }
+                }
+            });
+
+            setIsServiceEdit(false);
+            setServiceEditIndex('');
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	return (
 		<>
 			<section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10 max-lg:hidden">
@@ -509,7 +697,7 @@ export default function EditPricingComponent() {
 									(el, index) => {
 										return (
 											<div className="flex justify-between items-center w-full bg-gray-100 px-2">
-                                                    <p key={`${el}--${index}--pricing-page`} className=" text-gray-900 h-12 text-start px-4 flex items-center justify-start -mt-px" > {" "} {el}{" "}  </p>   <div className="flex justify-center items-center gap-2"><BiEdit onClick={() => serviceEditHandler(el, index)} className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] hover:cursor-pointer transition-all'/> <RiDeleteBin6Line onClick={() => serviceDltHandler(el, index)} className='text-red-500 scale-150 hover:cursor-pointer active:scale-125 hover:scale-[1.7] transition-all' /></div>
+                                                    {(isServiceEdit && serviceEditIndex === index.toString()) ? <input className="px-2 rounded-md shadow-sm outline-1 outline-orange-400" value={editService} onChange={(e) => setEditService(e.target.value)} /> : <p key={`${el}--${index}--pricing-page`} className=" text-gray-900 h-12 text-start px-4 flex items-center justify-start -mt-px" > {" "} {el}{" "}  </p>}   <div className="flex justify-center items-center gap-2">{(isServiceEdit && serviceEditIndex === index.toString()) ? <BsCheck2Square  onClick={() => submitServiceEditHandler(el, index)} className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] hover:cursor-pointer transition-all'/> : <BiEdit onClick={() => serviceEditHandler(el, index)} className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] hover:cursor-pointer transition-all'/>} <RiDeleteBin6Line onClick={() => serviceDltHandler(el, index)} className='text-red-500 scale-150 hover:cursor-pointer active:scale-125 hover:scale-[1.7] transition-all' /></div>
                                                 </div>
 										);
 									}
@@ -532,9 +720,9 @@ export default function EditPricingComponent() {
 
 
 						<div className="flex lg:w-3/4 w-full flex-wrap lg:border border-gray-300 rounded-lg  ">
-							<PricingTemplate {...first} finalArr={finalArr} editingHandler={editingHandler1} onChangeHandler={onChangeHandler1} onEnterHandler={onEnterHandler1} />
-							<PricingTemplate {...second} finalArr={finalArr} editingHandler={editingHandler2} onChangeHandler={onChangeHandler2} onEnterHandler={onEnterHandler2} />
-							<PricingTemplate {...third} finalArr={finalArr} editingHandler={editingHandler3} onChangeHandler={onChangeHandler3} onEnterHandler={onEnterHandler3} />
+							<PricingTemplate {...first} finalArr={finalArr} editingHandler={editingHandler1} onChangeHandler={onChangeHandler1} onEnterHandler={onEnterHandler1} arrHandler={firstArrHandler} isServiceEdit={isServiceEdit} serviceEditIndex={serviceEditIndex}/>
+							<PricingTemplate {...second} finalArr={finalArr} editingHandler={editingHandler2} onChangeHandler={onChangeHandler2} onEnterHandler={onEnterHandler2} arrHandler={secondArrHandler} isServiceEdit={isServiceEdit} serviceEditIndex={serviceEditIndex} />
+							<PricingTemplate {...third} finalArr={finalArr} editingHandler={editingHandler3} onChangeHandler={onChangeHandler3} onEnterHandler={onEnterHandler3} arrHandler={thirdArrHandler} isServiceEdit={isServiceEdit} serviceEditIndex={serviceEditIndex}/>
 						</div>
 					</div>
 				</div>
