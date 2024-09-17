@@ -18,16 +18,16 @@ export async function POST(request) {
         console.log(pricingSection)
         //const {title, first, second, third} = pricingSection;
 
-		const doc = await PricingPage.updateOne({}, {
+		const res = await PricingPage.updateOne({}, {
             $set: {
                 ...pricingSection
             }
         })
 
 
-		console.log(doc)
+		console.log(res)
 
-		return new Response(JSON.stringify(doc), {
+		return new Response(JSON.stringify(res), {
 			status: 201,
 			headers: { "Content-Type": "application/json" },
 		});
