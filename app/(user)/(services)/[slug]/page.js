@@ -55,8 +55,9 @@ export async function generateMetadata({ params }) {
 
 			const page = await Page.findOne({ slug: params.slug });
 			if (!page) {
-				notFound()
+				//notFound()
 				//redirect("/");
+				return;
 			}
 			 metadata = {
         title: page.metaTitle,
@@ -128,7 +129,8 @@ export default async function ServicesPage({ params }) {
 
 			const page = await Page.findOne({ slug: params.slug });
 			if (!page) {
-				redirect("/");
+				notFound()
+				//redirect("/");
 			}
 
 			const jsonPage = JSON.stringify(page);
