@@ -55,7 +55,8 @@ export async function generateMetadata({ params }) {
 
 			const page = await Page.findOne({ slug: params.slug });
 			if (!page) {
-				redirect("/");
+				notFound()
+				//redirect("/");
 			}
 			 metadata = {
         title: page.metaTitle,

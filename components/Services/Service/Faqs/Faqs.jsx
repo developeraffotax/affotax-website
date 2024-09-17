@@ -41,7 +41,7 @@ const Faqs = ({ faqs }) => {
                 </AccordionItemButton>
             </AccordionItemHeading>
             <AccordionItemPanel className="p-4 bg-slate-200 rounded-lg  ">
-              {!item?.answer?.arr ? item.answer : 
+              {/* {!item?.answer?.arr ? item.answer : 
 			  <ul>
 				{item.answer.head}
 				{item.answer.arr?.map((el) => {
@@ -50,7 +50,12 @@ const Faqs = ({ faqs }) => {
 				{item.answer?.foot}
 
 
-				</ul>}
+				</ul>} */}
+				<div className="" dangerouslySetInnerHTML={{__html: item.answer}}>
+
+
+
+				</div>
             </AccordionItemPanel>
         </AccordionItem>
     ))}

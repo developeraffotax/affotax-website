@@ -888,7 +888,8 @@ const handleKeyDown = (e) => {
 						<Input className=" " placeholder="Write a Question" value={question} onChange={(e) => { setQuestion(e.target.value); }} />
 
 						<label>Answer</label>
-						<TextArea rows={4} placeholder="Write a short answer here!" maxLength={1200} value={answer} onChange={(e) => setAnswer(e.target.value)} />
+						<ReactQuill className="  " theme="snow" value={answer} onChange={setAnswer}  modules={{ toolbar: toolbarOptions}} />
+						{/* <TextArea rows={4} placeholder="Write a short answer here!" maxLength={1200} value={answer} onChange={(e) => setAnswer(e.target.value)} /> */}
 						<button onClick={faqArrHandler} type="button" className="w-11 h-11  bg-orange-50 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-500  hover:bg-orange-100" > <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M1.22229 5.00013H8.77785M5.00007 8.77791V1.22235" stroke="#e07000" stroke-width="1.6" strokeLinecap="round" strokeLinejoin="round" ></path> </svg> </button>
 					</div>
 
