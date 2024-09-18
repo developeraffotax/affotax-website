@@ -1,8 +1,12 @@
 
 
-export default function Cross() {
+export default function Cross({text='', index}) {
+
+    const isEven = index % 2 === 0;
+    
     return (
-        <p className="bg-gray-100 text-gray-600 text-center h-12 flex items-center justify-center">
+        <p className={`${isEven ? 'bg-gray-100' : 'bg-white'} text-gray-600 text-center h-12 flex items-center ${text.length === 0 ? 'justify-center' : 'justify-between'} px-4`}>
+            {text}
                     <svg
                     fill="none"
                     stroke="currentColor"

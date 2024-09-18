@@ -9,7 +9,7 @@ import { RxCrossCircled } from "react-icons/rx";
 
 
 
-export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, packageIncludes, footerText, finalArr, onClick}) {
+export default function PricingTemplateMobile({_id, pkgName, pkgPrice, pkgTurnover, packageIncludes, footerText, finalArr, onClick}) {
 	return (
 		
 			<>
@@ -36,11 +36,11 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
 
                    if (packageIncludes?.includes(el)) {
 					return (
-                       <Tick index={index} key={`${el}--${index}--pricing-template-tick`}/>
+                       <Tick text={el} index={index} key={`${el}--${index}--pricing-template-tick-mbl`}/>
                     )
 				   } else {
 					return (
-                        <Cross index={index} key={`${el}--${index}--pricing-template-cross`} />
+                        <Cross  text={el} index={index} key={`${el}--${index}--pricing-template-cross-mbl`} />
                     )
 				   }
 
