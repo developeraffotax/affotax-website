@@ -1,6 +1,6 @@
 
 
-import ChoosePackage from "./Subpages/ChoosePackage";
+import ChoosePackage from "./Subpages/ChoosePackage/ChoosePackage";
 import EmailPhone from "./Subpages/EmailPhone";
 import HomeTop from "./Subpages/HomeTop";
 import HowItWorks from "./Subpages/HowItWorks";
