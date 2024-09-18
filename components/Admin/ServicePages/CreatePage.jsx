@@ -98,13 +98,15 @@ export default function CreatePage({ pageSlug }) {
 			localStorage?.setItem('service-page-url', url)
 			console.log(url)
 
+			
+
 		} else {
 			setUrl(window?.location?.origin + "/");
 		}
 	}, []);
 
 
-
+	console.log(pricesArr)
 
 	// UPDATE / CREATE HANDLER
 	const submitHandler = async () => {
@@ -380,7 +382,7 @@ export default function CreatePage({ pageSlug }) {
 
 				newArr[index].priceTitle = priceTitle;
 				newArr[index].priceContent = priceContent;
-				newArr[index].price = price;
+				newArr[index].price = '£' + price;
 				newArr[index].packageIncludesArr = packageIncludesArr;
 
 				return newArr;
@@ -397,8 +399,8 @@ export default function CreatePage({ pageSlug }) {
 			const newPricing = {
 				priceTitle: priceTitle,
 				priceContent: priceContent,
-				price: price,
-				packageIncludesArr: packageIncludesArr,
+				price: '£' + price,
+				packageIncludes: packageIncludesArr,
 			};
 	
 			const newPricesArr = [...pricesArr, newPricing];
@@ -790,14 +792,14 @@ const handleKeyDown = (e) => {
 									<div className="w-full">
 										<div className="flex items-center justify-between ">
 											<h3 className="text-xl font-semibold "> {item.priceTitle} </h3>
-											<strong>£ {item.price}</strong>
+											<strong> {item.price}</strong>
 										</div>
 										<p className="py-2">
 											{item.priceContent}
 										</p>
 
 										<ul className="mt-2">
-											{item?.packageIncludesArr?.map(
+											{item?.packageIncludes?.map(
 												(el, index) => {
 													return ( <li key={el} className="bg-orange-100 text-orange-800 py-1 px-2 mb-2 rounded-md" > <b> {index + 1}.{" "} {el} </b> </li> );
 												}
