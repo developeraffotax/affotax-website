@@ -139,7 +139,7 @@ export default function HowItWorks() {
                 Submission to HMRC & Companies Houses
                 </h3>
                 <h4 className="mt-2 text-base text-gray-700">
-                Rest assured that our online accountants team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you.
+                Rest assured that our online accountants UK team will handle the submission of your company accounts and tax filing digitally with utmost efficiency and accuracy. We'll share the proof of submission with you for your peace of mind.
                 </h4>
                 </div>
             </li>

@@ -139,7 +139,7 @@ export default function WhyUs() {
                     Experience
                     </h2>
                     <p className="leading-relaxed text-base">
-                    We're the UK's most reliable online accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
+                    We're the UK's most reliable UK online accountants with 10+ years of expertise in handling accounting and tax necessities. Our team consists of specialists certified in XERO and QBO, UK accounting and tax consultants in dealing with HMRC and Companies House.
 
                     </p>
                     
