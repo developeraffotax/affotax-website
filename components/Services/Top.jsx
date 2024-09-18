@@ -8,7 +8,8 @@ const Top = () => {
         Our Services
         </h1>
             <p className='text-xl py-4 '>
-            Welcome to our all-inclusive professional service portfolio, designed to satisfy the various financial requirements of individuals, partnerships, limited liability programs, sole traders, and limited corporations across the United Kingdom. Our expert team works tirelessly to ensure the financial success of organisations, big and small, with everything from painstaking accounting to beautifully produced company accounts, tax filings, and VAT returns. Check out our services below.
+            Welcome to our all-inclusive professional Accountancy service portfolio, designed to satisfy the various financial requirements of individuals, partnerships, limited liability programs, sole traders, and limited corporations across the United Kingdom. Our expert team works tirelessly to ensure the financial success of organisations, big and small, with everything from painstaking accounting to beautifully produced company accounts, tax filings, and VAT returns. Check out our UK accountancy services below.
+
             </p>
         </div>
     </section>

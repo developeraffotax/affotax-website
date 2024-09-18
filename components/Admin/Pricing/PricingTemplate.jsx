@@ -37,7 +37,7 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
 
 if (isServiceEdit && parseInt(serviceEditIndex) === index) {
 	return (
-		<div className="flex justify-center gap-2 items-center w-full p-2 border-b "> <BsCheckCircle onClick={arrHandler.add} className="text-xl hover:cursor-pointer"/> <RxCrossCircled onClick={arrHandler.remove}  className="text-xl hover:cursor-pointer"/> </div> 
+		<div key={`${el}--${index}--pricing-template-editor`} className="flex justify-center gap-2 items-center w-full p-2 border-b "> <BsCheckCircle onClick={arrHandler.add} className="text-xl hover:cursor-pointer"/> <RxCrossCircled onClick={arrHandler.remove}  className="text-xl hover:cursor-pointer"/> </div> 
 	)
 }
 						
@@ -46,11 +46,11 @@ if (isServiceEdit && parseInt(serviceEditIndex) === index) {
 
                    if (packageIncludes.value?.includes(el)) {
 					return (
-                       <Tick key={`${el}--${index}--pricing-template`}/>
+                       <Tick key={`${el}--${index}--pricing-template-tick`}/>
                     )
 				   } else {
 					return (
-                        <Cross key={`${el}--${index}--pricing-template`} />
+                        <Cross key={`${el}--${index}--pricing-template-cross`} />
                     )
 				   }
 
@@ -61,7 +61,7 @@ if (isServiceEdit && parseInt(serviceEditIndex) === index) {
 
 
 				<div className="border-t border-gray-300 p-6 text-center rounded-bl-lg">
-					<Link href={"/cart"}> <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded"> Buy Now <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-1 mt-1" viewBox="0 0 24 24" > <path d="M5 12h14M12 5l7 7-7 7" /> </svg> </button> </Link>
+					  <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none hover:bg-primary rounded"> Buy Now <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-1 mt-1" viewBox="0 0 24 24" > <path d="M5 12h14M12 5l7 7-7 7" /> </svg> </button> 
 					
 						{!footerText.isEditing ? <p className="text-xs text-gray-500 mt-3" onClick={editingHandler?.footerText}>{footerText.value}</p> : <textarea  onKeyDown={onEnterHandler} className="text-center  border-none ring-2 ring-gray-300 rounded-lg p-2 w-full shadow-md shadow-black/30   outline-none focus:ring-blue-500   transition duration-300" name="footerText" value={footerText.value} onChange={onChangeHandler}/>}
 					

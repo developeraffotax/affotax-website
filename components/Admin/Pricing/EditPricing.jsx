@@ -753,7 +753,7 @@ export default function EditPricingComponent() {
 								{finalArr.map(
 									(el, index) => {
 										return (
-											<div className="flex justify-between items-center w-full  px-2">
+											<div key={`${el}--${index}--finalArr-template--pricing-admin`} className="flex justify-between items-center w-full  px-2">
                                                     {(isServiceEdit && serviceEditIndex === index.toString()) ? <input className="px-2 rounded-md shadow-sm outline-none py-1 border-none ring-2 focus:ring-teal-500   ring-gray-400" value={editService} onChange={(e) => setEditService(e.target.value)} /> : <p key={`${el}--${index}--pricing-page`} className=" text-gray-900 h-12 text-start px-4 flex items-center justify-start -mt-px" > {" "} {el}{" "}  </p>}   <div className="flex justify-center items-center gap-2">{(isServiceEdit && serviceEditIndex === index.toString()) ? <BsCheck2Square  onClick={() => submitServiceEditHandler(el, index)} className='text-teal-500 scale-150 active:scale-125 hover:scale-[1.7] hover:cursor-pointer transition-all'/> : <BiEdit onClick={() => serviceEditHandler(el, index)} className='text-teal-500 scale-150 active:scale-125 hover:scale-[1.7] hover:cursor-pointer transition-all'/>} <RiDeleteBin6Line onClick={() => serviceDltHandler(el, index)} className='text-red-500 scale-150 hover:cursor-pointer active:scale-125 hover:scale-[1.7] transition-all' /></div>
                                                 </div>
 										);
@@ -761,7 +761,7 @@ export default function EditPricingComponent() {
 								)}
 							</div>
 
-                            <button onClick={showModal} type="button" className="mt-3 w-full h-11  bg-orange-50 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-500  hover:bg-orange-100" > <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M1.22229 5.00013H8.77785M5.00007 8.77791V1.22235" stroke="#e07000" stroke-width="1.6" strokeLinecap="round" strokeLinejoin="round" ></path> </svg> </button>
+                            <button onClick={showModal} type="button" className="mt-3 w-full h-11  bg-orange-50 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-500  hover:bg-orange-100" > <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M1.22229 5.00013H8.77785M5.00007 8.77791V1.22235" stroke="#e07000" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" ></path> </svg> </button>
 
 
                             <Modal centered title="Enter New Service Here" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
