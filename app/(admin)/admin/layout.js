@@ -71,6 +71,7 @@ export default function RootLayout({ children }) {
             
             icon: React.createElement(UserOutlined),
             label: `Blogs`,
+            
             children: [ 
               {
               key: 'blog1',
@@ -97,16 +98,19 @@ export default function RootLayout({ children }) {
             }]
           },
 
+          {
+            type: 'divider',
+          },
 
           {
             key: `page`,
             
             icon: React.createElement(FormOutlined),
-            label: `Pages`,
+            label: `Who we help`,
             children: [ 
               {
               key: 'section',
-              label: 'Create a new Page (Who We Help)' ,
+              label: 'Create new' ,
               children: [
 
                 {
@@ -192,7 +196,7 @@ export default function RootLayout({ children }) {
           
             {
               key: 'sub4',
-              label: 'View Pages (Who We Help)' ,
+              label: 'View Pages' ,
               onClick		: () => router.push('/admin/view-pages')
             }]
           },
