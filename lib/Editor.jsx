@@ -7,7 +7,12 @@ import QuillResizeImage from "quill-resize-image";
 Quill.register("modules/resize", QuillResizeImage);
 
 export function CustomEditor({ value, setValue }) {
+
+
 	const modules = {
+
+		
+
 		toolbar: [
 			["bold", "italic", "underline", "strike"], // toggled buttons
 			["blockquote", "code-block"],

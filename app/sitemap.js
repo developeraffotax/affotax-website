@@ -41,6 +41,21 @@ export default async function sitemap() {
 		"https://affotax.com/location/northern-ireland",
 		"https://affotax.com/location/scotland",
 		"https://affotax.com/location/wales",
+
+		//also adding the static who-we-help sitemap here
+		"https://affotax.com/location/sole-traders",
+		"https://affotax.com/location/limited-companies",
+		"https://affotax.com/location/partnerships",
+		"https://affotax.com/location/limited-liability-partnerships",
+		"https://affotax.com/location/contractor-accountants",
+		"https://affotax.com/location/small-business-accountants",
+		"https://affotax.com/location/xero-accountants",
+		"https://affotax.com/location/ecommerce-accountants",
+		"https://affotax.com/location/property-accountants",
+		"https://affotax.com/location/freelance-accountants",
+		"https://affotax.com/location/accountants-near-me",
+		"https://affotax.com/location/cheap-accountants",
+		"https://affotax.com/location/p60-form",
 	];
 
 	// Sitemap of Location Pages
