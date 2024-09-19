@@ -1,11 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import HeroImg from "@/public/xero1.png";
-import SmallBiz from "@/public/smallbiz.png";
-import SmallBiz2 from "@/public/smallbiz2.png";
-import CloudAcc from "@/public/cloudacc.png";
-import { useScroll } from "@react-spring/web";
+
 
 
 
@@ -19,9 +15,9 @@ export default function ContentWithImage({slug, heading, html, imageUrl, imagePo
 					
 
 					<div className="mt-4 max-w-2xl  flex   flex-col items-start justify-start  w-[60%] max-lg:w-full  ">
-						<h1 className="pb-4   leading-relaxed text-start max-lg:text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
+						<h2 className="pb-4   leading-relaxed text-start max-lg:text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
 							{heading}
-						</h1>
+						</h2>
 						<span className=" text-start text-xl leading-relaxed text-gray-800" dangerouslySetInnerHTML={{__html: html}}>
 							
 						</span>
