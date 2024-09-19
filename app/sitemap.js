@@ -56,6 +56,8 @@ export default async function sitemap() {
 		"https://affotax.com/location/accountants-near-me",
 		"https://affotax.com/location/cheap-accountants",
 		"https://affotax.com/location/p60-form",
+
+		"https://affotax.com/blogs",
 	];
 
 	// Sitemap of Location Pages

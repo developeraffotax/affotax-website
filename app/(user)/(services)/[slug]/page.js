@@ -20,8 +20,9 @@ import Template from "@/components/WhoWeHelp/Template";
 import Page from "@/lib/Model/Page/Page";
 import { connectDB } from "@/lib/connectDB";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
+import Head from "next/head";
 
-// GENERATING THE DYNAMIC META DATA
+//GENERATING THE DYNAMIC META DATA
 export async function generateMetadata({ params }) {
 
   let metadata;
@@ -55,9 +56,9 @@ export async function generateMetadata({ params }) {
 
 			const page = await Page.findOne({ slug: params.slug });
 			if (!page) {
-				//notFound()
+				notFound()
 				//redirect("/");
-				return;
+				//return;
 			}
 			 metadata = {
         title: page.metaTitle,
@@ -104,6 +105,8 @@ export async function generateMetadata({ params }) {
 // SERVICES PAGE AND WHO WE HELP PAGES HERE
 
 export default async function ServicesPage({ params }) {
+
+
 	let render;
 
 	const location = params.slug;
@@ -127,7 +130,9 @@ export default async function ServicesPage({ params }) {
 
 
 
-	// SERVICES PAGES
+
+
+	//Servei pages
 	if (!render) {
 
 		const db = await connectDB();
@@ -141,6 +146,7 @@ export default async function ServicesPage({ params }) {
 			if (!page) {
 				notFound()
 				//redirect("/");
+				return
 			}
 
 			const jsonPage = JSON.stringify(page);
