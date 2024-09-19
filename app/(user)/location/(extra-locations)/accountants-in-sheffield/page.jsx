@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Accountants in Sheffield | Top Sheffield Accountants",
 	description:
 		"Looking for accountants Sheffield? We are accountants in Sheffield ready to help you in accounts & tax filing. Chat with expert Sheffield accountants now!",
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-sheffield`, },
 };
 
 export default function Sheffield() {
@@ -71,9 +72,9 @@ export default function Sheffield() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Why choose our accountants in Sheffield?
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -195,9 +196,9 @@ export default function Sheffield() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							What do our online Leeds accountants offer?
-						</h1>
+						</h2>
 
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -287,9 +288,9 @@ export default function Sheffield() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 							Talk to expert accountants Sheffield!
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 							Contact us today for reliable, proactive, and
 							personalised financial services to learn how we can

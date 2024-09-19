@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Affordable Accountants in Swansea | Top Accountants Swansea",
 	description:
 		"Grow your business with our accountants in Swansea. Manage your accounting and tax filing expertly with our accountants Swansea.",
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-swansea`, },
 };
 
 export default function Swansea() {
@@ -73,9 +74,9 @@ export default function Swansea() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Here's what sets our accountants in Swansea apart:
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -197,9 +198,9 @@ export default function Swansea() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Why choose our Swansea accountants?
-						</h1>
+						</h2>
 						<p className="text-sm">
 							Finding reliable accountants in Swansea can make a
 							big difference to your company. Below are a few
@@ -287,9 +288,9 @@ export default function Swansea() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 							Ready to chat?
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 							Affotax's chartered accountants in Swansea take the
 							accounting and tax filing burden off your shoulders.

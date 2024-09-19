@@ -4,6 +4,13 @@ import EmailPhone from '@/components/Home/Subpages/EmailPhone'
 import { connectDB } from '@/lib/connectDB';
 import PricingPage from '@/lib/Model/PricingPage/PricingPage';
 
+
+export const metadata = {
+	title: 'Pricing Page | Affotax',
+	description: '',
+   metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/pricing`, },}
+
+
 const PricingPageServer = async () => {
 
 

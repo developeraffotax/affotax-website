@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Bristol Accountancy | Chartered Accountants Bristol",
 	description:
 		"Looking for reliable accountants in Bristol? We are expert accountants Bristol, ready to help your business grow. Contact our Bristol accountants today!",
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-bristol`, },
 };
 
 export default function Bristol() {
@@ -68,9 +69,9 @@ export default function Bristol() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Why choose our accountants Bristol?
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -189,9 +190,9 @@ export default function Bristol() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							What do our Bristol accountants offer?
-						</h1>
+						</h2>
 
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -269,9 +270,9 @@ export default function Bristol() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 							Talk to reliable accountants Bristol!
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 							We are one of the most affordable accountancy firms
 							Bristol. By partnering with our Bristol accountants,

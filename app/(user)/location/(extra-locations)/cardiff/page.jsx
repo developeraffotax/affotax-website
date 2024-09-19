@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Reliable Accountants in Cardiff | Accounting & Tax Filing",
 	description:
 		"Looking for reliable accountants in Cardiff? We are online Cardiff accountants providing accounting & tax filing services in Cardiff or anywhere in the UK.",
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/cardiff`, },
 };
 
 export default function Cardiff() {
@@ -74,9 +75,9 @@ export default function Cardiff() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Why choose our accountants in Cardiff?
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -194,9 +195,9 @@ export default function Cardiff() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							What our Cardiff accountants offer
-						</h1>
+						</h2>
 						<p className="text-sm">
 							Here are a few reasons why our Cardiff accountants
 							could be the game changer for you:
@@ -278,9 +279,9 @@ export default function Cardiff() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 							Ready to chat?
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 							Send us a message today, and our online expert
 							accountants in Cardiff will respond to you

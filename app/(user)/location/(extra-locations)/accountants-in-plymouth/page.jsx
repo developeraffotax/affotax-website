@@ -10,6 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Accountants Plymouth – Accountants in Plymouth, Devon",
 	description: "Looking for accountants in Plymouth, Devon? We're here! Chartered accountants Plymouth with 10+ years of expertise. Contact our Plymouth accountants now!",
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-plymouth`, },
 };
 
 export default function Plymouth() {
@@ -62,10 +63,10 @@ export default function Plymouth() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 						Why choose our accountants Plymouth?
 
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -168,10 +169,10 @@ export default function Plymouth() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 						What our Plymouth accountants offer
 
-						</h1>
+						</h2>
 							<p className="text-sm">
 							As the premier choice for accountants in Plymouth, we are dedicated to being your trusted partner in achieving financial success. Here's why businesses in Plymouth rely on our expertise:
 
@@ -244,10 +245,10 @@ export default function Plymouth() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 						Talk to reliable accountants Plymouth!
 
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 						Here at Affotax, we provide businesses with expert and dedicated personalised service on their way to success. Contact us today for learning more about our comprehensive accountancy and tax filing services, and take the first step towards a brighter financial future.
 

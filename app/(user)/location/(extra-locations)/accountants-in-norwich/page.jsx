@@ -10,6 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Accountants in Norwich | Norwich Accountancy Services",
 	description: "We're expert accountants in Norwich, providing Norwich accountancy services in the UK. Let us manage your accounting & tax filing needs. Contact us today!",
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-norwich`, },
 };
 
 export default function Norwich() {
@@ -66,9 +67,9 @@ export default function Norwich() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Why choose our Norwich accountancy services?
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -171,9 +172,9 @@ export default function Norwich() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							What our Norwich Accountants offer
-						</h1>
+						</h2>
 
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -248,9 +249,9 @@ export default function Norwich() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 							Talk to expert accountants in Norwich!
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 							Affotax can provide you with a group of skilled
 							Norwich accountants that are committed to making

@@ -10,6 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants Leeds | Top Accountants in Leeds",
 	description: "Looking for accountants Leeds? You're a click away from our Leeds accountants. Manage your accounting & tax filing with our expert accountants in Leeds.",
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-leeds`, },
 };
 
 export default function Leeds() {
@@ -73,9 +74,9 @@ export default function Leeds() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Why choose our accountants in Leeds?
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -190,9 +191,9 @@ export default function Leeds() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							What do our online Leeds accountants offer?
-						</h1>
+						</h2>
 
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
@@ -272,9 +273,9 @@ export default function Leeds() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 							Chat with expert accountants in West London!
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 							Let our accountants in West London transform the way
 							you handle your finances. Send us a message for an

@@ -6,6 +6,7 @@ export const metadata = {
 	title: "Online Chartered Accountants in Scotland Ready to Service",
 	description:
 		"We are the most affordable chartered accountants in Scotland. Your financial matters are taken care of expertly by our Scotland accountants with precision.",
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/scotland`, },
 };
 
 export default function Scotland() {

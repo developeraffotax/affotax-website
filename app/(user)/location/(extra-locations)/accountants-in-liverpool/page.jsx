@@ -10,6 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants in Liverpool - Affotax",
 	description: "Talk to chartered accountants Liverpool - let your finances be managed by the experts. Accounting & tax filing is simplified by our Liverpool accountants.",
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-liverpool`, },
 };
 
 export default function Liverpool() {
@@ -70,9 +71,9 @@ export default function Liverpool() {
 			<section className="bg-slate-50 py-12 sm:py-16 lg:py-12 xl:py-12 w-full drop-shadow-lg px-80 max-2xl:px-40 max-xl:px-20  max-lg:px-8  ">
 				<div className="mx-auto max-w-7xl px-4  max-lg:px-4">
 					<div className="text-center mb-12">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							Why choose our accountants Liverpool?
-						</h1>
+						</h2>
 						<div className="flex mt-6 justify-center">
 							<div className="w-16 h-1 rounded-full bg-primary inline-flex" />
 						</div>
@@ -184,9 +185,9 @@ export default function Liverpool() {
 			<section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
 				<div className="container px-5 py-12 mx-auto">
 					<div className="text-center mb-16">
-						<h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
+						<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 							What sets apart our Liverpool accountants?
-						</h1>
+						</h2>
 						<p className="text-sm">
 							We take a comprehensive approach to your business
 							needs by offering you an online suite of accounting
@@ -273,9 +274,9 @@ export default function Liverpool() {
 					</div>
 
 					<div className=" mt-20  text-center items-center bg-slate-50 w-full rounded-xl p-12 max-lg:p-6 drop-shadow-md ">
-						<h1 className=" title-font text-3xl font-semibold ">
+						<h2 className=" title-font text-3xl font-semibold ">
 							Chat with reliable accountants Liverpool!
-						</h1>
+						</h2>
 						<p className="mt-4 text-md ">
 							Get in touch with us today to experience the peace
 							of mind of excellent online accountancy and tax

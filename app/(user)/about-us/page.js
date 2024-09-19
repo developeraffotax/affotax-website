@@ -5,7 +5,8 @@ import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
    title: 'About Us',
-   description: 'Affotax Ltd: Your trusted UK-based accountancy partner for affordable online accounting and tax services. Our expert team works with Companies House and HMRC.'
+   description: 'Affotax Ltd: Your trusted UK-based accountancy partner for affordable online accounting and tax services. Our expert team works with Companies House and HMRC.',
+   metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/about-us`, },
 }
 
 
