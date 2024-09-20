@@ -55,7 +55,7 @@ export default async function sitemap() {
 		"https://affotax.com/freelance-accountants",
 		"https://affotax.com/accountants-near-me",
 		"https://affotax.com/cheap-accountants",
-		"https://affotax.com/p60-form",
+		
 
 		"https://affotax.com/blogs",
 		"https://affotax.com/services",

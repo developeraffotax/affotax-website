@@ -8,8 +8,10 @@ import { v4 as uuid } from "uuid";
 import Image from "next/image";
 import Form from '@/public/formp60.png'
 import Bulb from '@/public/bulbp60.png'
+import { connectDB } from "@/lib/connectDB";
+import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 
-export default function P45Form() {
+export default async function P45Form({jsonData}) {
 
     let data1 = [
         'Salary', 'Bonuses', 'Statutory pay', 'The tax you paid via PAYE', 'National Insurance Contributions (NIC)', 'Student loan repayments'
@@ -19,11 +21,13 @@ export default function P45Form() {
         'Applying for a mortgage', 'Applying for a bank loan', 'Doing a self-assessment tax return', 'Claiming overpaid taxes or benefits', 
     ]
 
+    const p60Data = JSON.parse(jsonData)
 
+    // let p60Data = dataArr.filter((el) => el.link === 'p60-form')[0];
 
-    let p60Data = dataArr.filter((el) => el.link === 'p60-form')[0];
+    // console.log(p60Data)
 
-    console.log(p60Data)
+   
 
 
 
@@ -81,12 +85,14 @@ export default function P45Form() {
             </div>
         </section>
            
-            <PriceBoxes prices={p60Data.prices} pageTitle={p60Data.title}/>
+           <div>
+           <PriceBoxes prices={p60Data.prices} pageTitle={p60Data.title}/>
             <Benefits
                 benefitsTitle={p60Data.benefitsTitle}
                 benefits={p60Data.benefits}
             />
             <Faqs faqs={p60Data.faqs.map((el) => ({...el, key: uuid()}))} />
+           </div>
         </div>
     );
 

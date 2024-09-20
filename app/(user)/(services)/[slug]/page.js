@@ -41,7 +41,7 @@ export async function generateMetadata({ params }) {
 		case "accountants-near-me": return (metadata = { title: "Affordable and Cheap Accounting Services", description: "When searching for 'accountants near me,' it's essential to choose professionals who understand the local financial landscape and can offer personalized services.", metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/${params.slug}`, }, });
 		case "cheap-accountants": return (metadata = { title: "UK Sole Traders Services for Accounting & Tax Filing", description: "Welcome to our accountancy website, your go-to destination for cheap accountants who provide top-tier services without breaking the bank. Whether you’re a small business owner, a freelancer, or an individual seeking expert financial management, our team of affordable accountants is here to meet all your accounting needs. ", metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/${params.slug}`, }, });
 
-		case "p60-form": return (metadata = { title: "UK Sole Traders Services for Accounting & Tax Filing", description: "UK sole trader business with Affotax's expert accounting and tax filing services. Simplify your finances, maximize profits, and ensure HMRC compliance", metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/${params.slug}`, }, });
+		case "p60-form": return (metadata = { title: "P45 and P60 Form", description: "Officially known as 'Details of Employee Leaving Work', the P45 form is an important document that is issued to you by your employer after you decide to leave your job. It is important because it shows HMRC how much tax and National Insurance Contributions (NIC) has been paid by you through your salary (PAYE) within the tax year up until your last day at work. Also, you may need your P45 form when you claim tax refunds and benefits.", metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/${params.slug}`, }, });
 	}
 
 
@@ -125,7 +125,7 @@ export default async function ServicesPage({ params }) {
 		case "accountants-near-me": return (render = <AccountantsNearMe />);
 		case "cheap-accountants": return (render = <CheapAccountants />);
 
-		case "p60-form": return (render = <P45Form />);
+		// case "p60-form": return (render = <P45Form />);
 	}
 
 
@@ -153,8 +153,12 @@ export default async function ServicesPage({ params }) {
 			render = <Template jsonPage={jsonPage} />;
 
 		} else {
+			if (params.slug === 'p60-form') {
+				render = <P45Form jsonData={JSON.stringify(serviceData)} />
+			} else {
 
-			render = <Service jsonData={JSON.stringify(serviceData)} />;
+				render = <Service jsonData={JSON.stringify(serviceData)} />;
+			}
 		}
 	}
 
