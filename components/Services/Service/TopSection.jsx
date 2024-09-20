@@ -4,9 +4,9 @@ import React from "react";
 
 const TopSection = ({ title, content }) => {
 
-    let html = content.html || null;
+    //let html = content.html || null;
 
-    console.log(html)
+    
     
 
 
@@ -16,7 +16,7 @@ const TopSection = ({ title, content }) => {
                 <h1 className="text-3xl font-semibold ">{title}</h1>
 
                 {
-                    html ? <p dangerouslySetInnerHTML={{__html: html}}  ></p> : <p>{content}</p>
+                    <div dangerouslySetInnerHTML={{__html: content}}  ></div>
                 }
             </div>
         </section>

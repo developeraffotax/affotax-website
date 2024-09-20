@@ -3,21 +3,16 @@
 import "react-quill/dist/quill.snow.css";
 import ReactQuill, { Quill } from "react-quill";
 import QuillResizeImage from "quill-resize-image";
-import QuillBetterTable from 'quill-better-table'
-import * as QuillTableUI from 'quill-table-ui'
 
-import { useEffect, useRef, useState } from "react";
 
 Quill.register("modules/resize", QuillResizeImage);
-Quill.register({
-	'modules/tableUI': QuillTableUI.default
-  }, true)
+
 
 export function CustomEditor({ value, setValue }) {
 
 
 
-	const quillRef = useRef(null)
+
 	
 
 	
@@ -28,21 +23,9 @@ export function CustomEditor({ value, setValue }) {
 	const modules = {
 
 
-	// 'better-table': {
-    //     operationMenu: {
-    //         items: {
-    //             unmergeCells: {
-    //                 text: 'Another unmerge cells name'
-    //             }
-    //         }
-    //     }
-    // },
-    // keyboard: {
-    //     bindings: QuillTableUI.keyboardBindings
-    // },
-
+	
 		
-		// tableUI: true,
+		 
 
 
 
@@ -81,37 +64,16 @@ export function CustomEditor({ value, setValue }) {
 
 
 
-	// useEffect(() => {
-	// 	console.log(quillRef.current)
-
-	// 	// /this.quillRef.getEditor().getModule('better-table');
-
-	// 	// const quill = quillRef.current.getEditor();
-	// 	// const table = QuillBetterTable.createTable(3, 3); // Example: create a 3x3 table
-	// 	// quill.insertEmbed(quill.getSelection().index, 'table', table);
-
-		
+	
 
 
-	// }, [])
-
-
-
-
-
-	// const addTable = () => {
-
-
-
-
-	// }
 
 
 
 	return (
 		<>
-		<ReactQuill ref={quillRef} className="w-full" theme="snow" value={value} onChange={setValue} modules={modules} />
-		{/* <button onClick={addTable}>Add Table</button> */}
+		<ReactQuill className="w-full" theme="snow" value={value} onChange={setValue} modules={modules} />
+		
 		</>
 	);
 }
