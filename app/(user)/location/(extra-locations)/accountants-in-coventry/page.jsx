@@ -9,7 +9,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Accountants Coventry UK | Expert Accountants in Coventry",
 	description: "Looking for reliable accountants Coventry UK? We're expert accountants in Coventry ready to help businesses succeed. Contact our Coventry accountants now!",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-coventry`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-coventry`, },
 };
 
 export default function Coventry() {

@@ -12,7 +12,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Reliable and Online Accountants in East London",
 	description: "Looking for affordable & reliable online accountants in East London? Affotax offers professional accounting services at affordable rates. Contact us today!",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-east-london`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-east-london`, },
 };
 
 export default function EastLondon() {

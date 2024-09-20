@@ -10,7 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants in Liverpool - Affotax",
 	description: "Talk to chartered accountants Liverpool - let your finances be managed by the experts. Accounting & tax filing is simplified by our Liverpool accountants.",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-liverpool`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-liverpool`, },
 };
 
 export default function Liverpool() {

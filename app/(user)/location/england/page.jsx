@@ -7,7 +7,7 @@ export const metadata = {
 	title: "Get in Touch with Expert Accountants in England Today!",
 	description:
 		"Looking for reliable England-based accountants? We are a team of expert online accountants in England providing tax filing & accounting services in the UK.",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/england`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/england`, },
 };
 
 export default function England() {

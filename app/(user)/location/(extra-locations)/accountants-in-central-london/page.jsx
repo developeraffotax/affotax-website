@@ -12,7 +12,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants in Central London - Affotax!",
 	description: "Looking for chartered accountants in Central London? Look no further! We're expert accountants in London Central ready to help your accounts & tax filings.",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-central-london`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-central-london`, },
 };
 
 

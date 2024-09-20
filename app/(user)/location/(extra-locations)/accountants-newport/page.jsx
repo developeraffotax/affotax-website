@@ -17,7 +17,7 @@ export const metadata = {
 	title: "Chartered Accountants Newport | Top Accountants in Newport",
 	description:
 		"Looking for chartered accountants Newport? Simplify your accounting and tax filing needs with expert accountants in Newport; UK's most affordable services.",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-newport`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-newport`, },
 };
 
 export default function Newport() {

@@ -7,7 +7,7 @@ import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, ic
 export const metadata = {
 	title: "Talk to Our Online Chartered Accountants in Manchester",
 	description: "Looking for Manchester accountants? Our chartered accountants in Manchester provide accounting and tax filing services at an affordable price in the UK.",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/manchester`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/manchester`, },
 };
 
 export default function Manchester() {

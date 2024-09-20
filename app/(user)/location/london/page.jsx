@@ -19,7 +19,7 @@ export const metadata = {
 	title: "Online Accountants in London for Small Businesses",
 	description:
 		"Grow your small business with expert online accountants in London. Free consultation & customised packages by the best London accountants. Contact us today!",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/london`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/london`, },
 };
 
 export default function London() {

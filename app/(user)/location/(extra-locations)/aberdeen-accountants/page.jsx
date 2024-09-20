@@ -17,7 +17,7 @@ export const metadata = {
 	title: "Aberdeen Accountants; Chartered Accountants in Aberdeen",
 	description:
 		"We are reliable & affordable accountants in Aberdeen ready to handle your accounting & tax filing needs. Contact our chartered Aberdeen accountants today!",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/aberdeen-accountants`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/aberdeen-accountants`, },
 };
 
 export default function Aberdeen() {

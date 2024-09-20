@@ -11,7 +11,7 @@ export const metadata = {
 	title: "Accountants in Sheffield | Top Sheffield Accountants",
 	description:
 		"Looking for accountants Sheffield? We are accountants in Sheffield ready to help you in accounts & tax filing. Chat with expert Sheffield accountants now!",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-sheffield`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-sheffield`, },
 };
 
 export default function Sheffield() {

@@ -10,7 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Nottingham Accounting | Chartered Accountants Nottingham",
 	description: "Looking for accountants in Nottingham? We're chartered accountants Nottingham, ready to manage your tax & finances. Contact our Nottingham accountants now!",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-nottingham`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-nottingham`, },
 };
 
 export default function Nottingham() {

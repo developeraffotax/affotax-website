@@ -15,7 +15,7 @@ export const metadata = {
 	title: "Online Chartered Accountants in Wales, United Kingdom",
 	description:
 		"Looking for qualified and convenient accountants in Wales? Click here; you're in the right place - free quotes & expert financial advice for your business.",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/wales`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/wales`, },
 };
 
 export default function Wales() {

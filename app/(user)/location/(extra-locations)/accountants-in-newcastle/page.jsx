@@ -10,7 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants Newcastle Upon Tyne - Affotax",
 	description: "Welcome to one of the most affordable accounting firms Newcastle! We're chartered accountants Newcastle Upon Tyne, ready to help UK small businesses.",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-newcastle`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-newcastle`, },
 };
 
 export default function NewCastle() {

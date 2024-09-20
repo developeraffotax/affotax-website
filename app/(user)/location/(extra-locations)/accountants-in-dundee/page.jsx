@@ -17,7 +17,7 @@ export const metadata = {
 	title: "Accountants in Dundee Scotland | Top Accountants Dundee",
 	description:
 		"We're one of the leading accountancy firms in Dundee. Manage finances with our expert accountants in Dundee. Tax filing made simple by our accountants Dundee.",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-dundee`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-dundee`, },
 };
 
 export default function Dundee() {

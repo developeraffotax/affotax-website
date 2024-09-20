@@ -11,7 +11,7 @@ export const metadata = {
 	title: "Accountants in Bradford, West Yorkshire - Affotax",
 	description:
 		"Looking for accountants in Bradford, West Yorkshire? We're the experts, ready to manage your accounting & tax filing - contact our Bradford accounts today!",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-bradford`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-bradford`, },
 };
 
 export default function Bradford() {

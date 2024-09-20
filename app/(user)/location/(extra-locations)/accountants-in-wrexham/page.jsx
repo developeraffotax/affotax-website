@@ -11,7 +11,7 @@ export const metadata = {
 	title: "Chartered Accountants Wrexham | Top Wrexham Accountants",
 	description:
 		"Looking for chartered accountants Wrexham? Our Wrexham accountants help businesses thrive. Manage accounts & tax filing with expert accountants in Wrexham.",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-wrexham`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-wrexham`, },
 };
 
 export default function Wrexham() {

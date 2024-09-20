@@ -10,7 +10,7 @@ import { hero, icon1, icon2, icon3, icon4, } from "@/public/assets/extra-locatio
 export const metadata = {
 	title: "Accountants Glasgow; Chartered Accountants in Glasgow",
 	description: "Expert accountants in Glasgow, ready to manage your accounts & tax filings in the UK. Our chartered Glasgow accountants are the most affordable & reliable.",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-glasgow`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-glasgow`, },
 };
 
 export default function Glasgow() {

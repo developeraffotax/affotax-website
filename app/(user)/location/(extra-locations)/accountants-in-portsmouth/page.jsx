@@ -10,7 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants in Portsmouth, UK - Affotax",
 	description: "Looking for expert accountants in Portsmouth, UK? We're reliable accountants helping UK businesses grow - chat with expert Portsmouth accountants today!",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-portsmouth`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-portsmouth`, },
 };
 
 export default function Portsmouth() {

@@ -11,7 +11,7 @@ export const metadata = {
 	title: "Chartered Accountants in Southampton, UK - Affotax",
 	description:
 		"Looking for chartered accountants in Southampton, UK? We're here: expert team of Southampton accountants ready to manage accounting & tax filing in the UK.",
-		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-southampton`, },
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-southampton`, },
 };
 
 export default function Southampton() {

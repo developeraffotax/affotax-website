@@ -10,7 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants in Leicester - Affotax",
 	description: "Looking for accountants in Leicester? Explore our online accounting & tax filing services for smooth experience. Contact our Leicester accountants today!",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-leicester`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-leicester`, },
 };
 
 export default function Leicester() {

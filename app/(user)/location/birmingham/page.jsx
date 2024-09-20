@@ -5,7 +5,7 @@ import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, } from "@
 export const metadata = {
 	title: "Online Accountants in Birmingham | Boost Your Finances",
 	description: "Boost your finances with our online accountants in Birmingham. Get expert advice & cheap accounting services from our Birmingham accountants to reach success.",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/birmingham`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/birmingham`, },
 };
 
 export default function Birmingham() {

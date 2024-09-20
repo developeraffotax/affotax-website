@@ -10,7 +10,7 @@ import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-location
 export const metadata = {
 	title: "Chartered Accountants Leeds | Top Accountants in Leeds",
 	description: "Looking for accountants Leeds? You're a click away from our Leeds accountants. Manage your accounting & tax filing with our expert accountants in Leeds.",
-	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/accountants-in-leeds`, },
+	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-leeds`, },
 };
 
 export default function Leeds() {
