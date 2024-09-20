@@ -83,7 +83,7 @@ export default async function sitemap() {
 	 })
 	 .map((el) => {
 		 return {
-			 url: `https://affotax.com/${el.slug}`,
+			 url: `https://affotax.com/blog/${el.slug}`,
 			 lastModified: new Date(),
 			 changeFrequency: "monthly",
 			 priority: 0.7,

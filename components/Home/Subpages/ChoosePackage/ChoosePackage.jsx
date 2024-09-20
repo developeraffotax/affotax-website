@@ -42,16 +42,6 @@ export default function ChoosePackage({pricingPage}) {
 
 
 
-
-
-
-
-
-
-
-
-
-
   return (
     
     <>
@@ -59,9 +49,9 @@ export default function ChoosePackage({pricingPage}) {
     <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10 max-lg:hidden">
          <div className="container  py-16 mx-auto">
             <div className="text-center mb-12">
-                <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900  mb-4">
+                <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900  mb-4">
                     {title}
-                </h1>
+                </h2>
                 <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
                 </div>
