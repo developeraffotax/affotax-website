@@ -9,6 +9,7 @@ export const metadata = {
 	title: "Blogs | Affotax",
 	description:
 		`Discover a wealth of knowledge on our blogs page, featuring the latest updates, expert tips, and insightful articles on Accounting. Whether you're looking for in-depth guides or quick reads, we have content to keep you informed and inspired. `,
+    metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/blogs`, },
 };
 
 

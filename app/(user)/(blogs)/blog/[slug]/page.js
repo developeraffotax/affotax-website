@@ -18,6 +18,7 @@ export async function generateMetadata({ params }) {
 		title: blog?.metaTitle || '',
 		description: blog?.metaDescription | '',
 		keywords: blog?.keywords | [] ,
+		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/blog/${blog?.slug}`, },
 	};
 }
 
