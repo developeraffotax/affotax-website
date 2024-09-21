@@ -13,6 +13,7 @@ export const metadata = {
 	title: "Chartered Accountants in Central London - Affotax!",
 	description: "Looking for chartered accountants in Central London? Look no further! We're expert accountants in London Central ready to help your accounts & tax filings.",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-central-london`, },
+	keywords: ['accountants in central london']
 };
 
 

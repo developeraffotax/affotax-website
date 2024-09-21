@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Nottingham Accounting | Chartered Accountants Nottingham",
 	description: "Looking for accountants in Nottingham? We're chartered accountants Nottingham, ready to manage your tax & finances. Contact our Nottingham accountants now!",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-nottingham`, },
+	keywords: ['accountants in Nottingham']
 };
 
 export default function Nottingham() {

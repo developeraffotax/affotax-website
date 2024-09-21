@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Chartered Accountants in Greenwich London - Affotax",
 	description: "Manage your accounts and tax filings with expert accountants in Greenwich London. Let our dedicated Greenwich accountants talk with HMRC on your behalf.",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-greenwich`, },
+	keywords: ['accountants in Greenwich']
 };
 
 export default function Greenwich() {

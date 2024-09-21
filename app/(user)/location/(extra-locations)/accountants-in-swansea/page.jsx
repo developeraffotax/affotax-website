@@ -12,6 +12,7 @@ export const metadata = {
 	description:
 		"Grow your business with our accountants in Swansea. Manage your accounting and tax filing expertly with our accountants Swansea.",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-swansea`, },
+		keywords: ['accountants in swansea']
 };
 
 export default function Swansea() {

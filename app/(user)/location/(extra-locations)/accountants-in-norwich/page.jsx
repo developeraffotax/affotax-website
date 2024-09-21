@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Accountants in Norwich | Norwich Accountancy Services",
 	description: "We're expert accountants in Norwich, providing Norwich accountancy services in the UK. Let us manage your accounting & tax filing needs. Contact us today!",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-norwich`, },
+	keywords: ['accountants in Norwich']
 };
 
 export default function Norwich() {

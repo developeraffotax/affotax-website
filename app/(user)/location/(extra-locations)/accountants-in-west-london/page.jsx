@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Chartered Accountants in West London - Affotax",
 	description: "Looking for chartered accountants in West London? We are one of the most affordable accountancy firms in west London - let our accountant west London help!",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-west-london`, },
+	keywords: ['accountants in west london']
 };
 
 export default function WestLondon() {

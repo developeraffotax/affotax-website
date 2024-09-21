@@ -12,6 +12,7 @@ export const metadata = {
 	description:
 		"Looking for online chartered accountants in Edinburgh, Scotland? Let our expert Edinburgh accountants manage your accounting & tax filing needs like a pro!",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/edinburgh-accountants`, },
+		keywords: ['accountants in edinburgh']
 };
 
 export default function Edinburgh() {

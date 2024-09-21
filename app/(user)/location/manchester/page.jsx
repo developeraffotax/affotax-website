@@ -8,6 +8,7 @@ export const metadata = {
 	title: "Talk to Our Online Chartered Accountants in Manchester",
 	description: "Looking for Manchester accountants? Our chartered accountants in Manchester provide accounting and tax filing services at an affordable price in the UK.",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/manchester`, },
+	keywords: ['accountants in Manchester']
 };
 
 export default function Manchester() {

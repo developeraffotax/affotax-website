@@ -18,6 +18,7 @@ export const metadata = {
 	description:
 		"Looking for Inverness accountants? Manage your accounting & tax filing with expert accountants in Inverness. Contact our accountants Inverness right away!",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-inverness`, },
+		keywords: ['accountants in inverness']
 };
 
 export default function Aberdeen() {

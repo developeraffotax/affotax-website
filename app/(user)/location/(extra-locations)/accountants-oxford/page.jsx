@@ -12,6 +12,7 @@ export const metadata = {
 	description:
 		"We are reliable chartered accountants in Oxford, helping businesses in the UK reach new heights of success. Contact our Oxford accountants today!",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-oxford`, },
+		keywords: ['accountants in Oxford']
 };
 
 export default function Oxford() {

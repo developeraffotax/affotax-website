@@ -12,6 +12,7 @@ export const metadata = {
 	description:
 		"Looking for reliable accountants in Bristol? We are expert accountants Bristol, ready to help your business grow. Contact our Bristol accountants today!",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-bristol`, },
+		keywords: ['accountants in bristol']
 };
 
 export default function Bristol() {

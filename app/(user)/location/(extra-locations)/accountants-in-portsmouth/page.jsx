@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Chartered Accountants in Portsmouth, UK - Affotax",
 	description: "Looking for expert accountants in Portsmouth, UK? We're reliable accountants helping UK businesses grow - chat with expert Portsmouth accountants today!",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-portsmouth`, },
+	keywords: ['accountants in Portsmouth']
 };
 
 export default function Portsmouth() {

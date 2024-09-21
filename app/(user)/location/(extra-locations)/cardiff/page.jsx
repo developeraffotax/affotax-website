@@ -12,6 +12,7 @@ export const metadata = {
 	description:
 		"Looking for reliable accountants in Cardiff? We are online Cardiff accountants providing accounting & tax filing services in Cardiff or anywhere in the UK.",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/cardiff`, },
+		keywords: ['accountants in Cardiff']
 };
 
 export default function Cardiff() {

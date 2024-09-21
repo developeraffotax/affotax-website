@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Accountants Plymouth – Accountants in Plymouth, Devon",
 	description: "Looking for accountants in Plymouth, Devon? We're here! Chartered accountants Plymouth with 10+ years of expertise. Contact our Plymouth accountants now!",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-plymouth`, },
+	keywords: ['accountants in plymouth ']
 };
 
 export default function Plymouth() {

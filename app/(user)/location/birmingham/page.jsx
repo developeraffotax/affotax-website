@@ -6,6 +6,7 @@ export const metadata = {
 	title: "Online Accountants in Birmingham | Boost Your Finances",
 	description: "Boost your finances with our online accountants in Birmingham. Get expert advice & cheap accounting services from our Birmingham accountants to reach success.",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/birmingham`, },
+	keywords: ['accountants in Birmingham']
 };
 
 export default function Birmingham() {

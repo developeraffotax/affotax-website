@@ -12,6 +12,7 @@ export const metadata = {
 	description:
 		"We are reliable accountants in Cambridge UK, ready to simplify your accounting and tax filings. Let our Cambridge accountants help your business succeed!",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-cambridge`, },
+		keywords: ['accountants in Cambridge']
 };
 
 export default function Cambridge() {

@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Chartered Accountants Newcastle Upon Tyne - Affotax",
 	description: "Welcome to one of the most affordable accounting firms Newcastle! We're chartered accountants Newcastle Upon Tyne, ready to help UK small businesses.",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-newcastle`, },
+	keywords: ['accountants in Newcastle']
 };
 
 export default function NewCastle() {

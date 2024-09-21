@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Accountants in North London: Reliable Financial Services",
 	description: "Looking for reliable accountants in North London? We are the top North London accountants offering  value for our client's money in the services we offer.",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-north-london`, },
+	keywords: ['accountant in northern ireland']
 };
 
 export default function NorthLondon() {

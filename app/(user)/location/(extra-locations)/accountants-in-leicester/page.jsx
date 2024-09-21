@@ -11,6 +11,7 @@ export const metadata = {
 	title: "Chartered Accountants in Leicester - Affotax",
 	description: "Looking for accountants in Leicester? Explore our online accounting & tax filing services for smooth experience. Contact our Leicester accountants today!",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-in-leicester`, },
+	keywords: ['accountants in leicester']
 };
 
 export default function Leicester() {

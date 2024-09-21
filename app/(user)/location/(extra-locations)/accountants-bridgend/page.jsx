@@ -12,6 +12,7 @@ export const metadata = {
 	description:
 		"We are chartered accountants Bridgend, ready to help small businesses, partnerships, sole traders, etc. to grow. Contact our accountants in Bridgend today!",
 		metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/accountants-bridgend`, },
+		keywords: ['accountants Bridgend']
 };
 
 export default function Bridgend() {

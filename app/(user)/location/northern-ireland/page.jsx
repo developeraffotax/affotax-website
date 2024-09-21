@@ -6,6 +6,7 @@ export const metadata = {
 	title: "Online Accountants in Northern Ireland | Belfast | Derry",
 	description: "Are you looking for accountants in Northern Ireland, Belfast, Derry, Armagh, Banbridge, or Craigavon? We can help you online, no matter where you are in Northern Ireland.",
 	metadataBase: new URL('https://affotax.com'), alternates: { canonical: `/location/northern-ireland`, },
+	keywords: ['accountant in northern ireland']
 };
 
 export default function NorthernIreland() {
