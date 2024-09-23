@@ -17,7 +17,7 @@ import SubMenuMobile from "./SubMenuMobile";
 
 
 const subMenu = [
-  { name: "Annual Accounts", link: "/annual-accounts" },
+  { name: "Accounts", link: "/annual-accounts" },
   { name: "Corporation Tax", link: "/corporation-tax-ct600" },
   { name: "Self Assessment", link: "/self-assessment-tax-return-sa100" },
   { name: "Payroll", link: "/register-for-paye" },

@@ -9,7 +9,7 @@ import { revalidatePath } from "next/cache";
 
 const menu = [
 	{
-		name: "Annual Accounts",
+		name: "Accounts",
 		submenu: [
 			{ name: "Annual Accounts", link: "/annual-accounts" },
 			{ name: "Dormant Accounts", link: "/dormant-accounts" },

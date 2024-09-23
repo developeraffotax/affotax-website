@@ -17,38 +17,31 @@
 
 
   
-export default function robots() {
-  return {
-    rules: {
-      userAgent: '*',
-      disallow: '/',
-      allow: '/sitemap.xml',
-    },
-    sitemap: 'https://affotax.com/sitemap.xml',
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // export default function robots() {
 //   return {
 //     rules: {
 //       userAgent: '*',
-//       allow: '/',
-//       disallow: '/private/',
+//       disallow: '/',
+//       allow: '/sitemap.xml',
 //     },
 //     sitemap: 'https://affotax.com/sitemap.xml',
 //   }
 // }
+
+
+
+
+
+
+
+
+export default function robots() {
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: '/private/',
+    },
+    sitemap: 'https://affotax.com/sitemap.xml',
+  }
+}
