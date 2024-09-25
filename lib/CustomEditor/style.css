@@ -1,0 +1,25 @@
+.ql-table {
+    /* border-collapse: collapse; */
+    width: 100%;
+  }
+  
+  .ql-table th,
+  .ql-table td {
+    border: 1px solid #000000;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .ql-table th {
+    background-color: #f4f4f4;
+  }
+  
+
+
+
+
+  .ql-editor-custom {
+    padding: 20px;
+    background-color: aqua;
+    border: solid 1px;
+  }
