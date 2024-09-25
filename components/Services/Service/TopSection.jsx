@@ -1,6 +1,8 @@
 'use client'
 
 import React from "react";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+import { PiArrowFatLineRightFill } from "react-icons/pi";
 
 const TopSection = ({ title, content }) => {
 
@@ -11,16 +13,24 @@ const TopSection = ({ title, content }) => {
 
 
     return (
-        <section className="w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8 max-lg:mt-4 py-8 ">
-            <div className="container mx-auto flex flex-col justify-center items-start  ">
-                <h1 className="text-3xl font-semibold ">{title}</h1>
+        <section className="w-full mt-12 px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8 max-lg:mt-4  drop-shadow-md     ">
+            
 
-                {
-                    <div dangerouslySetInnerHTML={{__html: content}}  ></div>
-                }
+  
+            <div className="w-full pattern  flex  justify-center items-center gap-4   bg-gradient-to-br from-gray-50 to-gray-100 py-8 rounded-lg transform  shadow-[5px_5px_0px_0px_rgba(255,185,123)] border-2 border-orange-300 ">
+            <PiArrowFatLineRightFill className="text-5xl text-orange-400 "/>
+                <h1 className=" py-4 leading-relaxed drop-shadow-md  text-center bg-gradient-to-br from-orange-400 via-orange-500 via-50% to-orange-700 bg-clip-text  max-lg:text-5xl  font-semibold text-transparent font-poppins  sm:max-w-3xl sm:text-6xl">{title}</h1>
+                
+               
+
+                
             </div>
         </section>
     );
 };
 
 export default TopSection;
+
+
+
+// px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8 max-lg:mt-4 

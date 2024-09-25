@@ -43,7 +43,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
     }
 
     return (
-        <div className={`flex flex-row max-lg:flex-col mb-8 gap-8 items-end max-lg:items-center justify-between bg-gray-100 shadow-lg rounded-xl  p-8 ${isCheckout ? 'w-full' : 'w-[70%] max-lg:w-[90%]'}`}>
+        <div className={`relative flex flex-row max-lg:flex-col  gap-8 items-end max-lg:items-center justify-between  bg-gray-100  rounded-xl  p-8  ${isCheckout ? 'w-full' : 'w-[100%] max-lg:w-[100%]'}`}>
             <div className="flex flex-col gap-2 ">
                 <h3 className="text-xl font-semibold">{priceTitle} {isCart ? "| " + pageTitle : null}</h3>
                 <p className="text-md ">{priceContent}</p>
@@ -71,3 +71,5 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 };
 
 export default PriceBox;
+
+
