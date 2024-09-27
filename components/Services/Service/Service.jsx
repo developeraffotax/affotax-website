@@ -52,13 +52,13 @@ const Service = ({ jsonData }) => {
 
 
     return (
-        <div className=" mt-8  ">
+        <div className=" py-12  bg-pattern ">
             <TopSection title={data.title} />
 
            
 
 
-            <animated.div style={props} className="w-full mt-16 flex  justify-center gap-12   items-start max-lg:flex-col-reverse   px-80 max-2xl:px-40 max-xl:px-10 max-lg:px-8  ">
+            <animated.div style={props} className="w-full mt-16 max-lg:mt-4 flex  justify-center gap-12   items-start max-lg:flex-col-reverse   px-80 max-2xl:px-40 max-xl:px-10 max-lg:px-8  ">
 
             <LeftSection  content={data.content} />
             <PriceBoxes prices={data.prices} pageTitle={data.title}/>

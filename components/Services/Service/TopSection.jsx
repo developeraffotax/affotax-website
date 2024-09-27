@@ -13,7 +13,7 @@ const TopSection = ({ title, content }) => {
 
 
     return (
-        <section className="w-full mt-12 px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8 max-lg:mt-4  drop-shadow-md     ">
+        <section className="w-full  px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8 max-lg:mt-0  drop-shadow-md    ">
             
 
   

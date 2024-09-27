@@ -45,8 +45,8 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
     return (
         <div className={`relative flex flex-row max-lg:flex-col  gap-8 items-end max-lg:items-center justify-between  bg-gray-100  rounded-xl  p-8  ${isCheckout ? 'w-full' : 'w-[100%] max-lg:w-[100%]'}`}>
             <div className="flex flex-col gap-2 w-full">
-                <h3 className="text-xl font-semibold">{priceTitle} {isCart ? "| " + pageTitle : null}</h3>
-                <p className="text-md ">{priceContent}</p>
+                <h3 className="text-xl  font-semibold">{priceTitle} {isCart ? "| " + pageTitle : null}</h3>
+                <p className="text-md max-lg:text-sm ">{priceContent}</p>
 
 
 

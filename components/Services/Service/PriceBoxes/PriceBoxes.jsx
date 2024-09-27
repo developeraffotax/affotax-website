@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 
 const PriceBoxes = ({ prices, pageTitle, isCheckout, isCart,  setCartItemsArr}) => {
     return (
-        <section className={`w-full px-0`}>
+        <section className={`w-full px-0 font-poppins `}>
             <div className="mx-auto container flex flex-col max-lg:items-center  ">
 
                 
