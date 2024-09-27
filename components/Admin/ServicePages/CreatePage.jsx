@@ -281,6 +281,9 @@ export default function CreatePage({ pageSlug }) {
 	            setIsEditMode(true);
 	    		const page = res.data;
 
+				console.log(res)
+
+
 				setMetaTitle(page.metaTitle);
 				setMetaDescription(page.metaDescription);
 				setKeywords(page.keywords);
@@ -383,7 +386,7 @@ export default function CreatePage({ pageSlug }) {
 				newArr[index].priceTitle = priceTitle;
 				newArr[index].priceContent = priceContent;
 				newArr[index].price = '£' + price;
-				newArr[index].packageIncludesArr = packageIncludesArr;
+				newArr[index].packageIncludes = packageIncludesArr;
 
 				return newArr;
 			})
@@ -497,12 +500,12 @@ export default function CreatePage({ pageSlug }) {
 
 		setPricingEditIndex(index.toString());
 
-		const {priceTitle, priceContent, price, packageIncludesArr} = item;
+		const {priceTitle, priceContent, price, packageIncludes} = item;
 
 		setPriceTitle(priceTitle)
 		setPriceContent(priceContent)
 		setPrice(price)
-		setPackageIncludesArr(packageIncludesArr)
+		setPackageIncludesArr(packageIncludes)
 
 
 		
