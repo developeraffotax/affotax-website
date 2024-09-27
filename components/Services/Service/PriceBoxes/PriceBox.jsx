@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
+import { ImPriceTags } from "react-icons/im";
 
 const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageTitle, isCart, isCheckout, setCartItemsArr}) => {
 
@@ -45,8 +46,8 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
     return (
         <div className={`relative flex flex-row max-lg:flex-col  gap-8 items-end max-lg:items-center justify-between  bg-gray-100  rounded-xl  p-8  ${isCheckout ? 'w-full' : 'w-[100%] max-lg:w-[100%]'}`}>
             <div className="flex flex-col gap-2 w-full">
-                <h3 className="text-xl  font-semibold">{priceTitle} {isCart ? "| " + pageTitle : null}</h3>
-                <p className="text-md max-lg:text-sm ">{priceContent}</p>
+                <h3 className="text-xl  font-semibold  shadow-[5px_5px_0px_0px_rgba(148,163,184)] border-2 border-[rgb(148,163,184)] bg-gray-50 rounded-md py-1 text-center    ">{priceTitle} {isCart ? "| " + pageTitle : null}</h3>
+                <p className="text-sm  max-lg:text-sm  p-2   ">{priceContent}</p>
 
 
 
@@ -55,7 +56,9 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
                         
                 <ul className="list-disc text-sm ">
-                    {packageIncludes.length > 0 ? <h4 className="font-semibold text-md "> Package includes: </h4> : null}
+                    {packageIncludes.length > 0 ? <h4 className="font-semibold text-md  mb-2 "> <span className="px-3 py-[2px] bg-gradient-to-br from-slate-400 via-slate-400 via-50% to-slate-500 text-white rounded-md  ">
+                        Package Includes :
+                        </span></h4> : null}
 
                     {packageIncludes?.map((el) => (
                         <li key={uuid()} className="ml-4"> {" "} {el}{" "} </li>
@@ -63,9 +66,10 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
                 </ul>
 
                 <div className="flex flex-col items-center gap-2 max-lg:flex-row  max-lg:items-center  max-lg:justify-between max-lg:w-full ">
-                <h3 className="text-2xl font-semibold">{price}</h3>
+                    
+                <h3 className="text-3xl font-semibold font-poppins text-teal-600   bg-teal-50    rounded-lg p-2 relative  z-10"><span className=" ">{price} </span></h3>
                 <Link onClick={onClickLocalStorageHandler} href={`/cart`}>
-                <button  className="text-nowrap  ml-3 drop-shadow-md transition-all inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">
+                <button  className="text-nowrap  ml-3 drop-shadow-md transition-all inline-flex text-secondary bg-teal-500 border-0 py-2 px-6 hover:outline-teal-500 outline-1 outline outline-transparent hover:bg-transparent hover:text-teal-500 rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">
                     {" "}
                     Buy Now{" "}
                 </button>
