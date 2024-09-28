@@ -385,7 +385,7 @@ export default function CreatePage({ pageSlug }) {
 
 				newArr[index].priceTitle = priceTitle;
 				newArr[index].priceContent = priceContent;
-				newArr[index].price = '£' + price;
+				newArr[index].price =  price;
 				newArr[index].packageIncludes = packageIncludesArr;
 
 				return newArr;
@@ -402,7 +402,7 @@ export default function CreatePage({ pageSlug }) {
 			const newPricing = {
 				priceTitle: priceTitle,
 				priceContent: priceContent,
-				price: '£' + price,
+				price:  price,
 				packageIncludes: packageIncludesArr,
 			};
 	
