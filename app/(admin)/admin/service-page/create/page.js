@@ -26,24 +26,24 @@ export default function Create({ searchParams }) {
 
 
 
-db.servicepages.updateMany(
-	{ "prices.price": { $regex: "^£" } },
-	{
-		$set: {
-			"prices.$[elem].price": {
-				$replaceOne: {
-					input: "$price",
-					find: "£",
-					replacement: "",
-				},
-			},
-		},
-	},
+// db.servicepages.updateMany(
+// 	{ "prices.price": { $regex: "^£" } },
+// 	{
+// 		$set: {
+// 			"prices.$[elem].price": {
+// 				$replaceOne: {
+// 					input: "$price",
+// 					find: "£",
+// 					replacement: "",
+// 				},
+// 			},
+// 		},
+// 	},
 
-	{
-		arrayFilters: [{ "elem.price": { $regex: "^£" } }],
-	}
-);
+// 	{
+// 		arrayFilters: [{ "elem.price": { $regex: "^£" } }],
+// 	}
+// );
 
 
 
