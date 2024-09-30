@@ -42,7 +42,7 @@ const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle,
 				<div className="flex items-center gap-2 justify-between max-lg:w-full">
                     <h6 className="  w-full max-w-[176px] hidden max-lg:block font-normal text-xl leading-8 text-gray-400">Price  </h6>
 					<h6 className=" font-manrope font-bold text-2xl leading-9 w-full max-w-[176px] text-end max-lg:border-l">
-						{price}
+					£{price}
 					</h6>
 				</div>
 			</div>
