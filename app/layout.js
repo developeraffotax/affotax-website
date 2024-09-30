@@ -18,6 +18,13 @@ export const metadata = {
 	
 };
 
+
+//google: "google998d27ca179e5db7.html",
+
+
+
+
+
 export default function RootLayout({ children }) {
 	const schema = JSON.stringify(schemaLD);
 	//console.log(schema)
