@@ -36,6 +36,8 @@ module.exports = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         oswald: ["Oswald", "sans-serif"],
+        Montserrat: ["Montserrat", "sans-serif"],
+        Raleway: ["Raleway", "sans-serif"],
         
       }
     },
