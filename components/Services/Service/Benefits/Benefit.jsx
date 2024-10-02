@@ -10,7 +10,7 @@ const Benefit = ({ heading, paragraph }) => {
 					<h3 className="font-semibold text-xl  text-start text-orange-400  ">
 						{heading}{" "}
 					</h3>
-					<p className=" text-lg max-lg:text-base  text-start ">{paragraph}</p>
+					<p className=" text-lg max-lg:text-sm  text-start  ">{paragraph}</p>
 				</div>
 			</div>
 		</li>
