@@ -1,8 +1,8 @@
 .bg-pattern {
     background-color: #ffffff;
+    /* background-color: #f3f3f3a9; */
 background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
-
 
 
 
@@ -75,4 +75,43 @@ background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0
     line-height: 1.5; /* Space between items */
     color: #333; /* Text color */
     margin-bottom: 0.4em; /* Space below list items */
+}
+
+
+
+
+
+
+ol {
+    counter-reset: list-counter; /* Initialize the counter */
+    padding-left: 0; /* Remove default padding */
+    margin: 20px 0; /* Add some margin */
+    list-style: none; /* Remove default list styling */
+}
+
+ol li {
+    counter-increment: list-counter; /* Increment the counter */
+    position: relative; /* Position for the pseudo-element */
+    padding: 10px 20px; /* Add padding to list items */
+    margin: 10px 0; /* Add margin between items */
+    background: linear-gradient(135deg, #f0f4f8, #c9e2f3); /* Gradient background */
+    border-radius: 8px; /* Rounded corners */
+    font-family: 'Arial', sans-serif; /* Font family */
+    font-size: 16px; /* Font size */
+    color: #333; /* Text color */
+    transition: transform 0.3s; /* Smooth hover effect */
+}
+
+ol li:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+ol li::before {
+    content: counter(list-counter) ". "; /* Add counter before each item */
+    position: absolute; /* Position for the number */
+    left: -30px; /* Adjust the position */
+    font-weight: bold; /* Bold for emphasis */
+    color: #007BFF; /* Color of the counter */
+    font-size: 18px; /* Size of the counter */
 }

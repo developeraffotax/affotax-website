@@ -1,18 +1,19 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Link from "next/link";
-import { redirect } from "next/navigation";
+
+
 
 export default function NotFoundPage() {
 
-	//redirect('/')
+
 
 	return (
 		<>
 			<Header />
 			<div class="p-32 max-lg:p-8 max-lg:mt-10 flex flex-grow items-center justify-center bg-gray-50 w-full ">
 				<div class="rounded-lg bg-white p-8 text-center shadow-xl">
-					<h1 class="mb-4 text-4xl font-bold">404</h1>
+					<h1 class="mb-4 text-4xl font-bold">404!</h1>
 					<p class="text-gray-600">
 						{" "}
 						Oops! The page you are looking for could not be found.

@@ -22,8 +22,19 @@ import { connectDB } from "@/lib/connectDB";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 import Head from "next/head";
 
+import { NextResponse } from 'next/server'
+
+
+// export const dynamic = 'force-static'
+// export const dynamicParams = false 
+
+
+
+
 //GENERATING THE DYNAMIC META DATA
 export async function generateMetadata({ params }) {
+
+	
 
   let metadata;
 
@@ -56,9 +67,9 @@ export async function generateMetadata({ params }) {
 
 			const page = await Page.findOne({ slug: params.slug });
 			if (!page) {
-				notFound()
-				//redirect("/");
-				//return;
+				return;
+				//notFound()
+				
 			}
 			 metadata = {
         title: page.metaTitle,
@@ -107,6 +118,16 @@ export async function generateMetadata({ params }) {
 export default async function ServicesPage({ params }) {
 
 
+
+
+
+
+	
+
+
+
+
+	
 	let render;
 
 	const location = params.slug;
@@ -144,9 +165,9 @@ export default async function ServicesPage({ params }) {
 
 			const page = await Page.findOne({ slug: params.slug });
 			if (!page) {
+
 				notFound()
-				//redirect("/");
-				return
+				
 			}
 
 			const jsonPage = JSON.stringify(page);

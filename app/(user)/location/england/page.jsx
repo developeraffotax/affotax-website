@@ -2,6 +2,11 @@ import Link from "next/link";
 
 import Image from "next/image";
 import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10 } from "@/public/assets/england";
+import { notFound } from "next/navigation";
+
+
+
+
 
 export const metadata = {
 	title: "Get in Touch with Expert Accountants in England Today!",
@@ -12,6 +17,10 @@ export const metadata = {
 };
 
 export default function England() {
+
+
+	
+
 	return (
 		<main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
 			{/* HOME TOP */}
