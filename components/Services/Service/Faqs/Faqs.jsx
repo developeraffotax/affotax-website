@@ -1,6 +1,7 @@
 'use client'
 
 
+import Link from "next/link";
 import React, { useState } from "react";
 import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
@@ -65,7 +66,7 @@ const Faqs = ({ faqs }) => {
 				<p className="font-semibold ">
 					If you have any personalised guidance or additional
 					inquiries about our service, please don't hesitate to
-					contact us.{" "}
+					<Link className="text-orange-400" href={'/contact-us'}> contact us</Link>.{" "}
 				</p>
 			</div>
 		</section>
