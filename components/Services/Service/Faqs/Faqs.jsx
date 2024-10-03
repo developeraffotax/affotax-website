@@ -52,7 +52,7 @@ const Faqs = ({ faqs }) => {
 
 
 				</ul>} */}
-				<div className="  inline-flex w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-slate-600/30 bg-slate-100/50 px-4 py-4 text-slate-800" dangerouslySetInnerHTML={{__html: item.answer}}>
+				<div className="   w-full rounded-b-2xl border-x-2 border-b-2 border-dashed border-slate-600/30 bg-slate-100/50 px-4 py-4 text-slate-800" dangerouslySetInnerHTML={{__html: item.answer}}>
 
 
 
