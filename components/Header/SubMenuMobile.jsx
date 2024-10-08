@@ -101,7 +101,11 @@ const menu = [
 			},
 			{ name: "Online P11D Form", link: "/p11d-form" },
 			{
-				name: "P45 and P60 Form",
+				name: "P45 Form",
+				link: "/p45-form",
+			},
+			{
+				name: "P60 Form",
 				link: "/p60-form",
 			},
 			{ name: "UK Payslip Generator", link: "/payslip-generator" },

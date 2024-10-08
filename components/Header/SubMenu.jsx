@@ -101,7 +101,11 @@ const menu = [
 			},
 			{ name: "Online P11D Form", link: "/p11d-form" },
 			{
-				name: "P45 and P60 Form",
+				name: "P45 Form",
+				link: "/p45-form",
+			},
+			{
+				name: "P60 Form",
 				link: "/p60-form",
 			},
 			{ name: "UK Payslip Generator", link: "/payslip-generator" },
@@ -201,6 +205,7 @@ const SubMenu = ({ name, index, length, }) => {
 								{ele.submenu.map((el) => {
 									return (
 										<Link
+											key={el.name + 'desktop--nav'}
 											href={el.link}
 											className="px-8 py-2 border-b-2  border-b-primary bg-secondary text-tertiary z-0 items-center flex justify-start hover:text-primary hover:cursor-pointer"
 										>
