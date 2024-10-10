@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import LeftSection from "./LeftSection";
 import { useSpring, animated  } from "@react-spring/web";
+import EmailPhone from "./EmailPhone";
 
 
 const Service = ({ jsonData }) => {
@@ -52,7 +53,7 @@ const Service = ({ jsonData }) => {
 
 
     return (
-        <div className=" py-12  bg-pattern element ">
+        <div className=" pt-12  bg-pattern element ">
 
 
 
@@ -78,6 +79,9 @@ const Service = ({ jsonData }) => {
                 benefits={data.benefits}
             />
             <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />
+
+
+            <EmailPhone />   
         </div>
     );
 };
