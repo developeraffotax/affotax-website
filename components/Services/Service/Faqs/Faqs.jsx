@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { Accordion, AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import './styles.css';
 
 const Faqs = ({ faqs }) => {
 
@@ -23,7 +24,7 @@ const Faqs = ({ faqs }) => {
 
 
 	return (
-		<section className="w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8  mt-20 mb-20 max-lg:mt-4 max-lg:mb-4  ">
+		<section className="w-full px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8  mt-20 mb-20 max-lg:mt-4 max-lg:mb-4 customList ">
 				<h2 className="text-4xl font-semibold mb-2    text-center font-poppins text-transparent py-2 leading-normal bg-gradient-to-br from-orange-400 via-orange-500 via-50% to-orange-700 bg-clip-text"><span className="px-3 py-0 bg-gradient-to-br from-orange-400 via-orange-500 via-50% to-orange-600 text-white rounded-xl ">Frequently</span> Asked Questions</h2>
 			<div className="container mx-auto    py-4 px-4 max-lg:px-0  rounded-3xl w-[70%] max-lg:w-full   mt-4">
 
