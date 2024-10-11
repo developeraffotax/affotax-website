@@ -21,8 +21,8 @@ const Benefits = ({ benefitsTitle, benefits }) => {
 
 
 	return (
-		<section className="  px-80 max-2xl:px-40 max-xl:px-10 max-lg:p-8  py-2  ">
-			<div className="container mx-auto flex flex-col justify-center items-center w-[70%] max-lg:w-full">
+		<section className="  py-2 w-full ">
+			<div className="container mx-auto flex flex-col justify-center items-center w-[100%] max-lg:w-full">
 				<div>
 					<h2 className="   text-4xl font-semibold mb-4 w-full text-center  bg-gradient-to-br from-orange-400 via-orange-500 via-50% to-orange-700 bg-clip-text  text-transparent font-poppins py-2  ">
 						{" "}

@@ -65,19 +65,35 @@ const Service = ({ jsonData }) => {
             </div>
 
            
+            
 
 
             <animated.div style={props} className="w-full my-16 max-lg:my-4   max-lg:mt-4 flex  justify-center gap-16 max-lg:gap-4   items-start max-lg:flex-col-reverse   px-80 max-2xl:px-40 max-xl:px-10 max-lg:px-8  ">
 
+            <div className="w-full ">
+
+
             <LeftSection  content={data.content} />
+
+
+            </div>
+
+
+            <div className="w-full ">
+
             <PriceBoxes prices={data.prices} pageTitle={data.title}/>
-
-
-            </animated.div>
             <Benefits
                 benefitsTitle={data.benefitsTitle}
                 benefits={data.benefits}
             />
+
+
+
+            </div>
+            
+
+            </animated.div>
+           
             <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />
 
 
