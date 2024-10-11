@@ -7,11 +7,7 @@ import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
 import WhatIsSoleTrader from "./WhatIsSoleTrader";
 
-export const metadata = {
-	title: "Accountants for Small Business & Tax Filing Services",
-	description:
-		"Expert accountants for small business in the UK offering bookkeeping, tax services, payroll, VAT, and company formation. Let us handle your finances!",
-};
+
 
 export default function SmallBusinessAccountants() {
 	return (

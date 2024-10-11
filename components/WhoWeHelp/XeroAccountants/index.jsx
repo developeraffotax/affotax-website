@@ -10,11 +10,7 @@ import InstantQuoteForm from "./InstantQuoteForm";
 import { useRef } from "react";
 import UseXero from "./UseXero";
 
-export const metadata = {
-	title: "Xero Accountants UK - Tax Filing & Business Growth Experts",
-	description:
-		"Unlock Xero's potential with Affotax's expert accountants. Streamline your finances, ease bookkeeping, and get HMRC-compliant tax filing.",
-};
+
 
 export default function XeroAccountants() {
 

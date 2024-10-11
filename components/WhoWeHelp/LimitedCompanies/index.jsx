@@ -7,11 +7,6 @@ import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
 import WhatIsLimitedCompany from "./WhatIsLimitedCompany";
 
-export const metadata = {
-	title: "Expert Accounting & Accountant for Limited Company",
-	description:
-		"Limited Company's finances with Affotax's comprehensive accounting and tax services. Our accountant for limited companies provides simplified bookkeeping, VAT returns, etc.",
-};
 
 export default function LimitedCompanies() {
 	return (
