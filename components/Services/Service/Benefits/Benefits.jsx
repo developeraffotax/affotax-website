@@ -21,7 +21,7 @@ const Benefits = ({ benefitsTitle, benefits }) => {
 
 
 	return (
-		<section className="  py-2 w-full ">
+		<section className="  py-2 w-full max-lg:px-8">
 			<div className="container mx-auto flex flex-col justify-center items-center w-[100%] max-lg:w-full">
 				<div>
 					<h2 className="   text-4xl font-semibold mb-4 w-full text-center  bg-gradient-to-br from-orange-400 via-orange-500 via-50% to-orange-700 bg-clip-text  text-transparent font-poppins py-2  ">
@@ -30,7 +30,7 @@ const Benefits = ({ benefitsTitle, benefits }) => {
 					</h2>
 				</div>
 
-				<div className="bg-[url('/frame2.svg')] bg-cover  bg-no-repeat bg-gray-50 rounded-xl  p-16 max-lg:px-8   shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]">
+				<div className="bg-[url('/frame2.svg')] bg-cover  bg-no-repeat bg-gray-50 rounded-xl  p-16 max-lg:p-8   shadow-[rgba(6,_24,_44,_0.4)_0px_0px_0px_2px,_rgba(6,_24,_44,_0.65)_0px_4px_6px_-1px,_rgba(255,_255,_255,_0.08)_0px_1px_0px_inset]">
 					<ul>
 						{benefits.map((el) => (
 							<Benefit key={uuid()} {...el} />

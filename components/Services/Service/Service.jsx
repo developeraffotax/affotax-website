@@ -82,10 +82,13 @@ const Service = ({ jsonData }) => {
             <div className="w-full ">
 
             <PriceBoxes prices={data.prices} pageTitle={data.title}/>
+            
+            <div className="w-full max-lg:hidden">
             <Benefits
                 benefitsTitle={data.benefitsTitle}
                 benefits={data.benefits}
             />
+            </div>
 
 
 
@@ -93,9 +96,21 @@ const Service = ({ jsonData }) => {
             
 
             </animated.div>
-           
+
+
+
+            <div className="w-full lg:hidden">
+
+            <Benefits
+                benefitsTitle={data.benefitsTitle}
+                benefits={data.benefits}
+            />
+            </div>
+
+
             <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />
 
+          
 
             <EmailPhone />   
         </div>
