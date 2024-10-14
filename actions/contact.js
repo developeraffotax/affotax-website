@@ -126,9 +126,7 @@ export async function sendQuote(prevState, formData) {
 	try {
 		const res = await sendQuoteMail(data);
 		console.log(res, data)
-		// if (res) {
-        //             return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
-        //         }
+
 		return { success: true, message: "Message sent successfully!", };
 		
 	} catch (error) {
@@ -137,6 +135,5 @@ export async function sendQuote(prevState, formData) {
 		
 
 	}
-	//redirect('/contact-us?success=true')
-	//redirect(`${referer}?success=true`);
+
 }
