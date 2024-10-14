@@ -5,7 +5,6 @@ import React, { useContext } from 'react';
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
-import { IoArrowRedoSharp } from "react-icons/io5";
 import Link from 'next/link';
 import { QuoteFormContext, TawkContext } from '@/app/(user)/layout';
 
@@ -13,6 +12,8 @@ const contactArr = [{name: 'Phone', icon: <LuPhoneCall className='scale-125 mr-3
 
 
 const EmailPhone = () => {
+
+    
     const handleMaximize = useContext(TawkContext);
     const quoteContext = useContext(QuoteFormContext)
     return (

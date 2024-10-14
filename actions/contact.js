@@ -106,8 +106,7 @@ export async function sendInstantQuote(formData) {
 
 export async function sendQuote(prevState, formData) {
 
-	const headersList = headers()
-	const referer = headersList.get('referer')
+	
 
 
 	const { name, email, phoneNumber, businessType, turnover, bookkeeping, message } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "bookkeeping", "message"  );

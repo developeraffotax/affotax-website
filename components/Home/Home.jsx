@@ -15,7 +15,7 @@ export default async function Home() {
 
   const db = await connectDB();
 
-		const pricingPage = await PricingPage.findOne();
+	const pricingPage = await PricingPage.findOne();
 
 
   return (
