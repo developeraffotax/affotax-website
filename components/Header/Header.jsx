@@ -9,7 +9,7 @@ import { v4 as uuid } from "uuid";
 import { useRouter } from 'next/navigation'
 import { BsCartCheck } from "react-icons/bs";
 import CartIcon from "./CartIcon";
-import { CartContext } from "@/app/(user)/layout";
+import { CartContext, QuoteFormContext } from "@/app/(user)/layout";
 import SubMenuMobile from "./SubMenuMobile";
 
 
@@ -41,6 +41,8 @@ export default function Header() {
   const router = useRouter();
 
   const cartContext = useContext(CartContext);
+
+  const quoteContext = useContext(QuoteFormContext)
 
   
 
@@ -81,7 +83,7 @@ export default function Header() {
             </nav>
 
             <div className={`flex gap-6  transition-all ${ isMobileNav ? "max-md:-translate-x-0" : "max-md:-translate-x-[-1000px]" }`}>
-                <button onClick={() => router.push('/contact-us')} className="  items-center text-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-4 md:mt-0 max-lg:py-2 max-md:w-[50%] z-50">
+                <button onClick={() => quoteContext.showModal()} className="  items-center text-center rounded-md bg-primary border-0  px-3 focus:outline-none hover:bg-primary/95 text-base mt-4 md:mt-0 max-lg:py-2 max-md:w-[50%] z-50">
               Get a Quote
               </button>
               

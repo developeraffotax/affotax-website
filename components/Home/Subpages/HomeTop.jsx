@@ -1,9 +1,13 @@
-import React from 'react';
+"use client"
+
+import React, { useContext } from 'react';
 import HeroImg4 from '@/public/hero4.png'
 import Link from 'next/link';
+import { QuoteFormContext } from '@/app/(user)/layout';
 
 export default function HomeTop() {
-   
+    
+    const quoteContext = useContext(QuoteFormContext);
 
     return (
         <section className=' text-gray-600 w-full bg-slate-50 pt-8 px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8 bgImage'>
@@ -15,7 +19,7 @@ export default function HomeTop() {
                     </p>
                     <div className='flex justify-center text-nowrap '>
                         <Link href={'/services'}><button className='inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Services </button></Link>
-                        <Link href={'/contact-us'}><button className='ml-4 inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold'> Get a Quote </button></Link>
+                        <button onClick={quoteContext.showModal} className='ml-4 inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold'> Get a Quote </button>
                     </div>
                 </div>
 

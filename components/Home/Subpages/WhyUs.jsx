@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import React, { useContext } from 'react'
 import Tax from '@/public/tax.png'
 import Experience from '@/public/experience.png'
 import Deadline from '@/public/deadline.png'
@@ -11,12 +13,16 @@ import Link from 'next/link'
 import DeadlineReminder from "@/public/deadline-reminder.png"
 import SupportNew from "@/public/support-new.png"
 import TaxSaving from "@/public/tax-saving.png"
+import { QuoteFormContext } from '@/app/(user)/layout'
 
 
 
 
 
 export default function WhyUs() {
+    const quoteContext = useContext(QuoteFormContext)
+
+
   return (
     <section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
         <div className="container px-5 py-12 mx-auto">
@@ -215,7 +221,7 @@ export default function WhyUs() {
             Send us a message today, or get a quote, our expert online accountants in the UK are ready to manage your accounting and tax filings with expertise.
 
             </p>
-            <Link href={'/contact-us'}><button className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
+            <button onClick={quoteContext.showModal} className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button>
                         
         </div>
 

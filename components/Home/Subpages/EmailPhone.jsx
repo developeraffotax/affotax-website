@@ -7,13 +7,14 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { LuPhoneCall } from "react-icons/lu";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import Link from 'next/link';
-import { TawkContext } from '@/app/(user)/layout';
+import { QuoteFormContext, TawkContext } from '@/app/(user)/layout';
 
 const contactArr = [{name: 'Phone', icon: <LuPhoneCall className='scale-125 mr-3'/> , link:'tel:2081446811',  value: '020 8144 6811', timings: '07:00 - 18:00 | Monday to Friday' }, {name: 'Email', icon: <MdOutlineMailOutline className=' scale-125 mr-2'/> ,link: 'mailto:info@affotax.com', value: 'info@affotax.com', timings: '07:00 - 18:00 | Monday to Friday' }, {name: 'Whatsapp', icon: <FaWhatsapp  className='text-green-500 scale-125 mr-2'/> ,link: 'https://wa.me/447723143223', value: '+44 7723 143223', timings: '07:00 - 18:00 | Monday to Friday' }]
 
 
 const EmailPhone = () => {
     const handleMaximize = useContext(TawkContext);
+    const quoteContext = useContext(QuoteFormContext)
     return (
         <section className=' w-full bg-[#2C3B58] px-80 max-2xl:px-40 max-xl:px-10'>
             <div className=' w-full '>
@@ -31,7 +32,7 @@ const EmailPhone = () => {
                 </div>
                 <div>
                 <button onClick={handleMaximize}className='drop-shadow-md transition-all inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Live Chat </button>
-                <Link href={'/contact-us'}><button className='ml-3 drop-shadow-md transition-all inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button></Link>
+                <button onClick={quoteContext.showModal} className='ml-3 drop-shadow-md transition-all inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button>
                 </div>
             </div>
 

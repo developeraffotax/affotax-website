@@ -5,6 +5,7 @@ import sendInstantQuoteMail from "@/lib/sendInstantQuoteMail";
 import sendMail from "@/lib/sendMail";
 import { redirect } from "next/navigation";
 import { cookies, headers } from "next/headers";
+import sendQuoteMail from "@/lib/sendQuoteMail";
 
 
 //  SEND MESSAGE
@@ -40,7 +41,6 @@ export async function sendMessage(prevState, formData) {
 
 
 // Instant Quote Mail
-
 
 export async function sendInstantQuote(formData) {
 
@@ -79,4 +79,65 @@ export async function sendInstantQuote(formData) {
 	}
 	//redirect('/contact-us?success=true')
 	redirect(`${referer}?success=true`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Instant Quote From Header or Layout
+
+export async function sendQuote(prevState, formData) {
+
+	const headersList = headers()
+	const referer = headersList.get('referer')
+
+
+	const { name, email, phoneNumber, businessType, turnover, bookkeeping, message } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "bookkeeping", "message"  );
+	
+	const data = {
+		name,
+		email,
+		phoneNumber,
+		businessType,
+		turnover,
+		bookkeeping,
+		message
+	}
+
+	
+
+	try {
+		const res = await sendQuoteMail(data);
+		console.log(res, data)
+		// if (res) {
+        //             return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
+        //         }
+		return { success: true, message: "Message sent successfully!", };
+		
+	} catch (error) {
+		console.log(error)
+		return { success: false, message: "Error occured while sending email | Please try again later", };
+		
+
+	}
+	//redirect('/contact-us?success=true')
+	//redirect(`${referer}?success=true`);
 }
