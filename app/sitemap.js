@@ -58,7 +58,6 @@ export default async function sitemap() {
 		
 
 		"https://affotax.com/blogs",
-		"https://affotax.com/services",
 	];
 
 	// Sitemap of Location Pages
