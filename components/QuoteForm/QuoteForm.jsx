@@ -12,7 +12,36 @@ import SuccessModal from "./SuccessModal";
 
 export default function QuoteForm() {
 
-	const [formState, action] = useFormState(sendQuote, { success: false, message: "" });
+	const [formState, action] = useFormState(sendQuote, { success: false, message: "", invalidArr: [] });
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	return (
 		<>
@@ -30,11 +59,11 @@ export default function QuoteForm() {
 					<div className="flex w-full justify-center gap-10   ">
 						<div className="flex w-full justify-center py-10 max-lg:py-4 items-center ">
 							<form
-								className="grid grid-cols-2 gap-8  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base "
+								className={`grid grid-cols-2 gap-8  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base`}
 								action={action}
 							>
 								<div className=" ">
-									<div className="  flex items-center justify-center mb-4 relative ">
+									<div className={`flex items-center justify-center ${formState.invalidArr.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											className="h-5 w-5 text-gray-400 absolute left-0 ml-4"
@@ -48,6 +77,7 @@ export default function QuoteForm() {
 												clip-rule="evenodd"
 											/>{" "}
 										</svg>
+										{formState.invalidArr.includes('name') ? <span className="animate-pulse text-sm text-red-500 font-semibold absolute left-0 top-0 -translate-y-[120%]">Required</span> : null}
 										<input
 											className=" outline-none bg-transparent border-black/30 rounded-xl text-lg  border-2 py-2 px-4 pl-12 w-full h-full  focus:border-orange-400 focus:border-[2px] shadow-md focus:shadow-primary/30 "
 											type="text"
@@ -57,7 +87,7 @@ export default function QuoteForm() {
 										/>
 									</div>
 
-									<div className="group  flex items-center justify-center mb-4 relative ">
+									<div className={`group  flex items-center justify-center ${formState.invalidArr.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											className="h-5 w-5 text-gray-400 absolute left-0 ml-4"
@@ -73,6 +103,7 @@ export default function QuoteForm() {
 												d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
 											/>{" "}
 										</svg>
+										{formState.invalidArr.includes('email') ? <span className="animate-pulse text-sm text-red-500 font-semibold absolute left-0 top-0 -translate-y-[120%]">Required</span> : null}
 										<input
 											className=" outline-none bg-transparent border-black/30 rounded-xl  text-lg  border-2 py-2 px-4 pl-12 w-full h-full  focus:border-orange-400 focus:border-[2px]  shadow-md focus:shadow-primary/30"
 											type="email"
@@ -98,7 +129,8 @@ export default function QuoteForm() {
 								{/* second column */}
 
 								<div className="">
-									<div className="flex items-center w-full mb-4">
+									<div className={`flex items-center w-full ${formState.invalidArr.length > 0 ? 'mb-8' : 'mb-4'} relative `}>
+									{formState.invalidArr.includes('businessType') ? <span className="animate-pulse text-sm text-red-500 font-semibold absolute left-0 top-0 -translate-y-[120%]">Required</span> : null}
 										<select
 											name="businessType"
 											className="w-full bg-transparent py-2 px-3 pr-8 rounded-xl border-2 overflow-hidden focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30"
@@ -112,7 +144,8 @@ export default function QuoteForm() {
 										</select>
 									</div>
 
-									<div className="flex items-center w-full  mb-4">
+									<div className={`flex items-center w-full ${formState.invalidArr.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
+									{formState.invalidArr.includes('turnover') ? <span className="animate-pulse mb-2  text-sm text-red-500 font-semibold absolute left-0 top-0 -translate-y-[120%]">Required</span> : null}
 										<select
 											name="turnover"
 											className="w-full bg-transparent py-2 px-3 pr-8 rounded-xl border-2 overflow-hidden focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30 "
@@ -157,8 +190,7 @@ export default function QuoteForm() {
 											className="w-full bg-transparent py-2 px-3 pr-8 rounded-xl border-2  focus:border-orange-400 outline-none border-black/30 classicArrow shadow-md focus:shadow-primary/30"
 										>
 											<option disabled selected>
-												Need us to complete your
-												Bookkeeping?
+											Bookkeeping Required?
 											</option>
 											<option>Yes</option>
 											<option>No</option>
@@ -186,7 +218,7 @@ export default function QuoteForm() {
 					<SuccessModal />
 				)}
 
-				{!formState?.success && formState.message.length > 0 && (
+				{!formState?.success && formState.message.length > 0 && formState.invalidArr.length === 0 && (
 					<p className="text-sm font-poppins text-red-500  ">
 						Failed to send your query! Please try again later!
 					</p>

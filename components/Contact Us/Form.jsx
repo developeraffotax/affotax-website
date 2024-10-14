@@ -22,7 +22,7 @@ const Form = () => {
 
         
         const [state, formAction] = useFormState(sendMessage, {success:false, message: ''});
-        const formRef = useRef()
+        const formRef = useRef();
 
 
 

@@ -111,6 +111,35 @@ export async function sendQuote(prevState, formData) {
 
 	const { name, email, phoneNumber, businessType, turnover, bookkeeping, message } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "bookkeeping", "message"  );
 	
+
+	console.log(name, businessType)
+
+	const invalidArr = []
+
+	if(name.length === 0) {
+		invalidArr.push('name')
+	}
+
+	if(email.length === 0) {
+		invalidArr.push('email')
+	}
+
+	if(!businessType) {
+		invalidArr.push('businessType')
+	}
+
+	if(!turnover) {
+		invalidArr.push('turnover')
+	}
+
+	if(invalidArr.length > 0) {
+		return { success: false, message: "", invalidArr: invalidArr};
+	}
+
+	
+
+
+
 	const data = {
 		name,
 		email,
@@ -127,11 +156,11 @@ export async function sendQuote(prevState, formData) {
 		const res = await sendQuoteMail(data);
 		console.log(res, data)
 
-		return { success: true, message: "Message sent successfully!", };
+		return { success: true, message: "Message sent successfully!", invalidArr: [] };
 		
 	} catch (error) {
 		console.log(error)
-		return { success: false, message: "Error occured while sending email | Please try again later", };
+		return { success: false, message: "Error occured while sending email | Please try again later", invalidArr: [] };
 		
 
 	}
