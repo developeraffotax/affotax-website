@@ -23,7 +23,10 @@ export default function CreatePage({ pageSlug }) {
 	const [priceContent, setPriceContent] = useState("");
 	const [price, setPrice] = useState("");
 
-
+	const [addOnEditingValue, setAddOnEditingValue] = useState({priceTitle: '', price: ''});
+	const [addOnEditingIndex, setAddOnEditingIndex] = useState('')
+	const [addOn, setAddOn] = useState({priceTitle: '', price: ''});
+	const [addOnsArr, setAddOnsArr] = useState([]);
 
 	const [editingValue, setEditingValue] = useState("");
 	const [pkgEditIndex, setPkgEditIndex] = useState("");
@@ -350,6 +353,80 @@ export default function CreatePage({ pageSlug }) {
 
 
 
+    // PRICING addOn HANDLER
+	const addOnsArrHandler = () => {
+		if (addOn.priceTitle.length === 0 || addOn.price.length === 0) {
+			return;
+		}
+
+		setAddOnsArr((prev) => {
+			return [...prev, addOn];
+		});
+
+		setAddOn({ priceTitle: '', price: '' });
+	};
+
+
+
+	const addOnEditHandler = (el, index) => {
+
+		setAddOnEditingValue({priceTitle: el.priceTitle, price: el.price})
+		setAddOnEditingIndex(index.toString());
+
+	}
+
+
+	const addOnDltHandler = (index) => {
+
+		setAddOnsArr((prev) => {
+			return prev.filter((el, i) => i !== index)
+		})
+
+
+	}
+
+
+
+	
+	const addOnSubmitHandler = () => {
+
+		const newArr = [...addOnsArr]
+
+		newArr[parseInt(addOnEditingIndex)] = addOnEditingValue;
+
+		setAddOnsArr(newArr);
+
+		setAddOnEditingIndex('');
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // PRICING SECTION HANDLERS
 	const handlePackageIncludes = () => {
@@ -387,6 +464,7 @@ export default function CreatePage({ pageSlug }) {
 				newArr[index].priceContent = priceContent;
 				newArr[index].price =  price;
 				newArr[index].packageIncludes = packageIncludesArr;
+				newArr[index].addOns = addOnsArr;
 
 				return newArr;
 			})
@@ -404,6 +482,7 @@ export default function CreatePage({ pageSlug }) {
 				priceContent: priceContent,
 				price:  price,
 				packageIncludes: packageIncludesArr,
+				addOns: addOnsArr
 			};
 	
 			const newPricesArr = [...pricesArr, newPricing];
@@ -420,6 +499,8 @@ export default function CreatePage({ pageSlug }) {
 		setPrice("");
 		setPackageIncludes("");
 		setPackageIncludesArr([]);
+		setAddOnsArr([]);
+
 	};
 
 
@@ -500,12 +581,13 @@ export default function CreatePage({ pageSlug }) {
 
 		setPricingEditIndex(index.toString());
 
-		const {priceTitle, priceContent, price, packageIncludes} = item;
+		const {priceTitle, priceContent, price, packageIncludes, addOns} = item;
 
 		setPriceTitle(priceTitle)
 		setPriceContent(priceContent)
 		setPrice(price)
 		setPackageIncludesArr(packageIncludes)
+		setAddOnsArr(addOns)
 
 
 		
@@ -669,8 +751,21 @@ const handleKeyDown = (e) => {
 		return;
 	}
 
+}
+
+
+
+
+const handleKeyDownAddOn = (e) => {
+	
+	if(e.key === 'Enter') {
+		addOnSubmitHandler()
+	} else {
+		return;
+	}
 
 }
+
 
 
 
@@ -784,6 +879,77 @@ const handleKeyDown = (e) => {
 							})}{" "}
 						</ul>
 
+
+							
+
+
+
+
+
+
+						<label className="mt-8 font-poppins font-semibold ">Pricing Add Ons</label>
+						<div className="flex items-center justify-between w-full gap-2  ">
+							<div className="flex items-center justify-between w-full gap-2  ">
+							<Input  placeholder="Enter Price Title Here" value={addOn.priceTitle} onChange={(e) => setAddOn(prev => ({...prev, priceTitle: e.target.value})) } />
+							<Input placeholder="Enter Price Here" value={addOn.price} onChange={(e) => setAddOn(prev => ({...prev, price: e.target.value})) } />
+							</div>
+
+							<button  onClick={addOnsArrHandler} type="button" className="w-11 h-11 bg-orange-50 rounded-lg flex items-center justify-center cursor-pointer transition-all duration-500  hover:bg-orange-100" > <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M1.22229 5.00013H8.77785M5.00007 8.77791V1.22235" stroke="#e07000" stroke-width="1.6" strokeLinecap="round" strokeLinejoin="round" ></path> </svg> </button>
+						</div>
+						<ul className="list-disc text-wrap rounded-xl bg-teal-50 text-teal-800 font-semibold mt-4 shadow-sm shadow-black/30">
+							{" "}
+							{addOnsArr?.map((el, index) => {
+								return (
+									<li key={index + "addOns-arr"} className={`flex justify-between items-center  p-2  ${(index + 1) === addOnsArr.length ? '' : 'border-b'}`}>
+										{/* {el} */}
+										<div className="flex items-start justify-start gap-1 w-full">
+
+										<span className=" font-semibold">{index + 1}. </span> 
+										{parseInt(addOnEditingIndex) === index ? <div className="w-[90%] flex justify-between items-center gap-4"><Input error className="" onKeyDown={handleKeyDownAddOn} value={addOnEditingValue.priceTitle} onChange={(e) => setAddOnEditingValue(prev => ({...prev, priceTitle: e.target.value}))} /><Input error className="" onKeyDown={handleKeyDownAddOn} value={addOnEditingValue.price} onChange={(e) => setAddOnEditingValue(prev => ({...prev, price: e.target.value}))} /></div> : <p className="flex justify-between items-center w-full px-8 "><span>{el.priceTitle}</span><span>£. {el.price}</span></p> }  
+
+
+
+										</div>
+										<div className="flex justify-center items-center gap-4">
+											{parseInt(addOnEditingIndex) === index ? <MdDownloadDone  onClick={() => addOnSubmitHandler() } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " /> : <BiEdit onClick={() => addOnEditHandler(el, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />}
+											<RiDeleteBin6Line onClick={() => addOnDltHandler(index) } className="text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer" />
+										</div>
+									</li>
+								);
+							})}{" "}
+						</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 						<button onClick={pricesArrHandler} className="mt-4 flex items-center justify-center  bg-orange-400 text-white rounded-md shadow-lg hover:bg-orange-500 px-8 py-2 transition-transform transform hover:scale-110" aria-label="Add" > {" "} Add Pricing{" "} </button>
 					</div>
 
@@ -808,6 +974,20 @@ const handleKeyDown = (e) => {
 												}
 											)}
 										</ul>
+
+
+										{
+											item?.addOns?.length > 0 && (
+												<ul className="mt-4">
+													<strong>Add Ons</strong>
+													{item?.addOns?.map(
+														(el, index) => {
+															return ( <li key={el.priceTitle + 'addOn-arr'} className="bg-teal-100 text-teal-800 py-1  mb-2 rounded-md flex justify-between px-4 " > <b> {index + 1}.{" "} {el.priceTitle} </b> <span>£.{el.price}</span> </li> );
+														}
+													)}
+												</ul>
+											)
+										}
 
 										<div className="flex justify-center items-center gap-2">
 											<BiEdit onClick={() => pricingSectionEditHandler(item, index) } className="text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer " />
