@@ -51,9 +51,20 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
 
 
-    const [addOnsArr, setAddOnsArr] = useState([]);;
+    const [addOnsArr, setAddOnsArr] = useState([]);
+
+    const [totalPrice, setTotalPrice] = useState('')
 
     
+
+
+
+
+    const calculateTotalPrice = () => {
+
+    }
+
+
 
 
 
@@ -67,8 +78,20 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
             
 
             if (newArr[clickedItemIndex].isChecked === true) {
+
+                setTotalPrice((prev) => {
+                    const newPrice = +prev - +newArr[clickedItemIndex].price
+                    return newPrice.toString()
+                })
+
                 newArr[clickedItemIndex].isChecked = false;
             } else {
+
+                setTotalPrice((prev) => {
+                    const newPrice = +prev + +newArr[clickedItemIndex].price
+                    return newPrice.toString()
+                })
+
                 newArr[clickedItemIndex].isChecked = true;
             }
 
@@ -95,6 +118,13 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
             })
             setAddOnsArr(newArr);
         }
+
+
+
+        setTotalPrice(price)
+
+
+
 
     }, [])
 
@@ -130,6 +160,11 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
 
                         
+                <div className="w-full flex flex-col gap-3 "> 
+
+
+
+
                 <ul className="list-disc text-sm ">
                     {packageIncludes.length > 0 ? <h4 className="font-semibold text-md  mb-2 "> <span className="px-3 py-[2px] bg-gradient-to-br from-slate-400 via-slate-400 via-50% to-slate-500 text-white rounded-md  ">
                         Package Includes :
@@ -143,8 +178,10 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
                 {
                     addOns?.length > 0 && (
-                        <ul className="list-disc text-sm " >
-                            
+                        <ul className="  text-sm " >
+                            <h4 className="font-semibold text-md  mb-3 "> <span className="px-3 py-[2px] bg-gradient-to-br from-slate-400 via-slate-400 via-50% to-slate-500 text-white rounded-md  ">
+                        Also Include:
+                        </span></h4>
                             {
                                 addOnsArr.map((el) => {
                                     return <li key={el._id}> <Checkbox el={el}  onChange={onChangeHandlerCheckbox}/>  </li>
@@ -161,13 +198,18 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
 
 
+                </div>
+
+
+
+
 
 
 
 
                 <div className="flex flex-col items-center gap-2 max-lg:flex-row  max-lg:items-center  max-lg:justify-between max-lg:w-full ">
                     
-                <h3 className="text-2xl font-semibold font-poppins text-teal-600   bg-teal-50    rounded-lg p-2 relative  z-10">£<span className=" text-4xl ">{price}</span></h3>
+                <h3 className="text-2xl font-semibold font-poppins text-teal-600   bg-teal-50    rounded-lg p-2 relative  z-10">£<span className=" text-4xl ">{totalPrice}</span></h3>
                 <Link onClick={onClickLocalStorageHandler} href={`/cart`}>
                 <button  className="text-nowrap  ml-3 drop-shadow-md transition-all inline-flex text-secondary bg-teal-500 border-0 py-2 px-6 hover:outline-teal-500 outline-1 outline outline-transparent hover:bg-transparent hover:text-teal-500 rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">
                     {" "}

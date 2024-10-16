@@ -16,7 +16,7 @@ const Checkbox = ({el, onChange}) => {
 
 
 			<label className="cursor-pointer ml-2 text-slate-600 text-sm" htmlFor={el._id}>
-				{el?.priceTitle} <strong>{el?.price}</strong>
+				{el?.priceTitle} | <strong> £{el?.price}</strong>
 			</label>
 		</div>
 	);
