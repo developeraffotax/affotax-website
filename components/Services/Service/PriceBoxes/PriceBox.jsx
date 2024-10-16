@@ -3,9 +3,13 @@
 import Link from "next/link";
 import { v4 as uuid } from "uuid";
 import { ImPriceTags } from "react-icons/im";
+import Checkbox from "./Checkbox";
+import { useEffect, useState } from "react";
 
-const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageTitle, isCart, isCheckout, setCartItemsArr}) => {
+const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageTitle, isCart, isCheckout, setCartItemsArr, addOns}) => {
 
+
+    
 
     const onClickLocalStorageHandler = () => {
         if(localStorage.getItem('price_id')) {
@@ -43,6 +47,77 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
         }
     }
 
+
+
+
+
+    const [addOnsArr, setAddOnsArr] = useState([]);;
+
+    
+
+
+
+    // Checkbox Handler
+    const onChangeHandlerCheckbox = (event) => {
+
+        setAddOnsArr((prev) => {
+
+            const newArr = [...prev];
+            const clickedItemIndex =  newArr.findIndex((el) => el._id === event.target.name);
+            
+
+            if (newArr[clickedItemIndex].isChecked === true) {
+                newArr[clickedItemIndex].isChecked = false;
+            } else {
+                newArr[clickedItemIndex].isChecked = true;
+            }
+
+            return newArr;
+
+
+        })
+
+
+    }
+
+    
+
+
+
+    useEffect(() => {
+
+        if(addOns?.length > 0) {
+            const newArr = addOns.map((el) => {
+                return {
+                    ...el,
+                    isChecked: false
+                }
+            })
+            setAddOnsArr(newArr);
+        }
+
+    }, [])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <div className={`relative flex flex-row max-lg:flex-col  gap-8 items-end max-lg:items-center justify-between  bg-gray-100  rounded-xl  p-8  ${isCheckout ? 'w-full' : 'w-[100%] max-lg:w-[100%]'}`}>
             <div className="flex flex-col gap-2 w-full">
@@ -64,6 +139,31 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
                         <li key={uuid()} className="ml-4"> {" "} {el}{" "} </li>
                     ))}
                 </ul>
+
+
+                {
+                    addOns?.length > 0 && (
+                        <ul className="list-disc text-sm " >
+                            
+                            {
+                                addOnsArr.map((el) => {
+                                    return <li key={el._id}> <Checkbox el={el}  onChange={onChangeHandlerCheckbox}/>  </li>
+                                })
+                            }
+
+
+
+                        </ul>
+                    )
+                }
+
+
+
+
+
+
+
+
 
                 <div className="flex flex-col items-center gap-2 max-lg:flex-row  max-lg:items-center  max-lg:justify-between max-lg:w-full ">
                     
