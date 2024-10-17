@@ -85,6 +85,35 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
                 })
 
                 newArr[clickedItemIndex].isChecked = false;
+
+
+                // Locally Storing the addons ids  -- Removing the addon ids from localstorage array!
+                if(localStorage.getItem('addon_id')) {
+           
+                    const old_ids = localStorage.getItem('addon_id');
+                    let ids_arr = old_ids.split(',');
+                    
+                    
+                    const newArr = ids_arr.filter((el) => {
+                        return el !== event.target.name;
+                    })
+
+                    localStorage.setItem('addon_id', newArr);
+
+                } 
+
+                
+
+
+
+
+
+
+
+
+
+
+
             } else {
 
                 setTotalPrice((prev) => {
@@ -93,6 +122,30 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
                 })
 
                 newArr[clickedItemIndex].isChecked = true;
+
+
+
+
+
+
+                // Locally Storing the addons ids
+                if(localStorage.getItem('addon_id')) {
+           
+                    const old_ids = localStorage.getItem('addon_id');
+                    let ids_arr = old_ids.split(',');
+                    
+                    
+                    if (!(ids_arr.find((el) => el === event.target.name))) {
+                        ids_arr.push(event.target.name);
+                    }
+        
+                    console.log(ids_arr)
+                    localStorage.setItem('addon_id', ids_arr)
+                    
+                } else {
+                    
+                    localStorage.setItem('addon_id', event.target.name)
+                }
             }
 
             return newArr;
