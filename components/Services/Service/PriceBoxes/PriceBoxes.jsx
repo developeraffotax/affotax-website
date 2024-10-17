@@ -1,15 +1,93 @@
+'use client'
+import { useEffect, useState } from "react";
 import PriceBox from "./PriceBox";
 import { v4 as uuid } from "uuid";
 
 
 
 const PriceBoxes = ({ prices, pageTitle, isCheckout, isCart,  setCartItemsArr}) => {
+
+
+
+    // /addOns?.length > 0 && 
+    const [pricesArr, setPricesArr] = useState([])
+
+
+
+    useEffect(() => {
+
+
+        if(localStorage.getItem('addon_id')) {
+
+
+            const localStorageAddOnId = localStorage.getItem('addon_id')
+            let ids_arr = localStorageAddOnId.split(',');
+
+            let newArr;
+            ids_arr.forEach((storedId) => {
+
+                const mappedArr = [...prices].map((price, index) => {
+
+                    price.addOns.forEach((addOn, i) => {
+
+                        if(storedId === addOn._id) {
+                            addOn.isChecked = true;
+                        } 
+                        console.log(addOn)
+                    })
+
+                    console.log(price)
+                    return {
+                        ...price,
+
+                    }
+
+
+
+
+                })
+
+                setPricesArr(mappedArr)
+
+            })
+
+
+
+            
+        } else {
+            setPricesArr(prices)
+        }
+
+
+
+       
+
+
+
+
+    }, [])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
         <section className={`w-full px-0 font-poppins `}>
             <div className="mx-auto container flex flex-col max-lg:items-center  ">
 
                 
-                {prices?.map((el) => {
+                {pricesArr?.map((el) => {
                     return (
                         <div key={uuid()} className="relative w-full group mb-16">
                            

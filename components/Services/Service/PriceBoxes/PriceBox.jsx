@@ -60,14 +60,6 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
 
 
-    const calculateTotalPrice = () => {
-
-    }
-
-
-
-
-
     // Checkbox Handler
     const onChangeHandlerCheckbox = (event) => {
 
@@ -160,24 +152,69 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
 
 
+
+
+
+
+    // useEffect(() => {
+
+
+
+
+
+    //     if(localStorage.getItem('addon_id')) {
+           
+    //         const old_ids = localStorage.getItem('addon_id');
+    //         let ids_arr = old_ids.split(',');
+            
+            
+    //         const newArr = ids_arr.filter((el) => {
+    //             return el !== event.target.name;
+    //         })
+
+    //         localStorage.setItem('addon_id', newArr);
+
+    //     } else {
+    //         return;
+    //     }
+
+
+
+
+    // }, [])
+
+
+
+
+
+
     useEffect(() => {
 
         if(addOns?.length > 0) {
-            const newArr = addOns.map((el) => {
-                return {
-                    ...el,
-                    isChecked: false
-                }
+
+            setTotalPrice((prev) => {
+                let sumPrice = +price; 
+                addOns.forEach((el) => {
+
+                    if(el.isChecked) {
+                        sumPrice = sumPrice + +(el.price);
+                    }
+
+                })
+            
+                return sumPrice.toString();
+
             })
-            setAddOnsArr(newArr);
+
+
+
+
+            setAddOnsArr(addOns);
+        } else {
+
+            setTotalPrice(price);
         }
-
-
-
-        setTotalPrice(price)
-
-
-
+        
 
     }, [])
 
