@@ -28,6 +28,10 @@ export default function Checkout() {
 		}
 	};
 
+
+
+
+	
 	return (
 		<>
 			<div className="relative mx-auto w-full bg-white max-lg:mt-8 mt-0">

@@ -44,6 +44,37 @@ export default function CartDrawer({cartItemsArr, setCartItemsArr, totalPrice, s
 				dataArr.forEach((el) => {
 					el.prices.forEach((element) => {
 						if (element._id === _id) {
+
+
+
+							// new logic for price addons
+							if(localStorage.getItem('addon_id')) {
+           
+								const old_ids = localStorage.getItem('addon_id');
+								let ids_arr_addOns = old_ids.split(',');
+								
+								if(element.addOns?.length > 0) {
+
+									ids_arr_addOns.forEach((addOn_id) => {
+		
+										const addOnIndex =  element.addOns.findIndex((doc) => doc._id === addOn_id);
+										
+										if(addOnIndex >= 0) {
+											element.addOns[addOnIndex].isChecked = true;
+
+											const newPrice = +(element.price) + +(element.addOns[addOnIndex].price);
+											element.price = newPrice.toString();
+										}
+
+									})
+
+								}
+								
+							} 
+
+
+
+
 							element.pageTitle = el.title;
 							tempArr.unshift(element);
 						}
