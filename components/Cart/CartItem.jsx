@@ -2,7 +2,7 @@ import Link from "next/link";
 import { v4 as uuid } from "uuid";
 import { RxCross1 } from "react-icons/rx";
 
-const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle, _id, removeFromCartHandler, isDrawer}) => {
+const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle, _id, addOns, removeFromCartHandler, isDrawer}) => {
 	return (
 		<>
 			<div className={`${isDrawer ? 'bg-white/20' : 'bg-gray-50'} shadow-sm rounded-lg  p-8 w-full mb-8 ]`}>
@@ -37,6 +37,29 @@ const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle,
 						))}
 					</ul> : null
 					}
+
+
+
+					{
+						addOns?.find((addOn) => addOn.isChecked === true)  && (
+							<ul>
+								<h4 className="font-semibold text-md  my-2 "> <span className="px-3 py-[2px] bg-gradient-to-br from-orange-400 via-orange-400 via-50% to-orange-500 text-white rounded-md  "> Also Included </span></h4>
+
+								{
+									addOns.map((addOn) => {
+										return addOn.isChecked ? <li key={addOn._id} className=" font-poppins "> <h5 className="inline">{addOn.priceTitle} | </h5> <strong className="inline text-lg ">£{addOn.price}</strong> </li> : null
+									})
+								}
+							</ul>
+						)
+					}
+
+
+
+
+
+
+
 				</div>
 
 				<div className="flex items-center gap-2 justify-between max-lg:w-full">
