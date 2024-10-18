@@ -191,7 +191,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
     useEffect(() => {
 
         if(addOns?.length > 0) {
-
+            console.log('PIRCE BOX USEEFFEXXT-------------if block')
             setTotalPrice((prev) => {
                 let sumPrice = +price; 
                 addOns.forEach((el) => {
@@ -211,7 +211,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
             setAddOnsArr(addOns);
         } else {
-
+            console.log('PIRCE BOX USEEFFEXXT-------------else block')
             setTotalPrice(price);
         }
         
@@ -300,12 +300,32 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
                 <div className="flex flex-col items-center gap-2 max-lg:flex-row  max-lg:items-center  max-lg:justify-between max-lg:w-full ">
                     
                 <h3 className="text-2xl font-semibold font-poppins text-teal-600   bg-teal-50    rounded-lg p-2 relative  z-10">£<span className=" text-4xl ">{totalPrice}</span></h3>
-                <Link onClick={onClickLocalStorageHandler} href={`/cart`}>
+
+
+                {
+                    isCart ? <a onClick={onClickLocalStorageHandler} href={`/cart`}> 
+                    <button  className="text-nowrap  ml-3 drop-shadow-md transition-all inline-flex text-secondary bg-teal-500 border-0 py-2 px-6 hover:outline-teal-500 outline-1 outline outline-transparent hover:bg-transparent hover:text-teal-500 rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">
+                        {" "}
+                        Buy Now{" "}
+                    </button>
+                    </a> : <Link onClick={onClickLocalStorageHandler} href={`/cart`}> 
                 <button  className="text-nowrap  ml-3 drop-shadow-md transition-all inline-flex text-secondary bg-teal-500 border-0 py-2 px-6 hover:outline-teal-500 outline-1 outline outline-transparent hover:bg-transparent hover:text-teal-500 rounded-md text-lg font-semibold hover:scale-105 active:scale-95  ">
                     {" "}
                     Buy Now{" "}
                 </button>
                 </Link>
+
+
+
+                }
+                
+
+
+
+
+                
+
+
             </div>
 
 

@@ -5,10 +5,11 @@ import PriceBoxes from "../Services/Service/PriceBoxes/PriceBoxes";
 import CartItems from "./CartItems";
 import { dataArr } from "@/data/serviceData";
 import axios from "axios";
+import SuggestedPriceBoxes from "./SuggestedPriceBoxes";
 
 export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 
-	const [arr, setArr] = useState([])
+	const [arr, setArr] = useState([]);
 
 
 	useEffect(() => {
@@ -21,21 +22,24 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 
 			const dataArr = res.data;
 
+
+			
 			let tempArr = []
 			for(let i=0; i<3; i++) {
-
+				
 				const randomIndex = Math.floor(Math.random() * dataArr.length);
 				const randomServiceData = dataArr[randomIndex]
-			
+				
 				const randomPriceIndex = Math.floor(Math.random() * randomServiceData.prices.length);
 				const randomPriceData = randomServiceData.prices[randomPriceIndex];
-		
+				
 				randomPriceData.pageTitle = randomServiceData.title;
-		
+				
 				tempArr.push(randomPriceData)
 			}
-
-
+			
+			
+			console.log(tempArr)
 			setArr(tempArr);
 
 
@@ -83,7 +87,7 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 					/> */}
 
 
-					<PriceBoxes prices={arr}  isCheckout={true} isCart={true} setCartItemsArr={setCartItemsArr}/>
+					<SuggestedPriceBoxes prices={arr}  isCheckout={true} isCart={true} setCartItemsArr={setCartItemsArr} />
 						</div>
 					</div>
     )

@@ -1,7 +1,8 @@
 import Cart from "@/components/Cart/Cart";
 
-export default function CartPage() {
-    
+export default function CartPage({searchParams}) {
+
+    console.log(searchParams)
     
     return (
         <Cart />

@@ -12,6 +12,9 @@ import SuggestedPackages from "./SuggestedPackages";
 import { CartContext } from "@/app/(user)/layout";
 import axios from "axios";
 
+
+
+
 export default function Cart() {
 	// const {id, pageTitle, priceTitle, price, priceContent, packageIncludes} = productObject;
 	// let packageIncludesArr = packageIncludes.split(',');
@@ -19,7 +22,7 @@ export default function Cart() {
 	const [cartItemsArr, setCartItemsArr] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
 
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const cartContext = useContext(CartContext);
 
@@ -160,7 +163,7 @@ export default function Cart() {
 				</div>
 			) : (
 				<section className="py-24 relative  ">
-					{cartItemsArr.length === 0 ? (
+					{cartItemsArr.length === 0 && !isLoading ? (
 						<div className="w-full  px-4 mx-auto text-center ">
 							<p>Your cart is empty!</p>
 						</div>

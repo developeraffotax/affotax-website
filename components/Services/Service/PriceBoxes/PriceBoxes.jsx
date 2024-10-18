@@ -55,6 +55,7 @@ const PriceBoxes = ({ prices, pageTitle, isCheckout, isCart,  setCartItemsArr}) 
 
             
         } else {
+            console.log('>>>>>>>>>>>>', prices)
             setPricesArr(prices)
         }
 
