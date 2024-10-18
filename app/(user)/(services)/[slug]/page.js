@@ -94,7 +94,7 @@ export async function generateMetadata({ params }) {
         creator: 'Ihtisham Ul Haq -- +92-301-6667656',
 		metadataBase: new URL('https://affotax.com'),
 		alternates: {
-			canonical: `/${serviceData.link}`,
+			canonical: `/${serviceData.canonical ? serviceData.canonical : serviceData.link}`,
 			
 		  },
       }
