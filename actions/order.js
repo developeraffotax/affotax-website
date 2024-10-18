@@ -17,8 +17,6 @@ export async function createOrder(customerData, orderData, paymentId) {
 
 
     
-
-    
 	try {
         const db = await connectDB();
 
@@ -46,7 +44,7 @@ export async function createOrder(customerData, orderData, paymentId) {
 
 
        let newOrderData = {
-        items: orderData.items.map((el) => ({id: el.id, pageTitle: el.pageTitle})),
+        items: orderData.items.map((el) => ({priceId: el._id, pageTitle: el.pageTitle, addOns: el.addOns.filter((addOn) => addOn.isChecked === true)})),
         totalPrice: orderData.totalPrice,
         payment_id: paymentId,
         customer_id: customerDoc._id,
