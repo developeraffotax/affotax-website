@@ -31,6 +31,11 @@ export const htmlEmail = `
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+		.addon {
+			background-color: #f0fdfa;
+			color: #115e59;
+
+		}
         .th, .td {
             padding: 12px 15px;
             text-align: left;
@@ -296,6 +301,19 @@ export const htmlEmail = `
 
 
 			<tr class="tr"> <td class="td"><%= el.priceTitle %> | <%= el.pageTitle %></td> <td class="td"><%= el.price %></td> </tr>
+
+			<% if(el.addOns){ %>
+				<% el.addOns.forEach(function(addOn) { %>
+
+				<tr class="tr addon"> <td class="td"><%= addOn.priceTitle %> | <%= el.pageTitle %> worth £<%= addOn.price %> </td> <td class="td">Add-On</td> </tr>
+
+			
+		<% }); %>
+			
+			
+			
+		<%	}%>
+
 		
 		
 		
@@ -763,7 +781,17 @@ export const htmlEmailForAffotax = `
 
 
 			<tr class="tr"> <td class="td"><%= el.priceTitle %> | <%= el.pageTitle %></td> <td class="td"><%= el.price %></td> </tr>
-		
+
+
+			<% if(el.addOns){ %>
+				<% el.addOns.forEach(function(addOn) { %>
+
+				<tr class="tr addon"> <td class="td"><%= addOn.priceTitle %> | <%= el.pageTitle %> worth £<%= addOn.price %> </td> <td class="td">Add-On</td> </tr>
+
+			
+		<% }); %>
+			
+		<%	}%>
 		
 		
 		<% }); %>
