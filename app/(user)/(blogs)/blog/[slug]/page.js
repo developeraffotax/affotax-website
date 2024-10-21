@@ -31,6 +31,8 @@ export default async function BlogPage({ params }) {
 	const db = await connectDB();
 	const blog = await Blog.findOne({ slug: slug });
 
+	
+
 	if (!blog) {
 		return (
 			<>
@@ -48,6 +50,9 @@ export default async function BlogPage({ params }) {
 		);
 	}
 
+
+	const blogSlug = blog.slug;
+
 	return (
 		<div>
 			<main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
@@ -55,20 +60,26 @@ export default async function BlogPage({ params }) {
 					<article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
 						<header className="mb-4 lg:mb-6 not-format">
 							<address className="flex items-center mb-6 not-italic">
-								<div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+								<div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white ">
 									<img
-										className="mr-4 w-16 h-16 rounded-full"
-										src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-										alt="Jese Leos"
+										className="mr-4 w-16 h-16 rounded-full bg-slate-200 p-2 "
+										src="/user.png"
+										alt="Affotax"
 									/>
 									<div>
-										<a
+										<p
 											href="#"
-											rel="author"
+											rel="puthor"
 											className="text-xl font-bold text-gray-900 dark:text-white"
-										>
-											By Dave Jangid
-										</a>
+										>	
+											{	
+												(blogSlug === 'a-guide-to-understanding-annual-statements' || blogSlug === 'what-are-dormant-accounts' || blogSlug === 'a-guide-on-how-to-pay-corporation-tax-online-in-the-uk' || blogSlug === 'how-is-corporation-tax-calculated-and-filed-in-the-uk') ?
+													'By Daniel Rhodes'
+												: 'By Rashid Hassan'
+											}
+											
+											
+										</p>
 
 										<p className="text-base text-gray-500 dark:text-gray-400">
 											<time pubdate>Feb. 8, 2024</time>
