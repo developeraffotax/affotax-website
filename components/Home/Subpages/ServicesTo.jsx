@@ -37,7 +37,7 @@ export default function ServicesTo() {
                         </div>
                     </li></Link>
 
-                    <Link href={'/partnerships'}>
+                    <Link href={'/freelance-accountants'}>
                     <li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md">
                         <div className="flex items-center">
                             <svg
@@ -51,7 +51,7 @@ export default function ServicesTo() {
                             >
                                 <path d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span className="title-font font-medium">Partnerships</span>
+                            <span className="title-font font-medium">Freelance Accountans</span>
                         </div>
                     </li></Link>
 

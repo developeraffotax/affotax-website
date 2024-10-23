@@ -28,10 +28,11 @@ export default function Footer() {
               <Link href={'/sole-traders'}  className="text-gray-600 hover:text-primary text-xs  font-semibold">Sole Traders</Link>
             </li>
             <li>
-              <Link href={'/limited-companies'} className="text-gray-600 hover:text-primary text-xs   font-semibold">Limited Companies</Link>
+              <Link href={'/ecommerce-accountants'} className="text-gray-600 hover:text-primary text-xs   font-semibold">Ecommerce Accountants</Link>
             </li>
             <li>
-              <Link href={'/partnerships'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Partnerships</Link>
+              <Link href={'/property-accountants'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Property Accountant
+              </Link>
             </li>
             <li>
               <Link href={'/limited-liability-partnerships'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Limited Liablity Partnership</Link>
@@ -40,11 +41,12 @@ export default function Footer() {
               <Link href={'/contractor-accountants'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Contractor Accountants</Link>
             </li>
             <li>
-              <Link href={'/small-business-accountants'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Small Business Accountants</Link>
+              <Link href={'/accountants-near-me'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Accountants Near Me
+              </Link>
             </li>
 
             <li>
-              <Link href={'/xero-accountants'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Xero Accountants</Link>
+              <Link href={'/cheap-accountants'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Cheap Accountants</Link>
             </li>
           </nav>
         </div>
