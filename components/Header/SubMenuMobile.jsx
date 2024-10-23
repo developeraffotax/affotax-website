@@ -192,11 +192,7 @@ const SubMenuMobile = ({ name, link, index, length, onClick}) => {
 
 
 	return (
-		<Link href={link} onClick={liClickHandler}
-			className={`pl-8 pr-4 py-2  border-b-primary bg-secondary text-tertiary hover:text-primary hover:cursor-pointer relative innerMenu  ${
-				index !== length - 1 ? "border-b-2" : "border-b-0"
-			}`}
-		>
+		<Link href={link} onClick={liClickHandler} className={`pl-8 pr-4 py-2  border-b-primary    hover:cursor-pointer relative innerMenu  ${ index !== length - 1 ? "border-b-2" : "border-b-0" } ${ index === length - 1 ? " text-secondary bg-primary hover:bg-[#ff6924] " : " text-tertiary bg-secondary hover:text-primary " } `} >
 			{/* {menu.map((ele) => {
 				return (
 					<div key={ele.name}>

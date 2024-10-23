@@ -128,7 +128,7 @@ export default function Header() {
               <div className=" relative hover:cursor-pointer">
                 <a className=" hover:text-primary text-secondary" onClick={() => setShowSubMenu((prev) => !prev)}> Services <IoIosArrowDown className={` inline-block ml-1 transition-all  ${ !showSubMenu ? "rotate-0" : "rotate-180" }`} /> </a>
                 {showSubMenu ? (
-                  <ul className="py-2 bg-secondary absolute flex flex-col translate-y-2 rounded-lg ">
+                  <ul className="py-0 bg-secondary absolute flex flex-col translate-y-2 rounded-none ">
                     { [...subMenu,   { name: "View All", link: "/services" }].map((el, index) => {
                       return (
                         <SubMenuMobile name={el.name} link={el.link} key={uuid()} index={index} length={subMenu.length + 1} onClick={() => { setIsMobileNav(false); setShowSubMenu(false); }} />
