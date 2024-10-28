@@ -1,6 +1,6 @@
 'use client'
 
-import { message, Modal, Space, Spin, Table } from "antd";
+import { Input, message, Modal, Space, Spin, Table } from "antd";
 import axios from "axios";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -11,7 +11,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 import { deleteNewPage } from "@/actions/whoWeHelpPage";
 import { CgDanger } from "react-icons/cg";
 import Search from "antd/es/input/Search";
-
+import { FcSearch } from "react-icons/fc";
 
 
 
@@ -22,15 +22,52 @@ export default function ViewServicePages() {
     const [modalDltLink, setModalDltLink] = useState('')
 
     const [isLoading, setIsLoading] = useState(false);
-    const [data, setData] = useState([]);
-    const [error, setError] = useState({
-        is: false,
-        msg: ''
-    });
+
+    const [fetchedData, setFetchedData] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
+
+    const [error, setError] = useState({ is: false, msg: '' });
 
     
 
+    //Search Filter
+    const onChange = (event) => {
+        
+        const value = event.target.value;
 
+        const filteredArr = fetchedData.filter((el) => {
+
+            const typedValue = value.trim().toLowerCase();
+            const titleValue = el.title.trim().toLowerCase();
+            const isPresent = titleValue.includes(typedValue);
+            
+            if(!isPresent) {
+
+                let typed = typedValue || '';
+                if (typed.charAt(0) === '/') {   
+                    typed = typed.slice(1);
+                }
+                
+                const isUrlSame = el.link?.includes(typed);
+                return isUrlSame;
+
+            }
+
+            return isPresent
+        });
+
+
+        setFilteredData(filteredArr);
+
+    }
+
+
+
+
+
+
+
+    //Fetch Service Pages Data
     const getAllPages = async () => {
         setError({is: false, msg: ''})
         setIsLoading(true);
@@ -47,7 +84,9 @@ export default function ViewServicePages() {
                     }
                 })
 
-                setData(mappedArr)
+                setFetchedData(mappedArr);
+                setFilteredData(mappedArr);
+                console.log(mappedArr)
             } else {
                 setError({is: true, msg: 'Error occured while fetching data!'})
             }
@@ -61,7 +100,7 @@ export default function ViewServicePages() {
     useEffect(() => {
         
         getAllPages();
-
+        
 
     }, [])
 
@@ -84,7 +123,7 @@ export default function ViewServicePages() {
             
 
             if (res.status === 201) {
-                setData((prev) => {
+                setFilteredData((prev) => {
                     return prev.filter(el => el.link !== modalDltLink) 
                 })
     
@@ -154,8 +193,8 @@ export default function ViewServicePages() {
           title: 'Action',
           
           render: (_, record) => {
-                console.log(record , 'THE RECORD IS ')
-                console.log(_, 'TH E_ IS ')
+                // console.log(record , 'THE RECORD IS ')
+                // console.log(_, 'TH E_ IS ')
 
 
 
@@ -181,9 +220,8 @@ export default function ViewServicePages() {
 
     return (
        <>
-            {/* <Search placeholder="input search text"   enterButton /> */}
-
-        <Table columns={columns}   dataSource={data} size='large' showHeader pa loading={isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" />}  />
+        <Input className=" mb-6 "  style={{ width: '30%', }} prefix={<FcSearch className="text-lg " />}  placeholder="Enter the Page Title OR URL"   onChange={onChange}   allowClear />
+        <Table columns={columns}   dataSource={filteredData} size='large' showHeader pa loading={isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" />}  />
         </>
     )
 } 
