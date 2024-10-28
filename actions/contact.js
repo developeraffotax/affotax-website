@@ -11,7 +11,16 @@ import sendQuoteMail from "@/lib/sendQuoteMail";
 //  SEND MESSAGE
 
 export async function sendMessage(prevState, formData) {
-	const { name, email, service, message } = getFormData( formData, "name", "email", "service", "message" );
+	const { name, email, service, message, hidden } = getFormData( formData, "name", "email", "service", "message", "hidden" );
+
+	
+
+	if(hidden) {
+		
+		return { success: false, message: "Error occured" };
+	}
+
+
 	try {
 		const res = await sendMail(name, email, service, message);
 
@@ -48,9 +57,13 @@ export async function sendInstantQuote(prevState, formData) {
 	const referer = headersList.get('referer')
 
 
-	const { name, email, phoneNumber, businessType, turnover, vatReturns, payrollManaging, bookkeeping } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "vatReturns", "payrollManaging", "bookkeeping"  );
+	const { name, email, phoneNumber, businessType, turnover, vatReturns, payrollManaging, bookkeeping, hidden } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "vatReturns", "payrollManaging", "bookkeeping", "hidden"  );
 	
-	console.log(name)
+	if(hidden) {
+		return {
+			error: true
+		}
+	}
 
 	if (!name || !email) {
 		return {
@@ -118,8 +131,13 @@ export async function sendQuote(prevState, formData) {
 	
 
 
-	const { name, email, phoneNumber, businessType, turnover, bookkeeping, message } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "bookkeeping", "message"  );
+	const { name, email, phoneNumber, businessType, turnover, bookkeeping, message, hidden } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "bookkeeping", "message", "hidden"  );
 	
+	if(hidden) {
+		console.log('THE VALUE OF HIDDEN INPUT IS:', hidden)
+		return { success: false, message: "access_denied", invalidArr: []};
+	}
+
 
 	console.log(name, businessType)
 

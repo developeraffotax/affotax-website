@@ -208,6 +208,10 @@ export default function QuoteForm() {
 									/>
 								</div>
 
+									<input type="hidden" name="hidden" />
+								
+
+
 								<SubmitBtn />
 							</form>
 						</div>
@@ -218,9 +222,15 @@ export default function QuoteForm() {
 					<SuccessModal />
 				)}
 
-				{!formState?.success && formState.message.length > 0 && formState.invalidArr.length === 0 && (
+				{!formState?.success && formState.message.length > 0 && formState.message !== 'access_denied' && formState.invalidArr.length === 0 && (
 					<p className="text-sm font-poppins text-red-500  ">
 						Failed to send your query! Please try again later!
+					</p>
+				)}
+
+				{!formState?.success && formState.message.length > 0 && formState.message === 'access_denied' && formState.invalidArr.length === 0 && (
+					<p className="text-sm font-poppins text-red-500  ">
+						Request Denied!
 					</p>
 				)}
 			</div>

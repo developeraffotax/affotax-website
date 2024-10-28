@@ -91,6 +91,7 @@ const Form = () => {
                     <option value="Others">Others</option>
                  </select>
                 <textarea className='px-4 py-3 bg-white rounded-lg w-full border-2 border-black/40 shadow-md shadow-black/10 outline-none focus:border-primary focus:shadow-primary/30'  name="message" placeholder='Write your message'></textarea>
+                <input type='hidden' name='hidden' />
                 {state.message && <p className={`${state.success ? 'text-green-600' : 'text-red-600'} text-sm`}>{state.message}</p>}
 
                 {error && <p className='text-red-600 text-sm animate-bounce'>{error}</p>}
