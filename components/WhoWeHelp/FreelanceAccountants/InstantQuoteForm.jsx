@@ -8,11 +8,14 @@ import { useEffect } from "react";
 import Arrow from '@/public/Arrow1.svg'
 import Image from "next/image";
 import { forwardRef } from "react";
+import { useFormState } from "react-dom";
 
 const InstantQuoteForm = forwardRef( function InstantQuoteForm(props, ref) {
 	const searchParams = useSearchParams();
 
 	const success = searchParams.get("success");
+
+	const [formState, action] = useFormState(sendInstantQuote, {error: false});
 
 	
 
@@ -46,7 +49,7 @@ const InstantQuoteForm = forwardRef( function InstantQuoteForm(props, ref) {
 
 				<div className="flex w-full justify-center gap-10 ">
 					<div className="flex w-full justify-center py-10 items-center ">
-						<form className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40" action={sendInstantQuote}>
+						<form className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40" action={action}>
 							<div className="">
 								<div className="  flex items-center justify-center mb-4 relative ">
 									<svg
@@ -198,7 +201,7 @@ const InstantQuoteForm = forwardRef( function InstantQuoteForm(props, ref) {
 						</form>
 					</div>
 				</div>
-
+				{formState?.error && <p className="text-red-500 text-sm">Failed to send message! Error occured</p>}
 				{success && (
 					<p className="text-sm font-poppins text-emerald-500  ">
 						Your query has been submitted | We'll get back to you

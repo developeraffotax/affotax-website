@@ -42,7 +42,7 @@ export async function sendMessage(prevState, formData) {
 
 // Instant Quote Mail
 
-export async function sendInstantQuote(formData) {
+export async function sendInstantQuote(prevState, formData) {
 
 	const headersList = headers()
 	const referer = headersList.get('referer')
@@ -50,6 +50,15 @@ export async function sendInstantQuote(formData) {
 
 	const { name, email, phoneNumber, businessType, turnover, vatReturns, payrollManaging, bookkeeping } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "vatReturns", "payrollManaging", "bookkeeping"  );
 	
+	console.log(name)
+
+	if (!name || !email) {
+		return {
+			error: true
+		}
+	}
+
+
 	const data = {
 		name,
 		email,

@@ -10,6 +10,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { LoadingOutlined } from '@ant-design/icons';
 import { deleteNewPage } from "@/actions/whoWeHelpPage";
 import { CgDanger } from "react-icons/cg";
+import Search from "antd/es/input/Search";
 
 
 
@@ -180,6 +181,8 @@ export default function ViewServicePages() {
 
     return (
        <>
+            {/* <Search placeholder="input search text"   enterButton /> */}
+
         <Table columns={columns}   dataSource={data} size='large' showHeader pa loading={isLoading && <Spin indicator={<LoadingOutlined spin />} size="large" />}  />
         </>
     )
