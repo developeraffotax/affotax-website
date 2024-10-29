@@ -24,7 +24,7 @@ export async function POST(request) {
 				_id: '66e3edbe001f439adee69a87',
 				priceTitle: pricingSection.first.pkgName,
 				priceContent: pricingSection.first.pkgTurnover,
-				price: '£' + pricingSection.first.pkgPrice,
+				price: pricingSection.first.pkgPrice,
 				packageIncludes: pricingSection.first.packageIncludes
 			},
 
@@ -32,7 +32,7 @@ export async function POST(request) {
 				_id: '66e3edbe001f439adee69a88',
 				priceTitle: pricingSection.second.pkgName,
 				priceContent: pricingSection.second.pkgTurnover,
-				price:  '£' +  pricingSection.second.pkgPrice,
+				price: pricingSection.second.pkgPrice,
 				packageIncludes: pricingSection.second.packageIncludes
 			},
 
@@ -40,7 +40,7 @@ export async function POST(request) {
 				_id: '66e3edbe001f439adee69a89',
 				priceTitle: pricingSection.third.pkgName,
 				priceContent: pricingSection.third.pkgTurnover,
-				price:   '£' + pricingSection.third.pkgPrice,
+				price: pricingSection.third.pkgPrice,
 				packageIncludes: pricingSection.third.packageIncludes
 			},
 
