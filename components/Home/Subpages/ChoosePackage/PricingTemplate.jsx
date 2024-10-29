@@ -18,9 +18,9 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
                 <h3 className="tracking-widest">{pkgName}</h3>
 					<h2 className="text-5xl text-gray-900 font-medium flex items-center justify-center leading-none mb-4 mt-2">
                     <span >£{pkgPrice}</span>
-						<span className="text-gray-600 text-base ml-1">
+						{/* <span className="text-gray-600 text-base ml-1">
 							+ VAT
-						</span>
+						</span> */}
 					</h2>
                     <span className="text-sm text-gray-600" > {pkgTurnover} </span>
 				</div>
