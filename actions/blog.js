@@ -115,19 +115,7 @@ export async function UploadImage(formData) {
 
 //Update OPERATION
 export async function updateBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, id, keywords, slug } =
-		getFormData(
-			formData,
-			"title",
-			"description",
-			"metaTitle",
-			"metaDescription",
-			"imgUrl",
-			"content",
-			"id",
-			"keywords",
-			"slug"
-		);
+	const { title, description, metaTitle, metaDescription, imgUrl, content, id, keywords, slug, date, author } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "id", "keywords", "slug", "date", "author" );
 
 	try {
 		const db = await connectDB();
@@ -142,7 +130,10 @@ export async function updateBlog(formData) {
 		oldDoc.description= description;
 		oldDoc.imageUrl= imgUrl;
 		oldDoc.content= content;
-		oldDoc.keywords= keywords.split(",")
+		oldDoc.keywords= keywords.split(",");
+		oldDoc.date= new Date(date);
+		oldDoc.author= author;
+
 		
 
 		const newDoc = await oldDoc.save();

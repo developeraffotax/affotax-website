@@ -41,7 +41,8 @@ export default function CreateBlog() {
 
 	const [url, setUrl] = useState("");
 
-	const [date, setDate] = useState('');
+	const [date, setDate] = useState(null);
+	const [dateString, setDateString] = useState('');
 	const [author, setAuthor] = useState('');
 
 
@@ -124,7 +125,7 @@ export default function CreateBlog() {
 		formData.append("keywords", keywords);
 		formData.append("slug", slug);
 
-		formData.append("date", date);
+		formData.append("date", dateString);
 		formData.append("author", author);
 
 		
@@ -146,7 +147,9 @@ export default function CreateBlog() {
 			setMetaDescription();
 			setValue("");
 			setKeywords([]);
-			setDate("");
+
+			setDate(null)
+			setDateString("");
 			setAuthor("");
 			
 		} else {
@@ -193,10 +196,11 @@ export default function CreateBlog() {
 
 
 
-	const datePickerOnChangeHandler = (date, dateString) => {
-		console.log(date, dateString);
+	const datePickerOnChangeHandler = (dateObj, dateString) => {
+		console.log(dateObj, dateString);
 
-		setDate(dateString)
+		setDate(dateObj)
+		setDateString(dateString)
 	  };
 
 
@@ -298,7 +302,7 @@ export default function CreateBlog() {
 						<div className="w-[40%] flex flex-col gap-2 ">
 
 						<label>Select Date</label>
-						<DatePicker  onChange={datePickerOnChangeHandler} />
+						<DatePicker  onChange={datePickerOnChangeHandler} value={date}/>
 
 
 						</div>

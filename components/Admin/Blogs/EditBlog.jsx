@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from "react";
-import { Alert, Button, Input, message, Select, Upload } from 'antd';
+import { Alert, Button, DatePicker, Input, message, Select, Upload } from 'antd';
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from '@ant-design/icons';
 
@@ -10,13 +10,15 @@ import { createBlog, updateBlog, UploadImage } from "@/actions/blog";
 
 import ReactQuill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
+import { FaUser } from "react-icons/fa";
+import dayjs from 'dayjs';
 
 
 
 
 
 
-export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMetaTitle, oldMetaDescription, oldValue, oldKeywords, slug}) {
+export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMetaTitle, oldMetaDescription, oldValue, oldKeywords, slug, oldDate, oldAuthor}) {
 
 
   const [uploadSuccess, setUploadSuccess] = useState(false)
@@ -41,7 +43,13 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
   const [keywords, setKeywords] = useState(oldKeywords)
 
 
-  const [url, setUrl] = useState(window.location.origin + '/blog/' + slug)
+  const [url, setUrl] = useState(window.location.origin + '/blog/' + slug);
+
+
+  const [date, setDate] = useState(dayjs(oldDate));
+	const [dateString, setDateString] = useState(oldDate);
+	const [author, setAuthor] = useState(oldAuthor);
+
 
   const props = {
     name: 'imgFile',
@@ -102,6 +110,9 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
       formData.append('id', id)
       formData.append('keywords', keywords)
       formData.append('slug', slug)
+      formData.append('date', dateString)
+      formData.append('author', author)
+
 
 
 
@@ -133,7 +144,21 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
 
 
 
-
+    const datePickerOnChangeHandler = (dateObj, dateString) => {
+      console.log(dateObj, dateString);
+  
+      setDate(dateObj)
+      setDateString(dateString)
+      };
+  
+  
+  
+  
+      const authorOnchangeHandler = (e) => {
+      console.log(e.target.value);
+  
+      setAuthor(e.target.value)
+      }
 
 
 
@@ -216,10 +241,26 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
                 <TextArea rows={4} placeholder="Write a short description here!" maxLength={600} value={description} onChange={(e) => setDescription(e.target.value)}/>
 
 
-                <label>Select Image</label>
-                <Upload  {...props}> <Button icon={<UploadOutlined />}>Click to Upload</Button> </Upload>
+
+
+                <div  className="w-full flex flex-row  gap-2 mt-4"> 
+                    <div className="w-[40%] flex flex-col gap-2 "> <label>Select Image</label> <Upload  {...props}> <Button icon={<UploadOutlined />}>Click to Upload</Button> </Upload> </div>
+                    <div className="w-[40%] flex flex-col gap-2 "> <label>Select Date</label> <DatePicker  onChange={datePickerOnChangeHandler} value={date}/> </div>
+                    <div className="w-[40%] flex flex-col gap-2 "> <label className="">Author's Name</label> <Input onChange={authorOnchangeHandler} value={author} placeholder="Author's Name" prefix={<FaUser className="opacity-40" />} /> </div>
+                </div>
+
+                
+
+                
+
 
                 </div>
+
+
+
+
+
+               
 
                
 

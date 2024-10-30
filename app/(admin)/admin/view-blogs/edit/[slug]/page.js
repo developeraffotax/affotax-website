@@ -2,6 +2,8 @@
 import { connectDB } from "@/lib/connectDB"
 import Blog from "@/lib/Model/Blog"
 import dynamic from "next/dynamic";
+import { format } from 'date-fns';
+import dayjs from "dayjs";
 
 
 
@@ -23,7 +25,7 @@ export default async function  EditBlogPage({params}) {
     
     const oldDoc = await Blog.findOne({_id : params.slug});
     
-    
+   
     const plainOldDoc = {
         _id: oldDoc._id,
         title: oldDoc.title,
@@ -33,7 +35,9 @@ export default async function  EditBlogPage({params}) {
         metaDescription: oldDoc.metaDescription,
         content: oldDoc.content,
         keywords: oldDoc.keywords,
-        slug: oldDoc.slug
+        slug: oldDoc.slug,
+        date: oldDoc.date ? dayjs(oldDoc.date).format('YYYY-MM-DD') : '',
+        author: oldDoc.author ? oldDoc.author : ''
 
 
     }
@@ -41,7 +45,7 @@ export default async function  EditBlogPage({params}) {
 
     return (
         <>
-            <EditBlog id={plainOldDoc._id} oldTitle={plainOldDoc.title} oldDescription={plainOldDoc.description} oldImgUrl={plainOldDoc.imageUrl} oldMetaTitle={plainOldDoc.metaTitle} oldMetaDescription={plainOldDoc.metaDescription} oldValue={plainOldDoc.content} oldKeywords={plainOldDoc.keywords} slug={plainOldDoc.slug}/>
+            <EditBlog id={plainOldDoc._id} oldTitle={plainOldDoc.title} oldDescription={plainOldDoc.description} oldImgUrl={plainOldDoc.imageUrl} oldMetaTitle={plainOldDoc.metaTitle} oldMetaDescription={plainOldDoc.metaDescription} oldValue={plainOldDoc.content} oldKeywords={plainOldDoc.keywords} slug={plainOldDoc.slug} oldDate={plainOldDoc.date} oldAuthor={plainOldDoc.author}/>
         </>
     )
 }
