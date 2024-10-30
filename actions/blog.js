@@ -14,7 +14,7 @@ import { revalidatePath } from "next/cache";
 
 //CREATE OPERATION
 export async function createBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords, slug } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "keywords", "slug" );
+	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords, slug, date, author } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "keywords", "slug", "date", "author" );
 
 	try {
 		const db = await connectDB();
@@ -33,6 +33,14 @@ export async function createBlog(formData) {
 		}
 
 
+		console.log(date)
+		if (new Date(date) > new Date()) {
+			return {
+				success: false,
+				message: 'You cannot add a date in Future!😐'
+			};
+		}
+
 		const blog = new Blog({
 			metaTitle: metaTitle,
 			metaDescription: metaDescription,
@@ -41,7 +49,9 @@ export async function createBlog(formData) {
 			description: description,
 			imageUrl: imgUrl,
 			content: content,
-			keywords: keywords.split(",")
+			keywords: keywords.split(","),
+			date: date ? new Date(date) : new Date(),
+			author: author
 		});
 
 		const blogDoc = await blog.save();

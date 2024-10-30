@@ -3,13 +3,14 @@
 
 
 import { useState, useEffect, useRef } from "react";
-import { Alert, Button, Input, message, Select, Upload } from "antd";
+import { Alert, Button, DatePicker, Input, message, Select, Upload } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import { UploadOutlined } from "@ant-design/icons";
 
 import { createBlog, UploadImage } from "@/actions/blog";
 
 import { MdOutlineContentCopy } from "react-icons/md";
+import { FaUser } from "react-icons/fa";
 import { CustomEditor } from "@/lib/Editor";
 
 
@@ -40,7 +41,8 @@ export default function CreateBlog() {
 
 	const [url, setUrl] = useState("");
 
-
+	const [date, setDate] = useState('');
+	const [author, setAuthor] = useState('');
 
 
 	const urlInpuRef = useRef();
@@ -122,6 +124,9 @@ export default function CreateBlog() {
 		formData.append("keywords", keywords);
 		formData.append("slug", slug);
 
+		formData.append("date", date);
+		formData.append("author", author);
+
 		
 
 		const res = await createBlog(formData);
@@ -141,6 +146,8 @@ export default function CreateBlog() {
 			setMetaDescription();
 			setValue("");
 			setKeywords([]);
+			setDate("");
+			setAuthor("");
 			
 		} else {
 			message.error(res.message)
@@ -176,6 +183,35 @@ export default function CreateBlog() {
 
 		message.success(`Url Copied!`);
 	}
+
+
+
+
+
+
+
+
+
+
+	const datePickerOnChangeHandler = (date, dateString) => {
+		console.log(date, dateString);
+
+		setDate(dateString)
+	  };
+
+
+
+
+	  const authorOnchangeHandler = (e) => {
+		console.log(e.target.value);
+
+		setAuthor(e.target.value)
+	  }
+
+
+
+
+
 
 
 
@@ -249,8 +285,35 @@ export default function CreateBlog() {
 						<label>Description</label>
 						<TextArea rows={4} placeholder="Write a short description here!" maxLength={1500} value={description} onChange={(e) => setDescription(e.target.value)} />
 
+
+						<div  className="w-full flex flex-row  gap-2 mt-4">
+
+						<div className="w-[40%] flex flex-col gap-2 ">
 						<label>Select Image</label>
 						<Upload {...props}> {" "} <Button icon={<UploadOutlined />}> Click to Upload </Button>{" "} </Upload>
+
+						</div>
+
+
+						<div className="w-[40%] flex flex-col gap-2 ">
+
+						<label>Select Date</label>
+						<DatePicker  onChange={datePickerOnChangeHandler} />
+
+
+						</div>
+
+
+						<div className="w-[40%] flex flex-col gap-2 ">
+
+						<label className="">Author's Name</label>
+						<Input onChange={authorOnchangeHandler} value={author} placeholder="Author's Name" prefix={<FaUser className="opacity-40" />} />
+
+
+						</div>
+
+
+						</div>
 					</div>
 
 					<div className="w-full flex flex-col  gap-2">
