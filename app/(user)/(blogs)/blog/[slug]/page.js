@@ -1,5 +1,6 @@
 import { connectDB } from "@/lib/connectDB";
 import Blog from "@/lib/Model/Blog";
+import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -51,7 +52,7 @@ export default async function BlogPage({ params }) {
 	}
 
 
-	const blogSlug = blog.slug;
+
 
 	return (
 		<div>
@@ -67,22 +68,11 @@ export default async function BlogPage({ params }) {
 										alt="Affotax"
 									/>
 									<div>
-										<p
-											href="#"
-											rel="puthor"
-											className="text-xl font-bold text-gray-900 dark:text-white"
-										>	
-											{	
-												(blogSlug === 'a-guide-to-understanding-annual-statements' || blogSlug === 'what-are-dormant-accounts' || blogSlug === 'a-guide-on-how-to-pay-corporation-tax-online-in-the-uk' || blogSlug === 'how-is-corporation-tax-calculated-and-filed-in-the-uk') ?
-													'By Daniel Rhodes'
-												: 'By Rashid Hassan'
-											}
-											
-											
-										</p>
+										<p href="#" rel="puthor" className="text-xl font-bold text-gray-900 dark:text-white" >{blog.author} </p>
 
 										<p className="text-base text-gray-500 dark:text-gray-400">
-											<time pubdate>Feb. 8, 2024</time>
+											<time datetime={dayjs(blog.date).format('YYYY-MM-DD')}>{dayjs(blog.date).format('MMM D, YYYY')}</time>
+											
 										</p>
 									</div>
 								</div>

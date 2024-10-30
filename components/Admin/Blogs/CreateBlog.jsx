@@ -101,14 +101,14 @@ export default function CreateBlog() {
 
 		const slug = url.split('blog/')[1].trim().toLowerCase().replaceAll(" ", "-").replace(/[^\w\-]/g, '')
 
-		console.log(slug)
+		
 
 		const pattern = /^[a-z0-9-]+$/;
 
 		const result = pattern.test(slug);
 
 
-		console.log(result)
+		
 
 		if (!slug || !result) {
 			return message.error('Kindly Add a proper url | It can only contain a-z 0-9 and -')
@@ -132,7 +132,6 @@ export default function CreateBlog() {
 
 		const res = await createBlog(formData);
 
-		console.log(res)
 
 		if (res.success) {
 
@@ -178,7 +177,7 @@ export default function CreateBlog() {
 
 	const copyIntoClipboard = () => {
 
-		console.log(urlInpuRef.current)
+		
 		urlInpuRef.current.select();
 
 		document?.execCommand("copy");
@@ -197,7 +196,6 @@ export default function CreateBlog() {
 
 
 	const datePickerOnChangeHandler = (dateObj, dateString) => {
-		console.log(dateObj, dateString);
 
 		setDate(dateObj)
 		setDateString(dateString)
@@ -207,7 +205,6 @@ export default function CreateBlog() {
 
 
 	  const authorOnchangeHandler = (e) => {
-		console.log(e.target.value);
 
 		setAuthor(e.target.value)
 	  }
@@ -328,7 +325,7 @@ export default function CreateBlog() {
 						<TextArea rows={4} placeholder="Write a short meta description here!" maxLength={1500} value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} />
 
 						<label>Keywords</label>
-						<Select mode="tags" style={{ width: "100%" }} placeholder="Keywords" onChange={(value) => { console.log(value); setKeywords(value); }} value={keywords} options={[]} />
+						<Select mode="tags" style={{ width: "100%" }} placeholder="Keywords" onChange={(value) => { setKeywords(value); }} value={keywords} options={[]} />
 					</div>
 				</div>
 
