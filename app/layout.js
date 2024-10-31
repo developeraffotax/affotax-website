@@ -1,7 +1,7 @@
 import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 
 import { schemaLD } from "@/data/schemaLD";
@@ -33,13 +33,13 @@ export default function RootLayout({ children }) {
 
 	return (
 		<html lang="en">
+			<GoogleTagManager gtmId="GTM-5ZN5K8MG" />
 
 			<body>
 				<AntdRegistry>{children}</AntdRegistry>
 				<NextTopLoader color="#F27941" showSpinner={false} />
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLD) }} />
 			</body>
-			<GoogleAnalytics gaId="G-XJKFZHBTZ7" />
 		</html>
 	);
 }
