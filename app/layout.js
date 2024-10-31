@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
 
 	return (
 		<html lang="en">
-			<GoogleTagManager gtmId="GTM-5ZN5K8MG" />
+			<GoogleTagManager gtmId="GTM-MW47DQSV" />
 
 			<body>
 				<AntdRegistry>{children}</AntdRegistry>
