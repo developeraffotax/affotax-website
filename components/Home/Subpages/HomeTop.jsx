@@ -18,8 +18,8 @@ export default function HomeTop() {
                     <p className='mb-8 leading-relaxed  text-tertiary/[70] text-xl max-lg:text-lg'> Welcome to Affotax online accountants, your trusted and affordable accounting firm in the UK, designed specifically for small and micro-businesses. We are esteemed ACCA-licensed professionals and HMRC-authorised agents.<br/> <br/> We are committed to providing reliable and expert UK online accountancy services, whether you're an individual, limited company, small business, freelancer, contractor, partnership, landlord, or startup, we have a reliable online accounting package to suit your needs.
                     </p>
                     <div className='flex justify-center text-nowrap '>
-                        <Link href={'/services'}><button className='inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Services </button></Link>
-                        <button onClick={quoteContext.showModal} className='ml-4 inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold'> Get a Quote </button>
+                        <Link href={'/services'}><button className='inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline   hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold'> Services </button></Link>
+                        <button onClick={quoteContext.showModal} className='ml-4 inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline outline-1 outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold'> Get a Quote </button>
                     </div>
                 </div>
 
