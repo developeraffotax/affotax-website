@@ -10,6 +10,7 @@ import { v4 as uuid } from "uuid";
 import LeftSection from "./LeftSection";
 import { useSpring, animated  } from "@react-spring/web";
 import EmailPhone from "./EmailPhone";
+import GetAQuoteSection from "./GetAQuoteSection";
 
 
 const Service = ({ jsonData }) => {
@@ -107,6 +108,7 @@ const Service = ({ jsonData }) => {
             />
             </div>
 
+            <GetAQuoteSection />
 
             <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />
 
