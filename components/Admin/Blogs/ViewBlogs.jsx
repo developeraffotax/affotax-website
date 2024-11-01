@@ -2,7 +2,7 @@
 
 
 import { deleteBlog } from '@/lib/blogs';
-import { ConfigProvider, Space, Spin, Table, Tag } from 'antd';
+import { ConfigProvider, Input, Space, Spin, Table, Tag } from 'antd';
 import axios from 'axios';
 import Link from 'next/link';
 import { MdDelete } from "react-icons/md";
@@ -11,6 +11,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiEdit } from "react-icons/bi";
 import { AiOutlineEye } from "react-icons/ai";
 import { useRouter } from 'next/navigation';
+import { FcSearch } from 'react-icons/fc';
 
 
 
@@ -24,7 +25,8 @@ export default function ViewBlogs({blogsData, refresh}) {
        
     const router = useRouter()
     
-        const [data, setData] = useState(blogsData)
+        const [fetchedData, setFetchedData] = useState(blogsData);
+        const [filteredData, setFilteredData] = useState([]);
 
         const tableRef = useRef()
 
@@ -45,7 +47,8 @@ export default function ViewBlogs({blogsData, refresh}) {
           }
       })
 
-      setData(blogsDataMap)
+      setFetchedData(blogsDataMap)
+      setFilteredData(blogsDataMap)
 
       console.log(tableRef)
 
@@ -55,6 +58,42 @@ export default function ViewBlogs({blogsData, refresh}) {
   }, [])
 
 
+
+
+
+
+
+
+      //Search Filter
+      const onChange = (event) => {
+        
+        const value = event.target.value;
+
+        const filteredArr = fetchedData.filter((el) => {
+
+            const typedValue = value.trim().toLowerCase();
+            const titleValue = el.title.trim().toLowerCase();
+            const isPresent = titleValue.includes(typedValue);
+            
+            if(!isPresent) {
+
+                let typed = typedValue || '';
+                if (typed.charAt(0) === '/') {   
+                    typed = typed.slice(1);
+                }
+                
+                const isUrlSame = el.slug?.includes(typed);
+                return isUrlSame;
+
+            }
+
+            return isPresent
+        });
+
+
+        setFilteredData(filteredArr);
+
+    }
 
 
 
@@ -131,9 +170,9 @@ export default function ViewBlogs({blogsData, refresh}) {
     return (
         <>
 
+<Input className=" mb-6 "  style={{ width: '30%', }} prefix={<FcSearch className="text-lg " />}  placeholder="Enter the Page Title OR URL" onChange={onChange}    allowClear />
 
-
-<Table columns={columns} dataSource={data} size='large' showHeader bordered  />
+<Table columns={columns} dataSource={filteredData} size='large' showHeader bordered  />
 
 
  
