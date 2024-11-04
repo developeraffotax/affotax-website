@@ -13,7 +13,7 @@ export default function GetAQuoteSection() {
 					<svg viewBox="0 0 1024 1024" aria-hidden="true" className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" > <circle r={512} cx={512} cy={512} fill="url(#purple-blue-gradient)" fillOpacity="0.7" /> <defs> <radialGradient id="purple-blue-gradient"> <stop stopColor="#6A5ACD" /> <stop offset={1} stopColor="#00BFFF" /> </radialGradient> </defs> </svg>
 
 					<div className="mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-16 lg:text-left  lg:w-[50%]" >
-						<h2 className="text-balance text-3xl font-semibold tracking-normal text-white  font-poppins  leading-tight"> Simplify your finances with{" "} <span className="bg-gradient-to-br from-orange-400 via-orange-500 via-50% to-orange-700 bg-clip-text text-transparent"> Affotax </span>{" "} — Let's Talk Today! </h2>
+						<h2 className="text-balance text-3xl font-semibold tracking-normal text-white  font-poppins  leading-tight"> Simplify your Tax Filing with{" "} <span className="bg-gradient-to-br from-orange-400 via-orange-500 via-50% to-orange-700 bg-clip-text text-transparent"> Affotax </span>{" "} — Let's Talk Today! </h2>
 						<p className="mt-6 text-pretty text-lg/8 text-gray-300 font-poppins leading-normal ">
 							Have questions or need personalized support? Our
 							team is here to help you every step of the way—don't
