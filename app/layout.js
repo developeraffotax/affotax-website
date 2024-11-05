@@ -14,7 +14,7 @@ export const metadata = {
 	creator: "Ihtisham Ul Haq",
 	authors: [{ name: "Ihtisham Ul Haq", url: "https://iqwebdev.netlify.app/" }],
 	verification: {
-		google: "google998d27ca179e5db7.html",
+		google: "rUWR7Mh3UA6s1lFKr7ssCWWhmuYEkmdqWV9wZc2VdQ0",
 	},
 	
 	
