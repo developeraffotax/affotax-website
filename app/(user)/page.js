@@ -1,4 +1,5 @@
 import Home from "@/components/Home/Home";
+import axios from "axios";
 
 export const metadata = {
 	title: "UK Online Accountant Services | Affordable Accounting Firm in UK",
@@ -9,7 +10,11 @@ export const metadata = {
 
 
 
-export default function HomePage() {
+export default async function HomePage() {
+
+
+	
+
 	return (
 		<> <Home /> </>
 	);

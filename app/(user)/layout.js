@@ -10,7 +10,8 @@ import Link from "next/link";
 import NextTopLoader from "nextjs-toploader";
 import { createContext, useRef, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
-
+import { usePathname } from 'next/navigation'
+import { PageTracker } from "@/lib/PageTracker";
 
 
 
@@ -42,7 +43,17 @@ export default function RootLayout({ children }) {
 	};
 
 
+	
+	const pathname = usePathname()
 
+
+
+	useEffect(() => {
+
+		PageTracker(pathname);
+
+
+	}, [pathname])
 
 
 

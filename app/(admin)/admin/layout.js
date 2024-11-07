@@ -5,7 +5,7 @@ import '../../globals.css';
 
 import React, { useEffect, useState } from 'react';
 
-import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined } from '@ant-design/icons';
+import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined, HomeTwoTone } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import Link from 'next/link';
 import { triggerFocus } from 'antd/es/input/Input';
@@ -289,6 +289,26 @@ export default function RootLayout({ children }) {
               
           //   },
           // ]
+
+
+          },
+
+
+
+
+
+          {
+            key: `homepage-update`,
+            
+            icon: <HomeTwoTone />,
+            label: `HomePage`,
+
+            onClick		: () => {
+              setDefaultSelectedKeys(['homepage-update'])
+              setDefaultOpenKeys(['homepage-update'])
+
+              router.push('/admin/homepage/update');
+            },
 
 
           }
