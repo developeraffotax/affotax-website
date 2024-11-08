@@ -8,6 +8,7 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { UploadOutlined } from "@ant-design/icons";
 import { UploadImage } from "@/actions/blog";
 import { v4 as uuidv4 } from 'uuid';
+import mongoose from "mongoose";
 
 const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, setWhyChooseUsSectionHeading, setWhyChooseUsSectionArray, }) => {
 	// create array handlers here for this section
@@ -103,7 +104,7 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
         } else {
 
                 const obj = {
-                    _id: uuidv4(),
+                    _id: new mongoose.Types.ObjectId(),
                     title: title,
                     content: content,
                     iconUrl: ''

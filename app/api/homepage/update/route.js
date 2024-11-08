@@ -1,15 +1,17 @@
 import { connectDB } from "@/lib/connectDB";
-import ServicePage from "@/lib/Model/ServicePage/ServicePage";
+import Homepage from "@/lib/Model/Homepage/Homepage";
 import { revalidatePath } from "next/cache";
 
 //  POST  /api/homepage/update
 export async function POST(request) {
 	try {
-		const Homepage = await request.json();
+		const HomepageData = await request.json();
+
+		console.log(HomepageData)
 
 		await connectDB();
-
-		const updateRes = await ServicePage.updateOne( {}, { $set: { ...Homepage, }, } );
+		
+		const updateRes = await Homepage.updateOne( {}, { $set: { ...HomepageData, } } );
 
 		console.log(updateRes);
 

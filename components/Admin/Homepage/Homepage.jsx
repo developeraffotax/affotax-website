@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import HomeView from "./HomeView/HomeView";
 import axios from "axios";
-import { Divider, Input, message, Select } from "antd";
+import { Divider, Input, message, Select, Spin } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import EditHero from "./EditHero";
 import EditHowItWorks from "./EditHowItWorks";
@@ -22,12 +22,7 @@ const Homepage = () => {
     const [keywords, setKeywords] = useState([]);
 
 
-    // const [HeroSection, setHeroSection] = useState({
-    //     heading: '',
-    //     html: '',
-    //     imageUrl: '',
-       
-    // });
+
 
     const [heroHeading, setHeroHeading] = useState('')
     const [heroHtml, setHeroHtml] = useState('')
@@ -52,6 +47,9 @@ const Homepage = () => {
     
 
 
+    const [isLoading, setIsLoading] = useState(false)
+    const [isFetching, setIsFetching] = useState(false)
+
 
 
 
@@ -67,7 +65,7 @@ const Homepage = () => {
 
 
     const getData = async () => {
-
+        setIsFetching(true)
         try {
             const res = await axios.get('/api/homepage/get');
 
@@ -102,6 +100,8 @@ const Homepage = () => {
 
         } catch (error) {
             console.log(error)
+        } finally {
+            setIsFetching(false)
         }
 
     }
@@ -125,7 +125,7 @@ const Homepage = () => {
 
 
     const submitHandler = async () => {
-
+        setIsLoading(true)
         const Homepage = {
             HeroSection: {
                 heading: heroHeading,
@@ -162,16 +162,15 @@ const Homepage = () => {
             const res = await axios.post('/api/homepage/update', Homepage);
 
             console.log(res)
-
+            
             message.success('Homepage has been updated successfully!😎')
 
         } catch (error) {
                 console.log(error)
             message.error(error?.message || 'Some error occured!')
+        } finally {
+            setIsLoading(false)
         }
-
-
-
 
             
     }
@@ -193,8 +192,8 @@ const Homepage = () => {
 	return (
         <>
 
-
-<div className="w-full flex justify-end "> <button  onClick={submitHandler} className="flex flex-row items-center justify-center rounded-md w-full px-3 py-3 mb-4 text-lg font-semibold text-white bg-teal-500 leading-6 capitalize duration-100 transform  shadow cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto sm:mr-4 md:pl-8 md:pr-6 xl:pl-12 xl:pr-10   hover:shadow-lg hover:-translate-y-1"> Update Homepage <span className="ml-1 mt-1"> <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" className=" w-6 h fill-current"><path fill="currentColor" d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"></path> </svg> </span> </button> </div>
+<Spin spinning={isFetching} size="" fullscreen />
+<   div className="w-full flex justify-end "> <button  onClick={submitHandler} className="flex flex-row items-center justify-center rounded-md w-full px-3 py-3 mb-4 text-lg font-semibold text-white bg-teal-500 leading-6 capitalize duration-100 transform  shadow cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto sm:mr-4 md:pl-8 md:pr-6 xl:pl-12 xl:pr-10   hover:shadow-lg hover:-translate-y-1"> {isLoading ? 'Updating...!!⏳' : 'Update Homepage'} <span className="ml-1 mt-1"> <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" className=" w-6 h fill-current"><path fill="currentColor" d="M17.92,11.62a1,1,0,0,0-.21-.33l-5-5a1,1,0,0,0-1.42,1.42L14.59,11H7a1,1,0,0,0,0,2h7.59l-3.3,3.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0l5-5a1,1,0,0,0,.21-.33A1,1,0,0,0,17.92,11.62Z"></path> </svg> </span> </button> </div>
 
 
 

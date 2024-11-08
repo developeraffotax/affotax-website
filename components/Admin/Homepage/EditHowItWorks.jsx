@@ -2,6 +2,7 @@
 
 import { Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
+import mongoose from "mongoose";
 import React, { useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -89,7 +90,7 @@ const EditHowItWorks = ({ HowItWorksSectionHeading, HowItWorksSectionArray, setH
 
             setHowItWorksSectionArray((prev) => {
                 newArr.push({
-                    _id: uuidv4(),
+                    _id: new mongoose.Types.ObjectId(),
                     title: title,
                     content: content
                 })
