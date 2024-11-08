@@ -1,4 +1,4 @@
-
+"use client"
 
 import { connectDB } from "@/lib/connectDB";
 import ChoosePackage from "./Subpages/ChoosePackage/ChoosePackage";
@@ -11,22 +11,23 @@ import WhyUs from "./Subpages/WhyUs";
 import PricingPage from "@/lib/Model/PricingPage/PricingPage";
 
 
-export default async function HomeView({data, handlers}) {
+export default function HomeView({data, handlers}) {
 
   // const db = await connectDB();
 
 	// const pricingPage = await PricingPage.findOne();
 
+  console.log(data.HeroSection, "IN THE HOMEVIEW")
 
   return (
     <main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
-        <HomeTop />
+        <HomeTop data={data.HeroSection} handlers={handlers.setHeroSection}/>
         {/* <ChoosePackage pricingPage={JSON.stringify(pricingPage)}/> */}
-        <HowItWorks />
-        <WhyUs />
-        <ServicesTo />
-        <Reviews />
-        <EmailPhone />
+        <HowItWorks data={data.HowItWorksSection} handlers={handlers.setHowItWorksSection}/>
+        <WhyUs data={data.WhyChooseUsSection} handlers={handlers.setWhyChooseUsSection} ctaData={data.CTASection} ctaHandlers={handlers.setCTASection}/>
+        <ServicesTo data={data.LinksSection} handlers={handlers.setLinksSection}/>
+        {/* <Reviews />
+        <EmailPhone /> */}
     </main>
   );
 }

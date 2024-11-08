@@ -8,7 +8,7 @@ import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import { ConfigProvider, Modal } from "antd";
 import Link from "next/link";
 import NextTopLoader from "nextjs-toploader";
-import { createContext, useRef, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { usePathname } from 'next/navigation'
 import { PageTracker } from "@/lib/PageTracker";
