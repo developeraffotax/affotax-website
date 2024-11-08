@@ -1,6 +1,6 @@
 "use client"
 
-import { Input } from "antd";
+import { Input, message } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import mongoose from "mongoose";
 import React, { useState } from "react";
@@ -72,6 +72,12 @@ const EditLinksSection = ({ LinksSectionHeading, LinksSectionArray, setLinksSect
 
 
     const onComplete = () => {
+
+        if(path.toString().charAt(0) !== "/") {
+            return message.warning('Start with / Please😐');
+        }
+
+
        console.log(editId) 
         if (editId) {
             const newArr = [...LinksSectionArray]

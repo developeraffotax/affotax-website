@@ -129,7 +129,7 @@ const Homepage = () => {
         const Homepage = {
             HeroSection: {
                 heading: heroHeading,
-                html: HeroImageUrl,
+                html: heroHtml,
                 imageUrl: HeroImageUrl
             },
             HowItWorksSection: {
