@@ -8,6 +8,8 @@ import TextArea from "antd/es/input/TextArea";
 import EditHero from "./EditHero";
 import EditHowItWorks from "./EditHowItWorks";
 import EditWhyChooseUs from "./EditWhyChooseUs";
+import EditCtaSection from "./EditCtaSection";
+import EditLinksSection from "./EditLinksSection";
 
 
 
@@ -40,21 +42,14 @@ const Homepage = () => {
     const [WhyChooseUsSectionArray, setWhyChooseUsSectionArray] = useState([]);
 
 
+    const [CTASectionHeading, setCTASectionHeading] = useState('')
+    const [CTASectionHtml, setCTASectionHtml] = useState('')
 
-    const [WhyChooseUsSection, setWhyChooseUsSection] = useState({
-        heading: '',
-        arr: []
-    });
-
-    const [CTASection, setCTASection] = useState({
-        heading: '',
-        html: '',
-    });
-
-    const [LinksSection, setLinksSection] = useState({
-        heading: '',
-        arr: []
-    });
+   
+    
+    const [LinksSectionHeading, setLinksSectionHeading] = useState('')
+    const [LinksSectionArray, setLinksSectionArray] = useState([])
+    
 
 
 
@@ -153,8 +148,13 @@ const Homepage = () => {
                 setWhyChooseUsSectionArray(WhyChooseUsSection.arr)
 
 
-                setCTASection(CTASection);
-                setLinksSection(LinksSection);
+                setCTASectionHeading(CTASection.heading);
+                setCTASectionHtml(CTASection.html);
+
+
+
+                setLinksSectionHeading(LinksSection.heading);
+                setLinksSectionArray(LinksSection.arr);
 
                 setMetaTitle(metaTitle);
                 setMetaDescription(metaDescription);
@@ -279,23 +279,26 @@ const Homepage = () => {
 
 
 
-<Divider style={{ borderColor: "#eb8110" }}> {" "} How-it-Works Section {" "} </Divider>
-
-
-
-
+        <Divider style={{ borderColor: "#eb8110" }}> {" "} How-it-Works Section {" "} </Divider>
         <EditHowItWorks HowItWorksSectionHeading={HowItWorksSectionHeading} HowItWorksSectionArray={HowItWorksSectionArray} setHowItWorksSectionHeading={setHowItWorksSectionHeading} setHowItWorksSectionArray={setHowItWorksSectionArray}/>
 
     
-
-
-
-
-
         <Divider style={{ borderColor: "#eb8110" }}> {" "} Why-Choose-Us Section {" "} </Divider>
-        
         <EditWhyChooseUs WhyChooseUsSectionHeading={WhyChooseUsSectionHeading} WhyChooseUsSectionArray={WhyChooseUsSectionArray} setWhyChooseUsSectionHeading={setWhyChooseUsSectionHeading} setWhyChooseUsSectionArray={setWhyChooseUsSectionArray} />
         
+
+        <Divider style={{ borderColor: "#eb8110" }}> {" "} CTA-Section Section {" "} </Divider>
+        <EditCtaSection CTASectionHeading={CTASectionHeading} CTASectionHtml={CTASectionHtml} setCTASectionHeading={setCTASectionHeading} setCTASectionHtml={setCTASectionHtml} />
+
+
+
+
+
+        <Divider style={{ borderColor: "#eb8110" }}> {" "} Who-we-help Pages-Links Section {" "} </Divider>
+        <EditLinksSection LinksSectionHeading={LinksSectionHeading} LinksSectionArray={LinksSectionArray} setLinksSectionHeading={setLinksSectionHeading} setLinksSectionArray={setLinksSectionArray} />
+
+
+
         </>
     )
 };
