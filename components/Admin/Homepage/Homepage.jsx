@@ -7,6 +7,7 @@ import { Divider, Input, Select } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import EditHero from "./EditHero";
 import EditHowItWorks from "./EditHowItWorks";
+import EditWhyChooseUs from "./EditWhyChooseUs";
 
 
 
@@ -35,6 +36,11 @@ const Homepage = () => {
     const [HowItWorksSectionHeading, setHowItWorksSectionHeading] = useState('');
     const [HowItWorksSectionArray, setHowItWorksSectionArray] = useState([]);
 
+    const [WhyChooseUsSectionHeading, setWhyChooseUsSectionHeading] = useState('');
+    const [WhyChooseUsSectionArray, setWhyChooseUsSectionArray] = useState([]);
+
+
+
     const [WhyChooseUsSection, setWhyChooseUsSection] = useState({
         heading: '',
         arr: []
@@ -57,36 +63,36 @@ const Homepage = () => {
 
 
 
-    const HeroSectionHandler = {
-        inputHandler : () => {
-            setHeroSection((prev) => {
-                return {
-                    ...prev,
-                    [e.target.name]: e.target.value
-                }
-            })
-        },
+    // const HeroSectionHandler = {
+    //     inputHandler : () => {
+    //         setHeroSection((prev) => {
+    //             return {
+    //                 ...prev,
+    //                 [e.target.name]: e.target.value
+    //             }
+    //         })
+    //     },
 
-        htmlHandler : () => {
-            setHeroSection((prev) => {
-                return {
-                    ...prev,
-                    html: e.target.value
-                }
-            })
-        },
+    //     htmlHandler : () => {
+    //         setHeroSection((prev) => {
+    //             return {
+    //                 ...prev,
+    //                 html: e.target.value
+    //             }
+    //         })
+    //     },
 
-        imgHandler: (url) => {
-            setHeroSection((prev) => {
-                return {
-                    ...prev,
-                    imageUrl: url
-                }
-            })
-        }
+    //     imgHandler: (url) => {
+    //         setHeroSection((prev) => {
+    //             return {
+    //                 ...prev,
+    //                 imageUrl: url
+    //             }
+    //         })
+    //     }
 
         
-    }
+    // }
 
 
 
@@ -141,10 +147,12 @@ const Homepage = () => {
 
                 setHowItWorksSectionHeading(HowItWorksSection.heading)
                 setHowItWorksSectionArray(HowItWorksSection.arr)
+
                 
+                setWhyChooseUsSectionHeading(WhyChooseUsSection.heading)
+                setWhyChooseUsSectionArray(WhyChooseUsSection.arr)
 
 
-                setWhyChooseUsSection(WhyChooseUsSection);
                 setCTASection(CTASection);
                 setLinksSection(LinksSection);
 
@@ -278,8 +286,15 @@ const Homepage = () => {
 
         <EditHowItWorks HowItWorksSectionHeading={HowItWorksSectionHeading} HowItWorksSectionArray={HowItWorksSectionArray} setHowItWorksSectionHeading={setHowItWorksSectionHeading} setHowItWorksSectionArray={setHowItWorksSectionArray}/>
 
+    
+
+
+
+
+
+        <Divider style={{ borderColor: "#eb8110" }}> {" "} Why-Choose-Us Section {" "} </Divider>
         
-            
+        <EditWhyChooseUs WhyChooseUsSectionHeading={WhyChooseUsSectionHeading} WhyChooseUsSectionArray={WhyChooseUsSectionArray} setWhyChooseUsSectionHeading={setWhyChooseUsSectionHeading} setWhyChooseUsSectionArray={setWhyChooseUsSectionArray} />
         
         </>
     )
