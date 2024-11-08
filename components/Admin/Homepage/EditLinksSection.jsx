@@ -48,6 +48,9 @@ const EditLinksSection = ({ LinksSectionHeading, LinksSectionArray, setLinksSect
 
     const onDelete = (id) => {
 
+        if (id === editId) {
+            return;
+        }
         
         setLinksSectionArray((prev) => {
 
@@ -161,10 +164,11 @@ const EditLinksSection = ({ LinksSectionHeading, LinksSectionArray, setLinksSect
                 <p className=" text-end  text-sm mt-3 font-semibold "><span className="">🔴 Keep In Mind:</span> Always start path with "/"</p>
             </div>
 
-            <div className="w-full ">
+            <div className="w-full flex justify-between items-center gap-5 ">
 
                 <button onClick={onComplete} type='button' className='py-2.5 pl-6 pr-3.5 text-sm bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 flex items-center hover:bg-indigo-100'> {editId ? 'Update' : 'Add New Link'} <svg class='ml-3' width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1' stroke='#5551FF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path> </svg> </button>
-
+                {editId && <button onClick={() => {setEditId(''); setTitle(); setPath();}} type='button' className='py-2.5 px-6 text-sm rounded-full font-semibold text-indigo-500 transition-all duration-500 hover:bg-indigo-100 hover:shadow-xs hover:text-indigo-700'>I want to add New Link🧡</button>
+                }
             </div>
             
 

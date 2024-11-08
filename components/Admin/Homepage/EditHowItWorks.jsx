@@ -5,8 +5,13 @@ import TextArea from "antd/es/input/TextArea";
 import React, { useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { v4 as uuidv4 } from 'uuid';
+
+
+
+
 const EditHowItWorks = ({ HowItWorksSectionHeading, HowItWorksSectionArray, setHowItWorksSectionHeading, setHowItWorksSectionArray, }) => {
-	// create array handlers here for this section
+	
 
 
 
@@ -45,6 +50,9 @@ const EditHowItWorks = ({ HowItWorksSectionHeading, HowItWorksSectionArray, setH
 
     const onDelete = (id) => {
 
+        if (id === editId) {
+            return;
+        }
         
         setHowItWorksSectionArray((prev) => {
 
@@ -68,16 +76,52 @@ const EditHowItWorks = ({ HowItWorksSectionHeading, HowItWorksSectionArray, setH
         
         const newArr = [...HowItWorksSectionArray]
 
-        const editIndex = newArr.findIndex((el) => el._id === editId);
 
-        newArr[editIndex].title = title;
-        newArr[editIndex].content = content;
+        if(editId) {
+            const editIndex = newArr.findIndex((el) => el._id === editId);
 
-        setHowItWorksSectionArray(newArr)
+            newArr[editIndex].title = title;
+            newArr[editIndex].content = content;
+
+            setHowItWorksSectionArray(newArr)
+
+        } else {
+
+            setHowItWorksSectionArray((prev) => {
+                newArr.push({
+                    _id: uuidv4(),
+                    title: title,
+                    content: content
+                })
+
+                return newArr;
+            })
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
         setEditId('');
-        setTitle('')
-        setContent('')
+        setTitle('');
+        setContent('');
     }
 
 
@@ -149,10 +193,12 @@ const EditHowItWorks = ({ HowItWorksSectionHeading, HowItWorksSectionArray, setH
 
             </div>
 
-            <div className="w-full ">
+            <div className="w-full flex justify-between items-center gap-5 ">
 
-                <button onClick={onComplete} type='button' className='py-2.5 pl-6 pr-3.5 text-sm bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 flex items-center hover:bg-indigo-100'> Update <svg class='ml-3' width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1' stroke='#5551FF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path> </svg> </button>
+                <button onClick={onComplete} type='button' className='py-2.5 pl-6 pr-3.5 text-sm bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 flex items-center hover:bg-indigo-100'> {editId ? 'Update' : 'Add New'} <svg class='ml-3' width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1' stroke='#5551FF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path> </svg> </button>
 
+                {editId && <button onClick={() => {setEditId(''); setTitle(); setContent();}} type='button' className='py-2.5 px-6 text-sm rounded-full font-semibold text-indigo-500 transition-all duration-500 hover:bg-indigo-100 hover:shadow-xs hover:text-indigo-700'>I want to add New🧡</button>
+                }
             </div>
             
 

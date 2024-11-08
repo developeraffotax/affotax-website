@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import HomeView from "./HomeView/HomeView";
 import axios from "axios";
-import { Divider, Input, Select } from "antd";
+import { Divider, Input, message, Select } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import EditHero from "./EditHero";
 import EditHowItWorks from "./EditHowItWorks";
@@ -50,67 +50,6 @@ const Homepage = () => {
     const [LinksSectionHeading, setLinksSectionHeading] = useState('')
     const [LinksSectionArray, setLinksSectionArray] = useState([])
     
-
-
-
-
-
-
-
-
-    // const HeroSectionHandler = {
-    //     inputHandler : () => {
-    //         setHeroSection((prev) => {
-    //             return {
-    //                 ...prev,
-    //                 [e.target.name]: e.target.value
-    //             }
-    //         })
-    //     },
-
-    //     htmlHandler : () => {
-    //         setHeroSection((prev) => {
-    //             return {
-    //                 ...prev,
-    //                 html: e.target.value
-    //             }
-    //         })
-    //     },
-
-    //     imgHandler: (url) => {
-    //         setHeroSection((prev) => {
-    //             return {
-    //                 ...prev,
-    //                 imageUrl: url
-    //             }
-    //         })
-    //     }
-
-        
-    // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -188,11 +127,27 @@ const Homepage = () => {
     const submitHandler = async () => {
 
         const Homepage = {
-            HeroSection,
-            HowItWorksSection,
-            WhyChooseUsSection,
-            CTASection,
-            LinksSection,
+            HeroSection: {
+                heading: heroHeading,
+                html: HeroImageUrl,
+                imageUrl: HeroImageUrl
+            },
+            HowItWorksSection: {
+                heading: HowItWorksSectionHeading,
+                arr: HowItWorksSectionArray
+            },
+            WhyChooseUsSection: {
+                heading: WhyChooseUsSectionHeading,
+                arr: WhyChooseUsSectionArray
+            },
+            CTASection:{
+                heading: CTASectionHeading,
+                html: CTASectionHtml
+            },
+            LinksSection: {
+                heading: LinksSectionHeading,
+                arr: LinksSectionArray
+            },
 
             metaTitle,
             metaDescription,
@@ -208,19 +163,12 @@ const Homepage = () => {
 
             console.log(res)
 
-            message.success('Pricing Page has been updated successfully!😎')
+            message.success('Homepage has been updated successfully!😎')
 
         } catch (error) {
                 console.log(error)
+            message.error(error?.message || 'Some error occured!')
         }
-
-
-
-
-
-
-
-
 
 
 

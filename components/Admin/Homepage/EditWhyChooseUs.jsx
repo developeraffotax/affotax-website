@@ -7,6 +7,8 @@ import { BiEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { UploadOutlined } from "@ant-design/icons";
 import { UploadImage } from "@/actions/blog";
+import { v4 as uuidv4 } from 'uuid';
+
 const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, setWhyChooseUsSectionHeading, setWhyChooseUsSectionArray, }) => {
 	// create array handlers here for this section
 
@@ -78,25 +80,56 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
 
         const newArr = [...WhyChooseUsSectionArray]
 
-        const editIndex = newArr.findIndex((el) => el._id === editId);
+        if (editId ){
+            const editIndex = newArr.findIndex((el) => el._id === editId);
 
-        newArr[editIndex].title = title;
-        newArr[editIndex].content = content;
+            newArr[editIndex].title = title;
+            newArr[editIndex].content = content;
 
-        if (imgFile) {
+                if (imgFile) {
 
-            console.log('in the image file')
-            const form = new FormData();
-			form.append("imgFile", imgFile);
-			const res = await UploadImage(form);
-			
-            newArr[editIndex].iconUrl = res.url;
+                    console.log('in the image file')
+                    const form = new FormData();
+                    form.append("imgFile", imgFile);
+                    const res = await UploadImage(form);
+                    
+                    newArr[editIndex].iconUrl = res.url;
 
-            setWhyChooseUsSectionArray(newArr)
+                    setWhyChooseUsSectionArray(newArr)
+                } else {
+                    setWhyChooseUsSectionArray(newArr)
+                }
+
         } else {
-            setWhyChooseUsSectionArray(newArr)
-        }
 
+                const obj = {
+                    _id: uuidv4(),
+                    title: title,
+                    content: content,
+                    iconUrl: ''
+                }
+
+                if (imgFile) {
+
+                    console.log('in the image file')
+                    const form = new FormData();
+                    form.append("imgFile", imgFile);
+                    const res = await UploadImage(form);
+                    
+                    obj.iconUrl = res.url;
+
+                    newArr.push(obj)
+                    setWhyChooseUsSectionArray(newArr)
+
+                } else {
+                    obj.iconUrl = '';
+
+                    newArr.push(obj)
+                    setWhyChooseUsSectionArray(newArr)
+                }
+
+
+        }
 
 
         
@@ -222,10 +255,11 @@ console.log(WhyChooseUsSectionArray)
 
             </div>
 
-            <div className="w-full ">
+            <div className="w-full  flex justify-between items-center gap-5">
 
-                <button onClick={onComplete} type='button' className='py-2.5 pl-6 pr-3.5 text-sm bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 flex items-center hover:bg-indigo-100'> Update <svg class='ml-3' width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1' stroke='#5551FF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path> </svg> </button>
-
+                <button onClick={onComplete} type='button' className='py-2.5 pl-6 pr-3.5 text-sm bg-indigo-50 text-indigo-500 rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500 flex items-center hover:bg-indigo-100'> {editId ? 'Update' : 'Add New'} <svg class='ml-3' width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'> <path d='M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1' stroke='#5551FF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path> </svg> </button>
+                {editId && <button onClick={() => {setEditId(''); setTitle(""); setContent(); setIconUrl();}} type='button' className='py-2.5 px-6 text-sm rounded-full font-semibold text-indigo-500 transition-all duration-500 hover:bg-indigo-100 hover:shadow-xs hover:text-indigo-700'>I want to add New🧡</button>
+                }
             </div>
             
 
