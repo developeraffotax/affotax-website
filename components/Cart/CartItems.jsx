@@ -8,7 +8,7 @@ export default function CartItems({cartItemsArr, removeFromCartHandler, isDrawer
 
 
 
-
+    
 
 
 

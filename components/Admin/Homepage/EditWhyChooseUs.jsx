@@ -258,7 +258,7 @@ console.log(WhyChooseUsSectionArray)
                 
                 </form>
 
-                <div className="relative mt-4 p-5 bg-indigo-200 rounded-md ">
+                <div className={`relative mt-4 p-5 rounded-md ${iconUrl ? 'bg-indigo-200' : 'bg-none'}`}>
 
                 {/* {iconUrl &&  <span className="w-20 h-20 rounded-md absolute bg-indigo-200 -top-2 -left-2 z-10 "></span>} */}
                 <div className="w-20 rounded-md shadow-md overflow-hidden z-30 relative bg-white/60"> <img src={iconUrl} /></div>

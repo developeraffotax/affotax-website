@@ -31,6 +31,9 @@ export default function Checkout() {
 
 
 
+	const [isFetching, setIsFetching] = useState(false)
+
+
 	
 	return (
 		<>
@@ -189,36 +192,77 @@ export default function Checkout() {
 								setCartItemsArr={setCartItemsArr}
 								totalPrice={totalPrice}
 								setTotalPrice={setTotalPrice}
+								setIsFetching={setIsFetching}
+								isFetching={isFetching}
 							/>
 						</div>
 
-						<div className="relative mt-10 text-white max-lg:text-black">
-							<h3 className="mb-5 text-lg font-bold">Support</h3>
-							<p className="text-sm font-semibold">
-								+44 20 8144 6811
-								<span className="font-light text-white max-lg:text-black">
-									{" "}
-									(Phone)
-								</span>
-							</p>
-							<p className="mt-1 text-sm font-semibold">
-								info@affotax.com{" "}
-								<span className="font-light">(Email)</span>
-							</p>
-							<p className="mt-2 text-xs font-medium">
-								Call us now for payment related issues
-							</p>
-						</div>
-						<div className="relative mt-10 flex">
-							<p className="flex flex-col">
-								<span className="text-sm font-bold text-white max-lg:text-black">
-									Money Back Guarantee
-								</span>
-								<span className="text-xs font-medium text-white max-lg:text-black">
-									within 30 days of purchase
-								</span>
-							</p>
-						</div>
+						{!isFetching && <div className="w-full bg-fuchsia-200 flex flex-row justify-start items-start gap-12 ml-8">
+
+
+<div className="relative mt-10 text-white max-lg:text-black">
+	<h3 className="mb-3 text-lg font-bold">For Bank Transfers</h3>
+	<div className="text-sm tracking-wide font-semibold ">
+
+		<table className="  ">
+			<tbody>
+			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b rounded-tl-md ">Bank Name:</td> <td className="bg-white/70 text-black px-2 py-1 border-b rounded-tr-md">Natwest</td> </tr>
+			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">Account Title:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">Online Accountant Ltd</td> </tr>
+			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">Account Number:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">89347447</td> </tr>
+			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">IBAN:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">GB58NWBK51705789347447</td> </tr>
+			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">SWIFT/BIC Code:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">NWBKGB2L</td> </tr>
+			<tr> <td className="bg-slate-500/80 px-2 py-2 rounded-bl-md ">Sort Code:</td> <td className="bg-white/70 text-black px-2 py-1 rounded-br-md ">51-70-57</td> </tr>
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
+
+<div className="relative mt-12 text-white max-lg:text-black ">
+	<h3 className="mb-3 text-lg font-bold">Support</h3>
+	<p className="text-sm font-semibold">
+		+44 20 8129 4481
+		<span className="font-light text-white max-lg:text-black">
+			{" "}
+			(Phone)
+		</span>
+	</p>
+	<p className="mt-1 text-sm font-semibold">
+		info@affotax.com{" "}
+		<span className="font-light">(Email)</span>
+	</p>
+	<p className="mt-2 text-xs font-medium">
+		Call us now for payment related issues
+	</p>
+
+	<p className="flex flex-col mt-2">
+		<span className="text-sm font-bold text-white max-lg:text-black">
+			Money Back Guarantee
+		</span>
+		<span className="text-xs font-medium text-white max-lg:text-black">
+			within 30 days of purchase
+		</span>
+	</p>
+</div>
+
+
+<div className="relative mt-10 flex ml-8">
+	
+</div>
+
+
+
+
+
+
+
+</div>
+}
+
+
+
+						
 					</div>
 				</div>
 			</div>
