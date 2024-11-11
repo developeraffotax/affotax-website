@@ -56,6 +56,7 @@ export async function createBlog(formData) {
 
 		const blogDoc = await blog.save();
 		 revalidatePath('/blogs');
+		 revalidatePath('/sitemap.xml');
 		
 		return {
 			success: true,

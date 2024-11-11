@@ -59,7 +59,7 @@ const EditHero = ({heroHeading, heroHtml, HeroImageUrl, setHeroHeading, setHeroH
 
 <div className="w-full flex flex-col  gap-2">
     <label>Heading</label>
-    <Input placeholder="Heading for the page" value={heroHeading} onChange={(e) => setHeroHeading(e.target.value)} />
+	<CustomEditor value={heroHeading} setValue={setHeroHeading} />
 
     <label>Content</label>
 	<CustomEditor value={heroHtml} setValue={setHeroHtml} />

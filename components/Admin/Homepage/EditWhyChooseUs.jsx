@@ -2,13 +2,14 @@
 
 import { Button, Input, Upload } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { BiEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { UploadOutlined } from "@ant-design/icons";
 import { UploadImage } from "@/actions/blog";
 import { v4 as uuidv4 } from 'uuid';
 import mongoose from "mongoose";
+import NoImage from '@/public/noImage.png'
 
 const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, setWhyChooseUsSectionHeading, setWhyChooseUsSectionArray, }) => {
 	// create array handlers here for this section
@@ -29,7 +30,7 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
     
 
 
-
+    const formRef = useRef()
 
 
 
@@ -140,6 +141,8 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
         setEditId('');
         setTitle('');
         setContent('');
+
+        formRef.current.reset();
     }
 
 
@@ -197,22 +200,31 @@ console.log(WhyChooseUsSectionArray)
 					{WhyChooseUsSectionArray.map((el) => {
 						return (
 							<li key={el._id} className="flex-start group relative flex lg:flex-col" >
-								<div className="ml-6 lg:ml-0 lg:mt-10">
-									{/* <div><img src={el.iconUrl} alt={el.title} /> </div> */}
-									<div className="w-full flex justify-between items-center gap-8">
-                                    <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-										{el.title}
-									</h3>
-                                    <div className="flex gap-4">
-                                        <BiEdit onClick={() => onEdit(el._id)} className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer'/>
-                                        <RiDeleteBin6Line onClick={() => onDelete(el._id)}  className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer' />
-                                    </div>
-                                    </div>
+                                <div className="w-full flex flex-row justify-start gap-8 items-center ">
 
-									<h4 className="mt-2 text-base text-gray-700">
-										{el.content}
-									</h4>
-								</div>
+
+                                <div className="w-[200px]"><img src={el.iconUrl ? el.iconUrl : NoImage.src} alt={el.iconUrl} /> </div>
+
+                                
+<div className="ml-6 lg:ml-0 lg:mt-10">
+    <div className="w-full flex justify-between items-center gap-8">
+    
+    <h3 className="text-xl font-bold text-gray-900 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
+        {el.title}
+    </h3>
+    <div className="flex gap-4">
+        <BiEdit onClick={() => onEdit(el._id)} className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer'/>
+        <RiDeleteBin6Line onClick={() => onDelete(el._id)}  className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all cursor-pointer' />
+    </div>
+    </div>
+
+    <h4 className="mt-2 text-base text-gray-700">
+        {el.content}
+    </h4>
+</div>
+
+
+                                </div>
                                 
 							</li>
 						);
@@ -238,18 +250,18 @@ console.log(WhyChooseUsSectionArray)
                 {/* <label>Upload Icon</label>
                 <Upload {...props}> {" "} <Button icon={<UploadOutlined />}> Click to Upload </Button>{" "} </Upload> */}
                 
-                <form className="">
+                <form className="" ref={formRef}>
                 <label class="text-base text-gray-500 font-semibold mb-2 block">Upload Image</label>
-      <input type="file" onChange={(e) => setImgFile(e.target.files[0])}
+      <input  type="file" onChange={(e) => setImgFile(e.target.files[0])}
         class="w-full text-gray-400 font-semibold text-sm bg-white border file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-gray-200 file:text-gray-500 rounded" />
       <p class="text-xs text-gray-400 mt-2">PNG and JPG are Allowed.</p>
                 
                 </form>
 
-                <div className="relative mt-4 ">
+                <div className="relative mt-4 p-5 bg-indigo-200 rounded-md ">
 
-                {iconUrl &&  <span className="w-20 h-20 rounded-md absolute bg-indigo-200 -top-2 -left-2 z-10 "></span>}
-                <div className="w-20 rounded-md shadow-md overflow-hidden z-30 relative "> <img src={iconUrl} /></div>
+                {/* {iconUrl &&  <span className="w-20 h-20 rounded-md absolute bg-indigo-200 -top-2 -left-2 z-10 "></span>} */}
+                <div className="w-20 rounded-md shadow-md overflow-hidden z-30 relative bg-white/60"> <img src={iconUrl} /></div>
 
 
                 </div>
