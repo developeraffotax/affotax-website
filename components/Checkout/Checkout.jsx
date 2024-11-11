@@ -208,10 +208,10 @@ export default function Checkout() {
 			<tbody>
 			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b rounded-tl-md ">Bank Name:</td> <td className="bg-white/70 text-black px-2 py-1 border-b rounded-tr-md">Natwest</td> </tr>
 			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">Account Title:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">Online Accountant Ltd</td> </tr>
+			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b ">Sort Code:</td> <td className="bg-white/70 text-black px-2 py-1  border-b">51-70-57</td> </tr>
 			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">Account Number:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">89347447</td> </tr>
 			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">IBAN:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">GB58NWBK51705789347447</td> </tr>
-			<tr> <td className="bg-slate-500/80 px-2 py-2 border-b  ">SWIFT/BIC Code:</td> <td className="bg-white/70 text-black px-2 py-1 border-b ">NWBKGB2L</td> </tr>
-			<tr> <td className="bg-slate-500/80 px-2 py-2 rounded-bl-md ">Sort Code:</td> <td className="bg-white/70 text-black px-2 py-1 rounded-br-md ">51-70-57</td> </tr>
+			<tr> <td className="bg-slate-500/80 px-2 py-2  rounded-bl-md  ">SWIFT/BIC Code:</td> <td className="bg-white/70 text-black px-2 py-1  rounded-br-md">NWBKGB2L</td> </tr>
 			</tbody>
 		</table>
 

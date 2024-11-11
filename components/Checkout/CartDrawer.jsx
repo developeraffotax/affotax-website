@@ -180,7 +180,7 @@ useEffect(() => {
 						</div>
 					) : (
 						<div className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
-							<TopChart isDrawer={true} id={cartItemsArr[0]._id}/>
+							<TopChart isDrawer={true} />
 		
 							<CartItems
 								cartItemsArr={cartItemsArr}

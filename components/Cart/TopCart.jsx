@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export default function TopChart({isDrawer, id}) {
+export default function TopChart({isDrawer}) {
 
 	
 	const [orderRef, setOrderRef] = useState('')
@@ -14,9 +14,13 @@ export default function TopChart({isDrawer, id}) {
 
 		if (isDrawer) {
 			if (!order_ref_id) {
-
-				localStorage.setItem('order_ref_id', id.slice(-10));
-				setOrderRef(id.slice(-10))
+				// Generate a random integer between 5000 and 6000
+				const randomNumber = Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
+				
+				console.log(randomNumber);
+				
+				localStorage.setItem('order_ref_id', randomNumber);
+				setOrderRef(randomNumber)
 			} else {
 				setOrderRef(order_ref_id)
 			}
