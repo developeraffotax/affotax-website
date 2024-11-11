@@ -17,7 +17,7 @@ export default function TopChart({isDrawer}) {
 				// Generate a random integer between 5000 and 6000
 				const randomNumber = Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000;
 				
-				console.log(randomNumber);
+				//console.log(randomNumber);
 				
 				localStorage.setItem('order_ref_id', randomNumber);
 				setOrderRef(randomNumber)
