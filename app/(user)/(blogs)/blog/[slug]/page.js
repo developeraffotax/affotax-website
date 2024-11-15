@@ -79,7 +79,7 @@ export default async function BlogPage({ params }) {
 							</address>
 						</header>
 
-						<h2>{blog.title}</h2>
+						<h1>{blog.title}</h1>
 						<p>{blog.description}</p>
 
 						<figure>
