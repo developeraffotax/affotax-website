@@ -57,7 +57,7 @@ export default async function sitemap() {
 		"https://affotax.com/cheap-accountants",
 		
 
-		"https://affotax.com/blogs",
+		"https://affotax.com/blog",
 	];
 
 	// Sitemap of Location Pages

@@ -81,7 +81,7 @@ export default function Footer() {
           <nav className="list-none mb-10">
 
           <li>
-              <Link href={'/blogs'} className="text-gray-600 hover:text-primary text-xs font-semibold">Blogs</Link>
+              <Link href={'/blog'} className="text-gray-600 hover:text-primary text-xs font-semibold">Blogs</Link>
             </li>
 
             <li>
