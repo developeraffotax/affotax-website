@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useContext } from 'react';
-import HeroImg4 from '@/public/hero4.png'
+import HeroImg4 from '@/public/hero7.png'
 import Link from 'next/link';
 import { QuoteFormContext } from '@/app/(user)/layout';
 
