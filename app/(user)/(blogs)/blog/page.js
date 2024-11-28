@@ -10,6 +10,11 @@ export const metadata = {
 	alternates: { canonical: `/blog` },
 };
 
+
+export const revalidate = 12 * 60 * 60;
+
+
+
 export default async function BlogsPage() {
 	const db = await connectDB();
 	const blogs = await Blog.find({}).sort({ _id: -1 });

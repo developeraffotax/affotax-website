@@ -2,6 +2,10 @@ import { connectDB } from "@/lib/connectDB";
 import Blog from "@/lib/Model/Blog";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 
+
+export const revalidate = 12 * 60 * 60;
+
+
 export default async function sitemap() {
 	const locationUrls = [
 		"https://affotax.com/location/accountants-in-bradford",
