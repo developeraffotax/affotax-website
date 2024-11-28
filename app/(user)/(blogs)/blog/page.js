@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 
-export const revalidate = 12 * 60 * 60;
+// export const revalidate = 12 * 60 * 60;
 
 
 

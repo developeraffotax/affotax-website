@@ -55,7 +55,7 @@ export async function createBlog(formData) {
 		});
 
 		const blogDoc = await blog.save();
-		 revalidatePath('/blogs');
+		 revalidatePath('/blog');
 		 revalidatePath('/sitemap.xml');
 		
 		return {
@@ -149,6 +149,6 @@ export async function updateBlog(formData) {
 	}
 
 
-	revalidatePath('/blogs')
+	revalidatePath('/blog')
 	redirect('/admin/view-blogs')
 }
