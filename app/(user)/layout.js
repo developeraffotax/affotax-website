@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
 
 			<ConfigProvider theme={{ components: { Modal: { contentBg: '#f9fafb', borderRadiusLG: 24 } } }} >
 			<Modal className="" width={800}   open={isModalOpen} onOk={handleOk} onCancel={handleCancel} footer={null}>
-			 	<QuoteForm />
+			 	<QuoteForm  />
       		</Modal>
 
 			  </ConfigProvider>

@@ -177,13 +177,14 @@ export async function sendQuote(prevState, formData) {
 		message
 	}
 
-	
+		
 
 	try {
 		const res = await sendQuoteMail(data);
 		console.log(res, data)
-
-		return { success: true, message: "Message sent successfully!", invalidArr: [] };
+		
+		
+		//return { success: true, message: "Message sent successfully!", invalidArr: [] };
 		
 	} catch (error) {
 		console.log(error)
@@ -191,5 +192,7 @@ export async function sendQuote(prevState, formData) {
 		
 
 	}
+
+	redirect('/thank-you');
 
 }
