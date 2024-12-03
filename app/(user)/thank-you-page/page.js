@@ -1,9 +1,7 @@
-'use client'
+
 
 import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 import Link from "next/link";
-import { useContext, useEffect, useRef } from "react";
-import { QuoteFormContext } from "../layout";
 
 
 
@@ -12,32 +10,23 @@ import { QuoteFormContext } from "../layout";
 
 export default function ThankYouPage() {
 
-	const quoteContext = useContext(QuoteFormContext);
-
-	const successRef = useRef()
+	// const quoteContext = useContext(QuoteFormContext);
 
 
-	useEffect(() => {
-		quoteContext?.handleCancel();
-		const form = document?.getElementById('quote-form');
-		if(form) {
-			form.reset();
+	// useEffect(() => {
+	// 	quoteContext?.handleCancel();
+	// 	const form = document?.getElementById('quote-form');
+	// 	if(form) {
+	// 		form.reset();
 
-		}
-	}, [])
-
-
-	useEffect(() => {
-		successRef?.current?.scrollIntoView({
-			behavior: "smooth",
-		});
-	}, []);
+	// 	}
+	// }, [])
 
 
 
 	return (
 		<>
-        <div className="h-[60vh] w-full bg-gray-50 " ref={successRef}>
+        <div className="h-[60vh] w-full bg-gray-50 ">
 			<div className="h-full lg:w-[60%] sm:w-[80%] xs:w-[90%] mx-auto container flex gap-8 items-center py-16">
 				<div className="flex flex-col gap-4 text-black px-12  rounded-lg border border-orange-300 shadow-xl shadow-orange-400/30 py-12">
 					<h5 className="text-sm text-orange-500 font-semibold">

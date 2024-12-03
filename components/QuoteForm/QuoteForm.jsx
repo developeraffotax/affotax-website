@@ -4,8 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { sendQuote } from "@/actions/contact";
 import SubmitBtn from "./SubmitBtn";
 import { useFormState } from "react-dom";
-import SuccessModal from "./SuccessModal";
-import { useRouter } from 'next/navigation'
+
 
 
 

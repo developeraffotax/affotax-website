@@ -24,9 +24,9 @@ export async function sendMessage(prevState, formData) {
 	try {
 		const res = await sendMail(name, email, service, message);
 
-		if (res) {
-                        return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
-                }
+		// if (res) {
+        //                 return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
+        //         }
 
 		
 	} catch (error) {
@@ -34,7 +34,7 @@ export async function sendMessage(prevState, formData) {
 		//redirect('/contact-us?success=false')
 
 	}
-	//redirect('/contact-us?success=true')
+	redirect('/thank-you');
 }
 
 
@@ -99,8 +99,8 @@ export async function sendInstantQuote(prevState, formData) {
 		
 
 	}
-	//redirect('/contact-us?success=true')
-	redirect(`${referer}?success=true`);
+	redirect('/thank-you')
+	//redirect(`${referer}?success=true`);
 }
 
 
