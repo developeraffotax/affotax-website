@@ -151,7 +151,7 @@ const menu = [
 		submenu: [
 			{
 				name: "UK Company Registration (UK Resident)",
-				link: "/uk-company-registration-(uk-resident)",
+				link: "/uk-company-registration-uk-resident",
 			},
 			{
 				name: "UK Limited Company for Non-Residents",

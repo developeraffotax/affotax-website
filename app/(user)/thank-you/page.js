@@ -33,6 +33,8 @@ export default function ThankYouPage() {
 		});
 	}, []);
 
+	
+
 
 
 	return (
@@ -67,6 +69,8 @@ export default function ThankYouPage() {
 				</div>
 			</div>
 		</div>
+
+		
         
         <EmailPhone />
         </>
