@@ -9,7 +9,7 @@ import { IoArrowRedoSharp } from "react-icons/io5";
 import Link from 'next/link';
 import { QuoteFormContext, TawkContext } from '@/app/(user)/layout';
 
-const contactArr = [{name: 'Phone', icon: <LuPhoneCall className='scale-125 mr-3'/> , link:'tel:02081446811',  value: '020 8144 6811', timings: '07:00 - 18:00 | Monday to Friday' }, {name: 'Email', icon: <MdOutlineMailOutline className=' scale-125 mr-2'/> ,link: 'mailto:info@affotax.com', value: 'info@affotax.com', timings: '07:00 - 18:00 | Monday to Friday' }, {name: 'Whatsapp', icon: <FaWhatsapp  className='text-green-500 scale-125 mr-2'/> ,link: 'https://wa.me/447723143223', value: '+44 7723 143223', timings: '07:00 - 18:00 | Monday to Friday' }]
+const contactArr = [{name: 'Phone', icon: <LuPhoneCall className='scale-125 mr-3'/> , link:'tel:02081294481',  value: '020 8129 4481', timings: '07:00 - 18:00 | Monday to Friday' }, {name: 'Email', icon: <MdOutlineMailOutline className=' scale-125 mr-2'/> ,link: 'mailto:info@affotax.com', value: 'info@affotax.com', timings: '07:00 - 18:00 | Monday to Friday' }, {name: 'Whatsapp', icon: <FaWhatsapp  className='text-green-500 scale-125 mr-2'/> ,link: 'https://wa.me/447723143223', value: '+44 7723 143223', timings: '07:00 - 18:00 | Monday to Friday' }]
 
 
 const EmailPhone = () => {
