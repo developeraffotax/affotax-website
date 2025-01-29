@@ -11,51 +11,50 @@ import { v4 as uuidv4 } from 'uuid';
 
 const steps = [
 	{
-		title: "Expertise and Experience",
+		title: "Dedicated Support:",
 		key: uuidv4(),
 		img: img1,
-		content: ` Our cheap accountants have years of experience in the accounting industry. They stay up-to-date with the latest regulations and tax laws, ensuring that you receive accurate and reliable advice. Our affordable accountants are committed to providing you with the most current information and strategies to optimize your financial position.
+		content: `Work with a knowledgeable, cheap accountant who understands your unique needs.
 
 `,
 	},
 	{
-		title: "Personalized Service",
+		title: "Comprehensive Solutions",
 		key: uuidv4(),
 		img: img4,
-		content: `We believe that every client is unique, and we tailor our services to meet your specific requirements. Our cheap accountants take the time to understand your business and financial goals, offering personalized advice and solutions. Our affordable accountants are always available to answer your questions and provide support, ensuring you feel confident and informed about your financial matters.
-
+		content: ` From bookkeeping to tax returns, our services cover every aspect of cheap accounting.
 `,
 	},
 	{
-		title: "Transparent Pricing",
+		title: "Unlimited Guidance",
 		key: uuidv4(),
 		img: img3,
-		content: `We believe in transparency and honesty in all our dealings. Our cheap accountants provide clear and upfront pricing, with no hidden fees or surprises. Our affordable accountants offer flexible payment plans to suit your budget, ensuring you get the services you need without breaking the bank.
+		content: `Get answers to all your accounting queries without worrying about extra charges.
 `,
 	},
 	{
-		title: "Client Satisfaction",
+		title: "Clear Processes",
 		key: uuidv4(),
 		img: img2,
-		content: ` Our clients are our top priority, and we strive to exceed their expectations in every way. Our cheap accountants are committed to providing high-quality services and excellent customer support. Our affordable accountants have built a reputation for reliability and trustworthiness, and we are proud to have a long list of satisfied clients.
+		content: `  We believe in straightforward and transparent services that make financial management hassle-free.
 
 `,
 	},
 	{
-		title: "Technology-Driven Solutions",
+		title: "Real-Time Tools",
 		key: uuidv4(),
 		img: img6,
-		content: `We leverage the latest technology to provide efficient and effective accounting services. Our cheap accountants use advanced software for bookkeeping, payroll, and tax management, ensuring accuracy and compliance. Our affordable accountants provide you with access to real-time financial information, helping you make informed decisions and stay on top of your finances.
+		content: `Access cutting-edge accounting software for better control over your finances.
 
 `,
 	},
-	{
-		title: "Unlimited Support",
-		key: uuidv4(),
-		img: img5,
-		content:
-			"Our friendly team is always available to answer queries and offer guidance on business decisions.",
-	},
+	// {
+	// 	title: "Unlimited Support",
+	// 	key: uuidv4(),
+	// 	img: img5,
+	// 	content:
+	// 		"Our friendly team is always available to answer queries and offer guidance on business decisions.",
+	// },
 ];
 
 export default function WhyChooseUs() {
@@ -63,12 +62,13 @@ export default function WhyChooseUs() {
 		<>
 			<div className="flex w-full py-20 max-lg:py-8   flex-row gap-10 items-center justify-center px-80 max-2xl:px-40 max-xl:px-10     bg-gradient-to-tr from-orange-300/5 to-orange-900/20 ">
 				<div className="relative  flex  flex-1 flex-col items-center justify-center  ">
-					<h2 className=" max-w-sm leading-relaxed text-center bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
-					Why Choose Our Affordable Accountants?
+					<h2 className=" max-w-sm leading-relaxed text-center py-2 bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
+					Why Choose Affotax for Cheap Accounting Services?
+
 
 					</h2>
 					<span className="mt-4 max-w-2xl text-center text-base leading-relaxed text-gray-800">
-					Choosing our cheap accountants means you get high-quality services at affordable prices. We understand the financial constraints faced by small businesses and individuals, and our goal is to provide cost-effective accounting solutions that do not compromise on quality. Our team of experienced accountants is dedicated to helping you succeed, offering personalized services tailored to your unique needs.
+					When it comes to managing your finances, affordability and reliability matter. Here’s why businesses and individuals choose our cheap accountants:
 
 					</span>
 

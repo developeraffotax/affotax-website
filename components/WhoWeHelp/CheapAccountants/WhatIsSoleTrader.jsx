@@ -18,13 +18,42 @@ export default function WhatIsSoleTrader() {
 
 					<div className="mt-4 max-w-2xl  flex   flex-col items-start justify-start  w-[70%] max-lg:w-full  ">
 						<h2 className="   leading-relaxed text-center max-lg:text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  text-2xl font-bold text-transparent sm:max-w-2xl sm:text-4xl">
-                        Why look for a Cheap/Affordable Accountant?
+                        Why Cheap Doesn’t Mean Low Quality
+
 
 						</h2>
-						<span className="mt-4  text-start text-lg leading-relaxed text-gray-800">
-						Small businesses face unprecedented financial pressures. With rising living costs and lingering uncertainty from recent global events, every penny counts. It's understandable to seek ways to cut costs, but <b>compromising on accountancy services can have serious consequences.</b><br/> <br/> VAT returns, tax filings, and day-to-day business operations demand meticulous financial management. At Affotax, we understand the value of expert accountancy. Our affordable services ensure compliance, minimize risks, and provide strategic financial guidance tailored to your business needs. Don't let cost-cutting compromise your financial stability—choose reliable accountancy support to navigate challenges with <b>confidence.</b>
+						<span className="mt-4 mb-4  text-start text-lg leading-relaxed text-gray-800">
+						Choosing a cheap accountant shouldn’t mean sacrificing quality. At Affotax, we’ve redefined cheap accounting by combining affordability with high standards of service.
 
 						</span>
+
+
+						<ul>
+							<li className="mb-2 "><b>Efficient Technology:</b> By leveraging cloud-based tools, we streamline processes and reduce costs, passing the savings to you. </li>
+							<li className="mb-2 "><b>Transparent Practices: </b>With no hidden fees, you can trust that what you see is what you get. </li>
+							<li className="mb-5 "><b>Experienced Professionals:</b> Our cheap accountants have years of expertise, ensuring accuracy and reliability in all services.
+							</li>
+
+
+						</ul>
+
+						<h3 className="text-lg font-semibold ">Dedicated Cheap Accountants for Every Client</h3>
+							<p className="mb-3 ">
+							At Affotax, we prioritize building lasting relationships with our clients. Every client is paired with a dedicated cheap accountant who provides personalized support and guidance. This ensures:
+
+							</p>
+						<ul className="list-disc ">
+							<li className="mb-2 ">Consistency in service delivery.
+							</li>
+							<li className="mb-2 ">Tailored advice that aligns with your financial goals
+							. </li>
+							<li className="mb-2 ">A single point of contact for all your queries and concerns.
+
+							</li>
+
+
+						</ul>
+
 					</div>
 
 					<div className="   flex flex-row justify-start text-start items-start rounded-[300px]  w-[30%]  max-lg:w-[50%] ">

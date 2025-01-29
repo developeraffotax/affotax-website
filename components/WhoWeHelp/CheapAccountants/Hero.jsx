@@ -14,7 +14,8 @@ export default function Hero() {
 						Affordable and Cheap Accounting Services
 						</h1>
 						<span className="mt-8 max-w-2xl text-start text-xl leading-relaxed text-gray-800">
-						Welcome to our accountancy website, your go-to destination for cheap accountants who provide top-tier services without breaking the bank. <br/> <br/> Whether you’re a small business owner, a freelancer, or an individual seeking expert financial management, our team of affordable accountants is here to meet all your accounting needs. 
+						Welcome to Affotax, your reliable destination for professional cheap accounting services. Whether you're a small business, freelancer, contractor, or an individual, our experienced team of cheap accountants is dedicated to delivering top-notch services tailored to your needs. With our expertise, you get comprehensive financial management that’s both effective and budget-friendly.
+
 
 						</span>
 
