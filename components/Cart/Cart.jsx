@@ -177,7 +177,7 @@ export default function Cart() {
 							/>
 
 							<TotalPrice totalPrice={totalPrice} />
-							<CheckoutBtn />
+							<CheckoutBtn  cartItemsArr={cartItemsArr} totalPrice={totalPrice}/>
 
 							<SuggestedPackages
 								setCartItemsArr={setCartItemsArr}
