@@ -40,15 +40,27 @@ export default function CheckoutBtn({cartItemsArr, totalPrice}) {
 
 
         setIsLoading(true)
+
+
+        const addOnIds = []
        const selectedPriceIds = cartItemsArr.map((el) => {
+
+        
+        el.addOns.forEach(addOn => {
+
+            if (addOn.isChecked) {
+                addOnIds.push(addOn._id)
+            }
+        } ) 
             return {
-                priceId: el.id,
-                addOnIds: el.addOns.map((addOn) => {
+                priceId: el._id,
+                // addOnIds: el.addOns.filter((addOn) => {
 
-                    return addOn._id;
+                //     return addOn.isChecked;
 
 
-                }),
+                // }),
+                 
 
             }
        })
@@ -57,7 +69,7 @@ export default function CheckoutBtn({cartItemsArr, totalPrice}) {
        
 
 
-
+       console.log(addOnIds, "THE ADDON IDS ARE>>>>>>>>>>>>>>>")
         try {
             const {data, status} = await axios.post('/api/checkout_sessions', {
                     // productId: '' , will use this implememtation for security purpose
@@ -65,13 +77,14 @@ export default function CheckoutBtn({cartItemsArr, totalPrice}) {
                     cartItemsArr: cartItemsArr,
                     totalPrice: (+totalPrice).toFixed(2),
 
-                    selectedPriceIds: selectedPriceIds
+                    selectedPriceIds: selectedPriceIds,
+                    addOnIds: addOnIds
 
             })
     
             console.log(data)
             if(status === 200) {
-                window.location.href = data.url
+                // window.location.href = data.url
             }
 
 
