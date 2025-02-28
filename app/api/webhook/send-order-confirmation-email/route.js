@@ -1,13 +1,31 @@
 import { connectDB } from "@/lib/connectDB";
 import Order from "@/lib/Model/Order";
+import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
+
+
+// This is necessary to get the raw body to verify the signature
+// export const config = {
+// 	api: {
+// 	  bodyParser: false, // Disable body parsing, Stripe requires raw body
+// 	},
+
+//   };
+
+
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(request) {
 	const payload = request.body;
-	const sigHeader = request.headers["stripe-signature"];
+	// const sigHeader = request.headers["stripe-signature"];
+	const headersList = await headers();
+	const sigHeader = headersList.get("stripe-signature")
+
+
+
+	console.log(request)
 
 	const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
