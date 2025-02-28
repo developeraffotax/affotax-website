@@ -18,7 +18,7 @@ import Stripe from "stripe";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(request) {
-	const payload = request.body;
+	const payload = await request.text();
 	// const sigHeader = request.headers["stripe-signature"];
 	const headersList = await headers();
 	const sigHeader = headersList.get("stripe-signature")
