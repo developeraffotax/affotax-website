@@ -60,6 +60,7 @@ export async function POST(req) {
 				// console.log(filteredAddOns);
 				pricesArr.push({
 					...price,
+					pageTitle: el.title,
 					addOns: filteredAddOns,
 				});
 			});
