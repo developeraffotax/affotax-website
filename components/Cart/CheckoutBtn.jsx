@@ -84,7 +84,7 @@ export default function CheckoutBtn({cartItemsArr, totalPrice}) {
     
             console.log(data)
             if(status === 200) {
-                 window.location.href = data.url
+                // window.location.href = data.url
             }
 
 

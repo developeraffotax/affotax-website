@@ -44,7 +44,7 @@ export async function POST(req) {
 		const orderNumber = generateRandomNumber();
 
 		const pricePromises = selectedPriceIds.map((el) => {
-			return ServicePage.findOne( { "prices._id": el.priceId }, { prices: { $elemMatch: { _id: el.priceId } } } ).lean();
+			return ServicePage.findOne( { "prices._id": el.priceId }, { prices: { $elemMatch: { _id: el.priceId } }, title: 1 } ).lean();
 		});
 
 		const docs = await Promise.all(pricePromises);
@@ -66,7 +66,7 @@ export async function POST(req) {
 			});
 		});
 
-		
+
 
 		let newOrderData = {
 			items: pricesArr.map((el) => ({
@@ -85,6 +85,7 @@ export async function POST(req) {
 			vat: (+totalPrice * (20 / 100)).toFixed(2).toString(2)
 		};
 
+		console.log(newOrderData)
 
 		const order = new Order(newOrderData);
 
@@ -140,7 +141,7 @@ export async function POST(req) {
 			},
 		})
 
-		return new Response( JSON.stringify({ url: session.url,   }), { status: 200 }
+		return new Response( JSON.stringify({ url: session.url,  }), { status: 200 }
 		);
 	} catch (error) {
 		console.error(error);
