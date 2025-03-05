@@ -191,8 +191,11 @@ export default function Order({orderData}) {
 
 
 
+<div className='w-full flex justify-start items-start gap-5 '>
 
-        <table className='border-collapse border w-full max-w-lg mb-4 '   >
+
+    
+<table className='border-collapse border w-full max-w-lg mb-4 '   >
             <thead>
                 <tr>
                     <td colSpan={2}>
@@ -236,6 +239,43 @@ export default function Order({orderData}) {
 
 
         </table>
+
+
+
+        
+        <table className='border-collapse border w-full max-w-lg mb-4 '   >
+            <thead>
+                <tr>
+                    <td colSpan={2}>
+                        <h3 className='font-semibold text-lg w-full text-start bg-orange-100 text-orange-800  p-1 px-4 '>Customer Details</h3>
+                    </td>
+                </tr>
+            </thead>
+
+
+            <tbody >
+
+                <tr className=' font-poppins border-b  font-[500] '>
+                    <td className='px-2' >Customer Name</td>
+                    <td className='bg-gray-100 px-4 py-2 w-[50%]  '>{order.customer_name}</td>
+                </tr>
+
+                 <tr className=' font-poppins border-b  font-[500]  '>
+                    <td className='px-2'>Customer Email</td>
+                    <td className='bg-gray-100 px-4 py-2 w-[50%]  '>{order.customer_email}</td>
+                </tr>
+
+                 
+
+
+
+            </tbody>
+
+
+        </table>
+
+
+</div>
         
 
 

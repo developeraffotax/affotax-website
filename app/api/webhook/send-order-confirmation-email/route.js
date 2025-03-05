@@ -37,7 +37,7 @@ export async function POST(request) {
 	try {
 		const db = await connectDB();
 
-		const orderData = await Order.findOneAndUpdate( { orderNumber: orderNumber }, { payment_status: "completed", } );
+		const orderData = await Order.findOneAndUpdate( { orderNumber: orderNumber }, { payment_status: "completed", customer_name: name, customer_email: email } );
 
 		const customerData = { name, email };
 
