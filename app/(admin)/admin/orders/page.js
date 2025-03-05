@@ -4,14 +4,17 @@
  
 import { connectDB } from "@/lib/connectDB";
 import Order from "@/lib/Model/Order";
-import dynamic from "next/dynamic";
+import dynamicCmp from "next/dynamic";
 
-const Orders = dynamic(
+const Orders = dynamicCmp(
   () => {
     return import("@/components/Admin/Orders/Orders");
   },
   { ssr: false }
 );
+
+export const dynamic = "force-dynamic";
+
 
 export default async function OrdersPage() {
 
