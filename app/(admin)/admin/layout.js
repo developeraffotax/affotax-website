@@ -5,7 +5,7 @@ import '../../globals.css';
 
 import React, { useEffect, useState } from 'react';
 
-import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined, HomeTwoTone } from '@ant-design/icons';
+import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined, HomeTwoTone, HistoryOutlined } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import Link from 'next/link';
 import { triggerFocus } from 'antd/es/input/Input';
@@ -311,7 +311,37 @@ export default function RootLayout({ children }) {
             },
 
 
+          },
+
+          {
+            type: 'divider',
+          },
+          
+
+
+          {
+            key: `orders-view`,
+            
+            icon: <HistoryOutlined />,
+            label: `Orders`,
+
+            onClick		: () => {
+              setDefaultSelectedKeys(['orders-view'])
+              setDefaultOpenKeys(['orders-view'])
+
+              router.push('/admin/orders');
+            },
+
+
           }
+
+
+
+
+
+
+
+
 
 
 
