@@ -58,7 +58,7 @@ export default function Orders({ ordersData }) {
 
 	return (
 		<>
-			<Table columns={columns} dataSource={orders} size="large" showHeader bordered />
+			<Table columns={columns} dataSource={orders} size="large" showHeader bordered  pagination/>
 		</>
 	);
 }
