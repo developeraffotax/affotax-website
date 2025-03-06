@@ -44,7 +44,7 @@ export async function POST(request) {
 				last4,
 			},
 
-			time: new Date(created * 1000).toUTCString()
+			time: (created * 1000).toString()
 		});
 
 		await error_log.save();
