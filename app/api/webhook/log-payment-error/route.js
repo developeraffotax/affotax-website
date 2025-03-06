@@ -14,7 +14,7 @@ export async function POST(request) {
 
 	console.log(request);
 
-	const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
+	const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET_LOG;
 
 	const event = stripe.webhooks.constructEvent(
 		payload,
