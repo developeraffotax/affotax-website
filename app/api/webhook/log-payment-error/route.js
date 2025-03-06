@@ -22,29 +22,20 @@ export async function POST(request) {
 		endpointSecret
 	);
 
-	const {
-		last_payment_error: {
-			decline_code,
-			message,
-			code,
-			type,
-			payment_method: {
-				billing_details: { email, name, phone },
-				card: { brand, country, exp_month, exp_year, last4 },
-			},
-		},
-	} = event.data.object;
+	const { created, amount, last_payment_error: { decline_code, message, code, type, payment_method: { billing_details: { email, name, phone }, card: { brand, country, exp_month, exp_year, last4 }, }, }, } = event.data.object;
 
 	try {
 		const db = await connectDB();
 
 		const error_log = new Log({
+			amount: amount.toString(),
+
 			decline_code,
 			message,
 			customer_name: name,
 			customer_email: email,
 			isRead: false,
-
+			
 			card: {
 				brand,
 				country,
@@ -52,6 +43,8 @@ export async function POST(request) {
 				exp_year,
 				last4,
 			},
+
+			time: new Date(created * 1000).toUTCString()
 		});
 
 		await error_log.save();
