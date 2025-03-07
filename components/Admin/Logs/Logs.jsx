@@ -43,7 +43,7 @@ const Logs = ({logsData}) => {
             <ul className="w-full grid grid-cols-5  gap-8 font-poppins items-center bg-red-50 px-4 py-2 text-red-700 ">
                 <li>{item.decline_code}</li>
                 <li>{item.message}</li>
-                <li className="font-[400] text-black ">£{item.amount}</li>
+                <li className="font-[400] text-black ">£{(+item.amount)/100}</li>
                 <li className="flex flex-col justify-start items-start gap-0 text-xs text-black">
                     <h3>{item.customer_name}</h3>
                     <h4>{item.customer_email}</h4>
