@@ -3,10 +3,10 @@
 import '../../globals.css';
 //import '../globals.css';
 
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined, HomeTwoTone, HistoryOutlined } from '@ant-design/icons';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined, HomeTwoTone, HistoryOutlined, SnippetsOutlined } from '@ant-design/icons';
+import { Badge, Breadcrumb, Layout, Menu, theme } from 'antd';
 import Link from 'next/link';
 import { triggerFocus } from 'antd/es/input/Input';
 const { Header, Content, Footer, Sider } = Layout;
@@ -15,11 +15,12 @@ import { LogoutForm } from '@/actions/auth';
 import { RiMenuUnfold2Line, RiMenuUnfoldLine } from "react-icons/ri";
 import { v4 as uuidv4 } from 'uuid';
 import Search from 'antd/es/input/Search';
+import axios from 'axios';
 
 
 
 
-
+export const OrdersContext = createContext(0)
 
 
 export default function RootLayout({ children }) {
@@ -32,37 +33,40 @@ export default function RootLayout({ children }) {
   const [defaultSelectedKeys, setDefaultSelectedKeys] = useState([])
   const [defaultOpenKeys, setDefaultOpenKeys] = useState([])
 
+  const [unread_count, set_unread_count] = useState(0)
 
 
+  const getUnreadOrdersCount = async () => {
+    try {
+      const {data, status} = await axios.get('/api/orders/get-unread-count');
+      console.log(data)
+      if(status === 200) {
+        set_unread_count(data.unread_orders_count)
+      }
+    } catch (error) {
+      console.log(error)
+    }
 
-  // useEffect(() => {
-  //   console.log(pathname)
+
+  }
+
+  useEffect(() => {
+
+    getUnreadOrdersCount()
+
+  }, [])
 
 
+  const OrdersLabel = ({count}) => {
+    return (
+      <Badge count={count}  >
+             <h2 className='pr-3'>Orders</h2>
+              
+           </Badge>
+    )
+  }
 
-  // }, [])
-    // const items1 = ['1', '2', '3'].map((key) => ({
-    //     key,
-    //     label: `nav ${key}`,
-    //   }));
-
-
-      // const items2 = [UserOutlined, LaptopOutlined, NotificationOutlined].map((icon, index) => {
-      //   const key = String(index + 1);
-      //   return {
-      //     key: `sub${key}`,
-      //     icon: React.createElement(icon),
-      //     label: `subnav ${key}`,
-      //     children: new Array(4).fill(null).map((_, j) => {
-      //       const subKey = index * 4 + j + 1;
-      //       return {
-      //         key: subKey,
-      //         label: `option${subKey}`,
-      //       };
-      //     }),
-      //   };
-      // });
-
+ 
 
 
 
@@ -323,7 +327,8 @@ export default function RootLayout({ children }) {
             key: `orders-view`,
             
             icon: <HistoryOutlined />,
-            label: `Orders`,
+            label: <OrdersLabel count={unread_count} />,
+            
 
             onClick		: () => {
               setDefaultSelectedKeys(['orders-view'])
@@ -333,7 +338,25 @@ export default function RootLayout({ children }) {
             },
 
 
+          },
+
+          {
+            key: `logs-view`,
+            
+            icon: <SnippetsOutlined />,
+            label: `Logs`,
+
+            onClick		: () => {
+              setDefaultSelectedKeys(['logs-view'])
+              setDefaultOpenKeys(['logs-view'])
+
+              router.push('/admin/logs');
+            },
+
+
           }
+
+
 
 
 
@@ -363,8 +386,7 @@ export default function RootLayout({ children }) {
 
 
 
-
-
+ 
 
 
 
@@ -489,7 +511,11 @@ export default function RootLayout({ children }) {
               minHeight: 280,
             }}
           >
+
+            <OrdersContext.Provider value={{unread_count, set_unread_count}}>
+
            {children}
+            </OrdersContext.Provider>
           </Content>
         </Layout>
 
