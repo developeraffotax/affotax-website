@@ -3,6 +3,7 @@ import { connectDB } from "@/lib/connectDB";
 import Order from "@/lib/Model/Order";
 
 
+export const dynamic = "force-dynamic";
 
 export async function GET(req) {
 	try {
