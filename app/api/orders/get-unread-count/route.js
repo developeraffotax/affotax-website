@@ -10,6 +10,7 @@ export async function GET(req) {
         const db = await connectDB();
 		const unread_orders_count = await Order.countDocuments({
 			isRead: false,
+			payment_status: "completed"
 		});
 
 		return new Response( JSON.stringify({ message: "un_read order count", unread_orders_count, }), { status: 200 } );
