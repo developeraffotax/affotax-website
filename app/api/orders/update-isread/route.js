@@ -2,7 +2,7 @@
 import { connectDB } from "@/lib/connectDB";
 import Order from "@/lib/Model/Order";
 
-
+export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
     const searchParams = request.nextUrl.searchParams
