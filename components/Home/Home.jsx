@@ -12,6 +12,8 @@ import PricingPage from "@/lib/Model/PricingPage/PricingPage";
 import Homepage from "@/lib/Model/Homepage/Homepage";
 
 
+ 
+
 export default async function Home() {
 
   const db = await connectDB();
@@ -25,10 +27,10 @@ export default async function Home() {
     <main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
         <HomeTop HeroSection={JSON.stringify(homepage?.HeroSection)}/>
          <ChoosePackage pricingPage={JSON.stringify(pricingPage)}/>
-        <HowItWorks HowItWorksSection={JSON.stringify(homepage?.HowItWorksSection)}/>
+         <HowItWorks HowItWorksSection={JSON.stringify(homepage?.HowItWorksSection)}/>
         <WhyUs WhyChooseUsSection={JSON.stringify(homepage?.WhyChooseUsSection)} CTASection={JSON.stringify(homepage?.CTASection)}/>
         <ServicesTo LinksSection={JSON.stringify(homepage?.LinksSection)}/>
-        <Reviews />
+        {/* <Reviews /> */}
         <EmailPhone />
     </main>
   );

@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
 			<body>
 				<AntdRegistry>{children}</AntdRegistry>
 				<NextTopLoader color="#F27941" showSpinner={false} />
-				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLD) }} />
+				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaLD) }} defer/>
 			</body>
 		</html>
 	);

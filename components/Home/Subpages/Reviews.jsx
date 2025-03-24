@@ -3,6 +3,9 @@
 
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+
+
+
 import '@splidejs/react-splide/css';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -14,6 +17,9 @@ import P3 from '@/public/person3.jpg'
 import P4 from '@/public/person4.jpg'
 import P5 from '@/public/person5.jpg'
 
+
+
+ 
 
 const reviewArr = [
     {
@@ -56,55 +62,37 @@ const reviewArr = [
 
 
 
-
-// const activeSplideBtn = document.getElementsByClassName('is-active');
-
-//         console.log(activeSplideBtn[2].style.color)
-
-//         activeSplideBtn[2].style.backgroundColor = '#000000'
-
-
+ 
 
 
 export default function Reviews() {
 
 
-    const ref = useRef();
+  
 
 
+ 
 
 
-    // useEffect(() => {
-    //     const li = Array.from(ref.current.splideRef.current.childNodes[1].childNodes).filter((el) =>   Array.from(el.childNodes[0].classList).includes('is-active') )
-    //     console.log(li)
+// const addStyle = (e) => {
 
-    //     li[0].style.color = '#eb7a09'
-    // })
-//el.classList.includes('is-active')   Array.from(el.classList)
-
-
-
-
-
-const addStyle = (e) => {
-
-    console.log(e)
-     const liArr = e.Components.Pagination.items;
+//     console.log(e)
+//      const liArr = e.Components.Pagination.items;
 
     
-    // const activeLi = liArr.filter((el) => Array.from(el.button.classList).includes('is-active'))
+//     // const activeLi = liArr.filter((el) => Array.from(el.button.classList).includes('is-active'))
 
 
-    console.log(liArr)
+//     console.log(liArr)
 
 
-    liArr.forEach((el) => {
-        el.button.style.backgroundColor =  '#eb7a09'
-    });
+//     liArr.forEach((el) => {
+//         el.button.style.backgroundColor =  '#eb7a09'
+//     });
 
-    // activeLi[0].button.style.backgroundColor = '#eb7a09'
+//     // activeLi[0].button.style.backgroundColor = '#eb7a09'
     
-}
+// }
 
 
 
@@ -318,7 +306,7 @@ const addStyle = (e) => {
 
 
 
-                <Splide  options={{ rewind: true, pagination: false,  arrows: true, }} onPaginationMounted={addStyle}  className='w-full px-12 '>
+                <Splide  options={{ rewind: true, pagination: false,  arrows: true, }}    className='w-full px-12 ' >
 
                     {
                         reviewArr.map((el) => {

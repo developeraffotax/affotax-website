@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import HeroImg4 from '@/public/hero4.png';
 import Link from 'next/link';
 import { QuoteFormContext } from '@/app/(user)/layout';
+import Image from 'next/image';
 
 export default function HomeTop({HeroSection}) {
 
@@ -25,10 +26,12 @@ export default function HomeTop({HeroSection}) {
                 </div>
 
                 <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4  '>
-                    <img
-                        className='object-cover object-center rounded  drop-shadow-xl '
+                    <Image
+                        className='object-cover object-center rounded  drop-shadow-xl w-full h-full '
                         alt='hero'
                         src={HeroImg4.src}
+                        width={500}
+                        height={500}
                     />
                 </div>
             </div>
