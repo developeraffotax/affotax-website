@@ -30,8 +30,8 @@ export default function HomeTop({HeroSection}) {
                         className='object-cover object-center rounded  drop-shadow-xl w-full h-full '
                         alt='hero'
                         src={HeroImg4.src}
-                        width={500}
-                        height={500}
+                        width={800}
+                        height={800}
                     />
                 </div>
             </div>
