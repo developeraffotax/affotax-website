@@ -26,12 +26,11 @@ export default function HomeTop({HeroSection}) {
                 </div>
 
                 <div className=' w-[50%]  max-lg:w-full  max-lg:mb-4  '>
-                    <Image
-                        className='object-cover object-center rounded  drop-shadow-xl w-full h-full '
+                    <img
+                        className='object-cover object-center rounded  drop-shadow-xl   '
                         alt='hero'
                         src={HeroImg4.src}
-                        width={800}
-                        height={800}
+                        
                     />
                 </div>
             </div>
