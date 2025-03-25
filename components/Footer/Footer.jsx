@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Who We Help</h2>
-          <nav className="list-none mb-10">
+          <ul className="list-none mb-10">
             <li>
               <Link href={'/sole-traders'}  className="text-gray-600 hover:text-primary text-xs  font-semibold">Sole Traders</Link>
             </li>
@@ -48,11 +48,11 @@ export default function Footer() {
             <li>
               <Link href={'/cheap-accountants'} className="text-gray-600 hover:text-primary text-xs  font-semibold">Cheap Accountants</Link>
             </li>
-          </nav>
+          </ul>
         </div>
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Services</h2>
-          <nav className="list-none mb-10">
+          <ul className="list-none mb-10">
             <li>
               <Link href={'/annual-accounts'} scroll={true} className="text-gray-600 hover:text-primary text-xs font-semibold">Company Accounts</Link>
             </li>
@@ -74,11 +74,11 @@ export default function Footer() {
             <li>
               <Link href={'/bookkeeping-for-12-month'} className="text-gray-600 hover:text-primary text-xs font-semibold">Bookkeeping</Link>
             </li>
-          </nav>
+          </ul>
         </div>
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">About</h2>
-          <nav className="list-none mb-10">
+          <ul className="list-none mb-10">
 
           <li>
               <Link href={'/blog'} className="text-gray-600 hover:text-primary text-xs font-semibold">Blogs</Link>
@@ -120,11 +120,11 @@ export default function Footer() {
             
            
            
-          </nav>
+          </ul>
         </div>
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2 className="title-font font-medium text-primary tracking-widest text-sm mb-3">Locations</h2>
-          <nav className="list-none mb-10">
+          <ul className="list-none mb-10">
             <li>
               <Link href={'/location/wales'} className="text-gray-600 hover:text-primary text-xs font-semibold">Wales</Link>
             </li>
@@ -147,7 +147,7 @@ export default function Footer() {
               <Link href={'/location/northern-ireland'} className="text-gray-600 hover:text-primary text-xs font-semibold">Northern Ireland</Link>
             </li>
             
-          </nav>
+          </ul>
         </div>
         
       </div>
