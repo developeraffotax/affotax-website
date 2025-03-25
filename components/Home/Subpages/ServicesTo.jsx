@@ -16,12 +16,12 @@ export default function ServicesTo({ LinksSection }) {
 					</div>
 				</div>
 
-				<ul className="mx-auto items-center text-center">
+				<ul className="mx-auto items-center text-center  ">
 					{arr?.map((el) => {
 						return (
-							<Link href={el.path} key={el._id}>
-								<li className="p-4 bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md hover:scale-110 transition-all duration-500 ">
-									<div className="flex items-center">
+								<li key={el._id} className=" bg-white rounded-lg inline-block m-4 text-2xl drop-shadow-md hover:scale-110 transition-all duration-500 ">
+							<Link href={el.path} className="flex w-full p-4" >
+									<div className="flex items-center w-full   ">
 										<svg
 											fill="none"
 											stroke="currentColor"
@@ -33,12 +33,12 @@ export default function ServicesTo({ LinksSection }) {
 										>
 											<path d="M5 13l4 4L19 7"></path>
 										</svg>
-										<span className="title-font font-medium">
+										<span className="title-font font-medium   ">
 											{el.title}
 										</span>
 									</div>
-								</li>
 							</Link>
+								</li>
 						);
 					})}
 				</ul>

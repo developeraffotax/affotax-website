@@ -30,7 +30,7 @@ export default async function Home() {
          <HowItWorks HowItWorksSection={JSON.stringify(homepage?.HowItWorksSection)}/>
         <WhyUs WhyChooseUsSection={JSON.stringify(homepage?.WhyChooseUsSection)} CTASection={JSON.stringify(homepage?.CTASection)}/>
         <ServicesTo LinksSection={JSON.stringify(homepage?.LinksSection)}/>
-        {/* <Reviews /> */}
+        <Reviews />
         <EmailPhone />
     </main>
   );

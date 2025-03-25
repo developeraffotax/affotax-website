@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="text-gray-600 body-font w-full flex flex-col items-center px-80 max-2xl:px-40 max-xl:px-10 bgImage2">
     <div className="container text-center px-5 py-20 max-lg:py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col justify-center items-center">
       <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left items-center justify-center max-lg:flex max-lg:flex-col">
-      <Link href="/">
-            <svg width="150" viewBox="0 0 280.00000000000006 72.06504786422265" className="css-1j8o68f">
+      <Link href="/" aria-label="Homepage">
+            <svg width="150" viewBox="0 0 280.00000000000006 72.06504786422265" className="css-1j8o68f" aria-label="Affotax Logo">
             <defs id="SvgjsDefs1925"></defs>
             <g id="SvgjsG1926" featurekey="nameFeature-0" transform="matrix(1.6205390551742131,0,0,1.6205390551742131,-0.25928677428647584,-24.8266624671191)" fill="#ff7f45">
             <path d="M17.44 35.04 l-9 0 l-1.76 4.96 l-6.52 0 l9.8 -24.48 l6 0 l9.8 24.48 l-6.56 0 z M10.4 29.48 l5.08 0 l-2.52 -7.12 z M28.997000000000003 15.52 l18.2 0 l0 5.56 l-12.2 0 l0 3.92 l9.8 0 l0 5.56 l-9.8 0 l0 9.44 l-6 0 l0 -24.48 z M51.394000000000005 15.52 l18.2 0 l0 5.56 l-12.2 0 l0 3.92 l9.8 0 l0 5.56 l-9.8 0 l0 9.44 l-6 0 l0 -24.48 z M84.71100000000001 34.64 c4.36 0 6.6 -2.8 6.6 -6.88 c0 -4.32 -2.4 -6.88 -6.6 -6.88 c-4.4 0 -6.6 2.8 -6.6 6.88 c0 4.24 2.44 6.88 6.6 6.88 z M84.71100000000001 40.2 c-7.52 0 -12.6 -5.12 -12.6 -12.44 c0 -7.56 5.32 -12.44 12.6 -12.44 c7.56 0 12.6 5.08 12.6 12.44 c0 7.6 -5.28 12.44 -12.6 12.44 z M100.388 15.52 l20.4 0 l0 5.56 l-7.2 0 l0 18.92 l-6 0 l0 -18.92 l-7.2 0 l0 -5.56 z M139.865 35.04 l-9 0 l-1.76 4.96 l-6.52 0 l9.8 -24.48 l6 0 l9.8 24.48 l-6.56 0 z M132.82500000000002 29.48 l5.08 0 l-2.52 -7.12 z M160.94200000000004 32.64 l-5 7.36 l-7 0 l8.52 -12.52 l-8.12 -11.96 l7 0 l4.6 6.8 l4.6 -6.8 l7 0 l-8.08 11.96 l8.48 12.52 l-7 0 z">

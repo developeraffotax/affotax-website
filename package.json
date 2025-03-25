@@ -23,6 +23,7 @@
     "dayjs": "^1.11.13",
     "ejs": "^3.1.10",
     "jose": "^5.7.0",
+    "keen-slider": "^6.8.6",
     "mongoose": "^8.5.1",
     "next": "14.2.3",
     "nextjs-toploader": "^1.6.12",

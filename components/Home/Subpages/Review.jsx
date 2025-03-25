@@ -22,7 +22,7 @@ export default function Review({title, name, content, img}) {
 
 
     return (
-        <div className="pt-8 max-xl:max-w-2xl max-xl:mx-auto px-4">
+        <div className="py-6 max-xl:max-w-2xl max-xl:mx-auto px-4   ">
                     <div className="flex items-center gap-3 mb-4">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                             <g clipPath="url(#clip0_13624_2892)">

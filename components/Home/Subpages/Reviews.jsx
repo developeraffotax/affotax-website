@@ -2,11 +2,13 @@
 
 
 
-import { Splide, SplideSlide } from '@splidejs/react-splide';
+// import { Splide, SplideSlide } from '@splidejs/react-splide';
 
+import React, { useState } from 'react'
+import 'keen-slider/keen-slider.min.css'
+import { useKeenSlider } from 'keen-slider/react'
 
-
-import '@splidejs/react-splide/css';
+// import '@splidejs/react-splide/css';
 
 import { v4 as uuidv4 } from 'uuid';
 import Review from './Review';
@@ -67,34 +69,30 @@ const reviewArr = [
 
 export default function Reviews() {
 
-
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const [loaded, setLoaded] = useState(false)
   
-
+    const [sliderRef, instanceRef] = useKeenSlider({
+           initial: 0,
+        slides: {
+            perView: 1,
+          },
+          
+         
+        slideChanged(slider) {
+          
+          setCurrentSlide(slider.track.details.rel)
+        },
+        created() {
+          setLoaded(true)
+        },
+         
+      },
+      )
 
  
 
-
-// const addStyle = (e) => {
-
-//     console.log(e)
-//      const liArr = e.Components.Pagination.items;
-
-    
-//     // const activeLi = liArr.filter((el) => Array.from(el.button.classList).includes('is-active'))
-
-
-//     console.log(liArr)
-
-
-//     liArr.forEach((el) => {
-//         el.button.style.backgroundColor =  '#eb7a09'
-//     });
-
-//     // activeLi[0].button.style.backgroundColor = '#eb7a09'
-    
-// }
-
-
+ 
 
 
 
@@ -306,7 +304,7 @@ export default function Reviews() {
 
 
 
-                <Splide  options={{ rewind: true, pagination: false,  arrows: true, }}    className='w-full px-12 ' >
+                {/* <Splide  options={{ rewind: true, pagination: false,  arrows: true, }}    className='w-full px-12 ' >
 
                     {
                         reviewArr.map((el) => {
@@ -315,7 +313,82 @@ export default function Reviews() {
                     }
 
 
-                </Splide>
+                </Splide> */}
+<div className='navigation-wrapper w-full'>
+
+
+    
+<div ref={sliderRef} className="keen-slider w-full">
+
+      {
+
+          reviewArr.map((el, i) => {
+              return  <div key={i} className="keen-slider__slide     ">
+                  <Review {...el} />
+
+                
+              </div>
+ 
+               
+          })
+
+      }
+
+
+  </div>
+
+
+  {loaded && instanceRef.current && (
+          <>
+            <Arrow
+              left
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.prev()
+              }
+              disabled={currentSlide === 0}
+            />
+
+            <Arrow
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.next()
+              }
+              disabled={
+                currentSlide ===
+                instanceRef.current.track.details.slides.length - 1
+              }
+            />
+          </>
+        )}
+
+
+{loaded && instanceRef.current && (
+        <div className="dots">
+          {[
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
+          ].map((idx) => {
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  instanceRef.current?.moveToIdx(idx)
+                }}
+                className={"dot" + (currentSlide === idx ? " active" : "")}
+              ></button>
+            )
+          })}
+        </div>
+      )}
+
+
+
+
+
+
+
+
+</div>
+
+
                 
             </div>
         </div>
@@ -326,3 +399,44 @@ export default function Reviews() {
        </>
     )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Arrow(props) {
+    const disabled = props.disabled ? " arrow--disabled" : ""
+    return (
+      <svg
+        onClick={props.onClick}
+        className={`arrow ${
+          props.left ? "arrow--left" : "arrow--right"
+        } ${disabled}`}
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill='#23314E'
+      >
+        {props.left && (
+          <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+        )}
+        {!props.left && (
+          <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+        )}
+      </svg>
+    )
+  }
