@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import { useEffect } from "react";
 
 
@@ -89,7 +90,7 @@ export default function Review({title, name, content, img}) {
                     </h3>
                     <div className="flex sm:items-center flex-col min-[400px]:flex-row justify-between gap-5 mb-4">
                         <div className="flex items-center gap-3">
-                            <img src={img.src} alt="Robert image" className="w-8 h-8 rounded-full" />
+                            <Image src={img} alt={`${name}-image`} className="w-8 h-8 rounded-full" width={80} height={80} />
                             <h6 className="font-semibold text-lg leading-8 text-indigo-600">{name}</h6>
                         </div>
                         {/* <p className="font-normal text-lg leading-8 text-gray-400">Nov 01, 2023</p> */}
