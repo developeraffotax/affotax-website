@@ -55,9 +55,9 @@ export default function HowItWorks({HowItWorksSection}) {
                                     {el.title}
 
                                     </h3>
-                                    <h4 className="mt-2 text-base text-gray-700">
+                                    <p className="mt-2 text-base text-gray-700">
                                     {el.content}
-                                    </h4>
+                                    </p>
                                     </div>
                         </li>
                         )

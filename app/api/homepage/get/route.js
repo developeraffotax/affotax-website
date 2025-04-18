@@ -2,6 +2,8 @@ import { connectDB } from "@/lib/connectDB";
 import Homepage from "@/lib/Model/Homepage/Homepage";
 
 
+export const dynamic = 'force-dynamic'
+
 //  GET  /api/homepage/get
 export async function GET(request) {
 	try {

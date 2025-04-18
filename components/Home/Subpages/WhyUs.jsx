@@ -36,10 +36,10 @@ export default function WhyUs({WhyChooseUsSection, CTASection}) {
                     {/* <Image src={Tax}  cover="true"  /> */}
                     </div>
                     <div className="flex-grow">
-                    <h2 className="text-primary text-lg title-font font-medium mb-3">
+                    <h3 className="text-primary text-lg title-font font-medium mb-3">
                     {el.title}
 
-                    </h2>
+                    </h3>
                     <p className="leading-relaxed text-base">
                     {el.content}
                     </p>
