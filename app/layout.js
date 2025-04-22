@@ -34,7 +34,20 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<GoogleTagManager gtmId="GTM-MW47DQSV" />
-
+			<head>
+        {/* ✅ Google Ads gtag.js script */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11304762354"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11304762354');
+            `,
+          }}
+        />
+      </head>
 			<body>
 				<AntdRegistry>{children}</AntdRegistry>
 				<NextTopLoader color="#F27941" showSpinner={false} />

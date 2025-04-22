@@ -16,7 +16,18 @@ export default function ThankYouPage() {
 
 	const successRef = useRef()
 
+	useEffect(() => {
+		// ✅ Fire conversion event when the thank-you page loads
+		if (typeof window !== 'undefined' && window.gtag) {
+			
+			console.log("THANK YOU LAOD")
+		  window.gtag('event', 'conversion', {
+			send_to: 'AW-11304762354/3ywRCN7d-rgaEPL3w44q',
+		  })
+		}
+	  }, [])
 
+	  
 	useEffect(() => {
 		quoteContext?.handleCancel();
 		const form = document?.getElementById('quote-form');

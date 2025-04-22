@@ -45,6 +45,9 @@ const Form = () => {
             } else{
                 
                 await formAction(formData);
+
+                
+                
                 formRef.current.reset();
                 
             }
