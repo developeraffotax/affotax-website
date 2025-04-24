@@ -12,13 +12,14 @@ import ReactQuill from "react-quill";
 import 'react-quill/dist/quill.snow.css';
 import { FaUser } from "react-icons/fa";
 import dayjs from 'dayjs';
+import TinyMCE from "@/lib/TinyMCE";
 
 
 
 
 
 
-export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMetaTitle, oldMetaDescription, oldValue, oldKeywords, slug, oldDate, oldAuthor}) {
+export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMetaTitle, oldMetaDescription, oldLdSchema, oldValue, oldKeywords, slug, oldDate, oldAuthor}) {
 
 
   const [uploadSuccess, setUploadSuccess] = useState(false)
@@ -49,6 +50,8 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
   const [date, setDate] = useState(dayjs(oldDate));
 	const [dateString, setDateString] = useState(oldDate);
 	const [author, setAuthor] = useState(oldAuthor);
+
+  const [ldSchema, setLdSchema] = useState(oldLdSchema)
 
 
   const props = {
@@ -105,6 +108,7 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
       formData.append('description', description)
       formData.append('metaTitle', metaTitle)
       formData.append('metaDescription', metaDescription)
+      formData.append('ldSchema', ldSchema)
       formData.append('imgUrl', imgUrl)
       formData.append('content', value)
       formData.append('id', id)
@@ -280,6 +284,8 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
                 <Select mode="tags" style={{ width: '100%', }} placeholder="Keywords" onChange={(value) => { setKeywords(value) }} value={keywords} options={[]} />
 
                 
+                <label>LD-Schema</label>
+						    <TextArea rows={4} placeholder="Paste ld-schema here!"   value={ldSchema} onChange={(e) => setLdSchema(e.target.value)} />
 
                
 
@@ -293,7 +299,8 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
 
             <div className="w-full  flex flex-col  gap-2">
             <label>Content for the blog</label>
-            <ReactQuill className="w-full  " theme="snow" value={value} onChange={setValue} modules={{toolbar: toolbarOptions,}}   />
+            {/* <ReactQuill className="w-full  " theme="snow" value={value} onChange={setValue} modules={{toolbar: toolbarOptions,}}   /> */}
+            <TinyMCE  value={value} setValue={setValue} />
 
             <Button className="w-[10%] mt-4"  onClick={submitHandler} type="primary">Update Blog</Button>
             </div>

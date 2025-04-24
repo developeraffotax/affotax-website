@@ -33,6 +33,7 @@ export default async function  EditBlogPage({params}) {
         imageUrl: oldDoc.imageUrl,
         metaTitle: oldDoc.metaTitle,
         metaDescription: oldDoc.metaDescription,
+        ldSchema: oldDoc.ldSchema,
         content: oldDoc.content,
         keywords: oldDoc.keywords,
         slug: oldDoc.slug,
@@ -45,7 +46,7 @@ export default async function  EditBlogPage({params}) {
 
     return (
         <>
-            <EditBlog id={plainOldDoc._id} oldTitle={plainOldDoc.title} oldDescription={plainOldDoc.description} oldImgUrl={plainOldDoc.imageUrl} oldMetaTitle={plainOldDoc.metaTitle} oldMetaDescription={plainOldDoc.metaDescription} oldValue={plainOldDoc.content} oldKeywords={plainOldDoc.keywords} slug={plainOldDoc.slug} oldDate={plainOldDoc.date} oldAuthor={plainOldDoc.author}/>
+            <EditBlog id={plainOldDoc._id} oldLdSchema={plainOldDoc.ldSchema} oldTitle={plainOldDoc.title} oldDescription={plainOldDoc.description} oldImgUrl={plainOldDoc.imageUrl} oldMetaTitle={plainOldDoc.metaTitle} oldMetaDescription={plainOldDoc.metaDescription} oldValue={plainOldDoc.content} oldKeywords={plainOldDoc.keywords} slug={plainOldDoc.slug} oldDate={plainOldDoc.date} oldAuthor={plainOldDoc.author}/>
         </>
     )
 }

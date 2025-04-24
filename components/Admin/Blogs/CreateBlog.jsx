@@ -12,6 +12,7 @@ import { createBlog, UploadImage } from "@/actions/blog";
 import { MdOutlineContentCopy } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { CustomEditor } from "@/lib/Editor";
+import TinyMCE from "@/lib/TinyMCE";
 
 
 
@@ -51,7 +52,8 @@ export default function CreateBlog() {
 	const joditRef = useRef();
 
 
- 
+	
+	const [ldSchema, setLdSchema] = useState("")
 		
 
 
@@ -120,6 +122,7 @@ export default function CreateBlog() {
 		formData.append("description", description);
 		formData.append("metaTitle", metaTitle);
 		formData.append("metaDescription", metaDescription);
+		formData.append("ldSchema", ldSchema);
 		formData.append("imgUrl", imgUrl);
 		formData.append("content", value);
 		formData.append("keywords", keywords);
@@ -146,6 +149,7 @@ export default function CreateBlog() {
 			setMetaDescription();
 			setValue("");
 			setKeywords([]);
+			setLdSchema("")
 
 			setDate(null)
 			setDateString("");
@@ -326,13 +330,19 @@ export default function CreateBlog() {
 
 						<label>Keywords</label>
 						<Select mode="tags" style={{ width: "100%" }} placeholder="Keywords" onChange={(value) => { setKeywords(value); }} value={keywords} options={[]} />
+
+
+						<label>LD-Schema</label>
+						<TextArea rows={4} placeholder="Paste ld-schema here!"   value={ldSchema} onChange={(e) => setLdSchema(e.target.value)} />
+
 					</div>
 				</div>
 
 				<div className="w-full flex flex-col  gap-2">
 					<label>Content for the blog</label>
 					
-					<CustomEditor value={value} setValue={setValue} />
+					{/* <CustomEditor value={value} setValue={setValue} /> */}
+					<TinyMCE  value={value} setValue={setValue} />
 					
 
 

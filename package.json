@@ -17,6 +17,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "@stripe/stripe-js": "^5.7.0",
     "@tawk.to/tawk-messenger-react": "^2.0.2",
+    "@tinymce/tinymce-react": "^6.1.0",
     "@vercel/blob": "^0.23.4",
     "antd": "^5.20.2",
     "axios": "^1.7.7",

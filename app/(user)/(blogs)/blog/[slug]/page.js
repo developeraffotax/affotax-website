@@ -56,6 +56,7 @@ export default async function BlogPage({ params }) {
 
 	return (
 		<div>
+			{blog?.ldSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:blog?.ldSchema }} defer/>}
 			<main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white antialiased">
 				<div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
 					<article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue  ">
@@ -66,8 +67,9 @@ export default async function BlogPage({ params }) {
 										className="mr-4 w-16 h-16 rounded-full bg-slate-200 p-2 "
 										src="/user.png"
 										alt="Affotax"
+										 
 									/>
-									<div>
+									<div >
 										<p href="#" rel="puthor" className="text-xl font-bold text-gray-900 " >{blog.author} </p>
 
 										<p className="text-base text-gray-500 ">
@@ -89,6 +91,7 @@ export default async function BlogPage({ params }) {
 								className="w-full rounded-xl max-h-96"
 								width={500}
 								height={500}
+								
 							/>
 						</figure>
 

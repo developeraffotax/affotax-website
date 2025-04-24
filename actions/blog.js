@@ -14,7 +14,7 @@ import { revalidatePath } from "next/cache";
 
 //CREATE OPERATION
 export async function createBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, keywords, slug, date, author } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "keywords", "slug", "date", "author" );
+	const { title, description, metaTitle, metaDescription, ldSchema, imgUrl, content, keywords, slug, date, author } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "ldSchema", "imgUrl", "content", "keywords", "slug", "date", "author" );
 
 	try {
 		const db = await connectDB();
@@ -44,6 +44,7 @@ export async function createBlog(formData) {
 		const blog = new Blog({
 			metaTitle: metaTitle,
 			metaDescription: metaDescription,
+			ldSchema: ldSchema,
 			title: title,
 			slug: slug,
 			description: description,
@@ -116,7 +117,7 @@ export async function UploadImage(formData) {
 
 //Update OPERATION
 export async function updateBlog(formData) {
-	const { title, description, metaTitle, metaDescription, imgUrl, content, id, keywords, slug, date, author } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "imgUrl", "content", "id", "keywords", "slug", "date", "author" );
+	const { title, description, metaTitle, metaDescription, ldSchema, imgUrl, content, id, keywords, slug, date, author } = getFormData( formData, "title", "description", "metaTitle", "metaDescription", "ldSchema", "imgUrl", "content", "id", "keywords", "slug", "date", "author" );
 
 	try {
 		const db = await connectDB();
@@ -126,6 +127,7 @@ export async function updateBlog(formData) {
 		
 		oldDoc.metaTitle= metaTitle;
 		oldDoc.metaDescription= metaDescription;
+		oldDoc.ldSchema= ldSchema;
 		oldDoc.title= title;
 		oldDoc.slug= slug;
 		oldDoc.description= description;
