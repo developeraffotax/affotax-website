@@ -77,12 +77,12 @@ export async function POST(req) {
 				addOns: el.addOns,
 			})),
 			totalPriceWithoutVat:  (+totalPrice).toFixed(2).toString(2),
-			totalPrice: (+totalPrice + +totalPrice * (20 / 100)).toFixed(2).toString(2),
+			totalPrice: (+totalPrice + +totalPrice * (0 / 100)).toFixed(2).toString(2),
 			// payment_id: paymentId,
 			// customer_id: customerDoc._id,
 			orderNumber: orderNumber,
 			payment_status: "pending",
-			vat: (+totalPrice * (20 / 100)).toFixed(2).toString(2)
+			vat: (+totalPrice * (0 / 100)).toFixed(2).toString(2)
 		};
 
 		console.log(newOrderData)
@@ -96,8 +96,8 @@ export async function POST(req) {
 
 		newCartArr.push({
 			priceTitle: "VAT",
-			pageTitle: "20%",
-			price: (+totalPrice * (20 / 100)).toFixed(2),
+			pageTitle: "0%",
+			price: (+totalPrice * (0 / 100)).toFixed(2),
 		});
 
 		
