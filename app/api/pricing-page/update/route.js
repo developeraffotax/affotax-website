@@ -65,6 +65,7 @@ export async function POST(request) {
 
 
 		revalidatePath('/');
+		revalidatePath('/pricing');
 
 		return new Response(JSON.stringify(res), {
 			status: 201,
