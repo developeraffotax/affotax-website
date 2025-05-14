@@ -3,6 +3,13 @@ import Blog from "@/lib/Model/Blog";
 import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound, redirect } from "next/navigation";
+
+
+const ignoreUrls = [
+	'vat-guide-for-self-employed',
+	'a-guide-to-understanding-annual-statements',
+]
 
 //Meta data
 export async function generateMetadata({ params }) {
@@ -29,12 +36,17 @@ export async function generateMetadata({ params }) {
 export default async function BlogPage({ params }) {
 	const { slug } = params;
 
+	if (ignoreUrls.includes(slug)) {
+		redirect('/')
+	}
+
 	const db = await connectDB();
 	const blog = await Blog.findOne({ slug: slug });
 
 	
 
 	if (!blog) {
+		  notFound()
 		return (
 			<>
 				<div className="w-full flex flex-col justify-center items-center py-40 gap-8  ">
