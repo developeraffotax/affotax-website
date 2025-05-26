@@ -87,13 +87,28 @@ export default function RootLayout({ children }) {
 		tawkMessengerRef.current.maximize();
 	};
 
+
+
+
+	const handleWhatsAppClick = () => {
+		if (typeof window !== 'undefined' && window.gtag) {
+			console.log('gtag fired💛🧡🧡')
+		  window.gtag('event', 'conversion', {
+			send_to: 'AW-11304762354/4G7mCO625-sYEPL3w44q',
+		  });
+		}
+	
+		// Proceed to WhatsApp link
+		//window.open('https://wa.me/1234567890', '_blank');
+	  };
+
 	return (
 		<>	
 			<QuoteFormContext.Provider value={{isModalOpen, showModal, handleOk, handleCancel}}>
 			<CartContext.Provider value={{cartItems}}><Header /></CartContext.Provider>
 			<div className="w-full p-0 mt-16 ">
 			<TawkContext.Provider value={handleMaximize}> <CartContext.Provider value={{ setCartItems}}>{children}</CartContext.Provider> </TawkContext.Provider>
-			<Link href={"https://wa.me/447723143223"} target="_blank" aria-label="whatsapp-button"> <IoLogoWhatsapp className="fixed size-16 right-5 bottom-28 hover:cursor-pointer hover:scale-110 text-green-500 z-50 " /> </Link>
+			<Link onClick={handleWhatsAppClick} href={"https://wa.me/447723143223"} target="_blank" aria-label="whatsapp-button"> <IoLogoWhatsapp className="fixed size-16 right-5 bottom-28 hover:cursor-pointer hover:scale-110 text-green-500 z-50 " /> </Link>
 			<TawkMessengerReact  ref={tawkMessengerRef} propertyId="667e5ad19d7f358570d4466f" widgetId="1i1ep5goa" />
 			<NextTopLoader  color="#F27941" showSpinner={false} />
 
