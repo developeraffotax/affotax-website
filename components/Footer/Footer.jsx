@@ -1,5 +1,9 @@
+import Image from 'next/image'
 import Link from 'next/link'
-
+import Instagram from '@/public/ig.png';
+import Facebook from '@/public/fb.png';
+import LinkedIn from '@/public/li.png';
+import Whatsapp from '@/public/wa.png';
 export default function Footer() {
   return (
     <footer className="text-gray-600 body-font w-full flex flex-col items-center px-80 max-2xl:px-40 max-xl:px-10 bgImage2">
@@ -19,6 +23,26 @@ export default function Footer() {
             </svg>
             </Link>
         <p className="mt-2 text-sm text-gray-500">Affotax is a reliable accountancy firm that specialises in providing affordable accounting and tax filing services to UK businesses.</p>
+
+
+        <div className=' w-full flex flex-col gap-2 mt-4'>
+            <h2 className='text-gray-600 text-xl italic   font-mono tracking-tighter  '>Get In Touch</h2>
+             
+            <div className='grid grid-cols-4 gap-2  '>
+            <Link href='https://wa.me/447723143223' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary hover:scale-110 transition-all duration-300 '><Image src={Whatsapp} alt='whatsapp'/>  </Link>
+            <Link href='https://www.instagram.com/affotax_/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary hover:scale-110 transition-all duration-300 '><Image src={Instagram} alt='instagram'/> </Link>
+            <Link href='https://www.facebook.com/affotax/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary hover:scale-110 transition-all duration-300 '><Image src={Facebook} alt='facebook'/> </Link>
+            <Link href='https://www.linkedin.com/company/affotax/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary hover:scale-110 transition-all duration-300 '><Image src={LinkedIn} alt='linkedin'/> </Link>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
       </div>
       <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
