@@ -7,7 +7,7 @@ export default function TrustPilotSection() {
 		<div className="w-[50%] max-[1700px]:w-full flex flex-wrap max-lg:flex-col justify-start items-stretch gap-6 py-12 max-xl:py-8 max-xl:max-w-3xl  ">
 			{/* Google */}
 			<a
-				className="flex-1 min-w-[280px] block"
+				className="flex-1 min-w-[200px] block"
 				target="_blank"
 				rel="noopener noreferrer"
 				href="https://www.google.com/search?..."
@@ -42,7 +42,7 @@ export default function TrustPilotSection() {
 
 			{/* Trustpilot */}
 			<a
-				className="flex-1 min-w-[280px] block"
+				className="flex-1 min-w-[200px] block"
 				target="_blank"
 				rel="noopener noreferrer"
 				href="https://www.trustpilot.com/review/affotax.com"
