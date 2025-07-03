@@ -6,7 +6,7 @@ import LinkedIn from '@/public/li.png';
 import Whatsapp from '@/public/wa.png';
 export default function Footer() {
   return (
-    <footer className="text-gray-600 body-font w-full flex flex-col items-center px-80 max-2xl:px-40 max-xl:px-10 bgImage2">
+    <footer className="text-gray-600 body-font w-full flex flex-col items-center px-80 max-2xl:px-40 max-xl:px-10 newBg2">
     <div className="container text-center px-5 py-20 max-lg:py-8 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col justify-center items-center">
       <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left items-center justify-center max-lg:flex max-lg:flex-col">
       <Link href="/" aria-label="Homepage">

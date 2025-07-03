@@ -38,6 +38,7 @@ module.exports = {
         oswald: ["Oswald", "sans-serif"],
         Montserrat: ["Montserrat", "sans-serif"],
         Raleway: ["Raleway", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
         
       }
     },

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
+import { LiaStarSolid } from "react-icons/lia";
 
 import Review from "./Review";
 
@@ -11,6 +12,7 @@ import P2 from "@/public/person2.jpg";
 import P3 from "@/public/person3.jpg";
 import P4 from "@/public/person4.jpg";
 import P5 from "@/public/person5.jpg";
+
 
 const reviewArr = [
 	{
@@ -80,6 +82,22 @@ export default function Reviews() {
 						<h2 className="font-manrope font-bold text-4xl text-black mb-8 text-center">
 							Our customer reviews
 						</h2>
+
+ 
+
+
+
+
+
+							
+
+
+
+
+
+
+
+
 						<div className="grid grid-cols-1 xl:grid-cols-2 gap-11 pb-11 border-b border-gray-100 max-xl:max-w-2xl max-xl:mx-auto">
 							<div className="box flex flex-col gap-y-4 w-full ">
 								<div className="flex items-center w-full">

@@ -26,6 +26,7 @@ export default async function Home() {
   return (
     <main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
         <HomeTop HeroSection={JSON.stringify(homepage?.HeroSection)}/>
+        
          <ChoosePackage pricingPage={JSON.stringify(pricingPage)}/>
          <HowItWorks HowItWorksSection={JSON.stringify(homepage?.HowItWorksSection)}/>
         <WhyUs WhyChooseUsSection={JSON.stringify(homepage?.WhyChooseUsSection)} CTASection={JSON.stringify(homepage?.CTASection)}/>
