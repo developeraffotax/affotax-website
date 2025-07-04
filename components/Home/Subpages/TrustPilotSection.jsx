@@ -10,7 +10,7 @@ export default function TrustPilotSection() {
 				className="flex-1 min-w-[200px] block"
 				target="_blank"
 				rel="noopener noreferrer"
-				href="https://www.google.com/search?..."
+				href="https://www.google.com/search?sca_esv=da16bac625324a66&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E24U1LUkbmrB5gTHWTzvrhT49uwiaiTR2b2LwJRitum7Q-pGXsv8H3jRgLk2a2dnmhWmKqAtaWKkR7Z9-gwTNCbyFJ9v&q=Affotax+Reviews&sa=X&ved=2ahUKEwi-8rX326KOAxX7zAIHHT80KqkQ0bkNegQIMhAE&biw=1920&bih=953&dpr=1"
 			>
 				<div className="flex flex-col h-full justify-between p-6 bg-white/50 backdrop-blur-md border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105">
 					<div className="flex items-center mb-4">
