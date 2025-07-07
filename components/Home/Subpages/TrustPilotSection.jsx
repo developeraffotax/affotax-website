@@ -35,7 +35,7 @@ export default function TrustPilotSection() {
 						</div>
 					</div>
 					<p className="text-sm text-gray-500">
-						13 reviews — Rated <strong>5.0/5.0</strong>
+						14 reviews — Rated <strong>5.0/5.0</strong>
 					</p>
 				</div>
 			</a>
@@ -70,7 +70,7 @@ export default function TrustPilotSection() {
 						</div>
 					</div>
 					<p className="text-sm text-gray-500">
-						43 reviews — Rated <strong>4.8/5.0</strong>
+						44 reviews — Rated <strong>4.8/5.0</strong>
 					</p>
 				</div>
 			</a>
