@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { LiaStarSolid } from "react-icons/lia";
 
-export default function TrustPilotSection() {
+export default function TrustPilotSection({gReviewsCount, tReviewsCount }) {
 	return (
 		<div className="w-[50%] max-[1700px]:w-full flex flex-wrap max-lg:flex-col justify-start items-stretch gap-6 py-12 max-xl:py-8 max-xl:max-w-3xl  ">
 			{/* Google */}
@@ -35,7 +35,7 @@ export default function TrustPilotSection() {
 						</div>
 					</div>
 					<p className="text-sm text-gray-500">
-						14 reviews — Rated <strong>5.0/5.0</strong>
+						{gReviewsCount} reviews — Rated <strong>5.0/5.0</strong>
 					</p>
 				</div>
 			</a>
@@ -70,7 +70,7 @@ export default function TrustPilotSection() {
 						</div>
 					</div>
 					<p className="text-sm text-gray-500">
-						44 reviews — Rated <strong>4.8/5.0</strong>
+							{tReviewsCount} reviews — Rated <strong>4.8/5.0</strong>
 					</p>
 				</div>
 			</a>

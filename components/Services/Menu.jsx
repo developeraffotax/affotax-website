@@ -79,6 +79,10 @@ const menu = [
                 name: 'Director Appointment & Resignation',
                 link: '/director-appointment-resignation',
             },
+            {
+                name: '30-Min Accountant Consultation',
+                link: '/consultation',
+            },
         ],
     },
     {

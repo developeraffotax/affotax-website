@@ -21,7 +21,8 @@ const Homepage = () => {
     const [metaDescription, setMetaDescription] = useState('');
     const [keywords, setKeywords] = useState([]);
 
-
+    const [googleReviewsCount, setGoogleReviewsCount] = useState(0)
+    const [trustPilotCount, setTrustPilotCount] = useState(0)
 
 
     const [heroHeading, setHeroHeading] = useState('')
@@ -72,7 +73,7 @@ const Homepage = () => {
             console.log(res)
 
             if (res.status === 200) {
-                const {HeroSection, HowItWorksSection, WhyChooseUsSection, CTASection, LinksSection, metaTitle, metaDescription, keywords } = res.data;
+                const {HeroSection, HowItWorksSection, WhyChooseUsSection, CTASection, LinksSection, metaTitle, metaDescription, keywords, googleReviewsCount, trustPilotCount } = res.data;
                 setHeroHeading(HeroSection.heading);
                 setHeroHtml(HeroSection.html);
                 setHeroImageUrl(HeroSection.imageUrl);
@@ -96,6 +97,9 @@ const Homepage = () => {
                 setMetaTitle(metaTitle);
                 setMetaDescription(metaDescription);
                 setKeywords(keywords);
+
+                setGoogleReviewsCount(googleReviewsCount)
+                setTrustPilotCount(trustPilotCount)
             }
 
         } catch (error) {
@@ -151,7 +155,10 @@ const Homepage = () => {
 
             metaTitle,
             metaDescription,
-            keywords
+            keywords,
+
+            googleReviewsCount,
+            trustPilotCount
         }
 
 
@@ -219,6 +226,24 @@ const Homepage = () => {
 
         <label>Keywords</label>
         <Select mode="tags" style={{ width: "100%" }} placeholder="Keywords" onChange={(value) =>  setKeywords(value) } value={keywords} />
+
+
+        <Divider style={{ borderColor: "#eb8110" }}> {" "} Review-Section{" "} </Divider>
+            <div className="w-full flex justify-start items-center gap-4 ">
+           
+            <div>
+            <label>Google Reviews</label>
+            <Input type="number" placeholder="Number of Google Reviews" value={googleReviewsCount} onChange={(e) => setGoogleReviewsCount(e.target.value)} />
+            </div>
+
+
+            <div>
+            <label>Trustpilot Reviews</label>
+            <Input type="number"  placeholder="Number of Trustpilot Reviews" value={trustPilotCount} onChange={(e) => setTrustPilotCount(e.target.value)} />
+            </div>
+
+
+            </div>
     </div>
 
 
