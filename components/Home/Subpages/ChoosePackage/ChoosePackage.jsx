@@ -49,8 +49,8 @@ export default function ChoosePackage({pricingPage}) {
     <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10 max-lg:hidden">
          <div className="container  py-16 mx-auto">
             <div className="text-center mb-12">
-                <p className='text-base text-orange-400 font-semibold '>Pricing & Plan</p>
-                <h2 className="sm:text-4xl text-2xl font-medium title-font text-gray-900 pt-2">
+                <p className='text-base text-orange-400 font-semibold mb-2'>Pricing & Plan</p>
+                <h2 className="sm:text-4xl text-2xl font-medium title-font text-gray-900  mb-2">
                     {title}
                 </h2>
                 <p className='text-sm'>Making tax filing affordable with 100% satisfaction and 30-day Money-Back guarantee.</p>
@@ -151,10 +151,10 @@ export default function ChoosePackage({pricingPage}) {
 
 
 <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10 max-lg:block hidden">
-<div className="container  py-16 mx-auto">
+<div className="container  py-12 mx-auto">
    <div className="text-center mb-12">
-   <p className='text-base text-orange-400 font-semibold '>Pricing & Plan</p>
-       <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900  mb-4">
+   <p className='text-base text-orange-400 font-semibold mb-2'>Pricing & Plan</p>
+       <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900  mb-2">
            {title}
        </h2>
        <p className='text-sm'>Making tax filing affordable with 100% satisfaction and 30-day Money-Back guarantee.</p>
