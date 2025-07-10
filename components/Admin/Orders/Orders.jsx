@@ -270,9 +270,10 @@ export default function Orders() {
 					onChange={(values) => {
 						if (values) setDateRange(values);
 					}}
-					format="DD-MM-YYYY"
+					format="DD MMM YYYY"
 					allowClear={false}
-					className="ml-2"
+					className="ml-2 w-[240px]"
+					
 				/>
 				<Dropdown overlay={rangeMenu} placement="bottomLeft" arrow>
 					<Button>{activeLabel}</Button>
