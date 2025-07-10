@@ -1,7 +1,13 @@
 "use client";
 
 import { Space, Table, DatePicker, Button, Menu, Dropdown } from "antd";
-import { AiOutlineEye, AiOutlineCloseCircle } from "react-icons/ai";
+import {
+	AiOutlineEye,
+	AiOutlineCloseCircle,
+	AiOutlineNumber,
+	AiOutlinePoundCircle,
+} from "react-icons/ai";
+import { Statistic } from "antd";
 import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import dayjs from "dayjs";
@@ -250,6 +256,12 @@ export default function Orders() {
 		</Menu>
 	);
 
+	const totalOrders = orders.length;
+
+	const totalAmount = orders.reduce((sum, order) => {
+		return sum + (parseFloat(order.totalPrice) || 0);
+	}, 0);
+
 	return (
 		<>
 			<div className="flex flex-wrap gap-2 mb-4 items-center">
@@ -280,16 +292,33 @@ export default function Orders() {
 				</Button>
 			</div>
 
-			<Table
-				columns={columns}
-				dataSource={orders}
-				size="large"
-				showHeader
-				bordered
-				pagination
-				rowClassName={rowClassName}
-				loading={isLoading}
-			/>
+			<div className="min-h-[60vh]">
+				<Table
+					columns={columns}
+					dataSource={orders}
+					size="middle"
+					showHeader
+					bordered
+					pagination
+					rowClassName={rowClassName}
+					loading={isLoading}
+				/>
+			</div>
+
+			<div className="flex flex-wrap gap-12 items-center justify-start mt-6 border-t pt-4 text-base text-gray-800">
+				<div className="flex items-center gap-2">
+					<AiOutlineNumber className="text-blue-600 text-xl" />
+					<span className="font-medium">Total Orders:</span>
+					<span className="text-black">{totalOrders}</span>
+				</div>
+				<div className="flex items-center gap-2">
+					<AiOutlinePoundCircle className="text-green-600 text-xl" />
+					<span className="font-medium">Total Amount:</span>
+					<span className="text-black">
+						£{totalAmount.toFixed(2)}
+					</span>
+				</div>
+			</div>
 		</>
 	);
 }
