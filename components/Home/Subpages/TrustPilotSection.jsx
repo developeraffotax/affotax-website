@@ -41,7 +41,7 @@ export default function TrustPilotSection({gReviewsCount, tReviewsCount }) {
 			</a>
 
 			{/* Trustpilot */}
-			<a
+			{/* <a
 				className="flex-1 min-w-[200px] block"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -73,7 +73,7 @@ export default function TrustPilotSection({gReviewsCount, tReviewsCount }) {
 							{tReviewsCount} reviews — Rated <strong>4.8/5.0</strong>
 					</p>
 				</div>
-			</a>
+			</a> */}
 		</div>
 	);
 }
