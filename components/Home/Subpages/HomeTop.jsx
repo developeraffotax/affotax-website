@@ -8,10 +8,10 @@ import Image from "next/image";
 import { LiaStarSolid } from "react-icons/lia";
 import TrustPilotSection from "./TrustPilotSection";
 
-export default function HomeTop({ HeroSection, googleReviewsCount, trustPilotCount }) {
+export default function HomeTop({ HeroSection, googleReviewsCount }) {
 	const { heading, html, imageUrl } = JSON.parse(HeroSection);
 	const gReviewsCount = JSON.parse(googleReviewsCount);
-	const tReviewsCount = JSON.parse(trustPilotCount);
+ 
 	const quoteContext = useContext(QuoteFormContext);
 
 
@@ -65,7 +65,7 @@ export default function HomeTop({ HeroSection, googleReviewsCount, trustPilotCou
 					</div>
 				</div>
 				<div className="w-full flex justify-start max-xl:w-full ">
-					<TrustPilotSection gReviewsCount={gReviewsCount} tReviewsCount={tReviewsCount}/>
+					<TrustPilotSection gReviewsCount={gReviewsCount}  />
 				</div>
 			</div>
 		</section>
