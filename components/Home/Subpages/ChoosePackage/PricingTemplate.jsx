@@ -22,7 +22,7 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
 							+ VAT
 						</span> */}
 					</h2>
-                    <span className="text-sm text-gray-600" > {pkgTurnover} </span>
+                    <span className="text-sm text-orange-500 font-semibold" > {pkgTurnover} </span>
 				</div>
 
                 {/* Here Comes the ticks and cross */}
@@ -36,11 +36,11 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
 
                    if (packageIncludes?.includes(el)) {
 					return (
-                       <Tick index={index} key={`${el}--${index}--pricing-template-tick`}/>
+                       <Tick  key={`${el}--${index}--pricing-template-tick`} index={index} text={el} />
                     )
 				   } else {
 					return (
-                        <Cross index={index} key={`${el}--${index}--pricing-template-cross`} />
+                        <Cross index={index} key={`${el}--${index}--pricing-template-cross`} text="-" />
                     )
 				   }
 
@@ -49,10 +49,10 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
 
 
 
-				<div className="border-t border-gray-300 p-6 text-center rounded-bl-lg">
+				<div className="pb-12 border-gray-300 p-6 text-center rounded-bl-lg">
 					<Link href={"/cart"} onClick={onClick}> <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none border-2 border-transparent hover:bg-primary hover:bg-transparent hover:text-orange-500 hover:border-orange-500 duration-300 transition-all rounded"> Buy Now <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-1 mt-1" viewBox="0 0 24 24" > <path d="M5 12h14M12 5l7 7-7 7" /> </svg> </button> </Link>
 					
-                    <p className="text-xs text-gray-500 mt-3" >{footerText}</p>
+                    {/* <p className="text-xs text-gray-500 mt-3" >{footerText}</p> */}
 					
 				</div>
                 

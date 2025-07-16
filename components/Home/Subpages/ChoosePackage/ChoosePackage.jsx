@@ -13,6 +13,7 @@ export default function ChoosePackage({pricingPage}) {
 
 
 
+    console.log("DATA💛💛💛🧡❤❤",title, first, finalArr)
     const onClickLocalStorageHandler = (id) => {
 
 
@@ -46,20 +47,20 @@ export default function ChoosePackage({pricingPage}) {
     
     <>
     
-    <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10 max-lg:hidden">
-         <div className="container  py-16 mx-auto">
+    <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2 font-Outfit  border-gray-200 px-96 max-[1800px]:px-60 max- max-2xl:px-40 max-xl:px-8 ">
+         <div className="container w-full py-16 mx-auto">
             <div className="text-center mb-12">
-                <p className='text-base text-orange-400 font-semibold mb-2'>Pricing & Plan</p>
+                <p className='text-base text-orange-500 font-semibold mb-2'>Pricing & Plan</p>
                 <h2 className="sm:text-4xl text-2xl font-medium title-font text-gray-900  mb-2">
                     {title}
                 </h2>
                 <p className='text-sm'>Making tax filing affordable with 100% satisfaction and 30-day Money-Back guarantee.</p>
-                <div className="flex mt-6 justify-center">
+                {/* <div className="flex mt-6 justify-center">
                     <div className="w-16 h-1 rounded-full bg-primary inline-flex" />
-                </div>
+                </div> */}
             </div>
-        <div className="flex flex-wrap">
-            <div className="lg:w-1/4 mt-48 hidden lg:block">
+        <div className="w-full flex justify-center ">
+            {/* <div className="lg:w-1/4 mt-48 hidden lg:block">
                 <div className="mt-px border-t border-gray-300 border-b border-l rounded-tl-lg rounded-bl-lg overflow-hidden">
 
                 {
@@ -74,9 +75,9 @@ export default function ChoosePackage({pricingPage}) {
 
                
                 </div>
-            </div>
-            <div className="flex lg:w-3/4 w-full flex-wrap lg:border border-gray-300 rounded-lg  ">
-                <div className="lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none">
+            </div> */}
+            <div className="flex w-full flex-wrap lg:border border-gray-300 rounded-none  ">
+                <div className="lg:w-1/3 lg:mt-px w-full mb-10 lg:mb-0 border-2 border-gray-300 lg:border-none rounded-none">
                 
                
                <PricingTemplate {...first} finalArr={finalArr} onClick={onClickLocalStorageHandler.bind(null, '66e3edbe001f439adee69a87')}/>
@@ -87,8 +88,8 @@ export default function ChoosePackage({pricingPage}) {
                 
                
                 </div>
-                <div className="lg:w-1/3 lg:-mt-px w-full mb-10 lg:mb-0 border-2 rounded-lg border-primary relative">
-                <span className="bg-primary text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">
+                <div className="lg:w-1/3 lg:-mt-px w-full mb-10 lg:mb-0 border rounded-none border-primary relative">
+                <span className="bg-primary text-white px-4 py-1 tracking-widest text-xs absolute right-[50%] translate-x-[50%] top-0 rounded-b">
                     POPULAR
                 </span>
                 
@@ -101,7 +102,7 @@ export default function ChoosePackage({pricingPage}) {
                 </div>
 
 
-                <div className="lg:w-1/3 w-full lg:mt-px border-2 border-gray-300 lg:border-none rounded-lg lg:rounded-none">
+                <div className="lg:w-1/3 w-full lg:mt-px border-2 border-gray-300 lg:border-none rounded-none">
                 
                
                 
@@ -150,7 +151,7 @@ export default function ChoosePackage({pricingPage}) {
 
 
 
-<section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10 max-lg:block hidden">
+<section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2  border-gray-200 px-80 max-2xl:px-40 max-xl:px-10  hidden">
 <div className="container  py-12 mx-auto">
    <div className="text-center mb-12">
    <p className='text-base text-orange-400 font-semibold mb-2'>Pricing & Plan</p>
