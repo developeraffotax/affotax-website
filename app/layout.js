@@ -47,6 +47,9 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+		
+
+
       </head>
 			<body>
 				<AntdRegistry>{children}</AntdRegistry>

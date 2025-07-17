@@ -19,7 +19,7 @@ const svgMap = {
 
 const Box = ({ el: el }) => {
 	return (
-		<li className="p-8 flex flex-col justify-center items-center gap-4 rounded-xl  shadow-md  shadow-black/10 font-Outfit border h-[250px] ">
+		<li className="p-8 flex flex-col justify-center items-center gap-4 rounded-xl  shadow-md  shadow-black/10 font-Outfit border h-[250px] z-20">
 			<span>{svgMap[el?.title]}</span>
 			<h3 className="text-xl text-center">{el.title}</h3>
 			<Link href={el.path} className="">
@@ -39,12 +39,12 @@ export default function ServicesTo({ LinksSection }) {
 	return (
 		<section className=" bg-[#F5F8FE] text-gray-600 body-font w-full py-8 relative">
 			
-			<div className="absolute top-0 right-0 ">{bgEl.el1}</div>
-			<div className="absolute bottom-0 left-0 ">{bgEl.el2}</div>
+			<div className="absolute top-0 right-0 max-lg:hidden z-10">{bgEl.el1}</div>
+			<div className="absolute bottom-0 left-0 max-lg:hidden z-10">{bgEl.el2}</div>
 
 
 
-			<div className="container px-5 py-12 mx-auto">
+			<div className="container px-5 max-lg:px-8 py-12 mx-auto">
 				<div className="text-center mb-16">
 					<h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
 						{heading}
@@ -54,7 +54,7 @@ export default function ServicesTo({ LinksSection }) {
 					</div>
 				</div>
 
-				<ul className=" w-full grid grid-cols-3  gap-10 mx-auto max-w-[1000px] ">
+				<ul className=" w-full grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1  gap-10 mx-auto max-w-[1000px] ">
 					{arr?.map((el) => {
 						return <Box key={el._id} el={el} />;
 					})}
