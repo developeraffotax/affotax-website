@@ -23,7 +23,11 @@ const Box = ({ el: el }) => {
 			<span>{svgMap[el?.title]}</span>
 			<h3 className="text-xl text-center">{el.title}</h3>
 			<Link href={el.path} className="">
-				<button className="px-4 py-1 border border-orange-500 rounded-md text-orange-500 hover:bg-orange-500 hover:text-white duration-300 transition-all">View Details</button>
+				
+
+				<button class=" px-4 py-1 overflow-hidden group bg-transparent border border-orange-500 rounded-md text-orange-500 hover:text-white hover:bg-orange-500 relative hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400   transition-all ease-out duration-300"> <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span> <span class="relative text-base  ">View Details</span> </button>
+
+
 			</Link>
 		</li>
 	);
