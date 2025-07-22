@@ -109,11 +109,11 @@ export async function POST(req) {
 		//---------------------------------Logic to get session from stripe & passing cartitems from client not secure btw--------------------------------------->
 		const newCartArr = [...cartItemsArr];
 
-		newCartArr.push({
-			priceTitle: "VAT",
-			pageTitle: "0%",
-			price: (+totalPrice * (0 / 100)).toFixed(2),
-		});
+		// newCartArr.push({
+		// 	priceTitle: "VAT",
+		// 	pageTitle: "0%",
+		// 	price: (+totalPrice * (0 / 100)).toFixed(2),
+		// });
 
 		newCartArr.push({
 			priceTitle: "Stripe",
