@@ -156,7 +156,7 @@ export default function Orders() {
 		},
 
 		{
-			title: "Total Price Without VAT",
+			title: "Total Price Without VAT & Stripe Fee",
 			dataIndex: "totalPriceWithoutVat",
 			key: "totalPriceWithoutVat",
 			render: (text) => <p className=" ">£{text}</p>,

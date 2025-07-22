@@ -22,6 +22,21 @@ function generateRandomNumber() {
 
 
 
+function calculateFeeAmountGBP(orderAmountGBP) {
+	const feePercent = 0.029; // 2.9%
+	const fixedFee = 0.20;    // £0.20
+  
+	const gross = (orderAmountGBP + fixedFee) / (1 - feePercent);
+	const fee = gross - orderAmountGBP;
+  
+	return parseFloat(fee.toFixed(2));
+  }
+
+
+
+
+
+
 export async function POST(req) {
 	const { cartItemsArr, totalPrice, selectedPriceIds, addOnIds } = await req.json();
 	
@@ -76,8 +91,8 @@ export async function POST(req) {
 				price: el.price,
 				addOns: el.addOns,
 			})),
-			totalPriceWithoutVat:  (+totalPrice).toFixed(2).toString(2),
-			totalPrice: (+totalPrice + +totalPrice * (0 / 100)).toFixed(2).toString(2),
+			totalPriceWithoutVat:  (+totalPrice).toFixed(2).toString(2),  // its the total price wihout vat & stripe processing fee
+			totalPrice: ((+totalPrice + +totalPrice * (0 / 100)) + calculateFeeAmountGBP(+totalPrice)).toFixed(2).toString(2),  // its the total price including vat(0 %) & stripe processing fee
 			// payment_id: paymentId,
 			// customer_id: customerDoc._id,
 			orderNumber: orderNumber,
@@ -98,6 +113,12 @@ export async function POST(req) {
 			priceTitle: "VAT",
 			pageTitle: "0%",
 			price: (+totalPrice * (0 / 100)).toFixed(2),
+		});
+
+		newCartArr.push({
+			priceTitle: "Stripe",
+			pageTitle:  "Card Processing Fee",
+			price: calculateFeeAmountGBP(+totalPrice),
 		});
 
 		
