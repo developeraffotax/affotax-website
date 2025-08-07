@@ -7,7 +7,7 @@ import Blog from "@/lib/Model/Blog";
 import { put } from "@vercel/blob";
 
 import { revalidatePath } from "next/cache";
-import Page from "@/lib/Model/Page/Page";
+ 
 import LandingPage from "@/lib/Model/LandingPage/LandingPage";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 

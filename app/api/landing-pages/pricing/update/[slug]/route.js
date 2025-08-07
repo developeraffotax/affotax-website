@@ -78,7 +78,7 @@ export async function POST(request, {params}) {
 
 
 
-		revalidatePath('/services');
+		revalidatePath(`/services/${slug}`);
 		// revalidatePath('/pricing');
 
 		return new Response(JSON.stringify(res), {
