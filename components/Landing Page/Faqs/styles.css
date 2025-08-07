@@ -1,0 +1,95 @@
+/* Basic reset for the list */
+.customList ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for the list items */
+.customList ul li {
+    background-color: #f9f9f9; /* Light background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for spacing */
+    margin: 5px 0; /* Spacing between items */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    
+}
+
+.customList ul li::before {
+    content: '»'; 
+    color: #000000; 
+    font-size: large;
+    font-weight: 600;
+    margin-right: 5px; 
+}
+
+/* Hover effect */
+.customList ul li:hover {
+    background-color: #e0e0e0; /* Darker background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Optional: adding a focus style for accessibility */
+.customList ul li:focus {
+    outline: 2px solid #007bff; /* Blue outline for focus */
+    outline-offset: 2px; /* Space between outline and element */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic reset for the ordered list */
+.customList ol {
+    list-style: none; /* Remove default numbering */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    counter-reset: item; /* Initialize the counter */
+}
+
+/* Style for the list items */
+.customList ol li {
+    position: relative; /* For pseudo-element positioning */
+    padding: 10px 30px; /* Padding for spacing */
+    margin: 5px 0; /* Spacing between items */
+    background-color: #ffffffa6; /* White background */
+    border: 1px solid #dddddd94; /* Light border */
+    border-radius: 8px; /* Slightly rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+/* Custom numbering using a pseudo-element */
+.customList ol li::before {
+    content: counter(item) ". "; /* Custom number */
+    counter-increment: item; /* Increment the counter */
+    position: absolute; /* Positioning */
+    left: 10px; /* Adjust for spacing */
+    color: #F47B45; /* Orange color for the numbers */
+    font-weight: 500;
+}
+
+/* Hover effect */
+.customList ol li:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+}
+
+/* Optional: adding a focus style for accessibility */
+.customList ol li:focus {
+    outline: 2px solid #007bff; /* Blue outline for focus */
+    outline-offset: 2px; /* Space between outline and element */
+}

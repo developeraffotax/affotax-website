@@ -1,6 +1,7 @@
 
 import { connectDB } from "@/lib/connectDB";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
+import { revalidatePath } from "next/cache";
 
 
 
@@ -19,6 +20,9 @@ export async function DELETE(request, {params}) {
         const res = await ServicePage.deleteOne({link: params.slug})
 
 		console.log(res);
+
+		revalidatePath('/services')
+
 
 		return new Response(JSON.stringify(res), {
 			status: 201,
@@ -55,6 +59,7 @@ export async function POST(request, {params}) {
 
 
 		console.log(page)
+		revalidatePath('/services')
 
 		return new Response(JSON.stringify(page), {
 			status: 201,

@@ -1,6 +1,7 @@
 
 import { connectDB } from "@/lib/connectDB";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
+import { revalidatePath } from "next/cache";
 
 
 
@@ -27,6 +28,8 @@ export async function POST(request) {
 		
 		const page = new ServicePage(servicePage);
 		const doc = await page.save();
+
+		revalidatePath('/services')
 
 		return new Response(JSON.stringify(doc), {
 			status: 201,

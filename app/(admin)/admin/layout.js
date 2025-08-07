@@ -320,6 +320,208 @@ export default function RootLayout({ children }) {
           {
             type: 'divider',
           },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {
+            key: `landing_page`,
+            
+            icon: React.createElement(FormOutlined),
+            label: `Landing Pages`,
+            children: [ 
+              {
+              key: 'landing_section',
+              label: 'Create new' ,
+              children: [
+
+                {
+                  key: 'landing_section0',
+                  label: ' Create Page',
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['landing_section0'])
+                setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                    router.push('/admin/landing-page/create')
+                  }
+                },
+
+
+                {
+                  key: 'landing_section1',
+                  label: ' Hero Section',
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['landing_section1'])
+                setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                    router.push('/admin/landing-page/hero-section')
+                  }
+                },
+
+
+
+                {
+                  key: 'landing_section12',
+                  label: ' Pricing Section',
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['landing_section12'])
+                setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                    router.push('/admin/landing-page/pricing-section')
+                  }
+                },
+
+
+                {
+                  key: 'landing_section13',
+                  label: ' How It Works Section',
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['landing_section13'])
+                setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                    router.push('/admin/landing-page/how-it-works-section')
+                  }
+                },
+
+
+
+
+
+
+                // {
+                //   key: 'landing_section2',
+                //   label: ' Content With Image Section',
+                //   onClick		: () => {
+                //     setDefaultSelectedKeys(['landing_section2'])
+                // setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                //     router.push('/admin/landing-page/content-with-image-section')
+                //   }
+                // },
+
+                // {
+                //   key: 'landing_section3',
+                //   label: ' Our Services Section',
+                //   onClick		: () => {
+                //     setDefaultSelectedKeys(['landing_section3'])
+                // setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                //     router.push('/admin/landing-page/our-services-section')
+                //   }
+                // },
+
+                {
+                  key: 'landing_section4',
+                  label: ' Why Us Section',
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['landing_section4'])
+                    setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                    router.push('/admin/landing-page/why-choose-us-section')
+                  }
+                },
+
+                {
+                  key: 'landing_section5',
+                  label: ' Faqs Section',
+                  onClick		: () => {
+                    setDefaultSelectedKeys(['landing_section5'])
+                    setDefaultOpenKeys(['landing_page', 'landing_section'])
+
+                    router.push('/admin/landing-page/faq-section')
+                  }
+                },
+
+                // {
+                //   key: 'section5',
+                //   label: ' Fifth Section',
+                //   onClick		: () => {
+                //     setDefaultSelectedKeys(['section5'])
+                //     setDefaultOpenKeys(['page', 'section'])
+
+
+                //     router.push('/admin/create-page/fifth-section')
+                //   }
+                // }
+
+
+              ],
+
+
+              // onClick		: () => router.push('/admin/create-page')
+            },
+
+
+
+
+
+
+          
+            {
+              key: 'sub6',
+              label: 'View Pages' ,
+              onClick		: () => router.push('/admin/landing-page/view')
+            }]
+          },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {
+            type: 'divider',
+          },
           
 
 
