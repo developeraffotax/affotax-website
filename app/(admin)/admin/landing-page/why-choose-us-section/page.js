@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 
 const WhyChooseUsSection = dynamic(
 	() => {
-		return import("@/components/Admin/WhoWeHelpPages/WhyChooseUsSection");
+		return import("@/components/Admin/LandingPages/WhyChooseUsSection");
 	},
 	{ ssr: false }
 );

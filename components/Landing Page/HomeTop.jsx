@@ -17,7 +17,7 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 	return (
 		<section className=" text-gray-600 w-full bg-slate-50 pt-8 px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8 relative newBg2 ">
 			<div className="container mx-auto ">
-				<div className=" flex    flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between  ">
+				<div className=" flex    flex-row max-lg:flex-col  max-lg:px-4 max-lg:py-8  items-center  justify-between gap-12 max-lg:gap-8">
 					<div className="items-start pt-10 max-lg:pt-0 w-[50%] max-w-2xl text-left  flex flex-col  mb-16 md:mb-0  max-lg:w-full max-lg:text-left max-lg:items-center max-lg:pr-0 ">
 						<h1 className=" text-5xl  max-lg:text-4xl mb-8 font-bold  text-tertiary max-lg:text-left leading-[3rem]   ">
 							{heading}
@@ -55,13 +55,13 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 						</div>
 					</div>
 
-					<div className="w-[50%] max-lg:w-full max-lg:mb-4">
+					<div className="w-[50%] max-lg:w-full max-lg:mb-4  ">
 						{typeof imageUrl === "string" &&
 						imageUrl.trim() !== "" &&
 						(imageUrl.startsWith("/") ||
 							imageUrl.startsWith("http")) ? (
 							<Image
-								className="object-cover object-center rounded drop-shadow-xl"
+								className="object-cover object-center rounded drop-shadow-xl pt-8"
 								alt="hero"
 								src={imageUrl}
 								width={3000}
