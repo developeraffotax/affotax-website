@@ -11,8 +11,7 @@ import NextTopLoader from "nextjs-toploader";
 import { createContext, useEffect, useRef, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { usePathname } from 'next/navigation'
-import { PageTracker } from "@/lib/PageTracker";
-import Clarity from '@microsoft/clarity';
+ 
 
 
 
@@ -45,29 +44,29 @@ export default function RootLayout({ children }) {
 
 
 	
-	const pathname = usePathname()
+	// const pathname = usePathname()
 
 
 
-	useEffect(() => {
+	// useEffect(() => {
 
-		PageTracker(pathname);
+	// 	PageTracker(pathname);
 
 
-	}, [pathname])
+	// }, [pathname])
 
 
 
 	// MICROSOFT CLARITY INIT
-	useEffect(() => {
+	// useEffect(() => {
 
 
-		Clarity.init('q1dzb1ywc9');
+	// 	Clarity.init('q1dzb1ywc9');
 		 
 
 
 
-	}, [])
+	// }, [])
 
 
 

@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useContext } from "react";
-import HeroImg4 from "@/public/hero4.png";
+// import HeroImg4 from "@/public/hero4.png";
 import Link from "next/link";
 import { QuoteFormContext } from "@/app/(user)/layout";
-import Image from "next/image";
-import { LiaStarSolid } from "react-icons/lia";
+ 
 import TrustPilotSection from "./TrustPilotSection";
 
 export default function HomeTop({ HeroSection, googleReviewsCount }) {
@@ -47,21 +46,38 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 					</div>
 
 					<div className=" w-[50%]  max-lg:w-full  max-lg:mb-4  ">
-						<img
+						{/* <img
 							className="object-cover object-center rounded  drop-shadow-xl   "
 							alt="hero"
 							src={HeroImg4.src}
-						/>
+							 
+						/>	 */}
 
-						{/* <Image
-                    className='object-cover object-center rounded  drop-shadow-xl   '
-                    alt='hero'
-                    src={HeroImg4}
-                    height={3000}
-                    width={3000}
-                    
 
-                    /> */}
+						<picture>
+							<source
+								media="(max-width: 768px)"
+								srcSet="/heroCompress.webp"
+								type="image/webp"
+							/>
+							{/* <source
+								media="(max-width: 768px)"
+								srcSet="/hero4.png"
+								type="image/png"
+							/> */}
+							<source srcSet="/heroCompress.webp" type="image/webp" />
+							<img
+								className="object-cover object-center rounded drop-shadow-xl"
+								alt="Online Accountant Services UK"
+								src="/path/to/hero_large.png"
+								decoding="async"
+								fetchpriority="high"
+								width="1200"
+								height="800"
+							/>
+						</picture>
+
+					 
 					</div>
 				</div>
 				<div className="w-full flex justify-start max-xl:w-full ">
