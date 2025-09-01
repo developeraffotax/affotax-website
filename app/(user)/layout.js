@@ -11,14 +11,10 @@ import NextTopLoader from "nextjs-toploader";
 import { createContext, useEffect, useRef, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { usePathname } from 'next/navigation'
-import dynamic from "next/dynamic";
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
  
 
-// ✅ Lazy load heavy third-party widgets so they don’t block LCP
-const TawkMessengerReact = dynamic(() => import("@tawk.to/tawk-messenger-react"), {
-  ssr: false,
-  loading: () => null, // avoids layout shift
-});
+ 
 
 
 
@@ -88,7 +84,7 @@ export default function RootLayout({ children }) {
 
 	const tawkMessengerRef = useRef();
 	const handleMaximize = () => {
-		tawkMessengerRef.current.maximize();
+		tawkMessengerRef?.current?.maximize();
 	};
 
 
