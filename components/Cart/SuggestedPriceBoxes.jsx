@@ -9,7 +9,7 @@ import PriceBox from "../Services/Service/PriceBoxes/PriceBox";
 const SuggestedPriceBoxes = ({ prices, pageTitle, isCheckout, isCart,  setCartItemsArr}) => {
 
 
-    console.log(prices)
+   
     // /addOns?.length > 0 && 
     const [pricesArr, setPricesArr] = useState([])
 

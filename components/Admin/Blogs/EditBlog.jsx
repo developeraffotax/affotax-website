@@ -57,7 +57,7 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
   const props = {
     name: 'imgFile',
     customRequest: async (file) => {
-      console.log(file)
+ 
       const form = new FormData();
       form.append('imgFile', file.file)
       const res = await UploadImage(form);
@@ -149,7 +149,7 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
 
 
     const datePickerOnChangeHandler = (dateObj, dateString) => {
-      console.log(dateObj, dateString);
+ 
   
       setDate(dateObj)
       setDateString(dateString)
@@ -159,7 +159,7 @@ export default function EditBlog({id, oldTitle, oldDescription, oldImgUrl, oldMe
   
   
       const authorOnchangeHandler = (e) => {
-      console.log(e.target.value);
+ 
   
       setAuthor(e.target.value)
       }

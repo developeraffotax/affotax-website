@@ -13,7 +13,7 @@ export default function WhyUs({WhyChooseUsSection, CTASection}) {
     const {heading, arr,   } = JSON.parse(WhyChooseUsSection);
     // const {heading: ctaHeading, html} = JSON.parse(CTASection);
 
-    console.log(heading, arr);
+ 
   return (
     <section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
         <div className="container px-5 py-12 mx-auto">

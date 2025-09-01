@@ -22,7 +22,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
                 ids_arr.push(_id);
             }
 
-            console.log(ids_arr)
+           
             localStorage.setItem('price_id', ids_arr)
             
         } else {
@@ -131,7 +131,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
                         ids_arr.push(event.target.name);
                     }
         
-                    console.log(ids_arr)
+                  
                     localStorage.setItem('addon_id', ids_arr)
                     
                 } else {
@@ -191,7 +191,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
     useEffect(() => {
 
         if(addOns?.length > 0) {
-            console.log('PIRCE BOX USEEFFEXXT-------------if block')
+          
             setTotalPrice((prev) => {
                 let sumPrice = +price; 
                 addOns.forEach((el) => {
@@ -211,7 +211,7 @@ const PriceBox = ({ priceTitle, priceContent, price, packageIncludes, _id, pageT
 
             setAddOnsArr(addOns);
         } else {
-            console.log('PIRCE BOX USEEFFEXXT-------------else block')
+           
             setTotalPrice(price);
         }
         

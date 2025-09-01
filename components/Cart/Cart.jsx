@@ -132,7 +132,7 @@ export default function Cart() {
 		//need to edi here
 		let arr = [...cartItemsArr];
 
-		console.log(arr);
+ 
 
 		const res = arr.filter((el) => {
 			return el._id !== _id;
@@ -148,10 +148,10 @@ export default function Cart() {
 	const calculateTotalPrice = () => {
 		const tPrice = cartItemsArr.reduce((acc, cur) => {
 			const price = +cur.price?.replace("£", "");
-			//console.log(price)
+			 
 			return acc + price;
 		}, 0);
-		console.log("calculate total price ran ", tPrice);
+ 
 		setTotalPrice(tPrice);
 	};
 

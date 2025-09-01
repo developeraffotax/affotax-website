@@ -33,10 +33,10 @@ const PriceBoxes = ({ prices, pageTitle, isCheckout, isCart,  setCartItemsArr}) 
                         if(storedId === addOn._id) {
                             addOn.isChecked = true;
                         } 
-                        console.log(addOn)
+                        
                     })
 
-                    console.log(price)
+                     
                     return {
                         ...price,
 
@@ -55,7 +55,7 @@ const PriceBoxes = ({ prices, pageTitle, isCheckout, isCart,  setCartItemsArr}) 
 
             
         } else {
-            console.log('>>>>>>>>>>>>', prices)
+             
             setPricesArr(prices)
         }
 

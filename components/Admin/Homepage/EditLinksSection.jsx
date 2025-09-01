@@ -78,7 +78,7 @@ const EditLinksSection = ({ LinksSectionHeading, LinksSectionArray, setLinksSect
         }
 
 
-       console.log(editId) 
+     
         if (editId) {
             const newArr = [...LinksSectionArray]
 

@@ -4,16 +4,21 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import QuoteForm from "@/components/QuoteForm/QuoteForm";
-import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+ 
 import { ConfigProvider, Modal } from "antd";
 import Link from "next/link";
 import NextTopLoader from "nextjs-toploader";
 import { createContext, useEffect, useRef, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { usePathname } from 'next/navigation'
+import dynamic from "next/dynamic";
  
 
-
+// ✅ Lazy load heavy third-party widgets so they don’t block LCP
+const TawkMessengerReact = dynamic(() => import("@tawk.to/tawk-messenger-react"), {
+  ssr: false,
+  loading: () => null, // avoids layout shift
+});
 
 
 
@@ -91,7 +96,7 @@ export default function RootLayout({ children }) {
 
 	const handleWhatsAppClick = () => {
 		if (typeof window !== 'undefined' && window.gtag) {
-			console.log('gtag fired💛🧡🧡')
+			 
 		  window.gtag('event', 'conversion', {
 			send_to: 'AW-11304762354/4G7mCO625-sYEPL3w44q',
 		  });

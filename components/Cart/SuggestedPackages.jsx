@@ -39,7 +39,7 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 			}
 			
 			
-			console.log(tempArr)
+		 
 			setArr(tempArr);
 
 
@@ -53,7 +53,7 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 
 	
 
-	console.log('IN THE SUGESTED PACKED>>>>>>>>>>><<><><><>><><><><><>><<><><><><><><><>')
+ 
 
 	
 
@@ -64,7 +64,7 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 
 
 
-	// console.log(randomPriceData)
+ 
 
 
 

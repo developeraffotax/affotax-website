@@ -20,7 +20,7 @@ export default function ThankYouPage() {
 		// ✅ Fire conversion event when the thank-you page loads
 		if (typeof window !== 'undefined' && window.gtag) {
 			
-			console.log("THANK YOU LAOD")
+		 
 		  window.gtag('event', 'conversion', {
 			send_to: 'AW-11304762354/3ywRCN7d-rgaEPL3w44q',
 		  })

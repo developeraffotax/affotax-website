@@ -38,7 +38,7 @@ export default async function LandingHomePage({ params }) {
   const homepage = await Homepage.findOne().select("googleReviewsCount");
   const pricing = await ServicePage.findOne({ link: `landing-${landingPage.slug}` }).lean();
 
-  console.log("Landing Page Data:", landingPage);
+   
 
   return (
     <main className="w-full flex flex-col items-center justify-between max-lg:p-0">

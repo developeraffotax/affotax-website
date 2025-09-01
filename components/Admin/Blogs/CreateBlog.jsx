@@ -70,7 +70,7 @@ export default function CreateBlog() {
 	const props = {
 		name: "imgFile",
 		customRequest: async (file) => {
-			console.log(file);
+		 
 			const form = new FormData();
 			form.append("imgFile", file.file);
 			const res = await UploadImage(form);

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
 		return null;
 	}
 
-	console.log(blog)
+	 
 
 	return {
 		title: blog?.metaTitle || '',

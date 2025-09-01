@@ -88,14 +88,14 @@ export default function Reviews() {
 
 const addStyle = (e) => {
 
-    console.log(e)
+ 
      const liArr = e.Components.Pagination.items;
 
     
     // const activeLi = liArr.filter((el) => Array.from(el.button.classList).includes('is-active'))
 
 
-    console.log(liArr)
+  
 
 
     liArr.forEach((el) => {

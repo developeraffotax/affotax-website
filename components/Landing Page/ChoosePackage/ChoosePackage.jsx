@@ -20,7 +20,7 @@ export default function ChoosePackage({pricingPage, pricing}) {
     const onClickLocalStorageHandler = (id) => {
 
 
-        console.log(id)
+        
 
         if(localStorage.getItem('price_id')) {
            
@@ -32,7 +32,7 @@ export default function ChoosePackage({pricingPage, pricing}) {
                 ids_arr.push(id);
             }
 
-            console.log(ids_arr)
+            
             localStorage.setItem('price_id', ids_arr)
             
         } else {

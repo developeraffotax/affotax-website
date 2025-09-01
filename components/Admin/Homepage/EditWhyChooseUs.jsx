@@ -90,7 +90,7 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
 
                 if (imgFile) {
 
-                    console.log('in the image file')
+                    
                     const form = new FormData();
                     form.append("imgFile", imgFile);
                     const res = await UploadImage(form);
@@ -113,7 +113,7 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
 
                 if (imgFile) {
 
-                    console.log('in the image file')
+                  
                     const form = new FormData();
                     form.append("imgFile", imgFile);
                     const res = await UploadImage(form);
@@ -155,7 +155,7 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
 	// const props = {
 	// 	name: "imgFile",
 	// 	customRequest: async (file) => {
-	// 		console.log(file);
+ 
 	// 		const form = new FormData();
 	// 		form.append("imgFile", file.file);
 	// 		const res = await UploadImage(form);
@@ -180,7 +180,7 @@ const EditWhyChooseUs = ({ WhyChooseUsSectionHeading, WhyChooseUsSectionArray, s
 
 
 
-console.log(WhyChooseUsSectionArray)
+ 
 
 
 

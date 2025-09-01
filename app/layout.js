@@ -2,7 +2,7 @@ import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { GoogleTagManager } from '@next/third-parties/google'
-
+import { Outfit } from "next/font/google";
 
 import { schemaLD } from "@/data/schemaLD";
 import Script from "next/script";
@@ -25,7 +25,11 @@ export const metadata = {
 //google: "google998d27ca179e5db7.html",
 
 
-
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+});
 
 
 export default function RootLayout({ children }) {
@@ -33,7 +37,7 @@ export default function RootLayout({ children }) {
 	//console.log(schema)
 
 	return (
-		<html lang="en">
+		<html lang="en" className={outfit.variable}>
       <head>
        
         <Script
@@ -49,13 +53,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-       
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-          rel="stylesheet"
-        />
+   
 
       
         <script

@@ -17,7 +17,7 @@ export default function HomeView({data, handlers}) {
 
 	// const pricingPage = await PricingPage.findOne();
 
-  console.log(data.HeroSection, "IN THE HOMEVIEW")
+ 
 
   return (
     <main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">

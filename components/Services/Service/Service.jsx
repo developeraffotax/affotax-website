@@ -17,7 +17,7 @@ const Service = ({ jsonData }) => {
 
     const data = JSON.parse(jsonData);
 
-    console.log(data)
+    
 
     useEffect(() => {
         window.scrollTo({top:0})

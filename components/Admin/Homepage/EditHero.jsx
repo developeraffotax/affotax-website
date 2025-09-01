@@ -12,7 +12,7 @@ const EditHero = ({heroHeading, heroHtml, HeroImageUrl, setHeroHeading, setHeroH
 	const props = {
 		name: "imgFile",
 		customRequest: async (file) => {
-			console.log(file);
+		 
 			const form = new FormData();
 			form.append("imgFile", file.file);
 			const res = await UploadImage(form);

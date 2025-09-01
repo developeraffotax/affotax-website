@@ -50,7 +50,7 @@ export default function ViewBlogs({blogsData, refresh}) {
       setFetchedData(blogsDataMap)
       setFilteredData(blogsDataMap)
 
-      console.log(tableRef)
+ 
 
       setIsLoading(false)
 
@@ -148,7 +148,7 @@ export default function ViewBlogs({blogsData, refresh}) {
           title: 'Action',
           key: 'action',
           render: (_, record) => {
-                console.log(record)
+            
             return <Space size="middle"> <Link href={`/blog/${record.slug}`} target='_blank' ><AiOutlineEye className='text-sky-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></Link> <Link href={`/admin/view-blogs/edit/${record._id}`}><BiEdit className='text-green-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all'/></Link> <Link href={`/admin/view-blogs/delete/${record._id}`}><RiDeleteBin6Line className='text-red-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all' /></Link> </Space>
           },
         },

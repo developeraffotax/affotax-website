@@ -4,7 +4,7 @@ export default function TotalPrice({totalPrice, isDrawer}) {
     // const vat = (20 / 100) * totalPrice;
     // let finalTotal = totalPrice + vat;
 
-    console.log(totalPrice)
+ 
     const vat = (0 / 100) * totalPrice;
     let finalTotal = totalPrice + vat;
 

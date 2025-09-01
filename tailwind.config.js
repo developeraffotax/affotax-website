@@ -39,7 +39,7 @@ module.exports = {
         Montserrat: ["Montserrat", "sans-serif"],
         Raleway: ["Raleway", "sans-serif"],
         inter: ["Inter", "sans-serif"],
-        Outfit: ["Outfit", "sans-serif"],
+         outfit: ["var(--font-outfit)"],
         
       }
     },

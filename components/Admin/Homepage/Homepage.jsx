@@ -70,7 +70,7 @@ const Homepage = () => {
         try {
             const res = await axios.get('/api/homepage/get');
 
-            console.log(res)
+           
 
             if (res.status === 200) {
                 const {HeroSection, HowItWorksSection, WhyChooseUsSection, CTASection, LinksSection, metaTitle, metaDescription, keywords, googleReviewsCount, trustPilotCount } = res.data;
@@ -168,7 +168,7 @@ const Homepage = () => {
             
             const res = await axios.post('/api/homepage/update', Homepage);
 
-            console.log(res)
+           
             
             message.success('Homepage has been updated successfully!😎')
 

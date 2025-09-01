@@ -9,8 +9,7 @@ import { useState } from 'react';
 
 export default function CheckoutBtn({cartItemsArr, totalPrice}) {
 
-    console.log('CART ITEM ARRc :', cartItemsArr)
-    console.log("totalPrice", totalPrice)
+  
     
         const [isLoading, setIsLoading] = useState(false)
 
@@ -69,7 +68,7 @@ export default function CheckoutBtn({cartItemsArr, totalPrice}) {
        
 
 
-       console.log(addOnIds, "THE ADDON IDS ARE>>>>>>>>>>>>>>>")
+ 
         try {
             const {data, status} = await axios.post('/api/checkout_sessions', {
                     // productId: '' , will use this implememtation for security purpose
@@ -82,7 +81,7 @@ export default function CheckoutBtn({cartItemsArr, totalPrice}) {
 
             })
     
-            console.log(data)
+ 
             if(status === 200) {
                  window.location.href = data.url
             }

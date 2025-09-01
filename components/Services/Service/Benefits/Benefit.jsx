@@ -2,7 +2,7 @@ import React from "react";
 
 const Benefit = ({ heading, paragraph }) => {
 
-	console.log(heading, paragraph)
+ 
 
 	return (
 		<li className="mb-8  flex flex-col font-poppins ">

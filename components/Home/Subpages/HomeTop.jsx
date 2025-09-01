@@ -60,16 +60,12 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 								srcSet="/heroCompress.webp"
 								type="image/webp"
 							/>
-							{/* <source
-								media="(max-width: 768px)"
-								srcSet="/hero4.png"
-								type="image/png"
-							/> */}
+							 
 							<source srcSet="/heroCompress.webp" type="image/webp" />
 							<img
 								className="object-cover object-center rounded drop-shadow-xl"
 								alt="Online Accountant Services UK"
-								src="/path/to/hero_large.png"
+								src="/heroCompress.webp"
 								decoding="async"
 								fetchpriority="high"
 								width="1200"
