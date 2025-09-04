@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
 		<html lang="en" className={outfit.variable}>
       <head>
        
-        <Script
+        {/* <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-11304762354"
           strategy="afterInteractive"
         />
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
             gtag('js', new Date());
             gtag('config', 'AW-11304762354');
           `}
-        </Script>
+        </Script> */}
 
    
 
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {/* ✅ Move GTM here */}
-        <GoogleTagManager gtmId="GTM-MW47DQSV" />
+        <GoogleTagManager gtmId="GTM-KNB57RST" />
 
         <AntdRegistry>{children}</AntdRegistry>
         <NextTopLoader color="#F27941" showSpinner={false} />
