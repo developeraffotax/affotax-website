@@ -11,11 +11,11 @@ export default function HomeGetAQuoteSection() {
 	const quoteContext = useContext(QuoteFormContext)
 
 	return (
-		<div className="bg-transparent w-full   ">
+		<div className="bg-transparent w-full font-outfit  ">
 			<div className="w-full    ">
 				<div
 					className="
-								w-full relative overflow-hidden bg-[#FFF6F6] shadow-xl sm:rounded-3xl
+								w-full relative overflow-hidden bg-[#FFF6F6] shadow-md rounded-2xl
 								flex flex-col lg:flex-row items-center justify-between
 								gap-8
 								px-4 py-8     /* mobile (default) */
@@ -36,8 +36,8 @@ export default function HomeGetAQuoteSection() {
 							<GetAQuoteImage />
 						</div>
 
-						<h2 className="text-balance text-3xl font-semibold tracking-normal  text-orange-500 font-poppins  leading-tight"> Ready to chat with the UK's Online Accountants?  </h2>
-						<p className="  text-pretty text-justify text-lg/8 text-gray-700 font-poppins leading-normal ">
+						<h2 className="text-balance text-3xl font-semibold tracking-normal  text-orange-500  leading-tight"> Ready to chat with the UK's Online Accountants?  </h2>
+						<p className="  text-pretty text-justify max-xl:text-center max-xl:px-4 text-lg/8 text-gray-700 leading-normal ">
 							Ready to streamline your accounting and tax filings? Contact Affotax today for expert guidance from a professional online accountant UK. Get a free quote or send us a message we’re here to help!
 						</p>
 

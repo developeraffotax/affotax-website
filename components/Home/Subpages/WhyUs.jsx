@@ -17,7 +17,7 @@ export default function WhyUs({WhyChooseUsSection, CTASection}) {
 
   return (
     <section className="text-gray-600 body-font px-80 max-2xl:px-40 max-xl:px-10  max-lg:px-8">
-        <div className="container px-5 py-12 mx-auto">
+        <div className="container px-5 max-xl:px-0 py-12 mx-auto">
             <div className="text-center mb-16">
                 <h2 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">
                 {heading}
@@ -68,7 +68,22 @@ export default function WhyUs({WhyChooseUsSection, CTASection}) {
                         
         </div> */}
 
+
+        
+           
+         {/* Headings above Get A Quote Section */}
+        <div className="text-center mb-4   mt-16 font-outfit">
+              
+          <h2 className="  text-4xl font-bold text-orange-500 ">
+            Need Urgent Advice?
+          </h2>
+          <p className="mt-1  text-lg text-gray-700 ">
+            Get Free Expert Guidance
+          </p>
+        </div>
+
         <HomeGetAQuoteSection />
+
 
         </div>
 
