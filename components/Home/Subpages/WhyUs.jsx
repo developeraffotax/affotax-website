@@ -3,6 +3,7 @@
 import React, { useContext } from 'react'
 import Image from 'next/image'
 import { QuoteFormContext } from '@/app/(user)/layout'
+import HomeGetAQuoteSection from './GetAQuote/HomeGetAQuoteSection'
 
 
 
@@ -56,7 +57,7 @@ export default function WhyUs({WhyChooseUsSection, CTASection}) {
 
             </div>
 
-        <div className=' mt-20  text-center  flex-col flex items-center justify-center bg-slate-50 w-full  rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
+        {/* <div className=' mt-20  text-center  flex-col flex items-center justify-center bg-slate-50 w-full  rounded-xl p-12 max-lg:p-6 drop-shadow-md '>
             <h2 className=' title-font text-3xl font-semibold '>
             {ctaHeading}
 
@@ -65,7 +66,9 @@ export default function WhyUs({WhyChooseUsSection, CTASection}) {
              </div>
             <button onClick={quoteContext.showModal} className='drop-shadow-md transition-all  mt-4 inline-flex text-secondary bg-primary border-0 py-2 px-6 hover:outline-primary outline-1 outline outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold hover:scale-105 active:scale-95  '> Get a Quote </button>
                         
-        </div>
+        </div> */}
+
+        <HomeGetAQuoteSection />
 
         </div>
 
