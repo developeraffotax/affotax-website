@@ -25,18 +25,21 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 
 			
 			let tempArr = []
-			for(let i=0; i<3; i++) {
-				
-				const randomIndex = Math.floor(Math.random() * dataArr.length);
-				const randomServiceData = dataArr[randomIndex]
-				
-				const randomPriceIndex = Math.floor(Math.random() * randomServiceData.prices.length);
-				const randomPriceData = randomServiceData.prices[randomPriceIndex];
-				
-				randomPriceData.pageTitle = randomServiceData.title;
-				
-				tempArr.push(randomPriceData)
-			}
+			for (let i = 0; i < 3; i++) {
+					const randomIndex = Math.floor(Math.random() * dataArr.length);
+					const randomServiceData = dataArr[randomIndex];
+
+					if (!randomServiceData?.prices?.length) {
+						continue; // skip this iteration if no prices
+					}
+
+					const randomPriceIndex = Math.floor(Math.random() * randomServiceData.prices.length);
+					const randomPriceData = { ...randomServiceData.prices[randomPriceIndex] }; // clone so we don’t mutate original
+
+					randomPriceData.pageTitle = randomServiceData.title;
+
+					tempArr.push(randomPriceData);
+					}
 			
 			
 		 
