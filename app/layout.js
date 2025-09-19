@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {/* ✅ Move GTM here */}
-        <GoogleTagManager gtmId="GTM-KNB57RST" />
+        <GoogleTagManager gtmId="GTM-TZN3NXBF" />
 
         <AntdRegistry>{children}</AntdRegistry>
         <NextTopLoader color="#F27941" showSpinner={false} />
