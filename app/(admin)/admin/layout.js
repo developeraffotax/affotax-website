@@ -5,7 +5,7 @@ import '../../globals.css';
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined, HomeTwoTone, HistoryOutlined, SnippetsOutlined } from '@ant-design/icons';
+import { LaptopOutlined, NotificationOutlined, UserOutlined, FormOutlined, HomeTwoTone, HistoryOutlined, SnippetsOutlined, BarChartOutlined } from '@ant-design/icons';
 import { Badge, Breadcrumb, Layout, Menu, theme } from 'antd';
 import Link from 'next/link';
 import { triggerFocus } from 'antd/es/input/Input';
@@ -553,6 +553,26 @@ export default function RootLayout({ children }) {
               setDefaultOpenKeys(['logs-view'])
 
               router.push('/admin/logs');
+            },
+
+
+          },
+
+
+
+
+
+          {
+            key: `dashboard-view`,
+            
+            icon: <BarChartOutlined />,
+            label: `Dashboard`,
+
+            onClick		: () => {
+              setDefaultSelectedKeys(['dashboard-view'])
+              setDefaultOpenKeys(['dashboard-view'])
+
+              router.push('/admin/dashboard');
             },
 
 

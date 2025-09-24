@@ -1,19 +1,20 @@
 'use client'
+import dynamic from "next/dynamic";
+ 
 
-import { useState } from "react";
-
-
+const DashboardComponent = dynamic(
+    () => {
+        return import("@/components/Admin/Dashboard/Dashboard");
+    },
+    { ssr: false }
+);
 
 
 
 export default function DashboardPage() {
 
-    const [activePage, setActivePage] = useState('create-a-blog');
+    
 
 
-    return (
-        <h2>
-            Dashboard Page
-        </h2>
-    )
+    return <DashboardComponent />
 }
