@@ -21,23 +21,26 @@ const CartItem = ({ priceTitle, priceContent, price, packageIncludes, pageTitle,
 					<p className="text-sm  ">{priceContent}</p>
 
 					{
-						!isDrawer ? <ul className="list-disc text-sm ">
-						{packageIncludes?.length > 0 ? (
-							<h4 className="font-semibold text-md text-orange-500">
-								{" "}
-								Package includes:{" "}
-							</h4>
-						) : null}
+						!isDrawer ? (
+							<>
+							{packageIncludes?.length > 0 && (
+								<h4 className="font-semibold text-md text-orange-500">
+								Package includes:
+								</h4>
+							)}
 
-						{packageIncludes?.map((el) => (
-							<li key={uuid()} className="ml-4">
-								{" "}
-								{el}{" "}
-							</li>
-						))}
-					</ul> : null
-					}
-
+							<ul className="list-disc text-sm">
+								{packageIncludes
+								?.filter((el) => el && el.trim() !== "") // ✅ removes empty/null/whitespace
+								.map((el) => (
+									<li key={uuid()} className="ml-4">
+									{el}
+									</li>
+								))}
+							</ul>
+							</>
+						) : null
+						}
 
 
 					{

@@ -16,8 +16,7 @@ import axios from "axios";
 
 
 export default function Cart() {
-	// const {id, pageTitle, priceTitle, price, priceContent, packageIncludes} = productObject;
-	// let packageIncludesArr = packageIncludes.split(',');
+	 
 
 	const [cartItemsArr, setCartItemsArr] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
@@ -42,18 +41,7 @@ export default function Cart() {
 
 			let tempArr = [];
    
-			// dataArr.forEach((el) => {                                                                   // OLD LOGIC TO SHOW ITEMS IN CART
-			// 	el.prices.filter((element) => {
-			// 		idsArr.forEach((_id) => {
-
-			// 			if (element._id === _id) {
-			// 				element.pageTitle = el.title;
-			// 				tempArr.unshift(element);
-			// 			}
-			// 		});
-			// 	});
-			// });
-
+		 
 			
 			
 			idsArr.forEach((_id) => {																		 // NEW LOGIC TO SHOW ITEMS IN CART
