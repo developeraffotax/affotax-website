@@ -16,7 +16,7 @@ import axios from "axios";
 
 
 export default function Cart() {
-	 
+
 
 	const [cartItemsArr, setCartItemsArr] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
@@ -25,77 +25,142 @@ export default function Cart() {
 
 	const cartContext = useContext(CartContext);
 
-	useEffect(() => {
-		const getAndSetData = async () => {
-			setIsLoading(true);
+	// useEffect(() => {
+	// 	const getAndSetData = async () => {
+	// 		setIsLoading(true);
 
-			const res = await axios.get("/api/service-page/get-all");
+	// 		const res = await axios.get("/api/service-page/get-all");
 
-			setIsLoading(false);
+	// 		setIsLoading(false);
 
-			let dataArr = res.data;
+	// 		let dataArr = res.data;
 
-			const idsArr = localStorage.getItem("price_id")?.split(",") || [];
-
-			
-
-			let tempArr = [];
-   
-		 
-			
-			
-			idsArr.forEach((_id) => {																		 // NEW LOGIC TO SHOW ITEMS IN CART
-				dataArr.forEach((el) => {
-					el.prices.forEach((element) => {
-						if (element._id === _id) {
-
-
-							if(localStorage.getItem('addon_id')) {
-           
-								const old_ids = localStorage.getItem('addon_id');
-								let ids_arr_addOns = old_ids.split(',');
-								
-								if(element.addOns?.length > 0) {
-
-									ids_arr_addOns.forEach((addOn_id) => {
-		
-										const addOnIndex =  element.addOns.findIndex((doc) => doc._id === addOn_id);
-										
-										if(addOnIndex >= 0) {
-											element.addOns[addOnIndex].isChecked = true;
-
-											const newPrice = +(element.price) + +(element.addOns[addOnIndex].price);
-											element.price = newPrice.toString();
-										}
-
-									})
-
-								}
-								
-
-							} 
+	// 		const idsArr = localStorage.getItem("price_id")?.split(",") || [];
 
 
 
-							
+	// 		let tempArr = [];
 
-							element.pageTitle = el.title;
-							tempArr.unshift(element);
-							
-						}
-					});
-				});
-			});
 
-			
 
-			setCartItemsArr(tempArr);
-			//calculateTotalPrice()
-			
-		};
 
-		getAndSetData();
-	}, []);
+	// 		idsArr.forEach((_id) => {																		 // NEW LOGIC TO SHOW ITEMS IN CART
+	// 			dataArr.forEach((el) => {
+	// 				el.prices.forEach((element) => {
+	// 					if (element._id === _id) {
+
+
+	// 						if (localStorage.getItem('addon_id')) {
+
+	// 							const old_ids = localStorage.getItem('addon_id');
+	// 							let ids_arr_addOns = old_ids.split(',');
+
+	// 							if (element.addOns?.length > 0) {
+
+	// 								ids_arr_addOns.forEach((addOn_id) => {
+
+	// 									const addOnIndex = element.addOns.findIndex((doc) => doc._id === addOn_id);
+
+	// 									if (addOnIndex >= 0) {
+	// 										element.addOns[addOnIndex].isChecked = true;
+
+	// 										const newPrice = +(element.price) + +(element.addOns[addOnIndex].price);
+	// 										element.price = newPrice.toString();
+	// 									}
+
+	// 								})
+
+	// 							}
+
+
+	// 						}
+
+
+
+
+
+	// 						element.pageTitle = el.title;
+	// 						tempArr.unshift(element);
+
+	// 					}
+	// 				});
+	// 			});
+	// 		});
+
+
+
+	// 		setCartItemsArr(tempArr);
+	// 		//calculateTotalPrice()
+
+	// 	};
+
+	// 	getAndSetData();
+	// }, []);
+
+
+
+
+
+
+
+
+
+useEffect(() => {
+  const getAndSetData = async () => {
+    setIsLoading(true);
+    const res = await axios.get("/api/service-page/get-all");
+    setIsLoading(false);
+
+    let dataArr = res.data;
+    const idsArr = localStorage.getItem("price_id")?.split(",") || [];
+    const addonIds = localStorage.getItem("addon_id")?.split(",") || [];
+
+    // ✅ Build a Map of all prices by id for O(1) lookup
+    const priceMap = new Map();
+    dataArr.forEach((service) => {
+      service.prices.forEach((priceObj) => {
+        // keep reference to parent title for later use
+        priceMap.set(priceObj._id, { ...priceObj, pageTitle: service.title });
+      });
+    });
+
+    let tempArr = [];
+
+    idsArr.forEach((_id) => {
+      const element = priceMap.get(_id);
+      if (element) {
+        // ✅ Handle addons
+        if (addonIds.length && element.addOns?.length > 0) {
+          element.addOns = element.addOns.map((addOn) => {
+            if (addonIds.includes(addOn._id)) {
+              addOn.isChecked = true;
+              element.price = (
+                +element.price + +addOn.price
+              ).toString();
+            }
+            return addOn;
+          });
+        }
+
+        tempArr.unshift(element);
+      }
+    });
+
+    setCartItemsArr(tempArr);
+  };
+
+  getAndSetData();
+}, []);
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,7 +185,7 @@ export default function Cart() {
 		//need to edi here
 		let arr = [...cartItemsArr];
 
- 
+
 
 		const res = arr.filter((el) => {
 			return el._id !== _id;
@@ -136,10 +201,10 @@ export default function Cart() {
 	const calculateTotalPrice = () => {
 		const tPrice = cartItemsArr.reduce((acc, cur) => {
 			const price = +cur.price?.replace("£", "");
-			 
+
 			return acc + price;
 		}, 0);
- 
+
 		setTotalPrice(tPrice);
 	};
 
@@ -165,7 +230,7 @@ export default function Cart() {
 							/>
 
 							<TotalPrice totalPrice={totalPrice} />
-							<CheckoutBtn  cartItemsArr={cartItemsArr} totalPrice={totalPrice}/>
+							<CheckoutBtn cartItemsArr={cartItemsArr} totalPrice={totalPrice} />
 
 							<SuggestedPackages
 								setCartItemsArr={setCartItemsArr}
