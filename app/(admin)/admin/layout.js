@@ -71,6 +71,26 @@ export default function RootLayout({ children }) {
 
 
     const items2 = [
+
+
+      {
+            key: `dashboard-view`,
+            
+            icon: <BarChartOutlined />,
+            label: `Dashboard`,
+
+            onClick		: () => {
+              setDefaultSelectedKeys(['dashboard-view'])
+              setDefaultOpenKeys(['dashboard-view'])
+
+              router.push('/admin/dashboard');
+            },
+
+
+          }
+
+
+          ,
       {
             key: `blog`,
             
@@ -562,21 +582,7 @@ export default function RootLayout({ children }) {
 
 
 
-          {
-            key: `dashboard-view`,
-            
-            icon: <BarChartOutlined />,
-            label: `Dashboard`,
-
-            onClick		: () => {
-              setDefaultSelectedKeys(['dashboard-view'])
-              setDefaultOpenKeys(['dashboard-view'])
-
-              router.push('/admin/dashboard');
-            },
-
-
-          }
+          
 
 
 

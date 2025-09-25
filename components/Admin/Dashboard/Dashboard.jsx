@@ -16,6 +16,7 @@ import CountChart from "./Charts/Orders/CountChart";
 import SalesChart from "./Charts/Orders/SalesChart";
 import dayjs from "dayjs";
 import quarterOfYear from "dayjs/plugin/quarterOfYear";
+import PerformanceStats from "./Charts/Orders/PerformanceStats";
 
 dayjs.extend(quarterOfYear);
 
@@ -26,13 +27,7 @@ export default function DashboardComponent() {
   const [chartType, setChartType] = useState("bar");
   const [dateRange, setDateRange] = useState(null);
 
-  const [totalOrders, setTotalOrders] = useState({
-    total: 0,
-  });
 
-    const [totalSales, setTotalSales] = useState({
-    total: 0,
-  });
 
   const getQuarterRange = () => {
     const now = dayjs();
@@ -121,7 +116,7 @@ export default function DashboardComponent() {
       <Menu.Item key="line" icon={<LineChartOutlined />}>
         Line Chart
       </Menu.Item>
-    </Menu>
+    </Menu> 
   );
 
   return (
@@ -166,50 +161,8 @@ export default function DashboardComponent() {
         </Space>
       </div>
 
-      {/* Performance Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Total Orders */}
-        <div className="rounded-xl p-5 bg-gradient-to-br from-blue-50 to-blue-100 shadow-md flex items-center justify-between">
-          <div>
-            <p className="text-sm text-gray-600">Total Orders</p>
-            <h3 className="text-2xl font-bold text-gray-800">{totalOrders.total}</h3>
-            {/* <span className="flex items-center text-green-600 text-sm font-medium mt-1">
-              <ArrowUpOutlined className="mr-1" /> {totalOrders.change}% from last month
-            </span> */}
-          </div>
-          <div className="p-3 bg-blue-500 rounded-full text-white shadow-lg">
-            <ShoppingCartOutlined style={{ fontSize: "22px" }} />
-          </div>
-        </div>
-
-        {/* Total Sales */}
-        <div className="rounded-xl p-5 bg-gradient-to-br from-green-50 to-green-100 shadow-md flex items-center justify-between">
-          <div>
-            <p className="text-sm text-gray-600">Total Sales</p>
-            <h3 className="text-2xl font-bold text-gray-800">£{totalSales.total}</h3>
-            {/* <span className="flex items-center text-green-600 text-sm font-medium mt-1">
-              <ArrowUpOutlined className="mr-1" /> 8% from last quarter
-            </span> */}
-          </div>
-          <div className="p-3 bg-green-500 rounded-full text-white shadow-lg">
-            <DollarOutlined style={{ fontSize: "22px" }} />
-          </div>
-        </div>
-
-        {/* Customers */}
-        <div className="rounded-xl p-5 bg-gradient-to-br from-purple-50 to-purple-100 shadow-md flex items-center justify-between">
-          <div>
-            <p className="text-sm text-gray-600">New Customers</p>
-            <h3 className="text-2xl font-bold text-gray-800">320</h3>
-            {/* <span className="flex items-center text-red-600 text-sm font-medium mt-1">
-              <ArrowDownOutlined className="mr-1" /> 4% compared to last year
-            </span> */}
-          </div>
-          <div className="p-3 bg-purple-500 rounded-full text-white shadow-lg">
-            <UserOutlined style={{ fontSize: "22px" }} />
-          </div>
-        </div>
-      </div>
+ 
+      <PerformanceStats dateRange={dateRange} activeLabel={activeLabel}/>
 
       {/* Charts Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -221,7 +174,7 @@ export default function DashboardComponent() {
             </h2>
             <p className="text-sm text-gray-500">Total number of orders</p>
           </div>
-          <CountChart dateRange={dateRange} type={chartType} setTotalOrders={setTotalOrders}/>
+          <CountChart dateRange={dateRange} type={chartType}  />
         </div>
 
         {/* Sales Chart */}
@@ -232,7 +185,7 @@ export default function DashboardComponent() {
             </h2>
             <p className="text-sm text-gray-500">Sales trend</p>
           </div>
-          <SalesChart dateRange={dateRange} type={chartType} setTotalSales={setTotalSales} />
+          <SalesChart dateRange={dateRange} type={chartType}   />
         </div>
       </div>
     </div>
