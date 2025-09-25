@@ -86,7 +86,7 @@ export async function GET(req) {
         categories: formattedCategories,
         count: countSeries,
 
-         totalOrders: countSeries.reduce((a, b) => a + b, 0), // sum all
+        
          
       
       }),

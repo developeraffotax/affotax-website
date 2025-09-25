@@ -65,10 +65,10 @@ const PerformanceStats = ({ dateRange, activeLabel }) => {
 			});
 
 
-			setTotalCustomers({
-				total: data.totalCustomers,
-				change: data.customersPercentChange,
-			})
+			// setTotalCustomers({
+			// 	total: data.totalCustomers,
+			// 	change: data.customersPercentChange,
+			// })
 		 
 		} catch (err) {
 			console.error("Error fetching chart data:", err);
@@ -89,7 +89,7 @@ const PerformanceStats = ({ dateRange, activeLabel }) => {
 	return (
 		<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
 			{/* Total Orders */}
-			<div className="rounded-xl p-5 bg-gradient-to-br from-blue-50 to-blue-100 shadow-md flex items-center justify-between">
+			<div className="rounded-xl p-5 bg-gradient-to-br from-blue-50 to-blue-100 shadow-md flex items-center justify-between transition-all hover:scale-[1.02]">
 				<div>
 					<p className="text-sm text-gray-600">Total Orders</p>
 					<h3 className="text-2xl font-bold text-gray-800">
@@ -105,7 +105,7 @@ const PerformanceStats = ({ dateRange, activeLabel }) => {
 				</div>
 			</div>
 			 
-			<div className="rounded-xl p-5 bg-gradient-to-br from-green-50 to-green-100 shadow-md flex items-center justify-between">
+			<div className="rounded-xl p-5 bg-gradient-to-br from-green-50 to-green-100 shadow-md flex items-center justify-between transition-all hover:scale-[1.02]">
 				<div>
 					<p className="text-sm text-gray-600">Total Sales</p>
 					<h3 className="text-2xl font-bold text-gray-800">
@@ -120,7 +120,7 @@ const PerformanceStats = ({ dateRange, activeLabel }) => {
 				</div>
 			</div>
 			{/* Customers */}
-			<div className="rounded-xl p-5 bg-gradient-to-br from-purple-50 to-purple-100 shadow-md flex items-center justify-between">
+			{/* <div className="rounded-xl p-5 bg-gradient-to-br from-purple-50 to-purple-100 shadow-md flex items-center justify-between">
 				<div>
 					<p className="text-sm text-gray-600">Total Customers</p>
 					<h3 className="text-2xl font-bold text-gray-800">{totalCustomers.total}</h3>
@@ -131,7 +131,7 @@ const PerformanceStats = ({ dateRange, activeLabel }) => {
 				<div className="p-3 bg-purple-500 rounded-full text-white shadow-lg">
 					<UserOutlined style={{ fontSize: "22px" }} />
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

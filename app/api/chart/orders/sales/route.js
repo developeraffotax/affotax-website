@@ -87,7 +87,7 @@ export async function GET(req) {
         categories: formattedCategories,
         sales: salesSeries,
 
-        totalSales: salesSeries.reduce((a, b) => a + b, 0), // sum all
+        
       }),
       { status: 200 }
     );

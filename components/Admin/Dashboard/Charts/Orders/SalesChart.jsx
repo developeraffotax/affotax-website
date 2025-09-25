@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
 
-export default function SalesChart({ dateRange, type, setTotalSales }) {
+export default function SalesChart({ dateRange, type,  }) {
   const [chartData, setChartData] = useState({
     categories: [],
     sales: [],
@@ -34,10 +34,7 @@ export default function SalesChart({ dateRange, type, setTotalSales }) {
           count: data.sales,
           interval: data.interval
         });
-
-        setTotalSales({
-          total: data.totalSales?.toFixed(2),
-        })
+ 
       } catch (err) {
         console.error("Error fetching chart data:", err);
       } finally {

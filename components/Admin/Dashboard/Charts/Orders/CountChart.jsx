@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
 
-export default function CountChart({ dateRange, type, setTotalOrders }) {
+export default function CountChart({ dateRange, type,  }) {
   const [chartData, setChartData] = useState({
     categories: [],
     count: [],
@@ -35,10 +35,7 @@ export default function CountChart({ dateRange, type, setTotalOrders }) {
           interval: data.interval
         });
 
-        setTotalOrders({
-          total: data.totalOrders,
-          
-        })
+         
       } catch (err) {
         console.error("Error fetching chart data:", err);
       } finally {

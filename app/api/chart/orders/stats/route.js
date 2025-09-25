@@ -41,7 +41,7 @@ export async function GET(req) {
         $lte: endDate.toDate(),
       },
     };
-    const totalCustomers = await Customer.countDocuments(customerFilter);
+    // const totalCustomers = await Customer.countDocuments(customerFilter);
 
     // --- Previous period calculation ---
     let prevStartDate, prevEndDate;
@@ -73,13 +73,13 @@ export async function GET(req) {
     const prevSales = prevSalesAgg[0]?.total || 0;
 
     // 🔹 Previous customers
-    const prevCustomerFilter = {
-      createdAt: {
-        $gte: prevStartDate.toDate(),
-        $lte: prevEndDate.toDate(),
-      },
-    };
-    const prevCustomers = await Customer.countDocuments(prevCustomerFilter);
+    // const prevCustomerFilter = {
+    //   createdAt: {
+    //     $gte: prevStartDate.toDate(),
+    //     $lte: prevEndDate.toDate(),
+    //   },
+    // };
+    // const prevCustomers = await Customer.countDocuments(prevCustomerFilter);
 
     // --- Percentage change ---
     const calcPercentChange = (current, prev) => {
@@ -90,10 +90,10 @@ export async function GET(req) {
 
     const ordersPercentChange = calcPercentChange(totalOrders, prevOrders);
     const salesPercentChange = calcPercentChange(totalSales, prevSales);
-    const customersPercentChange = calcPercentChange(
-      totalCustomers,
-      prevCustomers
-    );
+    // const customersPercentChange = calcPercentChange(
+    //   totalCustomers,
+    //   prevCustomers
+    // );
 
     return new Response(
       JSON.stringify({
@@ -110,9 +110,9 @@ export async function GET(req) {
         salesPercentChange: Number(salesPercentChange.toFixed(2)),
 
         // Customers
-        totalCustomers,
-        prevCustomers,
-        customersPercentChange: Number(customersPercentChange.toFixed(2)),
+        // totalCustomers,
+        // prevCustomers,
+        // customersPercentChange: Number(customersPercentChange.toFixed(2)),
       }),
       { status: 200 }
     );
