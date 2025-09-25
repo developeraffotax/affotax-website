@@ -82,7 +82,7 @@ export async function POST(req) {
 		});
 
 
-		const totalPriceIncludingServiceFee = (+totalPrice + +totalPrice * (20 / 100)).toFixed(2);  // total price including 20% service fee but without stripe processing fee
+		const totalPriceIncludingServiceFee = (+totalPrice + +totalPrice * (0 / 100)).toFixed(2);  // total price including 20% service fee but without stripe processing fee
 
 		let newOrderData = {
 			items: pricesArr.map((el) => ({
@@ -93,15 +93,16 @@ export async function POST(req) {
 				addOns: el.addOns,
 			})),
 			totalPriceWithoutVat:  (+totalPrice).toFixed(2).toString(2),  // its the total price wihout vat & stripe processing fee
+			
 			totalPrice: (+totalPriceIncludingServiceFee + calculateFeeAmountGBP(+totalPriceIncludingServiceFee)).toFixed(2).toString(2),  // its the total price including vat(20 %) & stripe processing fee
 			// payment_id: paymentId,
 			// customer_id: customerDoc._id,
 			orderNumber: orderNumber,
 			payment_status: "pending",
-			vat: (+totalPrice * (20 / 100)).toFixed(2).toString(2)
+			vat: (+totalPrice * (0 / 100)).toFixed(2).toString(2)
 		};
 
-		console.log(newOrderData)
+		 
 
 		const order = new Order(newOrderData);
 
@@ -112,11 +113,11 @@ export async function POST(req) {
 
 		
 		// pushing the 20% service fee 
-		newCartArr.push({
-			priceTitle: "Service Fee",
-			pageTitle: "20%",
-			price: (+totalPrice * (20 / 100)).toFixed(2),
-		});
+		// newCartArr.push({
+		// 	priceTitle: "Service Fee",
+		// 	pageTitle: "20%",
+		// 	price: (+totalPrice * (20 / 100)).toFixed(2),
+		// });
 
 		newCartArr.push({
 			priceTitle: "Stripe",
