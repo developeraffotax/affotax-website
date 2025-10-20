@@ -4,6 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { sendQuote } from "@/actions/contact";
 import SubmitBtn from "./SubmitBtn";
 import { useFormState } from "react-dom";
+import { useRef } from "react";
 
 
 
@@ -19,25 +20,31 @@ export default function QuoteForm() {
 
 
 
-	
+//   const formRef = useRef(null);
 
+  // 🔹 Custom handler to run reCAPTCHA before submit
+  const handleSubmit = async (formData) => {
+     
 
+    // ✅ Ensure reCAPTCHA is loaded
+    if (typeof grecaptcha === "undefined") {
+      alert("reCAPTCHA not loaded yet. Please wait a second and try again.");
+      return;
+    }
 
+    // ✅ Get invisible reCAPTCHA token
+    const token = await grecaptcha.execute(
+      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+      { action: "submit" }
+    );
 
+     
+     
+    formData.append("recaptchaToken", token);
 
-	// const router = useRouter()
-
-
-
-
-
-	// const redirectFn = () => {
-	// 	setIsModalOpen(false)
-	// 	router.push('/thank-you')
-	// }
-
-
-
+    // ✅ Submit form to server action
+    action(formData);
+  };
 
 
 
@@ -64,10 +71,11 @@ export default function QuoteForm() {
 							<form
 								id="quote-form"
 								className={`grid grid-cols-2 gap-8  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base`}
-								action={action}
+								 
+            					action={handleSubmit} // ✅ Custom submit handler
 							>
 								<div className=" ">
-									<div className={`flex items-center justify-center ${formState?.invalidArr.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
+									<div className={`flex items-center justify-center ${formState?.invalidArr?.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											className="h-5 w-5 text-gray-400 absolute left-0 ml-4"
@@ -91,7 +99,7 @@ export default function QuoteForm() {
 										/>
 									</div>
 
-									<div className={`group  flex items-center justify-center ${formState?.invalidArr.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
+									<div className={`group  flex items-center justify-center ${formState?.invalidArr?.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
 											className="h-5 w-5 text-gray-400 absolute left-0 ml-4"
@@ -148,7 +156,7 @@ export default function QuoteForm() {
 										</select>
 									</div>
 
-									<div className={`flex items-center w-full ${formState?.invalidArr.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
+									<div className={`flex items-center w-full ${formState?.invalidArr?.length > 0 ? 'mb-8' : 'mb-4'} relative`}>
 									{formState?.invalidArr.includes('turnover') ? <span className="animate-pulse mb-2  text-sm text-red-500 font-semibold absolute left-0 top-0 -translate-y-[120%]">Required</span> : null}
 										<select
 											name="turnover"

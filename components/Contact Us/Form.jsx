@@ -26,35 +26,65 @@ const Form = () => {
 
 
 
-        const formActionHandler = async (formData) => {
+        // const formActionHandler = async (formData) => {
 
 
 
         
 
-            const name = formData.get('name')
-            const email = formData.get('email')
-            const message = formData.get('message')
+        //     const name = formData.get('name')
+        //     const email = formData.get('email')
+        //     const message = formData.get('message')
 
 
+              
 
 
-
-            if(name.length === 0 || email.length === 0 || message.length === 0) {
-                setError('All the fields are required.');
-            } else{
+        //     if(name.length === 0 || email.length === 0 || message.length === 0) {
+        //         setError('All the fields are required.');
+        //     } else{
                 
-                await formAction(formData);
+        //         await formAction(formData);
 
                 
                 
-                formRef.current.reset();
+        //         formRef.current.reset();
                 
-            }
+        //     }
             
-            return;
+        //     return;
 
-        }
+        // }
+
+
+
+          const formActionHandler = async (formData) => {
+                const name = formData.get("name");
+                const email = formData.get("email");
+                const message = formData.get("message");
+
+                if (!name || !email || !message) {
+                setError("All fields are required.");
+                return;
+                }
+
+                try {
+                // ✅ Get invisible reCAPTCHA token
+                const token = await grecaptcha.execute(
+                    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+                    { action: "submit" }
+                );
+
+                // ✅ Attach token to formData before sending to the server action
+                formData.append("recaptchaToken", token);
+
+                await formAction(formData);
+                formRef.current?.reset();
+                } catch (err) {
+                console.error(err);
+                setError("Something went wrong. Please try again.");
+                }
+            };
 
 
 

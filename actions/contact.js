@@ -6,35 +6,52 @@ import sendMail from "@/lib/sendMail";
 import { redirect } from "next/navigation";
 import { cookies, headers } from "next/headers";
 import sendQuoteMail from "@/lib/sendQuoteMail";
-
+import axios from "axios";
+import { verifyRecaptcha } from "@/lib/verifyRecaptcha";
 
 //  SEND MESSAGE
 
 export async function sendMessage(prevState, formData) {
-	const { name, email, service, message, hidden } = getFormData( formData, "name", "email", "service", "message", "hidden" );
+	const { name, email, service, message, hidden, recaptchaToken } =
+		getFormData(
+			formData,
+			"name",
+			"email",
+			"service",
+			"message",
+			"hidden",
+			"recaptchaToken"
+		);
 
-	
-
-	if(hidden) {
-		
-		return { success: false, message: "Error occured" };
+	if(!name || !email || !message || name === 'null' || name === 'undefined' || service === 'null'  || service === 'undefined' || message === 'null' || message === 'undefined') {
+		return {
+			success: false,
+			message: "All fields are required. Validation Failed",
+		};
 	}
 
+	// Honeypot trap
+	if (hidden) {
+		return { success: false, message: "Error occurred" };
+	}
+
+	// 🔒 Verify reCAPTCHA token
+	const captchaCheck = await verifyRecaptcha(recaptchaToken);
+	if (!captchaCheck.success) {
+		return captchaCheck; // e.g. { success: false, message: "Failed reCAPTCHA validation" }
+	}
 
 	try {
 		const res = await sendMail(name, email, service, message);
-
-		// if (res) {
-        //                 return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
-        //         }
-
-		
 	} catch (error) {
-		return { success: false, message: "Error occured while sending email | Please try again later", };
+		return {
+			success: false,
+			message:
+				"Error occured while sending email | Please try again later",
+		};
 		//redirect('/contact-us?success=false')
-
 	}
-	redirect('/thank-you');
+	redirect("/thank-you");
 }
 
 
@@ -49,28 +66,55 @@ export async function sendMessage(prevState, formData) {
 
 
 
+
+
+
+
+
+
+
+
 // Instant Quote Mail
-
 export async function sendInstantQuote(prevState, formData) {
+	const headersList = headers();
+	const referer = headersList.get("referer");
 
-	const headersList = headers()
-	const referer = headersList.get('referer')
+	const {
+		name,
+		email,
+		phoneNumber,
+		businessType,
+		turnover,
+		vatReturns,
+		payrollManaging,
+		bookkeeping,
+		hidden,
+		recaptchaToken,
+	} = getFormData(
+		formData,
+		"name",
+		"email",
+		"phoneNumber",
+		"businessType",
+		"turnover",
+		"vatReturns",
+		"payrollManaging",
+		"bookkeeping",
+		"hidden",
+		"recaptchaToken"
+	);
 
-
-	const { name, email, phoneNumber, businessType, turnover, vatReturns, payrollManaging, bookkeeping, hidden } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "vatReturns", "payrollManaging", "bookkeeping", "hidden"  );
-	
-	if(hidden) {
+	if (hidden) {
 		return {
-			error: true
-		}
+			error: true,
+		};
 	}
 
-	if (!name || !email) {
+	if (!name || !email || name === 'null' || name === 'undefined' || businessType === 'null' || businessType === 'undefined' || turnover === 'null' || turnover === 'undefined') {
 		return {
-			error: true
-		}
+			error: true,
+		};
 	}
-
 
 	const data = {
 		name,
@@ -80,26 +124,30 @@ export async function sendInstantQuote(prevState, formData) {
 		turnover,
 		vatReturns,
 		payrollManaging,
-		bookkeeping
-	}
+		bookkeeping,
+	};
 
-	
+	// 🔒 Verify reCAPTCHA token
+	const captchaCheck = await verifyRecaptcha(recaptchaToken);
+	if (!captchaCheck.success) {
+		return captchaCheck; // e.g. { success: false, message: "Failed reCAPTCHA validation" }
+	}
 
 	try {
 		const res = await sendInstantQuoteMail(data);
-		console.log(res, data)
+		console.log(res, data);
 		// if (res) {
-        //             return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
-        //         }
-
-		
+		//             return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
+		//         }
 	} catch (error) {
-		console.log(error)
-		return { success: false, message: "Error occured while sending email | Please try again later", };
-		
-
+		console.log(error);
+		return {
+			success: false,
+			message:
+				"Error occured while sending email | Please try again later",
+		};
 	}
-	redirect('/thank-you')
+	redirect("/thank-you");
 	//redirect(`${referer}?success=true`);
 }
 
@@ -125,47 +173,58 @@ export async function sendInstantQuote(prevState, formData) {
 
 
 // Instant Quote From Header or Layout
-
 export async function sendQuote(prevState, formData) {
+	const {
+		name,
+		email,
+		phoneNumber,
+		businessType,
+		turnover,
+		bookkeeping,
+		message,
+		hidden,
+		recaptchaToken,
+	} = getFormData(
+		formData,
+		"name",
+		"email",
+		"phoneNumber",
+		"businessType",
+		"turnover",
+		"bookkeeping",
+		"message",
+		"hidden",
+		"recaptchaToken"
+	);
 
-	
-
-
-	const { name, email, phoneNumber, businessType, turnover, bookkeeping, message, hidden } = getFormData( formData, "name", "email", "phoneNumber", "businessType", "turnover", "bookkeeping", "message", "hidden"  );
-	
-	if(hidden) {
-		console.log('THE VALUE OF HIDDEN INPUT IS:', hidden)
-		return { success: false, message: "access_denied", invalidArr: []};
+	if (hidden) {
+		console.log("THE VALUE OF HIDDEN INPUT IS:", hidden);
+		return { success: false, message: "access_denied", invalidArr: [] };
 	}
 
+	console.log(name, businessType);
 
-	console.log(name, businessType)
+	const invalidArr = [];
 
-	const invalidArr = []
-
-	if(name.length === 0) {
-		invalidArr.push('name')
+	if (name.length === 0 || name === 'null' || name === 'undefined') {
+		invalidArr.push("name");
 	}
 
-	if(email.length === 0) {
-		invalidArr.push('email')
+	if (email.length === 0) {
+		invalidArr.push("email");
 	}
 
-	if(!businessType) {
-		invalidArr.push('businessType')
+	if (!businessType || businessType === 'null' || businessType === 'undefined') {
+		invalidArr.push("businessType");
 	}
 
-	if(!turnover) {
-		invalidArr.push('turnover')
+	if (!turnover || turnover === 'null' || turnover === 'undefined') {
+		invalidArr.push("turnover");
 	}
 
-	if(invalidArr.length > 0) {
-		return { success: false, message: "", invalidArr: invalidArr};
+	if (invalidArr.length > 0) {
+		return { success: false, message: "", invalidArr: invalidArr };
 	}
-
-	
-
-
 
 	const data = {
 		name,
@@ -174,25 +233,32 @@ export async function sendQuote(prevState, formData) {
 		businessType,
 		turnover,
 		bookkeeping,
-		message
-	}
+		message,
+	};
 
-		
+	// 🔒 Verify reCAPTCHA token
+	const captchaCheck = await verifyRecaptcha(recaptchaToken);
+	if (!captchaCheck.success) {
+		return {
+			...captchaCheck,
+			invalidArr: invalidArr,
+		};
+	}
 
 	try {
 		const res = await sendQuoteMail(data);
-		console.log(res, data)
-		
-		
-		//return { success: true, message: "Message sent successfully!", invalidArr: [] };
-		
-	} catch (error) {
-		console.log(error)
-		return { success: false, message: "Error occured while sending email | Please try again later", invalidArr: [] };
-		
+		console.log(res, data);
 
+		//return { success: true, message: "Message sent successfully!", invalidArr: [] };
+	} catch (error) {
+		console.log(error);
+		return {
+			success: false,
+			message:
+				"Error occured while sending email | Please try again later",
+			invalidArr: [],
+		};
 	}
 
-	redirect('/thank-you');
-
+	redirect("/thank-you");
 }

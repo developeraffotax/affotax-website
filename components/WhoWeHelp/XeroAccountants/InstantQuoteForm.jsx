@@ -24,6 +24,29 @@ export default function InstantQuoteForm() {
 		}
 	}, []);
 
+
+					  const submitAction = async (formData) => {
+     
+
+    // ✅ Ensure reCAPTCHA is loaded
+    if (typeof grecaptcha === "undefined") {
+      alert("reCAPTCHA not loaded yet. Please wait a second and try again.");
+      return;
+    }
+
+    // ✅ Get invisible reCAPTCHA token
+    const token = await grecaptcha.execute(
+      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+      { action: "submit" }
+    );
+
+     
+     
+    formData.append("recaptchaToken", token);
+
+    // ✅ Submit form to server action
+    action(formData);
+  };
 	return (
 		<>
 			<div
@@ -43,7 +66,7 @@ export default function InstantQuoteForm() {
 					<div className="flex w-full justify-center py-10 items-center ">
 						<form
 							className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40"
-							action={action}
+							action={submitAction}
 						>
 							<div className="">
 								<div className="  flex items-center justify-center mb-4 relative ">

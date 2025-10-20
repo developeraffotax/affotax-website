@@ -5,6 +5,7 @@ import { sendInstantQuote } from "@/actions/contact";
 import SubmitBtn from "./SubmitBtn";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
+import { useFormState } from "react-dom";
 
 
 
@@ -12,7 +13,7 @@ export default function InstantQuoteForm({bg_gradient= 'bg-gradient-to-br'}) {
 	const searchParams = useSearchParams();
 
 	const success = searchParams.get("success");
-
+	const [formState, action] = useFormState(sendInstantQuote, {error: false});
 	const ref = useRef();
 
 	useEffect(() => {
@@ -22,6 +23,29 @@ export default function InstantQuoteForm({bg_gradient= 'bg-gradient-to-br'}) {
 			});
 		}
 	}, []);
+
+					  const submitAction = async (formData) => {
+     
+
+    // ✅ Ensure reCAPTCHA is loaded
+    if (typeof grecaptcha === "undefined") {
+      alert("reCAPTCHA not loaded yet. Please wait a second and try again.");
+      return;
+    }
+
+    // ✅ Get invisible reCAPTCHA token
+    const token = await grecaptcha.execute(
+      process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+      { action: "submit" }
+    );
+
+     
+     
+    formData.append("recaptchaToken", token);
+
+    // ✅ Submit form to server action
+    action(formData);
+  };
 	return (
 		<>
 			<div className={`flex flex-col items-center  py-12 px-80 max-2xl:px-40 max-xl:px-10    ${bg_gradient} from-orange-300/5 to-orange-900/20`} ref={ref}>
@@ -36,7 +60,7 @@ export default function InstantQuoteForm({bg_gradient= 'bg-gradient-to-br'}) {
 
 				<div className="flex w-full justify-center gap-10 ">
 					<div className="flex w-full justify-center py-10 items-center ">
-						<form className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40" action={sendInstantQuote}>
+						<form className="grid grid-cols-2 gap-10  place-content-start max-lg:grid-cols-1 max-lg:gap-4 text-base p-10 rounded-3xl shadow-md shadow-black/40" action={submitAction}>
 							<div className="">
 								<div className="  flex items-center justify-center mb-4 relative ">
 									<svg
