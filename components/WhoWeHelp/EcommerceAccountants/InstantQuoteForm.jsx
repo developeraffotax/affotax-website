@@ -221,7 +221,7 @@ export default function InstantQuoteForm() {
 						</form>
 					</div>
 				</div>
-				{formState?.error && <p className="text-red-500 text-sm">Failed to send message! Error occured</p>}
+				{formState?.error && <p className="text-red-500 text-sm">Failed to send message! Please fill all the fields</p>}
 				{success && (
 					<p className="text-sm font-poppins text-emerald-500  ">
 						Your query has been submitted | We'll get back to you
