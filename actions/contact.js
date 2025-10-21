@@ -6,7 +6,7 @@ import sendMail from "@/lib/sendMail";
 import { redirect } from "next/navigation";
 import { cookies, headers } from "next/headers";
 import sendQuoteMail from "@/lib/sendQuoteMail";
-import axios from "axios";
+ 
 import { verifyRecaptcha } from "@/lib/verifyRecaptcha";
 
 //  SEND MESSAGE
@@ -23,12 +23,22 @@ export async function sendMessage(prevState, formData) {
 			"recaptchaToken"
 		);
 
-	if(!name || !email || !message || name === 'null' || name === 'undefined' || service === 'null'  || service === 'undefined' || message === 'null' || message === 'undefined') {
+	if(!name || name.trim().length === 0 || !email || !message || service === "No Service Selected") {
 		return {
 			success: false,
 			message: "All fields are required. Validation Failed",
 		};
 	}
+
+
+
+	if (!/\s/.test(message) || !/[a-z]{3,}/i.test(message)) {
+		return { success: false, message: "Invalid Message" };
+	}
+
+
+	
+
 
 	// Honeypot trap
 	if (hidden) {
@@ -40,6 +50,9 @@ export async function sendMessage(prevState, formData) {
 	if (!captchaCheck.success) {
 		return captchaCheck; // e.g. { success: false, message: "Failed reCAPTCHA validation" }
 	}
+
+
+
 
 	try {
 		const res = await sendMail(name, email, service, message);
@@ -110,7 +123,9 @@ export async function sendInstantQuote(prevState, formData) {
 		};
 	}
 
-	if (!name || !email || name === 'null' || name === 'undefined' || businessType === 'null' || businessType === 'undefined' || turnover === 'null' || turnover === 'undefined') {
+	console.log("bizType💚", businessType)
+
+	if (!name || name.trim().length === 0 || !email || !businessType || !turnover) {
 		return {
 			error: true,
 		};
@@ -133,6 +148,8 @@ export async function sendInstantQuote(prevState, formData) {
 		return captchaCheck; // e.g. { success: false, message: "Failed reCAPTCHA validation" }
 	}
 
+
+	 
 	try {
 		const res = await sendInstantQuoteMail(data);
 		console.log(res, data);
@@ -206,7 +223,7 @@ export async function sendQuote(prevState, formData) {
 
 	const invalidArr = [];
 
-	if (name.length === 0 || name === 'null' || name === 'undefined') {
+	if (!name || name.trim().length === 0) {
 		invalidArr.push("name");
 	}
 
@@ -214,11 +231,11 @@ export async function sendQuote(prevState, formData) {
 		invalidArr.push("email");
 	}
 
-	if (!businessType || businessType === 'null' || businessType === 'undefined') {
+	if (!businessType ) {
 		invalidArr.push("businessType");
 	}
 
-	if (!turnover || turnover === 'null' || turnover === 'undefined') {
+	if (!turnover) {
 		invalidArr.push("turnover");
 	}
 
@@ -245,6 +262,7 @@ export async function sendQuote(prevState, formData) {
 		};
 	}
 
+	
 	try {
 		const res = await sendQuoteMail(data);
 		console.log(res, data);
