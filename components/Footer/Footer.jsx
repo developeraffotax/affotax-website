@@ -177,7 +177,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={"/register-for-self-assessment"}
+									href={"/services/self-assessment-tax-return-online"} 
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
 									Self Assessment
