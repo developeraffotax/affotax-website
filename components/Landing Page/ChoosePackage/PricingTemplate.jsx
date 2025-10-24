@@ -49,10 +49,10 @@ export default function PricingTemplate({_id, pkgName, pkgPrice, pkgTurnover, pa
 
 
 
-				<div className="pb-12 border-gray-300 p-6 text-center rounded-bl-lg">
+				<div className="border-gray-300 p-6 text-center rounded-bl-lg">
 					<Link href={"/cart"} onClick={onClick}> <button className="flex items-center justify-center text-secondary bg-primary/90 border-0 py-2 px-4 w-full focus:outline-none border-2 border-transparent hover:bg-primary hover:bg-transparent hover:text-orange-500 hover:border-orange-500 duration-300 transition-all rounded"> Buy Now <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-4 h-4 ml-1 mt-1" viewBox="0 0 24 24" > <path d="M5 12h14M12 5l7 7-7 7" /> </svg> </button> </Link>
 					
-                    {/* <p className="text-xs text-gray-500 mt-3" >{footerText}</p> */}
+                    {(footerText && footerText !== "Default") && <p className="text-xs text-gray-500 mt-3" >{footerText}</p>}
 					
 				</div>
                 

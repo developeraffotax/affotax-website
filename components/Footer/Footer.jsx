@@ -152,7 +152,7 @@ export default function Footer() {
 						<ul className="list-none mb-10">
 							<li>
 								<Link
-									href={"/annual-accounts"}
+									href={"/services/online-annual-accounts-services"}
 									scroll={true}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
@@ -161,7 +161,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={"/corporation-tax-ct600"}
+									href={"/services/corporation-tax-services"}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
 									Corporation Tax
@@ -185,7 +185,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={"/quarterly-vat-return"}
+									href={"/services/online-uk--vat-registration--services"}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
 									VAT Return
@@ -193,7 +193,7 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={"/paye-employee"}
+									href={"/services/employee-payroll-services"}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
 									Payroll Services
