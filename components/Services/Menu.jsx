@@ -37,7 +37,8 @@ const menu = [
         submenu: [
             {
                 name: 'Self Assessment Tax Return (SA100)',
-                link: '/self-assessment-tax-return-sa100',
+                link: '/services/self-assessment-tax-return-online',
+                // link: '/self-assessment-tax-return-sa100',
             },
             {
                 name: 'Submit Self Assessment Tax Return Online',
