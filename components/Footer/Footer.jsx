@@ -169,10 +169,10 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={"/annual-confirmation-statement"}
+									href={"/uk-company-dissolution-service--file-ds01-online"}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
-									Confirmation Statement
+								                Company Dissolution
 								</Link>
 							</li>
 							<li>
@@ -201,10 +201,10 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={"/bookkeeping-for-12-month"}
+									href={"/file-llp-accounts-online"}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
-									Bookkeeping
+									llP Accounuts
 								</Link>
 							</li>
 						</ul>
