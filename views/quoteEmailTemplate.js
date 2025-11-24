@@ -61,7 +61,9 @@ export const quoteEmailTemplate = `
                 <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:25px;">
                   <tr>
                     <td align="center">
-                      <a href="https://crm.affotax.com/leads" target="_blank" style="background-color:#ff7f45; color:#ffffff; text-decoration:none; padding:12px 26px; border-radius:10px; font-weight:bold; display:inline-block;">
+                     <a href="https://crm.affotax.com/leads/create?name=<%= encodeURIComponent(data.name) %>&email=<%= encodeURIComponent(data.email) %>"
+                        target="_blank"
+                        style="background-color:#ff7f45; color:#ffffff; text-decoration:none; padding:12px 26px; border-radius:10px; font-weight:bold; display:inline-block;">
                         Create lead in CRM
                       </a>
                     </td>
