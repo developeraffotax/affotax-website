@@ -10,6 +10,7 @@ import ServicesTo from "./Subpages/ServicesTo";
 import WhyUs from "./Subpages/WhyUs";
 import PricingPage from "@/lib/Model/PricingPage/PricingPage";
 import Homepage from "@/lib/Model/Homepage/Homepage";
+import TrustpilotWidget from "./TrustpilotWidget";
 
 
  
@@ -26,8 +27,8 @@ export default async function Home() {
   return (
     <main className="w-full  flex flex-col items-center justify-between   max-lg:p-0">
         <HomeTop HeroSection={JSON.stringify(homepage?.HeroSection)}  googleReviewsCount={JSON.stringify(homepage?.googleReviewsCount ?? 0)} />
-        
          <ChoosePackage pricingPage={JSON.stringify(pricingPage)}/>
+        <TrustpilotWidget />
          <HowItWorks HowItWorksSection={JSON.stringify(homepage?.HowItWorksSection)}/>
         <WhyUs WhyChooseUsSection={JSON.stringify(homepage?.WhyChooseUsSection)} CTASection={JSON.stringify(homepage?.CTASection)}/>
         <ServicesTo LinksSection={JSON.stringify(homepage?.LinksSection)}/>

@@ -54,7 +54,12 @@ export default function RootLayout({ children }) {
         </Script> */}
 
    
-
+          
+{/* Trustpilot Script */}
+        <Script
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          strategy="afterInteractive"
+        /> 
       
         <script
           type="application/ld+json"
