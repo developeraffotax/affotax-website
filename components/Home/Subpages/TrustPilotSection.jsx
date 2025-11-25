@@ -4,7 +4,7 @@ import { LiaStarSolid } from "react-icons/lia";
 
 export default function TrustPilotSection({ gReviewsCount, tReviewsCount }) {
 	return (
-		<div className="w-full max-w-2xl flex gap-6 max-xl:flex-col py-12 ">
+		<div className="w-full max-w-2xl flex gap-6 max-xl:flex-col pb-12 pt-2 max-[2000px]:pt-12  ">
 			{/* GOOGLE CARD */}
 
 			<div className="flex-1 min-w-[260px]">
