@@ -14,9 +14,9 @@ export const metadata = {
 	description: "The Affotax Accountants | Making Tax Affordable",
 	creator: "Ihtisham Ul Haq",
 	authors: [{ name: "Ihtisham Ul Haq", url: "https://iqweb.dev/" }],
-	verification: {
-		google: "rUWR7Mh3UA6s1lFKr7ssCWWhmuYEkmdqWV9wZc2VdQ0",
-	},
+	// verification: {
+	// 	google: "rUWR7Mh3UA6s1lFKr7ssCWWhmuYEkmdqWV9wZc2VdQ0",
+	// },
 	
 	
 };
