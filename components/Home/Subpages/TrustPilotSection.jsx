@@ -4,11 +4,11 @@ import { LiaStarSolid } from "react-icons/lia";
 
 export default function TrustPilotSection({ gReviewsCount, tReviewsCount }) {
 	return (
-		<div className="w-full max-w-2xl flex gap-6 max-xl:flex-col py-12 min-h-[250px]">
+		<div className="w-full max-w-2xl flex gap-6 max-xl:flex-col py-12 ">
 			{/* GOOGLE CARD */}
 
-			<div className="flex-1 min-w-[250px]">
-				<div className="h-full w-full flex flex-col items-center justify-center p-4 bg-white/50 backdrop-blur-md border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+			<div className="flex-1 min-w-[260px]">
+				<div className="min-h-[150px] h-full w-full flex flex-col items-center justify-center p-4 bg-white/50 backdrop-blur-md border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
@@ -47,12 +47,12 @@ export default function TrustPilotSection({ gReviewsCount, tReviewsCount }) {
 			</div>
 
 			{/* TRUSTPILOT CARD */}
-			<div className="flex-1 min-w-[250px]">
-				<div className="h-full w-full flex flex-col items-center justify-center p-4 bg-white/50 backdrop-blur-md border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
+			<div className="flex-1 min-w-[260px]">
+				<div className=" min-h-[150px] h-full w-full flex flex-col items-center justify-center p-4 bg-white/50 backdrop-blur-md border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02]">
 					{/* Trustpilot widget */}
 					<div className="w-[200px]  flex justify-center items-center gap-4">
 						<div
-							className="trustpilot-widget  m-t-2"
+							className="trustpilot-widget  mt-2"
 							data-locale="en-US"
 							data-template-id="53aa8807dec7e10d38f59f32"
 							data-businessunit-id="64d63b5dc33d714e75c680f9"

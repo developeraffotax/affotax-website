@@ -11,6 +11,7 @@ import WhyUs from "./Subpages/WhyUs";
 import PricingPage from "@/lib/Model/PricingPage/PricingPage";
 import Homepage from "@/lib/Model/Homepage/Homepage";
 import TrustpilotWidget from "./TrustpilotWidget";
+import TrustPilotReviews from "./Subpages/TrustPilotReviews";
 
 
  
@@ -32,7 +33,7 @@ export default async function Home() {
          <HowItWorks HowItWorksSection={JSON.stringify(homepage?.HowItWorksSection)}/>
         <WhyUs WhyChooseUsSection={JSON.stringify(homepage?.WhyChooseUsSection)} CTASection={JSON.stringify(homepage?.CTASection)}/>
         <ServicesTo LinksSection={JSON.stringify(homepage?.LinksSection)}/>
-        <Reviews />
+        <TrustPilotReviews />
         <EmailPhone />
     </main>
   );
