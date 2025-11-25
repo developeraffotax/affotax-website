@@ -76,8 +76,35 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 					 
 					</div>
 				</div>
-				<div className="w-full flex justify-start max-xl:w-full ">
+				<div className="w-full flex justify-between items-center max-xl:w-full ">
 					<TrustPilotSection gReviewsCount={gReviewsCount}  />
+
+
+
+					{/* <div className="  w-[30%] max-xl:w-full flex flex-col h-full justify-between 
+p-6 bg-white/50 backdrop-blur-md border border-gray-200 rounded-2xl shadow-sm 
+hover:shadow-md transition-all duration-300 hover:scale-105 ">
+
+						<div
+					className="trustpilot-widget"
+					data-locale="en-US"
+					data-template-id="53aa8807dec7e10d38f59f32"
+					data-businessunit-id="64d63b5dc33d714e75c680f9"
+					data-style-height="150px"
+					data-style-width="100%"
+					data-token="9b8ea25f-7726-4697-adcf-caa3c92c64b8"
+				>
+					<a
+						href="https://www.trustpilot.com/review/affotax.com"
+						target="_blank"
+						rel="noopener"
+					>
+						Trustpilot
+					</a>
+				</div>
+
+
+					</div> */}
 				</div>
 			</div>
 		</section>
