@@ -69,15 +69,15 @@ export default function RootLayout({ children }) {
 
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    // Start loader immediately on path change
-    setLoading(true);
+//   useEffect(() => {
+//     // Start loader immediately on path change
+//     setLoading(true);
 
-    // Wait for next render to finish
-    startTransition(() => {
-      setLoading(false);
-    });
-  }, [pathname]);
+//     // Wait for next render to finish
+//     startTransition(() => {
+//       setLoading(false);
+//     });
+//   }, [pathname]);
 
 
 
@@ -107,7 +107,8 @@ export default function RootLayout({ children }) {
 				setDefaultSelectedKeys(["dashboard-view"]);
 				setDefaultOpenKeys(["dashboard-view"]);
 
-				router.push("/admin/dashboard");
+				// router.push("/admin/dashboard");
+				startTransition(() => router.push("/admin/dashboard"));
 			},
 		},
 
@@ -121,7 +122,7 @@ export default function RootLayout({ children }) {
 				setDefaultSelectedKeys(["orders-view"]);
 				setDefaultOpenKeys(["orders-view"]);
 
-				router.push("/admin/orders");
+				startTransition(() => router.push("/admin/orders"));
 			},
 		},
 
@@ -139,7 +140,8 @@ export default function RootLayout({ children }) {
 				setDefaultSelectedKeys(["homepage-update"]);
 				setDefaultOpenKeys(["homepage-update"]);
 
-				router.push("/admin/homepage/update");
+				// router.push("/admin/homepage/update");
+				startTransition(() => router.push("/admin/homepage/update"));
 			},
 		},
 
@@ -153,7 +155,8 @@ export default function RootLayout({ children }) {
 				setDefaultSelectedKeys(["pricing-page-edit"]);
 				setDefaultOpenKeys(["pricing-page-edit"]);
 
-				router.push("/admin/pricing-page/edit");
+				//router.push("/admin/pricing-page/edit");
+				startTransition(() => router.push("/admin/pricing-page/edit"));
 			},
 
 			//   children: [
@@ -184,7 +187,8 @@ export default function RootLayout({ children }) {
 						setDefaultSelectedKeys(["service-section-create"]);
 						setDefaultOpenKeys(["service-page"]);
 
-						router.push("/admin/service-page/create");
+						//router.push("/admin/service-page/create");
+						startTransition(() => router.push("/admin/service-page/create"));
 					},
 				},
 
@@ -195,7 +199,8 @@ export default function RootLayout({ children }) {
 						setDefaultSelectedKeys(["service-section-view"]);
 						setDefaultOpenKeys(["service-page"]);
 
-						router.push("/admin/service-page/view");
+						//router.push("/admin/service-page/view");
+						startTransition(() => router.push("/admin/service-page/view"));
 					},
 				},
 			],
@@ -218,7 +223,8 @@ export default function RootLayout({ children }) {
 								setDefaultSelectedKeys(["section0"]);
 								setDefaultOpenKeys(["page", "section"]);
 
-								router.push("/admin/create-page/create");
+								//router.push("/admin/create-page/create");
+								startTransition(() => router.push("/admin/create-page/create"));
 							},
 						},
 
@@ -229,7 +235,8 @@ export default function RootLayout({ children }) {
 								setDefaultSelectedKeys(["section1"]);
 								setDefaultOpenKeys(["page", "section"]);
 
-								router.push("/admin/create-page/hero-section");
+								//router.push("/admin/create-page/hero-section");
+								startTransition(() => router.push("/admin/create-page/hero-section"));
 							},
 						},
 
@@ -240,9 +247,10 @@ export default function RootLayout({ children }) {
 								setDefaultSelectedKeys(["section2"]);
 								setDefaultOpenKeys(["page", "section"]);
 
-								router.push(
-									"/admin/create-page/content-with-image-section"
-								);
+								// router.push(
+								// 	"/admin/create-page/content-with-image-section"
+								// );
+								startTransition(() => router.push("/admin/create-page/content-with-image-section"));
 							},
 						},
 
@@ -256,6 +264,8 @@ export default function RootLayout({ children }) {
 								router.push(
 									"/admin/create-page/our-services-section"
 								);
+
+								startTransition(() => router.push("/admin/create-page/our-services-section"));
 							},
 						},
 
@@ -269,6 +279,8 @@ export default function RootLayout({ children }) {
 								router.push(
 									"/admin/create-page/why-choose-us-section"
 								);
+
+								startTransition(() => router.push("/admin/create-page/why-choose-us-section"));
 							},
 						},
 
@@ -290,7 +302,10 @@ export default function RootLayout({ children }) {
 				{
 					key: "sub4",
 					label: "View Pages",
-					onClick: () => router.push("/admin/view-pages"),
+					onClick: () => {
+						//router.push("/admin/view-pages");
+						startTransition(() => router.push("/admin/view-pages"));
+					},
 				},
 			],
 		},
@@ -312,7 +327,8 @@ export default function RootLayout({ children }) {
 					onClick: () => {
 						setDefaultSelectedKeys(["blog1"]);
 						setDefaultOpenKeys(["blog"]);
-						router.push("/admin/create-blog");
+						//router.push("/admin/create-blog");
+						startTransition(() => router.push("/admin/create-blog"));
 					},
 				},
 
@@ -323,7 +339,8 @@ export default function RootLayout({ children }) {
 						setDefaultSelectedKeys(["blog2"]);
 						setDefaultOpenKeys(["blog"]);
 
-						router.push("/admin/view-blogs");
+						//router.push("/admin/create-blog");
+						startTransition(() => router.push("/admin/create-blog"));
 					},
 				},
 			],
@@ -349,7 +366,8 @@ export default function RootLayout({ children }) {
 									"landing_section",
 								]);
 
-								router.push("/admin/landing-page/create");
+								//router.push("/admin/landing-page/create");
+								startTransition(() => router.push("/admin/landing-page/create"));
 							},
 						},
 
@@ -363,7 +381,8 @@ export default function RootLayout({ children }) {
 									"landing_section",
 								]);
 
-								router.push("/admin/landing-page/hero-section");
+								//router.push("/admin/landing-page/hero-section");
+								startTransition(() => router.push("/admin/landing-page/hero-section"));
 							},
 						},
 
@@ -377,9 +396,10 @@ export default function RootLayout({ children }) {
 									"landing_section",
 								]);
 
-								router.push(
-									"/admin/landing-page/pricing-section"
-								);
+								// router.push(
+								// 	"/admin/landing-page/pricing-section"
+								// );
+								startTransition(() => router.push("/admin/landing-page/pricing-section"));
 							},
 						},
 
@@ -393,9 +413,10 @@ export default function RootLayout({ children }) {
 									"landing_section",
 								]);
 
-								router.push(
-									"/admin/landing-page/how-it-works-section"
-								);
+								// router.push(
+								// 	"/admin/landing-page/how-it-works-section"
+								// );
+								startTransition(() => router.push("/admin/landing-page/how-it-works-section"));
 							},
 						},
 
@@ -431,9 +452,10 @@ export default function RootLayout({ children }) {
 									"landing_section",
 								]);
 
-								router.push(
-									"/admin/landing-page/why-choose-us-section"
-								);
+								// router.push(
+								// 	"/admin/landing-page/why-choose-us-section"
+								// );
+								startTransition(() => router.push("/admin/landing-page/why-choose-us-section"));
 							},
 						},
 
@@ -447,7 +469,8 @@ export default function RootLayout({ children }) {
 									"landing_section",
 								]);
 
-								router.push("/admin/landing-page/faq-section");
+								//router.push("/admin/landing-page/faq-section");
+								startTransition(() => router.push("/admin/landing-page/faq-section"));
 							},
 						},
 
@@ -469,7 +492,10 @@ export default function RootLayout({ children }) {
 				{
 					key: "sub6",
 					label: "View Pages",
-					onClick: () => router.push("/admin/landing-page/view"),
+					onClick: () => {
+						//router.push("/admin/landing-page/view");
+						startTransition(() => router.push("/admin/landing-page/view"));
+					},
 				},
 			],
 		},
@@ -488,7 +514,8 @@ export default function RootLayout({ children }) {
 				setDefaultSelectedKeys(["logs-view"]);
 				setDefaultOpenKeys(["logs-view"]);
 
-				router.push("/admin/logs");
+				//router.push("/admin/logs");
+				startTransition(() => router.push("/admin/logs"));
 			},
 		},
 	];
@@ -499,7 +526,7 @@ export default function RootLayout({ children }) {
 
 	return (
 <>
-    <GlobalLoader loading={loading || isPending} />
+    <GlobalLoader loading={isPending} />
 		<Layout className="w-[100vw]   ">
 			<Header
 				className=""
