@@ -16,6 +16,45 @@
 	min-height: 200px;
 }
 
+.scrollbar-subtle::-webkit-scrollbar {
+  width: 6px; /* very thin */
+}
+
+.scrollbar-subtle::-webkit-scrollbar-track {
+  background: transparent; /* invisible track */
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15); /* subtle dark handle */
+  border-radius: 10px;
+}
+
+.scrollbar-subtle::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.scrollable {
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+
 select {
 	margin: 0;
 	-webkit-box-sizing: border-box;

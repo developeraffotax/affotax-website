@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation'
 
 export default function AdminPage() {
 
-    redirect('/admin/view-blogs')
+    redirect('/admin/dashboard')
 
 
     return (
