@@ -50,7 +50,7 @@ export default function ChoosePackage({pricingPage, pricing}) {
     
     <>
     
-    <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t border-b-2 font-Outfit  border-gray-200 px-96 max-[1800px]:px-60 max- max-2xl:px-40 max-xl:px-8 ">
+    <section className="text-gray-700 body-font w-full py-4 overflow-hidden border-t   font-Outfit  border-gray-200 px-96 max-[1800px]:px-60 max- max-2xl:px-40 max-xl:px-8 ">
          <div className="container w-full py-16 mx-auto">
             <div className="text-center mb-12">
                 <p className='text-base text-orange-500 font-semibold mb-2'>Pricing & Plan</p>

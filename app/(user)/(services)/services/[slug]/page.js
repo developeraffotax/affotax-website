@@ -1,3 +1,6 @@
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import TrustpilotWidget from "@/components/Home/TrustpilotWidget";
+
 import ChoosePackage from "@/components/Landing Page/ChoosePackage/ChoosePackage";
 import EmailPhone from "@/components/Landing Page/EmailPhone";
 import Faqs from "@/components/Landing Page/Faqs/Faqs";
@@ -50,10 +53,13 @@ export default async function LandingHomePage({ params }) {
         pricingPage={JSON.stringify(landingPage?.PricingSection)}
         pricing={JSON.stringify(pricing)}
       />
+      <TrustpilotWidget />
       <HowItWorks HowItWorksSection={JSON.stringify(landingPage?.HowItWorksSection)} />
       <WhyUs WhyChooseUsSection={JSON.stringify(landingPage?.WhyChooseUsSection)} />
       <GetAQuoteSection />
+
       <Faqs FaqSection={JSON.stringify(landingPage?.FaqSection)} />
+      <TrustPilotReviews />
       <EmailPhone />
     </main>
   );

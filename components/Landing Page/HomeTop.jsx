@@ -9,7 +9,8 @@ import { LiaStarSolid } from "react-icons/lia";
 import TrustPilotSection from "./TrustPilotSection";
 
 export default function HomeTop({ HeroSection, googleReviewsCount }) {
-	const { heading, html, imageUrl, btnText, btnLink } = JSON.parse(HeroSection);
+	const { heading, html, imageUrl, btnText, btnLink } =
+		JSON.parse(HeroSection);
 	const gReviewsCount = JSON.parse(googleReviewsCount);
 
 	const quoteContext = useContext(QuoteFormContext);
@@ -27,24 +28,24 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 							dangerouslySetInnerHTML={{ __html: html }}
 						></div>
 						<div className="flex justify-center text-nowrap ">
-
-						{typeof btnLink === "string" &&
-						btnLink.trim() !== "" &&
-						(btnText.trim() !== "undefined" && btnLink.trim() !== "undefined" ) ? (
+							{typeof btnLink === "string" &&
+							btnLink.trim() !== "" &&
+							btnText.trim() !== "undefined" &&
+							btnLink.trim() !== "undefined" ? (
 								<Link href={btnLink}>
-								<button className="inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline   hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold">
-									{btnText}
-								</button>
-							</Link>
-						) : (
-							<Link href={"/services"}>
-								<button className="inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline   hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold">
-									{" "}
-									Services{" "}
-								</button>
-							</Link>
-						)}
-							
+									<button className="inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline   hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold">
+										{btnText}
+									</button>
+								</Link>
+							) : (
+								<Link href={"/services"}>
+									<button className="inline-flex text-primary shadow-md shadow-black/15 bg-transparent border-0 py-2 px-6 outline-primary outline-1 outline   hover:bg-primary hover:text-secondary rounded-md text-lg font-semibold">
+										{" "}
+										Services{" "}
+									</button>
+								</Link>
+							)}
+
 							<button
 								onClick={quoteContext.showModal}
 								className="ml-4 inline-flex text-secondary shadow-md shadow-black/15 bg-primary border-0 py-2 px-6 hover:outline-primary outline outline-1 outline-transparent hover:bg-transparent hover:text-primary rounded-md text-lg font-semibold"
@@ -78,7 +79,7 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 						)}
 					</div>
 				</div>
-				<div className="w-full flex justify-start max-xl:w-full ">
+				<div className="w-full flex justify-between items-center max-xl:w-full ">
 					<TrustPilotSection gReviewsCount={gReviewsCount} />
 				</div>
 			</div>
