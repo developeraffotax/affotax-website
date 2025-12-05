@@ -32,7 +32,7 @@ export default function WhyUs({WhyChooseUsSection, CTASection}) {
                         return (
                             <div key={el._id} className="p-4 md:w-1/3 flex flex-col text-center items-center">
                     <div className="w-20 h-20 inline-flex items-center justify-center rounded-full  text-indigo-500 mb-5 flex-shrink-0">
-                    <Image src={el.imageUrl} width={500} height={500} cover="true"  className='scale-125' alt={`icon-${i}`}/>
+                    <img src={el.imageUrl} width={500} height={500} cover="true"  className='scale-125' alt={`icon-${i}`}/>
                     {/* <Image src={Tax}  cover="true"  /> */}
                     </div>
                     <div className="flex-grow">

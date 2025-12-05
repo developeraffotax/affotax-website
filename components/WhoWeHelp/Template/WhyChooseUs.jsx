@@ -28,7 +28,7 @@ export default function WhyChooseUs({slug, heading, shortDescription, arr, bg_gr
                                             <li key={index + 'why-choose-us'} className="flex flex-col justify-center items-center gap-4  ">
                                                 <div className="drop-shadow-md  flex justify-center items-center text-4xl font-oswald font-semibold  w-40">
 
-                                                    <Image src={el.imageUrl} cover className="  " height={200} width={200} />
+                                                    <img src={el.imageUrl} alt={el.title} cover className="  " height={200} width={200} />
                                                 </div>
                                                 <h3 className="font-semibold text-xl font-poppins max-w-72">{el.title}</h3>
                                                 <p className="text-sm max-w-72">{el.content}</p>
