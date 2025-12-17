@@ -1,5 +1,6 @@
 import ContactUs from "@/components/Contact Us/ContactUs";
 import EmailPhone from "@/components/Home/Subpages/EmailPhone";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 
@@ -13,6 +14,7 @@ export default function ContactPage() {
     return (
        <>
          <ContactUs />
+         <TrustPilotReviews />
          <EmailPhone />
        </>
     );

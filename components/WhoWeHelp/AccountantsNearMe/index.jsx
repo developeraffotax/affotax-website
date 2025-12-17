@@ -6,6 +6,7 @@ import WhatIsSoleTrader from "./WhatIsSoleTrader";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
 import WhatIsSoleTrader2 from "./WhatIsSoleTrader2";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 export default function AccountantsNearMe() {
@@ -19,6 +20,7 @@ export default function AccountantsNearMe() {
 				<WhyChooseUs />
 				<WhatIsSoleTrader2 />
 				<InstantQuoteForm />
+				<TrustPilotReviews />
 				<EmailPhone />
             </div>
 		</>

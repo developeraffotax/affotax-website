@@ -3,6 +3,7 @@ import ChoosePackage from '@/components/Home/Subpages/ChoosePackage/ChoosePackag
 import EmailPhone from '@/components/Home/Subpages/EmailPhone'
 import { connectDB } from '@/lib/connectDB';
 import PricingPage from '@/lib/Model/PricingPage/PricingPage';
+import TrustPilotReviews from '@/components/Home/Subpages/TrustPilotReviews';
 
 
 export const metadata = {
@@ -22,6 +23,7 @@ const PricingPageServer = async () => {
   return (
     <>
         <ChoosePackage pricingPage={JSON.stringify(pricingPage)}/>
+        <TrustPilotReviews />
         <EmailPhone />
     </>
   )

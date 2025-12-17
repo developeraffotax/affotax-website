@@ -6,6 +6,8 @@ import Award from "@/public/award.png";
 
 import Image from "next/image";
 import { hero, icon1, icon2, icon3, icon4, } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Reliable Accountants in Cardiff | Accounting & Tax Filing",
@@ -311,6 +313,9 @@ Bookkeeping: Accurate bookkeeping services to keep your financial records in ord
 Company Formation: Expert guidance on forming a new company, providing you with a strong foundation for success.
 				</p>
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

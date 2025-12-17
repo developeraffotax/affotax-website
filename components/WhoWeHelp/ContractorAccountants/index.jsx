@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import OurServices from "./OurServices";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 export default function ContractorAccountants() {
 	return (
@@ -15,6 +16,7 @@ export default function ContractorAccountants() {
 				<WhyChooseUs />
 				<OurServices />
 				<InstantQuoteForm />
+				<TrustPilotReviews />
 				<EmailPhone />
             </div>
 		</>

@@ -4,6 +4,7 @@ import OurServices from "./OurServices";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
 import ContentWithImage from "./ContentWithImage";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 
@@ -26,6 +27,7 @@ export default function Template({ jsonPage }) {
 				{OurServicesSection && ( <OurServices {...OurServicesSection} bg_gradient={ ContentWithImageSection.length % 2 === 0 ? "bg-gradient-to-tr" : "bg-gradient-to-br" } /> )}
 				{WhyChooseUsSection && ( <WhyChooseUs {...WhyChooseUsSection} bg_gradient={ ContentWithImageSection.length % 2 === 0 ? "bg-gradient-to-br" : "bg-gradient-to-tr" } /> )}
 				<InstantQuoteForm bg_gradient={ ContentWithImageSection.length % 2 === 0 ? "bg-gradient-to-tr" : "bg-gradient-to-br" } />
+				<TrustPilotReviews />
 				<EmailPhone />
 			</div>
 		</>

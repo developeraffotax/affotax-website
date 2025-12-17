@@ -6,7 +6,7 @@ import { useTrustpilot } from "@/lib/useTrustpilot";
 
 
 export default function TrustpilotWidget() {
-	useTrustpilot()
+	// useTrustpilot()
 	return (
 		<div className="w-full p-12 max-xl:p-4 mb-12  max-w-screen-xl mx-auto bg-slate-50 max-xl:bg-transparent max-xl:border-none max-xl:shadow-none rounded-md shadow-md  border border-gray-200">
 			<div

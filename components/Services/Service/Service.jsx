@@ -11,6 +11,7 @@ import LeftSection from "./LeftSection";
 import { useSpring, animated  } from "@react-spring/web";
 import EmailPhone from "./EmailPhone";
 import GetAQuoteSection from "./GetAQuoteSection";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 const Service = ({ jsonData }) => {
@@ -112,7 +113,7 @@ const Service = ({ jsonData }) => {
 
             <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />
 
-          
+            <TrustPilotReviews />
 
             <EmailPhone />   
         </div>

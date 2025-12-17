@@ -10,6 +10,8 @@ import {
 	icon6,
 	icon7,
 } from "@/public/assets/wales";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Online Chartered Accountants in Wales, United Kingdom",
@@ -428,7 +430,8 @@ export default function Wales() {
         </section>
 
 
-
+		<TrustPilotReviews />
+					<EmailPhone />
 
 
 		</main>

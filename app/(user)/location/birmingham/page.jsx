@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, } from "@/public/assets/birmingham";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Online Accountants in Birmingham | Boost Your Finances",
@@ -440,6 +442,9 @@ Accessible and Approachable We pride ourselves on being accessible and approacha
             </div>
 
 			</section>
+
+			<TrustPilotReviews />
+			<EmailPhone />
 		</main>
 	);
 }

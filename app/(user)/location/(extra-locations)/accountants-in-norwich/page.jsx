@@ -6,6 +6,8 @@ import Award from "@/public/award.png";
 
 import Image from "next/image";
 import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Accountants in Norwich | Norwich Accountancy Services",
@@ -297,6 +299,9 @@ export default function Norwich() {
 					</p>
 				</div>
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

@@ -9,6 +9,7 @@ import WhatIsSoleTrader from "./WhatIsSoleTrader";
 import InstantQuoteForm from "./InstantQuoteForm";
 import { useRef } from "react";
 import UseXero from "./UseXero";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 
@@ -36,6 +37,7 @@ export default function XeroAccountants() {
 				<div className="w-full" ref={formRef}>
 				<InstantQuoteForm />
 				</div>
+				<TrustPilotReviews />
 				<EmailPhone  />
             </div>
 		</>

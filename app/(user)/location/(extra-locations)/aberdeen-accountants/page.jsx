@@ -12,6 +12,8 @@ import {
 	icon3,
 	icon4,
 } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Aberdeen Accountants; Chartered Accountants in Aberdeen",
@@ -307,6 +309,9 @@ export default function Aberdeen() {
 					business needs.
 				</p>
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

@@ -6,6 +6,8 @@ import Award from "@/public/award.png";
 
 import Image from "next/image";
 import { hero, icon1, icon2, icon3, icon4, } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Accountants Glasgow; Chartered Accountants in Glasgow",
@@ -309,6 +311,8 @@ Our accountants in Glasgow are experienced in handling VAT returns, ensuring tha
 
 				</p>
 			</section>
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

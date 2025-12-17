@@ -7,6 +7,7 @@ import OurServices from "./OurServices";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
 import { useRef } from "react";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 export default function FreelanceAccountants() {
@@ -34,6 +35,7 @@ export default function FreelanceAccountants() {
 				<OurServices />
 				<WhyChooseUs />
 				<InstantQuoteForm ref ={formRef} />
+				<TrustPilotReviews />
 				<EmailPhone />
             </div>
 		</>

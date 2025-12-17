@@ -1,5 +1,6 @@
 import AboutUs from "@/components/About Us/AboutUs";
 import EmailPhone from "@/components/Home/Subpages/EmailPhone";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 
@@ -14,6 +15,7 @@ export default function AboutPage() {
   return (
      <>
         <AboutUs />
+        <TrustPilotReviews />
         <EmailPhone />
      </>
   );

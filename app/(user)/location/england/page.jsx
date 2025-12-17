@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { hero, icon1, icon2, icon3, icon4, icon5, icon6, icon7, icon8, icon9, icon10 } from "@/public/assets/england";
 import { notFound } from "next/navigation";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 
 
@@ -462,6 +464,9 @@ Advisory Services: Beyond routine accounting, many firms offer advisory services
             </div>
 
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

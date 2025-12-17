@@ -6,6 +6,7 @@ import OurServices from "./OurServices";
 import WhyChooseUs from "./WhyChooseUs";
 import InstantQuoteForm from "./InstantQuoteForm";
 import WhatIsLimitedCompany from "./WhatIsLimitedCompany";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 export default function LimitedCompanies() {
@@ -18,6 +19,7 @@ export default function LimitedCompanies() {
 				<WhyChooseUs />
 				<OurServices />
 				<InstantQuoteForm />
+				<TrustPilotReviews />
 				<EmailPhone />
             </div>
 		</>

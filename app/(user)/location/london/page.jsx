@@ -14,6 +14,8 @@ import {
 	icon9,
 	icon10,
 } from "@/public/assets/london";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Online Accountants in London for Small Businesses",
@@ -513,6 +515,9 @@ export default function London() {
             </div>
 
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

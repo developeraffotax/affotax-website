@@ -12,6 +12,8 @@ import {
 	icon3,
 	icon4,
 } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Online Chartered Accountants Inverness, Scotland",
@@ -310,6 +312,10 @@ Self-Assessment Tax Returns: We assist individuals and business owners with self
 
 				</p>
 			</section>
+
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

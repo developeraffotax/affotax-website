@@ -2,6 +2,7 @@ import React from "react";
 import Menu from "./Menu";
 import Top from "./Top";
 import EmailPhone from "../Home/Subpages/EmailPhone";
+import TrustPilotReviews from "../Home/Subpages/TrustPilotReviews";
 
 // export const metadata = {
 // 	title: 'The Most Affordable Accountancy Services in the UK',
@@ -14,6 +15,7 @@ const Services = () => {
 		<div>
 			<Top  className=''/>
 			<Menu />
+			<TrustPilotReviews />
 			<EmailPhone />
 		</div>
 	);

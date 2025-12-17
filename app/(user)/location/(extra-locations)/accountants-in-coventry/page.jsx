@@ -5,6 +5,8 @@ import Experience from "@/public/experience.png";
 import Deadline from "@/public/deadline.png";
 import Award from "@/public/award.png";
 import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Accountants Coventry UK | Expert Accountants in Coventry",
@@ -317,6 +319,9 @@ export default function Coventry() {
 					</p>
 				</div>
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

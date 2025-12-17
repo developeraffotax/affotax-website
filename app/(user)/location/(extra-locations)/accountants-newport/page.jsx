@@ -12,6 +12,8 @@ import {
 	icon3,
 	icon4,
 } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Chartered Accountants Newport | Top Accountants in Newport",
@@ -345,6 +347,9 @@ Company Formation: Starting a new business? We assist with the entire company fo
 
 				</p>
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

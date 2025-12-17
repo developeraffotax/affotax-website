@@ -5,6 +5,7 @@ import OurServices from "./OurServices";
 import WhatIsSoleTrader from "./WhatIsSoleTrader";
 
 import InstantQuoteForm from "./InstantQuoteForm";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
 
 
 
@@ -18,6 +19,7 @@ export default function SoleTraders() {
 				<WhyChooseUs /> */}
 				<OurServices />
 				<InstantQuoteForm />
+				<TrustPilotReviews />
 				<EmailPhone />
             </div>
 		</>

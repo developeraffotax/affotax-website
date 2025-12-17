@@ -12,6 +12,8 @@ import {
 	icon3,
 	icon4,
 } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Accountants in Dundee Scotland | Top Accountants Dundee",
@@ -332,6 +334,9 @@ Starting a new business? Our company formation services in Dundee help you set u
 
 				</p>
 			</section>
+
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

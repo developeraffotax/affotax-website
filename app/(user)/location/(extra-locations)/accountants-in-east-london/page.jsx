@@ -8,6 +8,8 @@ import Support from "@/public/support.png";
 
 import Image from "next/image";
 import { hero, icon1, icon2, icon3, icon4 } from "@/public/assets/extra-locations";
+import TrustPilotReviews from "@/components/Home/Subpages/TrustPilotReviews";
+import EmailPhone from "@/components/Home/Subpages/EmailPhone";
 
 export const metadata = {
 	title: "Reliable and Online Accountants in East London",
@@ -329,6 +331,8 @@ export default function EastLondon() {
 					</div>
 				</div>
 			</section>
+			<TrustPilotReviews />
+						<EmailPhone />
 		</main>
 	);
 }

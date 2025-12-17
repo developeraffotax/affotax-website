@@ -4,11 +4,13 @@ import React, { useState } from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { LiaStarSolid } from "react-icons/lia";
+import { useTrustpilot } from "@/lib/useTrustpilot";
 
 export default function TrustPilotReviews() {
+	useTrustpilot()
 	return (
 		<>
-			<section className="py-16 relative w-full ">
+			<section className="py-16 relative w-full text-center">
 				<div className="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
 					<div
 						className="trustpilot-widget"
