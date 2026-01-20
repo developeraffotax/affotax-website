@@ -45,7 +45,7 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 						</div>
 					</div>
 
-					<div className=" w-[50%]  max-lg:w-full  max-lg:mb-4  ">
+					<div className=" w-[50%]  max-lg:w-full    ">
 						{/* <img
 							className="object-cover object-center rounded  drop-shadow-xl   "
 							alt="hero"
@@ -54,7 +54,7 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 						/>	 */}
 
 
-						<picture>
+						{/* <picture>
 							<source
 								media="(max-width: 768px)"
 								srcSet="/heroCompress.webp"
@@ -66,6 +66,26 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 								className="object-cover object-center rounded drop-shadow-xl"
 								alt="Online Accountant Services UK"
 								src="/heroCompress.webp"
+								decoding="async"
+								fetchpriority="high"
+								width="1200"
+								height="800"
+							/>
+						</picture> */}
+
+
+						<picture>
+							<source
+								media="(max-width: 768px)"
+								srcSet="/heroCompress4.png"
+								type="image/png"
+							/>
+							 
+							<source srcSet="/heroCompress4.png" type="image/png" />
+							<img
+								className="object-cover object-center rounded drop-shadow-xl"
+								alt="Online Accountant Services UK"
+								src="/heroCompress4.png"
 								decoding="async"
 								fetchpriority="high"
 								width="1200"
@@ -110,3 +130,102 @@ hover:shadow-md transition-all duration-300 hover:scale-105 ">
 		</section>
 	);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// "use client";
+
+// import React, { useContext } from "react";
+// import Link from "next/link";
+// import { QuoteFormContext } from "@/app/(user)/layout";
+// import TrustPilotSection from "./TrustPilotSection";
+
+// export default function HomeTop({ HeroSection, googleReviewsCount }) {
+//   const { heading, html, imageUrl } = JSON.parse(HeroSection);
+//   const gReviewsCount = JSON.parse(googleReviewsCount);
+//   const quoteContext = useContext(QuoteFormContext);
+
+//   return (
+//     <section className="w-full bg-slate-50 text-gray-600 newBg2">
+//       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+//         {/* HERO ROW */}
+//         <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
+//           {/* LEFT CONTENT */}
+//           <div className="flex flex-col items-start text-left max-w-xl w-full">
+//             <h1 className="text-4xl sm:text-5xl font-bold text-tertiary leading-tight mb-6">
+//               Online Accountants Services <br />
+//               UK’s Affordable Accounting Firm
+//             </h1>
+
+//             <div
+//               className="text-lg sm:text-xl text-tertiary/70 mb-8"
+//               dangerouslySetInnerHTML={{ __html: html }}
+//             />
+
+//             <div className="flex flex-wrap gap-4">
+//               <Link href="/services">
+//                 <button className="inline-flex items-center justify-center rounded-md border border-primary px-6 py-2 text-lg font-semibold text-primary shadow-md hover:bg-primary hover:text-secondary transition">
+//                   Services
+//                 </button>
+//               </Link>
+
+//               <button
+//                 onClick={quoteContext.showModal}
+//                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-lg font-semibold text-secondary shadow-md hover:bg-transparent hover:text-primary hover:border hover:border-primary transition"
+//               >
+//                 Get a Quote
+//               </button>
+//             </div>
+//           </div>
+
+//           {/* RIGHT IMAGE */}
+//           <div className="w-full max-w-xl">
+//             <picture>
+//               <source
+//                 media="(max-width: 768px)"
+//                 srcSet="/heroCompress2.png"
+//                 type="image/png"
+//               />
+//               <img
+//                 src="/heroCompress2.png"
+//                 alt="Online Accountant Services UK"
+//                 className="w-full h-auto rounded-xl drop-shadow-xl object-cover"
+//                 decoding="async"
+//                 fetchPriority="high"
+//                 width="1200"
+//                 height="800"
+//               />
+//             </picture>
+//           </div>
+//         </div>
+
+//         {/* TRUST SECTION */}
+//         <div className="mt-16 flex flex-col lg:flex-row items-center justify-between gap-8">
+//           <TrustPilotSection gReviewsCount={gReviewsCount} />
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
