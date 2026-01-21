@@ -45,7 +45,7 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 						</div>
 					</div>
 
-					<div className=" w-[50%]  max-lg:w-full    ">
+					<div className=" w-[50%]  max-lg:w-full  lg:ml-16  ">
 						{/* <img
 							className="object-cover object-center rounded  drop-shadow-xl   "
 							alt="hero"
@@ -77,15 +77,15 @@ export default function HomeTop({ HeroSection, googleReviewsCount }) {
 						<picture>
 							<source
 								media="(max-width: 768px)"
-								srcSet="/heroCompress4.png"
+								srcSet="/heroCompress5.png"
 								type="image/png"
 							/>
 							 
-							<source srcSet="/heroCompress4.png" type="image/png" />
+							<source srcSet="/heroCompress5.png" type="image/png" />
 							<img
 								className="object-cover object-center rounded drop-shadow-xl"
 								alt="Online Accountant Services UK"
-								src="/heroCompress4.png"
+								src="/heroCompress5.png"
 								decoding="async"
 								fetchpriority="high"
 								width="1200"
@@ -169,18 +169,18 @@ hover:shadow-md transition-all duration-300 hover:scale-105 ">
 
 //   return (
 //     <section className="w-full bg-slate-50 text-gray-600 newBg2">
-//       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+//       <div className="mx-auto max-w-[1340px] px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
 //         {/* HERO ROW */}
-//         <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
+//         <div className="flex flex-col-reverse lg:flex-row  items-center gap-16">
 //           {/* LEFT CONTENT */}
 //           <div className="flex flex-col items-start text-left max-w-xl w-full">
-//             <h1 className="text-4xl sm:text-5xl font-bold text-tertiary leading-tight mb-6">
+//             <h1 className="text-3xl sm:text-[2.6rem] font-bold text-tertiary leading-tight mb-6">
 //               Online Accountants Services <br />
 //               UK’s Affordable Accounting Firm
 //             </h1>
 
 //             <div
-//               className="text-lg sm:text-xl text-tertiary/70 mb-8"
+//               className="text-lg sm:text-xl text-tertiary/70 mb-8 "
 //               dangerouslySetInnerHTML={{ __html: html }}
 //             />
 
@@ -205,11 +205,11 @@ hover:shadow-md transition-all duration-300 hover:scale-105 ">
 //             <picture>
 //               <source
 //                 media="(max-width: 768px)"
-//                 srcSet="/heroCompress2.png"
+//                 srcSet="/heroCompress4.png"
 //                 type="image/png"
 //               />
 //               <img
-//                 src="/heroCompress2.png"
+//                 src="/heroCompress4.png"
 //                 alt="Online Accountant Services UK"
 //                 className="w-full h-auto rounded-xl drop-shadow-xl object-cover"
 //                 decoding="async"
