@@ -85,6 +85,11 @@ const menu = [
                 name: '30-Min Accountant Consultation',
                 link: '/consultation',
             },
+
+			{
+                name: 'Companies House Identity Verification',
+                link: '/companies-house-identity-verification',
+            },
 		],
 	},
 	{

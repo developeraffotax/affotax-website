@@ -207,6 +207,15 @@ export default function Footer() {
 									LLP Accounts
 								</Link>
 							</li>
+
+							<li>
+								<Link
+									href={"/services/identity-verification-for-companies-house"}
+									className="text-gray-600 hover:text-primary text-xs font-semibold"
+								>
+									Companies House Identity Verification
+								</Link>
+							</li>
 						</ul>
 					</div>
 					<div className="lg:w-1/4 md:w-1/2 w-full px-4">
