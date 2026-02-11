@@ -12,7 +12,7 @@ export default function TrustPilotSection({ gReviewsCount, tReviewsCount }) {
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
-						href="https://www.google.com/search?q=Affotax+Reviews"
+						href="https://www.google.com/search?q=Affotax+London+Reviews"
 					>
 						{/* Top Section */}
 						<div className="w-[200px]   flex justify-center items-center gap-4">
