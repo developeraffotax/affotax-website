@@ -12,12 +12,7 @@ import SuggestedPackages from "./SuggestedPackages";
 import { CartContext } from "@/app/(user)/layout";
 import axios from "axios";
 
-
-
-
 export default function Cart() {
-
-
 	const [cartItemsArr, setCartItemsArr] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
 
@@ -37,18 +32,12 @@ export default function Cart() {
 
 	// 		const idsArr = localStorage.getItem("price_id")?.split(",") || [];
 
-
-
 	// 		let tempArr = [];
-
-
-
 
 	// 		idsArr.forEach((_id) => {																		 // NEW LOGIC TO SHOW ITEMS IN CART
 	// 			dataArr.forEach((el) => {
 	// 				el.prices.forEach((element) => {
 	// 					if (element._id === _id) {
-
 
 	// 						if (localStorage.getItem('addon_id')) {
 
@@ -72,12 +61,7 @@ export default function Cart() {
 
 	// 							}
 
-
 	// 						}
-
-
-
-
 
 	// 						element.pageTitle = el.title;
 	// 						tempArr.unshift(element);
@@ -87,8 +71,6 @@ export default function Cart() {
 	// 			});
 	// 		});
 
-
-
 	// 		setCartItemsArr(tempArr);
 	// 		//calculateTotalPrice()
 
@@ -97,82 +79,72 @@ export default function Cart() {
 	// 	getAndSetData();
 	// }, []);
 
+	useEffect(() => {
 
 
+		const idsArr = localStorage.getItem("price_id")?.split(",") || [];
+		const addonIds = localStorage.getItem("addon_id")?.split(",") || [];
 
+		const getAndSetData = async () => {
+			try {
+				setIsLoading(true);
+				const { data } = await axios.post(
+					"/api/service-page/get-cart-items",
+					{
+						ids: idsArr?.filter(Boolean),
+					},
+				);
 
+				if (!data) return;
 
+				// ✅ Build a Map of all prices by id for O(1) lookup
+				const priceMap = new Map();
+				data.forEach((service) => {
+					service.prices.forEach((priceObj) => {
+						// keep reference to parent title for later use
+						priceMap.set(priceObj._id, {
+							...priceObj,
+							pageTitle: service.title,
+						});
+					});
+				});
 
+				let tempArr = [];
+				idsArr.forEach((_id) => {
+					const element = priceMap.get(_id);
+					if (element) {
+						// ✅ Handle addons
+						if (addonIds.length && element.addOns?.length > 0) {
+							element.addOns = element.addOns.map((addOn) => {
+								if (addonIds.includes(addOn._id)) {
+									addOn.isChecked = true;
+									element.price = (
+										+element.price + +addOn.price
+									).toString();
+								}
+								return addOn;
+							});
+						}
 
+						tempArr.unshift(element);
+					}
+				});
 
-useEffect(() => {
-  const getAndSetData = async () => {
-    setIsLoading(true);
-    const res = await axios.get("/api/service-page/get-all");
-    setIsLoading(false);
+				setCartItemsArr(tempArr);
+			} catch (error) {
+				console.log("Error occured!", error);
+			} finally {
+				setIsLoading(false);
+			}
+		};
 
-    let dataArr = res.data;
-    const idsArr = localStorage.getItem("price_id")?.split(",") || [];
-    const addonIds = localStorage.getItem("addon_id")?.split(",") || [];
-
-    // ✅ Build a Map of all prices by id for O(1) lookup
-    const priceMap = new Map();
-    dataArr.forEach((service) => {
-      service.prices.forEach((priceObj) => {
-        // keep reference to parent title for later use
-        priceMap.set(priceObj._id, { ...priceObj, pageTitle: service.title });
-      });
-    });
-
-    let tempArr = [];
-
-    idsArr.forEach((_id) => {
-      const element = priceMap.get(_id);
-      if (element) {
-        // ✅ Handle addons
-        if (addonIds.length && element.addOns?.length > 0) {
-          element.addOns = element.addOns.map((addOn) => {
-            if (addonIds.includes(addOn._id)) {
-              addOn.isChecked = true;
-              element.price = (
-                +element.price + +addOn.price
-              ).toString();
-            }
-            return addOn;
-          });
-        }
-
-        tempArr.unshift(element);
-      }
-    });
-
-    setCartItemsArr(tempArr);
-  };
-
-  getAndSetData();
-}, []);
-
-
-
-
-
-
-
-
-
-
-
-
-
+		getAndSetData();
+	}, []);
 
 	useEffect(() => {
 		calculateTotalPrice();
 		cartContext.setCartItems(cartItemsArr.length);
 	});
-
-
-
-
 
 	const removeFromCartHandler = (_id) => {
 		const old_ids = localStorage.getItem("price_id");
@@ -185,8 +157,6 @@ useEffect(() => {
 		//need to edi here
 		let arr = [...cartItemsArr];
 
-
-
 		const res = arr.filter((el) => {
 			return el._id !== _id;
 		});
@@ -194,9 +164,6 @@ useEffect(() => {
 		setCartItemsArr(res);
 		//calculateTotalPrice();
 	};
-
-
-
 
 	const calculateTotalPrice = () => {
 		const tPrice = cartItemsArr.reduce((acc, cur) => {
@@ -230,7 +197,10 @@ useEffect(() => {
 							/>
 
 							<TotalPrice totalPrice={totalPrice} />
-							<CheckoutBtn cartItemsArr={cartItemsArr} totalPrice={totalPrice} />
+							<CheckoutBtn
+								cartItemsArr={cartItemsArr}
+								totalPrice={totalPrice}
+							/>
 
 							<SuggestedPackages
 								setCartItemsArr={setCartItemsArr}
