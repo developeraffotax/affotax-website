@@ -22,6 +22,7 @@ export async function DELETE(request, {params}) {
 		console.log(res);
 
 		revalidatePath('/services')
+		revalidatePath(`/${params.slug}`);
 
 
 		return new Response(JSON.stringify(res), {
@@ -59,7 +60,8 @@ export async function POST(request, {params}) {
 
 
 		console.log(page)
-		revalidatePath('/services')
+		revalidatePath('/services');
+		revalidatePath(`/${params.slug}`);
 
 		return new Response(JSON.stringify(page), {
 			status: 201,

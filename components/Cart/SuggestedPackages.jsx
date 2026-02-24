@@ -12,6 +12,8 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 	const [arr, setArr] = useState([]);
 
 
+	console.log("CART ITEMS ARR", cartItemsArr)
+
 	useEffect(() => {
 		
 
@@ -20,7 +22,30 @@ export default function SuggestedPackages({cartItemsArr, setCartItemsArr}) {
 			const res = await axios.get('/api/service-page/get-all');
 
 
+// 			const service = await Service.findOne({ link: req.params.link })
+//   .populate("suggestedPackages.service");
+
+			// send ids of the current cart services 
+			// OR directly use this cartItemsArr
+			// const res = await axios.post('/api/service-page/get-suggestions');
+
+
 			const dataArr = res.data;
+
+
+
+
+// 			const suggestions = service.suggestedPackages.map(pkg => {
+//   const selectedPrice = pkg.service.prices.find(
+//     p => p._id.toString() === pkg.priceId.toString()
+//   );
+
+//   return {
+//     ...selectedPrice,
+//     pageTitle: pkg.service.title,
+//     serviceLink: pkg.service.link
+//   };
+// });
 
 
 			
