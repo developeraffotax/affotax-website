@@ -13,7 +13,7 @@ export async function POST(req) {
   // ✅ Find only services that contain matching price IDs
   const pages = await ServicePage.find({
     "prices._id": { $in: ids },
-  });
+  }).lean();
 
   // ✅ Filter only required prices
   const filtered = [];
