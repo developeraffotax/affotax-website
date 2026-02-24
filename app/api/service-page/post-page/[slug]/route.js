@@ -56,6 +56,18 @@ export async function POST(request, {params}) {
 		const db = await connectDB();
 
 
+
+		 
+		if (servicePage?.link) {
+		const trimmedLink = servicePage.link.trim().toLowerCase();
+
+		servicePage.pageType = trimmedLink.startsWith("landing-")
+			? "pricing_only"
+			: "service";
+		}
+		
+
+
 		const page = await ServicePage.updateOne({link: params.slug}, {$set : servicePage})
 
 

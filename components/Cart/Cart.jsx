@@ -18,7 +18,13 @@ export default function Cart() {
 
 	const [isLoading, setIsLoading] = useState(true);
 
+
+	const [suggestedPackages, setSuggestedPackages] = useState([]);
+
+
 	const cartContext = useContext(CartContext);
+
+	
 
 	// useEffect(() => {
 	// 	const getAndSetData = async () => {
@@ -95,11 +101,32 @@ export default function Cart() {
 					},
 				);
 
+
+
+				console.log("THE SERVICE PAGES ARE", data)
+
 				if (!data) return;
 
-				// ✅ Build a Map of all prices by id for O(1) lookup
+								// 🔥 Extract suggested packages from services
+				let suggested = [];
+						let tempArr = [];
+						
 				const priceMap = new Map();
+
+
+				// ✅ Build a Map of all prices by id for O(1) lookup
 				data.forEach((service) => {
+
+				if (service.suggestedPackages?.length ) {
+					const filtered = service.suggestedPackages.filter( pkg => !idsArr?.includes(pkg.priceId) );
+
+					console.log("THE FILTERED", filtered)
+
+
+					suggested.push(...filtered);
+					}
+
+
 					service.prices.forEach((priceObj) => {
 						// keep reference to parent title for later use
 						priceMap.set(priceObj._id, {
@@ -109,7 +136,7 @@ export default function Cart() {
 					});
 				});
 
-				let tempArr = [];
+		
 				idsArr.forEach((_id) => {
 					const element = priceMap.get(_id);
 					if (element) {
@@ -130,6 +157,14 @@ export default function Cart() {
 					}
 				});
 
+
+
+
+
+					console.log("SUGGESTED", suggested)
+
+
+				 	setSuggestedPackages(suggested);
 				setCartItemsArr(tempArr);
 			} catch (error) {
 				console.log("Error occured!", error);
@@ -205,6 +240,7 @@ export default function Cart() {
 							<SuggestedPackages
 								setCartItemsArr={setCartItemsArr}
 								cartItemsArr={cartItemsArr}
+								suggestedPackages={suggestedPackages}
 								removeFromCartHandler={removeFromCartHandler}
 							/>
 						</div>

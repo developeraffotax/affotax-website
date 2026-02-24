@@ -25,6 +25,14 @@ export async function POST(request) {
 			});
 		}
 
+
+		if (servicePage?.link) {
+		const trimmedLink = servicePage.link.trim().toLowerCase();
+
+		servicePage.pageType = trimmedLink.startsWith("landing-")
+			? "pricing_only"
+			: "service";
+		}
 		
 		const page = new ServicePage(servicePage);
 		const doc = await page.save();
