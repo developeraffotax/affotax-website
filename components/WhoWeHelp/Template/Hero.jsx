@@ -14,7 +14,7 @@ export default function Hero({heading, html, imageUrl, btnText, btnLink}) {
 					<h1 className="mt-8 pb-8 max-lg:mt-0 leading-relaxed  text-start bg-gradient-to-br from-orange-700 via-orange-500 via-50% to-orange-800 bg-clip-text  max-lg:text-5xl  font-bold text-transparent sm:max-w-3xl sm:text-6xl">
 					{heading}
 					</h1>
-					<span className=" max-w-2xl text-start text-xl leading-relaxed text-gray-800" dangerouslySetInnerHTML={{__html: html}}>
+					<span className=" max-w-2xl text-start text-xl leading-relaxed text-gray-800" dangerouslySetInnerHTML={{__html: html ? String(html) : "",}}>
 						
 
 
@@ -32,7 +32,7 @@ export default function Hero({heading, html, imageUrl, btnText, btnLink}) {
 				</div>
 
 				<div className="flex-1 flex flex-row justify-start items-start -mt-10  max-lg:m-0 ">
-					<Image src={imageUrl} cover className="scale-90" height={500} width={500} />
+					{/* <Image src={imageUrl} cover className="scale-90" height={500} width={500} /> */}
 				</div>
 				</div>
 			</div>
