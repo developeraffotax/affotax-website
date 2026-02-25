@@ -340,7 +340,7 @@ export default function RootLayout({ children }) {
 						setDefaultOpenKeys(["blog"]);
 
 						//router.push("/admin/create-blog");
-						startTransition(() => router.push("/admin/create-blog"));
+						startTransition(() => router.push("/admin/view-blogs"));
 					},
 				},
 			],
