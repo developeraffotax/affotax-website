@@ -73,7 +73,11 @@ export async function POST(request, {params}) {
 
 		console.log(page)
 		revalidatePath('/services');
-		revalidatePath(`/${params.slug}`);
+
+		if(servicePage.pageType === "service") {
+			revalidatePath(`/${params.slug}`);
+
+		}
 
 		return new Response(JSON.stringify(page), {
 			status: 201,

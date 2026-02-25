@@ -32,7 +32,7 @@ export const dynamic = "force-static";
 export async function generateStaticParams() {
   await connectDB();
 
-  const services = await ServicePage.find().select("link");
+  const services = await ServicePage.find({pageType: "service"}).select("link");
   const pages = await Page.find().select("slug");
 
   const predefined = [
@@ -152,7 +152,7 @@ export async function generateMetadata({ params }) {
 
   await connectDB();
 
-  const serviceData = await ServicePage.findOne({ link: slug });
+  const serviceData = await ServicePage.findOne({ link: slug, pageType: "service" });
   if (serviceData) {
     return {
       title: serviceData.metaTitle,
@@ -212,7 +212,7 @@ export default async function ServicesPage({ params }) {
   await connectDB();
 
   // Dynamic Service Page
-  const serviceData = await ServicePage.findOne({ link: slug });
+  const serviceData = await ServicePage.findOne({ link: slug, pageType: "service"  });
   if (serviceData) {
     return (
       <Service jsonData={JSON.stringify(serviceData)} />

@@ -38,7 +38,10 @@ export async function POST(request) {
 		const doc = await page.save();
 
 		revalidatePath('/services');
-		revalidatePath(`/${servicePage.link}`);
+		if(servicePage.pageType === "service") {
+			revalidatePath(`/${servicePage.link}`);
+
+		}
 
 		return new Response(JSON.stringify(doc), {
 			status: 201,
