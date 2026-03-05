@@ -152,6 +152,14 @@ export default function Footer() {
 						<ul className="list-none mb-10">
 							<li>
 								<Link
+									href={"/services/uk-ltd-company-formation-services"}
+									className="text-gray-600 hover:text-primary text-xs font-semibold"
+								>
+									Company Formation
+								</Link>
+							</li>
+							<li>
+								<Link
 									href={"/services/online-annual-accounts-services"}
 									scroll={true}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
@@ -213,7 +221,7 @@ export default function Footer() {
 									href={"/services/identity-verification-for-companies-house"}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
-									Companies House Identity Verification
+									Identity Verification
 								</Link>
 							</li>
 						</ul>
