@@ -20,7 +20,7 @@ export default function Template({ jsonPage }) {
 
 				{ContentWithImageSection && ContentWithImageSection.map((el, index) => {
 						return (
-							<ContentWithImage key={`ContentWithImage-${i}`} {...el} index={index} />
+							<ContentWithImage key={`ContentWithImage-${index}`} {...el} index={index} />
 						);
 					})}
 

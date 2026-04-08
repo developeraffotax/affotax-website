@@ -25,6 +25,15 @@ export default function ContentWithImage({slug, heading, html, imageUrl, imagePo
 
 					<div className="   flex flex-row justify-start text-start items-start rounded-[300px]  w-[40%]  max-lg:w-[80%] ">
 						{/* <Image src={imageUrl} cover className="" height={500} width={500} /> */}
+						<img
+								className="object-cover object-center rounded drop-shadow-xl"
+								alt={heading}
+								src={imageUrl}
+								decoding="async"
+								fetchpriority="high"
+								width="1200"
+								height="800"
+							/>
 					</div>
 
 				</div>

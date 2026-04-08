@@ -33,6 +33,22 @@ export default function Hero({heading, html, imageUrl, btnText, btnLink}) {
 
 				<div className="flex-1 flex flex-row justify-start items-start -mt-10  max-lg:m-0 ">
 					{/* <Image src={imageUrl} cover className="scale-90" height={500} width={500} /> */}
+					 
+							 
+							 
+							 
+							<img
+								className="object-cover object-center rounded drop-shadow-xl"
+								alt={heading}
+								src={imageUrl}
+								decoding="async"
+								fetchpriority="high"
+								width="1200"
+								height="800"
+							/>
+					 
+
+
 				</div>
 				</div>
 			</div>
