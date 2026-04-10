@@ -12,7 +12,7 @@ import Page from "@/lib/Model/Page/Page";
 
 
 
-
+export const dynamic = "force-dynamic";
 
 
 

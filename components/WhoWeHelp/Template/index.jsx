@@ -13,10 +13,12 @@ export default function Template({ jsonPage }) {
 
 	const { HeroSection, ContentWithImageSection, OurServicesSection, WhyChooseUsSection, } = page;
 
+	console.log("HERO SECTION", HeroSection)
+
 	return (
 		<>
 			<div className="w-full font-poppins">
-				{HeroSection && <Hero {...HeroSection} />}
+				{HeroSection && HeroSection?.heading && <Hero {...HeroSection} />}
 
 				{ContentWithImageSection && ContentWithImageSection.map((el, index) => {
 						return (

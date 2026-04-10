@@ -57,7 +57,7 @@ export async function createNewPage(formData) {
         })
 
 		const pageDoc = await page.save();
-		revalidatePath('/')
+		revalidatePath(`/${slug}`);
 		return {
 			success: true,
 		};
@@ -87,7 +87,7 @@ export async function deleteNewPage(formData) {
 		const {acknowledged} = await Page.deleteOne({slug: slug});
 		
 		if(acknowledged) {
-			revalidatePath('/')
+			revalidatePath(`/${slug}`);
 			return {
 				success: true,
 			};
@@ -154,6 +154,8 @@ export async function createHeroSection(formData) {
 			};
 		}
 
+		revalidatePath(`/${slug}`);
+
 		return {
 			success: true,
 		};
@@ -189,6 +191,8 @@ export async function deleteHeroSection(formData) {
 				success: false,
 			};
 		}
+
+		revalidatePath(`/${slug}`);
 
 		return {
 			success: true,
@@ -237,6 +241,8 @@ export async function createContentWithImageSection(formData) {
 			};
 		}
 
+		revalidatePath(`/${slug}`);
+
 		return {
 			success: true,
 		};
@@ -284,6 +290,8 @@ export async function 	updateContentWithImageSection(formData) {
 			};
 		}
 
+		revalidatePath(`/${slug}`);
+
 		return {
 			success: true,
 		};
@@ -317,6 +325,8 @@ export async function 	deleteContentWithImageSection(formData) {
 				success: false,
 			};
 		}
+
+		revalidatePath(`/${slug}`);
 
 		return {
 			success: true,
@@ -371,6 +381,8 @@ export async function createOurServicesSection(formData) {
 			};
 		}
 
+		revalidatePath(`/${slug}`);
+
 		return {
 			success: true,
 		};
@@ -404,7 +416,10 @@ export async function deleteOurServicesSection(formData) {
 			return {
 				success: false,
 			};
-		}
+		}	
+
+
+		revalidatePath(`/${slug}`);
 
 		return {
 			success: true,
@@ -459,6 +474,8 @@ export async function createWhyChooseUsSection(formData) {
 			};
 		}
 
+		revalidatePath(`/${slug}`);
+
 		return {
 			success: true,
 		};
@@ -497,7 +514,9 @@ export async function deleteWhyChooseUsSection(formData) {
 			return {
 				success: false,
 			};
-		}
+		}	
+
+		revalidatePath(`/${slug}`);
 
 		return {
 			success: true,
