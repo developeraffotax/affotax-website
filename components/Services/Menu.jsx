@@ -89,6 +89,11 @@ const menu = [
                 name: 'Companies House Identity Verification',
                 link: '/companies-house-identity-verification',
             },
+
+            {
+                name: 'UK Trademark Registration',
+                link: '/uk-trademark-registration-services',
+            },
         ],
     },
     {

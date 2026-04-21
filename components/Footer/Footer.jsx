@@ -224,6 +224,17 @@ export default function Footer() {
 									Identity Verification
 								</Link>
 							</li>
+
+							<li>
+								<Link
+									href={"/uk-trademark-registration-services"}
+									className="text-gray-600 hover:text-primary text-xs font-semibold"
+								>
+									UK Trademark Registration
+								</Link>
+							</li>
+
+
 						</ul>
 					</div>
 					<div className="lg:w-1/4 md:w-1/2 w-full px-4">
