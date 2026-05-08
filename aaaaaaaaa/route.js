@@ -20,38 +20,26 @@ function generateRandomNumber() {
 	return sevenDigitNumber;
 }
 
-
-
 function calculateFeeAmountGBP(orderAmountGBP) {
 	const feePercent = 0.029; // 2.9%
-	const fixedFee = 0.20;    // £0.20
-  
+	const fixedFee = 0.2; // £0.20
+
 	const gross = (orderAmountGBP + fixedFee) / (1 - feePercent);
 	const fee = gross - orderAmountGBP;
-  
+
 	return parseFloat(fee.toFixed(2));
-  }
-
-
-
-
-
+}
 
 export async function POST(req) {
-	const { cartItemsArr, totalPrice, selectedPriceIds, addOnIds } = await req.json();
-	
-	
+	const { cartItemsArr, totalPrice, selectedPriceIds, addOnIds } =
+		await req.json();
+
 	const headersList = await headers();
 	const origin = headersList.get("origin");
-	
+
 	const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-
-	
-
 	try {
-
-
 		//---------------------------------Logic to save order with original items from the db--------------------------------------->
 
 		const db = await connectDB();
@@ -59,7 +47,10 @@ export async function POST(req) {
 		const orderNumber = generateRandomNumber();
 
 		const pricePromises = selectedPriceIds.map((el) => {
-			return ServicePage.findOne( { "prices._id": el.priceId }, { prices: { $elemMatch: { _id: el.priceId } }, title: 1 } ).lean();
+			return ServicePage.findOne(
+				{ "prices._id": el.priceId },
+				{ prices: { $elemMatch: { _id: el.priceId } }, title: 1 },
+			).lean();
 		});
 
 		const docs = await Promise.all(pricePromises);
@@ -81,8 +72,10 @@ export async function POST(req) {
 			});
 		});
 
-
-		const totalPriceIncludingServiceFee = (+totalPrice + +totalPrice * (0 / 100)).toFixed(2);  // total price including 20% service fee but without stripe processing fee
+		const totalPriceIncludingServiceFee = (
+			+totalPrice +
+			+totalPrice * (0 / 100)
+		).toFixed(2); // total price including 20% service fee but without stripe processing fee
 
 		let newOrderData = {
 			items: pricesArr.map((el) => ({
@@ -92,17 +85,22 @@ export async function POST(req) {
 				price: el.price,
 				addOns: el.addOns,
 			})),
-			totalPriceWithoutVat:  (+totalPrice).toFixed(2).toString(2),  // its the total price wihout vat & stripe processing fee
-			
-			totalPrice: (+totalPriceIncludingServiceFee + calculateFeeAmountGBP(+totalPriceIncludingServiceFee)).toFixed(2).toString(2),  // its the total price including vat(20 %) & stripe processing fee
+			totalPriceWithoutVat: (+totalPrice).toFixed(2).toString(2), // its the total price wihout vat & stripe processing fee
+
+			totalPrice: (
+				+totalPriceIncludingServiceFee +
+				calculateFeeAmountGBP(+totalPriceIncludingServiceFee)
+			)
+				.toFixed(2)
+				.toString(2), // its the total price including vat(20 %) & stripe processing fee
 			// payment_id: paymentId,
 			// customer_id: customerDoc._id,
 			orderNumber: orderNumber,
 			payment_status: "pending",
-			vat: (+totalPrice * (0 / 100)).toFixed(2).toString(2)
-		};
 
-		 
+			//********** convertin int into string? **************/
+			vat: (+totalPrice * (0 / 100)).toFixed(2).toString(2),
+		};
 
 		const order = new Order(newOrderData);
 
@@ -111,8 +109,7 @@ export async function POST(req) {
 		//---------------------------------Logic to get session from stripe & passing cartitems from client not secure btw--------------------------------------->
 		const newCartArr = [...cartItemsArr];
 
-		
-		// pushing the 20% service fee 
+		// pushing the 20% service fee
 		// newCartArr.push({
 		// 	priceTitle: "Service Fee",
 		// 	pageTitle: "20%",
@@ -121,56 +118,58 @@ export async function POST(req) {
 
 		newCartArr.push({
 			priceTitle: "Stripe",
-			pageTitle:  "Card Processing Fee",
-			price: calculateFeeAmountGBP(+totalPriceIncludingServiceFee).toFixed(2),
+			pageTitle: "Card Processing Fee",
+			price: calculateFeeAmountGBP(
+				+totalPriceIncludingServiceFee,
+			).toFixed(2),
 		});
-
-		
 
 		const session = await stripe.checkout.sessions.create({
 			payment_method_types: ["card"],
 			line_items: newCartArr.map((item) => {
+				const alsoIncludedTitleArr = item?.addOns
+					?.filter((addOn) => {
+						if (addOn.isChecked) {
+							return true;
+						}
+					})
+					.map((addOn) => `${addOn.priceTitle} Included `);
 
-				const alsoIncludedTitleArr = item?.addOns?.filter((addOn) => {
-					if (addOn.isChecked) {
-						return true;
-					}
-				}).map((addOn) => `${addOn.priceTitle} Included `)
+				const alsoIncludedTitleString =
+					alsoIncludedTitleArr?.join(", ");
 
-				const alsoIncludedTitleString = alsoIncludedTitleArr?.join(", ")
+				console.log(alsoIncludedTitleArr);
 
-				console.log(alsoIncludedTitleArr)
+				return {
+					price_data: {
+						currency: "gbp",
 
-				return (
-					{
-						price_data: {
-							currency: "gbp",
-		
-							product_data: {
-								name: `${item.priceTitle} | ${item.pageTitle}. ${alsoIncludedTitleString ? alsoIncludedTitleString : ''}`,
-							},
-		
-							unit_amount: +(+item.price * 100).toFixed(2), // Amount in cents
+						product_data: {
+							name: `${item.priceTitle} | ${item.pageTitle}. ${alsoIncludedTitleString ? alsoIncludedTitleString : ""}`,
 						},
-						quantity: item.quantity || 1,
-					}
-				)
+
+						unit_amount: +(+item.price * 100).toFixed(2), // Amount in cents
+					},
+					quantity: item.quantity || 1,
+				};
 			}),
 			mode: "payment",
 
-			//success_url: `${origin}/order-success?success=true&orderNumber=${orderNumber}&session_id={CHECKOUT_SESSION_ID}`,
 			success_url: `${origin}/order-success?success=true&orderNumber=${orderNumber}&session_id={CHECKOUT_SESSION_ID}&amt=${newOrderData.totalPrice}`,
 			cancel_url: `${origin}/?canceled=true`,
 
 			metadata: {
 				orderNumber: orderNumber,
 			},
-		})
+		});
 
-		return new Response( JSON.stringify({ url: session.url,  }), { status: 200 }
-		);
+		return new Response(JSON.stringify({ url: session.url }), {
+			status: 200,
+		});
 	} catch (error) {
 		console.error(error);
-		return new Response(JSON.stringify({ error: error.message }), { status: 500, });
+		return new Response(JSON.stringify({ error: error.message }), {
+			status: 500,
+		});
 	}
 }
