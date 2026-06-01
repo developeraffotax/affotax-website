@@ -93,7 +93,7 @@ const Form = () => {
         <div className='flex flex-col w-[40%] max-lg:w-full gap-4 max-lg:hidden'>
             <h2 className='text-primary text-6xl font-semibold '>Get In Touch</h2>
             <p>Fill out the form and a member of our team will be in touch soon.</p>
-            <Link href='https://wa.me/447723143223' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Whatsapp} alt='whatsapp'/> Whatsapp </Link>
+            <Link href='https://wa.me/447537188920' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Whatsapp} alt='whatsapp'/> Whatsapp </Link>
             <Link href='https://www.instagram.com/affotax_/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Instagram} alt='instagram'/> Instagram</Link>
             <Link href='https://www.facebook.com/affotax/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Facebook} alt='facebook'/> Facebook</Link>
             <Link href='https://www.linkedin.com/company/affotax/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={LinkedIn} alt='linkedin'/> LinkedIn</Link>
@@ -103,7 +103,7 @@ const Form = () => {
             <h2 className='text-primary text-5xl font-semibold '>Get In Touch</h2>
             <p>Fill out the form and a member of our team will be in touch soon.</p>
             <div className='grid grid-cols-2 gap-3 '>
-            <Link href='https://wa.me/447723143223' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Whatsapp} alt='whatsapp'/> Whatsapp </Link>
+            <Link href='https://wa.me/447537188920' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Whatsapp} alt='whatsapp'/> Whatsapp </Link>
             <Link href='https://www.instagram.com/affotax_/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Instagram} alt='instagram'/> Instagram</Link>
             <Link href='https://www.facebook.com/affotax/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={Facebook} alt='facebook'/> Facebook</Link>
             <Link href='https://www.linkedin.com/company/affotax/' className='flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary '><Image src={LinkedIn} alt='linkedin'/> LinkedIn</Link>

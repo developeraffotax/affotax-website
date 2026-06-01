@@ -54,7 +54,7 @@ export default function Footer() {
 
 						<div className="grid grid-cols-4 gap-2  ">
 							<Link
-								href="https://wa.me/447723143223"
+								href="https://wa.me/447537188920"
 								className="flex flex-row w-10 items-center gap-4 font-semibold text-xl hover:text-primary hover:scale-110 transition-all duration-300 "
 							>
 								<Image src={Whatsapp} alt="whatsapp" />{" "}
