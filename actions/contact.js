@@ -23,17 +23,38 @@ export async function sendMessage(prevState, formData) {
 			"recaptchaToken"
 		);
 
-	if(!name || name.trim().length === 0 || !email || !message || service === "No Service Selected") {
-		return {
-			success: false,
-			message: "All fields are required. Validation Failed",
-		};
-	}
+		if (!name || name.trim().length === 0) {
+			return {
+				success: false,
+				message: "Please enter your name.",
+			};
+		}
+
+		if (!email || email.trim().length === 0) {
+			return {
+				success: false,
+				message: "Please enter your email address.",
+			};
+		}
+
+		if (!message || message.trim().length === 0) {
+			return {
+				success: false,
+				message: "Please enter your message.",
+			};
+		}
+
+		if (service === "No Service Selected") {
+			return {
+				success: false,
+				message: "Please select a service.",
+			};
+		}
 
 
 
 	if (!/\s/.test(message) || !/[a-z]{3,}/i.test(message)) {
-		return { success: false, message: "Invalid Message" };
+		return { success: false, message:  "Please enter a valid message with at least two words."};
 	}
 
 
