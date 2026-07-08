@@ -373,7 +373,7 @@ export default function Footer() {
 			</div>
 			<div>
 				<p className="text-sm font-poppins  max-md:text-xs mb-2">
-					© Copyright 2023 Affotax - All Rights Reserved
+					© 2023-2026 Affotax - All Rights Reserved
 				</p>
 			</div>
 		</footer>
