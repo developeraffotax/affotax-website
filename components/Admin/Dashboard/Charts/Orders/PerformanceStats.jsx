@@ -182,7 +182,7 @@ const getSiteStats = useCallback(async () => {
   </div>
 </div>
 
-<div className="rounded-xl p-5 bg-gradient-to-br from-purple-50 to-purple-100 shadow-md flex items-center justify-between transition-all hover:scale-[1.02]">
+<div className="rounded-xl p-5 bg-gradient-to-br from-pink-50 to-pink-100 shadow-md flex items-center justify-between transition-all hover:scale-[1.02]">
   <div>
     <p className="text-sm text-gray-600">Unique Visitors</p>
     <h3 className="text-2xl font-bold text-gray-800">{uniqueVisitors.total}</h3>
@@ -190,7 +190,7 @@ const getSiteStats = useCallback(async () => {
       <ChangeLabel percent={uniqueVisitors.change} dateRange={dateRange} />
     </span>
   </div>
-  <div className="p-3 bg-purple-500 rounded-full text-white shadow-lg">
+  <div className="p-3 bg-pink-600 rounded-full text-white shadow-lg">
     <UserOutlined style={{ fontSize: "22px" }} />
   </div>
 </div>

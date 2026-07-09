@@ -4,6 +4,21 @@ import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
 
+
+ const formatCurrency = (value) => {
+  if (value >= 1_000_000) {
+    return `£${(value / 1_000_000).toFixed(value % 1_000_000 === 0 ? 0 : 1)}M`;
+  }
+
+  if (value >= 1_000) {
+    return `£${(value / 1_000).toFixed(value % 1_000 === 0 ? 0 : 1)}K`;
+  }
+
+  return `£${value}`;
+};
+
+
+
 export default function SalesChart({ dateRange, type,  }) {
   const [chartData, setChartData] = useState({
     categories: [],
@@ -11,6 +26,11 @@ export default function SalesChart({ dateRange, type,  }) {
     interval: ''
   });
   const [loading, setLoading] = useState(true);
+
+
+
+
+
 
   useEffect(() => {
     const fetchChartData = async () => {
@@ -45,46 +65,40 @@ export default function SalesChart({ dateRange, type,  }) {
     fetchChartData();
   }, [ dateRange]);
 
-  const options = {
-    chart: {
-      type: type,
-      toolbar: { show: false },
-    },
-    xaxis: {
-      categories: chartData.categories,
-      title: { text: chartData.interval === "daily" ? "Days" : "Months" },
-      labels: { rotate: -45 },
-    },
-    yaxis: {
-      title: { text: "Sales" },
-      labels: {
-      formatter: (val) => `£${val}`, // GBP sign on Y-axis
-    },
-    },
-    stroke: { curve: "smooth" },
-    markers: { size: 4 },
-    colors: ["#14B8A6",  ],
-    dataLabels: {
-      enabled: true,
-      formatter: (val) => `£${val}`, // GBP sign on data labels
-    },
-    tooltip: {
-      y: {
-        formatter: (val) => `£${val} sales`,
-      },
-    },
-
-
-     plotOptions: {
-    bar: {
-      columnWidth: chartData.categories.length * 80 > 800 
-        ? "40%" // fallback to relative width
-        : `${(80 / (chartData.categories.length * 100)) * 10000}%`, 
-      // simpler: just lock columnWidth so they don’t exceed ~80px
-      columnWidth: "40%", // default
+const options = {
+  chart: {
+    type: type,
+    toolbar: { show: false },
+  },
+  xaxis: {
+    categories: chartData.categories,
+    title: { text: chartData.interval === "daily" ? "Days" : "Months" },
+    labels: { rotate: -45 },
+  },
+  yaxis: {
+    title: { text: "Sales" },
+    labels: {
+      formatter: formatCurrency,
     },
   },
-  };
+  stroke: { curve: "smooth" },
+  markers: { size: 4 },
+  colors: ["#14B8A6"],
+  dataLabels: {
+    enabled: true,
+    formatter: formatCurrency,
+  },
+  tooltip: {
+    y: {
+      formatter: (val) => `${formatCurrency(val)} sales`,
+    },
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: "40%",
+    },
+  },
+};
 
   const series = [
     {

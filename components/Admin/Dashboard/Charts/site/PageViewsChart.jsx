@@ -5,6 +5,21 @@ import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
 
+
+const formatNumber = (value) => {
+  if (value >= 1_000_000) {
+    return `${(value / 1_000_000).toFixed(value % 1_000_000 === 0 ? 0 : 1)}M`;
+  }
+
+  if (value >= 1_000) {
+    return `${(value / 1_000).toFixed(value % 1_000 === 0 ? 0 : 1)}K`;
+  }
+
+  return value.toString();
+};
+
+
+
 export default function PageViewsChart({ dateRange, type }) {
   const [chartData, setChartData] = useState({
     categories: [],
@@ -36,21 +51,37 @@ export default function PageViewsChart({ dateRange, type }) {
     fetchChartData();
   }, [dateRange]);
 
-  const options = {
-    chart: { type, toolbar: { show: false } },
-    xaxis: {
-      categories: chartData.categories,
-      title: { text: chartData.interval === "daily" ? "Days" : "Months" },
-      labels: { rotate: -45 },
+const options = {
+  chart: { type, toolbar: { show: false } },
+  xaxis: {
+    categories: chartData.categories,
+    title: { text: chartData.interval === "daily" ? "Days" : "Months" },
+    labels: { rotate: -45 },
+  },
+  yaxis: {
+    title: { text: "Count" },
+    labels: {
+      formatter: formatNumber,
     },
-    yaxis: { title: { text: "Count" } },
-    stroke: { curve: "smooth" },
-    markers: { size: 4 },
-    colors: ["#6366F1", "#F59E0B"],
-    dataLabels: { enabled: true },
-    tooltip: { y: { formatter: (val) => `${val}` } },
-    plotOptions: { bar: { columnWidth: "40%" } },
-  };
+  },
+  stroke: { curve: "smooth" },
+  markers: { size: 4 },
+  colors: ["#6366F1", "#DB2777"],
+  dataLabels: {
+    enabled: true,
+    formatter: formatNumber,
+  },
+  tooltip: {
+    y: {
+      formatter: formatNumber,
+    },
+  },
+  plotOptions: {
+    bar: {
+      columnWidth: "40%",
+    },
+  },
+};
 
   const series = [
     { name: "Page Views", data: chartData.views },
