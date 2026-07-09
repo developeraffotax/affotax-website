@@ -132,16 +132,14 @@ export default function PrivacyPolicyPage() {
             </ul>
           </section>
 
-          <section id="cookies" className="scroll-mt-24">
+           <section id="changes" className="scroll-mt-24">
             <h2 className="text-xl font-semibold text-gray-900">
-              4. Cookies
+              4. Cookie Consent & Advertising
             </h2>
             <p className="mt-3 leading-relaxed text-gray-600">
-              We use cookies and similar technologies to operate our website,
-              understand how it is used, and improve your experience. You can
-              control or disable cookies through your browser settings,
-              though some parts of the site may not function properly as a
-              result.
+              We use cookies and similar technologies to improve your browsing experience, analyze website traffic, and measure the effectiveness of our advertising campaigns. With your consent, we may collect and share limited information with trusted partners, including Google, to measure conversions and improve our services.
+<br/> <br/> You can accept, reject, or manage your cookie preferences at any time. Non-essential cookies are only used with your consent, where required by applicable laws.
+ 
             </p>
           </section>
 
@@ -213,16 +211,7 @@ export default function PrivacyPolicyPage() {
 
 
 
-           <section id="changes" className="scroll-mt-24">
-            <h2 className="text-xl font-semibold text-gray-900">
-              9. Cookie Consent & Advertising
-            </h2>
-            <p className="mt-3 leading-relaxed text-gray-600">
-              We use cookies and similar technologies to improve your browsing experience, analyze website traffic, and measure the effectiveness of our advertising campaigns. With your consent, we may collect and share limited information with trusted partners, including Google, to measure conversions and improve our services.
-<br/> <br/> You can accept, reject, or manage your cookie preferences at any time. Non-essential cookies are only used with your consent, where required by applicable laws.
- 
-            </p>
-          </section>
+         
 
 
 
@@ -233,7 +222,7 @@ export default function PrivacyPolicyPage() {
             className="scroll-mt-24 rounded-2xl border border-gray-100 bg-gray-100 p-6 sm:p-8"
           >
             <h2 className="text-xl font-semibold text-gray-900">
-              10. Contact Us
+              9. Contact Us
             </h2>
             <p className="mt-3 leading-relaxed text-gray-600">
               If you have any questions about this Privacy Policy or how we

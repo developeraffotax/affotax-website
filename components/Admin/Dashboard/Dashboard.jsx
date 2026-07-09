@@ -17,6 +17,8 @@ import SalesChart from "./Charts/Orders/SalesChart";
 import dayjs from "dayjs";
 import quarterOfYear from "dayjs/plugin/quarterOfYear";
 import PerformanceStats from "./Charts/Orders/PerformanceStats";
+import PageViewsChart from "./Charts/site/PageViewsChart";
+import QuoteSubmissionsChart from "./Charts/site/QuoteSubmissionsChart";
 
 dayjs.extend(quarterOfYear);
 
@@ -187,6 +189,31 @@ export default function DashboardComponent() {
           </div>
           <SalesChart dateRange={dateRange} type={chartType}   />
         </div>
+
+
+
+
+
+
+
+        <div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] rounded-xl p-4 bg-white min-h-[400px]">
+  <div className="mb-4">
+    <h2 className="text-lg font-semibold text-gray-800">Website Traffic</h2>
+    <p className="text-sm text-gray-500">Page views vs unique visitors</p>
+  </div>
+  <PageViewsChart dateRange={dateRange} type={chartType} />
+</div>
+
+<div className="shadow-[0_0_10px_rgba(0,0,0,0.2)] rounded-xl p-4 bg-white min-h-[400px]">
+  <div className="mb-4">
+    <h2 className="text-lg font-semibold text-gray-800">Quote Requests</h2>
+    <p className="text-sm text-gray-500">Submissions over time</p>
+  </div>
+  <QuoteSubmissionsChart dateRange={dateRange} type={chartType} />
+</div>
+
+
+
       </div>
     </div>
   );
