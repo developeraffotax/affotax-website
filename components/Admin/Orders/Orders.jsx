@@ -94,7 +94,8 @@ export default function Orders() {
 	}, [dateRange]);
 
 	const { unread_count, set_unread_count } = useContext(OrdersContext);
-	const update_order_handler = async (id) => {
+	const update_order_handler = async (id, isRead) => {
+		if (isRead) return
 		try {
 			setIsLoading(true);
 			const { data, status } = await axios.post(
@@ -131,7 +132,7 @@ export default function Orders() {
 			render: (text, record) => (
 				<Link
 					href={`/admin/orders/${record._id}`}
-					onClick={() => update_order_handler(record._id)}
+					onClick={() => update_order_handler(record._id, record.isRead)}
 				>
 					{text}
 				</Link>
@@ -191,7 +192,7 @@ export default function Orders() {
 						{" "}
 						<button
 							className="flex gap-2 items-center text-sky-500 "
-							onClick={() => update_order_handler(record._id)}
+							onClick={() => update_order_handler(record._id, record.isRead)}
 						>
 							<AiOutlineEye className="text-sky-500 scale-150 active:scale-125 hover:scale-[1.7] transition-all" />{" "}
 							Mark as Read
