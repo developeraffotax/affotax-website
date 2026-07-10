@@ -132,14 +132,16 @@ export default function PrivacyPolicyPage() {
             </ul>
           </section>
 
-           <section id="changes" className="scroll-mt-24">
+          <section id="cookies" className="scroll-mt-24">
             <h2 className="text-xl font-semibold text-gray-900">
-              4. Cookie Consent & Advertising
+              4. Cookies
             </h2>
             <p className="mt-3 leading-relaxed text-gray-600">
-              We use cookies and similar technologies to improve your browsing experience, analyze website traffic, and measure the effectiveness of our advertising campaigns. With your consent, we may collect and share limited information with trusted partners, including Google, to measure conversions and improve our services.
-<br/> <br/> You can accept, reject, or manage your cookie preferences at any time. Non-essential cookies are only used with your consent, where required by applicable laws.
- 
+              We use cookies and similar technologies to operate our website,
+              understand how it is used, and improve your experience. You can
+              control or disable cookies through your browser settings,
+              though some parts of the site may not function properly as a
+              result.
             </p>
           </section>
 
@@ -210,8 +212,7 @@ export default function PrivacyPolicyPage() {
 
 
 
-
-         
+ 
 
 
 
