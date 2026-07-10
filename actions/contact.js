@@ -9,6 +9,7 @@ import sendQuoteMail from "@/lib/sendQuoteMail";
  
 import { verifyRecaptcha } from "@/lib/verifyRecaptcha";
 import QuoteSubmission from "@/lib/Model/QuoteSubmission";
+import { connectDB } from "@/lib/connectDB";
 
 //  SEND MESSAGE
 
@@ -78,6 +79,7 @@ export async function sendMessage(prevState, formData) {
 
 	try {
 		const res = await sendMail(name, email, service, message);
+		await connectDB();
 		await QuoteSubmission.create({ type: "contact_us", name, email,    });
 	} catch (error) {
 		return {
@@ -179,7 +181,7 @@ export async function sendInstantQuote(prevState, formData) {
 		// if (res) {
 		//             return { success: true, message: `Your query is submitted | We'll get back to you soon`, };
 		//         }
-
+		await connectDB();
 		await QuoteSubmission.create({ type: "who_we_help_quote", name, email, phoneNumber,  });
 	} catch (error) {
 		console.log(error);
@@ -288,9 +290,13 @@ export async function sendQuote(prevState, formData) {
 	}
 
 	
+	
 	try {
 		const res = await sendQuoteMail(data);
 		console.log(res, data);
+
+
+		await connectDB();
 		await QuoteSubmission.create({ type: "instant_quote", name, email, phoneNumber,  });
 
 
