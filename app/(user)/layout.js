@@ -12,6 +12,7 @@ import { createContext, useEffect, useRef, useState } from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { usePathname } from 'next/navigation'
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
  
 
  
@@ -123,7 +124,7 @@ export default function RootLayout({ children }) {
 			<Footer />
 			</QuoteFormContext.Provider>
 
-			
+			<AnalyticsTracker />
 		</>
 	);
 }
