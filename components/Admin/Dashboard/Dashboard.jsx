@@ -11,6 +11,7 @@ import {
   DollarOutlined,
   GlobalOutlined,
   FileTextOutlined,
+  WhatsAppOutlined,
 } from "@ant-design/icons";
 import CountChart from "./Charts/Orders/CountChart";
 import SalesChart from "./Charts/Orders/SalesChart";
@@ -19,6 +20,7 @@ import quarterOfYear from "dayjs/plugin/quarterOfYear";
 import PerformanceStats from "./Charts/Orders/PerformanceStats";
 import PageViewsChart from "./Charts/site/PageViewsChart";
 import QuoteSubmissionsChart from "./Charts/site/QuoteSubmissionsChart";
+import WaSubmissionsChart from "./Charts/site/WaSubmissionsChart";
 
 dayjs.extend(quarterOfYear);
 
@@ -123,7 +125,7 @@ export default function DashboardComponent() {
       children: (
         <Card 
           bordered={false}
-          styles={{ body: { padding: "24px 8px", minHeight: 460, display: "flex", flexDirection: "column" } }}
+          styles={{ body: { padding: "4px", minHeight: 400, display: "flex", flexDirection: "column" } }}
         >
           <div style={{ flex: 1, position: "relative", width: "100%" }}>
             <SalesChart dateRange={dateRange} type={chartType} />
@@ -141,7 +143,7 @@ export default function DashboardComponent() {
       children: (
         <Card 
           bordered={false}
-          styles={{ body: { padding: "24px 8px", minHeight: 460, display: "flex", flexDirection: "column" } }}
+          styles={{ body: { padding: "4px", minHeight: 400, display: "flex", flexDirection: "column" } }}
         >
           <div style={{ flex: 1, position: "relative", width: "100%" }}>
             <CountChart dateRange={dateRange} type={chartType} />
@@ -159,7 +161,7 @@ export default function DashboardComponent() {
       children: (
         <Card 
           bordered={false}
-          styles={{ body: { padding: "24px 8px", minHeight: 460, display: "flex", flexDirection: "column" } }}
+          styles={{ body: { padding: "4px", minHeight: 400, display: "flex", flexDirection: "column" } }}
         >
           <div style={{ flex: 1, position: "relative", width: "100%" }}>
             <PageViewsChart dateRange={dateRange} type={chartType} />
@@ -177,7 +179,7 @@ export default function DashboardComponent() {
       children: (
         <Card 
           bordered={false}
-          styles={{ body: { padding: "24px 8px", minHeight: 460, display: "flex", flexDirection: "column" } }}
+          styles={{ body: { padding: "4px", minHeight: 400, display: "flex", flexDirection: "column" } }}
         >
           <div style={{ flex: 1, position: "relative", width: "100%" }}>
             <QuoteSubmissionsChart dateRange={dateRange} type={chartType} />
@@ -185,13 +187,35 @@ export default function DashboardComponent() {
         </Card>
       ),
     },
+
+
+
+// add to tabItems array:
+{
+  key: "wa_submissions",
+  label: (
+    <span>
+      <WhatsAppOutlined /> WhatsApp Submissions
+    </span>
+  ),
+  children: (
+    <Card 
+      bordered={false}
+      styles={{ body: { padding: "4px", minHeight: 400, display: "flex", flexDirection: "column" } }}
+    >
+      <div style={{ flex: 1, position: "relative", width: "100%" }}>
+        <WaSubmissionsChart dateRange={dateRange} type={chartType} />
+      </div>
+    </Card>
+  ),
+},
   ];
 
   return (
-    <Flex vertical gap="middle" style={{ width: "100%" }}>
+    <Flex vertical gap="middle" style={{ width: "100%",   }} >
       
       {/* Top Filter Workspace Control Deck */}
-      <Flex justify="space-between" align="center" wrap="wrap" gap="middle" style={{ paddingBottom: 4 }}>
+      <Flex justify="space-between" align="center" wrap="wrap" gap="middle" style={{ paddingBottom: 4 }}  >
         <Space size="middle" wrap>
           <RangePicker
             value={dateRange}
@@ -239,15 +263,18 @@ export default function DashboardComponent() {
         <PerformanceStats dateRange={dateRange} activeLabel={activeLabel} />
       </div>
 
-      {/* Tabbed Central Analytics Deck */}
-      <Card styles={{ body: { padding: "8px 20px 20px 20px" } }}>
-        <Tabs 
-          defaultActiveKey="sales" 
-          items={tabItems} 
+       <Card
+        bordered={false}
+        styles={{ body: { padding: 0 }, }}
+          className="!bg-gray- "
+      >
+        <Tabs
+          defaultActiveKey="sales"
+          items={tabItems}
           size="large"
           type="card"
           tabBarGutter={6}
-          style={{ marginTop: 8 }}
+          style={{ marginTop: 4}}
         />
       </Card>
 

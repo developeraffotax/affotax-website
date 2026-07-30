@@ -1,11 +1,11 @@
-// components/Charts/Site/QuoteSubmissionsChart.jsx
+// components/Charts/Site/WaSubmissionsChart.jsx
 "use client";
 
 import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import axios from "axios";
 
-export default function QuoteSubmissionsChart({ dateRange, type }) {
+export default function WaSubmissionsChart({ dateRange, type }) {
   const [chartData, setChartData] = useState({
     categories: [],
     count: [],
@@ -23,10 +23,10 @@ export default function QuoteSubmissionsChart({ dateRange, type }) {
       }
 
       try {
-        const { data } = await axios.get("/api/chart/site/quotes/count", { params });
+        const { data } = await axios.get("/api/chart/site/wa_submissions/count", { params });
         setChartData(data);
       } catch (err) {
-        console.error("Error fetching quotes chart data:", err);
+        console.error("Error fetching WhatsApp submissions chart data:", err);
       } finally {
         setLoading(false);
       }
@@ -42,16 +42,16 @@ export default function QuoteSubmissionsChart({ dateRange, type }) {
       title: { text: chartData.interval === "daily" ? "Days" : "Months" },
       labels: { rotate: -45 },
     },
-    yaxis: { title: { text: "No. of Quote Requests" } },
+    yaxis: { title: { text: "No. of WhatsApp Submissions" } },
     stroke: { curve: "smooth" },
     markers: { size: 4 },
     colors: ["#F27941"], // matches your orange accent theme
     dataLabels: { enabled: true },
-    tooltip: { y: { formatter: (val) => `${val} quotes` } },
+    tooltip: { y: { formatter: (val) => `${val} submissions` } },
     plotOptions: { bar: { columnWidth: "40%" } },
   };
 
-  const series = [{ name: "Quote Requests", data: chartData.count }];
+  const series = [{ name: "WhatsApp Submissions", data: chartData.count }];
 
   if (loading) return <p>Loading chart...</p>;
 

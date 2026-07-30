@@ -97,7 +97,7 @@ const options = {
         options={options}
         series={series}
         type={type}
-        height={350}
+        height={400}
       />
     </div>
   );

@@ -5,6 +5,7 @@ export const runtime = "nodejs";
 import { connectDB } from "@/lib/connectDB";
 import PageView from "@/lib/Model/PageView";
 import QuoteSubmission from "@/lib/Model/QuoteSubmission";
+import WaSubmission from "@/lib/Model/WaSubmission";
 import { NextResponse } from "next/server";
 
 
@@ -38,6 +39,8 @@ export async function GET(req) {
     prevUniqueVisitorsArr,
     totalQuotes,
     prevTotalQuotes,
+    totalWaSubmissions,
+    prevTotalWaSubmissions,
   ] = await Promise.all([
     PageView.countDocuments({ createdAt: { $gte: startDate, $lte: endDate } }),
     PageView.countDocuments({ createdAt: { $gte: prevStartDate, $lte: prevEndDate } }),
@@ -45,6 +48,8 @@ export async function GET(req) {
     PageView.distinct("visitorId", { createdAt: { $gte: prevStartDate, $lte: prevEndDate } }),
     QuoteSubmission.countDocuments({ createdAt: { $gte: startDate, $lte: endDate } }),
     QuoteSubmission.countDocuments({ createdAt: { $gte: prevStartDate, $lte: prevEndDate } }),
+    WaSubmission.countDocuments({ createdAt: { $gte: startDate, $lte: endDate } }),
+    WaSubmission.countDocuments({ createdAt: { $gte: prevStartDate, $lte: prevEndDate } }),
   ]);
 
   return NextResponse.json({
@@ -54,5 +59,7 @@ export async function GET(req) {
     uniqueVisitorsPercentChange: percentChange(uniqueVisitorsArr.length, prevUniqueVisitorsArr.length),
     totalQuotes,
     quotesPercentChange: percentChange(totalQuotes, prevTotalQuotes),
+    totalWaSubmissions,
+    waSubmissionsPercentChange: percentChange(totalWaSubmissions, prevTotalWaSubmissions),
   });
 }

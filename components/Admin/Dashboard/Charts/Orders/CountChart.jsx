@@ -115,7 +115,7 @@ export default function CountChart({ dateRange, type,  }) {
 
   return (
     <div className="w-full">
-      <Chart  key={`${type}-${chartData.categories.length}`} options={options} series={series} type={type} height={350} />
+      <Chart  key={`${type}-${chartData.categories.length}`} options={options} series={series} type={type} height={400} />
     </div>
   );
 }

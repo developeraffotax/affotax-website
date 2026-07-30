@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.grecaptcha-badge {
+  display: none !important;
+}
+
+#trustpilot-gtm-floating-wrapper {
+  display: none !important;
+}
+
 /* ANT TABLE CUSTOM ROW COLORS */
 .row-even {
 	background-color: #f9f9f9; /* Light gray */

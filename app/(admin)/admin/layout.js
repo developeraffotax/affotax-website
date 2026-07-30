@@ -527,7 +527,7 @@ export default function RootLayout({ children }) {
 	return (
 <>
     <GlobalLoader loading={isPending} />
-		<Layout className="w-[100vw]   ">
+		<Layout className="w-[100vw]    font-outfit  ">
 			<Header
 				className=""
 				style={{
