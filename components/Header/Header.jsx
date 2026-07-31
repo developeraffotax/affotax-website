@@ -24,7 +24,7 @@ const subMenu = [
   { name: "VAT", link: "/vat-registration" },
   { name: "Company Secretarial", link: "/annual-confirmation-statement" },
   { name: "Bookkeeping", link: "/bookkeeping-for-12-month" },
-  { name: "Company Formation", link: "/uk-company-registration-(uk-resident)" },
+  // { name: "Company Formation", link: "/uk-company-registration-(uk-resident)" },
 ];
 
 

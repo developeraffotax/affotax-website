@@ -150,14 +150,14 @@ export default function Footer() {
 							Services
 						</h2>
 						<ul className="list-none mb-10">
-							<li>
+							{/* <li>
 								<Link
 									href={"/services/uk-ltd-company-formation-services"}
 									className="text-gray-600 hover:text-primary text-xs font-semibold"
 								>
 									Company Formation
 								</Link>
-							</li>
+							</li> */}
 							<li>
 								<Link
 									href={"/services/online-annual-accounts-services"}

@@ -32,8 +32,9 @@ export const dynamic = "force-static";
 export async function generateStaticParams() {
   await connectDB();
 
-  const services = await ServicePage.find({pageType: "service"}).select("link");
-  const pages = await Page.find().select("slug");
+  const services = await ServicePage.find({pageType: "service", disabled: { $ne: true },}).select("link");
+  console.log("SERVICES", services)
+  const pages = await Page.find({disabled: { $ne: true },}).select("slug");
 
   const predefined = [
     "sole-traders",
@@ -152,7 +153,7 @@ export async function generateMetadata({ params }) {
 
   await connectDB();
 
-  const serviceData = await ServicePage.findOne({ link: slug, pageType: "service" });
+  const serviceData = await ServicePage.findOne({ link: slug, pageType: "service", disabled: { $ne: true }, });
   if (serviceData) {
     return {
       title: serviceData.metaTitle,
@@ -167,7 +168,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const page = await Page.findOne({ slug });
+  const page = await Page.findOne({ slug , disabled: { $ne: true },});
   if (page) {
     return {
       title: page.metaTitle,
@@ -212,7 +213,7 @@ export default async function ServicesPage({ params }) {
   await connectDB();
 
   // Dynamic Service Page
-  const serviceData = await ServicePage.findOne({ link: slug, pageType: "service"  });
+  const serviceData = await ServicePage.findOne({ link: slug, pageType: "service", disabled: { $ne: true },  });
   if (serviceData) {
     return (
       <Service jsonData={JSON.stringify(serviceData)} />
@@ -220,7 +221,7 @@ export default async function ServicesPage({ params }) {
   }
 
   // CMS Page
-  const page = await Page.findOne({ slug });
+  const page = await Page.findOne({ slug, disabled: { $ne: true }, });
   if (page) {
     return (
       <Template jsonPage={JSON.stringify(page)} />

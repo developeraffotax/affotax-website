@@ -18,13 +18,14 @@ export const dynamic = "force-static"; // Disable dynamic rendering (equivalent 
 
 export async function generateStaticParams() {
   await connectDB();
-  const slugs = await LandingPage.find().select("slug").lean();
+  const slugs = await LandingPage.find({disabled: { $ne: true },}).select("slug").lean();
+  console.log("LandingPage", slugs)
   return slugs.map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({ params }) {
   await connectDB();
-  const page = await LandingPage.findOne({ slug: params.slug }).lean();
+  const page = await LandingPage.findOne({ slug: params.slug, disabled: { $ne: true }, }).lean();
 
   return {
     title: page?.metaTitle || "Default Title",
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }) {
 export default async function LandingHomePage({ params }) {
   await connectDB();
 
-  const landingPage = await LandingPage.findOne({ slug: params.slug }).lean();
+  const landingPage = await LandingPage.findOne({ slug: params.slug, disabled: { $ne: true }, }).lean();
   if (!landingPage) return notFound();
   const homepage = await Homepage.findOne().select("googleReviewsCount");
   const pricing = await ServicePage.findOne({ link: `landing-${landingPage.slug}` }).lean();

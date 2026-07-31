@@ -155,23 +155,23 @@ const menu = [
 		],
 	},
 
-	{
-		name: "Company Formation",
-		submenu: [
-			{
-				name: "UK Company Registration (UK Resident)",
-				link: "/uk-company-registration-uk-resident",
-			},
-			{
-				name: "UK Limited Company for Non-Residents",
-				link: "/uk-limited-company-for-non-residents",
-			},
-			{
-				name: "LLP Company Formation in the UK",
-				link: "/llp-company-formation",
-			},
-		],
-	},
+	// {
+	// 	name: "Company Formation",
+	// 	submenu: [
+	// 		{
+	// 			name: "UK Company Registration (UK Resident)",
+	// 			link: "/uk-company-registration-uk-resident",
+	// 		},
+	// 		{
+	// 			name: "UK Limited Company for Non-Residents",
+	// 			link: "/uk-limited-company-for-non-residents",
+	// 		},
+	// 		{
+	// 			name: "LLP Company Formation in the UK",
+	// 			link: "/llp-company-formation",
+	// 		},
+	// 	],
+	// },
 ];
 
 const Menu = () => {
