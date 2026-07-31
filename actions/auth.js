@@ -47,7 +47,7 @@ export async function LoginForm(formData) {
 		};
 	}
 
-	redirect("/admin/view-blogs");
+	redirect("/admin/dashboard");
 }
 
 
