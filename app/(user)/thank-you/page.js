@@ -16,16 +16,31 @@ export default function ThankYouPage() {
 
 	const successRef = useRef()
 
-	useEffect(() => {
-		// ✅ Fire conversion event when the thank-you page loads
-		if (typeof window !== 'undefined' && window.gtag) {
+	// useEffect(() => {
+	// 	// ✅ Fire conversion event when the thank-you page loads
+	// 	if (typeof window !== 'undefined' && window.gtag) {
 			
 		 
-		  window.gtag('event', 'conversion', {
-			send_to: 'AW-11304762354/3ywRCN7d-rgaEPL3w44q',
-		  })
-		}
-	  }, [])
+	// 	  window.gtag('event', 'conversion', {
+	// 		send_to: 'AW-11304762354/3ywRCN7d-rgaEPL3w44q',
+	// 	  })
+	// 	}
+	//   }, [])
+
+
+
+	  useEffect(() => {
+	// ✅ One push, picked up by both the Meta Lead tag and the Google Ads conversion tag in GTM
+	// (once per browser session, so refreshes don't double count)
+	if (!sessionStorage.getItem("fb_lead_sent")) {
+		sessionStorage.setItem("fb_lead_sent", "1");
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({
+			event: "quote_lead",
+			form_name: "instant_quote",
+		});
+	}
+}, [])
 
 	  
 	useEffect(() => {
