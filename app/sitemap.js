@@ -1,3 +1,4 @@
+import { noIndexSlugs } from "@/data/constants";
 import { connectDB } from "@/lib/connectDB";
 import Blog from "@/lib/Model/Blog";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
@@ -103,7 +104,7 @@ export default async function sitemap() {
 	const servicesData = await ServicePage.find({});
 	const mappedArr = servicesData
 		.filter((page) => {
-			if (page.link) {
+			if (page.link && !noIndexSlugs.has(page.link)) {
 				return page;
 			}
 		})

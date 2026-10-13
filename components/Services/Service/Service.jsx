@@ -86,10 +86,10 @@ const Service = ({ jsonData }) => {
             <PriceBoxes prices={data.prices} pageTitle={data.title}/>
             
             <div className="w-full max-lg:hidden">
-            <Benefits
+            {(data?.benefits?.length > 0) && <Benefits
                 benefitsTitle={data.benefitsTitle}
                 benefits={data.benefits}
-            />
+            />}
             </div>
 
 
@@ -103,15 +103,15 @@ const Service = ({ jsonData }) => {
 
             <div className="w-full lg:hidden">
 
-            <Benefits
+            {(data?.benefits?.length > 0) && <Benefits
                 benefitsTitle={data.benefitsTitle}
                 benefits={data.benefits}
-            />
+            />}
             </div>
 
             <GetAQuoteSection />
 
-            <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />
+            {(data?.faqs?.length > 0) && <Faqs faqs={data.faqs.map((el) => ({...el, key: uuid()}))} />}
 
             <TrustPilotReviews />
 

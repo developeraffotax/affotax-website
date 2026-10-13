@@ -21,8 +21,11 @@ import { connectDB } from "@/lib/connectDB";
 import ServicePage from "@/lib/Model/ServicePage/ServicePage";
 import Page from "@/lib/Model/Page/Page";
 import Template from "@/components/WhoWeHelp/Template";
+import { noIndexSlugs } from "@/data/constants";
 
 export const dynamic = "force-static";
+ 
+
  
 
 /* ======================================================
@@ -142,6 +145,17 @@ const staticMeta = {
 
 export async function generateMetadata({ params }) {
   const slug = params.slug;
+
+    // Prevent selected pages from being indexed
+  if (noIndexSlugs.has(slug)) {
+    return {
+      title: "Customised Packages | Affotax",
+      robots: {
+        index: false,
+        follow: true,
+      },
+    };
+  }
 
   if (staticMeta[slug]) {
     return {

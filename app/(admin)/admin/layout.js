@@ -14,6 +14,7 @@ import {
 	HistoryOutlined,
 	SnippetsOutlined,
 	BarChartOutlined,
+	EditOutlined,
 } from "@ant-design/icons";
 import { Badge, Breadcrumb, Layout, Menu, theme } from "antd";
 import Link from "next/link";
@@ -518,6 +519,31 @@ export default function RootLayout({ children }) {
 				startTransition(() => router.push("/admin/logs"));
 			},
 		},
+
+
+
+
+
+
+		{
+			key: `customised-package`,
+
+			icon: <EditOutlined />,
+			label: `Custom Package`,
+
+			onClick: () => {
+				setDefaultSelectedKeys(["customised-package"]);
+				setDefaultOpenKeys(["customised-package"]);
+
+				//router.push("/admin/logs");
+				startTransition(() => router.push("/admin/service-page/create?page=customised-package"));
+			},
+		},
+
+
+
+
+
 	];
 
 	const {
