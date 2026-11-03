@@ -34,12 +34,12 @@ module.exports = {
       
 
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        oswald: ["Oswald", "sans-serif"],
-        Montserrat: ["Montserrat", "sans-serif"],
-        Raleway: ["Raleway", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+         
+        oswald: ["Oswald", "sans-serif"],        
          outfit: ["var(--font-outfit)"],
+         inter: ["var(--font-inter)"],
+         montserrat: ["var(--font-montserrat)"],
+         poppins: ["var(--font-poppins)"],
         
       }
     },

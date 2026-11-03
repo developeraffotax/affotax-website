@@ -2,7 +2,7 @@ import "./globals.css";
 import NextTopLoader from "nextjs-toploader";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Outfit } from "next/font/google";
+import { Inter, Montserrat, Outfit, Poppins } from "next/font/google";
 
 import { schemaLD } from "@/data/schemaLD";
 import Script from "next/script";
@@ -19,12 +19,31 @@ const outfit = Outfit({
 	display: "swap",
 	variable: "--font-outfit",
 });
+ 
+const poppins = Poppins({
+	subsets: ["latin"],
+	display: "swap",
+	weight: ["400", "500", "600", "700"],
+	variable: "--font-poppins",
+});
+
+const montserrat = Montserrat({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-montserrat",
+});
+
+const inter = Inter({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-inter",
+});
 
 
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={outfit.variable}>
+		<html lang="en" className={`${outfit.variable} ${poppins.variable} ${montserrat.variable} ${inter.variable}`}>
 			<head>
 				{/* Trustpilot Script */}
 				<Script
