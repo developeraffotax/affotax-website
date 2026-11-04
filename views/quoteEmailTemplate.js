@@ -33,7 +33,7 @@ export const quoteEmailTemplate = `
                   </tr>
                   <tr>
                     <td style="padding:8px 0; font-weight:bold; color:#5b6070;">Email:</td>
-                    <td style="padding:8px 0; color:#1f2937;"><a href="mailto:<%= data.email %>" style="color:#1f2937; text-decoration:none;"><%= data.email %></a></td>
+                    <td style="padding:8px 0; color:#1f2937;"><%= data.email %></td>
                   </tr>
                   <tr>
                     <td style="padding:8px 0; font-weight:bold; color:#5b6070;">Phone:</td>
