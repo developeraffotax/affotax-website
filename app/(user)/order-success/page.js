@@ -6,6 +6,7 @@
 // import sendPaymentMail from "@/lib/sendPaymentMail";
 import Link from "next/link";
 import { useEffect } from "react";
+import { initializeOpenAIMatching } from "@/lib/openaiPixel";
 
 export default function OrderSuccessPage() {
 	// const { orderNumber, session_id, success } = searchParams;
@@ -49,10 +50,21 @@ export default function OrderSuccessPage() {
 		try {
 			const customer = await getCustomerDetails(purchase.sessionId);
 
-			pushPurchaseEvent({
-				purchase,
-				customer,
-			});
+			// Initialize OpenAI matching before the purchase event.
+					try {
+						await initializeOpenAIMatching({
+							email: customer.email,
+							externalId: customer.customer_id,
+						});
+					} catch (matchingError) {
+						console.error("OpenAI matching initialization failed:", matchingError);
+					}
+
+					// Never block purchase tracking if matching initialization fails.
+					pushPurchaseEvent({
+						purchase,
+						customer,
+					});
 
 			markPurchaseTracked(purchase.orderNumber);
 			clearCart();
@@ -85,16 +97,22 @@ export default function OrderSuccessPage() {
 		sessionStorage.setItem(`purchase_${orderNumber}`, "1");
 	}
 
-	async function getCustomerDetails(sessionId) {
-		const res = await fetch(`/api/stripe-session?session_id=${sessionId}`);
+async function getCustomerDetails(sessionId) {
+    const res = await fetch(
+        `/api/stripe-session?session_id=${encodeURIComponent(sessionId)}`
+    );
 
-		if (!res.ok) {
-			throw new Error("Failed to fetch Stripe session");
-		}
+    if (!res.ok) {
+        throw new Error("Failed to fetch Stripe session");
+    }
 
-		const data = await res.json();
-		return data.customer_details || {};
-	}
+    const data = await res.json();
+
+    return {
+        ...(data.customer_details || {}),
+        customer_id: data.customer_id || null,
+    };
+}
 
 	function buildUserData(customer) {
 		const names = customer.name?.split(" ") || [];

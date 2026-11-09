@@ -16,6 +16,22 @@ export default function QuoteForm() {
 	const [formState, action] = useFormState(sendQuote, { success: false, message: "", invalidArr: [] });
 
 
+const hashEmail = async (email) => {
+  const normalizedEmail = email.trim().toLowerCase();
+
+  if (!normalizedEmail) return null;
+
+  const encodedEmail = new TextEncoder().encode(normalizedEmail);
+
+  const hashBuffer = await window.crypto.subtle.digest(
+    "SHA-256",
+    encodedEmail
+  );
+
+  return Array.from(new Uint8Array(hashBuffer))
+    .map((byte) => byte.toString(16).padStart(2, "0"))
+    .join("");
+};
 
 
 
@@ -31,6 +47,33 @@ export default function QuoteForm() {
       alert("reCAPTCHA not loaded yet. Please wait a second and try again.");
       return;
     }
+
+
+
+	 // Hash the email for OpenAI Pixel advanced matching.
+  // Never store or send the raw email to the Pixel.
+  try {
+    sessionStorage.removeItem("oai_quote_email_sha256");
+
+    const email = formData.get("email");
+
+    if (email) {
+      const emailHash = await hashEmail(String(email));
+
+      if (emailHash) {
+        sessionStorage.setItem("oai_quote_email_sha256", emailHash);
+      }
+    }
+  } catch (error) {
+    // Matching is optional. Do not prevent quote submission if hashing fails.
+    console.error("OpenAI email hashing failed:", error);
+  }
+
+
+
+
+
+  
 
     // ✅ Get invisible reCAPTCHA token
     const token = await grecaptcha.execute(

@@ -15,32 +15,39 @@ export default function ThankYouPage() {
 	const quoteContext = useContext(QuoteFormContext);
 
 	const successRef = useRef()
-
-	// useEffect(() => {
-	// 	// ✅ Fire conversion event when the thank-you page loads
-	// 	if (typeof window !== 'undefined' && window.gtag) {
-			
-		 
-	// 	  window.gtag('event', 'conversion', {
-	// 		send_to: 'AW-11304762354/3ywRCN7d-rgaEPL3w44q',
-	// 	  })
-	// 	}
-	//   }, [])
+ 
 
 
 
-	  useEffect(() => {
-	// ✅ One push, picked up by both the Meta Lead tag and the Google Ads conversion tag in GTM
-	// (once per browser session, so refreshes don't double count)
-	if (!sessionStorage.getItem("fb_lead_sent")) {
-		sessionStorage.setItem("fb_lead_sent", "1");
-		window.dataLayer = window.dataLayer || [];
-		window.dataLayer.push({
-			event: "quote_lead",
-			form_name: "instant_quote",
-		});
-	}
-}, [])
+
+useEffect(() => {
+  const emailHash = sessionStorage.getItem("oai_quote_email_sha256");
+
+  // Remove it immediately so it cannot be reused by another submission.
+  sessionStorage.removeItem("oai_quote_email_sha256");
+
+  // Initialize OpenAI Pixel matching before the conversion event.
+  if (emailHash && typeof window.oaiq === "function") {
+    window.oaiq("init", {
+      pixelId: "L85FobyWsNupoD1CVoUKYy",
+      user: {
+        email_sha256: emailHash,
+      },
+    });
+  }
+
+  // Keep your existing lead tracking guard and event.
+  if (!sessionStorage.getItem("fb_lead_sent")) {
+    sessionStorage.setItem("fb_lead_sent", "1");
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+      event: "quote_lead",
+      form_name: "instant_quote",
+    });
+  }
+}, []);
 
 	  
 	useEffect(() => {
