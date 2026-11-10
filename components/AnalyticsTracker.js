@@ -1,20 +1,22 @@
-"use client"
+"use client";
 
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { getTrafficSource } from "@/lib/getTrafficSource";
 
 export default function AnalyticsTracker() {
-  const pathname = usePathname();
+const pathname = usePathname();
 
-  useEffect(() => {
-     if (pathname.startsWith("/admin") || pathname.startsWith("/api")) return;
+useEffect(() => {
+  if (pathname.startsWith("/admin") || pathname.startsWith("/api")) return;
+  const source = getTrafficSource();
+  fetch("/api/log-view", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ path: pathname, source }),
+    keepalive: true,
+  }).catch((err) => console.error("Analytics error:", err));
+}, [pathname]);
 
-    fetch("/api/log-view", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ path: pathname }),
-    }).catch((err) => console.error("Analytics error:", err));
-  }, [pathname]);
-
-  return null;  
+  return null;
 }
